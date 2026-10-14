@@ -4,6 +4,8 @@
 
 ## Skill 组合
 
+面向普通用户的第一入口应是 OpenMuse Mobile 内置的 `mini-plugin-maker` Agent Skill：它把需求限制在 `MiniPluginSpec`、`forms@1` 等已上线能力中，驱动草稿、预览与私有发布工具。用户不需要安装开发 Skill 或 CLI；完整流程见 [手机 Agent 插件工坊](MOBILE-AGENT-STUDIO.zh-CN.md)。下面的 Skill 供专业开发者使用。
+
 | Skill | 输入 | 行为 | 输出 |
 | --- | --- | --- | --- |
 | `openmuse-plugin-start` | 产品需求、目标平台 | 询问真正缺失的权限/目标信息，选择模板，生成最小 Manifest、代码与本地示例 | 可运行工程与声明的支持矩阵。 |

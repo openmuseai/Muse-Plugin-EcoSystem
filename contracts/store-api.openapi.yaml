@@ -39,11 +39,12 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/PluginDetail' }
         '404': { $ref: '#/components/responses/NotFound' }
-  /v1/plugins/{pluginId}/releases/{version}:
+  /v1/plugins/{pluginId}/platforms/{platform}/releases/{version}:
     get:
       operationId: getPluginRelease
       parameters:
         - { $ref: '#/components/parameters/PluginId' }
+        - { $ref: '#/components/parameters/Platform' }
         - { name: version, in: path, required: true, schema: { type: string } }
       responses:
         '200':
@@ -111,9 +112,10 @@ paths:
           application/json:
             schema:
               type: object
-              required: [pluginId, version, channel, sourceCommit, uploadIds, releaseNotes, permissionRationale]
+              required: [pluginId, platform, version, channel, sourceCommit, uploadIds, releaseNotes, permissionRationale]
               properties:
                 pluginId: { type: string }
+                platform: { $ref: '#/components/schemas/Platform' }
                 version: { type: string }
                 channel: { type: string, enum: [stable, beta] }
                 sourceCommit: { type: string }
@@ -158,13 +160,130 @@ paths:
                 details: { type: string, maxLength: 4000 }
       responses:
         '202': { description: Report accepted. }
+  /v1/studio/drafts:
+    post:
+      operationId: createStudioDraft
+      security: [ { BearerAuth: [] } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [intent]
+              properties:
+                intent: { type: string, maxLength: 8000 }
+                template: { type: string, enum: [form, checklist, calculator, reminder, knowledge-card] }
+      responses:
+        '201':
+          description: Draft created; Agent generation and validation may still be running.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StudioDraft' }
+    get:
+      operationId: listStudioDrafts
+      security: [ { BearerAuth: [] } ]
+      responses:
+        '200':
+          description: Drafts owned by the current account.
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/StudioDraft' }
+  /v1/studio/drafts/{draftId}:
+    get:
+      operationId: getStudioDraft
+      security: [ { BearerAuth: [] } ]
+      parameters: [ { $ref: '#/components/parameters/DraftId' } ]
+      responses:
+        '200':
+          description: Latest schema-validated draft revision and status.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StudioDraft' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /v1/studio/drafts/{draftId}/revise:
+    post:
+      operationId: reviseStudioDraft
+      security: [ { BearerAuth: [] } ]
+      parameters: [ { $ref: '#/components/parameters/DraftId' } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [instruction, expectedRevision]
+              properties:
+                instruction: { type: string, maxLength: 8000 }
+                expectedRevision: { type: integer, minimum: 1 }
+      responses:
+        '202':
+          description: New immutable revision queued for Agent generation and validation.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StudioDraft' }
+        '409': { $ref: '#/components/responses/Conflict' }
+  /v1/studio/drafts/{draftId}/preview:
+    post:
+      operationId: previewStudioDraft
+      security: [ { BearerAuth: [] } ]
+      parameters: [ { $ref: '#/components/parameters/DraftId' } ]
+      responses:
+        '200':
+          description: Validated preview with no live side effects or real user records.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [draftId, revision, profile, messages]
+                properties:
+                  draftId: { type: string }
+                  revision: { type: integer }
+                  profile: { type: string }
+                  messages: { type: array, items: { type: object } }
+        '409': { $ref: '#/components/responses/Conflict' }
+  /v1/studio/drafts/{draftId}/publish:
+    post:
+      operationId: publishStudioDraft
+      security: [ { BearerAuth: [] } ]
+      parameters:
+        - { $ref: '#/components/parameters/DraftId' }
+        - { name: Idempotency-Key, in: header, required: true, schema: { type: string } }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [expectedRevision, visibility, confirmedPermissions]
+              properties:
+                expectedRevision: { type: integer, minimum: 1 }
+                visibility: { type: string, enum: [private, invite, public] }
+                confirmedPermissions: { type: array, items: { type: string } }
+      responses:
+        '202':
+          description: Private version is signed after automated checks; public version enters review.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [publishJobId, state]
+                properties:
+                  publishJobId: { type: string }
+                  state: { type: string, enum: [validating, review, signing, published] }
+        '409': { $ref: '#/components/responses/Conflict' }
 components:
   securitySchemes:
     BearerAuth: { type: http, scheme: bearer, bearerFormat: JWT }
   parameters:
     PluginId: { name: pluginId, in: path, required: true, schema: { type: string } }
+    Platform: { name: platform, in: path, required: true, schema: { $ref: '#/components/schemas/Platform' } }
+    DraftId: { name: draftId, in: path, required: true, schema: { type: string } }
   schemas:
     Sha256: { type: string, pattern: '^[0-9a-f]{64}$' }
+    Platform: { type: string, enum: [desktop, mobile, web] }
     PluginSummary:
       type: object
       required: [id, name, publisher, verifiedPlatforms]
@@ -182,7 +301,14 @@ components:
             description: { type: string }
             license: { type: string }
             sourceUrl: { type: string, format: uri }
-            releases: { type: array, items: { type: string } }
+            releases:
+              type: array
+              items:
+                type: object
+                required: [platform, version]
+                properties:
+                  platform: { $ref: '#/components/schemas/Platform' }
+                  version: { type: string }
     Artifact:
       type: object
       required: [target, runtimeKind, sha256, sizeBytes, abi]
@@ -194,7 +320,7 @@ components:
             os: { type: string }
             arch: { type: string }
             libc: { type: string }
-        runtimeKind: { type: string, enum: [desktop-worker, desktop-webview, mobile-a2ui, mobile-quickjs, mobile-webview, web-remote-surface, web-bundle] }
+        runtimeKind: { type: string, enum: [desktop-declarative, desktop-worker, desktop-webview, dsh-sidecar, mobile-a2ui, mobile-quickjs, mobile-webview, web-remote-surface, web-bundle] }
         sha256: { $ref: '#/components/schemas/Sha256' }
         sizeBytes: { type: integer, minimum: 1 }
         abi: { type: string }
@@ -203,9 +329,10 @@ components:
         webBridgeApi: { type: string }
     Release:
       type: object
-      required: [pluginId, version, channel, artifacts, state]
+      required: [pluginId, platform, version, channel, artifacts, state]
       properties:
         pluginId: { type: string }
+        platform: { $ref: '#/components/schemas/Platform' }
         version: { type: string }
         channel: { type: string, enum: [stable, beta] }
         artifacts: { type: array, items: { $ref: '#/components/schemas/Artifact' } }
@@ -227,6 +354,23 @@ components:
               message: { type: string }
               fixtureId: { type: string }
               path: { type: string }
+    StudioDraft:
+      type: object
+      required: [id, revision, state]
+      properties:
+        id: { type: string }
+        pluginId: { type: string }
+        revision: { type: integer, minimum: 1 }
+        state: { type: string, enum: [generating, needs-input, valid, invalid] }
+        spec: { type: object, description: MiniPluginSpec, additionalProperties: true }
+        validationErrors:
+          type: array
+          items:
+            type: object
+            required: [code, message]
+            properties:
+              code: { type: string }
+              message: { type: string }
   responses:
     Unauthorized: { description: Authentication required. }
     NotFound: { description: Resource not found. }

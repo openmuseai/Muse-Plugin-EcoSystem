@@ -4,18 +4,20 @@
 
 ## 选择插件形态
 
-先选择能在目标设备运行的最小形态：
+普通用户先使用 [手机 Agent 插件工坊](MOBILE-AGENT-STUDIO.zh-CN.md) 的“描述需求 → 预览 → 私有安装”路径；下表是需要写代码或自定义运行时的开发者路径。先选择能在目标设备运行的最小形态：
 
 | 需求 | 模板 | 限制 |
 | --- | --- | --- |
-| Desktop 本地计算、文件/Agent 能力 | `desktop-worker` | 独立进程；Host Broker 授权；不能把 Flutter Dart AOT 当可下载包。 |
+| Desktop 表单/卡片/简单工具 | `desktop-declarative` | 使用 Host 已预置组件，可热加载内容；不要求插件自己的进程。 |
+| Desktop 自定义 HTML UI | `desktop-webview` | 受控 WebView 与作用域 bridge；不要求插件自己的进程。 |
+| Desktop 本地计算、文件/Agent 能力 | `desktop-worker` | 新本机代码使用独立 worker 与 Host Broker；不能把 Flutter Dart AOT 当可下载包。 |
 | Mobile 工作台卡片 | `mobile-a2ui` | 只使用当前 OpenMuse 受控组件目录；卡片无任意 JS/HTML。 |
 | Mobile 插件详情 | `mobile-webview` | 包内静态内容，CSP 与受控 bridge；高权限动作经过 Host。 |
 | Mobile 业务逻辑 | `mobile-quickjs` | 需要额外运行时/政策门禁；首期只给精选开发者。 |
 | Web 远程能力 | `web-remote-surface` | 声明式 Surface，经 Cloud/Paired grant；浏览器不直接访问 Desktop 文件路径。 |
 | DSH UI/工具 | DSH 自身 SDK | 按 DSH 的包和 profile 管理；OpenMuse 商店可登记兼容信息，但不会替代 DSH 安装合同。 |
 
-同一个插件可以包含多个模板产物，必须分别声明 target、运行时、ABI 和所需权限。某端没有实包时，详情页应显示“不支持该平台”，不能复用另一端的包。
+同一个 `pluginId` 可以包含多个平台产物，各平台版本可独立推进；必须分别声明 target、运行时、ABI 和所需权限。某端没有实包时，详情页应显示“不支持该平台”，不能复用另一端的包。平台不同本身不产生第二个插件 ID。
 
 ## 从创建到发布
 

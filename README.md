@@ -9,6 +9,7 @@
 - [实施顺序与验收](docs/ROADMAP.zh-CN.md)
 - [开发者入门指南草案](docs/DEVELOPER-GUIDE.zh-CN.md)
 - [编码代理 Skill 设计](docs/AGENT-SKILL-CONTRACT.zh-CN.md)
+- [仅用手机与 Agent 创建插件](docs/MOBILE-AGENT-STUDIO.zh-CN.md)
 - [Store API OpenAPI 草案](contracts/store-api.openapi.yaml)
 
 ## 与现有仓库的边界
