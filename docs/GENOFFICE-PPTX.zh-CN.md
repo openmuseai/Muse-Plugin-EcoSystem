@@ -36,9 +36,9 @@ Mobile 目标桥：市场安装经 Ed25519 签名的 A2UI/QuickJS 控制包；Fl
 - `npm test`：上游 5 页 PPTX 样本可打开、保存、重新打开，幻灯片与元素计数一致。
 - `npm run pack:desktop`：生成 Manifest v2 的本地 `.omplugin` 和目录；约 808 KiB worker。
 - Muse-Client `openmuse_plugin install --catalog ...`：本地安装成功；从安装后的工作区运行 worker，返回 5 页、11 个元素的结构概要。
-- Desktop 插件市场增加受开发目录开关控制的 PPTX 卡片；UI 的计划/安装链路通过 widget 测试。该卡片只允许本地开发目录，不是线上发行。
+- Desktop 插件市场增加受 `OPENMUSE_PPTX_DEV_CATALOG` 开发目录开关控制的 PPTX 卡片；UI 的计划/安装链路通过 widget 测试。安装后 Host 可热注册一个内置适配器，由已安装的 Node worker 读取 Host 授权的本地 PPTX，并在 Flutter 编辑区显示页数与元素数。该卡片只允许本地开发目录，不是线上发行，也不是 GenOffice 高保真编辑器。
 - Android 真机：既有 Rust PPTX FFI 成功读取同一份 GenOffice 样本；捆绑的 A2UI/QuickJS PPTX 包经 Mobile 市场安装并启动成功。Flutter widget 测试证明安装前工作区 PPTX 入口禁用、安装后可打开既有只读 viewer。Mobile 的原生解析引擎仍随 App 构建，下载的只是受限控制包。
-- **未完成**：生产商场服务、远端签名目录、Desktop 自动激活与完整 GenOffice 编辑 UI、Mobile 商店 UI 到 Cloud PPTX 的单次真机用户旅程、iOS 验证。因此当前不能报告两端完整端到端通过。
+- **未完成**：生产商场服务、远端签名目录、Desktop 通用外部 worker 装载/强隔离与完整 GenOffice 编辑 UI、Mobile 商店 UI 到 Cloud PPTX 的单次真机用户旅程、iOS 验证。因此当前不能报告两端完整端到端通过。
 
 ## 5. 前后端交付顺序
 
