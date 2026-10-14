@@ -1,6 +1,6 @@
-# OpenMuse Plugin Ecosystem（方案仓库）
+# OpenMuse Plugin Ecosystem
 
-状态：**设计草案，2026-10-15**。本仓库已经在本地初始化；服务、SDK、CLI 和远端发行仓库尚未实现或发布。
+状态：**方案与首个 PPTX 纵向样例，2026-10-15**。本仓库已在本地初始化；公共商店服务、签名发布、SDK 和开发者门户尚未实现或发布。GenOffice PPTX 的 Desktop 核心 worker 已拆出并通过本地安装目录验证；它尚不等于三端可上架产品。
 
 目标是承载非内置插件的官方示例与受维护源码、开发者文档、版本化合同、测试工具、发布服务和审核流程。社区开发者可以保留自己的源码仓库，向 OpenMuse 提交不可变的构建产物；Git 仓库不是线上安装源，也不是任意上传代码的执行环境。
 
@@ -11,6 +11,8 @@
 - [编码代理 Skill 设计](docs/AGENT-SKILL-CONTRACT.zh-CN.md)
 - [仅用手机与 Agent 创建插件](docs/MOBILE-AGENT-STUDIO.zh-CN.md)
 - [Store API OpenAPI 草案](contracts/store-api.openapi.yaml)
+- [GenOffice PPTX 源码分析、拆分与三端接入](docs/GENOFFICE-PPTX.zh-CN.md)
+- [GenOffice PPTX 独立插件样例](plugins/genoffice-pptx/README.md)
 
 ## 与现有仓库的边界
 
@@ -32,8 +34,8 @@ sdk/                         # Desktop、Mobile、Web SDK 和示例
 contracts/                   # 版本化 API/发布/能力合同及 fixtures
 templates/                   # 三端模板与最小可运行示例
 skills/                      # 给编码代理使用的开发/验证 skill
-plugins/official/            # 官方维护但非 built-in 的插件源码
+plugins/genoffice-pptx/      # 首个外部插件：GenOffice PPTX 核心、构建与本地包
 docs/                        # 开发者指南、架构、审核与安全流程
 ```
 
-当前仅创建方案文档。落地时先固定合同和运行时门禁，再添加上述实现目录；不要提前把现有 `Muse-Client` 代码复制为第二份合同真源。
+当前 `plugins/genoffice-pptx` 固定上游源码快照并构建 Node worker。本仓库仍以 `Muse-Client` 的 Manifest v2 为真源，未复制合同定义。`dist/` 是本地、未签名的安装夹具，只供开发测试。
