@@ -20,7 +20,7 @@ Desktop 包是标准 MCPB，提供 `open_editor` 工具、`ui://` MCP Apps 资�
 - MCP 兼容：Node 标准客户端通过 stdio 与 Streamable HTTP 读取工具、MCP Apps 资源和 `resource_link`。
 - macOS：Flutter 集成测试从已审核目录下载 MCPB，校验 SHA-256、安装、调用 `open_editor` 并请求编辑器页面，通过。
 - 浏览器：移动宽度下输入正文、自动保存、重载恢复，通过。
-- Android：集成测试覆盖在线目录、安装和 WebView 打开；以本机真机执行结果为准。
+- Android：真机 `3B65BB01B4H00000` 集成测试从已审核目录发现插件、安装、调用 `open_editor`，并在应用内 WebView 加载编辑器页面，通过。
 
 ## 后续发布前条件
 
