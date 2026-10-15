@@ -44,3 +44,5 @@ Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run s
 - [代理开发 Skill](skills/build-mcp-plugin/SKILL.md)
 
 `compatibility/clients.json` 是**公开互操作测试矩阵**，开发者选择客户端版本时默认最新。它只选择测试目标，不注入插件包，也不成为运行时的私有兼容字段；最终可用性由客户端与插件在 MCP 协议协商、MCPB 标准兼容声明和标准 JSON Schema 能力发现中确定。
+
+Design details: [docs/MARKET-SERVICE-ARCHITECTURE.zh-CN.md](docs/MARKET-SERVICE-ARCHITECTURE.zh-CN.md).
