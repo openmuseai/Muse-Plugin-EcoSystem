@@ -12,6 +12,8 @@
 
 Desktop：下载 MCPB、核验 `fileSha256`、检查标准 `manifest.json`，以隔离进程运行 MCP stdio Server。Host 可以根据标准 MCP 工具 JSON Schema 的 `contentEncoding` 与 `contentMediaType` 提供用户选文件入口；不读取插件私有命令。
 
+独立进程是本轮第三方 MCPB 的 Host 执行策略，不是所有 Desktop 插件的协议强制要求。客户端已有的内置热插拔组件仍可在其内部生命周期中运行；第三方开发者面对的公开合同始终是 MCP/MCPB，不能依赖该内部热插拔机制。
+
 Mobile：首选远端 MCP Streamable HTTP 服务和 A2UI over MCP 的标准交互；复杂 HTML 采用 MCP Apps 的沙箱 WebView。现有 QuickJS 可以作为客户端内部执行手段，但不得作为第三方接口或下载包约定。离线可用需要单独的、公开且经 TCK 证明的移动交付规范；当前不承诺手机本地执行 GenOffice Node 引擎。
 
 Web：远端 MCP + OAuth，界面采用 MCP Apps 的沙箱 iframe 或 A2UI 渲染器。第三方代码不进入主应用同源特权上下文。

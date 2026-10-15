@@ -31,7 +31,7 @@ curl http://127.0.0.1:8765/v0.1/servers
 
 Desktop 客户端设置 `OPENMUSE_MCP_REGISTRY_URL=http://127.0.0.1:8765` 后，插件市场读取公开目录，一键安装并通过 MCP 调用。无此配置时，现有内置商店仍可独立使用。生产环境使用 HTTPS 地址。
 
-Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run serve:http`，并设置同一 `OPENMUSE_MCP_REGISTRY_URL`。Mobile 在线 MCP 页面读取 `server.json.remotes`，安装时连接远端 MCP、检查工具和 A2UI 资源，使用时由用户选择文件。Android 本机联调可用 `adb reverse tcp:8765 tcp:8765` 和 `adb reverse tcp:8767 tcp:8767`；生产环境须使用 HTTPS 和鉴权。移动端调用会把用户选择的文件发送给远端 MCP 服务，部署前必须明确隐私政策。
+Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run serve:http`，并设置同一 `OPENMUSE_MCP_REGISTRY_URL`。Mobile 在线 MCP 页面读取 `server.json.remotes`，安装时连接远端 MCP、检查工具和 A2UI 资源，使用时由用户选择文件。Android 真机安装、页面点击与 PPTX 调用已通过；本机联调可用 `adb reverse tcp:8765 tcp:8765` 和 `adb reverse tcp:8767 tcp:8767`。生产环境须使用 HTTPS 和鉴权。移动端调用会把用户选择的文件发送给远端 MCP 服务，部署前必须明确隐私政策。
 
 ## 文档
 
