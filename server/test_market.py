@@ -54,6 +54,10 @@ class MarketFlowTest(unittest.TestCase):
                           "fileSha256": digest, "transport": {"type": "stdio"}}],
             "remotes": [{"type": "streamable-http", "url": "http://127.0.0.1:8767/mcp"}],
         }
+        with self.assertRaises(HTTPError) as invalid:
+            self.request("/v0.1/publish", method="POST", token="dev",
+                         body=json.dumps({**document, "remotes": ["bad"]}).encode())
+        self.assertEqual(invalid.exception.code, 400)
         submitted = self.request("/v0.1/publish", method="POST", token="dev",
                                  body=json.dumps(document).encode())
         self.assertEqual(submitted["_meta"]["status"], "pending")

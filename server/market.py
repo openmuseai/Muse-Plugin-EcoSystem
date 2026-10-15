@@ -137,7 +137,10 @@ class Handler(BaseHTTPRequestHandler):
             if not isinstance(packages, list) or len(packages) != 1:
                 raise ValueError("One MCPB package required")
             package = packages[0]
-            for remote in document.get("remotes", []):
+            remotes = document.get("remotes", [])
+            if not isinstance(remotes, list) or any(not isinstance(item, dict) for item in remotes):
+                raise ValueError("Invalid remote endpoint list")
+            for remote in remotes:
                 url = urlsplit(remote.get("url", ""))
                 if remote.get("type") != "streamable-http" or not (
                     url.scheme == "https" or
@@ -220,7 +223,10 @@ class Handler(BaseHTTPRequestHandler):
 
     def _list(self, query: dict[str, list[str]]) -> None:
         search = query.get("search", [""])[0].lower()
-        cursor = max(0, int(query.get("cursor", ["0"])[0]))
+        try:
+            cursor = max(0, int(query.get("cursor", ["0"])[0]))
+        except ValueError:
+            return self._json(400, {"error": "Invalid cursor"})
         rows = self.server.db.execute(
             "SELECT id,name,version,document FROM submissions WHERE state='approved'"
         ).fetchall()
