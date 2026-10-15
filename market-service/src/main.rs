@@ -428,7 +428,7 @@ async fn catalog(
     let search = query.search.unwrap_or_default().to_lowercase();
     let documents: Vec<Value> = latest
         .into_iter()
-        .filter_map(|(name, (_, document))| {
+        .filter_map(|(name, (_, mut document))| {
             let description = document["description"].as_str().unwrap_or("");
             if !search.is_empty()
                 && !format!("{name} {description}")
@@ -437,6 +437,12 @@ async fn catalog(
             {
                 None
             } else {
+                // The registry owns package URLs. Rebuild the standard descriptor
+                // when its public origin changes without mutating the reviewed record.
+                if let Some(digest) = document["packages"][0]["fileSha256"].as_str() {
+                    document["packages"][0]["identifier"] =
+                        json!(format!("{}/packages/{digest}.mcpb", state.origin));
+                }
                 Some(document)
             }
         })
