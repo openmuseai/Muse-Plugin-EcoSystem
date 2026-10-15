@@ -1,0 +1,31 @@
+# Standalone local dependencies; this compose project shares no database with Muse-Server.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: plugin_market
+      POSTGRES_USER: plugin_market
+      POSTGRES_PASSWORD: local-market-password
+    ports: ["127.0.0.1:15432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plugin_market -d plugin_market"]
+      interval: 2s
+      timeout: 2s
+      retries: 20
+    volumes: [market_pg:/var/lib/postgresql/data]
+  redis:
+    image: redis:7
+    ports: ["127.0.0.1:16379:6379"]
+    volumes: [market_redis:/data]
+  minio:
+    image: minio/minio
+    command: server /data --console-address ':9001'
+    environment:
+      MINIO_ROOT_USER: market-local
+      MINIO_ROOT_PASSWORD: market-local-password
+    ports: ["127.0.0.1:19000:9000", "127.0.0.1:19001:9001"]
+    volumes: [market_objects:/data]
+volumes:
+  market_pg: {}
+  market_redis: {}
+  market_objects: {}
