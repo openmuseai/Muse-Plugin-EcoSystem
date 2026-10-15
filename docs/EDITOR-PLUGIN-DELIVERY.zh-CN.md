@@ -23,6 +23,8 @@ Desktop 包是标准 MCPB，提供 `open_editor` 工具、`ui://` MCP Apps 资�
 - Android WebView 限制：这台设备的 Google WebView 138 能加载 HTML、JS 和 CanvasKit，但 Flutter Web 场景没有生成可见画面，正文不可编辑。系统浏览器路径已验证可用；其他 Android WebView 版本仍需设备矩阵验证。
 - 上下架：管理后台下架后公开目录为空且 MCPB 下载返回 404；再次上架后目录恢复且下载返回 200，审核日志保留两次决定，通过。
 
+验收截图：[macOS 正文恢复](evidence/2026-10-16/macos-editor-restored.png)、[Android 正文恢复](evidence/2026-10-16/android-editor-restored.png)、[后台下架](evidence/2026-10-16/admin-delisted.png)、[后台恢复上架](evidence/2026-10-16/admin-relisted.png)。
+
 ## 后续发布前条件
 
 本地使用的 `127.0.0.1` editor URL 只适合端到端测试。正式 MCPB 必须嵌入部署后的 HTTPS URL，Web 资源和 MCP endpoint 保持在线。当前编辑器网页由远程服务提供，网页资源应按插件版本固定并发布校验摘要；浏览器本地存储按来源隔离，跨浏览器不会共享文档。账号、命名空间、扫描和审核 SLA 需要在正式市场部署前完善。
