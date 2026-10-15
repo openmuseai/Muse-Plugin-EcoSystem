@@ -9,7 +9,7 @@ Third-party plugin based on AppFlowy Editor 6.2.0 (MPL-2.0). The plugin communic
 - `test/`: standard MCP client tests.
 
 ```sh
-cd web && flutter pub get && flutter build web --release --no-wasm-dry-run --base-href /editor/
+cd web && flutter pub get && flutter build web --release --no-wasm-dry-run --no-web-resources-cdn --base-href /editor/
 cd .. && npm ci && npm run build && npm run build:http && npm test
 python3 scripts/pack.py --editor-url https://plugin.example/editor/
 PORT=8768 EDITOR_PUBLIC_URL=http://127.0.0.1:8768/editor/ node dist/http.mjs
