@@ -21,6 +21,7 @@ Desktop 包是标准 MCPB，提供 `open_editor` 工具、`ui://` MCP Apps 资�
 - macOS：Flutter 集成测试从已审核目录下载 MCPB，校验 SHA-256、安装、调用 `open_editor` 并请求编辑器页面，通过。
 - 浏览器：移动宽度下输入正文、自动保存、重载恢复，通过。
 - Android：真机 `3B65BB01B4H00000` 集成测试从已审核目录发现插件、安装、调用 `open_editor`，并在应用内 WebView 加载编辑器页面，通过。
+- AppFlowy Editor 本身：在上述安装测试后，下架使目录隐藏且 MCPB 下载返回 404；重新上架后目录恢复，通过。
 
 ## 后续发布前条件
 
