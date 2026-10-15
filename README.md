@@ -1,41 +1,46 @@
 # OpenMuse Plugin Ecosystem
 
-状态：**方案与首个 PPTX 纵向样例，2026-10-15**。本仓库已在本地初始化；公共商店服务、签名发布、SDK 和开发者门户尚未实现或发布。GenOffice PPTX 的 Desktop 核心 worker 已拆出并通过本地安装目录验证；它尚不等于三端可上架产品。
+独立的第三方插件源码、开发指南和市场服务。插件与客户端只通过公开规范交互：运行时 [MCP](https://modelcontextprotocol.io/specification/2026-07-28)、Desktop 交付 [MCPB](https://github.com/modelcontextprotocol/mcpb/blob/main/MANIFEST.md)、发现与发布 [MCP Registry v0.1](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/openapi.yaml)、声明式移动界面 [A2UI](https://a2ui.org/specification/v0.9.1-a2ui/) 或 [MCP Apps](https://apps.extensions.modelcontextprotocol.io/)。插件包不引用客户端源码、私有 Manifest、内部命令或字段。
 
-目标是承载非内置插件的官方示例与受维护源码、开发者文档、版本化合同、测试工具、发布服务和审核流程。社区开发者可以保留自己的源码仓库，向 OpenMuse 提交不可变的构建产物；Git 仓库不是线上安装源，也不是任意上传代码的执行环境。
+本仓库当前实现了独立的本地市场服务、审核状态、MCPB 上传、公开目录、GenOffice PPTX MCP 插件，以及 Desktop 的 stdio 和 Mobile 可用的 Streamable HTTP/A2UI 端点。服务目前是**可联调原型**；生产部署需要 OIDC 身份与命名空间归属、恶意软件扫描、隔离运行、签名、审计、对象存储和高可用数据库。Web 尚未完成接入。
 
-- [产品与生态设计](docs/PRODUCT.zh-CN.md)
-- [技术架构与接口设计](docs/ARCHITECTURE.zh-CN.md)
-- [实施顺序与验收](docs/ROADMAP.zh-CN.md)
-- [开发者入门指南草案](docs/DEVELOPER-GUIDE.zh-CN.md)
-- [编码代理 Skill 设计](docs/AGENT-SKILL-CONTRACT.zh-CN.md)
-- [仅用手机与 Agent 创建插件](docs/MOBILE-AGENT-STUDIO.zh-CN.md)
-- [Store API OpenAPI 草案](contracts/store-api.openapi.yaml)
-- [GenOffice PPTX 源码分析、拆分与三端接入](docs/GENOFFICE-PPTX.zh-CN.md)
-- [GenOffice PPTX 独立插件样例](plugins/genoffice-pptx/README.md)
+## 快速验证
 
-## 与现有仓库的边界
-
-| 仓库 | 责任 |
-| --- | --- |
-| `Muse-Client` | Host、三端运行时、安装与权限执行、Manifest v2 的当前真源、客户端集成测试。 |
-| `Muse-Server` | 现有账号、Workspace/Cloud、设备中继；商店身份可复用 GoTrue，但插件版本和审核状态由本仓库的商店服务拥有。 |
-| 本仓库 | 外部插件的开发、验证、提交、审核、签名目录、静态产物与开发者门户。 |
-| 开发者仓库 | 各开发者的源码、构建与维护。商店只接收明确授权提交的产物和元数据。 |
-
-## 建议的目标目录
-
-```text
-apps/developer-portal/       # 开发者控制台、公开文档和目录页
-services/store-api/          # 目录查询、开发者发布、审核、统计
-services/release-worker/     # 隔离扫描、TCK、签名发布
-crates/plugin-tool/          # openmuse-plugin CLI、打包与本地验证
-sdk/                         # Desktop、Mobile、Web SDK 和示例
-contracts/                   # 版本化 API/发布/能力合同及 fixtures
-templates/                   # 三端模板与最小可运行示例
-skills/                      # 给编码代理使用的开发/验证 skill
-plugins/genoffice-pptx/      # 首个外部插件：GenOffice PPTX 核心、构建与本地包
-docs/                        # 开发者指南、架构、审核与安全流程
+```sh
+cd plugins/genoffice-pptx
+npm ci
+npm test
+npm run pack:desktop
+cd ../..
+MARKET_DEVELOPER_TOKEN=dev-local MARKET_REVIEWER_TOKEN=review-local \
+  python3 server/market.py --listen 127.0.0.1:8765 --data .market-data
 ```
 
-当前 `plugins/genoffice-pptx` 固定上游源码快照并构建 Node worker。本仓库仍以 `Muse-Client` 的 Manifest v2 为真源，未复制合同定义。`dist/` 是本地、未签名的安装夹具，只供开发测试。
+另一终端执行：
+
+```sh
+python3 plugins/genoffice-pptx/scripts/publish.py \
+  plugins/genoffice-pptx/dist/genoffice-pptx-0.2.0.mcpb \
+  --registry http://127.0.0.1:8765 --token dev-local \
+  --remote http://127.0.0.1:8767/mcp
+curl -X POST -H 'Authorization: Bearer review-local' \
+  -H 'Content-Type: application/json' --data '{"note":"reviewed"}' \
+  http://127.0.0.1:8765/internal/reviews/1/approve
+curl http://127.0.0.1:8765/v0.1/servers
+```
+
+Desktop 客户端设置 `OPENMUSE_MCP_REGISTRY_URL=http://127.0.0.1:8765` 后，插件市场读取公开目录，一键安装并通过 MCP 调用。无此配置时，现有内置商店仍可独立使用。生产环境使用 HTTPS 地址。
+
+Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run serve:http`，并设置同一 `OPENMUSE_MCP_REGISTRY_URL`。Mobile 在线 MCP 页面读取 `server.json.remotes`，安装时连接远端 MCP、检查工具和 A2UI 资源，使用时由用户选择文件。Android 本机联调可用 `adb reverse tcp:8765 tcp:8765` 和 `adb reverse tcp:8767 tcp:8767`；生产环境须使用 HTTPS 和鉴权。移动端调用会把用户选择的文件发送给远端 MCP 服务，部署前必须明确隐私政策。
+
+## 文档
+
+- [产品与平台方案](docs/PRODUCT.zh-CN.md)
+- [架构、服务和信任边界](docs/ARCHITECTURE.zh-CN.md)
+- [开发、打包、上传、审核指南](docs/DEVELOPER-GUIDE.zh-CN.md)
+- [手机创作与 Mobile/Web 交付](docs/MOBILE-AGENT-STUDIO.zh-CN.md)
+- [GenOffice PPTX 拆分与范围](docs/GENOFFICE-PPTX.zh-CN.md)
+- [交付清单](docs/ROADMAP.zh-CN.md)
+- [代理开发 Skill](skills/build-mcp-plugin/SKILL.md)
+
+`compatibility/clients.json` 是**公开互操作测试矩阵**，开发者选择客户端版本时默认最新。它只选择测试目标，不注入插件包，也不成为运行时的私有兼容字段；最终可用性由客户端与插件在 MCP 协议协商、MCPB 标准兼容声明和标准 JSON Schema 能力发现中确定。
