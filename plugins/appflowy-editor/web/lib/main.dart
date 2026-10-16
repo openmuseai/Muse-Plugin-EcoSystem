@@ -44,11 +44,29 @@ class _EditorPageState extends State<EditorPage> {
     super.initState();
     final raw = web.window.localStorage.getItem(storageKey);
     try {
+      final fragment = Uri.base.fragment;
+      if (fragment.startsWith('open=')) {
+        final payload = jsonDecode(utf8.decode(base64Url.decode(
+          base64Url.normalize(fragment.substring(5)),
+        ))) as Map<String, dynamic>;
+        final markdown = payload['content'] as String;
+        if (utf8.encode(markdown).length > 32 * 1024) {
+          throw const FormatException('Markdown document exceeds 32 KiB');
+        }
+        state = EditorState(document: markdownToDocument(markdown));
+        title.text = payload['name'] as String? ?? title.text;
+        web.window.localStorage.setItem(storageKey, jsonEncode({
+          'title': title.text,
+          'document': state.document.toJson(),
+        }));
+        web.window.location.hash = '';
+      } else {
       final saved = raw == null ? null : jsonDecode(raw) as Map<String, dynamic>;
       state = EditorState(document: saved == null
           ? EditorState.blank(withInitialText: true).document
           : Document.fromJson(saved['document'] as Map<String, dynamic>));
       title.text = saved?['title'] as String? ?? title.text;
+      }
     } catch (_) {
       state = EditorState.blank(withInitialText: true);
     }

@@ -14,7 +14,7 @@ function editorUrl(): string {
 }
 
 export function buildServer() {
-  const server = new McpServer({ name: 'io.openmuse/appflowy-editor', version: '0.1.3' }, { capabilities: { tools: {}, resources: {} } })
+  const server = new McpServer({ name: 'io.openmuse/appflowy-editor', version: '0.1.4' }, { capabilities: { tools: {}, resources: {} } })
   server.registerResource('AppFlowy Editor', editorUiUri,
     { title: 'AppFlowy Editor', mimeType: editorMime },
     async () => {
@@ -32,5 +32,24 @@ export function buildServer() {
     { type: 'text' as const, text: 'Open AppFlowy Editor' },
     { type: 'resource_link' as const, uri: editorUrl(), name: 'AppFlowy Editor', mimeType: 'text/html' },
   ], _meta: { ui: { resourceUri: editorUiUri } } }))
+  server.registerTool('open_markdown', {
+    title: 'Open Markdown document',
+    description: 'Open an authorized Markdown file in AppFlowy Editor as a locally saved document.',
+    inputSchema: z.object({
+      content: z.string().meta({ contentEncoding: 'base64', contentMediaType: 'text/markdown' }),
+      name: z.string().max(180).optional(),
+    }),
+    _meta: { ui: { resourceUri: editorUiUri } },
+  }, async ({ content, name }) => {
+    const bytes = Buffer.from(content, 'base64')
+    if (bytes.length > 32 * 1024 || bytes.toString('base64').replace(/=+$/, '') !== content.replace(/=+$/, '')) {
+      throw new Error('Markdown content must be canonical base64 and at most 32 KiB')
+    }
+    const payload = Buffer.from(JSON.stringify({ name: name || 'Markdown 文档', content: bytes.toString('utf8') })).toString('base64url')
+    const url = `${editorUrl()}#open=${payload}`
+    return { content: [
+      { type: 'resource_link' as const, uri: url, name: name || 'Markdown 文档', mimeType: 'text/html' },
+    ], _meta: { ui: { resourceUri: editorUiUri } } }
+  })
   return server
 }

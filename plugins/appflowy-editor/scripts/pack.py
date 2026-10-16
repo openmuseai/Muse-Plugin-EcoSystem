@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 root = Path(__file__).resolve().parents[1]
-version = "0.1.3"
+version = "0.1.4"
 parser = argparse.ArgumentParser()
 parser.add_argument("--editor-url", help="Public HTTPS editor URL to embed in the Desktop MCPB")
 parser.add_argument("--out", type=Path, default=root / "dist")
@@ -34,7 +34,7 @@ manifest = {
     "author": {"name": "OpenMuse contributors"},
     "license": "MPL-2.0",
     "repository": {"type": "git", "url": "https://github.com/AppFlowy-IO/appflowy-editor"},
-    "tools": [{"name": "open_editor", "description": "Open the rich text editor"}],
+    "tools": [{"name": "open_editor", "description": "Open the rich text editor"}, {"name": "open_markdown", "description": "Open a Markdown document"}],
     "compatibility": {"platforms": ["darwin", "win32", "linux"], "runtimes": {"node": ">=22.0.0"}},
     "server": {"type": "node", "entry_point": "server/index.mjs", "mcp_config": {"command": "node", "args": ["${__dirname}/server/index.mjs"]}},
 }

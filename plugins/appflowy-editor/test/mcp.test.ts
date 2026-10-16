@@ -19,7 +19,24 @@ async function check(client: Client) {
 test('stdio package speaks standard MCP Apps', async () => {
   const client = new Client({ name: 'editor-tck', version: '1.0.0' })
   const transport = new StdioClientTransport({ command: process.execPath, args: [join(import.meta.dirname, '../dist/server.mjs')] })
-  try { await client.connect(transport, { mode: 'auto' }); await check(client) }
+  try {
+    await client.connect(transport, { mode: 'auto' })
+    await check(client)
+    const tools = await client.listTools()
+    const markdown = tools.tools.find(tool => tool.name === 'open_markdown')
+    assert.ok(markdown)
+    assert.equal((markdown.inputSchema.properties as any).content.contentEncoding, 'base64')
+    assert.equal((markdown.inputSchema.properties as any).content.contentMediaType, 'text/markdown')
+    const result = await client.callTool({
+      name: 'open_markdown',
+      arguments: { content: Buffer.from('# Review note\n').toString('base64'), name: 'review.md' },
+    })
+    assert.equal(result.isError, undefined)
+    const link = result.content.find(item => item.type === 'resource_link') as any
+    assert.ok(link)
+    const payload = JSON.parse(Buffer.from(new URL(link.uri).hash.slice(6), 'base64url').toString())
+    assert.deepEqual(payload, { name: 'review.md', content: '# Review note\n' })
+  }
   finally { await transport.close() }
 })
 
