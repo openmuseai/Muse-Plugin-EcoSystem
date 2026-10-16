@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:html' as html;
+import 'dart:js_interop';
 
 import 'package:appflowy_editor/appflowy_editor.dart';
 import 'package:flutter/material.dart';
+import 'package:web/web.dart' as web;
 
 void main() => runApp(const EditorPluginApp());
 
@@ -41,7 +42,7 @@ class _EditorPageState extends State<EditorPage> {
   @override
   void initState() {
     super.initState();
-    final raw = html.window.localStorage[storageKey];
+    final raw = web.window.localStorage.getItem(storageKey);
     try {
       final saved = raw == null ? null : jsonDecode(raw) as Map<String, dynamic>;
       state = EditorState(document: saved == null
@@ -63,22 +64,23 @@ class _EditorPageState extends State<EditorPage> {
   }
 
   void _save() {
-    html.window.localStorage[storageKey] = jsonEncode({
+    web.window.localStorage.setItem(storageKey, jsonEncode({
       'title': title.text,
       'document': state.document.toJson(),
-    });
+    }));
     if (mounted) setState(() => status = '已保存到此设备');
   }
 
   void _export() {
     _save();
     final data = jsonEncode({'title': title.text, 'document': state.document.toJson()});
-    final blob = html.Blob([data], 'application/json');
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    html.AnchorElement(href: url)
+    final blob = web.Blob([data.toJS].toJS, web.BlobPropertyBag(type: 'application/json'));
+    final url = web.URL.createObjectURL(blob);
+    web.HTMLAnchorElement()
+      ..href = url
       ..download = '${title.text.trim().isEmpty ? 'untitled' : title.text.trim()}.appflowy.json'
       ..click();
-    html.Url.revokeObjectUrl(url);
+    web.URL.revokeObjectURL(url);
   }
 
   @override

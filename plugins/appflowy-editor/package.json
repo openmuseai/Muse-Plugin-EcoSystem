@@ -6,7 +6,7 @@
   "scripts":{
     "build":"esbuild src/mcp_server.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/server.mjs",
     "build:http":"esbuild src/http_server.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/http.mjs",
-    "build:web":"cd web && flutter build web --release --no-wasm-dry-run --no-web-resources-cdn --base-href /editor/",
+    "build:web":"cd web && flutter build web --release --wasm --no-web-resources-cdn --base-href /editor/",
     "build:all":"npm run build && npm run build:http && npm run build:web",
     "test":"node --import tsx --test test/*.test.ts"
   },
