@@ -24,7 +24,7 @@ Desktop 包是标准 MCPB，提供 `open_editor` 工具、`ui://` MCP Apps 资�
 - Android 系统浏览器不是交付路径；其他 WebView/系统版本仍须设备矩阵验证。Wasm 构建包含 Flutter 生成的 JavaScript 后备，不能据此声称所有设备都执行了 Wasm 路径。
 - 上下架：管理后台下架后公开目录为空且 MCPB 下载返回 404；再次上架后目录恢复且下载返回 200，审核日志保留两次决定，通过。
 
-新验收截图：[macOS 应用内正文恢复](evidence/2026-10-16/macos-in-app-editor-restored.png)、[Android 离线冷启动后正文恢复](evidence/2026-10-16/android-offline-cold-restored.png)、[后台下架](evidence/2026-10-16/admin-delisted.png)、[后台恢复上架](evidence/2026-10-16/admin-relisted.png)。
+新验收截图：[macOS 应用内正文恢复](evidence/2026-10-16/macos-in-app-editor-restored.png)、[Android 最终 APK 离线冷启动后正文恢复](evidence/2026-10-16/android-final-apk-offline-cold-restored.png)、[后台下架](evidence/2026-10-16/admin-delisted.png)、[后台恢复上架](evidence/2026-10-16/admin-relisted.png)。Android 最终包把 SHA-256 虚拟来源拆为两个合法域名段；升级至该包后，新来源与旧测试来源的 WebView 本地存储不会自动合并。
 
 ## 本地完整应用人工验收
 
