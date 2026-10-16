@@ -58,7 +58,6 @@ def fetch_license(family):
     if notice.exists():
         return
     with urlopen(f"https://raw.githubusercontent.com/google/fonts/main/ofl/{family}/OFL.txt", timeout=30) as response:
-        source = response.read().decode("utf-8")
-        notice.write_text("\n".join(line.rstrip() for line in source.splitlines()) + "\n")
+        notice.write_bytes(response.read())
 with ThreadPoolExecutor(max_workers=16) as pool:
     list(pool.map(fetch_license, sorted({path.split("/", 1)[0] for path in paths})))
