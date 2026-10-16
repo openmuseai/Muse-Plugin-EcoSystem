@@ -1,12 +1,12 @@
 {
   "name":"@openmuse/appflowy-editor-plugin",
-  "version":"0.1.0",
+  "version":"0.1.3",
   "private":true,
   "type":"module",
   "scripts":{
     "build":"esbuild src/mcp_server.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/server.mjs",
     "build:http":"esbuild src/http_server.ts --bundle --platform=node --format=esm --target=node22 --outfile=dist/http.mjs",
-    "build:web":"cd web && flutter build web --release --wasm --no-web-resources-cdn --base-href /editor/",
+    "build:web":"cd web && flutter build web --release --wasm --no-web-resources-cdn --base-href /editor/ && cd .. && python3 scripts/bundle_fonts.py",
     "build:all":"npm run build && npm run build:http && npm run build:web",
     "test":"node --import tsx --test test/*.test.ts"
   },

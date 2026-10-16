@@ -5,8 +5,9 @@ flowchart LR
   Dev[开发者 / 手机 Agent] -->|MCPB + server.json| Store[独立市场服务]
   Reviewer[审核员] -->|内部审核 API| Store
   Store -->|MCP Registry v0.1 + SHA-256 MCPB| Desktop[Desktop Host]
-  Store -->|MCP Registry: remotes| Mobile[Mobile / Web Host]
+  Store -->|MCP Registry: packages + remotes| Mobile[Mobile / Web Host]
   Desktop -->|MCP stdio| Plugin[第三方 MCP Server]
+  Mobile -->|已校验 MCPB 的 Web/Wasm 资源| Local[应用内 WebView]
   Mobile -->|MCP Streamable HTTP| Remote[远端 MCP Server]
   Remote -->|A2UI 或 MCP Apps| Mobile
 ```
@@ -31,7 +32,7 @@ Desktop 客户端把用户选择的文件作为 `contentEncoding: base64` 参数
 
 Desktop：MCPB Node/二进制/Python 是开放规范，本轮 Host 接受 Node MCPB；下载/解压设大小与路径上限，核验 `fileSha256`，安装到应用支持目录，MCP Dart SDK 协商 `2026-07-28`，重启从回执恢复。需要继续补原子版本切换、失败回滚、撤回、进程沙箱及工具级用户授权。
 
-Mobile：A2UI v0.9.1 是消息格式而非权限系统，具体运输依[官方 A2UI over MCP 指南](https://a2ui.org/guides/a2ui_over_mcp/)；MCP Apps 适合隔离 HTML 界面。此轮提供远端 MCP Streamable HTTP，插件市场读 Registry `remotes`、连接工具与 A2UI 资源并保存安装记录。当前仅校验 A2UI 消息，尚未实现完整 A2UI 绘制。下载 JS 到 QuickJS 后调用私有全局函数的方式不是开放插件合同，因此不作为本仓库发行类型。Node GenOffice 核心不能直接在 QuickJS 中运行；手机 PPTX 完整编辑须单独移植解析/渲染核心或选远端 MCP 服务，并通过 Android/iOS 真机、政策、隐私与性能门禁。
+Mobile：A2UI v0.9.1 是消息格式而非权限系统，具体运输依[官方 A2UI over MCP 指南](https://a2ui.org/guides/a2ui_over_mcp/)；MCP Apps 适合隔离 HTML 界面。远端插件可用 MCP Streamable HTTP；Android 上的 AppFlowy Editor 也可从 Registry 的标准 MCPB `packages`/`fileSha256` 下载并校验包，将其中公开约定的 `web/` 站点装入应用私有目录，在应用内 WebView 离线启动。`web/` 是本生态公布的打包 profile，不是 MCPB 基础规范的移动执行定义，也不增添客户端私有 Registry 字段。当前仅校验 A2UI 消息，尚未实现完整 A2UI 绘制。下载 JS 到 QuickJS 后调用私有全局函数的方式不是开放插件合同，因此不作为本仓库发行类型。Flutter Web Wasm 需要浏览器图形与 DOM 环境，不能当成可直接装载的原生 Wasm 模块。Node GenOffice 核心不能直接在 QuickJS 中运行；手机 PPTX 完整编辑须单独移植解析/渲染核心或选远端 MCP 服务，并通过 Android/iOS 真机、政策、隐私与性能门禁。
 
 Web：MCP Streamable HTTP + OAuth 和 MCP Apps iframe/A2UI。严格来源隔离、CSP、导航控制与逐工具授权。Web 在线安装尚未实现。
 

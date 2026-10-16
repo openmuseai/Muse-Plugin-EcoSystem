@@ -23,8 +23,8 @@ use std::{
 use tokio::net::TcpListener;
 use uuid::Uuid;
 
-const MAX_PACKAGE: usize = 32 * 1024 * 1024;
-const MAX_EXPANDED: u64 = 64 * 1024 * 1024;
+const MAX_PACKAGE: usize = 80 * 1024 * 1024;
+const MAX_EXPANDED: u64 = 160 * 1024 * 1024;
 
 #[derive(Clone)]
 struct AppState {
@@ -138,7 +138,7 @@ fn digest_ok(digest: &str) -> bool {
 fn verify_bundle(bytes: &[u8]) -> ApiResult<Value> {
     let mut archive =
         zip::ZipArchive::new(std::io::Cursor::new(bytes)).map_err(|_| bad("Invalid MCPB ZIP"))?;
-    if archive.len() == 0 || archive.len() > 256 {
+    if archive.len() == 0 || archive.len() > 1024 {
         return Err(bad("Invalid MCPB file count"));
     }
     let mut expanded = 0_u64;

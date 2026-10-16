@@ -2,7 +2,7 @@
 
 独立的第三方插件源码、开发指南和市场服务。插件与客户端只通过公开规范交互：运行时 [MCP](https://modelcontextprotocol.io/specification/2026-07-28)、Desktop 交付 [MCPB](https://github.com/modelcontextprotocol/mcpb/blob/main/MANIFEST.md)、发现与发布 [MCP Registry v0.1](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/openapi.yaml)、声明式移动界面 [A2UI](https://a2ui.org/specification/v0.9.1-a2ui/) 或 [MCP Apps](https://apps.extensions.modelcontextprotocol.io/)。插件包不引用客户端源码、私有 Manifest、内部命令或字段。
 
-本仓库当前实现了独立的本地市场服务、审核状态、MCPB 上传、公开目录、GenOffice PPTX MCP 插件，以及 Desktop 的 stdio 和 Mobile 可用的 Streamable HTTP/A2UI 端点。服务目前是**可联调原型**；生产部署需要 OIDC 身份与命名空间归属、恶意软件扫描、隔离运行、签名、审计、对象存储和高可用数据库。Web 尚未完成接入。
+本仓库当前实现了独立的本地市场服务、审核状态、MCPB 上传、公开目录、GenOffice PPTX MCP 插件、AppFlowy Editor 跨端插件，以及 Desktop 的 stdio、Mobile 的 Streamable HTTP/A2UI 和审核包离线 Web/Wasm 交付。AppFlowy Editor `0.1.3` 在 Android 应用内安装后可不连接开发机直接打开、编辑和恢复文档。服务目前是**可联调原型**；生产部署需要 OIDC 身份与命名空间归属、恶意软件扫描、隔离运行、签名、审计、对象存储和高可用数据库。Web 尚未完成接入。
 
 ## 快速验证
 
@@ -37,6 +37,8 @@ Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run s
 
 - [产品与平台方案](docs/PRODUCT.zh-CN.md)
 - [架构、服务和信任边界](docs/ARCHITECTURE.zh-CN.md)
+- [MCP、A2UI、WebView 与 Wasm 技术选型](docs/PLUGIN-PROTOCOL-SELECTION.zh-CN.md)
+- [AppFlowy Editor 跨端交付与验收](docs/EDITOR-PLUGIN-DELIVERY.zh-CN.md)
 - [开发、打包、上传、审核指南](docs/DEVELOPER-GUIDE.zh-CN.md)
 - [手机创作与 Mobile/Web 交付](docs/MOBILE-AGENT-STUDIO.zh-CN.md)
 - [GenOffice PPTX 拆分与范围](docs/GENOFFICE-PPTX.zh-CN.md)

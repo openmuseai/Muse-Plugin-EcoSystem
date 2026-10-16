@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--registry", required=True)
 parser.add_argument("--token", required=True)
 parser.add_argument("--remote", required=True, help="MCP Streamable HTTP endpoint, HTTPS in production")
-parser.add_argument("--bundle", type=Path, default=Path(__file__).resolve().parents[1] / "dist/appflowy-editor-0.1.0.mcpb")
+parser.add_argument("--bundle", type=Path, default=Path(__file__).resolve().parents[1] / "dist/appflowy-editor-0.1.3.mcpb")
 args = parser.parse_args()
 origin = args.registry.rstrip("/")
 data = args.bundle.read_bytes()
@@ -29,7 +29,7 @@ document = {
     "name": "io.openmuse/appflowy-editor",
     "title": "AppFlowy Editor",
     "description": "Rich text editor for Desktop and Mobile, delivered via MCP Apps.",
-    "version": "0.1.0",
+    "version": "0.1.3",
     "repository": {"url": "https://github.com/AppFlowy-IO/appflowy-editor", "source": "github"},
     "packages": [{"registryType": "mcpb", "identifier": package, "fileSha256": digest, "transport": {"type": "stdio"}}],
     "remotes": [{"type": "streamable-http", "url": args.remote}],

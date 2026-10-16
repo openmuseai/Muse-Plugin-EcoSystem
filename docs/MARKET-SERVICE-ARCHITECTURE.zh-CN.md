@@ -2,14 +2,14 @@
 
 ## 定位与边界
 
-插件市场服务与 Muse-Server/AppFlowy-Cloud 平行部署，拥有独立域名、数据库、Redis、对象存储桶和发布流程。它不访问用户文档、Workspace、AppFlowy 的表或 Muse 私有插件字段。公开分发契约是 [MCP Registry](https://registry.modelcontextprotocol.io/)、[MCP Bundle](https://github.com/modelcontextprotocol/mcpb) 和 [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview)。管理 API 是服务自己的审核 API，不暴露给客户端。Desktop/Mobile/Web 可以用同一个 `namespace/name` 插件 ID，精确版本下提供不同标准交付物：Desktop 选 MCPB/stdio，Mobile 选 Streamable HTTP，Web 选已声明的 MCP Apps UI。
+插件市场服务与 Muse-Server/AppFlowy-Cloud 平行部署，拥有独立域名、数据库、Redis、对象存储桶和发布流程。它不访问用户文档、Workspace、AppFlowy 的表或 Muse 私有插件字段。公开分发契约是 [MCP Registry](https://registry.modelcontextprotocol.io/)、[MCP Bundle](https://github.com/modelcontextprotocol/mcpb) 和 [MCP Apps](https://modelcontextprotocol.io/extensions/apps/overview)。管理 API 是服务自己的审核 API，不暴露给客户端。Desktop/Mobile/Web 可以用同一个 `namespace/name` 插件 ID，精确版本下选择标准交付字段：Desktop 选 MCPB/stdio，Mobile 可选已校验 MCPB 中的静态 Web/Wasm 站点或 Streamable HTTP，Web 选已声明的 MCP Apps UI。`web/` 站点目录是公开打包 profile，不是 MCPB 基础执行规范或客户端私有字段。
 
 ## 用户旅程
 
 1. 开发者在公开兼容矩阵选择客户端版本，默认最新；使用独立 SDK/脚手架开发，运行 MCP 工具、资源和 Apps TCK。
 2. 开发者按 SHA-256 上传 MCPB，提交标准 `server.json`。服务检查归属、语义版本、包清单/入口、体积、摘要与远程地址。版本一旦提交不可覆盖。
 3. 审核员在后台看待审列表、包摘要、端点、版本、审核历史；批准、拒绝或填写下架原因。审核操作写入不可变审计事件。
-4. 已批准版本出现在公开 Registry。Desktop 校验摘要后安装 MCPB，Mobile 连接同一记录的 Streamable HTTP 端点；用户通过标准 MCP 工具和资源使用插件。
+4. 已批准版本出现在公开 Registry。Desktop 校验摘要后安装 MCPB；Android 可校验同一 MCPB 的 `fileSha256` 并安装包内静态站点，安装完成后应用内离线启动。需要远端工具的 Mobile 插件仍连接同一记录的 Streamable HTTP 端点；用户通过标准 MCP 工具和资源使用这些能力。
 5. 下架版本即刻从发现目录和包下载入口消失，保留审计与已安装收据；已安装本地插件按 Host 原有卸载/禁用机制管理。重新上架须记录原因。
 
 ## 服务划分

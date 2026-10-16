@@ -14,7 +14,7 @@ function editorUrl(): string {
 }
 
 export function buildServer() {
-  const server = new McpServer({ name: 'io.openmuse/appflowy-editor', version: '0.1.0' }, { capabilities: { tools: {}, resources: {} } })
+  const server = new McpServer({ name: 'io.openmuse/appflowy-editor', version: '0.1.3' }, { capabilities: { tools: {}, resources: {} } })
   server.registerResource('AppFlowy Editor', editorUiUri,
     { title: 'AppFlowy Editor', mimeType: editorMime },
     async () => {

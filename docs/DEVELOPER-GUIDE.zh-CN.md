@@ -6,7 +6,7 @@
 
 ## 2. 独立开发
 
-用 Node、Python、Rust 或其他语言写 MCP Server。工具参数与输出使用 JSON Schema；处理文件时可用 `contentEncoding: base64`、`contentMediaType`，由 Host 发起用户选文件。插件不得索取 Workspace 内部路径、客户端私有 token 或 Host 私有命令。需要 UI 时用 A2UI over MCP 或 MCP Apps。Desktop 本地分发打包成 MCPB；Mobile/Web 优先提供远端 MCP Streamable HTTP。用官方 MCP SDK 和独立 MCP 客户端做互操作测试。
+用 Node、Python、Rust 或其他语言写 MCP Server。工具参数与输出使用 JSON Schema；处理文件时可用 `contentEncoding: base64`、`contentMediaType`，由 Host 发起用户选文件。插件不得索取 Workspace 内部路径、客户端私有 token 或 Host 私有命令。需要 UI 时用 A2UI over MCP 或 MCP Apps。Desktop 本地分发打包成 MCPB；Mobile 可提供远端 MCP Streamable HTTP，或按公开静态站点 profile 把 Web/Wasm 资源随已审核 MCPB 分发。用官方 MCP SDK 和独立 MCP 客户端做互操作测试。
 
 PPTX 示例：
 

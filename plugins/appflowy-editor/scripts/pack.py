@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 root = Path(__file__).resolve().parents[1]
-version = "0.1.0"
+version = "0.1.3"
 parser = argparse.ArgumentParser()
 parser.add_argument("--editor-url", help="Public HTTPS editor URL to embed in the Desktop MCPB")
 parser.add_argument("--out", type=Path, default=root / "dist")
@@ -43,6 +43,16 @@ entries = {
     "server/index.mjs": (root / "dist/server.mjs").read_bytes(),
     "LICENSE": (root / "vendor/appflowy_editor/LICENSE").read_bytes(),
 }
+web_root = root / "web/build/web"
+if not (web_root / "index.html").is_file() or not (web_root / "main.dart.wasm").is_file():
+    parser.error("Build the offline Flutter Web/Wasm app before packing")
+if not (web_root / "font-fallback/roboto/v32/KFOmCnqEu92Fr1Me4GZLCzYlKw.woff2").is_file():
+    parser.error("Bundle local Flutter fallback fonts before packing")
+for path in web_root.rglob("*"):
+    if path.is_file() and not path.name.startswith("."):
+        entries[f"web/{path.relative_to(web_root).as_posix()}"] = path.read_bytes()
+for path in (root / "licenses/fonts").glob("*-OFL.txt"):
+    entries[f"licenses/fonts/{path.name}"] = path.read_bytes()
 package = out / f"appflowy-editor-{version}.mcpb"
 with zipfile.ZipFile(package, "w", compression=zipfile.ZIP_DEFLATED) as archive:
     for name, data in sorted(entries.items()):

@@ -12,7 +12,7 @@ A separate Rust service for third-party plugin review and distribution. It owns 
 | Rate limiting | Redis | Separate `market:` key prefix and deployment |
 | Local development | SQLite and filesystem | No infrastructure prerequisite |
 
-The client reads the **standard MCP Registry v0.1** `GET /v0.1/servers` catalog. Desktop downloads a standard MCP Bundle (`.mcpb`), while Mobile connects to the record's MCP Streamable HTTP endpoint. MCP Apps use `ui://` resources, `text/html;profile=mcp-app`, `_meta.ui.resourceUri`, and `resource_link` results. No client-only manifest field is required in a third-party plugin.
+The client reads the **standard MCP Registry v0.1** `GET /v0.1/servers` catalog. Desktop downloads a standard MCP Bundle (`.mcpb`). Android can verify `packages[].fileSha256` and install static Web/Wasm resources carried by the reviewed bundle; plugins without such resources may use a standard MCP Streamable HTTP endpoint. MCP Apps use `ui://` resources, `text/html;profile=mcp-app`, `_meta.ui.resourceUri`, and `resource_link` results. No client-only Registry or manifest field is required in a third-party plugin. The static site's `web/` archive layout is a documented packaging profile, not part of the base MCPB execution specification.
 
 ```mermaid
 flowchart LR
@@ -22,9 +22,10 @@ flowchart LR
     Registry --> Store[(S3 / MinIO)]
     Reviewer[Review console] --> Registry
     Desktop[macOS Host] -->|MCP Registry + MCPB| Registry
-    Mobile[Android Host] -->|MCP Registry| Registry
+    Mobile[Android Host] -->|MCP Registry + verified MCPB| Registry
     Desktop -->|MCP stdio + Apps| Plugin[Plugin service]
-    Mobile -->|MCP Streamable HTTP + Apps| Plugin
+    Mobile -->|In-app offline Web/Wasm UI| Local[App-private plugin assets]
+    Mobile -.->|MCP Streamable HTTP for remote tools| Plugin
 ```
 
 ## Local run
@@ -61,5 +62,7 @@ cargo build --features s3
 | `GET /internal/submissions` | reviewer | Review queue |
 | `POST /internal/submissions/{id}/{approve,reject,delist,relist}` | reviewer | State transition |
 | `GET /internal/audit` | reviewer | Audit trail |
+
+The local pilot accepts MCPB archives up to 80 MiB compressed, 160 MiB expanded, and 1,024 ZIP entries. Android applies the same compressed and expanded byte budgets to the static-site portion and verifies the complete Registry SHA-256 before extraction.
 
 The current token authentication is a local pilot implementation. Before internet deployment, replace it with independent OIDC authentication and per-developer namespace ownership in this service, add malware and license scanning plus human review gates, and serve the console through an authenticated reverse proxy. The client-facing MCP Registry/MCPB/MCP Apps contract remains unchanged.

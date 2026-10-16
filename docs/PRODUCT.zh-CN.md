@@ -14,7 +14,7 @@ Desktop：下载 MCPB、核验 `fileSha256`、检查标准 `manifest.json`，以
 
 独立进程是本轮第三方 MCPB 的 Host 执行策略，不是所有 Desktop 插件的协议强制要求。客户端已有的内置热插拔组件仍可在其内部生命周期中运行；第三方开发者面对的公开合同始终是 MCP/MCPB，不能依赖该内部热插拔机制。
 
-Mobile：首选远端 MCP Streamable HTTP 服务和 A2UI over MCP 的标准交互；复杂 HTML 采用 MCP Apps 的沙箱 WebView。现有 QuickJS 可以作为客户端内部执行手段，但不得作为第三方接口或下载包约定。离线可用需要单独的、公开且经 TCK 证明的移动交付规范；当前不承诺手机本地执行 GenOffice Node 引擎。
+Mobile：远端工具可用 MCP Streamable HTTP 服务，简单界面用 A2UI over MCP；复杂 HTML 采用 MCP Apps 的沙箱 WebView。AppFlowy Editor 的 Android 交付已验证从标准 MCP Registry/MCPB 摘要字段下载并安装包内静态 Web/Wasm 资源，启动和编辑不需要远端服务。该 `web/` 静态站点打包约定须作为公开交付 profile 持续完善兼容性 TCK；基础 MCPB 本身不定义 Mobile 执行。现有 QuickJS 可以作为客户端内部执行手段，但不得作为第三方接口或下载包约定；手机本地执行 GenOffice Node 引擎仍不在承诺内。
 
 Web：远端 MCP + OAuth，界面采用 MCP Apps 的沙箱 iframe 或 A2UI 渲染器。第三方代码不进入主应用同源特权上下文。
 
