@@ -1,4 +1,5 @@
 FROM rust:1.96-bookworm AS build
+ENV CARGO_BUILD_JOBS=1
 WORKDIR /src
 COPY Cargo.toml Cargo.lock ./
 COPY src ./src

@@ -45,7 +45,7 @@ cargo build --features s3
 ./target/debug/muse-plugin-market
 ```
 
-`MARKET_S3_AUTO_CREATE_BUCKET=true` is for local MinIO only. Public deployments must put this service behind TLS, set `MARKET_PUBLIC_ORIGIN`, create the bucket with infrastructure tooling, and use separate credentials.
+The production compose file deploys this service as an independent stack with its own PostgreSQL, Redis, and MinIO volumes. Nginx exposes `https://plugins.openmuseai.com` for the public Registry, reviewed package downloads, and the MCP App. Upload, review, and admin endpoints remain on a loopback listener accessed through an SSH tunnel while token authentication is in use. Create the bucket once, then set `MARKET_S3_AUTO_CREATE_BUCKET=false` for steady state; rotate production credentials through the deployment secret store.
 
 ## Review state machine
 
@@ -65,4 +65,4 @@ cargo build --features s3
 
 The local pilot accepts MCPB archives up to 80 MiB compressed, 160 MiB expanded, and 1,024 ZIP entries. Android applies the same compressed and expanded byte budgets to the static-site portion and verifies the complete Registry SHA-256 before extraction.
 
-The current token authentication is a local pilot implementation. Before internet deployment, replace it with independent OIDC authentication and per-developer namespace ownership in this service, add malware and license scanning plus human review gates, and serve the console through an authenticated reverse proxy. The client-facing MCP Registry/MCPB/MCP Apps contract remains unchanged.
+The current token authentication is a pilot implementation. The public deployment keeps all write and admin routes private to the loopback listener. Before opening third-party upload or the reviewer console directly to the internet, add independent OIDC authentication, per-developer namespace ownership, malware and license scanning, and explicit human review gates. The client-facing MCP Registry/MCPB/MCP Apps contract remains unchanged.

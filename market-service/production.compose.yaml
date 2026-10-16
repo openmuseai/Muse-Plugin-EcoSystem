@@ -1,0 +1,67 @@
+name: muse-plugin-market
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: plugin_market
+      POSTGRES_USER: plugin_market
+      POSTGRES_PASSWORD: ${MARKET_POSTGRES_PASSWORD:?required}
+    volumes: [market_pg:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U plugin_market -d plugin_market"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes: [market_redis:/data]
+  minio:
+    image: minio/minio
+    command: server /data
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: ${MARKET_MINIO_USER:?required}
+      MINIO_ROOT_PASSWORD: ${MARKET_MINIO_PASSWORD:?required}
+    volumes: [market_objects:/data]
+  market:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_started}
+      minio: {condition: service_started}
+    env_file: .env.production
+    environment:
+      MARKET_LISTEN: 0.0.0.0:8787
+      MARKET_PUBLIC_ORIGIN: https://plugins.openmuseai.com
+      MARKET_DATABASE_URL: postgres://plugin_market:${MARKET_POSTGRES_PASSWORD}@postgres/plugin_market
+      MARKET_REDIS_URL: redis://redis:6379
+      MARKET_STORAGE_BACKEND: s3
+      MARKET_S3_BUCKET: muse-plugin-market
+      MARKET_S3_ENDPOINT: http://minio:9000
+      MARKET_S3_AUTO_CREATE_BUCKET: "true"
+      AWS_REGION: us-east-1
+      AWS_ACCESS_KEY_ID: ${MARKET_MINIO_USER}
+      AWS_SECRET_ACCESS_KEY: ${MARKET_MINIO_PASSWORD}
+      MARKET_DEVELOPER_NAMESPACE: io.openmuse
+    ports: ["127.0.0.1:18794:8787"]
+  editor:
+    image: node:22-alpine
+    restart: unless-stopped
+    network_mode: host
+    working_dir: /app
+    command: ["node", "dist/http.mjs"]
+    environment:
+      PORT: "18796"
+      EDITOR_LISTEN_HOST: 127.0.0.1
+      EDITOR_PUBLIC_ORIGIN: https://plugins.openmuseai.com
+      EDITOR_PUBLIC_URL: https://plugins.openmuseai.com/editor/
+    volumes: ["./editor:/app:ro"]
+volumes:
+  market_pg: {}
+  market_redis: {}
+  market_objects: {}
