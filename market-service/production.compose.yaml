@@ -26,9 +26,8 @@ services:
       MINIO_ROOT_PASSWORD: ${MARKET_MINIO_PASSWORD:?required}
     volumes: [market_objects:/data]
   market:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    # Build the release image off-host and load/push it before deployment.
+    image: ${MARKET_IMAGE:-muse-plugin-market-market:latest}
     restart: unless-stopped
     depends_on:
       postgres: {condition: service_healthy}

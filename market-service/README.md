@@ -47,6 +47,8 @@ cargo build --features s3
 
 The production compose file deploys this service as an independent stack with its own PostgreSQL, Redis, and MinIO volumes. Nginx exposes `https://plugins.openmuseai.com` for the public Registry, reviewed package downloads, and the MCP App. Upload, review, and admin endpoints remain on a loopback listener accessed through an SSH tunnel while token authentication is in use. Create the bucket once, then set `MARKET_S3_AUTO_CREATE_BUCKET=false` for steady state; rotate production credentials through the deployment secret store.
 
+Build the production image on CI or a builder with enough memory, then push it to a registry or load it on the server and set `MARKET_IMAGE` to that image tag. `production.compose.yaml` deliberately has no `build:` entry: the 4 GiB production host must only run the release image. A deployment should run `docker compose -f production.compose.yaml config --quiet` before `docker compose -f production.compose.yaml up -d`. Do not run Cargo or Docker builds on that host.
+
 ## Review state machine
 
 `uploaded → pending → approved → delisted → approved` or `pending → rejected`. Only approved versions appear in the public catalog and their package bytes are downloadable. Delisting prevents new installs; an already installed MCPB is not remotely erased. Every transition writes an audit event and requires a review note for rejection or delisting.
