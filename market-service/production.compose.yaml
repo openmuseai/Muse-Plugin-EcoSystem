@@ -60,6 +60,23 @@ services:
       EDITOR_PUBLIC_ORIGIN: https://plugins.openmuseai.com
       EDITOR_PUBLIC_URL: https://plugins.openmuseai.com/editor/
     volumes: ["./editor:/app:ro"]
+  pptx:
+    image: node:22-alpine
+    restart: unless-stopped
+    network_mode: host
+    working_dir: /app
+    command: ["node", "dist/http.mjs"]
+    environment:
+      PORT: "18797"
+      PPTX_PUBLIC_ORIGIN: https://plugins.openmuseai.com
+      NODE_OPTIONS: --max-old-space-size=256
+    volumes: ["./pptx:/app:ro"]
+    read_only: true
+    mem_limit: 384m
+    cpus: "0.75"
+    pids_limit: 64
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
 volumes:
   market_pg: {}
   market_redis: {}
