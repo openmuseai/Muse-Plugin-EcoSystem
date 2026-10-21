@@ -39,7 +39,7 @@
     "Navigate outside editor: global inactive window remains and cannot operate closed resource",
     "Reopen extension without reloading editor"
   ],
-  "blocker": "After user confirmed Mac unlocked and mirror visible, CUA window reads still timed out. Android Studio used approximately 1122% CPU and 13.1 GB RSS; JVM attach also timed out. Device remains online. Requested manual Studio restart; high CPU cause not yet confirmed.",
+  "blocker": "User restarted Studio. AX inspection and device mirroring briefly recovered; production market still showed Document Explainer 0.2.1 Install. Coordinate input repeatedly failed with windowNotFoundAtPosition; Raise and Window menu activation did not resolve it. Studio restored the Android project and Gradle import, followed by renewed AX timeouts. No successful install click.",
   "deferred": [
     "PDF native verification per user request",
     "Desktop DSH black-pane root cause"
@@ -54,6 +54,7 @@
     "studioRssKiB": 13098784,
     "systemMemoryFreePercent": 79,
     "jvmAttach": "timed out after 10500 ms",
-    "interpretation": "Studio unresponsive; indexing/GC cause not proven"
+    "interpretation": "Studio unresponsive; indexing/GC cause not proven",
+    "restartOutcome": "Mirror readable briefly; pointer actions failed; Gradle import automatically resumed; final native gates remain pending."
   }
 }

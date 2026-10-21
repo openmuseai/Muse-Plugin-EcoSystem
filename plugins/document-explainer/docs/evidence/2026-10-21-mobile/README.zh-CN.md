@@ -6,6 +6,8 @@
 
 用户确认解锁并显示镜像后仍超时。诊断时 Android Studio 约占用 1122% CPU、13.1 GB RSS，系统空闲内存 79%；JVM attach 也在 10.5 秒后超时。已请求手动重启 Studio。尚未获得线程栈，因此不能断言具体由索引或 GC 引起。
 
+重启后曾恢复 AX 和镜像，市场仍显示 0.2.1「安装」。坐标点击连续返回 `windowNotFoundAtPosition`，Raise 与 Window 菜单激活均未修复；Studio 自动恢复 Android 工程和 Gradle 导入后 AX 又出现超时。没有一次成功的安装点击，因此最终版本安装/浮窗验收仍保持待完成。
+
 ## 版本与构建
 
 - Client：`cbd243e35446dbded217d7c1676128d2c5c5af41`，分支 `feat/document-explainer-live`。
