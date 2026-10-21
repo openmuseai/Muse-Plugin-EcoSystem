@@ -14,6 +14,7 @@ OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发
 | [公开合同与 SDK](docs/04-CONTRACTS-AND-SDK.zh-CN.md) | SDK、能力提供插件作者 | 合同分层、发现、依赖解析、权限、版本、错误和 SDK |
 | [开发计划](docs/05-DEVELOPMENT-PLAN.zh-CN.md) | 工程负责人、开发团队 | 阶段门禁、任务、依赖、交付顺序和风险 |
 | [验收矩阵](docs/06-ACCEPTANCE.zh-CN.md) | 测试、审核、发布负责人 | 双格式组合、独立环境开发、设备与发布闭环 |
+| [开发基线](docs/07-IMPLEMENTATION-BASELINE.zh-CN.md) | 工程、测试 | 分支、既有改动提交与开发前测试结果 |
 | [任务表](docs/development-plan.csv) | 项目管理、自动化工具 | 与开发计划相同的任务 ID、前置条件和验收项 |
 | [设计示例](examples/) | SDK、工具开发者 | 开发配置、JSON Schema 与多能力需求样例 |
 
