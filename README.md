@@ -35,6 +35,7 @@ Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run s
 
 ## 文档
 
+- [Plugin DevKit 插件产品、开发者指南、技术方案与开发计划](plugins/developer-kit/README.zh-CN.md)（设计阶段，包含 PPTX/PDF 多能力依赖与双资源协作）
 - [产品与平台方案](docs/PRODUCT.zh-CN.md)
 - [架构、服务和信任边界](docs/ARCHITECTURE.zh-CN.md)
 - [MCP、A2UI、WebView 与 Wasm 技术选型](docs/PLUGIN-PROTOCOL-SELECTION.zh-CN.md)

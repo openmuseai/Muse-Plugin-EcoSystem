@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.openmuseai.com/devkit/project/v1.json",
+  "formatVersion": "1.0-draft",
+  "project": {"name": "document-explainer", "pluginId": "io.example/document-explainer"},
+  "host": {"channel": "release", "version": "latest"},
+  "targets": ["macos-aarch64", "android-aarch64"],
+  "capabilities": {
+    "slides": {
+      "contract": "https://contracts.openmuseai.com/genoffice/slides/v1",
+      "version": "^1.0.0",
+      "operations": ["readSnapshot", "readNotes", "getPreview", "getState", "goToSlide"],
+      "preferredProvider": "io.openmuse/genoffice-pptx"
+    },
+    "pdf": {
+      "contract": "https://contracts.example.org/pdf/v1",
+      "version": "^1.0.0",
+      "operations": ["readSnapshot", "getPageText", "getPreview", "getState", "goToPage"]
+    },
+    "agent": {
+      "contract": "https://contracts.openmuseai.com/agent/generate/v1",
+      "version": "^1.0.0", "operations": ["generate", "getTask", "cancel"]
+    },
+    "voice": {
+      "contract": "https://contracts.example.org/voice/v1",
+      "version": "^1.0.0", "operations": ["speak", "pause", "resume", "stop"]
+    }
+  },
+  "features": {
+    "ppt-explain": {
+      "required": true, "allOf": ["slides", "agent"],
+      "resources": [{"role": "presentation", "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"}]
+    },
+    "pdf-explain": {
+      "required": true, "allOf": ["pdf", "agent"],
+      "resources": [{"role": "paper", "mediaType": "application/pdf"}]
+    },
+    "compare": {
+      "required": true, "allOf": ["slides", "pdf", "agent"],
+      "resources": [
+        {"role": "presentation", "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"},
+        {"role": "paper", "mediaType": "application/pdf"}
+      ]
+    },
+    "narrate": {"required": false, "allOf": ["voice"], "resources": []}
+  },
+  "execution": {"runner": "select-at-run", "cloudSourceUpload": "ask"}
+}

@@ -1,0 +1,26 @@
+id,milestone,title,owner_role,status,depends_on,acceptance_id,deliverable
+DK-001,M0,现状审计与 Provider/许可清单,生态接口负责人,planned,,AC-01,记录当前 Host、Apps、Broker、PDF、Agent 和构建能力；已实现/缺失分开，锁定上游许可
+DK-002,M0,冻结公开 Profile 与配置 Schema,生态接口负责人,planned,DK-001,AC-02,Host 通用服务、合同导出、依赖和报告格式发布草案；标准/生态字段边界有独立测试
+DK-003,M0,兼容目录和发行身份,发布工程师,planned,DK-001;DK-002,AC-03,精确 Host 构建/摘要、协议与设备能力；latest 解析和离线缓存规则
+DK-004,M0,Dev Host 自举和开发通道,Host/发布工程师,planned,DK-002;DK-003,AC-04,独立标识/数据目录、开发凭据、可下载构建；旧 Host 引导更新，无 DevKit 特权 ID
+DK-005,M1,Capability Gateway 和逐调用者策略,Host/安全工程师,planned,DK-002,AC-05,标准工具代理、别名、Schema 校验、预算、竞态测试；拒绝跨项目/账号调用
+DK-006,M1,多资源绑定与生命周期,Host/平台工程师,planned,DK-004;DK-005,AC-06,两文档租约、焦点独立、关闭/卸载/切账号撤销；依赖视图保留
+DK-007,M1,通用 SDK 和 Provider SDK,SDK/工具工程师,planned,DK-002;DK-005,AC-07,Apps/MCP 适配、生成客户端、输出校验、错误映射；无 Host 源码依赖
+DK-008,M1,GenOffice Slides API v1,PPTX 插件维护者,planned,DK-001;DK-002;DK-007,AC-08,新版本插件、notes/preview/state/navigation、结构化结果、API 包、Mock/TCK；旧版不覆盖
+DK-009,M1,PDF 公共 Provider API v1,PDF 插件维护者,planned,DK-001;DK-002;DK-007,AC-09,选择合适现有引擎并核准许可；独立发行、text/preview/state/navigation、无文字层状态、API/TCK
+DK-010,M1,多能力依赖解析器,SDK/工具工程师,planned,DK-003;DK-007;DK-008;DK-009,AC-10,功能依赖图、传递依赖/循环、同 Provider 版本交集、每端计划与锁文件；冲突有解释
+DK-011,M2,项目生成及 Workspace/Runner 服务,Runner/Host 工程师,planned,DK-004;DK-007;DK-010,AC-11,空目录事务初始化、相对路径/符号链接校验、沙箱任务、取消和缓存隔离
+DK-012,M2,DevKit 插件壳与项目 UI,DevKit 前端工程师,planned,DK-004;DK-007;DK-011,AC-12,市场安装、工作台入口、创建/导入、能力选择、计划、停用/卸载保留项目
+DK-013,M2,应用内编辑和 Agent 适配,DevKit/Agent 工程师,planned,DK-011;DK-012,AC-13,多文件保存、补全/诊断、差异、项目补丁版本检查；Agent 可替换，DSH 协议留在插件内
+DK-014,M2,Mock/真实调试、DevTools 与 CLI,工具/QA 工程师,planned,DK-008;DK-009;DK-010;DK-012,AC-14,同核心运行、协议诊断、只重载消费者、证据标记；CLI 是可选入口
+DK-015,M2,多资料样板与可选 Voice 适配,插件/Agent 工程师,planned,DK-006;DK-008;DK-009;DK-013;DK-014,AC-15,PPT/PDF 单独讲解和并发比较；Agent 公开合同真实实现；Voice 缺失可降级
+DK-016,M2,Desktop 干净环境与持久恢复,QA/发布工程师,planned,DK-012;DK-013;DK-014;DK-015,AC-16,macOS 完整构建、无源码依赖开发、重启恢复、任务/编辑状态验证
+DK-017,M3,Android 通用 Apps/Gateway 桥,Mobile/Host 工程师,planned,DK-005;DK-006;DK-007,AC-17,只宣告实现的能力、正确 Origin/身份/预算；本机 JSON-RPC 路由无需 Node/localhost 服务
+DK-018,M3,设备配对、候选包和证据,Mobile/发布工程师,planned,DK-004;DK-014;DK-017,AC-18,短期调试授权、候选包隔离、安装/重载、每设备产物报告，生产凭据不复用
+DK-019,M3,Android 双 Provider 真机功能,Mobile/QA 工程师,planned,DK-008;DK-009;DK-015;DK-017;DK-018,AC-19,完整 App 安装，PPT/PDF/双资料、关闭/断网/恢复实测；无外部浏览器
+DK-020,M3,手机创作和隔离远端 Runner,DevKit/Runner 工程师,planned,DK-011;DK-013;DK-018;DK-019,AC-20,手机创建多能力项目、编辑/Agent、源码上传授权、构建、App 内预览和提交候选
+DK-021,M4,市场合同目录与报告服务,Rust 服务端工程师,planned,DK-002;DK-003;DK-010,AC-21,沿用独立 Rust 服务，合同/摘要/Provider/报告索引与开发渠道，无业务文档运行流量
+DK-022,M4,开发者身份和发布模块,Rust/DevKit 工程师,planned,DK-014;DK-021,AC-22,独立 OIDC/namespace、上传/提交/查询；UI/CLI 共用，不包含 reviewer 凭据
+DK-023,M4,审核生命周期与组合认证,QA/审核工程师,planned,DK-016;DK-019;DK-022,AC-23,待审不可见、批准可见、拒绝/下架有原因；正常客户端新装与依赖校验
+DK-024,M4,文档/Skill/Context Pack 和独立开发演练,生态/QA 工程师,planned,DK-016;DK-020;DK-023,AC-24,示例真实可运行，合同/SDK/文档摘要一致；陌生开发者完成双能力产品
+DK-025,M4,发布与维护基线,发布/维护工程师,planned,DK-023;DK-024,AC-25,不可变版本、回滚、撤权、Host/Provider 升级组合测试和故障处理手册
