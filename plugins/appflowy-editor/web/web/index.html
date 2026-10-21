@@ -33,6 +33,27 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+    // Accept a standard browser File sent by an embedding host via postMessage.
+    // The editor has no dependency on host-specific message fields or bridges.
+    const incomingFiles = [];
+    let fileWaiter;
+    window.addEventListener('message', event => {
+      if (event.source !== window || !(event.data instanceof File)) return;
+      incomingFiles.push(event.data);
+      if (fileWaiter) fileWaiter();
+    });
+    window.takeInitialFile = () => new Promise(resolve => {
+      const take = async () => {
+        const file = incomingFiles.shift();
+        fileWaiter = undefined;
+        resolve(file ? JSON.stringify({name: file.name, content: await file.text()}) : null);
+      };
+      if (incomingFiles.length) { take(); return; }
+      fileWaiter = take;
+      setTimeout(() => { if (fileWaiter === take) take(); }, 3000);
+    });
+  </script>
   <!--
     You can customize the "flutter_bootstrap.js" script.
     This is useful to provide a custom configuration to the Flutter loader

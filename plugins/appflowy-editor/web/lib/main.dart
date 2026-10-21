@@ -6,10 +6,23 @@ import 'package:appflowy_editor/appflowy_editor.dart';
 import 'package:flutter/material.dart';
 import 'package:web/web.dart' as web;
 
-void main() => runApp(const EditorPluginApp());
+@JS('takeInitialFile')
+external JSPromise<JSString?> takeInitialFile();
+
+Future<void> main() async {
+  Map<String, dynamic>? initialFile;
+  try {
+    final raw = (await takeInitialFile().toDart)?.toDart;
+    if (raw != null) initialFile = jsonDecode(raw) as Map<String, dynamic>;
+  } on Object {
+    // A standalone browser tab may have no embedding host.
+  }
+  runApp(EditorPluginApp(initialFile: initialFile));
+}
 
 class EditorPluginApp extends StatelessWidget {
-  const EditorPluginApp({super.key});
+  const EditorPluginApp({super.key, this.initialFile});
+  final Map<String, dynamic>? initialFile;
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -20,12 +33,13 @@ class EditorPluginApp extends StatelessWidget {
       colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF465E4E)),
       scaffoldBackgroundColor: const Color(0xFFF7F6F3),
     ),
-    home: const EditorPage(),
+    home: EditorPage(initialFile: initialFile),
   );
 }
 
 class EditorPage extends StatefulWidget {
-  const EditorPage({super.key});
+  const EditorPage({super.key, this.initialFile});
+  final Map<String, dynamic>? initialFile;
 
   @override
   State<EditorPage> createState() => _EditorPageState();
@@ -45,27 +59,41 @@ class _EditorPageState extends State<EditorPage> {
     final raw = web.window.localStorage.getItem(storageKey);
     try {
       final fragment = Uri.base.fragment;
-      if (fragment.startsWith('open=')) {
-        final payload = jsonDecode(utf8.decode(base64Url.decode(
-          base64Url.normalize(fragment.substring(5)),
-        ))) as Map<String, dynamic>;
+      if (widget.initialFile != null || fragment.startsWith('open=')) {
+        final payload =
+            widget.initialFile ??
+            jsonDecode(
+                  utf8.decode(
+                    base64Url.decode(
+                      base64Url.normalize(fragment.substring(5)),
+                    ),
+                  ),
+                )
+                as Map<String, dynamic>;
         final markdown = payload['content'] as String;
         if (utf8.encode(markdown).length > 32 * 1024) {
           throw const FormatException('Markdown document exceeds 32 KiB');
         }
         state = EditorState(document: markdownToDocument(markdown));
         title.text = payload['name'] as String? ?? title.text;
-        web.window.localStorage.setItem(storageKey, jsonEncode({
-          'title': title.text,
-          'document': state.document.toJson(),
-        }));
+        web.window.localStorage.setItem(
+          storageKey,
+          jsonEncode({
+            'title': title.text,
+            'document': state.document.toJson(),
+          }),
+        );
         web.window.location.hash = '';
       } else {
-      final saved = raw == null ? null : jsonDecode(raw) as Map<String, dynamic>;
-      state = EditorState(document: saved == null
-          ? EditorState.blank(withInitialText: true).document
-          : Document.fromJson(saved['document'] as Map<String, dynamic>));
-      title.text = saved?['title'] as String? ?? title.text;
+        final saved = raw == null
+            ? null
+            : jsonDecode(raw) as Map<String, dynamic>;
+        state = EditorState(
+          document: saved == null
+              ? EditorState.blank(withInitialText: true).document
+              : Document.fromJson(saved['document'] as Map<String, dynamic>),
+        );
+        title.text = saved?['title'] as String? ?? title.text;
       }
     } catch (_) {
       state = EditorState.blank(withInitialText: true);
@@ -82,21 +110,28 @@ class _EditorPageState extends State<EditorPage> {
   }
 
   void _save() {
-    web.window.localStorage.setItem(storageKey, jsonEncode({
-      'title': title.text,
-      'document': state.document.toJson(),
-    }));
+    web.window.localStorage.setItem(
+      storageKey,
+      jsonEncode({'title': title.text, 'document': state.document.toJson()}),
+    );
     if (mounted) setState(() => status = '已保存到此设备');
   }
 
   void _export() {
     _save();
-    final data = jsonEncode({'title': title.text, 'document': state.document.toJson()});
-    final blob = web.Blob([data.toJS].toJS, web.BlobPropertyBag(type: 'application/json'));
+    final data = jsonEncode({
+      'title': title.text,
+      'document': state.document.toJson(),
+    });
+    final blob = web.Blob(
+      [data.toJS].toJS,
+      web.BlobPropertyBag(type: 'application/json'),
+    );
     final url = web.URL.createObjectURL(blob);
     web.HTMLAnchorElement()
       ..href = url
-      ..download = '${title.text.trim().isEmpty ? 'untitled' : title.text.trim()}.appflowy.json'
+      ..download =
+          '${title.text.trim().isEmpty ? 'untitled' : title.text.trim()}.appflowy.json'
       ..click();
     web.URL.revokeObjectURL(url);
   }
@@ -116,29 +151,90 @@ class _EditorPageState extends State<EditorPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFF7F6F3),
-        title: const Text('AppFlowy Editor', style: TextStyle(fontFamily: 'Georgia', fontSize: 19)),
+        title: const Text(
+          'AppFlowy Editor',
+          style: TextStyle(fontFamily: 'Georgia', fontSize: 19),
+        ),
         actions: [
-          if (!compact) Padding(padding: const EdgeInsets.only(right: 12), child: Center(child: Text(status, style: const TextStyle(fontSize: 12, color: Color(0xFF888B84))))),
-          TextButton.icon(onPressed: _export, icon: const Icon(Icons.download_outlined, size: 17), label: Text(compact ? '导出' : '导出 JSON')),
+          if (!compact)
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Center(
+                child: Text(
+                  status,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: Color(0xFF888B84),
+                  ),
+                ),
+              ),
+            ),
+          TextButton.icon(
+            onPressed: _export,
+            icon: const Icon(Icons.download_outlined, size: 17),
+            label: Text(compact ? '导出' : '导出 JSON'),
+          ),
           const SizedBox(width: 12),
         ],
       ),
       body: Center(
         child: Container(
           constraints: const BoxConstraints(maxWidth: 870),
-          margin: EdgeInsets.symmetric(horizontal: compact ? 0 : 18, vertical: compact ? 0 : 18),
-          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(compact ? 0 : 12), border: Border.all(color: const Color(0xFFEAEAE5))),
-          child: Column(children: [
-            Padding(
-              padding: EdgeInsets.fromLTRB(compact ? 20 : 48, compact ? 18 : 35, compact ? 20 : 48, 9),
-              child: TextField(controller: title, maxLines: 1, style: TextStyle(fontFamily: 'Georgia', fontSize: compact ? 27 : 35), decoration: const InputDecoration(border: InputBorder.none, hintText: '文档标题')),
-            ),
-            Expanded(child: Padding(
-              padding: EdgeInsets.fromLTRB(compact ? 20 : 48, 0, compact ? 20 : 48, 32),
-              child: AppFlowyEditor(editorState: state),
-            )),
-            if (compact) Padding(padding: const EdgeInsets.all(8), child: Text(status, style: const TextStyle(fontSize: 11, color: Color(0xFF888B84)))),
-          ]),
+          margin: EdgeInsets.symmetric(
+            horizontal: compact ? 0 : 18,
+            vertical: compact ? 0 : 18,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(compact ? 0 : 12),
+            border: Border.all(color: const Color(0xFFEAEAE5)),
+          ),
+          child: Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.fromLTRB(
+                  compact ? 20 : 48,
+                  compact ? 18 : 35,
+                  compact ? 20 : 48,
+                  9,
+                ),
+                child: TextField(
+                  controller: title,
+                  maxLines: 1,
+                  style: TextStyle(
+                    fontFamily: 'Georgia',
+                    fontSize: compact ? 27 : 35,
+                  ),
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintText: '文档标题',
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(
+                    compact ? 20 : 48,
+                    0,
+                    compact ? 20 : 48,
+                    32,
+                  ),
+                  child: AppFlowyEditor(editorState: state),
+                ),
+              ),
+              if (compact)
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(
+                    status,
+                    style: const TextStyle(
+                      fontSize: 11,
+                      color: Color(0xFF888B84),
+                    ),
+                  ),
+                ),
+            ],
+          ),
         ),
       ),
     );
