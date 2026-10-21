@@ -2,7 +2,7 @@
   "profile": "openmuse-capabilities/1",
   "contract": {
     "id": "https://plugins.openmuseai.com/contracts/genoffice/slides-read/v1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "GenOffice Slides · file snapshots",
     "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
     "operations": {
@@ -23,9 +23,7 @@
           "content": {
             "type": "string",
             "maxLength": 94371840,
-            "format": "base64",
             "contentEncoding": "base64",
-            "pattern": "^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$",
             "contentMediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
           },
           "name": {
