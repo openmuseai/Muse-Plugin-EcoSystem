@@ -2,7 +2,7 @@
 
 OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发者插件。开发者先在 OpenMuse 选择或新建 Workspace，再在该 Workspace 的终端搜索/安装能力依赖，通过 CLI 初始化项目，使用现有编辑器或 Agent 开发、应用内调试并提交市场审核。
 
-当前已包含 Desktop DevKit 插件、共享项目核心、Apps SDK、`muse` CLI，以及真实 PPTX/PDF Provider 适配。0.2.0 的 Workspace/CLI 流程已通过本地协议测试并发布到生产市场，原生 UI 全流程验收仍在进行；当前公开版本与证据见[Desktop 实现记录](docs/08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。
+当前已包含 Desktop DevKit 插件、共享项目核心、Apps SDK、`muse` CLI，以及真实 PPTX/PDF Provider 适配。0.2.0 的 Workspace/CLI 流程已通过本地协议测试并发布到生产市场，Desktop 原生 Workspace/CLI 到提交待审闭环已通过；当前公开版本与证据见[Desktop 实现记录](docs/08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。
 
 ## 阅读顺序
 
@@ -30,6 +30,6 @@ OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发
 
 ## 参考与范围
 
-更新：2026-10-21。已发布 GenOffice PPTX 0.6.0 与 PDF Reader 0.1.0 的只读快照合同；完整能力矩阵和独立 Dev Host 发行仍需补齐。
+更新：2026-10-21。已发布 GenOffice PPTX 0.6.1 与 PDF Reader 0.1.1 的只读快照合同；完整能力矩阵和独立 Dev Host 发行仍需补齐。
 
 完整 M0–M4 门禁仍保留在计划中；只读快照、headless 测试和开发者 pending 回执不能代替 Live 编辑、多端真机或原生界面的最终验收。

@@ -44,14 +44,14 @@ OPENMUSE_TEST_CLI_LAUNCHER=/tmp/openmuse-devkit-cli-build/bundle/bin/openmuse \
   test/devkit_workspace_cli_test.dart
 ```
 
-`devkit_workspace_cli_test.dart` 需要先构建本地 DevKit 0.2.0、GenOffice PPTX 0.6.0、PDF Reader 0.1.0 的 MCPB。维护者构建这些测试夹具；第三方开发者只安装发行包。未提供 launcher 时测试仍可直接启动包中 CLI，提供后额外覆盖 Host shim/已编译 launcher。
+`devkit_workspace_cli_test.dart` 需要先构建本地 DevKit 0.2.0、GenOffice PPTX 0.6.1、PDF Reader 0.1.1 的 MCPB。维护者构建这些测试夹具；第三方开发者只安装发行包。未提供 launcher 时测试仍可直接启动包中 CLI，提供后额外覆盖 Host shim/已编译 launcher。
 
 ### 已通过的证据
 
 - TypeScript 类型检查、DevKit 构建/确定性打包。
 - 生态测试 **6 通过**：项目/CAS/不可变包、依赖冲突、Workspace 冲突回滚及报告符号链接、精确 HTML 脚本解析、真实 PPTX/PDF Provider。
-- Host 分析无问题；针对性 Host 测试 **24 通过、1 跳过**。跳过项属于现有 workbench 的 fixture 门禁，不作功能通过依据。
-- 终端插件 **3 通过**；插件市场 **4 通过**。
+- Host 分析无问题；终端/网关/Workbench 测试 **24 通过、1 跳过**；真实 Provider 经 Host 网关测试另 **1 通过**。跳过项属于现有 workbench 的 fixture 门禁，不作功能通过依据。
+- 终端插件 **4 通过**；插件市场 **4 通过**。
 - 独立通用 launcher 构建成功。协议测试通过实际 shim 启动已打包 `muse`；Workspace、安装和临时路径包含空格。
 - 实际 stdio Provider 读取 **23 页 Sample_ppt.pptx** 与 **2 页 PDF**，初始化双依赖项目、编辑源码、候选 UI 资源包含修改、记录报告、生成与候选摘要相同的 MCPB。
 - 路径越界、重复初始化覆盖、被改动的安装包、缺凭据/浏览器 Origin/账号切换/请求中撤销均有拒绝验证。
@@ -65,26 +65,46 @@ OPENMUSE_TEST_CLI_LAUNCHER=/tmp/openmuse-devkit-cli-build/bundle/bin/openmuse \
 
 | 发行包 | 生产状态 | 包摘要 |
 | --- | --- | --- |
-| DevKit 0.1.1 | active，旧页面流程 | `13ba93760ac9e42e0bc07fa84c016fe6373c287381b14aa732010eac24e41cb0` |
+| DevKit 0.1.1 | 已审核历史版本，旧页面流程 | `13ba93760ac9e42e0bc07fa84c016fe6373c287381b14aa732010eac24e41cb0` |
 | DevKit 0.2.0 | **active，已完成工具包维护审核** | `d6abad26572628f67609c73cbd194b54c17b4d0da6b2967b88d03b8abe77cf6a` |
-| GenOffice PPTX 0.6.0 | active，只读快照公共合同 | `d250a7d1422107317570ebf67acb2c6a21485b8241ed4237fe6e10b5423b6672` |
-| PDF Reader 0.1.0 | active，真实 PDF.js 文本能力 | `24ac8b419edb0b7564f66bd75a6ab91310f3670bf03e54d366b7c2df762f3f7e` |
+| GenOffice PPTX 0.6.1 | active，只读快照合同 1.0.1 | `b522cc46a1b758776939ca1617a488799e0929d50c86b5fac7ba5839b7c6f96d` |
+| PDF Reader 0.1.1 | active，真实 PDF.js 文本合同 1.0.1 | `e5f56aaafae6728d7ab34f55eaccd46a3f6554cd003a90e0780679650d0b5f69` |
 
 0.1.0 因包内脚本损坏已下架，不能作为验收版本。0.2.0 已由开发者接口提交，再由独立维护审核批准；submission ID 为 `131ab0fb-7001-4099-ae08-9d821e956723`。生产公开包与本地候选摘要一致，公开 Profile/Schema 与仓库逐字节一致。开发者 CLI 未获得审核员凭据。
 
-## 待完成的原生 UI 验收
+## 已完成的 Desktop 原生闭环
 
-用户已交回窗口。已退出旧构建、重新构建并启动最新完整 macOS 应用，正在执行后续原生验收。发布构建记录见 [release.json](evidence/2026-10-21-desktop/release.json)。以下按实际进度记录：
+最终 Host 源码 `d2aad9a`，完整 ZIP SHA-256：`fd60eb306f6c47e855532df58aaf7395dc63de454ac26dbb5438babb288af89d`。运行中 Host 摘要 `e10576041b17aea363537a0f14a7601b280ca706fec7ec88866f5df2b48ad714` 与项目锁文件一致。完整构建含 DSH、Node、CLI、Helix；最终签名、entitlement 和 ZIP 主执行文件一致性已核对。其后的 Client 提交 `e1e3baa` 仅增强测试。
 
-1. **已完成**：新 Host 完整 macOS 包构建、摘要记录及应用启动。源码 `5a95295`，ZIP SHA-256：`52b071cb85ed4661255a7502f7752ad73170568a1711d033f53d3626e0aa206c`。
-2. **已完成部署/发布/维护审核**：公开 Profile/Schema 与 DevKit 0.2.0；**客户端市场安装尚待原生验证**。
-3. 选择用户已有 Workspace 或新建验收目录，新开终端；真实 `muse search/install/init`。
-4. 通过现有编辑器或 Agent 修改项目，`muse dev` 打开原生应用内候选 View。
-5. 用户分别授权 PPTX/PDF 文件和 Provider；实际点击运行并保存界面证据。
-6. 返回终端 `muse report/pack/submit`，保存真实 **pending submission ID**，后台只读核对；不自动批准消费者。
-7. 确认待审不在公开目录。消费者的审核批准、新安装、停用/卸载另按生命周期门禁测试。
+| 步骤 | 实际操作与结果 | 证据文件 |
+| --- | --- | --- |
+| 安装 DevKit | 生产市场原生页面安装 0.2.0；打开插件页面显示真实 Workspace 与 Host 摘要 | `01-market-installed.png`、`02-devkit-workspace.png` |
+| 能力搜索 | 应用内 `muse search pptx/pdf` 显示已安装、在线目录和公开合同 URI | `03-pptx-capability-search.png`、`04-pdf-capability-search.png` |
+| 更新 Provider | 应用终端 `muse install` 从生产 HTTPS 市场安装 0.6.1 / 0.1.1，包摘要相符 | `09-pptx-061-installed.png`、`10-pdf-011-installed.png` |
+| Workspace 初始化 | 用户已有 explainer Workspace，新建项目目录后 CLI 同时选择 PPTX/PDF，生成精确版本/合同/摘要锁 | `11-validated-project-initialized.png`、`devkit.lock.json` |
+| 应用内开发 | 在 Workspace 终端运行独立源码修改脚本，保存 main.js 标题，`muse check` 通过；现有 Helix 查看最终源码 | `12-validated-code-check.png`、`19-workspace-source-and-pending-receipt.png` |
+| 原生候选调试 | `muse dev` 打开应用内候选；原生文件选择器分别选择指定 PPTX 与 PDF，并逐 Provider 授权 | `13-pptx-061-authorization.png`、`14-pdf-011-authorization.png` |
+| 实际执行 | 点击运行；原版 GenOffice 引擎返回 **23 页**，PDF.js 返回 **2 页**，修改后的业务标题生效 | `15-native-run-pptx-passed.png`、`16-native-run-pdf-passed.png` |
+| 报告与打包 | `muse report` 接受运行报告；`muse pack` 摘要等于已测候选 | `17-report-and-immutable-package.png`、`test-report.json` |
+| 提交待审 | `muse submit` 隐藏输入开发者凭据，实际上传生产市场；服务端只读确认 pending | `18-production-submission-pending.png`、`submission.json`、`market-verification.json` |
 
-**当前没有上述 Workspace 消费者的真实待审提交回执，不宣称 Desktop 完整闭环完成。**
+证据目录：[2026-10-21-desktop](evidence/2026-10-21-desktop/)。`01`–`08` 含早期安装/故障定位过程；最终成功调试使用 `09`–`19`、最终锁文件和 release.json。源码修改通过**应用终端脚本**完成；没有把原生编辑器快捷键保存或 Agent 自动编码宣称为已验收。
+
+验收项目：`plugins/explainer/desktop-acceptance-validated`。消费者 `io.openmuse/desktop-document-explainer@0.1.0`：
+
+- submission ID：`cc85fd4a-4dd3-450f-902a-b3f4cc7c10d0`，服务端状态 **pending**。
+- 候选、报告、打包、上传 SHA-256：`f2e2f4e0d8dd01d014f7d0e69f623484a2c0d1d791fb3d6a8826a0b8835f6e82`。
+- 审核前不出现在公开目录，直接公开下载返回 **404**。未批准消费者；新安装/下架不属于此次“提交审核”出口。
+- 包中不含本机路径、开发者凭据或测试文档内容。测试报告是开发客户端报告，不是服务端可信认证。
+
+### 本轮发现并修复的问题
+
+1. **终端入口生命周期**：空 Agent 视图隐藏了编辑器区域，且底部终端绕过插件激活，导致没有短期会话/PATH。Host 现在先通过通用 Registry 激活贡献终端的插件，再打开可见终端；插件缺少上下文时明确失败。
+2. **最终 macOS 包丢权限**：刷新 ad-hoc 外层签名时未带 entitlement，文件选择器在显示前拒绝。打包现在使用对应构建配置的 entitlement 重签，最终包必须通过独立校验脚本。
+3. **大文件 Schema 正则栈溢出**：旧 Provider 的重复分组 base64 正则在约 5.5 MiB PPTX 上触发 Dart 正则栈溢出。PPTX 0.6.1 / PDF 0.1.1 的合同 1.0.1 采用标准编码/MIME 注解与长度预算，Provider 做严格 canonical base64 验证。Host 不跳过 Schema，也无格式特判。
+4. **测试覆盖缺口**：原协议测试直接调用 Provider，漏掉 Host 输入输出校验。现在实际资源经过 choose → bind → call 网关，支持 `OPENMUSE_TEST_PPTX` 指向指定文件；原错误可复现，补丁通过。
+
+失败的早期生成项目保留在仓库本地忽略目录 `dist/devkit-acceptance-attempts-20261021`，未删除文件。最终示例与证据独立保留。
 
 ## 完整产品的剩余范围
 

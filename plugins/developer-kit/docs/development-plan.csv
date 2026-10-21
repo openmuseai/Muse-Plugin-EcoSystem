@@ -24,3 +24,4 @@ DK-022,M4,开发者身份和发布模块,Rust/DevKit 工程师,in_progress,DK-01
 DK-023,M4,审核生命周期与组合认证,QA/审核工程师,in_progress,DK-016;DK-019;DK-022,AC-23,待审不可见、批准可见、拒绝/下架有原因；正常客户端新装与依赖校验
 DK-024,M4,文档/Skill/Context Pack 和独立开发演练,生态/QA 工程师,in_progress,DK-016;DK-020;DK-023,AC-24,示例真实可运行，合同/SDK/文档摘要一致；陌生开发者完成双能力产品
 DK-025,M4,发布与维护基线,发布/维护工程师,planned,DK-023;DK-024,AC-25,不可变版本、回滚、撤权、Host/Provider 升级组合测试和故障处理手册
+DK-026,M2,Desktop Workspace CLI 到生产待审闭环,生态与Host工程师,complete,DK-005;DK-007;DK-008;DK-009,AC-26,真实市场安装DevKit及双Provider；应用终端初始化与修改；原生选择授权23页PPTX和2页PDF；不可变包提交pending；证据见08记录
