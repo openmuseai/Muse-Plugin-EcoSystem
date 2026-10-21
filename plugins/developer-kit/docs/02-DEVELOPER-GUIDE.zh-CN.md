@@ -1,139 +1,121 @@
-# 使用 DevKit 开发多能力插件
+# Desktop 开发者指南
 
-## 适用范围
+本指南对应本地 DevKit 0.2.0 Workspace/CLI 实现。公开市场当前版本和完整 UI 验收状态见[实现记录](08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。使用前需要支持公开 Workspace 工具和 npm bin 启动的 Host 构建；旧版 Host 不能只靠更新 DevKit 获得这些能力。
 
-这是一份面向计划中 DevKit 1.0 的开发者操作规范。产品尚未实现；示例命令、SDK 名和合同 ID 是拟定接口，不能作为当前可运行命令。实现后的指南需要由 CI 对可安装发行物执行验证，再移除本说明。
+## 1. 选择开发 Workspace
 
-开发者只需了解所用能力的公开 API，使用 Host 和 Provider 发行包。SDK 本身按普通语言包安装，不要求把 Muse-Client 或 Provider 源码作为 Git 子模块。
-
-## 安装工具并准备环境
-
-在 OpenMuse 的插件市场安装“插件开发工具”，打开工作台中的 DevKit。环境检查页显示当前 Host、开发通道状态、项目目录权限、可用 Runner、磁盘、网络、运行时和目标设备。
-
-Desktop 使用 DevKit 对应的本地 Runner；首次需要时下载受校验的工具链和 Dev Host。Android 可以编辑项目及预览，完整构建使用用户选择的云端或其他设备 Runner。手机发布插件不要求存在一台 Desktop，也不要求在手机启动 Node 或连接 `127.0.0.1`。
-
-正式客户端中的 DevKit 只管理项目和发行包；未审核代码的执行放入隔离 Dev Host 或明确的开发通道。开发授权不进入发布包。
-
-## 创建同时支持 PPT 和 PDF 的插件
-
-1. 点击“创建项目”，选择“资源协作插件”。
-2. 输入项目名 `document-explainer`，选择空目录或新建子目录。
-3. 选择 macOS 和 Android 作为目标，Host 版本默认 latest。
-4. 添加 PPT 讲解、PDF 讲解、双资料比较三个功能。
-5. 在能力选择器分别添加 Slides API、PDF API 和 Agent API；Voice 可设为可选。
-6. 检查每端的候选 Provider、版本、权限和依赖安装计划。
-7. 初始化。DevKit 生成工程并下载已选择的 API 包和 Provider 发行物。
-
-选择多个能力不会把它们合成一个插件 ID。最终产品使用自己的插件 ID；GenOffice、PDF Provider 和 Agent 仍独立安装、维护和更新。
-
-### 初始化后的工程
-
-```text
-document-explainer/
-├── package.json
-├── devkit.project.json          # 公开开发工具配置
-├── devkit.lock.json             # 已解析 Host、合同、SDK、Provider 和摘要
-├── src/
-│   ├── app.tsx
-│   ├── features/ppt-explain.ts
-│   ├── features/pdf-explain.ts
-│   └── features/compare.ts
-├── generated/                  # 从合同生成的客户端和类型
-├── contracts/                  # 被锁定的公开合同副本
-├── tests/fixtures/              # 人工授权使用的样例
-├── tests/contract/
-├── tests/host/
-├── docs/PRIVACY.md
-└── .devkit/                     # 本机缓存、会话；不进入 Git 或发布包
-```
-
-配置示例见 [双格式项目](../examples/devkit.project.example.json)；本目录提供对应 JSON Schema。配置是 DevKit 公开工具格式，不是 MCP/MCPB 官方 Manifest，不传入 Host 作为运行时私有命令。
-
-### 三类依赖
-
-| 类型 | 含义 | 发布时的处理 |
-| --- | --- | --- |
-| 语言依赖 | 通用 SDK、UI 库、API 类型包 | 构建并锁定，生成 SBOM |
-| 能力依赖 | Slides/PDF/Agent/Voice Provider | 公开合同要求与兼容范围；用户端安装/绑定 |
-| 开发依赖 | Mock、测试工具、Dev Host、构建工具链 | 只用于开发和测试，不随运行包提供系统权限 |
-
-同一 Provider 的多项操作应绑定到同一兼容实例，例如从同一 GenOffice 会话读文字和取预览。锁文件冲突时显示不满足条件的最小依赖集合，不默默换版本或跨实例拼接状态。
-
-## 编写业务代码
-
-下例为拟定 SDK 伪代码，用于说明调用边界；API 名在合同阶段冻结后生成可编译示例。
-
-```ts
-// 两份资源由用户分别选择并授权，不读取整个 Workspace。
-const { presentation: ppt, paper: pdf } = await runtime.resources.pickMany({
-  roles: { presentation: { mediaType: "application/vnd.openxmlformats-officedocument.presentationml.presentation" },
-           paper: { mediaType: "application/pdf" } },
-});
-const slides = await SlidesApi.bind(runtime, { resource: ppt, access: ["read"] });
-const paper = await PdfApi.bind(runtime, { resource: pdf, access: ["read"] });
-
-const deck = await slides.readSnapshot();
-const pages = await paper.readSnapshot();
-const result = await AgentApi.bind(runtime).then(agent => agent.generate({
-  input: { deck, pages }, outputSchema: ComparisonSchema,
-}));
-```
-
-`slideId`、页码、备注、选区等业务类型来自 Provider API 包，Host 不解释。生成的客户端负责工具映射、输入输出校验和 Provider 错误转换，不直接读取另一个插件的 DOM、安装目录或 Electron IPC。
-
-PPT/PDF 单资料功能分别绑定一份资源。双资料比较的两个资源都有独立会话及版本，不能用“最后活动资源”替代其中一个。使用 Agent 时清楚展示数据是否发送到远端模型。
-
-## 在应用内开发
-
-文件树中新建文件，编辑器提供补全、诊断、保存状态和错误定位。点击“Agent”可让用户选择的 Agent 按需求生成补丁。查看修改差异，再运行测试；业务代码和依赖版本修改分别记录。
-
-对已有工程使用“导入”，只读扫描通过后再允许安装依赖和启动任务。构建在 Runner 中执行，DevKit UI 无任意 shell 权限。应用退出或插件停用时可取消任务；已提交到远端的任务需显示其实际状态，不能仅隐藏页面。
-
-## 调试顺序
-
-| 模式 | 操作 | 你能证明什么 |
-| --- | --- | --- |
-| Mock | 选择固定 PPT/PDF 状态和错误夹具 | 自己的业务逻辑与 UI |
-| 真实 Provider | 下载已审核发行包，在 Dev Host 打开样例 | API 合同和跨插件调用 |
-| 真机 | 安装候选包及依赖，在目标设备点击使用 | 该设备、该摘要、该能力组合可运行 |
-
-Mock、真实运行和真机分别有报告，不互相覆盖。真实调试的资料由用户授权，本地文档不会为构建自动上传到云端。需要云端测试夹具时单独选择并说明上传目的。
-
-查看调用链时，先看资源与 Provider 绑定，再看权限、Schema、版本冲突和耗时。热更新只更换当前开发插件；PPT/PDF 会话继续保留。文档关闭、Provider 更新或授权失效时重新绑定；不要直接改正在编辑的磁盘文件。
-
-## 设备测试与发布
-
-1. 在设备页选择完整 Dev Host，固定版本、构建摘要、系统与 WebView 信息。
-2. 安装候选插件及其依赖，测试 PPT、PDF、双资料比较和可选语音。
-3. 验证切换标签、未保存修改、授权撤销、Provider 禁用、断网与恢复。
-4. 在发布页填写版本、隐私、许可证、源码/构建来源，确认目标功能与依赖。
-5. 运行校验和 TCK，生成不可变包、摘要、SBOM 与证据清单。
-6. 登录选定市场上传并提交审核。页面显示 submission ID 和 pending。
-7. 审核通过且目录可见后，在正常客户端安装验证；不把 Dev Host 成功等同于正式客户端验收。
-
-运行已发布产品无需 DevKit；卸载 DevKit 不影响该产品的正常使用。市场下架阻止新安装，已安装副本按 Host 政策管理，不删除用户生成的文件。
-
-## 可选 CLI 与 CI
-
-以下命令为拟定接口；实现后由 DevKit 页面调用相同核心，CI 也使用同一格式：
+在 OpenMuse 选择已有 Workspace，或创建目录并作为 Workspace 打开。安装 DevKit 后，在目标 Workspace **新开应用内终端**；已有终端不会自动得到新的命令路径和短期会话。
 
 ```sh
-muse doctor
-muse create document-explainer --template resource-companion --host latest
-muse capability add slides pdf agent
-muse resolve --frozen=false
-muse dev --mode mock
-muse dev --mode providers --target macos
-muse test --contracts
-muse test --device android
-muse pack --frozen
-muse publish --registry https://plugins.openmuseai.com
+pwd
+muse --help
+muse search pptx
+muse search pdf
 ```
 
-开发者凭据保存在凭据存储中，CI 由其密钥系统注入，不能写入配置、日志、截图或锁文件。发布命令不包含自动审核。
+搜索包含已安装和当前市场已审核插件。若 Provider 尚未安装：
 
-## 能力提供者与开发 Skill
+```sh
+muse install io.openmuse/genoffice-pptx
+muse install io.openmuse/pdf-reader
+```
 
-Provider 作者发布合同、Schema、API 客户端、Mock、夹具和契约测试。API 合同与实现版本分别管理；破坏性变更先发布新主版本和迁移说明，再验证下游组合。
+Host 会显示真实包摘要并请求安装确认。下架版本不允许通过在线搜索新装。离线搜索仍可显示本地已安装项；在线状态不可用会明确标注。
 
-SDK 随版本提供开发 Skill 和 API Context Pack：公开合同、最小示例、目标端限制、错误处理、测试命令、发布边界。Agent 读取它们即可开发；UI 与 Agent 共用项目工具，不能各自维护一套私有发布脚本。
+## 2. 在当前目录初始化
+
+若 Workspace 已有 README/main.js 等模板同名文件，先创建一个子目录并进入；其他已有文件会保留。不要在 Host 或 Provider 的源码目录初始化。
+
+```sh
+mkdir document-explainer
+cd document-explainer
+muse init --name document-explainer --capability pptx --capability pdf
+```
+
+如果目标 Workspace 本身为空，直接执行 `muse init`，无需额外子目录。
+
+`--capability` 可重复，支持关键词或完整合同 URI。例如精确选择：
+
+```sh
+muse init --name document-explainer \
+  --capability https://plugins.openmuseai.com/contracts/genoffice/slides-read/v1 \
+  --capability https://plugins.openmuseai.com/contracts/pdfjs/pdf-read/v1
+```
+
+不要重复执行这两个初始化示例。候选有歧义或尚未安装时，命令停止并提示搜索/安装。
+
+生成文件：
+
+```text
+main.js                 # 浏览器业务模块，export async function run(api)
+devkit.project.json     # 名称、版本、功能需求
+devkit.lock.json       # Host 构建、直接 Provider 版本/摘要、合同（无账号令牌）
+README.md
+.gitignore              # 增补本地状态/包/报告的忽略规则
+```
+
+这里的配置是公开 DevKit 工具格式，不是 MCP 保留方法或 MCPB 私有字段。实际 Schema 位于 `contracts/devkit-v1/`；`examples/` 中更复杂的最初设计示例尚未实现，不能直接替代当前配置。
+
+## 3. 在同一 Workspace 中开发
+
+通过现有文件树打开 `main.js`，使用已有编辑器或 Agent 修改。DevKit 不再提供第二个编辑器。模板使用：
+
+```js
+export async function run(api) {
+  const documents = await api.readAll();
+  return documents.map(({ capability, snapshot }) => ({
+    capability,
+    pages: snapshot.pageCount,
+    text: snapshot.pages.slice(0, 3).map(page => page.text),
+  }));
+}
+```
+
+`api.readAll()` 调用用户已经绑定的 Provider。具体页结构来自锁定的 PPTX/PDF 公开合同，Host 不解析这些字段。当前示例只读取资料，未自动调用远端模型；请不要把它称为已经实现的 AI 讲解。
+
+## 4. 应用内真实调试
+
+```sh
+muse check
+muse dev
+```
+
+确认运行候选包，随后在应用内 View：分别选择 PPTX 与 PDF，确认各自 Provider/工具授权，再点击“运行 / 比较全部资料”。同一候选可同时保留两份绑定，切换焦点不会替换资料。
+
+返回终端：
+
+```sh
+muse report
+muse pack
+```
+
+`muse report` 从此终端创建的候选资源读取报告；未运行、调用失败或修改过代码时不能冒充通过。`.devkit/run.json` 只保留不透明 runRef；关闭终端后凭据及其开发运行授权失效。默认会话有效期 4 小时。
+
+`dist/<id>-<version>.mcpb` 为不可变产物。同版本已存在不同字节时拒绝覆盖。发布新版本先在 `devkit.project.json` 修改 SemVer，重新调试并打包；能力依赖更新本期须重新解析，暂未提供 `muse add/resolve` 命令。
+
+## 5. 提交审核
+
+```sh
+muse submit
+```
+
+交互式终端隐藏输入开发者令牌；CI 可从其密钥系统注入当前进程的 `MARKET_DEVELOPER_TOKEN`。不在命令参数、源码、锁文件或日志放令牌。市场地址使用 Host 选择的 `MCP_REGISTRY_URL`，默认生产市场 HTTPS。
+
+当前生产开发者身份为受控静态凭据与 namespace，不是公开自助 OIDC 平台。非 `io.openmuse` 命名空间需要市场分配身份；通过进程 `MCP_PUBLISHER_NAMESPACE` 选择对应命名空间，不能靠设置字符串越权。
+
+返回 submission ID、pending、包摘要和版本；本地保存 `submission.json`。提交不自动批准；等待审核后在正常客户端市场安装验收。DevKit/消费者均不获得审核员凭据。
+
+## 故障定位
+
+| 提示 | 处理 |
+| --- | --- |
+| `muse: command not found` | 安装新 DevKit，使用兼容 Host，在 Workspace 新开终端 |
+| 缺少短期 MCP 会话 | 从应用内 Workspace 终端运行；不复制其他账号/终端的令牌 |
+| 超出授权 Workspace | 在正确根目录新开终端，或回到其子目录 |
+| EEXIST | 模板文件冲突；保留已有文件，在空目录重试 |
+| 多个候选 | 使用完整合同 URI 精确选择 |
+| Provider unavailable/changed | 核对锁文件与已安装版本；更新依赖后重新测试 |
+| 报告 stale/incomplete | 重新 `muse dev`，选择全部真实资料，运行并 `muse report` |
+| 同版本字节不同 | 提升项目版本，重新测试和打包 |
+
+Android/Web 真机开发、Live 编辑会话、远程构建和自动审核认证尚未完成；不要以 Desktop CLI 测试替代这些验收。

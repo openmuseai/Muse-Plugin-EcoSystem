@@ -1,4 +1,6 @@
-# DevKit 设计示例
+# DevKit 未来格式设计示例
+
+**当前 Desktop 0.2.0 实际生成格式见 `contracts/devkit-v1/{project,lock}.schema.json`；本目录并非 CLI 输入配置。**
 
 这些文件用于校核拟定开发格式，不是已发布配置或可运行插件。合同 URI、SDK、最低 Host Profile 和未来版本仍需 M0 冻结并发布；不能把它们上传到真实兼容目录。
 

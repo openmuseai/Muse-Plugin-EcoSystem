@@ -2,7 +2,7 @@
 
 ## 验收规则
 
-本矩阵为待执行的发布门禁，所有条目初始均为 planned，不是当前测试结果。报告必须关联消费者、Provider、合同、SDK、Host 和产物摘要；Mock、协议 harness、Dev Host 和正常客户端四种证据分别记录。
+本矩阵保留完整产品发布门禁，不等于当前测试结果。部分底层实现已测试，详见[Desktop 证据与剩余验收](08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。原生 UI 的首要旅程为：选择/创建 Workspace → 应用内终端搜索/安装 Provider → CLI 原地初始化 → 现有编辑器/Agent 开发 → 应用内候选调试 → 提交待审。报告必须关联消费者、Provider、合同、SDK、Host 和产物摘要；Mock、协议 harness、Dev Host 和正常客户端四种证据分别记录。
 
 固定样例包括一份多页 PPTX、一份有文本层的多页 PDF、一份无文字层或加密 PDF、一份用于错误测试的损坏文件，以及不同版本的 API/Provider 夹具。样本许可与摘要入报告，用户原文件不被编辑测试覆盖。
 

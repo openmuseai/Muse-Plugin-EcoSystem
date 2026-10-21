@@ -1,5 +1,13 @@
 # 公开能力合同与 SDK
 
+## 当前 Desktop 实现与后续目标
+
+0.2.0 的实际合同见 `contracts/devkit-v1/README.zh-CN.md`、`host-tools.json`、`project.schema.json` 和 `lock.schema.json`。Provider 目录已发布 GenOffice 0.6.0 的 Slides Read v1 与 PDF Reader 0.1.0 的 PDF Read v1；它们仅提供已授权磁盘文件的只读快照。
+
+当前 SDK 是本仓库独立源码包并捆绑进发行包，尚未公开 npm 类型/API 客户端包。CLI 是 Workspace 中的主要入口，已实现 `search/install/init/check/dev/report/pack/submit`，没有 `create/add/resolve/test/publish` 等拟定命令。
+
+本文件其余部分描述完整目标合同，涉及实时会话、预览/导航/写入、Agent/Voice、传递依赖和隔离 Runner 的内容尚未交付。最初 `examples/` 是未来草案，不是当前生成格式。具体命令以[开发者指南](02-DEVELOPER-GUIDE.zh-CN.md)为准。
+
 ## 合同层次和命名
 
 公开、版本化、可由第三方实现的生态合同承载系统需要而基础 MCP 没有定义的业务语义。标准方法仍是 `initialize`、`tools/list`、`tools/call`、`resources/read` 等；业务工具名称、合同目录和开发配置不被包装成 MCP 保留字段。
@@ -103,7 +111,7 @@ DevKit 在选定 Host 缺少这些服务时停留在环境检查，提示具体�
 | Provider API 包 | 类型、调用映射、输入输出校验、业务文档 | GenOffice/PDF 引擎或 DSH 内部协议 |
 | `@openmuse/provider-sdk` | 从 Schema 定义/生成工具、合同、Mock、TCK | 自动获得 Host 权限 |
 | `@openmuse/devkit-core` | 项目规划、依赖解析、生成、构建/测试/发布编排 | UI 组件和 Host 内部状态 |
-| `@openmuse/devkit-cli` | 可选命令入口，拟定可执行名 muse | 独立的第二套发布逻辑 |
+| `@openmuse/devkit-cli` | Workspace 主要命令入口，可执行名 muse | 独立的第二套发布逻辑 |
 
 SDK 面向标准协议，可用其他官方 SDK 调用相同公开合同。首版 TypeScript，后续按需求生成 Dart/Python 等客户端；不同时手工维护多语言的业务语义。
 

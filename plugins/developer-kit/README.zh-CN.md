@@ -1,8 +1,8 @@
 # OpenMuse Plugin DevKit
 
-OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发者插件。开发者在 OpenMuse 内选择一个或多个能力依赖，初始化独立项目，编写代码或委托 Agent 开发，调试真实插件，验证目标设备，最后提交市场审核。
+OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发者插件。开发者先在 OpenMuse 选择或新建 Workspace，再在该 Workspace 的终端搜索/安装能力依赖，通过 CLI 初始化项目，使用现有编辑器或 Agent 开发、应用内调试并提交市场审核。
 
-本目录当前交付产品与工程设计，尚未包含可运行插件、已发布 SDK 或 CLI。文档中的工具名、API 包、生态 Profile 和命令均为拟定接口；既有代码与待建设能力在技术方案中分别列出。
+当前已包含 Desktop DevKit 插件、共享项目核心、Apps SDK、`muse` CLI，以及真实 PPTX/PDF Provider 适配。0.2.0 的 Workspace/CLI 流程已完成本地协议测试，尚未完成原生 UI 全流程验收及生产发布；当前公开版本与证据见[Desktop 实现记录](docs/08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。
 
 ## 阅读顺序
 
@@ -23,13 +23,13 @@ OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发
 1. DevKit 自身遵循插件生命周期；安装 DevKit 不等于给所有项目开放设备和 Workspace 权限。
 2. 一个项目可以组合 PPTX、PDF、Agent、语音等多个能力，也可以同时绑定多份经用户授权的资源。
 3. 开发者依赖公开合同、API 包和 Provider 发行包；Host 只处理通用发现、授权、路由和生命周期。
-4. DevKit UI、CLI 和开发 Agent 共用同一套项目编排核心。CLI 是可选入口，完整产品以应用内插件为主。
+4. DevKit 作为插件发行 CLI 与共享项目核心；Workspace 和 CLI 是主要开发入口。页面提供环境与能力搜索，现有编辑器和 Agent 在同一 Workspace 操作代码。
 5. 开发配置和锁文件是公开工具格式；插件与 Host 运行时继续使用标准 MCP/MCP Apps，不把开发配置塞进客户端私有 Manifest。
 6. Desktop 首先完成真实 PPTX + PDF 双能力闭环；Android 的跨插件调用、真机调试及手机创作按阶段交付，支持状态由实测决定。
 7. 开发包、审核包与上架包明确区分。提交审核不会自动上架，开发者和 Agent 不获得审核员凭据。
 
 ## 参考与范围
 
-设计日期：2026-10-21。以当前 `Muse-Client`、GenOffice PPTX 0.5.0 和独立市场服务的实现为基线。当前兼容矩阵尚不足以完整表达 SDK、View 通道、设备和能力组合，补齐工作属于开发计划的第一阶段。
+更新：2026-10-21。已发布 GenOffice PPTX 0.6.0 与 PDF Reader 0.1.0 的只读快照合同；完整能力矩阵和独立 Dev Host 发行仍需补齐。
 
-本轮只新增设计与计划，不改变已安装插件、客户端、生产市场或用户项目。后续实现目录布局、公开合同的兼容策略和验收门禁以对应文档为准。
+完整 M0–M4 门禁仍保留在计划中；只读快照、headless 测试和开发者 pending 回执不能代替 Live 编辑、多端真机或原生界面的最终验收。
