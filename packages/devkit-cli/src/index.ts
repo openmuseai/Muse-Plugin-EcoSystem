@@ -12,7 +12,7 @@ async function safeStateWrite(file:string,text:string){const exists=await fs.lst
 export async function runCli(argv=process.argv.slice(2),environment=process.env){
  const [command,...args]=argv
  if(!command||command==='--help'||command==='help'){
-  console.log('OpenMuse Plugin DevKit 0.2.0\n先在 OpenMuse 选择或新建 Workspace，再打开其终端。\n\n  muse search <关键词>                 搜索已安装与在线市场插件\n  muse install <插件ID>               请求 Host 安装已审核插件\n  muse init --name <名称> --capability <关键词或合同URI> [重复选择]\n  muse check                          检查当前 Workspace 项目\n  muse dev                            在应用内运行候选包\n  muse report                         收集真实调试报告\n  muse pack                           生成不可变 MCPB\n  muse submit                         上传并进入市场待审\n\n初始化直接在当前目录生成文件，不新建隐藏的项目根目录，不覆盖已有文件。')
+  console.log('OpenMuse Plugin DevKit 0.3.0\n先在 OpenMuse 选择或新建 Workspace，再打开其终端。\n\n  muse search <关键词>                 搜索已安装与在线市场插件\n  muse install <插件ID>               请求 Host 安装已审核插件\n  muse init --name <名称> --capability <关键词或合同URI> [重复选择] [--template document-explainer]\n  muse check                          检查当前 Workspace 项目\n  muse dev                            在应用内运行候选包\n  muse report                         收集真实调试报告\n  muse pack                           生成不可变 MCPB\n  muse submit                         上传并进入市场待审\n\n初始化直接在当前目录生成文件，不新建隐藏的项目根目录，不覆盖已有文件。')
   return 0
  }
  if(!['search','install','init','check','dev','report','pack','submit'].includes(command))throw Error('未知 DevKit 命令；运行 muse --help')
@@ -20,14 +20,14 @@ export async function runCli(argv=process.argv.slice(2),environment=process.env)
  if(command==='init'){
   for(let i=0;i<args.length;i+=2){
    const key=args[i],value=args[i+1]
-   if(!['--name','--capability'].includes(key)||!value||value.startsWith('--'))throw Error('用法：muse init --name <名称> --capability <关键词或合同URI> [重复选择]')
+   if(!['--name','--capability','--template'].includes(key)||!value||value.startsWith('--'))throw Error('用法：muse init --name <名称> --capability <关键词或合同URI> [重复选择]')
    options.set(key,[...(options.get(key)??[]),value])
   }
   if((options.get('--name')?.length??0)>1)throw Error('--name 只能指定一次')
  }else if((command==='install'&&args.length!==1)||(!['search','install'].includes(command)&&args.length))throw Error('命令参数无效；运行 muse --help')
  const endpoint=environment.MCP_HOST_URL,token=environment.MCP_HOST_TOKEN
  if(!endpoint||!token)throw Error('请从 OpenMuse 选定 Workspace 的新终端运行；缺少短期 MCP 会话。')
- const client=new Client({name:'OpenMuse DevKit CLI',version:'0.2.0'})
+ const client=new Client({name:'OpenMuse DevKit CLI',version:'0.3.0'})
  const transport=new StreamableHTTPClientTransport(new URL(endpoint),{requestInit:{headers:{Authorization:'Bearer '+token}}})
  await client.connect(transport)
  async function call(name:string,arguments_:any={}){
@@ -64,7 +64,7 @@ export async function runCli(argv=process.argv.slice(2),environment=process.env)
     if(dependencies.some(d=>d.provider.id===provider.id&&d.contract.id===contract.id))throw Error('重复的能力依赖：'+contract.id)
     dependencies.push({alias:'capability-'+(dependencies.length+1),provider:{id:provider.id,version:provider.version,sha256:provider.sha256},contract})
    }
-   const result=await core.initialize(name,dependencies,await call('host_describe'))
+   const result=await core.initialize(name,dependencies,await call('host_describe'),options.get('--template')?.[0])
    const ignore=path.join(cwd,'.gitignore')
    const ignoreStat=await fs.lstat(ignore).catch((e:any)=>{if(e.code!=='ENOENT')throw e;return null})
    if(ignoreStat?.isSymbolicLink())throw Error('SYMLINK_DENIED: .gitignore')

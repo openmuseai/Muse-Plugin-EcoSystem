@@ -50,16 +50,17 @@ export class DevkitCore {
   const file=await this.stateFile(id,name),temporary=file+'.'+randomUUID()+'.tmp'
   try{await fs.writeFile(temporary,JSON.stringify(value),{flag:'wx',mode:0o600});await fs.rename(temporary,file)}finally{await fs.rm(temporary,{force:true})}
  }
- async initialize(id:string,deps:Dependency[],host:any){
+ async initialize(id:string,deps:Dependency[],host:any,template='multi-resource'){
+  if(!['multi-resource','document-explainer'].includes(template))throw Error('UNKNOWN_TEMPLATE')
   if(!slug.test(id)||!sha.test(host?.implementation?.buildSha256))throw Error('EXACT_HOST_BUILD_REQUIRED')
   validateDependencies(deps)
   await fs.mkdir(this.root,{recursive:true})
   const root=await fs.realpath(this.root),temporary=path.join(root,'.creating-'+randomUUID())
   await fs.mkdir(temporary,{mode:0o700})
   try {
-   const project={format:'openmuse-devkit-project/1',id,name:id,version:'0.1.0',namespace:this.namespace,capabilities:deps.map(d=>({alias:d.alias,contract:d.contract.id,version:d.contract.version})),features:{compare:{required:true,allOf:deps.map(d=>d.alias)}}}
+   const project={format:'openmuse-devkit-project/1',id,name:id,version:'0.1.0',namespace:this.namespace,...(template==='document-explainer'?{template}:{}),capabilities:deps.map(d=>({alias:d.alias,contract:d.contract.id,version:d.contract.version})),features:{compare:{required:true,allOf:deps.map(d=>d.alias)}}}
    const lock={format:'openmuse-devkit-lock/1',host,dependencies:deps}
-   const main=await fs.readFile(path.join(this.assets,'main.js'),'utf8')
+   const main=await fs.readFile(path.join(this.assets,template==='document-explainer'?'explainer-main.js':'main.js'),'utf8')
    for(const [name,body] of Object.entries({'main.js':main,'devkit.project.json':JSON.stringify(project,null,2),'devkit.lock.json':JSON.stringify(lock,null,2),'README.md':'# '+id+'\nIndependent MCP Apps plugin. Edit main.js, validate, debug with real providers, then submit. No Host or provider source required.\n'}))await fs.writeFile(path.join(temporary,name),body,{flag:'wx',mode:0o600})
    if(this.workspace){
     const created:string[]=[]
@@ -102,7 +103,7 @@ export class DevkitCore {
   validateDependencies(lock.dependencies)
   const sdk=await fs.readFile(path.join(this.assets,'client.js'),'utf8')
   const escaped=(value:any)=>JSON.stringify(value).replaceAll('<','\\u003c')
-  const html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>body{margin:32px;font:16px system-ui;color:#182639;background:#f5f7fa}button{padding:12px 18px;margin:6px;border:1px solid #cad3de;border-radius:9px;background:white}pre{white-space:pre-wrap;background:white;padding:24px;border-radius:12px}#status{margin:14px 0}</style></head><body><h1>${id}</h1><p>独立 MCP Apps 插件 · 每份资料单独授权 · 不依赖 DevKit 运行</p><div id="choices"></div><button id="run">运行 / 比较全部资料</button><div id="status">正在连接 Host…</div><pre id="result">请选择已锁定的能力对应的资源。</pre><script>${sdk.replaceAll('</script','<\\/script')}</script><script type="module">
+  let html=`<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><style>body{margin:32px;font:16px system-ui;color:#182639;background:#f5f7fa}button{padding:12px 18px;margin:6px;border:1px solid #cad3de;border-radius:9px;background:white}pre{white-space:pre-wrap;background:white;padding:24px;border-radius:12px}#status{margin:14px 0}</style></head><body><h1>${id}</h1><p>独立 MCP Apps 插件 · 每份资料单独授权 · 不依赖 DevKit 运行</p><div id="choices"></div><button id="run">运行 / 比较全部资料</button><div id="status">正在连接 Host…</div><pre id="result">请选择已锁定的能力对应的资源。</pre><script>${sdk.replaceAll('</script','<\\/script')}</script><script type="module">
 ${code.replaceAll('</script','<\\/script')}
 const client=new window.OpenMuseCapabilities();const deps=${escaped(lock.dependencies)},bound=new Map();let last=[];
 const status=document.getElementById('status'),result=document.getElementById('result');
@@ -110,6 +111,23 @@ await client.connect();status.textContent='已连接。请选择全部资料后�
 for(const dep of deps){const button=document.createElement('button');button.textContent='选择 '+dep.alias+' · '+dep.contract.title;document.getElementById('choices').append(button);button.onclick=async()=>{try{status.textContent='查找已安装能力…';const providers=await client.providers();const provider=providers.find(p=>p.id===dep.provider.id&&p.sha256===dep.provider.sha256);if(!provider)throw Error('PROVIDER_UNAVAILABLE_OR_CHANGED');const contract=provider.contracts.find(c=>c.id===dep.contract.id&&c.version===dep.contract.version);if(!contract)throw Error('CONTRACT_INCOMPATIBLE');if(bound.has(dep.alias))await client.call('capabilities_release',{binding:bound.get(dep.alias).binding});const binding=await client.bind(provider,contract);bound.set(dep.alias,binding);button.textContent='已选择 '+dep.alias+' · '+binding.resourceTitle;status.textContent='已授权 '+dep.alias;}catch(error){status.textContent=String(error)}}}
 document.getElementById('run').onclick=async()=>{try{if(bound.size!==deps.length)throw Error('请先选择全部资料');status.textContent='正在并行调用真实 Provider…';const api={readAll:async()=>{last=await Promise.all(deps.map(async dep=>({capability:dep.alias,snapshot:await client.invoke(bound.get(dep.alias).binding,dep.contract.operations.readSnapshot)})));return last}};const output=await run(api);if(last.length!==deps.length||last.some(d=>!Number.isInteger(d.snapshot.pageCount)||d.snapshot.pageCount<1))throw Error('REAL_PROVIDER_RESULT_REQUIRED');result.textContent=JSON.stringify(output,null,2);await client.call('record_run',{report:{status:'passed',codeSha256:${escaped(validation.sha256)},providers:deps.map((d,i)=>({...d.provider,pageCount:last[i].snapshot.pageCount,source:last[i].snapshot.source})),completedAt:new Date().toISOString()}});status.textContent='真实能力调试通过 · 已记录测试报告';}catch(error){status.textContent=String(error);result.textContent=String(error)}};
 </script></body></html>`
+  if(project.template==='document-explainer'){
+   if(lock.dependencies.some((d:Dependency)=>!['application/pdf','application/vnd.openxmlformats-officedocument.presentationml.presentation'].includes(d.contract.mediaType)))throw Error('EXPLAINER_REQUIRES_DOCUMENT_CAPABILITY')
+   const client=await fs.readFile(path.join(this.assets,'explainer-client.js'),'utf8')
+   const template=await fs.readFile(path.join(this.assets,'explainer.html'),'utf8')
+   // The template has its own MCP Apps connection; report via the same app.
+   const execute=`${code}\nconst deps=${escaped(lock.dependencies)};let mounted;
+   await run({mountNarration:async(options={})=>{
+     mounted=await window.OpenMuseNarration.mountNarration({...options,onPageCompleted:async(mediaType,index,pageCount)=>{
+       const provider=deps.find(d=>d.contract.mediaType===mediaType)?.provider;
+       if(!provider)throw Error('CAPABILITY_NOT_LOCKED');
+       const result=await mounted.app.callServerTool({name:'record_run',arguments:{report:{status:'passed',codeSha256:${escaped(validation.sha256)},providers:[{...provider,pageCount,source:mediaType==='application/pdf'?'pdfjs-live':'genoffice-live'}],completedAt:new Date().toISOString()}}});
+       if(result.isError)throw Error('REPORT_RECORD_FAILED');
+       await options.onPageCompleted?.(mediaType,index,pageCount);
+     }});return mounted;
+   }});`
+   html=template.replace('<!--SCRIPT-->',()=>'<script>'+client.replaceAll('</script','<\\/script')+'</script><script type="module">'+execute.replaceAll('</script','<\\/script')+'</script>')
+  }
   const manifest={manifest_version:'0.3',name:id,display_name:project.name,version:project.version,description:'Independent multi-resource capability plugin created with OpenMuse DevKit.',author:{name:'Plugin developer'},license:'MIT',compatibility:{platforms:['darwin'],runtimes:{node:'>=22.13.0'}},server:{type:'node',entry_point:'server.mjs',mcp_config:{command:'node',args:['${__dirname}/server.mjs']}}}
   const zip=new JSZip(),date=new Date('2020-01-01T00:00:00Z')
   const entries:any={'manifest.json':JSON.stringify(manifest),'index.html':html,'server.mjs':await fs.readFile(path.join(this.assets,'runtime.mjs')),'devkit/dependencies.json':JSON.stringify({profile:'openmuse-capabilities/1',dependencies:lock.dependencies.map(({alias,provider,contract}:Dependency)=>({alias,provider,contract}))}),'devkit/project.json':JSON.stringify(project),'source/main.js':code,'source/devkit.lock.json':JSON.stringify(lock),'LICENSE':'MIT; generated plugin code belongs to its developer. See bundled dependency licenses.\n','THIRD-PARTY-NOTICES.txt':await fs.readFile(path.join(this.assets,'THIRD-PARTY-NOTICES.txt'))}

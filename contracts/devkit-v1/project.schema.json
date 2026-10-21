@@ -88,6 +88,12 @@
           }
         }
       }
+    },
+    "template": {
+      "enum": [
+        "multi-resource",
+        "document-explainer"
+      ]
     }
   }
 }
