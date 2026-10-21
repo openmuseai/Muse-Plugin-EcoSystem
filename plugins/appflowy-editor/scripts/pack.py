@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 root = Path(__file__).resolve().parents[1]
-version = "0.1.4"
+version = "0.1.5"
 parser = argparse.ArgumentParser()
 parser.add_argument("--editor-url", help="Public HTTPS editor URL to embed in the Desktop MCPB")
 parser.add_argument("--out", type=Path, default=root / "dist")

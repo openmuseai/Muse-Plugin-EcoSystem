@@ -11,7 +11,7 @@ parser.add_argument("--registry", required=True)
 parser.add_argument("--public-origin", help="Public registry origin when publishing through a private admin tunnel")
 parser.add_argument("--token", default=os.environ.get("MARKET_DEVELOPER_TOKEN"), help="Defaults to MARKET_DEVELOPER_TOKEN")
 parser.add_argument("--remote", required=True, help="MCP Streamable HTTP endpoint, HTTPS in production")
-parser.add_argument("--bundle", type=Path, default=Path(__file__).resolve().parents[1] / "dist/appflowy-editor-0.1.4.mcpb")
+parser.add_argument("--bundle", type=Path, default=Path(__file__).resolve().parents[1] / "dist/appflowy-editor-0.1.5.mcpb")
 args = parser.parse_args()
 if not args.token:
     parser.error("--token or MARKET_DEVELOPER_TOKEN is required")
@@ -34,7 +34,7 @@ document = {
     "name": "io.openmuse/appflowy-editor",
     "title": "AppFlowy Editor",
     "description": "Rich text editor for Desktop and Mobile, delivered via MCP Apps.",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "repository": {"url": "https://github.com/AppFlowy-IO/appflowy-editor", "source": "github"},
     "packages": [{"registryType": "mcpb", "identifier": package, "fileSha256": digest, "transport": {"type": "stdio"}}],
     "remotes": [{"type": "streamable-http", "url": args.remote}],
