@@ -75,7 +75,7 @@ M4 的开发者服务可以在 M1/M2 期间准备，正式产品发布必须等�
 | 2 | Workspace roots、短期终端 MCP 会话、通用 npm bin 启动 | 实现并测试；不包含 DevKit/PPTX/PDF 业务分支 |
 | 3 | DevKit CLI 在 cwd 事务初始化、双能力锁定、应用内候选与打包 | headless 协议链路已通过；补充文件/撤权回归 |
 | 4 | 更新公开格式、CLI 指南和实测记录 | 当前批次 |
-| 5 | 重新构建完整 Host、发布匹配 DevKit 0.2.0 | 待测试冻结；人工操作窗口期间不替换运行应用 |
+| 5 | 重新构建完整 Host、发布匹配 DevKit 0.2.0 | 已完成完整 macOS 构建和 DevKit 0.2.0 生产发布；原生安装验收继续进行 |
 | 6 | 原生 UI：选 Workspace → 搜索安装 → 初始化 → 编辑 → 双资料授权调试 → pending 提交 | 待用户交回窗口后执行，记录截图与摘要 |
 | 7 | Agent 公开能力、完整依赖图、独立 Dev Host/OIDC、Android/Web | 后续阶段，不作为本次已完成项 |
 

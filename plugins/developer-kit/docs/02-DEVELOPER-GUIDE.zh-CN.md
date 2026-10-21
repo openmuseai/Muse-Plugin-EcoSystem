@@ -1,6 +1,6 @@
 # Desktop 开发者指南
 
-本指南对应本地 DevKit 0.2.0 Workspace/CLI 实现。公开市场当前版本和完整 UI 验收状态见[实现记录](08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。使用前需要支持公开 Workspace 工具和 npm bin 启动的 Host 构建；旧版 Host 不能只靠更新 DevKit 获得这些能力。
+本指南对应 DevKit 0.2.0 Workspace/CLI 实现。公开市场当前版本和完整 UI 验收状态见[实现记录](08-DESKTOP-WORKSPACE-CLI.zh-CN.md)。使用前需要支持公开 Workspace 工具和 npm bin 启动的 Host 构建；旧版 Host 不能只靠更新 DevKit 获得这些能力。
 
 ## 1. 选择开发 Workspace
 
