@@ -2,7 +2,7 @@ import {App} from '@modelcontextprotocol/ext-apps'
 import {Narrator} from '../src/narrator.js'
 import {providerServices} from '../src/providers.js'
 export async function mountNarration(options:{onPageCompleted?:(mediaType:string,index:number,pageCount:number)=>Promise<void>}={}) {
-const app=new App({name:'Document Explainer',version:'0.1.1'})
+const app=new App({name:'Document Explainer',version:'0.2.1'})
 let narrator:Narrator|undefined,resourceUri=''
 const start=document.querySelector<HTMLButtonElement>('#start')!,stop=document.querySelector<HTMLButtonElement>('#stop')!,mode=document.querySelector<HTMLSelectElement>('#mode')!,status=document.querySelector('#status')!,page=document.querySelector('#page')!
 async function call(name:string,args:any={}){
@@ -20,6 +20,7 @@ function update(){
  page.textContent=n.pageCount?`第 ${Math.min(n.currentIndex+1,n.pageCount)} / ${n.pageCount} 页`:''
  status.textContent=n.message;status.setAttribute('data-state',n.state)
  document.documentElement.dataset.narrationState=n.state
+ const output=document.querySelector('#output');if(output)output.textContent=n.lastOutput?`第 ${n.lastOutputIndex+1} 页讲解：${n.lastOutput}`:''
 }
 app.ontoolinput=({arguments:args})=>{
  if(typeof args?.resourceUri!=='string'||typeof args.mediaType!=='string')return
@@ -31,6 +32,9 @@ app.ontoolinput=({arguments:args})=>{
 }
 start.onclick=()=>{if(narrator?.running)void narrator.pause();else void narrator?.start(mode.value as 'first'|'current')}
 stop.onclick=()=>{void narrator?.stop()}
+function contextChanged(ctx:any){document.documentElement.dataset.platform=ctx.platform??'desktop';document.documentElement.dataset.theme=ctx.theme??'light'}
+app.onhostcontextchanged=contextChanged
 await app.connect().catch(()=>{status.textContent='无法连接应用。请重新打开文档。'})
-return {app,narrator}
+contextChanged(app.getHostContext()??{})
+return {app,get narrator(){return narrator}}
 }

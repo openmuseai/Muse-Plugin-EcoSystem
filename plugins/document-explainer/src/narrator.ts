@@ -11,7 +11,7 @@ export interface NarrationServices {
 export type NarrationState='idle'|'reading'|'generating'|'waiting'|'paused'|'completed'|'error'
 /** All page ordering and prompts belong to this consumer, not the Host. */
 export class Narrator {
- state:NarrationState='idle';index=0;currentIndex=0;pageCount=0;name='';message='可以开始';active=true
+ state:NarrationState='idle';index=0;currentIndex=0;pageCount=0;name='';lastOutput='';lastOutputIndex=-1;message='可以开始';active=true
  private epoch=0;private task?:string;private conversation?:string;private busy=false
  constructor(private api:NarrationServices,private changed:()=>void,private pageCompleted?:(index:number,pageCount:number)=>Promise<void>){}
  private update(state:NarrationState,message:string){this.state=state;this.message=message;this.changed()}
@@ -48,6 +48,7 @@ export class Narrator {
     this.task=undefined
     if(generation!==this.epoch)return
     if(output.status!=='completed'||!output.text.trim())throw Error('本页讲解未完成，请检查 Agent 模型连接后重试。'+(output.error??''))
+    this.lastOutput=output.text;this.lastOutputIndex=pageIndex;this.changed()
     await this.pageCompleted?.(pageIndex,this.pageCount)
     if(generation!==this.epoch)return
     this.index=pageIndex+1
