@@ -33,3 +33,7 @@ OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发
 更新：2026-10-21。已发布 GenOffice PPTX 0.6.1 与 PDF Reader 0.1.1 的只读快照合同；完整能力矩阵和独立 Dev Host 发行仍需补齐。
 
 完整 M0–M4 门禁仍保留在计划中；只读快照、headless 测试和开发者 pending 回执不能代替 Live 编辑、多端真机或原生界面的最终验收。
+
+## Desktop 实时资源扩展
+
+DevKit 0.3.1 新增 `--template document-explainer`，可在 Workspace 中初始化 PPTX/PDF 讲解扩展，`muse dev` 只挂载消费者浮层。详见 [实时资源开发指南](docs/09-LIVE-RESOURCE-EXTENSIONS.zh-CN.md)。历史 0.2.0 只读快照验收和新阶段的实时讲解验收分开记录。

@@ -1,0 +1,29 @@
+{
+  "format": "openmuse-devkit-project/1",
+  "id": "live-document-explainer",
+  "name": "live-document-explainer",
+  "version": "0.1.0",
+  "namespace": "io.openmuse",
+  "template": "document-explainer",
+  "capabilities": [
+    {
+      "alias": "capability-1",
+      "contract": "https://plugins.openmuseai.com/contracts/genoffice/slides-read/v1",
+      "version": "1.0.1"
+    },
+    {
+      "alias": "capability-2",
+      "contract": "https://plugins.openmuseai.com/contracts/pdfjs/pdf-read/v1",
+      "version": "1.0.1"
+    }
+  ],
+  "features": {
+    "compare": {
+      "required": true,
+      "allOf": [
+        "capability-1",
+        "capability-2"
+      ]
+    }
+  }
+}

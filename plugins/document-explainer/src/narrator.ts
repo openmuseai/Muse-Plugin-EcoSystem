@@ -11,7 +11,7 @@ export interface NarrationServices {
 export type NarrationState='idle'|'reading'|'generating'|'waiting'|'paused'|'completed'|'error'
 /** All page ordering and prompts belong to this consumer, not the Host. */
 export class Narrator {
- state:NarrationState='idle';index=0;pageCount=0;name='';message='可以开始';active=true
+ state:NarrationState='idle';index=0;currentIndex=0;pageCount=0;name='';message='可以开始';active=true
  private epoch=0;private task?:string;private conversation?:string;private busy=false
  constructor(private api:NarrationServices,private changed:()=>void,private pageCompleted?:(index:number,pageCount:number)=>Promise<void>){}
  private update(state:NarrationState,message:string){this.state=state;this.message=message;this.changed()}
@@ -23,12 +23,13 @@ export class Narrator {
    const state=await this.api.state()
    if(generation!==this.epoch)return
    if(state.pageCount<1)throw Error('文档还未准备好，请稍后重试')
-   this.name=state.name;this.pageCount=state.pageCount
+   this.name=state.name;this.pageCount=state.pageCount;this.currentIndex=state.index
    if(this.state!=='paused'&&this.state!=='error'){this.index=mode==='current'?state.index:0;this.conversation=undefined}
    while(this.index<this.pageCount && generation===this.epoch && this.active){
     const pageIndex=this.index
     this.update('reading',`正在读取第 ${pageIndex+1} 页`)
     await this.api.goTo(pageIndex)
+    this.currentIndex=pageIndex;this.changed()
     if(generation!==this.epoch)return
     const page=await this.api.read(pageIndex)
     if(generation!==this.epoch)return

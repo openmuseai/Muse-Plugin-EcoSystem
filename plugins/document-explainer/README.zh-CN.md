@@ -12,7 +12,7 @@
 
 ## 无源码依赖的开发
 
-在 OpenMuse 选择/新建 Workspace，打开该目录终端，使用已安装 DevKit 0.3.0：
+在 OpenMuse 选择/新建 Workspace，打开该目录终端，使用已安装 DevKit 0.3.1：
 
 ```sh
 muse search pptx

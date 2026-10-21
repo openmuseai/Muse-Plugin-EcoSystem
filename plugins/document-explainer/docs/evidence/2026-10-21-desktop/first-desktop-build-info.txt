@@ -1,0 +1,9 @@
+product: OpenMuse
+profile: release
+commit: 0b58d69de51126603c3c51a5a3ea4f9364cedf24
+arch: arm64
+rust_targets: aarch64-apple-darwin
+builtAt: 2026-10-21T08:55:07Z
+flutter: Flutter 3.44.2 • channel stable • https://github.com/flutter/flutter.git
+rustc: rustc 1.96.0 (ac68faa20 2026-05-25)
+archive: OpenMuse-macos.zip sha256=09470a31898992a3b222790315157665a4dc0c36132e597c87b5acc07352dc6b
