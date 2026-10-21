@@ -66,18 +66,18 @@ OPENMUSE_TEST_CLI_LAUNCHER=/tmp/openmuse-devkit-cli-build/bundle/bin/openmuse \
 | 发行包 | 生产状态 | 包摘要 |
 | --- | --- | --- |
 | DevKit 0.1.1 | active，旧页面流程 | `13ba93760ac9e42e0bc07fa84c016fe6373c287381b14aa732010eac24e41cb0` |
-| DevKit 0.2.0 | **本地候选，未发布** | `d6abad26572628f67609c73cbd194b54c17b4d0da6b2967b88d03b8abe77cf6a` |
+| DevKit 0.2.0 | **active，已完成工具包维护审核** | `d6abad26572628f67609c73cbd194b54c17b4d0da6b2967b88d03b8abe77cf6a` |
 | GenOffice PPTX 0.6.0 | active，只读快照公共合同 | `d250a7d1422107317570ebf67acb2c6a21485b8241ed4237fe6e10b5423b6672` |
 | PDF Reader 0.1.0 | active，真实 PDF.js 文本能力 | `24ac8b419edb0b7564f66bd75a6ab91310f3670bf03e54d366b7c2df762f3f7e` |
 
-0.1.0 因包内脚本损坏已下架，不能作为验收版本。0.2.0 需要包含本次通用 CLI/Workspace 能力的新 Host；不能将用户当前运行的旧完整构建误认作已包含此代码。
+0.1.0 因包内脚本损坏已下架，不能作为验收版本。0.2.0 已由开发者接口提交，再由独立维护审核批准；submission ID 为 `131ab0fb-7001-4099-ae08-9d821e956723`。生产公开包与本地候选摘要一致，公开 Profile/Schema 与仓库逐字节一致。开发者 CLI 未获得审核员凭据。
 
 ## 待完成的原生 UI 验收
 
-用户当前保留 OpenMuse 窗口操作权，本次没有接管、重启或覆盖其运行应用。以下项仍待执行：
+用户已交回窗口。已退出旧构建、重新构建并启动最新完整 macOS 应用，正在执行后续原生验收。发布构建记录见 [release.json](evidence/2026-10-21-desktop/release.json)。以下按实际进度记录：
 
-1. 新 Host 完整 macOS 包构建、摘要记录及安装启动。
-2. 部署更新公开 Profile/Schema，发布/审核匹配的 DevKit 0.2.0，从真实生产市场安装。
+1. **已完成**：新 Host 完整 macOS 包构建、摘要记录及应用启动。源码 `5a95295`，ZIP SHA-256：`52b071cb85ed4661255a7502f7752ad73170568a1711d033f53d3626e0aa206c`。
+2. **已完成部署/发布/维护审核**：公开 Profile/Schema 与 DevKit 0.2.0；**客户端市场安装尚待原生验证**。
 3. 选择用户已有 Workspace 或新建验收目录，新开终端；真实 `muse search/install/init`。
 4. 通过现有编辑器或 Agent 修改项目，`muse dev` 打开原生应用内候选 View。
 5. 用户分别授权 PPTX/PDF 文件和 Provider；实际点击运行并保存界面证据。

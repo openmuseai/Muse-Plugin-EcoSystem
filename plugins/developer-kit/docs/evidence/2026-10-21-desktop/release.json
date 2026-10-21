@@ -1,0 +1,29 @@
+{
+  "recordVersion": 1,
+  "date": "2026-10-21",
+  "platform": "darwin-arm64",
+  "host": {
+    "sourceCommit": "5a95295457ff7f3009080e0d38aadfa39d31d3a0",
+    "version": "1.0.0+1",
+    "buildSha256": "2b6aab5b3a4bde049a9ddc2a56fa8f3a8e11b98ced32de0256ad42a47882aa9d",
+    "archive": "Muse-Client/dist/OpenMuse-macos.zip",
+    "archiveSha256": "52b071cb85ed4661255a7502f7752ad73170568a1711d033f53d3626e0aa206c"
+  },
+  "devkit": {
+    "name": "io.openmuse/developer-kit",
+    "version": "0.2.0",
+    "sha256": "d6abad26572628f67609c73cbd194b54c17b4d0da6b2967b88d03b8abe77cf6a",
+    "submissionId": "131ab0fb-7001-4099-ae08-9d821e956723",
+    "state": "approved",
+    "sourceCommit": "17902f6"
+  },
+  "publicContracts": {
+    "deployment": "https://plugins.openmuseai.com/contracts/devkit-v1/",
+    "byteMatchVerified": true
+  },
+  "acceptance": {
+    "protocolHarness": "passed",
+    "nativeUi": "in_progress",
+    "consumerSubmission": null
+  }
+}
