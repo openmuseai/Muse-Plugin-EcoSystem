@@ -19,3 +19,15 @@ python3 plugins/developer-kit/scripts/publish.py plugins/pdf-reader/dist/pdf-rea
 最后一步只创建待审核提交。市场安装后，DevKit 通过公开合同发现此 Provider，Host 仅授权资源并路由普通 MCP 工具。测试样本 `fixtures/quarterly-brief.pdf` 为本仓库生成的两页文字 PDF。
 
 0.1.1 将合同版本更新为 1.0.1：公开二进制 Schema 使用长度上限和标准编码/MIME 注解，避免重复分组正则在大文件上耗尽客户端栈；Provider 通过 canonical base64 回编码比较拒绝非法输入，文件/页数/输出预算仍然生效。Host 无 PDF 特判。
+
+## 0.2.0 Desktop 实时视图
+
+新增 pdf_open MCP Apps UI 入口，离线捆绑官方 PDF.js 画布和 worker（以官方 fake worker 方式在同一隔离 View 中运行，不需要 Node/localhost 服务渲染）。原先 pdf_read_snapshot 的语义和合同保持不变。
+
+View 通过普通 MCP Apps tools/list/tools/call 贡献：
+
+- pdf_get_state({}) → name, revision, pageCount, pageIndex。
+- pdf_read_page({pageIndex}) → name, revision, index, text, status。
+- pdf_go_to_page({pageIndex}) → pageIndex, revision；重绘完成后返回。
+
+页码从 0 开始。没有文字层返回 no-text-layer；不自动 OCR，不虚构讲解文字。Host 不包含 PDF 页码或渲染业务逻辑。测试脚本在 plugins/document-explainer/test/pdf-view.mjs，包含两页实际 PDF 渲染、文字读取和导航；这不等于 Android 或所有 PDF 字体/图形特性均验收。

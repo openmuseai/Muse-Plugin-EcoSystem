@@ -1,3 +1,4 @@
+import { readFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
 import { McpServer } from '@modelcontextprotocol/server'
@@ -34,7 +35,12 @@ export async function readPdf(content:string,name='PDF document') {
   } finally {await task.destroy()}
 }
 export function buildServer() {
-  const server=new McpServer({name:'io.openmuse/pdf-reader',version:'0.1.1'},{capabilities:{tools:{},resources:{}}})
+  const server=new McpServer({name:'io.openmuse/pdf-reader',version:'0.2.0'},{capabilities:{tools:{},resources:{}}})
+  const ui='ui://pdf-reader/editor',mimeType='text/html;profile=mcp-app'
+  server.registerResource('PDF Reader',ui,{mimeType},async()=>({contents:[{uri:ui,mimeType,text:await readFile(new URL('./web/index.html',import.meta.url),'utf8')}]}))
+  server.registerTool('pdf_open',{description:'Open PDF in the isolated PDF.js editor view.',
+    inputSchema:z.object({content:z.string().max(45*1024*1024).meta({contentEncoding:'base64',contentMediaType:'application/pdf'}),name:z.string().max(180).optional()}),
+    _meta:{ui:{resourceUri:ui}}},async()=>({content:[]}))
   server.registerResource('PDF public contracts','capability://pdf-reader/contracts',
     {mimeType:'application/vnd.openmuse.capabilities+json'},async()=>({contents:[{uri:'capability://pdf-reader/contracts',mimeType:'application/vnd.openmuse.capabilities+json',text:JSON.stringify({profile:'openmuse-capabilities/1',contracts:[pdfContract]})}]}))
   server.registerTool('pdf_read_snapshot',{description:'Read actual PDF text with Mozilla PDF.js; encrypted and malformed files fail explicitly.',
