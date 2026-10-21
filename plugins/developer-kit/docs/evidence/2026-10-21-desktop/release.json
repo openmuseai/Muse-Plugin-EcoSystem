@@ -3,11 +3,12 @@
   "date": "2026-10-21",
   "platform": "darwin-arm64",
   "host": {
-    "sourceCommit": "5a95295457ff7f3009080e0d38aadfa39d31d3a0",
+    "sourceCommit": "d2aad9a4e95c829ca612e93819357e37f7dfaf24",
     "version": "1.0.0+1",
-    "buildSha256": "2b6aab5b3a4bde049a9ddc2a56fa8f3a8e11b98ced32de0256ad42a47882aa9d",
+    "buildSha256": "e10576041b17aea363537a0f14a7601b280ca706fec7ec88866f5df2b48ad714",
     "archive": "Muse-Client/dist/OpenMuse-macos.zip",
-    "archiveSha256": "52b071cb85ed4661255a7502f7752ad73170568a1711d033f53d3626e0aa206c"
+    "archiveSha256": "fd60eb306f6c47e855532df58aaf7395dc63de454ac26dbb5438babb288af89d",
+    "signedEntitlementsVerified": true
   },
   "devkit": {
     "name": "io.openmuse/developer-kit",
@@ -23,7 +24,55 @@
   },
   "acceptance": {
     "protocolHarness": "passed",
-    "nativeUi": "in_progress",
-    "consumerSubmission": null
+    "nativeUi": "passed",
+    "consumerSubmission": {
+      "submissionId": "cc85fd4a-4dd3-450f-902a-b3f4cc7c10d0",
+      "status": "pending",
+      "sha256": "f2e2f4e0d8dd01d014f7d0e69f623484a2c0d1d791fb3d6a8826a0b8835f6e82",
+      "name": "io.openmuse/desktop-document-explainer",
+      "version": "0.1.0"
+    },
+    "scope": "Desktop Workspace CLI through pending market submission; read-only PPTX/PDF composition",
+    "project": "plugins/explainer/desktop-acceptance-validated",
+    "nativeEditor": "source viewed; source modification executed by a workspace terminal script",
+    "agentCoding": "not exercised",
+    "mobile": "not tested"
+  },
+  "providers": [
+    {
+      "name": "io.openmuse/genoffice-pptx",
+      "version": "0.6.1",
+      "sha256": "b522cc46a1b758776939ca1617a488799e0929d50c86b5fac7ba5839b7c6f96d",
+      "submissionId": "4e826a46-1f40-4e9c-8a93-db72847794e3",
+      "state": "approved",
+      "installedAndNativeTested": true
+    },
+    {
+      "name": "io.openmuse/pdf-reader",
+      "version": "0.1.1",
+      "sha256": "e5f56aaafae6728d7ab34f55eaccd46a3f6554cd003a90e0780679650d0b5f69",
+      "submissionId": "4d19036b-410a-4521-b7d8-c1767ca6ea09",
+      "state": "approved",
+      "installedAndNativeTested": true
+    }
+  ],
+  "tests": {
+    "ecosystem": {
+      "passed": 6
+    },
+    "hostTerminalGatewayWorkbench": {
+      "passed": 24,
+      "skipped": 1
+    },
+    "realProvidersThroughGateway": {
+      "passed": 1,
+      "pptxPages": 23,
+      "pdfPages": 2
+    },
+    "cliPlugin": {
+      "passed": 4
+    },
+    "flutterAnalyze": "passed",
+    "signedArchiveVerification": "passed"
   }
 }
