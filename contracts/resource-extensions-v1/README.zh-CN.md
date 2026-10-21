@@ -4,7 +4,7 @@
 
 ## 发现与视图
 
-已安装的 MCP Server 用普通 resource 发布 `application/vnd.openmuse.resource-extensions+json`，内容符合 [catalog.schema.json](catalog.schema.json)。`tool` 必须在 tools/list 中存在，并以标准 `_meta.ui.resourceUri` 引用 `ui://`、`text/html;profile=mcp-app` 的资源。每包最多 4 个条目，Host 最多挂载 4 个视图；不兼容可选目录不阻断文件本身。
+已安装的 MCP Server 用普通 resource 发布 `application/vnd.openmuse.resource-extensions+json`，内容符合 [catalog.schema.json](catalog.schema.json)。`tool` 必须在 tools/list 中存在，并以标准 `_meta.ui.resourceUri` 引用 `ui://`、`text/html;profile=mcp-app` 的资源。`resourceTools` 声明本包需要调用的资源工具名称，默认为空；Host 只允许其中实际由当前编辑器贡献的工具，未声明的编辑/保存工具无法调用。安装/开发候选授权按不可变包确认该声明；模型生成仍另行原生授权。每包最多 4 个条目，Host 最多挂载 4 个视图；不兼容可选目录不阻断文件本身。
 
 Host 将每个 View 放在独立 sandbox iframe，当前实现锚定资源容器右下、底部留 36px；width/height 有预算，不能覆盖整个工作台或读取兄弟 iframe DOM。脚本/样式离线内联，禁止外网、表单、导航和读取任意路径。内部原生通道和帧路由标记只存在 Host 外框，不向插件公开。
 

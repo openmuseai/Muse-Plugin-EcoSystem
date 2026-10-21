@@ -12,7 +12,7 @@
 
 ## 无源码依赖的开发
 
-在 OpenMuse 选择/新建 Workspace，打开该目录终端，使用已安装 DevKit 0.3.1：
+在 OpenMuse 选择/新建 Workspace，打开该目录终端，使用已安装 DevKit 0.3.2：
 
 ```sh
 muse search pptx
@@ -36,7 +36,7 @@ node plugins/document-explainer/build.mjs
 node --import tsx --test plugins/document-explainer/test/narrator.test.ts
 node plugins/document-explainer/test/pdf-view.mjs
 node plugins/developer-kit/scripts/pack.mjs plugins/document-explainer/dist
-python3 plugins/developer-kit/scripts/publish.py plugins/document-explainer/dist/document-explainer-0.1.0.mcpb
+python3 plugins/developer-kit/scripts/publish.py plugins/document-explainer/dist/document-explainer-0.1.1.mcpb
 ```
 
 打包目录只放运行文件；测试证据放仓库 dist 或 docs/evidence，不要把 token、报告、截图和临时工程混进 MCPB。构建依赖许可证见对应发行包 notices。

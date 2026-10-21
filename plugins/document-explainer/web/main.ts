@@ -2,7 +2,7 @@ import {App} from '@modelcontextprotocol/ext-apps'
 import {Narrator} from '../src/narrator.js'
 import {providerServices} from '../src/providers.js'
 export async function mountNarration(options:{onPageCompleted?:(mediaType:string,index:number,pageCount:number)=>Promise<void>}={}) {
-const app=new App({name:'Document Explainer',version:'0.1.0'})
+const app=new App({name:'Document Explainer',version:'0.1.1'})
 let narrator:Narrator|undefined,resourceUri=''
 const start=document.querySelector<HTMLButtonElement>('#start')!,stop=document.querySelector<HTMLButtonElement>('#stop')!,mode=document.querySelector<HTMLSelectElement>('#mode')!,status=document.querySelector('#status')!,page=document.querySelector('#page')!
 async function call(name:string,args:any={}){

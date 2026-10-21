@@ -1,0 +1,3 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/plugins/dsh-agent/test/dsh_generation_test.dart
+00:00 +0: real HTTP task returns only after a completed visible conversation turn; ownership and cancel are enforced
+00:00 +1: All tests passed!

@@ -1,1 +1,1 @@
-{"name":"@openmuse/devkit-cli","version":"0.2.0","private":true,"type":"module","bin":{"muse":"./src/index.ts"}}
+{"name":"@openmuse/devkit-cli","version":"0.3.2","private":true,"type":"module","bin":{"muse":"./src/index.ts"}}
