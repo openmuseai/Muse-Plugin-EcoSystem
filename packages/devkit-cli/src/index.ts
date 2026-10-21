@@ -38,7 +38,9 @@ export async function runCli(argv=process.argv.slice(2),environment=process.env)
  try {
   if(command==='search'){
    const query=args.filter(a=>!a.startsWith('--')).join(' ')
-   const result=await call('registry_search',{query});console.log(JSON.stringify(result,null,2));return 0
+   const result=await call('registry_search',{query}),available=(await call('capabilities_list')).providers
+   const capabilities=available.flatMap((provider:any)=>provider.contracts.filter((contract:any)=>JSON.stringify([provider.id,contract.id,contract.title,contract.mediaType]).toLowerCase().includes(query.toLowerCase())).map((contract:any)=>({provider:provider.id,version:provider.version,sha256:provider.sha256,contract:contract.id,title:contract.title,operations:contract.operations})))
+   console.log(JSON.stringify({...result,capabilities},null,2));return 0
   }
   if(command==='install'){
    if(!args[0])throw Error('缺少插件ID')
@@ -57,7 +59,7 @@ export async function runCli(argv=process.argv.slice(2),environment=process.env)
    const dependencies=[]
    for(const query of queries){
     const matches=available.flatMap((provider:any)=>provider.contracts.filter((contract:any)=>contract.operations?.readSnapshot&&JSON.stringify([provider.id,contract.id,contract.title,contract.mediaType]).toLowerCase().includes(query.toLowerCase())).map((contract:any)=>({provider,contract})))
-    if(matches.length!==1){console.log(JSON.stringify(await call('registry_search',{query}),null,2));throw Error(matches.length?'有多个候选，请使用完整合同 URI 精确选择。':'未安装匹配能力。先 muse install <插件ID>，再初始化。')}
+    if(matches.length!==1){console.log(JSON.stringify(matches.length?{candidates:matches.map(({provider,contract}:any)=>({provider:provider.id,version:provider.version,title:contract.title,contract:contract.id,select:['--capability',contract.id]}))}:await call('registry_search',{query}),null,2));throw Error(matches.length?'有多个候选，请使用上面列出的完整合同 URI 精确选择。':'未安装匹配能力。先 muse install <插件ID>，再初始化。')}
     const {provider,contract}=matches[0]
     if(dependencies.some(d=>d.provider.id===provider.id&&d.contract.id===contract.id))throw Error('重复的能力依赖：'+contract.id)
     dependencies.push({alias:'capability-'+(dependencies.length+1),provider:{id:provider.id,version:provider.version,sha256:provider.sha256},contract})

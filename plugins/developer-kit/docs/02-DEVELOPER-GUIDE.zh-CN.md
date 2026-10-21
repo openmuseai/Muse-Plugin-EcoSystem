@@ -13,7 +13,7 @@ muse search pptx
 muse search pdf
 ```
 
-搜索包含已安装和当前市场已审核插件。若 Provider 尚未安装：
+搜索包含已安装和当前市场已审核插件；已安装 Provider 同时列出公开合同 URI、操作和精确摘要，可直接用 URI 选择依赖。若 Provider 尚未安装：
 
 ```sh
 muse install io.openmuse/genoffice-pptx

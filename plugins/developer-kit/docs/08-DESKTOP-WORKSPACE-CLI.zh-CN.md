@@ -66,7 +66,7 @@ OPENMUSE_TEST_CLI_LAUNCHER=/tmp/openmuse-devkit-cli-build/bundle/bin/openmuse \
 | 发行包 | 生产状态 | 包摘要 |
 | --- | --- | --- |
 | DevKit 0.1.1 | active，旧页面流程 | `13ba93760ac9e42e0bc07fa84c016fe6373c287381b14aa732010eac24e41cb0` |
-| DevKit 0.2.0 | **本地候选，未发布** | `c94c04daca7c8985f6714275a9764d501330a8b840b0d5c29ecddc895b998f6c` |
+| DevKit 0.2.0 | **本地候选，未发布** | `d6abad26572628f67609c73cbd194b54c17b4d0da6b2967b88d03b8abe77cf6a` |
 | GenOffice PPTX 0.6.0 | active，只读快照公共合同 | `d250a7d1422107317570ebf67acb2c6a21485b8241ed4237fe6e10b5423b6672` |
 | PDF Reader 0.1.0 | active，真实 PDF.js 文本能力 | `24ac8b419edb0b7564f66bd75a6ab91310f3670bf03e54d366b7c2df762f3f7e` |
 
@@ -77,7 +77,7 @@ OPENMUSE_TEST_CLI_LAUNCHER=/tmp/openmuse-devkit-cli-build/bundle/bin/openmuse \
 用户当前保留 OpenMuse 窗口操作权，本次没有接管、重启或覆盖其运行应用。以下项仍待执行：
 
 1. 新 Host 完整 macOS 包构建、摘要记录及安装启动。
-2. 发布/审核匹配的 DevKit 0.2.0，从真实生产市场安装。
+2. 部署更新公开 Profile/Schema，发布/审核匹配的 DevKit 0.2.0，从真实生产市场安装。
 3. 选择用户已有 Workspace 或新建验收目录，新开终端；真实 `muse search/install/init`。
 4. 通过现有编辑器或 Agent 修改项目，`muse dev` 打开原生应用内候选 View。
 5. 用户分别授权 PPTX/PDF 文件和 Provider；实际点击运行并保存界面证据。
