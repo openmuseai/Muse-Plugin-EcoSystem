@@ -1,0 +1,34 @@
+{
+  "name": "openmuse-plugin-toolchain",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/plugin-sdk",
+    "packages/devkit-core",
+    "plugins/developer-kit",
+    "plugins/pdf-reader"
+  ],
+  "scripts": {
+    "build:devkit": "node plugins/developer-kit/scripts/build.mjs",
+    "build:pdf": "node plugins/pdf-reader/build.mjs",
+    "test:devkit": "node --import tsx --test packages/devkit-core/test/*.test.ts plugins/developer-kit/test/*.test.ts plugins/pdf-reader/test/*.test.ts",
+    "typecheck": "tsc --noEmit --module NodeNext --moduleResolution NodeNext --target ES2023 --lib ES2023,DOM --esModuleInterop --skipLibCheck packages/devkit-core/src/index.ts packages/plugin-sdk/src/index.ts plugins/developer-kit/src/index.ts plugins/developer-kit/web/main.ts plugins/pdf-reader/src/index.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "@modelcontextprotocol/client": "2.3.1",
+    "@modelcontextprotocol/ext-apps": "2.0.3",
+    "zod": "4.6.7",
+    "acorn": "8.16.0",
+    "jszip": "3.10.1",
+    "pdfjs-dist": "6.4.299",
+    "codemirror": "6.0.2",
+    "@codemirror/lang-javascript": "6.2.4"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "@types/node": "24.10.1"
+  }
+}
