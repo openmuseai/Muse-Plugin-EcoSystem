@@ -1,0 +1,11 @@
+✔ first and current page start, preserve one conversation and wait per page (0.7625ms)
+✔ pause cancels the current task; late completion cannot navigate; continue retries incomplete page (1.867458ms)
+✔ inactive documents and no text cannot generate invented explanations (0.14275ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 121.171167

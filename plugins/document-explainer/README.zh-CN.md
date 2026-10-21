@@ -1,14 +1,15 @@
 # Document Explainer
 
-独立的 Desktop PPTX/PDF 讲解插件。浮层、提示词和顺序控制均在本目录；Host、GenOffice 不包含讲解代码。
+独立的文档讲解插件。Desktop 支持 PPTX/PDF；本轮 Mobile 优先验证 PPTX。浮层、提示词和顺序控制均在本目录；Host、GenOffice 不包含讲解代码。
 
 - [产品和交互](docs/01-PRODUCT-AND-UI.zh-CN.md)
 - [开发方案](docs/02-IMPLEMENTATION.zh-CN.md)
+- [Mobile 产品、架构与验收状态](docs/04-MOBILE.zh-CN.md)
 - [公开资源扩展协议](../../contracts/resource-extensions-v1/README.zh-CN.md)
 
 ## 用户使用
 
-安装 GenOffice PPTX 0.7.0+、PDF Reader 0.2.0+ 和已启用的 DSH Agent。打开文件，右下角选择「从第一页」或「从当前页」，点「开始讲解」。DSH 显示逐页输入和模型输出；「暂停」取消当前页，继续时重试未完成页。内容由 DSH 中配置的模型生成；本插件不保存模型密钥。当前是文字讲解，不宣称语音播放或 Mobile 验收。
+安装 GenOffice PPTX（Mobile 需 0.7.1+）或 PDF Reader 0.2.0+，以及已启用的 DSH Agent。打开文件，右下角选择「从第一页」或「从当前页」，点「开始讲解」。DSH 显示逐页输入和模型输出；「暂停」取消当前页，继续时重试未完成页。内容由 DSH 中配置的模型生成；本插件不保存模型密钥。当前是文字讲解，不包含语音播放；Mobile 最终版本的完整真机验收状态见上方记录。
 
 ## 无源码依赖的开发
 
@@ -36,7 +37,7 @@ node plugins/document-explainer/build.mjs
 node --import tsx --test plugins/document-explainer/test/narrator.test.ts
 node plugins/document-explainer/test/pdf-view.mjs
 node plugins/developer-kit/scripts/pack.mjs plugins/document-explainer/dist
-python3 plugins/developer-kit/scripts/publish.py plugins/document-explainer/dist/document-explainer-0.1.1.mcpb
+python3 plugins/developer-kit/scripts/publish.py plugins/document-explainer/dist/document-explainer-0.2.1.mcpb
 ```
 
 打包目录只放运行文件；测试证据放仓库 dist 或 docs/evidence，不要把 token、报告、截图和临时工程混进 MCPB。构建依赖许可证见对应发行包 notices。
