@@ -46,5 +46,12 @@
     "pdfBrowserPages": 2,
     "tasteLintFailures": 0,
     "newUiTypecheck": "passed"
+  },
+  "supersededSubmission": {
+    "name": "io.openmuse/document-explainer",
+    "version": "0.1.0",
+    "submissionId": "99cee3bd-f26d-485f-9706-aae83b806ed9",
+    "state": "rejected",
+    "reason": "Superseded by 0.1.1 with declared resourceTools"
   }
 }
