@@ -27,10 +27,10 @@ export function validateCode(code:string){
 }
 const files=['main.js','devkit.project.json','devkit.lock.json','README.md']
 export class DevkitCore {
- constructor(readonly root:string,readonly assets:string,readonly namespace='io.openmuse'){}
+ constructor(readonly root:string,readonly assets:string,readonly namespace='io.openmuse',readonly workspace=false){}
  private async project(id:string){
   if(!slug.test(id))throw Error('INVALID_PROJECT_ID')
-  const root=await fs.realpath(this.root),dest=path.join(root,id)
+  const root=await fs.realpath(this.root),dest=this.workspace?root:path.join(root,id)
   if((await fs.lstat(dest)).isSymbolicLink()||await fs.realpath(dest)!==dest)throw Error('SYMLINK_DENIED')
   return dest
  }
@@ -39,6 +39,16 @@ export class DevkitCore {
   const file=path.join(await this.project(id),name)
   if((await fs.lstat(file)).isSymbolicLink())throw Error('SYMLINK_DENIED')
   return file
+ }
+ private async stateFile(id:string,name:string){
+  const file=path.join(await this.project(id),name)
+  const stat=await fs.lstat(file).catch((e:any)=>{if(e.code!=='ENOENT')throw e;return null})
+  if(stat&&!stat.isFile())throw Error('SYMLINK_OR_NON_FILE_DENIED')
+  return file
+ }
+ private async saveState(id:string,name:string,value:any){
+  const file=await this.stateFile(id,name),temporary=file+'.'+randomUUID()+'.tmp'
+  try{await fs.writeFile(temporary,JSON.stringify(value),{flag:'wx',mode:0o600});await fs.rename(temporary,file)}finally{await fs.rm(temporary,{force:true})}
  }
  async initialize(id:string,deps:Dependency[],host:any){
   if(!slug.test(id)||!sha.test(host?.implementation?.buildSha256))throw Error('EXACT_HOST_BUILD_REQUIRED')
@@ -51,10 +61,19 @@ export class DevkitCore {
    const lock={format:'openmuse-devkit-lock/1',host,dependencies:deps}
    const main=await fs.readFile(path.join(this.assets,'main.js'),'utf8')
    for(const [name,body] of Object.entries({'main.js':main,'devkit.project.json':JSON.stringify(project,null,2),'devkit.lock.json':JSON.stringify(lock,null,2),'README.md':'# '+id+'\nIndependent MCP Apps plugin. Edit main.js, validate, debug with real providers, then submit. No Host or provider source required.\n'}))await fs.writeFile(path.join(temporary,name),body,{flag:'wx',mode:0o600})
-   // mkdir reserves the final name atomically; concurrent initialization cannot overwrite it.
-   const destination=path.join(root,id);await fs.mkdir(destination,{mode:0o700})
-   try {for(const name of files)await fs.rename(path.join(temporary,name),path.join(destination,name))}
-   catch(error){await fs.rm(destination,{recursive:true,force:true});throw error}
+   if(this.workspace){
+    const created:string[]=[]
+    try {
+     for(const name of ['main.js','devkit.lock.json','README.md','devkit.project.json']){
+      await fs.link(path.join(temporary,name),path.join(root,name));created.push(name)
+     }
+    }catch(error){for(const name of created)await fs.unlink(path.join(root,name));throw error}
+   }else{
+    // Reserve a new child without overwriting an existing directory.
+    const destination=path.join(root,id);await fs.mkdir(destination,{mode:0o700})
+    try {for(const name of files)await fs.rename(path.join(temporary,name),path.join(destination,name))}
+    catch(error){await fs.rm(destination,{recursive:true,force:true});throw error}
+   }
    return {project:id,files}
   } finally {await fs.rm(temporary,{recursive:true,force:true})}
  }
@@ -79,6 +98,7 @@ export class DevkitCore {
  async pack(id:string){
   const code=(await this.read(id,'main.js')).text,validation=validateCode(code)
   const project=JSON.parse((await this.read(id,'devkit.project.json')).text),lock=JSON.parse((await this.read(id,'devkit.lock.json')).text)
+  if(project.format!=='openmuse-devkit-project/1'||project.id!==id||!/^\d+\.\d+\.\d+$/.test(project.version)||typeof project.name!=='string'||lock.format!=='openmuse-devkit-lock/1'||!sha.test(lock.host?.implementation?.buildSha256))throw Error('INVALID_PROJECT_METADATA')
   validateDependencies(lock.dependencies)
   const sdk=await fs.readFile(path.join(this.assets,'client.js'),'utf8')
   const escaped=(value:any)=>JSON.stringify(value).replaceAll('<','\\u003c')
@@ -92,7 +112,7 @@ document.getElementById('run').onclick=async()=>{try{if(bound.size!==deps.length
 </script></body></html>`
   const manifest={manifest_version:'0.3',name:id,display_name:project.name,version:project.version,description:'Independent multi-resource capability plugin created with OpenMuse DevKit.',author:{name:'Plugin developer'},license:'MIT',compatibility:{platforms:['darwin'],runtimes:{node:'>=22.13.0'}},server:{type:'node',entry_point:'server.mjs',mcp_config:{command:'node',args:['${__dirname}/server.mjs']}}}
   const zip=new JSZip(),date=new Date('2020-01-01T00:00:00Z')
-  const entries:any={'manifest.json':JSON.stringify(manifest),'index.html':html,'server.mjs':await fs.readFile(path.join(this.assets,'runtime.mjs')),'devkit/dependencies.json':JSON.stringify({profile:'openmuse-capabilities/1',dependencies:lock.dependencies.map(({alias,provider,contract}:Dependency)=>({alias,provider,contract}))}),'devkit/project.json':JSON.stringify(project),'LICENSE':'MIT; generated plugin code belongs to its developer. See bundled dependency licenses.\n','THIRD-PARTY-NOTICES.txt':await fs.readFile(path.join(this.assets,'THIRD-PARTY-NOTICES.txt'))}
+  const entries:any={'manifest.json':JSON.stringify(manifest),'index.html':html,'server.mjs':await fs.readFile(path.join(this.assets,'runtime.mjs')),'devkit/dependencies.json':JSON.stringify({profile:'openmuse-capabilities/1',dependencies:lock.dependencies.map(({alias,provider,contract}:Dependency)=>({alias,provider,contract}))}),'devkit/project.json':JSON.stringify(project),'source/main.js':code,'source/devkit.lock.json':JSON.stringify(lock),'LICENSE':'MIT; generated plugin code belongs to its developer. See bundled dependency licenses.\n','THIRD-PARTY-NOTICES.txt':await fs.readFile(path.join(this.assets,'THIRD-PARTY-NOTICES.txt'))}
   for(const [name,data]of Object.entries(entries))zip.file(name,data as any,{date,createFolders:false})
   const bytes=await zip.generateAsync({type:'nodebuffer',compression:'DEFLATE',compressionOptions:{level:6}})
   return {bytes,sha256:digest(bytes),project,codeSha256:validation.sha256,dependencies:lock.dependencies}
@@ -101,13 +121,13 @@ document.getElementById('run').onclick=async()=>{try{if(bound.size!==deps.length
   const current=await this.pack(id)
   if(report.status!=='passed'||report.codeSha256!==current.codeSha256||!Array.isArray(report.providers)||report.providers.length!==current.dependencies.length)throw Error('TEST_REPORT_STALE_OR_INCOMPLETE')
   for(const dep of current.dependencies){const p=report.providers.find((p:any)=>p.id===dep.provider.id&&p.version===dep.provider.version&&p.sha256===dep.provider.sha256);if(!p||p.pageCount<1||typeof p.source!=='string')throw Error('TEST_PROVIDER_MISMATCH')}
-  await fs.writeFile(path.join(await this.project(id),'test-report.json'),JSON.stringify({...report,bundleSha256:current.sha256,evidence:'development-client-report-not-server-attestation'}),{mode:0o600})
+  await this.saveState(id,'test-report.json',{...report,bundleSha256:current.sha256,evidence:'development-client-report-not-server-attestation'})
   return {accepted:true,sha256:current.sha256}
  }
  async submit(id:string,origin:string,token:string){
   const url=new URL(origin);if(url.protocol!=='https:'&&!(['127.0.0.1','localhost'].includes(url.hostname)&&url.protocol==='http:'))throw Error('HTTPS_REQUIRED')
   if(!token)throw Error('DEVELOPER_CREDENTIAL_REQUIRED')
-  const packed=await this.pack(id),report=JSON.parse(await fs.readFile(path.join(await this.project(id),'test-report.json'),'utf8'))
+  const packed=await this.pack(id),report=JSON.parse(await fs.readFile(await this.stateFile(id,'test-report.json'),'utf8'))
   if(report.bundleSha256!==packed.sha256)throw Error('TEST_REPORT_STALE')
   const request=async(route:string,method:string,body:any,type:string)=>{
    const response=await fetch(new URL(route,url),{method,body,redirect:'error',signal:AbortSignal.timeout(90000),headers:{Authorization:'Bearer '+token,'Content-Type':type}})
@@ -119,7 +139,7 @@ document.getElementById('run').onclick=async()=>{try{if(bound.size!==deps.length
   const result=await request('/v0.1/publish','POST',JSON.stringify(server),'application/json')
   if(result._meta?.status!=='pending'||typeof result._meta?.submissionId!=='string')throw Error('INVALID_MARKET_RECEIPT')
   const receipt={submissionId:result._meta.submissionId,status:'pending',sha256:packed.sha256,name:server.name,version:server.version}
-  await fs.writeFile(path.join(await this.project(id),'submission.json'),JSON.stringify(receipt),{mode:0o600})
+  await this.saveState(id,'submission.json',receipt)
   return receipt
  }
 }

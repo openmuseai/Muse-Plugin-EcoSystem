@@ -31,3 +31,22 @@ test('rejects conflicting provider versions and duplicate aliases',()=>{
  assert.throws(()=>validateDependencies([deps[0],{...deps[1],alias:'slides'}]),/INVALID_DEPENDENCY/)
  assert.throws(()=>validateDependencies([deps[0],{...deps[1],provider:{...deps[0].provider,sha256:'d'.repeat(64)}}]),/VERSION_CONFLICT/)
 })
+test('Workspace initialization preserves existing files and rolls back conflicts; reports reject symlinks',async()=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'devkit workspace '))
+ try{
+  const core=new DevkitCore(root,path.resolve('plugins/developer-kit/dist/template'),'io.openmuse',true)
+  await fs.writeFile(path.join(root,'notes.txt'),'existing notes')
+  await fs.writeFile(path.join(root,'README.md'),'existing readme')
+  await assert.rejects(core.initialize('workspace-plugin',deps,host),/EEXIST/)
+  assert.equal(await fs.readFile(path.join(root,'README.md'),'utf8'),'existing readme')
+  await assert.rejects(fs.stat(path.join(root,'main.js')),/ENOENT/)
+  await fs.unlink(path.join(root,'README.md'))
+  await core.initialize('workspace-plugin',deps,host)
+  assert.equal(await fs.readFile(path.join(root,'notes.txt'),'utf8'),'existing notes')
+  const packed=await core.pack('workspace-plugin'),outside=path.join(root,'outside.txt')
+  await fs.writeFile(outside,'do not overwrite')
+  await fs.symlink(outside,path.join(root,'test-report.json'))
+  await assert.rejects(core.record('workspace-plugin',{status:'passed',codeSha256:packed.codeSha256,providers:deps.map(d=>({...d.provider,pageCount:2,source:'fixture'}))}),/SYMLINK/)
+  assert.equal(await fs.readFile(outside,'utf8'),'do not overwrite')
+ }finally{await fs.rm(root,{recursive:true,force:true})}
+})
