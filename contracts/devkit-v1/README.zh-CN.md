@@ -32,3 +32,21 @@ MCP Apps 原始绑定服务端的工具和资源也可调用；只转发协商�
 当前 Node 进程隔离不等于 OS 级沙箱。独立 Dev Host 应用身份/数据目录、通用 OS 权限沙箱、完整传递依赖解析、OIDC 开发者身份与审核自动认证仍需后续任务，不能把此 Desktop 内测 Profile 视作整个 M0–M4 已完成。
 
 规范依据：[MCP Apps](https://apps.extensions.modelcontextprotocol.io/api/documents/overview.html)、[MCPB manifest 0.3](https://github.com/modelcontextprotocol/mcpb/blob/main/MANIFEST.md)。
+
+## Workspace / CLI Profile（Desktop 0.2.0）
+
+CLI 是 DevKit 包的一部分，使用根 `package.json` 的 npm `bin` 约定声明 `muse -> cli.mjs`。Host 可对任意审核包提供相同命令启动，校验回执文件摘要、入口和元数据，不识别 DevKit 子命令。该约定不是 MCPB 内建字段。
+
+每个新 Workspace 终端获得短期 `MCP_HOST_URL` / `MCP_HOST_TOKEN`（4 小时、当前账号、固定根目录）。它们是本公开生态 Profile 的环境名，不是 MCP 保留字段。CLI 使用官方客户端，以标准 Bearer 和 MCP Streamable HTTP 调用 Host；随机 loopback 端口不对外监听，拒绝浏览器 Origin。终端关闭撤销，候选 View 独立授权，不继承令牌。CLI 不调用 Client 的私有命令代理。
+
+| 普通工具 | 输入/输出 | 授权与范围 |
+| --- | --- | --- |
+| `workspace_describe` | 无输入；`roots: [{uri, name}]` | 终端只看到其授权根目录；View 看到用户当前 Workspace |
+| `registry_search` | `query`；`onlineAvailable`、`plugins` | 搜索本机安装及当前服务商已审核目录；离线仍返回本地，listed 为 null |
+| `registry_install` | `name`；安装回执 | 仅当前服务商已上架版本；原生确认后按真实摘要安装 |
+
+CLI 通道还提供 `host_describe`、`capabilities_list`、`development_open_bundle` 和 `development_read_resource`；它不提供资源选取/调用代理，资料授权留在候选 View。后者通过 Apps 和自己的 Gateway 选择资料，避免终端/DevKit 继承消费者文档授权。
+
+`muse init` 由 DevKit 在当前 cwd 事务生成文件，校验 cwd 的真实路径位于公开 roots 下。Host 不提供生成模板、编译项目、PPTX/PDF 字段解析或提交审核工具。
+
+实际开发格式为 [project.schema.json](project.schema.json) 与 [lock.schema.json](lock.schema.json)，仅表达本期直接依赖快照。更复杂的传递依赖、Agent/Voice、设备解析格式仍是后续设计。SDK/CLI 当前捆绑发行，不表示已在 npm 公开发布。
