@@ -14,11 +14,14 @@ for(const item of [
   await client.connect(transport,{mode:'auto'})
   const tools=(await client.listTools()).tools,tool=tools.find(t=>t.name===item.tool)!
   assert.ok(tool.outputSchema);assert.equal((tool.inputSchema.properties as any).content.contentEncoding,'base64')
-  const result=await client.callTool({name:item.tool,arguments:{content:(await readFile(item.file)).toString('base64'),name:'Fixture'}})
+  const content=(await readFile(item.file)).toString('base64')
+  const result=await client.callTool({name:item.tool,arguments:{content,name:'Fixture'}})
   assert.notEqual(result.isError,true);const value=result.structuredContent as any
   assert.equal(value.pageCount,item.pages);assert.equal(value.source,item.source);assert.equal(value.status,'text');assert.ok(value.pages.some((p:any)=>p.text.length>10))
   const resources=(await client.listResources()).resources;assert.ok(resources.some(r=>r.mimeType==='application/vnd.openmuse.capabilities+json'))
   const invalid=await client.callTool({name:item.tool,arguments:{content:Buffer.from('not a document').toString('base64')}})
   assert.equal(invalid.isError,true)
+  const noncanonical=await client.callTool({name:item.tool,arguments:{content:content+'\n'}})
+  assert.equal(noncanonical.isError,true,'provider must reject malformed base64 without a recursive public Schema regex')
  }finally{await transport.close()}
 })
