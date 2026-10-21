@@ -1,4 +1,4 @@
-# PDF Capability Provider 0.1.0
+# PDF Capability Provider 0.1.1
 
 独立标准 MCPB 插件，使用 Mozilla PDF.js 6.4.299（Apache-2.0）读取已授权 PDF 的文字层。首版仅验证 macOS Apple Silicon / Node ≥22.13；内置对应平台的 `@napi-rs/canvas` 原生依赖。它是供其他插件组合使用的能力 Provider，首版没有独立可视化阅读器。
 
@@ -13,7 +13,9 @@ npm ci
 npm run build:pdf
 npm run test:devkit
 node plugins/developer-kit/scripts/pack.mjs plugins/pdf-reader/dist
-python3 plugins/developer-kit/scripts/publish.py plugins/pdf-reader/dist/pdf-reader-0.1.0.mcpb
+python3 plugins/developer-kit/scripts/publish.py plugins/pdf-reader/dist/pdf-reader-0.1.1.mcpb
 ```
 
 最后一步只创建待审核提交。市场安装后，DevKit 通过公开合同发现此 Provider，Host 仅授权资源并路由普通 MCP 工具。测试样本 `fixtures/quarterly-brief.pdf` 为本仓库生成的两页文字 PDF。
+
+0.1.1 将合同版本更新为 1.0.1：公开二进制 Schema 使用长度上限和标准编码/MIME 注解，避免重复分组正则在大文件上耗尽客户端栈；Provider 通过 canonical base64 回编码比较拒绝非法输入，文件/页数/输出预算仍然生效。Host 无 PDF 特判。

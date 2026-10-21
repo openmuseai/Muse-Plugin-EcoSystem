@@ -2,7 +2,7 @@
   "profile": "openmuse-capabilities/1",
   "contract": {
     "id": "https://plugins.openmuseai.com/contracts/pdfjs/pdf-read/v1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "title": "PDF.js · file snapshots",
     "mediaType": "application/pdf",
     "operations": {
@@ -23,9 +23,7 @@
           "content": {
             "type": "string",
             "maxLength": 47185920,
-            "format": "base64",
             "contentEncoding": "base64",
-            "pattern": "^$|^(?:[0-9a-zA-Z+/]{4})*(?:(?:[0-9a-zA-Z+/]{2}==)|(?:[0-9a-zA-Z+/]{3}=))?$",
             "contentMediaType": "application/pdf"
           },
           "name": {
