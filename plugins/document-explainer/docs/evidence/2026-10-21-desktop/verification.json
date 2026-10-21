@@ -5,8 +5,8 @@
   "platform": "macos-arm64",
   "approvedProviders": {
     "io.openmuse/developer-kit": {
-      "version": "0.3.2",
-      "sha256": "fbf8f950b25b949f2d9bc298544f927effec1cdee737d57eb005820ea742771f",
+      "version": "0.3.3",
+      "sha256": "02b2dc6010397b84862f0e52a29b9507eb2bf0b7605e94442b5bc0070302d7df",
       "publiclyListed": true
     },
     "io.openmuse/genoffice-pptx": {
@@ -40,12 +40,13 @@
   "automatedChecks": {
     "hostFocusedTests": 25,
     "hostExistingSkips": 1,
-    "ecosystemFocusedTests": 10,
+    "ecosystemFocusedTests": 11,
     "dshHttpSseTests": 1,
     "pptxRenderedSlides": 23,
     "pdfBrowserPages": 2,
     "tasteLintFailures": 0,
-    "newUiTypecheck": "passed"
+    "newUiTypecheck": "passed",
+    "staleCandidateReportRejectedBeforeRead": true
   },
   "supersededSubmission": {
     "name": "io.openmuse/document-explainer",

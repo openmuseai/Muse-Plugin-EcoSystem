@@ -19,7 +19,7 @@
 
 | 产物 | 状态 |
 | --- | --- |
-| DevKit 0.3.2 | 已审核并在生产目录可见；包含 document-explainer 模板、交互超时修正和资源工具声明；尚待最终原生安装复验 |
+| DevKit 0.3.3 | 已审核并在生产目录可见；包含 document-explainer 模板、交互超时修正和资源工具声明；尚待最终原生安装复验 |
 | GenOffice PPTX 0.7.0 | 已审核，生产安装及原生讲解使用了该版 |
 | PDF Reader 0.2.0 | 已审核、生产安装；独立浏览器测试通过 |
 | Document Explainer 0.1.1 | 已上传，待审核 f46f0144-76db-46c7-b291-4c7dbb00bca2；公开包下载 404，不宣称上架 |
@@ -30,14 +30,14 @@
 ## 修复的验收中问题
 
 1. 隐藏终端后关闭最后文档会移除整个编辑器窗格，销毁终端和开发授权。现在已打开的终端保留其 Dock；回归测试确认隐藏前后的 State 为同一个对象。
-2. 原授权窗口等待计入 120 秒 RPC 超时。DevKit 0.3.2 给安装/开发候选十分钟交互时间；新版 Host 对同一 SHA 复用原回执，替换变更后的候选时清理旧资源扩展，防止重试和四次上限阻断开发。
+2. 原授权窗口等待计入 120 秒 RPC 超时。DevKit 0.3.3 给安装/开发候选十分钟交互时间；新版 Host 对同一 SHA 复用原回执，替换变更后的候选时清理旧资源扩展，防止重试和四次上限阻断开发。
 3. 等待下一页时计数提前加一。讲解插件分开记录当前显示页和下一待讲页。
 4. 讲解不应获得编辑/保存权。不可变包在公开 resourceTools 中只声明读取与导航；Host 不解释工具业务字段，拒绝未声明的写入工具。Agent 本身仍遵循其已有权限设置，不能把资源路由允许列表称作 Agent 的无工具沙箱。
 
 ## 解锁后的继续步骤
 
 1. 在最新完整 macOS 包中登录原账号，点标题栏 Agent 恢复入口，确认 DSH / 文件 / 终端保留。
-2. 从生产市场更新 DevKit 0.3.2。在 `plugins/explainer/live-narration-acceptance` Workspace 新终端运行 `muse check`、`muse dev`。旧实验候选没有 resourceTools，必须用新 DevKit 重新打包。
+2. 从生产市场更新 DevKit 0.3.3。在 `plugins/explainer/live-narration-acceptance` Workspace 新终端运行 `muse check`、`muse dev`。旧实验候选没有 resourceTools，必须用新 DevKit 重新打包。
 3. PPTX 从当前第 23 页完成一次输出；开始/暂停/继续；在后续页间等待时核对计数；重复相同 muse dev 应复用 runRef，修改源码后只替换浮层。
 4. 打开同一工程 `quarterly-brief.pdf`，使用 PDF Reader；从第一页开始，核对两页 DSH 输入/输出及导航。切换/关闭资源后不继续发送任务。
 5. `muse report` 必须在同一候选内收集到 PPTX 与 PDF 的真实完成结果，才能 `muse pack` / `muse submit`。提交只进入待审核，不把本地旧 partial 报告修改成 passed。

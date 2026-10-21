@@ -1,6 +1,6 @@
-# DevKit 0.3.2：在真实文档上开发讲解扩展
+# DevKit 0.3.3：在真实文档上开发讲解扩展
 
-先选择现有或新建 Workspace，再打开该 Workspace 终端。安装 GenOffice PPTX 0.7.0、PDF Reader 0.2.0 和 DevKit 0.3.2；DSH Agent 由用户配置模型。开发者不需要构建 Host 或文档引擎。
+先选择现有或新建 Workspace，再打开该 Workspace 终端。安装 GenOffice PPTX 0.7.0、PDF Reader 0.2.0 和 DevKit 0.3.3；DSH Agent 由用户配置模型。开发者不需要构建 Host 或文档引擎。
 
 ```sh
 muse search pptx
@@ -37,3 +37,7 @@ submit 只产生 pending。开发者没有 approve 接口或审核凭据；审�
 ## 0.3.2 资源调用范围
 
 浮层目录必须通过 resourceTools 声明所需的实时工具，讲解模板只声明读页状态、读页文字和导航；不声明编辑/保存。Host 按原样工具名执行允许列表，不能根据文件类型加入业务规则。此声明属于公开 Resource Extensions v1，不是 MCP 基础协议的保留字段。新版 Host 对未声明工具的旧实验模板返回 RESOURCE_TOOL_NOT_GRANTED，请升级 DevKit 并重新打包候选。
+
+## 0.3.3 报告与候选绑定
+
+`muse report` 在读取报告前，对照当前打包结果和 `.devkit/run.json` 中 Host 返回的 SHA；源码、模板或 SDK 变更后若不同，返回 TEST_RUN_STALE，要求先重新 muse dev。不得把旧候选的通过记录重新标记为新包通过。发行版 CLI 的 HTTP 集成测试验证了拒绝发生在读取旧报告之前。

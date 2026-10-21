@@ -36,4 +36,4 @@ OpenMuse Plugin DevKit 是可安装、可停用、可升级和可卸载的开发
 
 ## Desktop 实时资源扩展
 
-DevKit 0.3.2 新增 `--template document-explainer`，可在 Workspace 中初始化 PPTX/PDF 讲解扩展，`muse dev` 只挂载消费者浮层。详见 [实时资源开发指南](docs/09-LIVE-RESOURCE-EXTENSIONS.zh-CN.md)。历史 0.2.0 只读快照验收和新阶段的实时讲解验收分开记录。
+DevKit 0.3.3 新增 `--template document-explainer`，可在 Workspace 中初始化 PPTX/PDF 讲解扩展，`muse dev` 只挂载消费者浮层。详见 [实时资源开发指南](docs/09-LIVE-RESOURCE-EXTENSIONS.zh-CN.md)。历史 0.2.0 只读快照验收和新阶段的实时讲解验收分开记录。

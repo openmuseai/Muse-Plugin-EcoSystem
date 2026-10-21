@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { DevkitCore } from '../../../packages/devkit-core/src/index.js'
 
 export function buildServer(){
- const server=new McpServer({name:'io.openmuse/developer-kit',version:'0.3.2'},{capabilities:{tools:{},resources:{}}})
+ const server=new McpServer({name:'io.openmuse/developer-kit',version:'0.3.3'},{capabilities:{tools:{},resources:{}}})
  let core:DevkitCore|undefined
  const get=()=>{if(!process.env.PROJECT_DIRECTORY)throw Error('PROJECT_DIRECTORY_CONFIGURATION_REQUIRED');return core??=new DevkitCore(process.env.PROJECT_DIRECTORY,fileURLToPath(new URL('./template/',import.meta.url)),process.env.PUBLISHER_NAMESPACE||'io.openmuse')}
  const output=z.object({}).catchall(z.unknown())
