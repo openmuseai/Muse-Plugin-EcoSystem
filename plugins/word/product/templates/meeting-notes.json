@@ -1,0 +1,16 @@
+{
+  "profile": "openmuse-word-template/1",
+  "id": "meeting-notes",
+  "name": "会议纪要",
+  "locale": "zh-CN",
+  "requires": ["word.document.create", "word.template.apply"],
+  "blocks": [
+    {"kind": "paragraph", "style": "title", "text": "会议纪要"},
+    {"kind": "paragraph", "style": "body", "text": "会议时间："},
+    {"kind": "paragraph", "style": "body", "text": "参会人员："},
+    {"kind": "paragraph", "style": "heading1", "text": "议题"},
+    {"kind": "paragraph", "style": "body", "text": ""},
+    {"kind": "paragraph", "style": "heading1", "text": "决议与待办"},
+    {"kind": "paragraph", "style": "body", "text": ""}
+  ]
+}

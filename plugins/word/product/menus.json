@@ -1,0 +1,6353 @@
+{
+  "profile": "openmuse-word-menus/1",
+  "reference": "GenOffice Docs Ribbon.tsx and ribbon-*-tab.tsx dropdowns",
+  "menus": {
+    "file": [
+      {
+        "id": "file.open",
+        "label": "打开",
+        "command": "word.file.open",
+        "shortcut": "Ctrl+O"
+      },
+      {
+        "id": "file.save",
+        "label": "保存",
+        "command": "word.file.save",
+        "shortcut": "Ctrl+S"
+      },
+      {
+        "id": "file.saveAs",
+        "label": "另存为",
+        "shortcut": "Ctrl+Shift+S"
+      },
+      {
+        "id": "file.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "file.convert.1",
+        "label": "转换为 PDF"
+      },
+      {
+        "id": "file.convert.2",
+        "label": "转换为 HTML"
+      },
+      {
+        "id": "file.convert.3",
+        "label": "转换为 Markdown"
+      },
+      {
+        "id": "file.convert.4",
+        "label": "转换为图像"
+      }
+    ],
+    "home.convert": [
+      {
+        "id": "home.convert.1",
+        "label": "转换为 PDF"
+      },
+      {
+        "id": "home.convert.2",
+        "label": "转换为 HTML"
+      },
+      {
+        "id": "home.convert.3",
+        "label": "转换为 Markdown"
+      },
+      {
+        "id": "home.convert.4",
+        "label": "转换为图像"
+      }
+    ],
+    "home.paste": [
+      {
+        "id": "paste.source",
+        "label": "保留源格式"
+      },
+      {
+        "id": "paste.merge",
+        "label": "合并格式"
+      },
+      {
+        "id": "paste.text",
+        "label": "只保留文本"
+      },
+      {
+        "id": "paste.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "paste.special",
+        "label": "选择性粘贴…"
+      },
+      {
+        "id": "paste.defaults",
+        "label": "设置默认粘贴方式…"
+      }
+    ],
+    "home.fontFamily": [
+      {
+        "id": "font.recent",
+        "label": "最近使用的字体",
+        "kind": "heading"
+      },
+      {
+        "id": "font.recent.1",
+        "label": "Arial"
+      },
+      {
+        "id": "font.recent.2",
+        "label": "Calibri"
+      },
+      {
+        "id": "font.recent.3",
+        "label": "宋体"
+      },
+      {
+        "id": "font.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "font.system",
+        "label": "系统字体",
+        "kind": "heading"
+      },
+      {
+        "id": "font.system.1",
+        "label": "Arial"
+      },
+      {
+        "id": "font.system.2",
+        "label": "Times New Roman"
+      },
+      {
+        "id": "font.system.3",
+        "label": "宋体"
+      },
+      {
+        "id": "font.system.4",
+        "label": "黑体"
+      },
+      {
+        "id": "font.system.5",
+        "label": "微软雅黑"
+      }
+    ],
+    "home.fontSize": [
+      {
+        "id": "font.size.1",
+        "label": "8"
+      },
+      {
+        "id": "font.size.2",
+        "label": "9"
+      },
+      {
+        "id": "font.size.3",
+        "label": "10"
+      },
+      {
+        "id": "font.size.4",
+        "label": "10.5"
+      },
+      {
+        "id": "font.size.5",
+        "label": "11"
+      },
+      {
+        "id": "font.size.6",
+        "label": "12"
+      },
+      {
+        "id": "font.size.7",
+        "label": "14"
+      },
+      {
+        "id": "font.size.8",
+        "label": "16"
+      },
+      {
+        "id": "font.size.9",
+        "label": "18"
+      },
+      {
+        "id": "font.size.10",
+        "label": "20"
+      },
+      {
+        "id": "font.size.11",
+        "label": "22"
+      },
+      {
+        "id": "font.size.12",
+        "label": "24"
+      },
+      {
+        "id": "font.size.13",
+        "label": "26"
+      },
+      {
+        "id": "font.size.14",
+        "label": "28"
+      },
+      {
+        "id": "font.size.15",
+        "label": "36"
+      },
+      {
+        "id": "font.size.16",
+        "label": "48"
+      },
+      {
+        "id": "font.size.17",
+        "label": "72"
+      }
+    ],
+    "home.case": [
+      {
+        "id": "font.case.1",
+        "label": "句首字母大写"
+      },
+      {
+        "id": "font.case.2",
+        "label": "小写"
+      },
+      {
+        "id": "font.case.3",
+        "label": "大写"
+      },
+      {
+        "id": "font.case.4",
+        "label": "每个单词首字母大写"
+      },
+      {
+        "id": "font.case.5",
+        "label": "切换大小写"
+      },
+      {
+        "id": "font.case.6",
+        "label": "半角"
+      },
+      {
+        "id": "font.case.7",
+        "label": "全角"
+      }
+    ],
+    "home.highlight": [
+      {
+        "id": "home.highlight.none",
+        "label": "无颜色"
+      },
+      {
+        "id": "home.highlight.colors",
+        "label": "突出显示颜色",
+        "kind": "grid",
+        "columns": 5,
+        "children": [
+          {
+            "id": "home.highlight.colors.1",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "home.highlight.colors.2",
+            "label": "绿色",
+            "swatch": "#00FF00"
+          },
+          {
+            "id": "home.highlight.colors.3",
+            "label": "青色",
+            "swatch": "#00FFFF"
+          },
+          {
+            "id": "home.highlight.colors.4",
+            "label": "品红色",
+            "swatch": "#FF00FF"
+          },
+          {
+            "id": "home.highlight.colors.5",
+            "label": "蓝色",
+            "swatch": "#0000FF"
+          },
+          {
+            "id": "home.highlight.colors.6",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "home.highlight.colors.7",
+            "label": "深蓝色",
+            "swatch": "#00008B"
+          },
+          {
+            "id": "home.highlight.colors.8",
+            "label": "深青色",
+            "swatch": "#008B8B"
+          },
+          {
+            "id": "home.highlight.colors.9",
+            "label": "深绿色",
+            "swatch": "#006400"
+          },
+          {
+            "id": "home.highlight.colors.10",
+            "label": "深品红色",
+            "swatch": "#8B008B"
+          },
+          {
+            "id": "home.highlight.colors.11",
+            "label": "深红色",
+            "swatch": "#8B0000"
+          },
+          {
+            "id": "home.highlight.colors.12",
+            "label": "深黄色",
+            "swatch": "#808000"
+          },
+          {
+            "id": "home.highlight.colors.13",
+            "label": "深灰色",
+            "swatch": "#808080"
+          },
+          {
+            "id": "home.highlight.colors.14",
+            "label": "浅灰色",
+            "swatch": "#C0C0C0"
+          },
+          {
+            "id": "home.highlight.colors.15",
+            "label": "黑色",
+            "swatch": "#000000"
+          }
+        ],
+        "presentation": "highlightPalette"
+      },
+      {
+        "id": "home.highlight.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "home.fontColor": [
+      {
+        "id": "home.fontColor.none",
+        "label": "自动"
+      },
+      {
+        "id": "home.fontColor.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "home.fontColor.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "home.fontColor.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "home.fontColor.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "home.fontColor.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "home.fontColor.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "home.fontColor.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "home.fontColor.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "home.fontColor.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "home.fontColor.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "home.fontColor.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "home.fontColor.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "home.fontColor.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "home.fontColor.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "home.fontColor.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "home.fontColor.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "home.fontColor.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "home.fontColor.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "home.fontColor.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "home.fontColor.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "home.fontColor.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "home.fontColor.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "home.fontColor.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "home.fontColor.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "home.fontColor.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "home.fontColor.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "home.fontColor.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "home.fontColor.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "home.bullets": [
+      {
+        "id": "bullets.gallery",
+        "label": "项目符号库",
+        "kind": "grid",
+        "presentation": "bulletGallery",
+        "columns": 3,
+        "children": [
+          {
+            "id": "bullets.none",
+            "label": "无"
+          },
+          {
+            "id": "bullets.glyph.1",
+            "label": "•"
+          },
+          {
+            "id": "bullets.glyph.2",
+            "label": "○"
+          },
+          {
+            "id": "bullets.glyph.3",
+            "label": "■"
+          },
+          {
+            "id": "bullets.glyph.4",
+            "label": "◆"
+          },
+          {
+            "id": "bullets.glyph.5",
+            "label": "➢"
+          },
+          {
+            "id": "bullets.glyph.6",
+            "label": "✦"
+          }
+        ]
+      },
+      {
+        "id": "bullets.levels",
+        "label": "更改列表级别",
+        "kind": "grid",
+        "presentation": "listLevels",
+        "columns": 9,
+        "children": [
+          {
+            "id": "bullets.level.1",
+            "label": "1"
+          },
+          {
+            "id": "bullets.level.2",
+            "label": "2"
+          },
+          {
+            "id": "bullets.level.3",
+            "label": "3"
+          },
+          {
+            "id": "bullets.level.4",
+            "label": "4"
+          },
+          {
+            "id": "bullets.level.5",
+            "label": "5"
+          },
+          {
+            "id": "bullets.level.6",
+            "label": "6"
+          },
+          {
+            "id": "bullets.level.7",
+            "label": "7"
+          },
+          {
+            "id": "bullets.level.8",
+            "label": "8"
+          },
+          {
+            "id": "bullets.level.9",
+            "label": "9"
+          }
+        ]
+      },
+      {
+        "id": "bullets.define",
+        "label": "定义新项目符号…"
+      }
+    ],
+    "home.numbering": [
+      {
+        "id": "number.gallery",
+        "label": "编号库",
+        "kind": "grid",
+        "presentation": "numberGallery",
+        "columns": 3,
+        "children": [
+          {
+            "id": "number.none",
+            "label": "无"
+          },
+          {
+            "id": "number.style.1",
+            "label": "1. 2. 3."
+          },
+          {
+            "id": "number.style.2",
+            "label": "1) 2) 3)"
+          },
+          {
+            "id": "number.style.3",
+            "label": "I. II. III."
+          },
+          {
+            "id": "number.style.4",
+            "label": "A. B. C."
+          },
+          {
+            "id": "number.style.5",
+            "label": "a) b) c)"
+          },
+          {
+            "id": "number.style.6",
+            "label": "i. ii. iii."
+          },
+          {
+            "id": "number.style.7",
+            "label": "一、 二、 三、"
+          },
+          {
+            "id": "number.style.8",
+            "label": "① ② ③"
+          }
+        ]
+      },
+      {
+        "id": "number.levels",
+        "label": "更改列表级别",
+        "kind": "grid",
+        "presentation": "listLevels",
+        "columns": 9,
+        "children": [
+          {
+            "id": "number.level.1",
+            "label": "1"
+          },
+          {
+            "id": "number.level.2",
+            "label": "2"
+          },
+          {
+            "id": "number.level.3",
+            "label": "3"
+          },
+          {
+            "id": "number.level.4",
+            "label": "4"
+          },
+          {
+            "id": "number.level.5",
+            "label": "5"
+          },
+          {
+            "id": "number.level.6",
+            "label": "6"
+          },
+          {
+            "id": "number.level.7",
+            "label": "7"
+          },
+          {
+            "id": "number.level.8",
+            "label": "8"
+          },
+          {
+            "id": "number.level.9",
+            "label": "9"
+          }
+        ]
+      },
+      {
+        "id": "number.define",
+        "label": "定义新编号格式…"
+      },
+      {
+        "id": "number.value",
+        "label": "设置编号值…"
+      }
+    ],
+    "home.multilevel": [
+      {
+        "id": "multi.gallery",
+        "label": "列表库",
+        "kind": "grid",
+        "presentation": "multilevelGallery",
+        "columns": 3,
+        "children": [
+          {
+            "id": "multi.style.1",
+            "label": "1) → a) → i)"
+          },
+          {
+            "id": "multi.style.2",
+            "label": "1. → 1.1. → 1.1.1."
+          },
+          {
+            "id": "multi.style.3",
+            "label": "• → ○ → ■"
+          },
+          {
+            "id": "multi.style.4",
+            "label": "Article I. → Section 1.01 → (a)"
+          },
+          {
+            "id": "multi.style.5",
+            "label": "1 → 1.1 → 1.1.1"
+          },
+          {
+            "id": "multi.style.6",
+            "label": "I. → A. → 1."
+          },
+          {
+            "id": "multi.style.7",
+            "label": "Chapter 1 → Heading 2 → Heading 3"
+          },
+          {
+            "id": "multi.style.8",
+            "label": "一、 → （一） → 1."
+          }
+        ]
+      },
+      {
+        "id": "multi.levels",
+        "label": "更改列表级别",
+        "kind": "grid",
+        "presentation": "listLevels",
+        "columns": 9,
+        "children": [
+          {
+            "id": "multi.level.1",
+            "label": "1"
+          },
+          {
+            "id": "multi.level.2",
+            "label": "2"
+          },
+          {
+            "id": "multi.level.3",
+            "label": "3"
+          },
+          {
+            "id": "multi.level.4",
+            "label": "4"
+          },
+          {
+            "id": "multi.level.5",
+            "label": "5"
+          },
+          {
+            "id": "multi.level.6",
+            "label": "6"
+          },
+          {
+            "id": "multi.level.7",
+            "label": "7"
+          },
+          {
+            "id": "multi.level.8",
+            "label": "8"
+          },
+          {
+            "id": "multi.level.9",
+            "label": "9"
+          }
+        ]
+      },
+      {
+        "id": "multi.define",
+        "label": "定义新的多级列表…"
+      }
+    ],
+    "home.spacing": [
+      {
+        "id": "spacing.multiplier.1",
+        "label": "1.0"
+      },
+      {
+        "id": "spacing.multiplier.2",
+        "label": "1.15"
+      },
+      {
+        "id": "spacing.multiplier.3",
+        "label": "1.5"
+      },
+      {
+        "id": "spacing.multiplier.4",
+        "label": "2.0"
+      },
+      {
+        "id": "spacing.multiplier.5",
+        "label": "2.5"
+      },
+      {
+        "id": "spacing.multiplier.6",
+        "label": "3.0"
+      },
+      {
+        "id": "spacing.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "spacing.before",
+        "label": "添加段前间距"
+      },
+      {
+        "id": "spacing.after",
+        "label": "添加段后间距"
+      },
+      {
+        "id": "spacing.options",
+        "label": "行距选项…"
+      }
+    ],
+    "home.shading": [
+      {
+        "id": "home.shading.none",
+        "label": "无颜色"
+      },
+      {
+        "id": "home.shading.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "home.shading.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "home.shading.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "home.shading.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "home.shading.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "home.shading.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "home.shading.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "home.shading.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "home.shading.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "home.shading.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "home.shading.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "home.shading.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "home.shading.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "home.shading.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "home.shading.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.shading.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.shading.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "home.shading.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "home.shading.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "home.shading.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "home.shading.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "home.shading.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "home.shading.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "home.shading.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "home.shading.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "home.shading.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "home.shading.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "home.shading.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "home.shading.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "home.shading.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "home.shading.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "home.shading.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "home.shading.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "home.shading.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "home.shading.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "home.shading.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "home.shading.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "home.shading.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "home.shading.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "home.shading.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "home.shading.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "home.shading.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "home.shading.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "home.shading.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "home.shading.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "home.shading.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "home.shading.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "home.shading.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "home.shading.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "home.shading.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "home.shading.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "home.shading.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "home.shading.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "home.shading.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "home.shading.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "home.shading.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "home.shading.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "home.shading.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "home.shading.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "home.shading.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "home.shading.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "home.shading.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "home.shading.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "home.shading.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "home.shading.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "home.shading.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "home.shading.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "home.shading.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "home.shading.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "home.shading.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "home.shading.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "home.shading.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "home.shading.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "home.borders": [
+      {
+        "id": "borders.1",
+        "label": "下框线"
+      },
+      {
+        "id": "borders.2",
+        "label": "上框线"
+      },
+      {
+        "id": "borders.3",
+        "label": "左框线"
+      },
+      {
+        "id": "borders.4",
+        "label": "右框线"
+      },
+      {
+        "id": "borders.5",
+        "label": "外侧框线"
+      },
+      {
+        "id": "borders.6",
+        "label": "无框线"
+      }
+    ],
+    "home.styles": [
+      {
+        "id": "home.styles.gallery",
+        "label": "样式库",
+        "kind": "grid",
+        "columns": 5,
+        "children": [
+          {
+            "id": "home.styles.cell.1",
+            "label": "正文",
+            "styleInfo": {
+              "styleId": "Normal",
+              "name": "Normal",
+              "type": "paragraph",
+              "isDefault": true,
+              "qFormat": true
+            }
+          },
+          {
+            "id": "home.styles.cell.2",
+            "label": "标题 1",
+            "styleInfo": {
+              "styleId": "Heading1",
+              "name": "heading 1",
+              "type": "paragraph",
+              "qFormat": true,
+              "uiPriority": 9
+            }
+          },
+          {
+            "id": "home.styles.cell.3",
+            "label": "标题 2",
+            "styleInfo": {
+              "styleId": "Heading2",
+              "name": "heading 2",
+              "type": "paragraph",
+              "qFormat": true,
+              "uiPriority": 9
+            }
+          },
+          {
+            "id": "home.styles.cell.4",
+            "label": "标题 3",
+            "styleInfo": {
+              "styleId": "Heading3",
+              "name": "heading 3",
+              "type": "paragraph",
+              "qFormat": true,
+              "uiPriority": 9
+            }
+          }
+        ],
+        "presentation": "styleGallery"
+      },
+      {
+        "id": "styles.pane",
+        "label": "样式窗格"
+      }
+    ],
+    "insert.cover": [
+      {
+        "id": "insert.cover.gallery",
+        "label": "封面样式库",
+        "kind": "grid",
+        "columns": 4,
+        "children": [
+          {
+            "id": "insert.cover.classic",
+            "label": "经典",
+            "previewParas": [
+              {
+                "spaceBefore": 3600
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "sizeHalfPoints": 72,
+                "align": "center",
+                "spaceAfter": 240
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 28,
+                "align": "center",
+                "borders": "t",
+                "spaceAfter": 4800
+              },
+              {
+                "text": "作者",
+                "sizeHalfPoints": 24,
+                "align": "center"
+              },
+              {
+                "text": "{date}",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.banded",
+            "label": "色带",
+            "previewParas": [
+              {
+                "spaceBefore": 2400
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "FFFFFF",
+                "sizeHalfPoints": 64,
+                "align": "center",
+                "shadingFill": "1F3864",
+                "spaceBefore": 600,
+                "spaceAfter": 600
+              },
+              {
+                "text": "文档副标题",
+                "color": "FFFFFF",
+                "sizeHalfPoints": 26,
+                "align": "center",
+                "shadingFill": "2B579A",
+                "spaceAfter": 5200
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.boxed",
+            "label": "边框",
+            "previewParas": [
+              {
+                "spaceBefore": 3000
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "sizeHalfPoints": 60,
+                "align": "center",
+                "borders": "tblr",
+                "spaceBefore": 400,
+                "spaceAfter": 400,
+                "indentLeft": 720,
+                "indentRight": 720
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 26,
+                "align": "center",
+                "spaceBefore": 360,
+                "spaceAfter": 5200
+              },
+              {
+                "text": "作者",
+                "sizeHalfPoints": 24,
+                "align": "center"
+              },
+              {
+                "text": "{date}",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.sideline",
+            "label": "侧线",
+            "previewParas": [
+              {
+                "spaceBefore": 3600
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "1F3864",
+                "sizeHalfPoints": 64,
+                "align": "left",
+                "borders": "l",
+                "indentLeft": 360,
+                "spaceAfter": 200
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 26,
+                "align": "left",
+                "borders": "l",
+                "indentLeft": 360,
+                "spaceAfter": 5600
+              },
+              {
+                "text": "作者",
+                "sizeHalfPoints": 22,
+                "align": "left"
+              },
+              {
+                "text": "{date}",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "left"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.modern",
+            "label": "现代",
+            "previewParas": [
+              {
+                "spaceBefore": 4200
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "262626",
+                "sizeHalfPoints": 80,
+                "align": "left",
+                "spaceAfter": 120
+              },
+              {
+                "text": "文档副标题",
+                "color": "1C7C74",
+                "sizeHalfPoints": 28,
+                "align": "left",
+                "spaceAfter": 5600
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "A6A6A6",
+                "sizeHalfPoints": 22,
+                "align": "left"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.elegant",
+            "label": "优雅",
+            "previewParas": [
+              {
+                "spaceBefore": 3600
+              },
+              {
+                "text": "文档标题",
+                "italic": true,
+                "sizeHalfPoints": 64,
+                "align": "center",
+                "borders": "tb",
+                "spaceBefore": 300,
+                "spaceAfter": 300,
+                "indentLeft": 1080,
+                "indentRight": 1080
+              },
+              {
+                "text": "文档副标题",
+                "italic": true,
+                "color": "595959",
+                "sizeHalfPoints": 24,
+                "align": "center",
+                "spaceBefore": 400,
+                "spaceAfter": 5200
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "595959",
+                "sizeHalfPoints": 20,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.minimal",
+            "label": "极简",
+            "previewParas": [
+              {
+                "spaceBefore": 5400
+              },
+              {
+                "text": "文档标题",
+                "color": "A6A6A6",
+                "sizeHalfPoints": 88,
+                "align": "left",
+                "spaceAfter": 300
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 24,
+                "align": "left",
+                "spaceAfter": 4800
+              },
+              {
+                "text": "{date}",
+                "color": "A6A6A6",
+                "sizeHalfPoints": 20,
+                "align": "left"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.dark",
+            "label": "深色块",
+            "previewParas": [
+              {
+                "shadingFill": "262626",
+                "spaceBefore": 2000,
+                "spaceAfter": 0
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "FFFFFF",
+                "sizeHalfPoints": 68,
+                "align": "center",
+                "shadingFill": "262626",
+                "spaceBefore": 800,
+                "spaceAfter": 200
+              },
+              {
+                "text": "文档副标题",
+                "color": "D9D9D9",
+                "sizeHalfPoints": 26,
+                "align": "center",
+                "shadingFill": "262626",
+                "spaceAfter": 800
+              },
+              {
+                "shadingFill": "262626",
+                "spaceAfter": 4400
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.accent",
+            "label": "强调色",
+            "previewParas": [
+              {
+                "spaceBefore": 3600
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "C0504D",
+                "sizeHalfPoints": 68,
+                "align": "left",
+                "spaceAfter": 160
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 26,
+                "align": "left",
+                "borders": "b",
+                "spaceAfter": 5600
+              },
+              {
+                "text": "作者",
+                "sizeHalfPoints": 22,
+                "align": "right"
+              },
+              {
+                "text": "{date}",
+                "color": "595959",
+                "sizeHalfPoints": 20,
+                "align": "right"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.badge",
+            "label": "徽标",
+            "previewParas": [
+              {
+                "spaceBefore": 3200
+              },
+              {
+                "text": "· · ·",
+                "color": "BF8F00",
+                "sizeHalfPoints": 28,
+                "align": "center",
+                "spaceAfter": 200
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "sizeHalfPoints": 60,
+                "align": "center",
+                "borders": "tb",
+                "spaceBefore": 240,
+                "spaceAfter": 240,
+                "indentLeft": 1440,
+                "indentRight": 1440
+              },
+              {
+                "text": "文档副标题",
+                "color": "BF8F00",
+                "sizeHalfPoints": 24,
+                "align": "center",
+                "spaceBefore": 300,
+                "spaceAfter": 5200
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "595959",
+                "sizeHalfPoints": 20,
+                "align": "center"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.facet",
+            "label": "切面",
+            "previewParas": [
+              {
+                "spaceBefore": 4200
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "color": "1C7C74",
+                "sizeHalfPoints": 64,
+                "align": "right",
+                "spaceAfter": 160
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 26,
+                "align": "right",
+                "borders": "b",
+                "spaceAfter": 5600
+              },
+              {
+                "text": "作者 · {date}",
+                "color": "A6A6A6",
+                "sizeHalfPoints": 20,
+                "align": "right"
+              }
+            ]
+          },
+          {
+            "id": "insert.cover.annual",
+            "label": "年度报告",
+            "previewParas": [
+              {
+                "spaceBefore": 3000
+              },
+              {
+                "text": "{year}",
+                "bold": true,
+                "color": "2B579A",
+                "sizeHalfPoints": 144,
+                "align": "left",
+                "spaceAfter": 0
+              },
+              {
+                "text": "文档标题",
+                "bold": true,
+                "sizeHalfPoints": 56,
+                "align": "left",
+                "borders": "t",
+                "spaceBefore": 200,
+                "spaceAfter": 120
+              },
+              {
+                "text": "文档副标题",
+                "color": "595959",
+                "sizeHalfPoints": 24,
+                "align": "left",
+                "spaceAfter": 4800
+              },
+              {
+                "text": "作者",
+                "color": "595959",
+                "sizeHalfPoints": 22,
+                "align": "left"
+              }
+            ]
+          }
+        ],
+        "presentation": "cardGallery"
+      },
+      {
+        "id": "cover.remove",
+        "label": "删除当前封面"
+      }
+    ],
+    "insert.table": [
+      {
+        "id": "table.grid.heading",
+        "label": "插入表格",
+        "kind": "heading"
+      },
+      {
+        "id": "table.grid.cells",
+        "label": "选择行和列",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "table.grid.1.1",
+            "label": "1 × 1"
+          },
+          {
+            "id": "table.grid.1.2",
+            "label": "2 × 1"
+          },
+          {
+            "id": "table.grid.1.3",
+            "label": "3 × 1"
+          },
+          {
+            "id": "table.grid.1.4",
+            "label": "4 × 1"
+          },
+          {
+            "id": "table.grid.1.5",
+            "label": "5 × 1"
+          },
+          {
+            "id": "table.grid.1.6",
+            "label": "6 × 1"
+          },
+          {
+            "id": "table.grid.1.7",
+            "label": "7 × 1"
+          },
+          {
+            "id": "table.grid.1.8",
+            "label": "8 × 1"
+          },
+          {
+            "id": "table.grid.1.9",
+            "label": "9 × 1"
+          },
+          {
+            "id": "table.grid.1.10",
+            "label": "10 × 1"
+          },
+          {
+            "id": "table.grid.2.1",
+            "label": "1 × 2"
+          },
+          {
+            "id": "table.grid.2.2",
+            "label": "2 × 2"
+          },
+          {
+            "id": "table.grid.2.3",
+            "label": "3 × 2"
+          },
+          {
+            "id": "table.grid.2.4",
+            "label": "4 × 2"
+          },
+          {
+            "id": "table.grid.2.5",
+            "label": "5 × 2"
+          },
+          {
+            "id": "table.grid.2.6",
+            "label": "6 × 2"
+          },
+          {
+            "id": "table.grid.2.7",
+            "label": "7 × 2"
+          },
+          {
+            "id": "table.grid.2.8",
+            "label": "8 × 2"
+          },
+          {
+            "id": "table.grid.2.9",
+            "label": "9 × 2"
+          },
+          {
+            "id": "table.grid.2.10",
+            "label": "10 × 2"
+          },
+          {
+            "id": "table.grid.3.1",
+            "label": "1 × 3"
+          },
+          {
+            "id": "table.grid.3.2",
+            "label": "2 × 3"
+          },
+          {
+            "id": "table.grid.3.3",
+            "label": "3 × 3"
+          },
+          {
+            "id": "table.grid.3.4",
+            "label": "4 × 3"
+          },
+          {
+            "id": "table.grid.3.5",
+            "label": "5 × 3"
+          },
+          {
+            "id": "table.grid.3.6",
+            "label": "6 × 3"
+          },
+          {
+            "id": "table.grid.3.7",
+            "label": "7 × 3"
+          },
+          {
+            "id": "table.grid.3.8",
+            "label": "8 × 3"
+          },
+          {
+            "id": "table.grid.3.9",
+            "label": "9 × 3"
+          },
+          {
+            "id": "table.grid.3.10",
+            "label": "10 × 3"
+          },
+          {
+            "id": "table.grid.4.1",
+            "label": "1 × 4"
+          },
+          {
+            "id": "table.grid.4.2",
+            "label": "2 × 4"
+          },
+          {
+            "id": "table.grid.4.3",
+            "label": "3 × 4"
+          },
+          {
+            "id": "table.grid.4.4",
+            "label": "4 × 4"
+          },
+          {
+            "id": "table.grid.4.5",
+            "label": "5 × 4"
+          },
+          {
+            "id": "table.grid.4.6",
+            "label": "6 × 4"
+          },
+          {
+            "id": "table.grid.4.7",
+            "label": "7 × 4"
+          },
+          {
+            "id": "table.grid.4.8",
+            "label": "8 × 4"
+          },
+          {
+            "id": "table.grid.4.9",
+            "label": "9 × 4"
+          },
+          {
+            "id": "table.grid.4.10",
+            "label": "10 × 4"
+          },
+          {
+            "id": "table.grid.5.1",
+            "label": "1 × 5"
+          },
+          {
+            "id": "table.grid.5.2",
+            "label": "2 × 5"
+          },
+          {
+            "id": "table.grid.5.3",
+            "label": "3 × 5"
+          },
+          {
+            "id": "table.grid.5.4",
+            "label": "4 × 5"
+          },
+          {
+            "id": "table.grid.5.5",
+            "label": "5 × 5"
+          },
+          {
+            "id": "table.grid.5.6",
+            "label": "6 × 5"
+          },
+          {
+            "id": "table.grid.5.7",
+            "label": "7 × 5"
+          },
+          {
+            "id": "table.grid.5.8",
+            "label": "8 × 5"
+          },
+          {
+            "id": "table.grid.5.9",
+            "label": "9 × 5"
+          },
+          {
+            "id": "table.grid.5.10",
+            "label": "10 × 5"
+          },
+          {
+            "id": "table.grid.6.1",
+            "label": "1 × 6"
+          },
+          {
+            "id": "table.grid.6.2",
+            "label": "2 × 6"
+          },
+          {
+            "id": "table.grid.6.3",
+            "label": "3 × 6"
+          },
+          {
+            "id": "table.grid.6.4",
+            "label": "4 × 6"
+          },
+          {
+            "id": "table.grid.6.5",
+            "label": "5 × 6"
+          },
+          {
+            "id": "table.grid.6.6",
+            "label": "6 × 6"
+          },
+          {
+            "id": "table.grid.6.7",
+            "label": "7 × 6"
+          },
+          {
+            "id": "table.grid.6.8",
+            "label": "8 × 6"
+          },
+          {
+            "id": "table.grid.6.9",
+            "label": "9 × 6"
+          },
+          {
+            "id": "table.grid.6.10",
+            "label": "10 × 6"
+          },
+          {
+            "id": "table.grid.7.1",
+            "label": "1 × 7"
+          },
+          {
+            "id": "table.grid.7.2",
+            "label": "2 × 7"
+          },
+          {
+            "id": "table.grid.7.3",
+            "label": "3 × 7"
+          },
+          {
+            "id": "table.grid.7.4",
+            "label": "4 × 7"
+          },
+          {
+            "id": "table.grid.7.5",
+            "label": "5 × 7"
+          },
+          {
+            "id": "table.grid.7.6",
+            "label": "6 × 7"
+          },
+          {
+            "id": "table.grid.7.7",
+            "label": "7 × 7"
+          },
+          {
+            "id": "table.grid.7.8",
+            "label": "8 × 7"
+          },
+          {
+            "id": "table.grid.7.9",
+            "label": "9 × 7"
+          },
+          {
+            "id": "table.grid.7.10",
+            "label": "10 × 7"
+          },
+          {
+            "id": "table.grid.8.1",
+            "label": "1 × 8"
+          },
+          {
+            "id": "table.grid.8.2",
+            "label": "2 × 8"
+          },
+          {
+            "id": "table.grid.8.3",
+            "label": "3 × 8"
+          },
+          {
+            "id": "table.grid.8.4",
+            "label": "4 × 8"
+          },
+          {
+            "id": "table.grid.8.5",
+            "label": "5 × 8"
+          },
+          {
+            "id": "table.grid.8.6",
+            "label": "6 × 8"
+          },
+          {
+            "id": "table.grid.8.7",
+            "label": "7 × 8"
+          },
+          {
+            "id": "table.grid.8.8",
+            "label": "8 × 8"
+          },
+          {
+            "id": "table.grid.8.9",
+            "label": "9 × 8"
+          },
+          {
+            "id": "table.grid.8.10",
+            "label": "10 × 8"
+          }
+        ],
+        "presentation": "tablePicker"
+      },
+      {
+        "id": "table.dialog",
+        "label": "插入表格…"
+      }
+    ],
+    "insert.shapes": [
+      {
+        "id": "insert.shapes.group.1",
+        "kind": "grid",
+        "label": "线条",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.line",
+            "label": "直线",
+            "previewPath": "M 0 18 L 18 0"
+          },
+          {
+            "id": "insert.shapes.lineArrow",
+            "label": "箭头",
+            "previewPath": "M 0 18 L 18 0 M 16.22 7.13 L 18 0 L 10.87 1.78"
+          },
+          {
+            "id": "insert.shapes.lineArrowDouble",
+            "label": "双箭头",
+            "previewPath": "M 0 18 L 18 0 M 16.22 7.13 L 18 0 L 10.87 1.78 M 1.78 10.87 L 0 18 L 7.13 16.22"
+          },
+          {
+            "id": "insert.shapes.lineBent",
+            "label": "肘形连接符",
+            "previewPath": "M 0 18 L 9 18 L 9 0 L 18 0"
+          },
+          {
+            "id": "insert.shapes.lineCurved",
+            "label": "曲线连接符",
+            "previewPath": "M 0 18 C 10.8 18 7.2 0 18 0"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.2",
+        "kind": "grid",
+        "label": "矩形",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.rect",
+            "label": "矩形",
+            "previewPath": "M 0 0 L 18 0 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.roundRect",
+            "label": "圆角矩形",
+            "previewPath": "M 3 0 L 15 0 Q 18 0 18 3 L 18 15 Q 18 18 15 18 L 3 18 Q 0 18 0 15 L 0 3 Q 0 0 3 0 Z"
+          },
+          {
+            "id": "insert.shapes.snip1Rect",
+            "label": "剪去单角的矩形",
+            "previewPath": "M 0 0 L 15 0 L 18 3 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.snip2SameRect",
+            "label": "剪去同侧角的矩形",
+            "previewPath": "M 3 0 L 15 0 L 18 3 L 18 18 L 18 18 L 0 18 L 0 18 L 0 3 Z"
+          },
+          {
+            "id": "insert.shapes.snip2DiagRect",
+            "label": "剪去对角的矩形",
+            "previewPath": "M 0 0 L 15 0 L 18 3 L 18 18 L 18 18 L 3 18 L 0 15 L 0 0 Z"
+          },
+          {
+            "id": "insert.shapes.snipRoundRect",
+            "label": "剪去一个圆角的矩形",
+            "previewPath": "M 3 0 L 15 0 L 18 3 L 18 18 L 0 18 L 0 3 C 0 1.34 1.34 0 3 0 Z"
+          },
+          {
+            "id": "insert.shapes.round1Rect",
+            "label": "圆化单角的矩形",
+            "previewPath": "M 0 0 L 15 0 C 16.66 0 18 1.34 18 3 L 18 18 L 0 18 L 0 0 Z"
+          },
+          {
+            "id": "insert.shapes.round2SameRect",
+            "label": "圆化同侧角的矩形",
+            "previewPath": "M 3 0 L 15 0 C 16.66 0 18 1.34 18 3 L 18 18 C 18 18 18 18 18 18 L 0 18 C 0 18 0 18 0 18 L 0 3 C 0 1.34 1.34 0 3 0 Z"
+          },
+          {
+            "id": "insert.shapes.round2DiagRect",
+            "label": "圆化对角的矩形",
+            "previewPath": "M 3 0 L 18 0 C 18 0 18 0 18 0 L 18 15 C 18 16.66 16.66 18 15 18 L 0 18 C 0 18 0 18 0 18 L 0 3 C 0 1.34 1.34 0 3 0 Z"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.3",
+        "kind": "grid",
+        "label": "基本形状",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.ellipse",
+            "label": "椭圆",
+            "previewPath": "M 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 Z"
+          },
+          {
+            "id": "insert.shapes.triangle",
+            "label": "三角形",
+            "previewPath": "M 9 0 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.rtTriangle",
+            "label": "直角三角形",
+            "previewPath": "M 0 0 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.parallelogram",
+            "label": "平行四边形",
+            "previewPath": "M 4.5 0 L 18 0 L 13.5 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.trapezoid",
+            "label": "梯形",
+            "previewPath": "M 4.5 0 L 13.5 0 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.diamond",
+            "label": "菱形",
+            "previewPath": "M 9 0 L 18 9 L 9 18 L 0 9 Z"
+          },
+          {
+            "id": "insert.shapes.pentagon",
+            "label": "五边形",
+            "previewPath": "M 9 0 L 18 6.88 L 14.56 18 L 3.44 18 L 0 6.88 Z"
+          },
+          {
+            "id": "insert.shapes.hexagon",
+            "label": "六边形",
+            "previewPath": "M 4.5 0 L 13.5 0 L 18 9 L 13.5 18 L 4.5 18 L 0 9 Z"
+          },
+          {
+            "id": "insert.shapes.octagon",
+            "label": "八边形",
+            "previewPath": "M 5.27 0 L 12.73 0 L 18 5.27 L 18 12.73 L 12.73 18 L 5.27 18 L 0 12.73 L 0 5.27 Z"
+          },
+          {
+            "id": "insert.shapes.plus",
+            "label": "十字形",
+            "previewPath": "M 4.5 0 L 13.5 0 L 13.5 4.5 L 18 4.5 L 18 13.5 L 13.5 13.5 L 13.5 18 L 4.5 18 L 4.5 13.5 L 0 13.5 L 0 4.5 L 4.5 4.5 Z"
+          },
+          {
+            "id": "insert.shapes.mathPlus",
+            "label": "加号",
+            "previewPath": "M 2.39 4.77 L 4.77 4.77 L 4.77 2.39 L 13.23 2.39 L 13.23 4.77 L 15.61 4.77 L 15.61 13.23 L 13.23 13.23 L 13.23 15.61 L 4.77 15.61 L 4.77 13.23 L 2.39 13.23 Z"
+          },
+          {
+            "id": "insert.shapes.pie",
+            "label": "饼形",
+            "previewPath": "M 9 9 L 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 Z"
+          },
+          {
+            "id": "insert.shapes.chord",
+            "label": "弦形",
+            "previewPath": "M 15.36 15.36 C 12.48 18.24 8.03 18.83 4.5 16.79 C 0.97 14.76 -0.75 10.61 0.31 6.67 C 1.36 2.74 4.93 0 9 0 Z"
+          },
+          {
+            "id": "insert.shapes.teardrop",
+            "label": "泪滴形",
+            "previewPath": "M 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 Q 13.5 0 18 0 Q 18 4.5 18 9 Z"
+          },
+          {
+            "id": "insert.shapes.frame",
+            "label": "框架",
+            "previewPath": "M 0 0 L 18 0 L 18 18 L 0 18 Z M 2.25 2.25 L 2.25 15.75 L 15.75 15.75 L 15.75 2.25 Z"
+          },
+          {
+            "id": "insert.shapes.halfFrame",
+            "label": "半闭框",
+            "previewPath": "M 0 0 L 18 0 L 12 6 L 6 6 L 6 12 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.corner",
+            "label": "L 形",
+            "previewPath": "M 0 0 L 9 0 L 9 9 L 18 9 L 18 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.diagStripe",
+            "label": "斜纹",
+            "previewPath": "M 0 9 L 9 0 L 18 0 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.donut",
+            "label": "圆环",
+            "previewPath": "M 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 Z M 13.5 9 C 13.5 6.51 11.49 4.5 9 4.5 C 6.51 4.5 4.5 6.51 4.5 9 C 4.5 11.49 6.51 13.5 9 13.5 C 11.49 13.5 13.5 11.49 13.5 9 Z"
+          },
+          {
+            "id": "insert.shapes.noSmoking",
+            "label": "禁止符",
+            "previewPath": "M 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 Z M 14.63 9 C 14.63 5.89 12.11 3.38 9 3.38 C 5.89 3.38 3.38 5.89 3.38 9 C 3.37 12.11 5.89 14.63 9 14.63 C 12.11 14.63 14.63 12.11 14.63 9 Z M 3.83 6.22 L 11.78 14.17 L 14.17 11.78 L 6.22 3.83 Z"
+          },
+          {
+            "id": "insert.shapes.blockArc",
+            "label": "空心弧",
+            "previewPath": "M 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 L 13.5 9 C 13.5 6.51 11.49 4.5 9 4.5 C 6.51 4.5 4.5 6.51 4.5 9 Z"
+          },
+          {
+            "id": "insert.shapes.foldedCorner",
+            "label": "折角形",
+            "previewPath": "M 0 0 L 18 0 L 18 15 L 15 18 L 0 18 Z M 15 18 L 15.6 15.6 L 18 15"
+          },
+          {
+            "id": "insert.shapes.bevel",
+            "label": "棱台",
+            "previewPath": "M 0 0 L 18 0 L 18 18 L 0 18 Z M 2.25 2.25 L 15.75 2.25 L 15.75 15.75 L 2.25 15.75 Z M 0 0 L 2.25 2.25 M 18 0 L 15.75 2.25 M 18 18 L 15.75 15.75 M 0 18 L 2.25 15.75"
+          },
+          {
+            "id": "insert.shapes.cube",
+            "label": "立方体",
+            "previewPath": "M 0 4.5 L 4.5 0 L 18 0 L 18 13.5 L 13.5 18 L 0 18 Z M 0 4.5 L 13.5 4.5 L 18 0 M 13.5 4.5 L 13.5 18"
+          },
+          {
+            "id": "insert.shapes.can",
+            "label": "圆柱形",
+            "previewPath": "M 0 2.25 L 0 15.75 C 0 16.99 4.03 18 9 18 C 13.97 18 18 16.99 18 15.75 L 18 2.25 C 18 1.01 13.97 0 9 0 C 4.03 0 0 1.01 0 2.25 Z M 0 2.25 C 0 3.49 4.03 4.5 9 4.5 C 13.97 4.5 18 3.49 18 2.25"
+          },
+          {
+            "id": "insert.shapes.lightningBolt",
+            "label": "闪电形",
+            "previewPath": "M 7.06 0 L 10.72 5.56 L 9.21 5.56 L 13.81 10.01 L 12.31 10.01 L 18 18 L 9 11.99 L 10.31 11.99 L 4.44 5.56 L 6.48 5.56 Z"
+          },
+          {
+            "id": "insert.shapes.heart",
+            "label": "心形",
+            "previewPath": "M 9 5.4 C 9 2.16 6.48 0.18 3.96 0.18 C 1.08 0.18 0 2.7 0 5.04 C 0 9 3.6 11.7 9 18 C 14.4 11.7 18 9 18 5.04 C 18 2.7 16.92 0.18 14.04 0.18 C 11.52 0.18 9 2.16 9 5.4 Z"
+          },
+          {
+            "id": "insert.shapes.sun",
+            "label": "太阳形",
+            "previewPath": "M 14.94 7.74 L 18 9 L 14.94 10.26 Z M 14.09 12.31 L 15.36 15.36 L 12.31 14.09 Z M 10.26 14.94 L 9 18 L 7.74 14.94 Z M 5.69 14.09 L 2.64 15.36 L 3.91 12.31 Z M 3.06 10.26 L 0 9 L 3.06 7.74 Z M 3.91 5.69 L 2.64 2.64 L 5.69 3.91 Z M 7.74 3.06 L 9 0 L 10.26 3.06 Z M 12.31 3.91 L 15.36 2.64 L 14.09 5.69 Z M 13.5 9 C 13.5 11.49 11.49 13.5 9 13.5 C 6.51 13.5 4.5 11.49 4.5 9 C 4.5 6.51 6.51 4.5 9 4.5 C 11.49 4.5 13.5 6.51 13.5 9 Z"
+          },
+          {
+            "id": "insert.shapes.moon",
+            "label": "新月形",
+            "previewPath": "M 18 0 C 8.06 0 0 4.03 0 9 C 0 13.97 8.06 18 18 18 C 13.03 18 9 13.97 9 9 C 9 4.03 13.03 0 18 0 Z"
+          },
+          {
+            "id": "insert.shapes.cloud",
+            "label": "云形",
+            "previewPath": "M 3.6 15.3 C 1.08 15.48 0 12.96 0.36 10.62 C 0.54 8.46 1.98 7.02 3.6 7.56 C 3.42 4.68 5.22 2.52 7.2 3.6 C 8.1 1.26 10.8 0.72 12.06 2.52 C 13.68 0.72 16.38 1.8 16.56 4.68 C 17.82 5.58 18 8.28 17.46 10.08 C 18 12.42 16.92 14.58 15.3 14.76 C 14.94 16.92 12.96 17.64 11.7 16.38 C 10.44 18 8.1 18 7.02 16.38 C 5.94 17.64 4.14 17.1 3.6 15.3 Z"
+          },
+          {
+            "id": "insert.shapes.arc",
+            "label": "弧形",
+            "previewPath": "M 9 9 L 9 0 C 13.97 0 18 4.03 18 9 Z M 9 0 C 13.97 0 18 4.03 18 9"
+          },
+          {
+            "id": "insert.shapes.plaque",
+            "label": "铭牌",
+            "previewPath": "M 3 0 L 15 0 C 15 1.66 16.34 3 18 3 L 18 15 C 16.34 15 15 16.34 15 18 L 3 18 C 3 16.34 1.66 15 0 15 L 0 3 C 1.66 3 3 1.66 3 0 Z"
+          },
+          {
+            "id": "insert.shapes.smileyFace",
+            "label": "笑脸",
+            "previewPath": "M 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 Z M 7.2 6.66 C 7.2 7.16 6.8 7.56 6.3 7.56 C 5.8 7.56 5.4 7.16 5.4 6.66 C 5.4 6.16 5.8 5.76 6.3 5.76 C 6.8 5.76 7.2 6.16 7.2 6.66 Z M 12.6 6.66 C 12.6 7.16 12.2 7.56 11.7 7.56 C 11.2 7.56 10.8 7.16 10.8 6.66 C 10.8 6.16 11.2 5.76 11.7 5.76 C 12.2 5.76 12.6 6.16 12.6 6.66 Z M 5.4 12.06 Q 9 15.41 12.6 12.06"
+          },
+          {
+            "id": "insert.shapes.leftBracket",
+            "label": "左中括号",
+            "previewPath": "M 18 0 C 8.06 0 0 0.67 0 1.5 L 0 16.5 C 0 17.33 8.06 18 18 18"
+          },
+          {
+            "id": "insert.shapes.rightBracket",
+            "label": "右中括号",
+            "previewPath": "M 0 0 C 9.94 0 18 0.67 18 1.5 L 18 16.5 C 18 17.33 9.94 18 0 18"
+          },
+          {
+            "id": "insert.shapes.leftBrace",
+            "label": "左大括号",
+            "previewPath": "M 18 0 C 13.03 0 9 0.67 9 1.5 L 9 7.5 C 9 8.33 4.97 9 0 9 C 4.97 9 9 9.67 9 10.5 L 9 16.5 C 9 17.33 13.03 18 18 18"
+          },
+          {
+            "id": "insert.shapes.rightBrace",
+            "label": "右大括号",
+            "previewPath": "M 0 0 C 4.97 0 9 0.67 9 1.5 L 9 7.5 C 9 8.33 13.03 9 18 9 C 13.03 9 9 9.67 9 10.5 L 9 16.5 C 9 17.33 4.97 18 0 18"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.4",
+        "kind": "grid",
+        "label": "箭头",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.rightArrow",
+            "label": "右箭头",
+            "previewPath": "M 0 4.5 L 9 4.5 L 9 0 L 18 9 L 9 18 L 9 13.5 L 0 13.5 Z"
+          },
+          {
+            "id": "insert.shapes.leftArrow",
+            "label": "左箭头",
+            "previewPath": "M 18 4.5 L 9 4.5 L 9 0 L 0 9 L 9 18 L 9 13.5 L 18 13.5 Z"
+          },
+          {
+            "id": "insert.shapes.upArrow",
+            "label": "上箭头",
+            "previewPath": "M 4.5 18 L 4.5 9 L 0 9 L 9 0 L 18 9 L 13.5 9 L 13.5 18 Z"
+          },
+          {
+            "id": "insert.shapes.downArrow",
+            "label": "下箭头",
+            "previewPath": "M 4.5 0 L 4.5 9 L 0 9 L 9 18 L 18 9 L 13.5 9 L 13.5 0 Z"
+          },
+          {
+            "id": "insert.shapes.leftRightArrow",
+            "label": "左右箭头",
+            "previewPath": "M 0 9 L 9 0 L 9 4.5 L 9 4.5 L 9 0 L 18 9 L 9 18 L 9 13.5 L 9 13.5 L 9 18 Z"
+          },
+          {
+            "id": "insert.shapes.upDownArrow",
+            "label": "上下箭头",
+            "previewPath": "M 9 0 L 18 9 L 13.5 9 L 13.5 9 L 18 9 L 9 18 L 0 9 L 4.5 9 L 4.5 9 L 0 9 Z"
+          },
+          {
+            "id": "insert.shapes.quadArrow",
+            "label": "十字箭头",
+            "previewPath": "M 9 0 L 13.05 4.05 L 11.03 4.05 L 11.03 6.98 L 13.95 6.98 L 13.95 4.95 L 18 9 L 13.95 13.05 L 13.95 11.03 L 11.03 11.03 L 11.03 13.95 L 13.05 13.95 L 9 18 L 4.95 13.95 L 6.98 13.95 L 6.98 11.03 L 4.05 11.03 L 4.05 13.05 L 0 9 L 4.05 4.95 L 4.05 6.98 L 6.98 6.98 L 6.98 4.05 L 4.95 4.05 Z"
+          },
+          {
+            "id": "insert.shapes.bentArrow",
+            "label": "圆角右箭头",
+            "previewPath": "M 0 18 L 0 2.25 L 13.5 2.25 L 13.5 0 L 18 4.5 L 13.5 9 L 13.5 6.75 L 4.5 6.75 L 4.5 18 Z"
+          },
+          {
+            "id": "insert.shapes.uturnArrow",
+            "label": "手杖形箭头",
+            "previewPath": "M 0 18 L 0 8.44 C 0 3.78 3.78 0 8.44 0 C 13.1 0 16.88 3.78 16.88 8.44 L 16.88 13.5 L 18 13.5 L 14.63 18 L 11.25 13.5 L 12.38 13.5 L 12.38 8.44 C 12.38 6.26 10.61 4.5 8.44 4.5 C 6.26 4.5 4.5 6.26 4.5 8.44 L 4.5 18 Z"
+          },
+          {
+            "id": "insert.shapes.curvedRightArrow",
+            "label": "弧形右箭头",
+            "previewPath": "M 0 0 C 9.94 0 18 4.03 18 9 L 14.63 14.4 L 11.25 9 L 13.5 9 C 13.5 6.51 7.46 4.5 0 4.5 L 0 0 Z"
+          },
+          {
+            "id": "insert.shapes.stripedRightArrow",
+            "label": "虚尾箭头",
+            "previewPath": "M 2.81 4.5 L 9 4.5 L 9 0 L 18 9 L 9 18 L 9 13.5 L 2.81 13.5 Z M 0 4.5 L 0.56 4.5 L 0.56 13.5 L 0 13.5 Z M 1.13 4.5 L 2.25 4.5 L 2.25 13.5 L 1.13 13.5 Z"
+          },
+          {
+            "id": "insert.shapes.notchedRightArrow",
+            "label": "缺口右箭头",
+            "previewPath": "M 0 4.5 L 9 4.5 L 9 0 L 18 9 L 9 18 L 9 13.5 L 0 13.5 L 4.5 9 Z"
+          },
+          {
+            "id": "insert.shapes.chevron",
+            "label": "V 形",
+            "previewPath": "M 0 0 L 9 0 L 18 9 L 9 18 L 0 18 L 9 9 Z"
+          },
+          {
+            "id": "insert.shapes.homePlate",
+            "label": "燕尾形",
+            "previewPath": "M 0 0 L 9 0 L 18 9 L 9 18 L 0 18 Z"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.5",
+        "kind": "grid",
+        "label": "星形",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.star4",
+            "label": "四角星",
+            "previewPath": "M 9 0 L 10.59 7.41 L 18 9 L 10.59 10.59 L 9 18 L 7.41 10.59 L 0 9 L 7.41 7.41 Z"
+          },
+          {
+            "id": "insert.shapes.star5",
+            "label": "五角星",
+            "previewPath": "M 9 0 L 11.02 6.22 L 17.56 6.22 L 12.27 10.06 L 14.29 16.28 L 9 12.44 L 3.71 16.28 L 5.73 10.06 L 0.44 6.22 L 6.98 6.22 Z"
+          },
+          {
+            "id": "insert.shapes.star6",
+            "label": "六角星",
+            "previewPath": "M 9 0 L 11.6 4.5 L 16.79 4.5 L 14.2 9 L 16.79 13.5 L 11.6 13.5 L 9 18 L 6.4 13.5 L 1.21 13.5 L 3.8 9 L 1.21 4.5 L 6.4 4.5 Z"
+          },
+          {
+            "id": "insert.shapes.star7",
+            "label": "七角星",
+            "previewPath": "M 9 0 L 11.7 3.39 L 16.04 3.39 L 15.07 7.61 L 17.77 11 L 13.87 12.88 L 12.9 17.11 L 9 15.23 L 5.1 17.11 L 4.13 12.88 L 0.23 11 L 2.93 7.61 L 1.96 3.39 L 6.3 3.39 Z"
+          },
+          {
+            "id": "insert.shapes.star8",
+            "label": "八角星",
+            "previewPath": "M 9 0 L 11.58 2.76 L 15.36 2.64 L 15.24 6.42 L 18 9 L 15.24 11.58 L 15.36 15.36 L 11.58 15.24 L 9 18 L 6.42 15.24 L 2.64 15.36 L 2.76 11.58 L 0 9 L 2.76 6.42 L 2.64 2.64 L 6.42 2.76 Z"
+          },
+          {
+            "id": "insert.shapes.star10",
+            "label": "十角星",
+            "previewPath": "M 9 0 L 11.37 1.72 L 14.29 1.72 L 15.19 4.5 L 17.56 6.22 L 16.66 9 L 17.56 11.78 L 15.19 13.5 L 14.29 16.28 L 11.37 16.28 L 9 18 L 6.63 16.28 L 3.71 16.28 L 2.81 13.5 L 0.44 11.78 L 1.34 9 L 0.44 6.22 L 2.81 4.5 L 3.71 1.72 L 6.63 1.72 Z"
+          },
+          {
+            "id": "insert.shapes.star12",
+            "label": "十二角星",
+            "previewPath": "M 9 0 L 10.75 2.48 L 13.5 1.21 L 13.77 4.23 L 16.79 4.5 L 15.52 7.25 L 18 9 L 15.52 10.75 L 16.79 13.5 L 13.77 13.77 L 13.5 16.79 L 10.75 15.52 L 9 18 L 7.25 15.52 L 4.5 16.79 L 4.23 13.77 L 1.21 13.5 L 2.48 10.75 L 0 9 L 2.48 7.25 L 1.21 4.5 L 4.23 4.23 L 4.5 1.21 L 7.25 2.48 Z"
+          },
+          {
+            "id": "insert.shapes.star16",
+            "label": "十六角星",
+            "previewPath": "M 9 0 L 10.32 2.38 L 12.44 0.69 L 12.75 3.39 L 15.36 2.64 L 14.61 5.25 L 17.31 5.56 L 15.62 7.68 L 18 9 L 15.62 10.32 L 17.31 12.44 L 14.61 12.75 L 15.36 15.36 L 12.75 14.61 L 12.44 17.31 L 10.32 15.62 L 9 18 L 7.68 15.62 L 5.56 17.31 L 5.25 14.61 L 2.64 15.36 L 3.39 12.75 L 0.69 12.44 L 2.38 10.32 L 0 9 L 2.38 7.68 L 0.69 5.56 L 3.39 5.25 L 2.64 2.64 L 5.25 3.39 L 5.56 0.69 L 7.68 2.38 Z"
+          },
+          {
+            "id": "insert.shapes.star24",
+            "label": "二十四角星",
+            "previewPath": "M 9 0 L 9.88 2.31 L 11.33 0.31 L 11.58 2.76 L 13.5 1.21 L 13.11 3.64 L 15.36 2.64 L 14.36 4.89 L 16.79 4.5 L 15.24 6.42 L 17.69 6.67 L 15.69 8.12 L 18 9 L 15.69 9.88 L 17.69 11.33 L 15.24 11.58 L 16.79 13.5 L 14.36 13.11 L 15.36 15.36 L 13.11 14.36 L 13.5 16.79 L 11.58 15.24 L 11.33 17.69 L 9.88 15.69 L 9 18 L 8.12 15.69 L 6.67 17.69 L 6.42 15.24 L 4.5 16.79 L 4.89 14.36 L 2.64 15.36 L 3.64 13.11 L 1.21 13.5 L 2.76 11.58 L 0.31 11.33 L 2.31 9.88 L 0 9 L 2.31 8.12 L 0.31 6.67 L 2.76 6.42 L 1.21 4.5 L 3.64 4.89 L 2.64 2.64 L 4.89 3.64 L 4.5 1.21 L 6.42 2.76 L 6.67 0.31 L 8.12 2.31 Z"
+          },
+          {
+            "id": "insert.shapes.star32",
+            "label": "三十二角星",
+            "previewPath": "M 9 0 L 9.66 2.28 L 10.76 0.17 L 10.96 2.54 L 12.44 0.69 L 12.18 3.05 L 14 1.52 L 13.28 3.78 L 15.36 2.64 L 14.22 4.72 L 16.48 4 L 14.95 5.82 L 17.31 5.56 L 15.46 7.04 L 17.83 7.24 L 15.72 8.34 L 18 9 L 15.72 9.66 L 17.83 10.76 L 15.46 10.96 L 17.31 12.44 L 14.95 12.18 L 16.48 14 L 14.22 13.28 L 15.36 15.36 L 13.28 14.22 L 14 16.48 L 12.18 14.95 L 12.44 17.31 L 10.96 15.46 L 10.76 17.83 L 9.66 15.72 L 9 18 L 8.34 15.72 L 7.24 17.83 L 7.04 15.46 L 5.56 17.31 L 5.82 14.95 L 4 16.48 L 4.72 14.22 L 2.64 15.36 L 3.78 13.28 L 1.52 14 L 3.05 12.18 L 0.69 12.44 L 2.54 10.96 L 0.17 10.76 L 2.28 9.66 L 0 9 L 2.28 8.34 L 0.17 7.24 L 2.54 7.04 L 0.69 5.56 L 3.05 5.82 L 1.52 4 L 3.78 4.72 L 2.64 2.64 L 4.72 3.78 L 4 1.52 L 5.82 3.05 L 5.56 0.69 L 7.04 2.54 L 7.24 0.17 L 8.34 2.28 Z"
+          },
+          {
+            "id": "insert.shapes.irregularSeal1",
+            "label": "爆炸形 1",
+            "previewPath": "M 9 4.83 L 12.1 0 L 11.8 4.44 L 15.32 3.71 L 13.92 6.1 L 17.58 6.78 L 14.67 8.73 L 18 11.08 L 14.03 10.79 L 15.12 15.08 L 11.68 12.05 L 11.04 16.45 L 8.78 12.45 L 7.07 18 L 6.43 13.02 L 3.97 14.68 L 4.72 11.61 L 0.11 12.16 L 3.1 9.81 L 0 7.36 L 3.86 6.66 L 2.31 4.09 L 6.48 5.12 L 7.07 0.85 Z"
+          },
+          {
+            "id": "insert.shapes.irregularSeal2",
+            "label": "爆炸形 2",
+            "previewPath": "M 9.55 3.62 L 12.33 0 L 12.1 4.81 L 15.01 2.64 L 13.65 5.44 L 18 5.54 L 14.15 7.84 L 15.23 9.41 L 13.65 10.26 L 15.73 13.03 L 12.2 11.96 L 12.45 14.48 L 10.15 13.28 L 9.68 15.7 L 8.23 14.48 L 7.25 16.43 L 6.27 15.1 L 4.1 18 L 4 15.2 L 1.07 14.85 L 2.78 12.81 L 0 10.73 L 3.28 9.66 L 0.98 6.89 L 4.48 6.51 L 3.75 3.02 L 7.13 5.32 L 8.1 1.57 Z"
+          },
+          {
+            "id": "insert.shapes.ribbon",
+            "label": "前凸带形",
+            "previewPath": "M 0 4.5 L 4.5 4.5 L 4.5 18 L 0 18 L 1.5 11.25 Z M 18 4.5 L 13.5 4.5 L 13.5 18 L 18 18 L 16.5 11.25 Z M 2.25 0 L 15.75 0 L 15.75 13.5 L 2.25 13.5 Z"
+          },
+          {
+            "id": "insert.shapes.ribbon2",
+            "label": "上凸带形",
+            "previewPath": "M 0 13.5 L 4.5 13.5 L 4.5 0 L 0 0 L 1.5 6.75 Z M 18 13.5 L 13.5 13.5 L 13.5 0 L 18 0 L 16.5 6.75 Z M 2.25 18 L 15.75 18 L 15.75 4.5 L 2.25 4.5 Z"
+          },
+          {
+            "id": "insert.shapes.wave",
+            "label": "波形",
+            "previewPath": "M 0 2.25 C 3 0 6 0 9 2.25 C 12 4.5 15 4.5 18 2.25 L 18 15.75 C 15 18 12 18 9 15.75 C 6 13.5 3 13.5 0 15.75 Z"
+          },
+          {
+            "id": "insert.shapes.doubleWave",
+            "label": "双波形",
+            "previewPath": "M 0 1.13 C 1.5 0 3 0 4.5 1.13 C 6 2.25 7.5 2.25 9 1.13 C 10.5 0 12 0 13.5 1.13 C 15 2.25 16.5 2.25 18 1.13 L 18 16.88 C 16.5 18 15 18 13.5 16.88 C 12 15.75 10.5 15.75 9 16.88 C 7.5 18 6 18 4.5 16.88 C 3 15.75 1.5 15.75 0 16.88 Z"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.6",
+        "kind": "grid",
+        "label": "流程图",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.flowChartProcess",
+            "label": "流程图: 过程",
+            "previewPath": "M 0 0 L 18 0 L 18 11.16 L 0 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartAlternateProcess",
+            "label": "流程图: 可选过程",
+            "previewPath": "M 1.86 0 L 16.14 0 Q 18 0 18 1.86 L 18 9.3 Q 18 11.16 16.14 11.16 L 1.86 11.16 Q 0 11.16 0 9.3 L 0 1.86 Q 0 0 1.86 0 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartDecision",
+            "label": "决策",
+            "previewPath": "M 9 0 L 18 5.58 L 9 11.16 L 0 5.58 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartPredefinedProcess",
+            "label": "流程图: 预定义过程",
+            "previewPath": "M 0 0 L 18 0 L 18 11.16 L 0 11.16 Z M 2.25 0 L 2.25 11.16 M 15.75 0 L 15.75 11.16"
+          },
+          {
+            "id": "insert.shapes.flowChartInternalStorage",
+            "label": "流程图: 内部贮存",
+            "previewPath": "M 0 0 L 18 0 L 18 11.16 L 0 11.16 Z M 2.25 0 L 2.25 11.16 M 0 1.4 L 18 1.4"
+          },
+          {
+            "id": "insert.shapes.flowChartDocument",
+            "label": "流程图: 文档",
+            "previewPath": "M 0 0 L 18 0 L 18 9.26 C 13.5 8.04 10.44 8.04 9 9.26 C 7.56 10.49 4.5 10.49 0 9.26 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartMultidocument",
+            "label": "流程图: 多文档",
+            "previewPath": "M 0 1.34 L 15.84 1.34 L 15.84 9.49 C 11.88 8.26 9.18 8.26 7.92 9.49 C 6.66 10.71 3.96 10.71 0 9.49 Z M 1.08 1.34 L 1.08 0.67 L 16.92 0.67 L 16.92 6.7 M 2.16 0.67 L 2.16 0 L 18 0 L 18 5.91"
+          },
+          {
+            "id": "insert.shapes.flowChartTerminator",
+            "label": "终止",
+            "previewPath": "M 5.58 0 L 12.42 0 Q 18 0 18 5.58 L 18 5.58 Q 18 11.16 12.42 11.16 L 5.58 11.16 Q 0 11.16 0 5.58 L 0 5.58 Q 0 0 5.58 0 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartPreparation",
+            "label": "流程图: 准备",
+            "previewPath": "M 3.6 0 L 14.4 0 L 18 5.58 L 14.4 11.16 L 3.6 11.16 L 0 5.58 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartManualInput",
+            "label": "流程图: 手动输入",
+            "previewPath": "M 0 2.23 L 18 0 L 18 11.16 L 0 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartManualOperation",
+            "label": "流程图: 手动操作",
+            "previewPath": "M 0 0 L 18 0 L 14.4 11.16 L 3.6 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartConnector",
+            "label": "流程图: 接点",
+            "previewPath": "M 18 5.58 C 18 8.66 13.97 11.16 9 11.16 C 4.03 11.16 0 8.66 0 5.58 C 0 2.5 4.03 0 9 0 C 13.97 0 18 2.5 18 5.58 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartOffpageConnector",
+            "label": "流程图: 离页连接符",
+            "previewPath": "M 0 0 L 18 0 L 18 8.93 L 9 11.16 L 0 8.93 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartMagneticDisk",
+            "label": "流程图: 磁盘",
+            "previewPath": "M 0 1.86 L 0 9.3 C 0 10.33 4.03 11.16 9 11.16 C 13.97 11.16 18 10.33 18 9.3 L 18 1.86 C 18 0.83 13.97 0 9 0 C 4.03 0 0 0.83 0 1.86 Z M 0 1.86 C 0 2.89 4.03 3.72 9 3.72 C 13.97 3.72 18 2.89 18 1.86"
+          },
+          {
+            "id": "insert.shapes.flowChartMagneticDrum",
+            "label": "流程图: 直接访问存储器",
+            "previewPath": "M 15 0 C 16.66 0 18 2.5 18 5.58 C 18 8.66 16.66 11.16 15 11.16 L 3 11.16 C 1.34 11.16 0 8.66 0 5.58 C 0 2.5 1.34 0 3 0 Z M 15 0 C 13.34 0 12 2.5 12 5.58 C 12 8.66 13.34 11.16 15 11.16"
+          },
+          {
+            "id": "insert.shapes.flowChartDisplay",
+            "label": "流程图: 显示",
+            "previewPath": "M 0 5.58 L 3 0 L 15 0 C 16.66 0 18 2.5 18 5.58 C 18 8.66 16.66 11.16 15 11.16 L 3 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartDelay",
+            "label": "流程图: 延期",
+            "previewPath": "M 0 0 L 9 0 C 13.97 0 18 2.5 18 5.58 C 18 8.66 13.97 11.16 9 11.16 L 0 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartOr",
+            "label": "流程图: 或者",
+            "previewPath": "M 18 5.58 C 18 8.66 13.97 11.16 9 11.16 C 4.03 11.16 0 8.66 0 5.58 C 0 2.5 4.03 0 9 0 C 13.97 0 18 2.5 18 5.58 Z M 9 0 L 9 11.16 M 0 5.58 L 18 5.58"
+          },
+          {
+            "id": "insert.shapes.flowChartCollate",
+            "label": "流程图: 对照",
+            "previewPath": "M 0 0 L 18 0 L 9 5.58 L 18 11.16 L 0 11.16 L 9 5.58 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartSort",
+            "label": "流程图: 排序",
+            "previewPath": "M 9 0 L 18 5.58 L 9 11.16 L 0 5.58 Z M 0 5.58 L 18 5.58"
+          },
+          {
+            "id": "insert.shapes.flowChartExtract",
+            "label": "流程图: 摘录",
+            "previewPath": "M 9 0 L 18 11.16 L 0 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartMerge",
+            "label": "流程图: 合并",
+            "previewPath": "M 0 0 L 18 0 L 9 11.16 Z"
+          },
+          {
+            "id": "insert.shapes.flowChartSummingJunction",
+            "label": "流程图: 汇总连接",
+            "previewPath": "M 18 5.58 C 18 8.66 13.97 11.16 9 11.16 C 4.03 11.16 0 8.66 0 5.58 C 0 2.5 4.03 0 9 0 C 13.97 0 18 2.5 18 5.58 Z M 2.64 1.63 L 15.36 9.53 M 15.36 1.63 L 2.64 9.53"
+          },
+          {
+            "id": "insert.shapes.flowChartPunchedTape",
+            "label": "流程图: 资料带",
+            "previewPath": "M 0 1.12 C 3 0 6 0 9 1.12 C 12 2.23 15 2.23 18 1.12 L 18 10.04 C 15 8.93 12 8.93 9 10.04 C 6 11.16 3 11.16 0 10.04 Z"
+          }
+        ]
+      },
+      {
+        "id": "insert.shapes.group.7",
+        "kind": "grid",
+        "label": "标注",
+        "columns": 8,
+        "presentation": "shapeGallery",
+        "children": [
+          {
+            "id": "insert.shapes.wedgeRectCallout",
+            "label": "矩形标注",
+            "previewPath": "M 0 0 L 18 0 L 18 18 L 7.05 18 L 5.25 20.25 L 3.45 18 L 0 18 Z"
+          },
+          {
+            "id": "insert.shapes.wedgeRoundRectCallout",
+            "label": "圆角矩形标注",
+            "previewPath": "M 3 0 L 15 0 C 16.66 0 18 1.34 18 3 L 18 15 C 18 16.66 16.66 18 15 18 L 3 18 C 1.34 18 0 16.66 0 15 L 0 3 C 0 1.34 1.34 0 3 0 Z M 3.45 18 L 5.25 20.25 L 7.05 18 Z"
+          },
+          {
+            "id": "insert.shapes.wedgeEllipseCallout",
+            "label": "椭圆形标注",
+            "previewPath": "M 18 9 C 18 13.97 13.97 18 9 18 C 4.03 18 0 13.97 0 9 C 0 4.03 4.03 0 9 0 C 13.97 0 18 4.03 18 9 Z M 8.8 18 L 5.25 20.25 L 3.76 16.32 Z"
+          },
+          {
+            "id": "insert.shapes.cloudCallout",
+            "label": "云形标注",
+            "previewPath": "M 3.6 15.3 C 1.08 15.48 0 12.96 0.36 10.62 C 0.54 8.46 1.98 7.02 3.6 7.56 C 3.42 4.68 5.22 2.52 7.2 3.6 C 8.1 1.26 10.8 0.72 12.06 2.52 C 13.68 0.72 16.38 1.8 16.56 4.68 C 17.82 5.58 18 8.28 17.46 10.08 C 18 12.42 16.92 14.58 15.3 14.76 C 14.94 16.92 12.96 17.64 11.7 16.38 C 10.44 18 8.1 18 7.02 16.38 C 5.94 17.64 4.14 17.1 3.6 15.3 Z M 7.65 17.1 C 7.65 17.85 7.05 18.45 6.3 18.45 C 5.55 18.45 4.95 17.85 4.95 17.1 C 4.95 16.35 5.55 15.75 6.3 15.75 C 7.05 15.75 7.65 16.35 7.65 17.1 Z M 6.36 19.35 C 6.36 19.8 6 20.16 5.55 20.16 C 5.1 20.16 4.74 19.8 4.74 19.35 C 4.74 18.9 5.1 18.54 5.55 18.54 C 6 18.54 6.36 18.9 6.36 19.35 Z"
+          }
+        ]
+      }
+    ],
+    "insert.textBox": [
+      {
+        "id": "textbox.1",
+        "label": "绘制文本框"
+      },
+      {
+        "id": "textbox.2",
+        "label": "简单文本框"
+      }
+    ],
+    "insert.wordArt": [
+      {
+        "id": "insert.wordArt.gallery",
+        "label": "艺术字样式库",
+        "kind": "grid",
+        "columns": 4,
+        "children": [
+          {
+            "id": "insert.wordArt.blue",
+            "label": "填充：蓝色",
+            "swatch": "#4472C4",
+            "previewWordArt": {
+              "fill": "#4472C4",
+              "bold": true,
+              "italic": false
+            }
+          },
+          {
+            "id": "insert.wordArt.gold",
+            "label": "填充：金色",
+            "swatch": "#FFC000",
+            "previewWordArt": {
+              "fill": "#FFC000",
+              "bold": true,
+              "italic": false
+            }
+          },
+          {
+            "id": "insert.wordArt.red",
+            "label": "填充：深红",
+            "swatch": "#C00000",
+            "previewWordArt": {
+              "fill": "#C00000",
+              "bold": true,
+              "italic": false
+            }
+          },
+          {
+            "id": "insert.wordArt.purple",
+            "label": "填充：紫色",
+            "swatch": "#7030A0",
+            "previewWordArt": {
+              "fill": "#7030A0",
+              "bold": true,
+              "italic": false
+            }
+          },
+          {
+            "id": "insert.wordArt.green-italic",
+            "label": "填充：绿色；斜体",
+            "swatch": "#70AD47",
+            "previewWordArt": {
+              "fill": "#70AD47",
+              "bold": true,
+              "italic": true
+            }
+          },
+          {
+            "id": "insert.wordArt.white-orange",
+            "label": "填充：白色；描边：橙色",
+            "swatch": "#FFFFFF",
+            "previewWordArt": {
+              "fill": "#FFFFFF",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#ED7D31",
+                "widthEmu": 19050
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.white-red",
+            "label": "填充：白色；描边：深红",
+            "swatch": "#FFFFFF",
+            "previewWordArt": {
+              "fill": "#FFFFFF",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#C00000",
+                "widthEmu": 19050
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.gold-brown",
+            "label": "填充：金色；描边：棕色",
+            "swatch": "#FFC000",
+            "previewWordArt": {
+              "fill": "#FFC000",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#7F5F00",
+                "widthEmu": 12700
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.sky-navy",
+            "label": "填充：天蓝；描边：藏青",
+            "swatch": "#00B0F0",
+            "previewWordArt": {
+              "fill": "#00B0F0",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#1F4E79",
+                "widthEmu": 12700
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.navy-white",
+            "label": "填充：藏青；描边：白色",
+            "swatch": "#1F3864",
+            "previewWordArt": {
+              "fill": "#1F3864",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#FFFFFF",
+                "widthEmu": 12700
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.black-gold",
+            "label": "填充：黑色；描边：金色",
+            "swatch": "#0D0D0D",
+            "previewWordArt": {
+              "fill": "#0D0D0D",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#FFC000",
+                "widthEmu": 19050
+              }
+            }
+          },
+          {
+            "id": "insert.wordArt.silver-dark",
+            "label": "填充：银色；描边：深灰",
+            "swatch": "#D9D9D9",
+            "previewWordArt": {
+              "fill": "#D9D9D9",
+              "bold": true,
+              "italic": false,
+              "outline": {
+                "color": "#595959",
+                "widthEmu": 12700
+              }
+            }
+          }
+        ],
+        "presentation": "wordArtGallery"
+      }
+    ],
+    "insert.dropCap": [
+      {
+        "id": "dropcap.gallery",
+        "label": "首字下沉",
+        "kind": "grid",
+        "columns": 3,
+        "presentation": "dropCapGallery",
+        "children": [
+          {
+            "id": "dropcap.none",
+            "label": "无",
+            "previewText": "—"
+          },
+          {
+            "id": "dropcap.dropped",
+            "label": "下沉",
+            "previewText": "A"
+          },
+          {
+            "id": "dropcap.margin",
+            "label": "悬挂",
+            "previewText": "A"
+          }
+        ]
+      }
+    ],
+    "insert.field": [
+      {
+        "id": "field.1",
+        "label": "日期"
+      },
+      {
+        "id": "field.2",
+        "label": "时间"
+      },
+      {
+        "id": "field.3",
+        "label": "页码"
+      },
+      {
+        "id": "field.4",
+        "label": "总页数"
+      },
+      {
+        "id": "field.5",
+        "label": "文件名"
+      }
+    ],
+    "insert.header": [
+      {
+        "id": "header.gallery",
+        "label": "页眉样式库",
+        "kind": "heading"
+      },
+      {
+        "id": "header.style.1",
+        "label": "空白"
+      },
+      {
+        "id": "header.style.2",
+        "label": "三栏"
+      },
+      {
+        "id": "header.style.3",
+        "label": "边线"
+      },
+      {
+        "id": "header.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "header.edit",
+        "label": "编辑页眉"
+      },
+      {
+        "id": "header.remove",
+        "label": "删除页眉"
+      }
+    ],
+    "insert.footer": [
+      {
+        "id": "footer.gallery",
+        "label": "页脚样式库",
+        "kind": "heading"
+      },
+      {
+        "id": "footer.style.1",
+        "label": "空白"
+      },
+      {
+        "id": "footer.style.2",
+        "label": "三栏"
+      },
+      {
+        "id": "footer.style.3",
+        "label": "边线"
+      },
+      {
+        "id": "footer.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "footer.edit",
+        "label": "编辑页脚"
+      },
+      {
+        "id": "footer.remove",
+        "label": "删除页脚"
+      }
+    ],
+    "insert.pageNumber": [
+      {
+        "id": "pagenum.top.1",
+        "label": "顶端左侧"
+      },
+      {
+        "id": "pagenum.top.2",
+        "label": "顶端居中"
+      },
+      {
+        "id": "pagenum.top.3",
+        "label": "顶端右侧"
+      },
+      {
+        "id": "pagenum.bottom.1",
+        "label": "底端左侧"
+      },
+      {
+        "id": "pagenum.bottom.2",
+        "label": "底端居中"
+      },
+      {
+        "id": "pagenum.bottom.3",
+        "label": "底端右侧"
+      },
+      {
+        "id": "pagenum.current",
+        "label": "当前位置"
+      },
+      {
+        "id": "pagenum.sep",
+        "kind": "separator"
+      },
+      {
+        "id": "pagenum.format",
+        "label": "设置页码格式…"
+      },
+      {
+        "id": "pagenum.remove",
+        "label": "删除页码"
+      }
+    ],
+    "insert.symbol": [
+      {
+        "id": "insert.symbol.gallery",
+        "label": "符号",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "insert.symbol.cell.1",
+            "label": "—"
+          },
+          {
+            "id": "insert.symbol.cell.2",
+            "label": "…"
+          },
+          {
+            "id": "insert.symbol.cell.3",
+            "label": "·"
+          },
+          {
+            "id": "insert.symbol.cell.4",
+            "label": "§"
+          },
+          {
+            "id": "insert.symbol.cell.5",
+            "label": "¶"
+          },
+          {
+            "id": "insert.symbol.cell.6",
+            "label": "†"
+          },
+          {
+            "id": "insert.symbol.cell.7",
+            "label": "©"
+          },
+          {
+            "id": "insert.symbol.cell.8",
+            "label": "®"
+          },
+          {
+            "id": "insert.symbol.cell.9",
+            "label": "™"
+          },
+          {
+            "id": "insert.symbol.cell.10",
+            "label": "°"
+          },
+          {
+            "id": "insert.symbol.cell.11",
+            "label": "±"
+          },
+          {
+            "id": "insert.symbol.cell.12",
+            "label": "×"
+          },
+          {
+            "id": "insert.symbol.cell.13",
+            "label": "÷"
+          },
+          {
+            "id": "insert.symbol.cell.14",
+            "label": "≤"
+          },
+          {
+            "id": "insert.symbol.cell.15",
+            "label": "≥"
+          },
+          {
+            "id": "insert.symbol.cell.16",
+            "label": "≠"
+          },
+          {
+            "id": "insert.symbol.cell.17",
+            "label": "≈"
+          },
+          {
+            "id": "insert.symbol.cell.18",
+            "label": "∞"
+          },
+          {
+            "id": "insert.symbol.cell.19",
+            "label": "√"
+          },
+          {
+            "id": "insert.symbol.cell.20",
+            "label": "µ"
+          },
+          {
+            "id": "insert.symbol.cell.21",
+            "label": "€"
+          },
+          {
+            "id": "insert.symbol.cell.22",
+            "label": "£"
+          },
+          {
+            "id": "insert.symbol.cell.23",
+            "label": "¥"
+          },
+          {
+            "id": "insert.symbol.cell.24",
+            "label": "¢"
+          },
+          {
+            "id": "insert.symbol.cell.25",
+            "label": "←"
+          },
+          {
+            "id": "insert.symbol.cell.26",
+            "label": "→"
+          },
+          {
+            "id": "insert.symbol.cell.27",
+            "label": "↑"
+          },
+          {
+            "id": "insert.symbol.cell.28",
+            "label": "↓"
+          },
+          {
+            "id": "insert.symbol.cell.29",
+            "label": "⇐"
+          },
+          {
+            "id": "insert.symbol.cell.30",
+            "label": "⇒"
+          },
+          {
+            "id": "insert.symbol.cell.31",
+            "label": "★"
+          },
+          {
+            "id": "insert.symbol.cell.32",
+            "label": "☆"
+          },
+          {
+            "id": "insert.symbol.cell.33",
+            "label": "✓"
+          },
+          {
+            "id": "insert.symbol.cell.34",
+            "label": "✗"
+          },
+          {
+            "id": "insert.symbol.cell.35",
+            "label": "●"
+          },
+          {
+            "id": "insert.symbol.cell.36",
+            "label": "○"
+          },
+          {
+            "id": "insert.symbol.cell.37",
+            "label": "■"
+          },
+          {
+            "id": "insert.symbol.cell.38",
+            "label": "□"
+          },
+          {
+            "id": "insert.symbol.cell.39",
+            "label": "◆"
+          },
+          {
+            "id": "insert.symbol.cell.40",
+            "label": "◇"
+          },
+          {
+            "id": "insert.symbol.cell.41",
+            "label": "①"
+          },
+          {
+            "id": "insert.symbol.cell.42",
+            "label": "②"
+          },
+          {
+            "id": "insert.symbol.cell.43",
+            "label": "③"
+          },
+          {
+            "id": "insert.symbol.cell.44",
+            "label": "④"
+          },
+          {
+            "id": "insert.symbol.cell.45",
+            "label": "⑤"
+          },
+          {
+            "id": "insert.symbol.cell.46",
+            "label": "⑥"
+          },
+          {
+            "id": "insert.symbol.cell.47",
+            "label": "⑦"
+          },
+          {
+            "id": "insert.symbol.cell.48",
+            "label": "⑧"
+          },
+          {
+            "id": "insert.symbol.cell.49",
+            "label": "⑨"
+          },
+          {
+            "id": "insert.symbol.cell.50",
+            "label": "⑩"
+          }
+        ],
+        "presentation": "symbolGallery"
+      }
+    ],
+    "insert.equation": [
+      {
+        "id": "equation.gallery",
+        "label": "内置公式",
+        "kind": "grid",
+        "columns": 1,
+        "presentation": "equationGallery",
+        "children": [
+          {
+            "id": "equation.style.1",
+            "label": "圆的面积",
+            "previewText": "A = πr²"
+          },
+          {
+            "id": "equation.style.2",
+            "label": "二项式定理",
+            "previewText": "(x+a)ⁿ = Σₖ C(n,k)xᵏaⁿ⁻ᵏ"
+          },
+          {
+            "id": "equation.style.3",
+            "label": "和的展开式",
+            "previewText": "(1+x)ⁿ = 1 + nx/1! + n(n−1)x²/2! + ⋯"
+          },
+          {
+            "id": "equation.style.4",
+            "label": "傅里叶级数",
+            "previewText": "f(x) = a₀ + Σₙ(aₙ cos(nπx/L) + bₙ sin(nπx/L))"
+          },
+          {
+            "id": "equation.style.5",
+            "label": "勾股定理",
+            "previewText": "a² + b² = c²"
+          },
+          {
+            "id": "equation.style.6",
+            "label": "二次求根公式",
+            "previewText": "x = (−b ± √(b² − 4ac)) / 2a"
+          },
+          {
+            "id": "equation.style.7",
+            "label": "泰勒展开式",
+            "previewText": "eˣ = 1 + x/1! + x²/2! + x³/3! + ⋯"
+          },
+          {
+            "id": "equation.style.8",
+            "label": "三角恒等式",
+            "previewText": "sin α ± sin β = 2 sin((α ± β)/2) cos((α ∓ β)/2)"
+          }
+        ]
+      },
+      {
+        "id": "equation.custom",
+        "label": "插入新公式…"
+      }
+    ],
+    "design.theme": [
+      {
+        "id": "theme.1",
+        "label": "Office"
+      },
+      {
+        "id": "theme.2",
+        "label": "Facet"
+      },
+      {
+        "id": "theme.3",
+        "label": "Integral"
+      },
+      {
+        "id": "theme.4",
+        "label": "Ion"
+      },
+      {
+        "id": "theme.5",
+        "label": "Retrospect"
+      }
+    ],
+    "design.fonts": [
+      {
+        "id": "theme.fonts.1",
+        "label": "Office"
+      },
+      {
+        "id": "theme.fonts.2",
+        "label": "Aptos"
+      },
+      {
+        "id": "theme.fonts.3",
+        "label": "Arial"
+      },
+      {
+        "id": "theme.fonts.4",
+        "label": "Cambria"
+      },
+      {
+        "id": "theme.fonts.5",
+        "label": "等线"
+      }
+    ],
+    "design.colors": [
+      {
+        "id": "theme.colors.1",
+        "label": "Office"
+      },
+      {
+        "id": "theme.colors.2",
+        "label": "蓝色"
+      },
+      {
+        "id": "theme.colors.3",
+        "label": "绿色"
+      },
+      {
+        "id": "theme.colors.4",
+        "label": "灰度"
+      },
+      {
+        "id": "theme.colors.5",
+        "label": "红色"
+      }
+    ],
+    "design.pageColor": [
+      {
+        "id": "design.pageColor.none",
+        "label": "无颜色"
+      },
+      {
+        "id": "design.pageColor.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "design.pageColor.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "design.pageColor.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "design.pageColor.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "design.pageColor.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "design.pageColor.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "design.pageColor.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "design.pageColor.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "design.pageColor.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "design.pageColor.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "design.pageColor.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "design.pageColor.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "design.pageColor.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "design.pageColor.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "design.pageColor.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "design.pageColor.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "design.pageColor.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "design.pageColor.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "design.pageColor.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "design.pageColor.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "design.pageColor.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "design.pageColor.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "design.pageColor.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "design.pageColor.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "design.pageColor.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "design.pageColor.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "design.pageColor.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "design.pageColor.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "design.watermark": [
+      {
+        "id": "watermark.1",
+        "label": "机密"
+      },
+      {
+        "id": "watermark.2",
+        "label": "草稿"
+      },
+      {
+        "id": "watermark.3",
+        "label": "样本"
+      },
+      {
+        "id": "watermark.4",
+        "label": "自定义水印…"
+      },
+      {
+        "id": "watermark.5",
+        "label": "删除水印"
+      }
+    ],
+    "design.pageBorders": [
+      {
+        "id": "pageborder.1",
+        "label": "方框"
+      },
+      {
+        "id": "pageborder.2",
+        "label": "无"
+      }
+    ],
+    "layout.margins": [
+      {
+        "id": "margin.presets",
+        "label": "预设页边距",
+        "kind": "heading"
+      },
+      {
+        "id": "margin.1",
+        "label": "普通"
+      },
+      {
+        "id": "margin.2",
+        "label": "窄"
+      },
+      {
+        "id": "margin.3",
+        "label": "适中"
+      },
+      {
+        "id": "margin.4",
+        "label": "宽"
+      },
+      {
+        "id": "margin.5",
+        "label": "对称"
+      },
+      {
+        "id": "margin.custom",
+        "label": "自定义页边距…"
+      }
+    ],
+    "layout.orientation": [
+      {
+        "id": "orientation.1",
+        "label": "纵向"
+      },
+      {
+        "id": "orientation.2",
+        "label": "横向"
+      }
+    ],
+    "layout.paper": [
+      {
+        "id": "paper.1",
+        "label": "Letter"
+      },
+      {
+        "id": "paper.2",
+        "label": "Legal"
+      },
+      {
+        "id": "paper.3",
+        "label": "A4"
+      },
+      {
+        "id": "paper.4",
+        "label": "A5"
+      },
+      {
+        "id": "paper.5",
+        "label": "B5"
+      },
+      {
+        "id": "paper.6",
+        "label": "Executive"
+      },
+      {
+        "id": "paper.7",
+        "label": "其他纸张大小…"
+      }
+    ],
+    "layout.columns": [
+      {
+        "id": "columns.1",
+        "label": "一栏"
+      },
+      {
+        "id": "columns.2",
+        "label": "两栏"
+      },
+      {
+        "id": "columns.3",
+        "label": "三栏"
+      }
+    ],
+    "layout.breaks": [
+      {
+        "id": "break.page",
+        "label": "分页符",
+        "kind": "heading"
+      },
+      {
+        "id": "break.pageType.1",
+        "label": "分页符"
+      },
+      {
+        "id": "break.pageType.2",
+        "label": "分栏符"
+      },
+      {
+        "id": "break.pageType.3",
+        "label": "自动换行符"
+      },
+      {
+        "id": "break.section",
+        "label": "分节符",
+        "kind": "heading"
+      },
+      {
+        "id": "break.sectionType.1",
+        "label": "下一页"
+      },
+      {
+        "id": "break.sectionType.2",
+        "label": "连续"
+      },
+      {
+        "id": "break.sectionType.3",
+        "label": "偶数页"
+      },
+      {
+        "id": "break.sectionType.4",
+        "label": "奇数页"
+      }
+    ],
+    "layout.position": [
+      {
+        "id": "position.inline",
+        "label": "嵌入型"
+      },
+      {
+        "id": "position.grid",
+        "label": "文字环绕位置",
+        "kind": "grid",
+        "columns": 3,
+        "presentation": "positionPicker",
+        "children": [
+          {
+            "id": "position.top.1",
+            "label": "顶部 左侧"
+          },
+          {
+            "id": "position.top.2",
+            "label": "顶部 居中"
+          },
+          {
+            "id": "position.top.3",
+            "label": "顶部 右侧"
+          },
+          {
+            "id": "position.center.1",
+            "label": "中部 左侧"
+          },
+          {
+            "id": "position.center.2",
+            "label": "中部 居中"
+          },
+          {
+            "id": "position.center.3",
+            "label": "中部 右侧"
+          },
+          {
+            "id": "position.bottom.1",
+            "label": "底部 左侧"
+          },
+          {
+            "id": "position.bottom.2",
+            "label": "底部 居中"
+          },
+          {
+            "id": "position.bottom.3",
+            "label": "底部 右侧"
+          }
+        ]
+      }
+    ],
+    "layout.wrap": [
+      {
+        "id": "wrap.1",
+        "label": "嵌入型"
+      },
+      {
+        "id": "wrap.2",
+        "label": "四周型"
+      },
+      {
+        "id": "wrap.3",
+        "label": "紧密型"
+      },
+      {
+        "id": "wrap.4",
+        "label": "穿越型"
+      },
+      {
+        "id": "wrap.5",
+        "label": "上下型"
+      },
+      {
+        "id": "wrap.6",
+        "label": "衬于文字下方"
+      },
+      {
+        "id": "wrap.7",
+        "label": "浮于文字上方"
+      }
+    ],
+    "references.citation": [
+      {
+        "id": "citation.sources",
+        "label": "现有引文源",
+        "kind": "heading"
+      },
+      {
+        "id": "citation.add",
+        "label": "添加新源…"
+      }
+    ],
+    "references.index": [
+      {
+        "id": "index.1",
+        "label": "标记索引项…"
+      },
+      {
+        "id": "index.2",
+        "label": "插入索引…"
+      }
+    ],
+    "review.translate": [
+      {
+        "id": "translate.1",
+        "label": "翻译成英语"
+      },
+      {
+        "id": "translate.2",
+        "label": "翻译成中文"
+      },
+      {
+        "id": "translate.3",
+        "label": "翻译成法语"
+      },
+      {
+        "id": "translate.4",
+        "label": "翻译成德语"
+      },
+      {
+        "id": "translate.5",
+        "label": "翻译成日语"
+      }
+    ],
+    "review.deleteComment": [
+      {
+        "id": "comment.delete.1",
+        "label": "删除批注"
+      },
+      {
+        "id": "comment.delete.2",
+        "label": "删除已解决的批注"
+      },
+      {
+        "id": "comment.delete.3",
+        "label": "删除所有批注"
+      }
+    ],
+    "review.revisionDisplay": [
+      {
+        "id": "revision.display.1",
+        "label": "简单标记"
+      },
+      {
+        "id": "revision.display.2",
+        "label": "所有标记"
+      },
+      {
+        "id": "revision.display.3",
+        "label": "无标记"
+      },
+      {
+        "id": "revision.display.4",
+        "label": "原始状态"
+      }
+    ],
+    "review.accept": [
+      {
+        "id": "revision.accept.1",
+        "label": "接受此修订"
+      },
+      {
+        "id": "revision.accept.2",
+        "label": "接受所有修订"
+      }
+    ],
+    "review.reject": [
+      {
+        "id": "revision.reject.1",
+        "label": "拒绝此修订"
+      },
+      {
+        "id": "revision.reject.2",
+        "label": "拒绝所有修订"
+      }
+    ],
+    "context.tableShading": [
+      {
+        "id": "context.tableShading.none",
+        "label": "无颜色"
+      },
+      {
+        "id": "context.tableShading.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.tableShading.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "context.tableShading.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "context.tableShading.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "context.tableShading.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "context.tableShading.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "context.tableShading.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "context.tableShading.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "context.tableShading.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "context.tableShading.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "context.tableShading.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "context.tableShading.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "context.tableShading.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "context.tableShading.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "context.tableShading.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "context.tableShading.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.tableShading.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.tableShading.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "context.tableShading.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "context.tableShading.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "context.tableShading.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "context.tableShading.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "context.tableShading.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "context.tableShading.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.tableShading.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.tableShading.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "context.tableShading.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.tableShading.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "context.tableBorders": [
+      {
+        "id": "table.border.1",
+        "label": "所有框线"
+      },
+      {
+        "id": "table.border.2",
+        "label": "外侧框线"
+      },
+      {
+        "id": "table.border.3",
+        "label": "内部框线"
+      },
+      {
+        "id": "table.border.4",
+        "label": "上框线"
+      },
+      {
+        "id": "table.border.5",
+        "label": "下框线"
+      },
+      {
+        "id": "table.border.6",
+        "label": "左框线"
+      },
+      {
+        "id": "table.border.7",
+        "label": "右框线"
+      },
+      {
+        "id": "table.border.8",
+        "label": "无框线"
+      },
+      {
+        "id": "table.border.9",
+        "label": "边框样式"
+      },
+      {
+        "id": "table.border.10",
+        "label": "边框宽度"
+      },
+      {
+        "id": "table.border.11",
+        "label": "边框颜色"
+      }
+    ],
+    "context.tableSelect": [
+      {
+        "id": "table.select.1",
+        "label": "选择单元格"
+      },
+      {
+        "id": "table.select.2",
+        "label": "选择列"
+      },
+      {
+        "id": "table.select.3",
+        "label": "选择行"
+      },
+      {
+        "id": "table.select.4",
+        "label": "选择表格"
+      }
+    ],
+    "context.tableDelete": [
+      {
+        "id": "table.delete.1",
+        "label": "删除单元格"
+      },
+      {
+        "id": "table.delete.2",
+        "label": "删除列"
+      },
+      {
+        "id": "table.delete.3",
+        "label": "删除行"
+      },
+      {
+        "id": "table.delete.4",
+        "label": "删除表格"
+      }
+    ],
+    "context.tableAutoFit": [
+      {
+        "id": "table.autofit.1",
+        "label": "根据内容自动调整表格"
+      },
+      {
+        "id": "table.autofit.2",
+        "label": "根据窗口自动调整表格"
+      },
+      {
+        "id": "table.autofit.3",
+        "label": "固定列宽"
+      }
+    ],
+    "context.cellTextDirection": [
+      {
+        "id": "table.textDirection.1",
+        "label": "横排"
+      },
+      {
+        "id": "table.textDirection.2",
+        "label": "竖排"
+      },
+      {
+        "id": "table.textDirection.3",
+        "label": "旋转 90°"
+      },
+      {
+        "id": "table.textDirection.4",
+        "label": "旋转 270°"
+      }
+    ],
+    "context.shapeFill": [
+      {
+        "id": "context.shapeFill.none",
+        "label": "无填充"
+      },
+      {
+        "id": "context.shapeFill.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeFill.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "context.shapeFill.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "context.shapeFill.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "context.shapeFill.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "context.shapeFill.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "context.shapeFill.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "context.shapeFill.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "context.shapeFill.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "context.shapeFill.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "context.shapeFill.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "context.shapeFill.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeFill.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeFill.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "context.shapeFill.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "context.shapeFill.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "context.shapeFill.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "context.shapeFill.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "context.shapeFill.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "context.shapeFill.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeFill.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeFill.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "context.shapeFill.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeFill.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "context.shapeOutline": [
+      {
+        "id": "context.shapeOutline.none",
+        "label": "无轮廓"
+      },
+      {
+        "id": "context.shapeOutline.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeOutline.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "context.shapeOutline.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "context.shapeOutline.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "context.shapeOutline.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "context.shapeOutline.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "context.shapeOutline.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "context.shapeOutline.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "context.shapeOutline.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "context.shapeOutline.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "context.shapeOutline.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "context.shapeOutline.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeOutline.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeOutline.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "context.shapeOutline.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "context.shapeOutline.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "context.shapeOutline.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "context.shapeOutline.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "context.shapeOutline.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "context.shapeOutline.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeOutline.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeOutline.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "context.shapeOutline.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeOutline.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "context.shapeTextColor": [
+      {
+        "id": "context.shapeTextColor.none",
+        "label": "自动"
+      },
+      {
+        "id": "context.shapeTextColor.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeTextColor.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "context.shapeTextColor.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "context.shapeTextColor.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "context.shapeTextColor.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "context.shapeTextColor.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "context.shapeTextColor.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "context.shapeTextColor.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "context.shapeTextColor.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "context.shapeTextColor.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "context.shapeTextColor.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeTextColor.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.shapeTextColor.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "context.shapeTextColor.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "context.shapeTextColor.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "context.shapeTextColor.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "context.shapeTextColor.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "context.shapeTextColor.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "context.shapeTextColor.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.shapeTextColor.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.shapeTextColor.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "context.shapeTextColor.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.shapeTextColor.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "context.hfPageNumber": [
+      {
+        "id": "hf.pagenum.top.1",
+        "label": "顶端左侧"
+      },
+      {
+        "id": "hf.pagenum.top.2",
+        "label": "顶端居中"
+      },
+      {
+        "id": "hf.pagenum.top.3",
+        "label": "顶端右侧"
+      },
+      {
+        "id": "hf.pagenum.bottom.1",
+        "label": "底端左侧"
+      },
+      {
+        "id": "hf.pagenum.bottom.2",
+        "label": "底端居中"
+      },
+      {
+        "id": "hf.pagenum.bottom.3",
+        "label": "底端右侧"
+      },
+      {
+        "id": "hf.pagenum.current",
+        "label": "当前位置"
+      },
+      {
+        "id": "hf.pagenum.pages",
+        "label": "总页数"
+      },
+      {
+        "id": "hf.pagenum.format",
+        "label": "设置页码格式…"
+      },
+      {
+        "id": "hf.pagenum.remove",
+        "label": "删除页码"
+      }
+    ],
+    "context.hfDateTime": [
+      {
+        "id": "hf.datetime.1",
+        "label": "日期"
+      },
+      {
+        "id": "hf.datetime.2",
+        "label": "时间"
+      }
+    ],
+    "context.pictureRotate": [
+      {
+        "id": "picture.rotate.1",
+        "label": "向右旋转 90°"
+      },
+      {
+        "id": "picture.rotate.2",
+        "label": "向左旋转 90°"
+      },
+      {
+        "id": "picture.rotate.3",
+        "label": "水平翻转"
+      },
+      {
+        "id": "picture.rotate.4",
+        "label": "垂直翻转"
+      }
+    ],
+    "context.tableBorderColor": [
+      {
+        "id": "context.tableBorderColor.none",
+        "label": "自动"
+      },
+      {
+        "id": "context.tableBorderColor.theme",
+        "label": "主题颜色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.tableBorderColor.theme.1",
+            "label": "白色",
+            "swatch": "#FFFFFF"
+          },
+          {
+            "id": "context.tableBorderColor.theme.2",
+            "label": "黑色",
+            "swatch": "#000000"
+          },
+          {
+            "id": "context.tableBorderColor.theme.3",
+            "label": "浅灰色",
+            "swatch": "#E7E6E6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.4",
+            "label": "蓝灰色",
+            "swatch": "#0E2841"
+          },
+          {
+            "id": "context.tableBorderColor.theme.5",
+            "label": "蓝色",
+            "swatch": "#156082"
+          },
+          {
+            "id": "context.tableBorderColor.theme.6",
+            "label": "橙色",
+            "swatch": "#E97132"
+          },
+          {
+            "id": "context.tableBorderColor.theme.7",
+            "label": "绿色",
+            "swatch": "#196B24"
+          },
+          {
+            "id": "context.tableBorderColor.theme.8",
+            "label": "天蓝色",
+            "swatch": "#0F9ED5"
+          },
+          {
+            "id": "context.tableBorderColor.theme.9",
+            "label": "紫色",
+            "swatch": "#A02B93"
+          },
+          {
+            "id": "context.tableBorderColor.theme.10",
+            "label": "浅绿色",
+            "swatch": "#4EA72E"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.1",
+            "label": "主题色 1 行 1 列",
+            "swatch": "#F2F2F2"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.2",
+            "label": "主题色 1 行 2 列",
+            "swatch": "#7F7F7F"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.3",
+            "label": "主题色 1 行 3 列",
+            "swatch": "#D0CECE"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.4",
+            "label": "主题色 1 行 4 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.5",
+            "label": "主题色 1 行 5 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.6",
+            "label": "主题色 1 行 6 列",
+            "swatch": "#FCE4D6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.7",
+            "label": "主题色 1 行 7 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.8",
+            "label": "主题色 1 行 8 列",
+            "swatch": "#DDEBF7"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.9",
+            "label": "主题色 1 行 9 列",
+            "swatch": "#E4DFEC"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.1.10",
+            "label": "主题色 1 行 10 列",
+            "swatch": "#E2F0D9"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.1",
+            "label": "主题色 2 行 1 列",
+            "swatch": "#D9D9D9"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.2",
+            "label": "主题色 2 行 2 列",
+            "swatch": "#595959"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.3",
+            "label": "主题色 2 行 3 列",
+            "swatch": "#AEAAAA"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.4",
+            "label": "主题色 2 行 4 列",
+            "swatch": "#BDD7EE"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.5",
+            "label": "主题色 2 行 5 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.6",
+            "label": "主题色 2 行 6 列",
+            "swatch": "#F8CBAD"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.7",
+            "label": "主题色 2 行 7 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.8",
+            "label": "主题色 2 行 8 列",
+            "swatch": "#9DC3E6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.9",
+            "label": "主题色 2 行 9 列",
+            "swatch": "#D9E1F2"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.2.10",
+            "label": "主题色 2 行 10 列",
+            "swatch": "#C6E0B4"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.1",
+            "label": "主题色 3 行 1 列",
+            "swatch": "#BFBFBF"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.2",
+            "label": "主题色 3 行 2 列",
+            "swatch": "#3F3F3F"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.3",
+            "label": "主题色 3 行 3 列",
+            "swatch": "#757171"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.4",
+            "label": "主题色 3 行 4 列",
+            "swatch": "#8EA9DB"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.5",
+            "label": "主题色 3 行 5 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.6",
+            "label": "主题色 3 行 6 列",
+            "swatch": "#F4B084"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.7",
+            "label": "主题色 3 行 7 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.8",
+            "label": "主题色 3 行 8 列",
+            "swatch": "#5B9BD5"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.9",
+            "label": "主题色 3 行 9 列",
+            "swatch": "#B4C6E7"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.3.10",
+            "label": "主题色 3 行 10 列",
+            "swatch": "#A9D18E"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.1",
+            "label": "主题色 4 行 1 列",
+            "swatch": "#A6A6A6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.2",
+            "label": "主题色 4 行 2 列",
+            "swatch": "#262626"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.3",
+            "label": "主题色 4 行 3 列",
+            "swatch": "#3A3838"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.4",
+            "label": "主题色 4 行 4 列",
+            "swatch": "#4472C4"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.5",
+            "label": "主题色 4 行 5 列",
+            "swatch": "#2E75B6"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.6",
+            "label": "主题色 4 行 6 列",
+            "swatch": "#C65911"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.7",
+            "label": "主题色 4 行 7 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.8",
+            "label": "主题色 4 行 8 列",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.9",
+            "label": "主题色 4 行 9 列",
+            "swatch": "#8064A2"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.4.10",
+            "label": "主题色 4 行 10 列",
+            "swatch": "#70AD47"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.1",
+            "label": "主题色 5 行 1 列",
+            "swatch": "#808080"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.2",
+            "label": "主题色 5 行 2 列",
+            "swatch": "#0D0D0D"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.3",
+            "label": "主题色 5 行 3 列",
+            "swatch": "#171616"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.4",
+            "label": "主题色 5 行 4 列",
+            "swatch": "#203864"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.5",
+            "label": "主题色 5 行 5 列",
+            "swatch": "#1F4E78"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.6",
+            "label": "主题色 5 行 6 列",
+            "swatch": "#843C0C"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.7",
+            "label": "主题色 5 行 7 列",
+            "swatch": "#375623"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.8",
+            "label": "主题色 5 行 8 列",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.9",
+            "label": "主题色 5 行 9 列",
+            "swatch": "#5B315E"
+          },
+          {
+            "id": "context.tableBorderColor.theme.shade.5.10",
+            "label": "主题色 5 行 10 列",
+            "swatch": "#385723"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.tableBorderColor.standard",
+        "label": "标准色",
+        "kind": "grid",
+        "columns": 10,
+        "children": [
+          {
+            "id": "context.tableBorderColor.standard.1",
+            "label": "深红色",
+            "swatch": "#C00000"
+          },
+          {
+            "id": "context.tableBorderColor.standard.2",
+            "label": "红色",
+            "swatch": "#FF0000"
+          },
+          {
+            "id": "context.tableBorderColor.standard.3",
+            "label": "橙黄色",
+            "swatch": "#FFC000"
+          },
+          {
+            "id": "context.tableBorderColor.standard.4",
+            "label": "黄色",
+            "swatch": "#FFFF00"
+          },
+          {
+            "id": "context.tableBorderColor.standard.5",
+            "label": "浅绿色",
+            "swatch": "#92D050"
+          },
+          {
+            "id": "context.tableBorderColor.standard.6",
+            "label": "绿色",
+            "swatch": "#00B050"
+          },
+          {
+            "id": "context.tableBorderColor.standard.7",
+            "label": "浅蓝色",
+            "swatch": "#00B0F0"
+          },
+          {
+            "id": "context.tableBorderColor.standard.8",
+            "label": "蓝色",
+            "swatch": "#0070C0"
+          },
+          {
+            "id": "context.tableBorderColor.standard.9",
+            "label": "深蓝色",
+            "swatch": "#002060"
+          },
+          {
+            "id": "context.tableBorderColor.standard.10",
+            "label": "紫色",
+            "swatch": "#7030A0"
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "id": "context.tableBorderColor.more",
+        "label": "其他颜色…"
+      }
+    ],
+    "context.hfHeader": [
+      {
+        "id": "hf.header.1",
+        "label": "编辑页眉"
+      },
+      {
+        "id": "hf.header.2",
+        "label": "删除页眉"
+      }
+    ],
+    "context.hfFooter": [
+      {
+        "id": "hf.footer.1",
+        "label": "编辑页脚"
+      },
+      {
+        "id": "hf.footer.2",
+        "label": "删除页脚"
+      }
+    ],
+    "references.zoteroSettings": [
+      {
+        "id": "zotero.settings.1",
+        "label": "文档首选项"
+      },
+      {
+        "id": "zotero.settings.2",
+        "label": "删除 Zotero 域代码"
+      }
+    ]
+  }
+}

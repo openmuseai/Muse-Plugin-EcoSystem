@@ -1,0 +1,12 @@
+{
+  "profile": "openmuse-word-features/1",
+  "features": [
+    {"id": "word.open", "defaultEnabled": true, "requires": ["host.resource.open"]},
+    {"id": "word.view", "defaultEnabled": true, "requires": ["word.view.paginated"]},
+    {"id": "word.edit", "defaultEnabled": false, "requires": ["word.edit.insert", "word.edit.delete", "word.edit.undo"]},
+    {"id": "word.save", "defaultEnabled": false, "requires": ["word.document.export.docx", "host.resource.commit"]},
+    {"id": "word.templates", "defaultEnabled": false, "requires": ["word.document.create", "word.template.apply"]},
+    {"id": "word.wordCount", "defaultEnabled": true, "requires": ["word.statistics.v1"]},
+    {"id": "word.extensionWordCount", "defaultEnabled": false, "requires": ["word.snapshot.text.v1", "extension.word-count.v1"]}
+  ]
+}

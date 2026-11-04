@@ -1,0 +1,26 @@
+{
+  "profile": "openmuse-word-stack-policy/1",
+  "wordApiMajor": 1,
+  "editorSurfaceMajor": 2,
+  "productProfile": "openmuse-word-product/1",
+  "components": {
+    "core": {"path": "ioffice/libs/word-core/Cargo.toml", "package": "word-core", "minimum": "0.1.1"},
+    "ffi": {"path": "ioffice/samples/docx-mvp-render/native/Cargo.toml", "package": "word_core_ffi", "minimum": "0.1.1"},
+    "render": {"path": "ioffice/samples/libs/word/word_render/pubspec.yaml", "package": "word_render", "minimum": "0.1.2"},
+    "editor": {"path": "ioffice/samples/libs/word/word_editor/pubspec.yaml", "package": "word_editor", "minimum": "0.4.18"},
+    "plugin": {"path": "Muse-Plugin-Ecosystem/plugins/word/package.json", "package": "@openmuse/word-plugin", "minimum": "0.1.22"},
+    "hostDesktop": {"path": "Muse-Client/app/openmuse_host/pubspec.yaml", "package": "openmuse_host", "minimum": "1.0.0"},
+    "hostMobile": {"path": "Muse-Client/app/openmuse_mobile/pubspec.yaml", "package": "openmuse_mobile", "minimum": "0.0.1"},
+    "hostWeb": {"path": "Muse-Client/app/openmuse_web/pubspec.yaml", "package": "openmuse_web", "minimum": "0.1.0"}
+  },
+  "e2eCases": {
+    "renderCommon": ["signed-install", "capability-routing", "open-render", "offline-reopen"],
+    "renderDesktop": ["native-editor", "embedded-window", "chrome-shell", "dsh-pane"],
+    "common": ["signed-install", "capability-routing", "open-edit-save-reopen", "offline-reopen", "upgrade-rollback"],
+    "full": ["docx-fidelity", "performance-budget", "accessibility"],
+    "desktop": ["native-editor", "embedded-window", "independent-window"],
+    "android": ["native-editor", "background-resume"],
+    "ios": ["native-editor", "background-resume"],
+    "web": ["wasm-engine", "cache-reload"]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@openmuse/word-plugin",
+  "version": "0.1.22",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "audit:genoffice": "node scripts/audit-genoffice.mjs",
+    "audit:shape-previews": "node --experimental-strip-types scripts/sync-shape-previews.mjs",
+    "audit:icons": "node scripts/sync-genoffice-icons.mjs",
+    "audit:cover-previews": "node scripts/sync-cover-previews.mjs",
+    "audit:wordart-previews": "node scripts/sync-wordart-previews.mjs",
+    "audit:quick-styles": "node scripts/audit-quick-styles.mjs",
+    "sync:cover-previews": "node scripts/sync-cover-previews.mjs --write",
+    "sync:wordart-previews": "node scripts/sync-wordart-previews.mjs --write",
+    "sync:icons": "node scripts/sync-genoffice-icons.mjs --write",
+    "sync:shape-previews": "node --experimental-strip-types scripts/sync-shape-previews.mjs --write",
+    "build": "node scripts/build.mjs",
+    "pack": "node scripts/pack.mjs",
+    "verify": "node scripts/verify.mjs",
+    "stack:plan": "node scripts/stack.mjs --dry-run",
+    "stack:build": "node scripts/stack.mjs --gate build",
+    "stack:e2e": "node scripts/stack.mjs --gate e2e",
+    "test": "node --test test/*.test.mjs"
+  }
+}
