@@ -1,0 +1,14 @@
+{
+  "profile": "openmuse-pdf-features/1",
+  "features": [
+    {"id": "pdf.read", "defaultEnabled": true},
+    {"id": "pdf.view", "defaultEnabled": true},
+    {"id": "pdf.textEdit", "defaultEnabled": true},
+    {"id": "pdf.pageCompose", "defaultEnabled": true},
+    {"id": "pdf.annotate", "defaultEnabled": false},
+    {"id": "pdf.forms", "defaultEnabled": false},
+    {"id": "pdf.convert", "defaultEnabled": false},
+    {"id": "pdf.sign", "defaultEnabled": false},
+    {"id": "pdf.ai", "defaultEnabled": false}
+  ]
+}

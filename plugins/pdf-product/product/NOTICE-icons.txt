@@ -1,0 +1,10 @@
+The PDF Ribbon SVG geometry in icons.json is adapted from GenOffice,
+apps/pdf/src/renderer/icons.tsx, licensed under Apache License 2.0.
+Source: Muse-Plugin-Ecosystem/plugins/genoffice-pptx/vendor/genoffice
+Copyright GenOffice contributors.
+
+The 70 Office color swatches in chrome.json are adapted from GenOffice,
+packages/ui/src/color-picker.tsx, also licensed under Apache License 2.0.
+
+The Genspark brand mark is not included. The PDF product retains Muse AI
+branding in its own Host and plugin UI.
