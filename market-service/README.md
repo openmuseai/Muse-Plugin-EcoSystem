@@ -68,3 +68,13 @@ Build the production image on CI or a builder with enough memory, then push it t
 The local pilot accepts MCPB archives up to 80 MiB compressed, 160 MiB expanded, and 1,024 ZIP entries. Android applies the same compressed and expanded byte budgets to the static-site portion and verifies the complete Registry SHA-256 before extraction.
 
 The current token authentication is a pilot implementation. The public deployment keeps all write and admin routes private to the loopback listener. Before opening third-party upload or the reviewer console directly to the internet, add independent OIDC authentication, per-developer namespace ownership, malware and license scanning, and explicit human review gates. The client-facing MCP Registry/MCPB/MCP Apps contract remains unchanged.
+
+## US read-only mirror
+
+`https://us.openmuseai.com/v0.1/servers` serves a snapshot of the approved catalog. `scripts/mirror_approved_registry.py` downloads each MCPB from the primary registry, verifies its SHA-256, rewrites public package and editor URLs to the US origin, and replaces the catalog atomically. The US mirror has no upload, review, or admin endpoint. The editor MCP service runs from `production.us-mirror.compose.yaml` on loopback port 18796, behind the US Nginx `/mcp` and `/editor/` routes. Its published package URLs use immutable digest filenames.
+
+On the US VPS, the script is installed at `/opt/openmuse-us/mirror_approved_registry.py` and the approved files are under `/var/www/openmuse-us/market`. `openmuse-us-market-mirror.timer` refreshes the snapshot daily. Check `systemctl status openmuse-us-market-mirror.service` and `systemctl list-timers openmuse-us-market-mirror.timer` after changes. The client packages for the US region set `OPENMUSE_MCP_REGISTRY_URL=https://us.openmuseai.com`; the VPS desktop launcher exports the same value.
+
+## Pinned overseas launch composition
+
+The overseas first launch supplies only the reviewed Slides MCPB and native OpenMuse Notes (bundled with the client). Pass `--launch-manifest /opt/openmuse-us/official-launch-plugins.json` to the mirror to restrict the official distribution to exact `officialMcp` name/version/SHA-256 pins. Every pin must already be approved in the primary registry; a missing version or digest mismatch fails before replacing the previous catalog. The app's native Notes integration is not falsely represented as an MCPB. This changes official supply, while installed client packages remain local.
