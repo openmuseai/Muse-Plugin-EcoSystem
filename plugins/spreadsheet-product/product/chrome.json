@@ -1,0 +1,3690 @@
+{
+  "profile": "openmuse-spreadsheet-chrome/1",
+  "initialTab": "home",
+  "metrics": {
+    "tabHeight": 35,
+    "ribbonHeight": 80,
+    "compactRibbonHeight": 48,
+    "formulaHeight": 40,
+    "sheetTabsHeight": 42,
+    "statusHeight": 24,
+    "aiRailWidth": 34,
+    "ribbonLargeWidth": 45,
+    "ribbonLargeWideWidth": 58,
+    "ribbonFontNameWidth": 130,
+    "ribbonFontSizeWidth": 50,
+    "ribbonNumberFormatWidth": 88,
+    "statusHorizontalPadding": 12,
+    "statusZoomSliderWidth": 110,
+    "statusViewButtonWidth": 22,
+    "statusViewGap": 2,
+    "rowHeaderWidth": 46,
+    "columnHeaderHeight": 20,
+    "dialogBackdropBlur": 4,
+    "dialogBackdropOpacity": 0.5
+  },
+  "showRibbonGroupCaptions": false,
+  "colors": {
+    "chrome": "#202020",
+    "surface": "#242424",
+    "canvas": "#191919",
+    "grid": "#232323",
+    "text": "#e8e8e8",
+    "muted": "#aaaaaa",
+    "border": "#414141",
+    "accent": "#34a853",
+    "statusBackground": "#252525",
+    "statusBorder": "#3a3a3a",
+    "statusZoom": "#777777",
+    "statusSelectedBackground": "#1d3328",
+    "dialogPrimary": "#e4e4e4",
+    "dialogPrimaryText": "#1e1e1e",
+    "dialogFocus": "#8ab4f8",
+    "dialogBackdrop": "#000000"
+  },
+  "statusMessages": {
+    "ready": "工作簿已加载，行列可编辑。",
+    "modified": "工作簿已修改",
+    "limitedObjects": "对象预览受限",
+    "limitedRows": "行尺寸预览受限"
+  },
+  "statusViews": [
+    {
+      "value": "normal",
+      "label": "普通视图",
+      "icon": "grid_view",
+      "command": "view.normal"
+    },
+    {
+      "value": "pageBreakPreview",
+      "label": "分页预览",
+      "icon": "view_array",
+      "command": "view.pageBreakPreview"
+    }
+  ],
+  "zoomDialog": {
+    "title": "缩放",
+    "magnification": "缩放比例",
+    "fitSelection": "恰好容纳选定区域",
+    "custom": "自定义",
+    "cancel": "取消",
+    "confirm": "确定",
+    "rangeError": "请输入 10 到 400 之间的数字。",
+    "presets": [
+      200,
+      100,
+      75,
+      50,
+      25
+    ],
+    "min": 10,
+    "max": 400,
+    "zoomCommand": "view.zoom",
+    "fitSelectionCommand": "view.zoomToSelection"
+  },
+  "goToDialog": {
+    "title": "定位（Go To）",
+    "reference": "引用位置",
+    "placeholder": "例如 A1 或 B2:D20",
+    "hint": "输入单元格或矩形区域引用。",
+    "invalidReference": "请输入有效的单元格或区域引用。",
+    "cancel": "取消",
+    "confirm": "定位",
+    "command": "selection.set"
+  },
+  "statusStatistics": [
+    {
+      "id": "AVERAGE",
+      "label": "平均值",
+      "defaultEnabled": true
+    },
+    {
+      "id": "COUNTA",
+      "label": "计数",
+      "defaultEnabled": true
+    },
+    {
+      "id": "COUNT",
+      "label": "数值计数",
+      "defaultEnabled": false
+    },
+    {
+      "id": "MIN",
+      "label": "最小值",
+      "defaultEnabled": false
+    },
+    {
+      "id": "MAX",
+      "label": "最大值",
+      "defaultEnabled": false
+    },
+    {
+      "id": "SUM",
+      "label": "求和",
+      "defaultEnabled": true
+    }
+  ],
+  "sheetTabColorPalette": {
+    "noColor": "无颜色",
+    "themeTitle": "主题颜色",
+    "standardTitle": "标准颜色",
+    "moreColors": "更多颜色…",
+    "themeBase": [
+      "FFFFFF",
+      "000000",
+      "E7E6E6",
+      "0E2841",
+      "156082",
+      "E97132",
+      "196B24",
+      "0F9ED5",
+      "A02B93",
+      "4EA72E"
+    ],
+    "themeShades": [
+      [
+        "F2F2F2",
+        "7F7F7F",
+        "D0CECE",
+        "DDEBF7",
+        "DDEBF7",
+        "FCE4D6",
+        "E2F0D9",
+        "DDEBF7",
+        "E4DFEC",
+        "E2F0D9"
+      ],
+      [
+        "D9D9D9",
+        "595959",
+        "AEAAAA",
+        "BDD7EE",
+        "9DC3E6",
+        "F8CBAD",
+        "C6E0B4",
+        "9DC3E6",
+        "D9E1F2",
+        "C6E0B4"
+      ],
+      [
+        "BFBFBF",
+        "3F3F3F",
+        "757171",
+        "8EA9DB",
+        "5B9BD5",
+        "F4B084",
+        "A9D18E",
+        "5B9BD5",
+        "B4C6E7",
+        "A9D18E"
+      ],
+      [
+        "A6A6A6",
+        "262626",
+        "3A3838",
+        "4472C4",
+        "2E75B6",
+        "C65911",
+        "70AD47",
+        "00B0F0",
+        "8064A2",
+        "70AD47"
+      ],
+      [
+        "808080",
+        "0D0D0D",
+        "171616",
+        "203864",
+        "1F4E78",
+        "843C0C",
+        "375623",
+        "0070C0",
+        "5B315E",
+        "385723"
+      ]
+    ],
+    "standard": [
+      "C00000",
+      "FF0000",
+      "FFC000",
+      "FFFF00",
+      "92D050",
+      "00B050",
+      "00B0F0",
+      "0070C0",
+      "002060",
+      "7030A0"
+    ]
+  },
+  "sheetTabMenu": "sheetTab",
+  "visualActions": {
+    "move": "object.move",
+    "resize": "object.move",
+    "delete": "object.delete"
+  },
+  "quickAccess": [
+    {
+      "id": "save",
+      "label": "保存",
+      "icon": "save",
+      "command": "file.saveBytes"
+    },
+    {
+      "id": "saveAs",
+      "label": "另存为",
+      "icon": "save_as",
+      "command": "file.saveAs"
+    },
+    {
+      "id": "undo",
+      "label": "撤销",
+      "icon": "undo",
+      "command": "edit.undo"
+    },
+    {
+      "id": "redo",
+      "label": "重做",
+      "icon": "redo",
+      "command": "edit.redo"
+    },
+    {
+      "id": "autoSave",
+      "label": "自动保存",
+      "icon": "toggle_off",
+      "command": "file.autoSave"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "home",
+      "label": "开始",
+      "groups": [
+        {
+          "id": "ai",
+          "label": "AI",
+          "items": [
+            {
+              "id": "assistant",
+              "label": "Muse AI",
+              "icon": "auto_awesome",
+              "command": null,
+              "menu": "ai"
+            },
+            {
+              "id": "check",
+              "label": "AI 校验",
+              "icon": "fact_check",
+              "command": null,
+              "menu": "ai"
+            },
+            {
+              "id": "analyze",
+              "label": "AI 分析",
+              "icon": "auto_graph",
+              "command": null,
+              "menu": "ai"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "assistant",
+                "check",
+                "analyze"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "clipboard",
+          "label": "剪贴板",
+          "items": [
+            {
+              "id": "paste",
+              "label": "粘贴",
+              "icon": "content_paste",
+              "command": "edit.paste",
+              "menu": "paste"
+            },
+            {
+              "id": "pasteSpecial",
+              "label": "选择性粘贴",
+              "icon": "content_paste_go",
+              "command": "edit.pasteSpecial",
+              "menu": "pasteSpecial"
+            },
+            {
+              "id": "cut",
+              "label": "剪切",
+              "icon": "content_cut",
+              "command": "edit.cut"
+            },
+            {
+              "id": "copy",
+              "label": "复制",
+              "icon": "content_copy",
+              "command": "edit.copy"
+            },
+            {
+              "id": "painter",
+              "label": "格式刷",
+              "icon": "format_paint",
+              "command": "edit.formatPainter"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "paste",
+                "pasteSpecial"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "cut",
+                "copy",
+                "painter"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "font",
+          "label": "字体",
+          "items": [
+            {
+              "id": "fontName",
+              "label": "字体",
+              "icon": "font_download",
+              "command": "home.fontName",
+              "menu": "fonts"
+            },
+            {
+              "id": "fontSize",
+              "label": "字号",
+              "icon": "format_size",
+              "command": "home.fontSize",
+              "menu": "sizes"
+            },
+            {
+              "id": "grow",
+              "label": "增大字号",
+              "icon": "text_increase",
+              "command": "home.increaseFontSize"
+            },
+            {
+              "id": "shrink",
+              "label": "减小字号",
+              "icon": "text_decrease",
+              "command": "home.decreaseFontSize"
+            },
+            {
+              "id": "bold",
+              "label": "加粗",
+              "icon": "format_bold",
+              "command": "home.bold"
+            },
+            {
+              "id": "italic",
+              "label": "倾斜",
+              "icon": "format_italic",
+              "command": "home.italic"
+            },
+            {
+              "id": "underline",
+              "label": "下划线",
+              "icon": "format_underlined",
+              "command": "home.underline",
+              "menu": "underline"
+            },
+            {
+              "id": "strike",
+              "label": "删除线",
+              "icon": "strikethrough_s",
+              "command": "home.strikethrough"
+            },
+            {
+              "id": "super",
+              "label": "上标",
+              "icon": "superscript",
+              "command": "home.superscript"
+            },
+            {
+              "id": "sub",
+              "label": "下标",
+              "icon": "subscript",
+              "command": "home.subscript"
+            },
+            {
+              "id": "borders",
+              "label": "边框",
+              "icon": "border_all",
+              "command": "home.borders",
+              "menu": "borders"
+            },
+            {
+              "id": "fill",
+              "label": "填充颜色",
+              "icon": "format_color_fill",
+              "command": "home.fillColor",
+              "menu": "colors"
+            },
+            {
+              "id": "fontColor",
+              "label": "字体颜色",
+              "icon": "format_color_text",
+              "command": "home.fontColor",
+              "menu": "colors"
+            }
+          ],
+          "layout": [
+            {
+              "type": "rows",
+              "rows": [
+                [
+                  "fontName",
+                  "fontSize",
+                  "grow",
+                  "shrink"
+                ],
+                [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "strike",
+                  "super",
+                  "sub",
+                  "borders",
+                  "fill",
+                  "fontColor"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alignment",
+          "label": "对齐",
+          "items": [
+            {
+              "id": "top",
+              "label": "顶端对齐",
+              "icon": "vertical_align_top",
+              "command": "home.alignTop"
+            },
+            {
+              "id": "middle",
+              "label": "垂直居中",
+              "icon": "vertical_align_center",
+              "command": "home.alignMiddle"
+            },
+            {
+              "id": "bottom",
+              "label": "底端对齐",
+              "icon": "vertical_align_bottom",
+              "command": "home.alignBottom"
+            },
+            {
+              "id": "orientation",
+              "label": "文字方向",
+              "icon": "text_rotation_angleup",
+              "command": "home.orientation",
+              "menu": "orientation"
+            },
+            {
+              "id": "left",
+              "label": "左对齐",
+              "icon": "format_align_left",
+              "command": "home.alignLeft"
+            },
+            {
+              "id": "center",
+              "label": "水平居中",
+              "icon": "format_align_center",
+              "command": "home.alignCenter"
+            },
+            {
+              "id": "right",
+              "label": "右对齐",
+              "icon": "format_align_right",
+              "command": "home.alignRight"
+            },
+            {
+              "id": "wrap",
+              "label": "自动换行",
+              "icon": "wrap_text",
+              "command": "home.wrapText"
+            },
+            {
+              "id": "merge",
+              "label": "合并后居中",
+              "icon": "call_merge",
+              "command": "home.mergeCenter",
+              "menu": "merge"
+            }
+          ],
+          "layout": [
+            {
+              "type": "rows",
+              "rows": [
+                [
+                  "top",
+                  "middle",
+                  "bottom",
+                  "orientation"
+                ],
+                [
+                  "left",
+                  "center",
+                  "right",
+                  "wrap",
+                  "merge"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "number",
+          "label": "数字",
+          "items": [
+            {
+              "id": "numberFormat",
+              "label": "数字格式",
+              "icon": "numbers",
+              "command": "home.numberFormat",
+              "menu": "numberFormat"
+            },
+            {
+              "id": "currency",
+              "label": "会计数字格式",
+              "icon": "attach_money",
+              "command": "home.accounting"
+            },
+            {
+              "id": "percent",
+              "label": "百分比",
+              "icon": "percent",
+              "command": "home.percent"
+            },
+            {
+              "id": "comma",
+              "label": "千位分隔符",
+              "icon": "format_list_numbered",
+              "command": "home.comma"
+            },
+            {
+              "id": "decMore",
+              "label": "增加小数位",
+              "icon": "exposure_plus_1",
+              "command": "home.increaseDecimal"
+            },
+            {
+              "id": "decLess",
+              "label": "减少小数位",
+              "icon": "exposure_neg_1",
+              "command": "home.decreaseDecimal"
+            }
+          ],
+          "layout": [
+            {
+              "type": "rows",
+              "rows": [
+                [
+                  "numberFormat"
+                ],
+                [
+                  "currency",
+                  "percent",
+                  "comma",
+                  "decMore",
+                  "decLess"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styles",
+          "label": "样式",
+          "items": [
+            {
+              "id": "conditional",
+              "label": "条件格式",
+              "icon": "rule",
+              "command": "home.conditionalFormat",
+              "menu": "conditional"
+            },
+            {
+              "id": "formatTable",
+              "label": "套用表格格式",
+              "icon": "table_chart",
+              "command": "home.formatAsTable",
+              "menu": "tableStyles"
+            },
+            {
+              "id": "cellStyle",
+              "label": "单元格样式",
+              "icon": "palette",
+              "command": "home.cellStyle",
+              "menu": "cellStyles"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "conditional",
+                "formatTable",
+                "cellStyle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cells",
+          "label": "单元格",
+          "items": [
+            {
+              "id": "insertCells",
+              "label": "插入",
+              "icon": "add_box",
+              "command": "home.insertCells",
+              "menu": "insert"
+            },
+            {
+              "id": "deleteCells",
+              "label": "删除",
+              "icon": "indeterminate_check_box",
+              "command": "home.deleteCells",
+              "menu": "delete"
+            },
+            {
+              "id": "formatCells",
+              "label": "格式",
+              "icon": "grid_on",
+              "command": "home.formatCells",
+              "menu": "format"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "insertCells",
+                "deleteCells",
+                "formatCells"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "editing",
+          "label": "编辑",
+          "items": [
+            {
+              "id": "sum",
+              "label": "自动求和",
+              "icon": "functions",
+              "command": "formulas.autoSum",
+              "menu": "sum"
+            },
+            {
+              "id": "fillDown",
+              "label": "填充",
+              "icon": "vertical_align_bottom",
+              "command": "edit.fillDown",
+              "menu": "fill"
+            },
+            {
+              "id": "clear",
+              "label": "清除",
+              "icon": "backspace",
+              "command": "edit.clearAll",
+              "menu": "clear"
+            },
+            {
+              "id": "sort",
+              "label": "排序和筛选",
+              "icon": "sort",
+              "command": "data.sortAscending",
+              "menu": "sortFilter"
+            },
+            {
+              "id": "find",
+              "label": "查找和选择",
+              "icon": "search",
+              "command": "edit.find",
+              "menu": "find"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "sum"
+              ]
+            },
+            {
+              "type": "rows",
+              "rows": [
+                [
+                  "fillDown",
+                  "clear"
+                ],
+                [
+                  "sort",
+                  "find"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insert",
+      "label": "插入",
+      "groups": [
+        {
+          "id": "tables",
+          "label": "表格",
+          "items": [
+            {
+              "id": "pivot",
+              "label": "数据透视表",
+              "icon": "pivot_table_chart",
+              "command": "insert.pivotTable",
+              "menu": "pivot"
+            },
+            {
+              "id": "pivotEdit",
+              "label": "编辑数据透视表",
+              "icon": "pivot_table_chart",
+              "command": "insert.pivotEdit",
+              "menu": "pivot"
+            },
+            {
+              "id": "table",
+              "label": "表格",
+              "icon": "table_chart",
+              "command": "insert.table",
+              "menu": "table"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "pivot",
+                "pivotEdit",
+                "table"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "illustrations",
+          "label": "插图",
+          "items": [
+            {
+              "id": "picture",
+              "label": "图片",
+              "icon": "image",
+              "command": "insert.picture",
+              "menu": "picture"
+            },
+            {
+              "id": "shape",
+              "label": "形状",
+              "icon": "category",
+              "command": "insert.shape",
+              "menu": "shape"
+            },
+            {
+              "id": "icons",
+              "label": "图标",
+              "icon": "interests",
+              "command": "insert.icons"
+            },
+            {
+              "id": "screenshot",
+              "label": "屏幕截图",
+              "icon": "crop",
+              "command": "insert.screenshot"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "picture"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "shape",
+                "icons",
+                "screenshot"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "checkbox",
+          "label": "复选框",
+          "items": [
+            {
+              "id": "checkbox",
+              "label": "复选框",
+              "icon": "check_box",
+              "command": "insert.checkbox"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "checkbox"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "charts",
+          "label": "图表",
+          "items": [
+            {
+              "id": "recommended",
+              "label": "推荐的图表",
+              "icon": "insert_chart",
+              "command": "insert.chart",
+              "menu": "chart",
+              "params": {
+                "type": "auto"
+              }
+            },
+            {
+              "id": "column",
+              "label": "柱形图",
+              "icon": "bar_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "column"
+              }
+            },
+            {
+              "id": "bar",
+              "label": "条形图",
+              "icon": "bar_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "bar"
+              }
+            },
+            {
+              "id": "line",
+              "label": "折线图",
+              "icon": "show_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "line"
+              }
+            },
+            {
+              "id": "area",
+              "label": "面积图",
+              "icon": "area_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "area"
+              }
+            },
+            {
+              "id": "pie",
+              "label": "饼图",
+              "icon": "pie_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "pie"
+              }
+            },
+            {
+              "id": "scatter",
+              "label": "散点图",
+              "icon": "scatter_plot",
+              "command": "insert.chart",
+              "params": {
+                "type": "scatter"
+              }
+            },
+            {
+              "id": "radar",
+              "label": "雷达图",
+              "icon": "radar",
+              "command": "insert.chart",
+              "params": {
+                "type": "radar"
+              }
+            },
+            {
+              "id": "doughnut",
+              "label": "圆环图",
+              "icon": "donut_large",
+              "command": "insert.chart",
+              "params": {
+                "type": "doughnut"
+              }
+            },
+            {
+              "id": "combo",
+              "label": "组合图",
+              "icon": "stacked_bar_chart",
+              "command": "insert.chart",
+              "params": {
+                "type": "combo"
+              }
+            },
+            {
+              "id": "pivotChart",
+              "label": "数据透视图",
+              "icon": "insert_chart",
+              "command": "insert.pivotChart",
+              "menu": "pivotChart"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "recommended"
+              ]
+            },
+            {
+              "type": "grid",
+              "rows": [
+                [
+                  "column",
+                  "bar",
+                  "line"
+                ],
+                [
+                  "area",
+                  "pie",
+                  "scatter"
+                ],
+                [
+                  "radar",
+                  "doughnut",
+                  "combo"
+                ]
+              ]
+            },
+            {
+              "type": "large",
+              "items": [
+                "pivotChart"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sparklines",
+          "label": "迷你图",
+          "items": [
+            {
+              "id": "sparkline",
+              "label": "迷你图",
+              "icon": "multiline_chart",
+              "command": "insert.sparkline",
+              "menu": "sparkline"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "sparkline"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "filters",
+          "label": "筛选器",
+          "items": [
+            {
+              "id": "slicer",
+              "label": "切片器",
+              "icon": "filter_alt",
+              "command": "insert.slicer",
+              "menu": "slicer"
+            },
+            {
+              "id": "timeline",
+              "label": "时间线",
+              "icon": "timeline",
+              "command": "insert.timeline"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "slicer",
+                "timeline"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "links",
+          "label": "链接",
+          "items": [
+            {
+              "id": "link",
+              "label": "链接",
+              "icon": "link",
+              "command": "insert.hyperlink",
+              "menu": "link"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "link"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "comments",
+          "label": "批注",
+          "items": [
+            {
+              "id": "comment",
+              "label": "批注",
+              "icon": "comment",
+              "command": "review.newComment"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "comment"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "text",
+          "label": "文本",
+          "items": [
+            {
+              "id": "textBox",
+              "label": "文本框",
+              "icon": "text_fields",
+              "command": "insert.textBox"
+            },
+            {
+              "id": "headerFooter",
+              "label": "页眉和页脚",
+              "icon": "vertical_split",
+              "command": "insert.headerFooter"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "textBox",
+                "headerFooter"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "symbols",
+          "label": "符号",
+          "items": [
+            {
+              "id": "equation",
+              "label": "公式",
+              "icon": "functions",
+              "command": "insert.equation"
+            },
+            {
+              "id": "symbol",
+              "label": "符号",
+              "icon": "interests",
+              "command": "insert.symbol",
+              "menu": "symbol"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "equation",
+                "symbol"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pageLayout",
+      "label": "页面布局",
+      "groups": [
+        {
+          "id": "themes",
+          "label": "主题",
+          "items": [
+            {
+              "id": "theme",
+              "label": "主题",
+              "icon": "palette",
+              "command": "page.theme",
+              "menu": "themes"
+            },
+            {
+              "id": "colors",
+              "label": "颜色",
+              "icon": "color_lens",
+              "command": "page.colors",
+              "menu": "themeColors"
+            },
+            {
+              "id": "fonts",
+              "label": "字体",
+              "icon": "font_download",
+              "command": "page.fonts",
+              "menu": "themeFonts"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "theme"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "colors",
+                "fonts"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pageSetup",
+          "label": "页面设置",
+          "items": [
+            {
+              "id": "margins",
+              "label": "页边距",
+              "icon": "space_dashboard",
+              "command": "page.margins",
+              "menu": "margins"
+            },
+            {
+              "id": "orientation",
+              "label": "纸张方向",
+              "icon": "screen_rotation",
+              "command": "page.orientation",
+              "menu": "pageOrientation"
+            },
+            {
+              "id": "size",
+              "label": "纸张大小",
+              "icon": "crop_square",
+              "command": "page.size",
+              "menu": "paperSizes"
+            },
+            {
+              "id": "printArea",
+              "label": "打印区域",
+              "icon": "select_all",
+              "command": "page.printArea",
+              "menu": "printArea"
+            },
+            {
+              "id": "breaks",
+              "label": "分隔符",
+              "icon": "splitscreen",
+              "command": "page.breaks",
+              "menu": "breaks"
+            },
+            {
+              "id": "printTitles",
+              "label": "打印标题",
+              "icon": "view_headline",
+              "command": "page.printTitles",
+              "menu": "printTitles"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "margins",
+                "orientation",
+                "size",
+                "printArea",
+                "breaks",
+                "printTitles"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scale",
+          "label": "调整为合适大小",
+          "items": [
+            {
+              "id": "width",
+              "label": "宽度",
+              "icon": "width",
+              "command": "page.fitWidth",
+              "menu": "fitPages"
+            },
+            {
+              "id": "height",
+              "label": "高度",
+              "icon": "height",
+              "command": "page.fitHeight",
+              "menu": "fitPages"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "width",
+                "height"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "label": "工作表选项",
+          "items": [
+            {
+              "id": "gridlines",
+              "label": "查看网格线",
+              "icon": "grid_on",
+              "command": "view.gridlines"
+            },
+            {
+              "id": "printGridlines",
+              "label": "打印网格线",
+              "icon": "print",
+              "command": "page.printGridlines"
+            },
+            {
+              "id": "headings",
+              "label": "查看标题",
+              "icon": "view_headline",
+              "command": "view.headings"
+            },
+            {
+              "id": "printHeadings",
+              "label": "打印标题",
+              "icon": "print",
+              "command": "page.printHeadings"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "gridlines",
+                "printGridlines"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "headings",
+                "printHeadings"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formulas",
+      "label": "公式",
+      "groups": [
+        {
+          "id": "library",
+          "label": "函数库",
+          "items": [
+            {
+              "id": "insertFunction",
+              "label": "插入函数",
+              "icon": "functions",
+              "command": "formulas.insertFunction",
+              "menu": "functions"
+            },
+            {
+              "id": "autoSum",
+              "label": "自动求和",
+              "icon": "functions",
+              "command": "formulas.autoSum",
+              "menu": "sum"
+            },
+            {
+              "id": "recent",
+              "label": "最近使用",
+              "icon": "history",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "financial",
+              "label": "财务",
+              "icon": "attach_money",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "logical",
+              "label": "逻辑",
+              "icon": "account_tree",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "text",
+              "label": "文本",
+              "icon": "text_fields",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "date",
+              "label": "日期和时间",
+              "icon": "today",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "lookup",
+              "label": "查找与引用",
+              "icon": "search",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "math",
+              "label": "数学和三角函数",
+              "icon": "functions",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            },
+            {
+              "id": "more",
+              "label": "其他函数",
+              "icon": "more_horiz",
+              "command": "formulas.insertFunction",
+              "menu": "functionCategories"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "insertFunction",
+                "autoSum",
+                "recent",
+                "financial",
+                "logical",
+                "text",
+                "date",
+                "lookup",
+                "math",
+                "more"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "names",
+          "label": "定义名称",
+          "items": [
+            {
+              "id": "nameManager",
+              "label": "名称管理器",
+              "icon": "list_alt",
+              "command": "formulas.nameManager"
+            },
+            {
+              "id": "defineName",
+              "label": "定义名称",
+              "icon": "edit_note",
+              "command": "formulas.defineName"
+            },
+            {
+              "id": "useFormula",
+              "label": "用于公式",
+              "icon": "arrow_drop_down_circle",
+              "command": "formulas.useName",
+              "menu": "names"
+            },
+            {
+              "id": "createNames",
+              "label": "根据所选内容创建",
+              "icon": "add_box",
+              "command": "formulas.createNames",
+              "menu": "createNames"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "nameManager"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "defineName",
+                "useFormula",
+                "createNames"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auditing",
+          "label": "公式审核",
+          "items": [
+            {
+              "id": "tracePrecedents",
+              "label": "追踪引用单元格",
+              "icon": "subdirectory_arrow_left",
+              "command": "formulas.tracePrecedents"
+            },
+            {
+              "id": "traceDependents",
+              "label": "追踪从属单元格",
+              "icon": "subdirectory_arrow_right",
+              "command": "formulas.traceDependents"
+            },
+            {
+              "id": "removeArrows",
+              "label": "移去箭头",
+              "icon": "backspace",
+              "command": "formulas.removeArrows"
+            },
+            {
+              "id": "showFormulas",
+              "label": "显示公式",
+              "icon": "data_object",
+              "command": "formulas.showFormulas"
+            },
+            {
+              "id": "errorChecking",
+              "label": "错误检查",
+              "icon": "error_outline",
+              "command": "formulas.errorCheck"
+            },
+            {
+              "id": "watchWindow",
+              "label": "监视窗口",
+              "icon": "visibility",
+              "command": "formulas.watchWindow"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "tracePrecedents",
+                "traceDependents",
+                "removeArrows"
+              ]
+            },
+            {
+              "type": "large",
+              "items": [
+                "showFormulas",
+                "errorChecking",
+                "watchWindow"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "calculation",
+          "label": "计算",
+          "items": [
+            {
+              "id": "calcOptions",
+              "label": "计算选项",
+              "icon": "calculate",
+              "command": "formulas.calculation",
+              "menu": "calcMode"
+            },
+            {
+              "id": "calcNow",
+              "label": "开始计算",
+              "icon": "refresh",
+              "command": "formulas.calculateNow"
+            },
+            {
+              "id": "calcSheet",
+              "label": "计算工作表",
+              "icon": "grid_on",
+              "command": "formulas.calculateSheet"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "calcOptions"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "calcNow",
+                "calcSheet"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "label": "数据",
+      "groups": [
+        {
+          "id": "pivot",
+          "label": "数据透视表",
+          "items": [
+            {
+              "id": "pivot",
+              "label": "数据透视表",
+              "icon": "pivot_table_chart",
+              "command": "insert.pivotTable",
+              "menu": "pivot"
+            },
+            {
+              "id": "refreshPivot",
+              "label": "刷新",
+              "icon": "refresh",
+              "command": "data.refreshPivot"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "pivot",
+                "refreshPivot"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "getData",
+          "label": "获取数据",
+          "items": [
+            {
+              "id": "fromText",
+              "label": "自文本/CSV",
+              "icon": "description",
+              "command": "data.fromTextCsv"
+            },
+            {
+              "id": "mergeWorkbooks",
+              "label": "合并工作簿",
+              "icon": "join_full",
+              "command": "data.mergeWorkbooks"
+            },
+            {
+              "id": "refreshAll",
+              "label": "全部刷新",
+              "icon": "refresh",
+              "command": "data.refreshAll"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "fromText",
+                "mergeWorkbooks",
+                "refreshAll"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sortFilter",
+          "label": "排序和筛选",
+          "items": [
+            {
+              "id": "sort",
+              "label": "排序",
+              "icon": "sort",
+              "command": "data.sort",
+              "menu": "sortFilter"
+            },
+            {
+              "id": "filter",
+              "label": "筛选",
+              "icon": "filter_alt",
+              "command": "data.filter",
+              "menu": "filter"
+            },
+            {
+              "id": "clearFilter",
+              "label": "清除",
+              "icon": "filter_alt_off",
+              "command": "data.clearFilter"
+            },
+            {
+              "id": "reapply",
+              "label": "重新应用",
+              "icon": "refresh",
+              "command": "data.reapplyFilter"
+            },
+            {
+              "id": "advanced",
+              "label": "高级",
+              "icon": "filter_list",
+              "command": "data.advancedFilter"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "sort",
+                "filter"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "clearFilter",
+                "reapply",
+                "advanced"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tools",
+          "label": "数据工具",
+          "items": [
+            {
+              "id": "textColumns",
+              "label": "分列",
+              "icon": "view_column",
+              "command": "data.textToColumns"
+            },
+            {
+              "id": "flashFill",
+              "label": "快速填充",
+              "icon": "bolt",
+              "command": "data.flashFill"
+            },
+            {
+              "id": "removeDup",
+              "label": "删除重复项",
+              "icon": "filter_none",
+              "command": "data.removeDuplicates"
+            },
+            {
+              "id": "validation",
+              "label": "数据验证",
+              "icon": "verified_user",
+              "command": "data.validation",
+              "menu": "validation"
+            },
+            {
+              "id": "consolidate",
+              "label": "合并计算",
+              "icon": "join_full",
+              "command": "data.consolidate"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "textColumns",
+                "flashFill",
+                "removeDup",
+                "validation",
+                "consolidate"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "forecast",
+          "label": "预测",
+          "items": [
+            {
+              "id": "whatIf",
+              "label": "模拟分析",
+              "icon": "insights",
+              "command": "data.whatIf",
+              "menu": "whatIf"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "whatIf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "outline",
+          "label": "分级显示",
+          "items": [
+            {
+              "id": "group",
+              "label": "组合",
+              "icon": "folder",
+              "command": "data.group",
+              "menu": "group"
+            },
+            {
+              "id": "ungroup",
+              "label": "取消组合",
+              "icon": "folder_off",
+              "command": "data.ungroup",
+              "menu": "ungroup"
+            },
+            {
+              "id": "subtotal",
+              "label": "分类汇总",
+              "icon": "functions",
+              "command": "data.subtotal"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "group",
+                "ungroup",
+                "subtotal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "review",
+      "label": "审阅",
+      "groups": [
+        {
+          "id": "proofing",
+          "label": "校对",
+          "items": [
+            {
+              "id": "workbookStats",
+              "label": "工作簿统计",
+              "icon": "calculate",
+              "command": "review.workbookStats"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "workbookStats"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "language",
+          "label": "语言",
+          "items": [
+            {
+              "id": "translate",
+              "label": "翻译",
+              "icon": "translate",
+              "command": "review.translate",
+              "menu": "translate"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "translate"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "comments",
+          "label": "批注",
+          "items": [
+            {
+              "id": "newComment",
+              "label": "新建批注",
+              "icon": "add_comment",
+              "command": "review.newComment"
+            },
+            {
+              "id": "deleteComment",
+              "label": "删除批注",
+              "icon": "delete",
+              "command": "review.deleteComment"
+            },
+            {
+              "id": "previousComment",
+              "label": "上一条",
+              "icon": "arrow_upward",
+              "command": "review.previousComment"
+            },
+            {
+              "id": "nextComment",
+              "label": "下一条",
+              "icon": "arrow_downward",
+              "command": "review.nextComment"
+            },
+            {
+              "id": "showComments",
+              "label": "显示批注",
+              "icon": "comment",
+              "command": "review.showComments",
+              "menu": "comments"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "newComment",
+                "deleteComment"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "previousComment",
+                "nextComment",
+                "showComments"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "label": "注释",
+          "items": [
+            {
+              "id": "notes",
+              "label": "注释",
+              "icon": "sticky_note_2",
+              "command": "review.newNote",
+              "menu": "notes"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "notes"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "protection",
+          "label": "保护",
+          "items": [
+            {
+              "id": "protectSheet",
+              "label": "保护工作表",
+              "icon": "lock",
+              "command": "review.protectSheet",
+              "menu": "protect"
+            },
+            {
+              "id": "protectBook",
+              "label": "保护工作簿",
+              "icon": "enhanced_encryption",
+              "command": "review.protectWorkbook",
+              "menu": "protect"
+            },
+            {
+              "id": "editRanges",
+              "label": "允许编辑区域",
+              "icon": "edit_attributes",
+              "command": "review.allowEditRanges"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "protectSheet",
+                "protectBook",
+                "editRanges"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "view",
+      "label": "视图",
+      "groups": [
+        {
+          "id": "views",
+          "label": "工作簿视图",
+          "items": [
+            {
+              "id": "normal",
+              "label": "普通视图",
+              "icon": "grid_view",
+              "command": "view.normal"
+            },
+            {
+              "id": "pageBreak",
+              "label": "分页预览",
+              "icon": "view_array",
+              "command": "view.pageBreakPreview"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "normal",
+                "pageBreak"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "show",
+          "label": "显示",
+          "items": [
+            {
+              "id": "formulaBar",
+              "label": "编辑栏",
+              "icon": "functions",
+              "command": "view.formulaBar"
+            },
+            {
+              "id": "gridlines",
+              "label": "网格线",
+              "icon": "grid_on",
+              "command": "view.gridlines"
+            },
+            {
+              "id": "headings",
+              "label": "标题",
+              "icon": "view_headline",
+              "command": "view.headings"
+            },
+            {
+              "id": "rightToLeft",
+              "label": "从右向左",
+              "icon": "format_textdirection_r_to_l",
+              "command": "view.rightToLeft"
+            },
+            {
+              "id": "crossHighlight",
+              "label": "十字高亮",
+              "icon": "highlight_alt",
+              "command": "view.crossHighlight"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "gridlines",
+                "formulaBar",
+                "headings"
+              ]
+            },
+            {
+              "type": "stack",
+              "items": [
+                "rightToLeft",
+                "crossHighlight"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zoom",
+          "label": "缩放",
+          "items": [
+            {
+              "id": "zoom",
+              "label": "缩放",
+              "icon": "zoom_in",
+              "command": "view.zoom",
+              "menu": "zoom"
+            },
+            {
+              "id": "actual",
+              "label": "100%",
+              "icon": "filter_1",
+              "command": "view.zoom100"
+            },
+            {
+              "id": "selection",
+              "label": "缩放到选定区域",
+              "icon": "fit_screen",
+              "command": "view.zoomToSelection"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "zoom",
+                "actual",
+                "selection"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "window",
+          "label": "窗口",
+          "items": [
+            {
+              "id": "freeze",
+              "label": "冻结窗格",
+              "icon": "ac_unit",
+              "command": "view.freeze",
+              "menu": "freeze"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "freeze"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chartDesign",
+      "label": "图表设计",
+      "groups": [
+        {
+          "id": "layout",
+          "label": "图表布局",
+          "items": [
+            {
+              "id": "elements",
+              "label": "添加图表元素",
+              "icon": "add_chart",
+              "command": "chart.elements",
+              "menu": "chartElements"
+            },
+            {
+              "id": "quickLayout",
+              "label": "快速布局",
+              "icon": "dashboard",
+              "command": "chart.layout",
+              "menu": "chartLayouts"
+            },
+            {
+              "id": "colors",
+              "label": "更改颜色",
+              "icon": "palette",
+              "command": "chart.colors",
+              "menu": "colors"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "elements",
+                "quickLayout",
+                "colors"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "type",
+          "label": "更改图表类型",
+          "items": [
+            {
+              "id": "chartType",
+              "label": "更改图表类型",
+              "icon": "insert_chart",
+              "command": "chart.changeType",
+              "menu": "chart"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "chartType"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "data",
+          "label": "数据",
+          "items": [
+            {
+              "id": "switch",
+              "label": "切换行/列",
+              "icon": "swap_horiz",
+              "command": "chart.switchRowCol"
+            },
+            {
+              "id": "select",
+              "label": "选择数据",
+              "icon": "table_chart",
+              "command": "chart.selectData"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "switch",
+                "select"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "actions",
+          "label": "图表操作",
+          "items": [
+            {
+              "id": "delete",
+              "label": "删除图表",
+              "icon": "delete",
+              "command": "chart.delete"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "delete"
+              ]
+            }
+          ]
+        }
+      ],
+      "when": "chart"
+    },
+    {
+      "id": "tableDesign",
+      "label": "表格设计",
+      "groups": [
+        {
+          "id": "properties",
+          "label": "表属性",
+          "items": [
+            {
+              "id": "name",
+              "label": "表名称",
+              "icon": "drive_file_rename_outline",
+              "command": "table.rename"
+            },
+            {
+              "id": "resize",
+              "label": "调整表大小",
+              "icon": "aspect_ratio",
+              "command": "table.resize"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "name",
+                "resize"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tools",
+          "label": "工具",
+          "items": [
+            {
+              "id": "summarize",
+              "label": "数据透视表汇总",
+              "icon": "pivot_table_chart",
+              "command": "table.summarize"
+            },
+            {
+              "id": "removeDup",
+              "label": "删除重复项",
+              "icon": "filter_none",
+              "command": "data.removeDuplicates"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "summarize",
+                "removeDup"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "label": "表格样式选项",
+          "items": [
+            {
+              "id": "header",
+              "label": "标题行",
+              "icon": "view_headline",
+              "command": "table.header"
+            },
+            {
+              "id": "total",
+              "label": "汇总行",
+              "icon": "functions",
+              "command": "table.totalRow"
+            },
+            {
+              "id": "banded",
+              "label": "镶边行",
+              "icon": "view_stream",
+              "command": "table.bandedRows"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "header",
+                "total",
+                "banded"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "styles",
+          "label": "表格样式",
+          "items": [
+            {
+              "id": "style",
+              "label": "表格样式",
+              "icon": "palette",
+              "command": "table.style",
+              "menu": "tableStyles"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "style"
+              ]
+            }
+          ]
+        }
+      ],
+      "when": "table"
+    },
+    {
+      "id": "shapeFormat",
+      "label": "形状格式",
+      "groups": [
+        {
+          "id": "styles",
+          "label": "形状样式",
+          "items": [
+            {
+              "id": "fill",
+              "label": "形状填充",
+              "icon": "format_color_fill",
+              "command": "shape.fill",
+              "menu": "colors"
+            },
+            {
+              "id": "line",
+              "label": "形状轮廓",
+              "icon": "border_color",
+              "command": "shape.line",
+              "menu": "colors"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "fill",
+                "line"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arrange",
+          "label": "排列",
+          "items": [
+            {
+              "id": "front",
+              "label": "上移一层",
+              "icon": "flip_to_front",
+              "command": "shape.bringForward"
+            },
+            {
+              "id": "back",
+              "label": "下移一层",
+              "icon": "flip_to_back",
+              "command": "shape.sendBackward"
+            },
+            {
+              "id": "align",
+              "label": "对齐",
+              "icon": "align_horizontal_left",
+              "command": "shape.align",
+              "menu": "align"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "front",
+                "back",
+                "align"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "size",
+          "label": "大小",
+          "items": [
+            {
+              "id": "height",
+              "label": "高度",
+              "icon": "height",
+              "command": "shape.height"
+            },
+            {
+              "id": "width",
+              "label": "宽度",
+              "icon": "width",
+              "command": "shape.width"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "height",
+                "width"
+              ]
+            }
+          ]
+        }
+      ],
+      "when": "shape"
+    },
+    {
+      "id": "pictureFormat",
+      "label": "图片格式",
+      "groups": [
+        {
+          "id": "styles",
+          "label": "图片样式",
+          "items": [
+            {
+              "id": "border",
+              "label": "图片边框",
+              "icon": "border_color",
+              "command": "picture.border",
+              "menu": "colors"
+            },
+            {
+              "id": "crop",
+              "label": "裁剪",
+              "icon": "crop",
+              "command": "picture.crop"
+            }
+          ],
+          "layout": [
+            {
+              "type": "large",
+              "items": [
+                "border",
+                "crop"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "arrange",
+          "label": "排列",
+          "items": [
+            {
+              "id": "front",
+              "label": "上移一层",
+              "icon": "flip_to_front",
+              "command": "picture.bringForward"
+            },
+            {
+              "id": "back",
+              "label": "下移一层",
+              "icon": "flip_to_back",
+              "command": "picture.sendBackward"
+            },
+            {
+              "id": "align",
+              "label": "对齐",
+              "icon": "align_horizontal_left",
+              "command": "picture.align",
+              "menu": "align"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "front",
+                "back",
+                "align"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "size",
+          "label": "大小",
+          "items": [
+            {
+              "id": "height",
+              "label": "高度",
+              "icon": "height",
+              "command": "picture.height"
+            },
+            {
+              "id": "width",
+              "label": "宽度",
+              "icon": "width",
+              "command": "picture.width"
+            }
+          ],
+          "layout": [
+            {
+              "type": "stack",
+              "items": [
+                "height",
+                "width"
+              ]
+            }
+          ]
+        }
+      ],
+      "when": "picture"
+    }
+  ],
+  "menus": {
+    "ai": [
+      {
+        "label": "使用 Muse AI（扩展未安装）",
+        "command": null
+      }
+    ],
+    "paste": [
+      {
+        "label": "粘贴",
+        "command": "edit.paste"
+      },
+      {
+        "label": "选择性粘贴",
+        "command": "edit.pasteSpecial"
+      }
+    ],
+    "pasteSpecial": [
+      {
+        "label": "全部",
+        "command": "edit.pasteSpecial"
+      },
+      {
+        "label": "仅值",
+        "command": "edit.pasteSpecial"
+      },
+      {
+        "label": "仅格式",
+        "command": "edit.pasteSpecial"
+      }
+    ],
+    "fonts": [
+      {
+        "label": "Aptos",
+        "command": null
+      },
+      {
+        "label": "Arial",
+        "command": null
+      },
+      {
+        "label": "宋体",
+        "command": null
+      }
+    ],
+    "sizes": [
+      {
+        "label": "9",
+        "command": null
+      },
+      {
+        "label": "10",
+        "command": null
+      },
+      {
+        "label": "11",
+        "command": null
+      },
+      {
+        "label": "12",
+        "command": null
+      },
+      {
+        "label": "14",
+        "command": null
+      },
+      {
+        "label": "16",
+        "command": null
+      },
+      {
+        "label": "18",
+        "command": null
+      },
+      {
+        "label": "22",
+        "command": null
+      },
+      {
+        "label": "26",
+        "command": null
+      }
+    ],
+    "underline": [
+      {
+        "label": "单下划线",
+        "command": "home.underline"
+      },
+      {
+        "label": "双下划线",
+        "command": "home.doubleUnderline"
+      }
+    ],
+    "borders": [
+      {
+        "label": "所有框线",
+        "command": "home.borders"
+      },
+      {
+        "label": "外侧框线",
+        "command": "home.borders"
+      },
+      {
+        "label": "更多边框",
+        "children": [
+          {
+            "label": "上框线",
+            "command": "home.borders"
+          },
+          {
+            "label": "下框线",
+            "command": "home.borders"
+          },
+          {
+            "label": "无框线",
+            "command": "home.borders"
+          }
+        ]
+      }
+    ],
+    "colors": [
+      {
+        "label": "自动",
+        "command": null
+      },
+      {
+        "label": "标准颜色",
+        "children": [
+          {
+            "label": "红色",
+            "command": null
+          },
+          {
+            "label": "蓝色",
+            "command": null
+          },
+          {
+            "label": "绿色",
+            "command": null
+          }
+        ]
+      },
+      {
+        "label": "更多颜色…",
+        "command": null
+      }
+    ],
+    "orientation": [
+      {
+        "label": "逆时针角度",
+        "command": "home.orientation"
+      },
+      {
+        "label": "顺时针角度",
+        "command": "home.orientation"
+      },
+      {
+        "label": "垂直文字",
+        "command": "home.orientation"
+      }
+    ],
+    "merge": [
+      {
+        "label": "合并后居中",
+        "command": "home.mergeCenter"
+      },
+      {
+        "label": "跨越合并",
+        "command": "home.mergeAcross"
+      },
+      {
+        "label": "合并单元格",
+        "command": "home.mergeCells"
+      },
+      {
+        "label": "取消合并",
+        "command": "home.unmergeCells"
+      }
+    ],
+    "numberFormat": [
+      {
+        "label": "常规",
+        "command": null
+      },
+      {
+        "label": "数字",
+        "command": null
+      },
+      {
+        "label": "货币",
+        "command": null
+      },
+      {
+        "label": "会计专用",
+        "command": null
+      },
+      {
+        "label": "短日期",
+        "command": null
+      },
+      {
+        "label": "长日期",
+        "command": null
+      },
+      {
+        "label": "时间",
+        "command": null
+      },
+      {
+        "label": "百分比",
+        "command": null
+      },
+      {
+        "label": "分数",
+        "command": null
+      },
+      {
+        "label": "科学记数",
+        "command": null
+      }
+    ],
+    "conditional": [
+      {
+        "label": "突出显示单元格规则",
+        "children": [
+          {
+            "label": "大于…",
+            "command": null
+          },
+          {
+            "label": "小于…",
+            "command": null
+          },
+          {
+            "label": "文本包含…",
+            "command": null
+          }
+        ]
+      },
+      {
+        "label": "最前/最后规则",
+        "children": [
+          {
+            "label": "前 10 项…",
+            "command": null
+          },
+          {
+            "label": "后 10 项…",
+            "command": null
+          }
+        ]
+      },
+      {
+        "label": "数据条",
+        "command": null
+      },
+      {
+        "label": "色阶",
+        "command": null
+      },
+      {
+        "label": "管理规则…",
+        "command": null
+      }
+    ],
+    "tableStyles": [
+      {
+        "label": "浅色",
+        "command": null
+      },
+      {
+        "label": "中等",
+        "command": null
+      },
+      {
+        "label": "深色",
+        "command": null
+      }
+    ],
+    "cellStyles": [
+      {
+        "label": "常规",
+        "command": null
+      },
+      {
+        "label": "好",
+        "command": null
+      },
+      {
+        "label": "坏",
+        "command": null
+      },
+      {
+        "label": "标题",
+        "command": null
+      }
+    ],
+    "insert": [
+      {
+        "label": "插入单元格",
+        "command": "home.insertCells"
+      },
+      {
+        "label": "插入工作表行",
+        "command": "home.insertRows"
+      },
+      {
+        "label": "插入工作表列",
+        "command": "home.insertColumns"
+      },
+      {
+        "label": "插入工作表",
+        "command": "home.insertSheet"
+      }
+    ],
+    "delete": [
+      {
+        "label": "删除单元格",
+        "command": "home.deleteCells"
+      },
+      {
+        "label": "删除工作表行",
+        "command": "home.deleteRows"
+      },
+      {
+        "label": "删除工作表列",
+        "command": "home.deleteColumns"
+      },
+      {
+        "label": "删除工作表",
+        "command": "home.deleteSheet"
+      }
+    ],
+    "format": [
+      {
+        "label": "单元格大小",
+        "children": [
+          {
+            "label": "行高…",
+            "command": "home.rowHeight"
+          },
+          {
+            "label": "列宽…",
+            "command": "home.columnWidth"
+          },
+          {
+            "label": "自动调整列宽",
+            "command": "home.autofitColumnWidth"
+          }
+        ]
+      },
+      {
+        "label": "可见性",
+        "children": [
+          {
+            "label": "隐藏行",
+            "command": "home.hideRows"
+          },
+          {
+            "label": "隐藏列",
+            "command": "home.hideColumns"
+          }
+        ]
+      },
+      {
+        "label": "设置单元格格式…",
+        "command": "home.formatCells"
+      }
+    ],
+    "sum": [
+      {
+        "label": "求和",
+        "command": "formulas.autoSum"
+      },
+      {
+        "label": "平均值",
+        "command": null
+      },
+      {
+        "label": "计数",
+        "command": null
+      },
+      {
+        "label": "最大值",
+        "command": null
+      },
+      {
+        "label": "最小值",
+        "command": null
+      }
+    ],
+    "fill": [
+      {
+        "label": "向下",
+        "command": "edit.fillDown"
+      },
+      {
+        "label": "向右",
+        "command": "edit.fillRight"
+      },
+      {
+        "label": "序列…",
+        "command": "edit.fillSeries"
+      }
+    ],
+    "clear": [
+      {
+        "label": "全部清除",
+        "command": "edit.clearAll"
+      },
+      {
+        "label": "清除格式",
+        "command": "edit.clearFormats"
+      },
+      {
+        "label": "清除内容",
+        "command": "edit.clearContents"
+      }
+    ],
+    "sortFilter": [
+      {
+        "label": "升序",
+        "command": "data.sortAscending"
+      },
+      {
+        "label": "降序",
+        "command": "data.sortDescending"
+      },
+      {
+        "label": "自定义排序…",
+        "command": "data.sort"
+      },
+      {
+        "label": "筛选",
+        "command": "data.filter"
+      }
+    ],
+    "find": [
+      {
+        "label": "查找…",
+        "command": "edit.find"
+      },
+      {
+        "label": "替换…",
+        "command": "edit.replace"
+      },
+      {
+        "label": "定位…",
+        "command": "selection.set"
+      }
+    ],
+    "pivot": [
+      {
+        "label": "从表格/区域",
+        "command": null
+      },
+      {
+        "label": "推荐的数据透视表",
+        "command": null
+      }
+    ],
+    "table": [
+      {
+        "label": "插入表格",
+        "command": "insert.table"
+      }
+    ],
+    "pivotChart": [
+      {
+        "label": "柱形图",
+        "command": null
+      },
+      {
+        "label": "条形图",
+        "command": null
+      },
+      {
+        "label": "折线图",
+        "command": null
+      },
+      {
+        "label": "饼图",
+        "command": null
+      },
+      {
+        "label": "圆环图",
+        "command": null
+      },
+      {
+        "label": "雷达图",
+        "command": null
+      }
+    ],
+    "picture": [
+      {
+        "label": "此设备…",
+        "command": "insert.picture"
+      }
+    ],
+    "shape": [
+      {
+        "label": "矩形",
+        "command": "insert.shape",
+        "params": {
+          "kind": "rectangle"
+        }
+      },
+      {
+        "label": "圆角矩形",
+        "command": "insert.shape",
+        "params": {
+          "kind": "roundedRectangle"
+        }
+      },
+      {
+        "label": "椭圆",
+        "command": "insert.shape",
+        "params": {
+          "kind": "ellipse"
+        }
+      },
+      {
+        "label": "三角形",
+        "command": "insert.shape",
+        "params": {
+          "kind": "triangle"
+        }
+      },
+      {
+        "label": "箭头",
+        "command": "insert.shape",
+        "params": {
+          "kind": "arrow"
+        }
+      },
+      {
+        "label": "文本框",
+        "command": "insert.textBox"
+      }
+    ],
+    "chart": [
+      {
+        "label": "柱形图",
+        "children": [
+          {
+            "label": "簇状柱形图",
+            "command": "insert.chart",
+            "params": {
+              "type": "column"
+            }
+          },
+          {
+            "label": "堆积柱形图",
+            "command": "insert.chart",
+            "params": {
+              "type": "column",
+              "subtype": "stacked"
+            }
+          }
+        ]
+      },
+      {
+        "label": "折线图",
+        "children": [
+          {
+            "label": "折线图",
+            "command": "insert.chart",
+            "params": {
+              "type": "line"
+            }
+          },
+          {
+            "label": "带数据标记折线图",
+            "command": "insert.chart",
+            "params": {
+              "type": "line",
+              "subtype": "markers"
+            }
+          }
+        ]
+      },
+      {
+        "label": "饼图",
+        "command": "insert.chart",
+        "params": {
+          "type": "pie"
+        }
+      }
+    ],
+    "sparkline": [
+      {
+        "label": "折线",
+        "command": null
+      },
+      {
+        "label": "柱形",
+        "command": null
+      },
+      {
+        "label": "盈亏",
+        "command": null
+      }
+    ],
+    "slicer": [
+      {
+        "label": "插入切片器",
+        "command": null
+      }
+    ],
+    "link": [
+      {
+        "label": "插入链接…",
+        "command": "insert.hyperlink"
+      }
+    ],
+    "symbol": [
+      {
+        "label": "符号…",
+        "command": null
+      }
+    ],
+    "themes": [
+      {
+        "label": "默认主题",
+        "command": null
+      }
+    ],
+    "themeColors": [
+      {
+        "label": "默认颜色",
+        "command": null
+      }
+    ],
+    "themeFonts": [
+      {
+        "label": "默认字体",
+        "command": null
+      }
+    ],
+    "margins": [
+      {
+        "label": "普通",
+        "command": null
+      },
+      {
+        "label": "窄",
+        "command": null
+      },
+      {
+        "label": "宽",
+        "command": null
+      },
+      {
+        "label": "自定义页边距…",
+        "command": null
+      }
+    ],
+    "pageOrientation": [
+      {
+        "label": "纵向",
+        "command": null
+      },
+      {
+        "label": "横向",
+        "command": null
+      }
+    ],
+    "paperSizes": [
+      {
+        "label": "A4",
+        "command": null
+      },
+      {
+        "label": "A3",
+        "command": null
+      },
+      {
+        "label": "信纸",
+        "command": null
+      }
+    ],
+    "printArea": [
+      {
+        "label": "设置打印区域",
+        "command": null
+      },
+      {
+        "label": "取消打印区域",
+        "command": null
+      }
+    ],
+    "breaks": [
+      {
+        "label": "插入分页符",
+        "command": null
+      },
+      {
+        "label": "删除分页符",
+        "command": null
+      },
+      {
+        "label": "重置所有分页符",
+        "command": null
+      }
+    ],
+    "printTitles": [
+      {
+        "label": "重复首行",
+        "command": null
+      },
+      {
+        "label": "重复选定行",
+        "command": null
+      },
+      {
+        "label": "清除打印标题",
+        "command": null
+      }
+    ],
+    "fitPages": [
+      {
+        "label": "自动",
+        "command": null
+      },
+      {
+        "label": "1 页",
+        "command": null
+      },
+      {
+        "label": "2 页",
+        "command": null
+      },
+      {
+        "label": "3 页",
+        "command": null
+      },
+      {
+        "label": "4 页",
+        "command": null
+      },
+      {
+        "label": "5 页",
+        "command": null
+      }
+    ],
+    "scale": [
+      {
+        "label": "100%",
+        "command": null
+      },
+      {
+        "label": "75%",
+        "command": null
+      },
+      {
+        "label": "50%",
+        "command": null
+      }
+    ],
+    "gridlines": [
+      {
+        "label": "查看",
+        "command": null
+      },
+      {
+        "label": "打印",
+        "command": null
+      }
+    ],
+    "headings": [
+      {
+        "label": "查看",
+        "command": null
+      },
+      {
+        "label": "打印",
+        "command": null
+      }
+    ],
+    "functions": [
+      {
+        "label": "插入函数…",
+        "command": null
+      }
+    ],
+    "functionCategories": [
+      {
+        "label": "最近使用",
+        "command": null
+      },
+      {
+        "label": "全部函数",
+        "command": null
+      }
+    ],
+    "names": [
+      {
+        "label": "选择名称…",
+        "command": null
+      }
+    ],
+    "createNames": [
+      {
+        "label": "顶端行",
+        "command": null
+      },
+      {
+        "label": "最左列",
+        "command": null
+      }
+    ],
+    "calcMode": [
+      {
+        "label": "自动",
+        "command": null
+      },
+      {
+        "label": "手动",
+        "command": null
+      }
+    ],
+    "getData": [
+      {
+        "label": "从文本/CSV…",
+        "command": "data.fromTextCsv"
+      },
+      {
+        "label": "从工作簿…",
+        "command": null
+      }
+    ],
+    "filter": [
+      {
+        "label": "筛选",
+        "command": "data.filter"
+      },
+      {
+        "label": "清除筛选",
+        "command": "data.clearFilter"
+      }
+    ],
+    "validation": [
+      {
+        "label": "数据验证…",
+        "command": null
+      }
+    ],
+    "whatIf": [
+      {
+        "label": "方案管理器",
+        "command": null
+      },
+      {
+        "label": "单变量求解",
+        "command": null
+      }
+    ],
+    "group": [
+      {
+        "label": "组合",
+        "command": null
+      },
+      {
+        "label": "自动创建分级显示",
+        "command": null
+      }
+    ],
+    "ungroup": [
+      {
+        "label": "取消组合",
+        "command": null
+      }
+    ],
+    "translate": [
+      {
+        "label": "翻译…",
+        "command": null
+      }
+    ],
+    "comments": [
+      {
+        "label": "显示所有批注",
+        "command": null
+      }
+    ],
+    "notes": [
+      {
+        "label": "新建注释",
+        "command": null
+      },
+      {
+        "label": "显示/隐藏注释",
+        "command": null
+      },
+      {
+        "label": "显示所有注释",
+        "command": null
+      },
+      {
+        "label": "转换为注释",
+        "command": null
+      },
+      {
+        "label": "注释图片窗格",
+        "command": null
+      }
+    ],
+    "protect": [
+      {
+        "label": "保护工作表…",
+        "command": null
+      },
+      {
+        "label": "保护工作簿…",
+        "command": null
+      }
+    ],
+    "zoom": [
+      {
+        "label": "200%",
+        "command": null
+      },
+      {
+        "label": "100%",
+        "command": "view.zoom100"
+      },
+      {
+        "label": "75%",
+        "command": null
+      },
+      {
+        "label": "选定区域",
+        "command": null
+      }
+    ],
+    "freeze": [
+      {
+        "label": "冻结窗格",
+        "command": null
+      },
+      {
+        "label": "冻结首行",
+        "command": null
+      },
+      {
+        "label": "冻结首列",
+        "command": null
+      }
+    ],
+    "chartElements": [
+      {
+        "label": "图表标题",
+        "command": null
+      },
+      {
+        "label": "坐标轴",
+        "command": null
+      },
+      {
+        "label": "数据标签",
+        "command": null
+      }
+    ],
+    "chartLayouts": [
+      {
+        "label": "布局 1",
+        "command": null
+      },
+      {
+        "label": "布局 2",
+        "command": null
+      }
+    ],
+    "align": [
+      {
+        "label": "左对齐",
+        "command": null
+      },
+      {
+        "label": "水平居中",
+        "command": null
+      },
+      {
+        "label": "右对齐",
+        "command": null
+      }
+    ],
+    "sheetTab": [
+      {
+        "label": "插入工作表",
+        "command": "home.insertSheet"
+      },
+      {
+        "label": "删除工作表",
+        "command": "home.deleteSheet"
+      },
+      {
+        "label": "重命名",
+        "command": "sheet.rename"
+      },
+      {
+        "label": "移动或复制…",
+        "command": "sheet.move"
+      },
+      {
+        "label": "保护工作表…",
+        "command": null
+      },
+      {
+        "label": "工作表标签颜色",
+        "children": [
+          {
+            "label": "无颜色",
+            "command": "sheet.tabColor",
+            "params": {
+              "color": "none"
+            }
+          },
+          {
+            "label": "主题颜色",
+            "children": [
+              {
+                "label": "白色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#FFFFFF"
+                }
+              },
+              {
+                "label": "黑色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#000000"
+                }
+              },
+              {
+                "label": "灰色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#808080"
+                }
+              },
+              {
+                "label": "蓝色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#4472C4"
+                }
+              },
+              {
+                "label": "橙色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#ED7D31"
+                }
+              },
+              {
+                "label": "黄色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#FFC000"
+                }
+              },
+              {
+                "label": "绿色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#70AD47"
+                }
+              },
+              {
+                "label": "紫色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#7030A0"
+                }
+              }
+            ]
+          },
+          {
+            "label": "标准颜色",
+            "children": [
+              {
+                "label": "深红色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#C00000"
+                }
+              },
+              {
+                "label": "红色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#FF0000"
+                }
+              },
+              {
+                "label": "橙色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#FF9900"
+                }
+              },
+              {
+                "label": "黄色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#FFFF00"
+                }
+              },
+              {
+                "label": "绿色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#00B050"
+                }
+              },
+              {
+                "label": "青色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#00B0F0"
+                }
+              },
+              {
+                "label": "蓝色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#0070C0"
+                }
+              },
+              {
+                "label": "紫色",
+                "command": "sheet.tabColor",
+                "params": {
+                  "color": "#7030A0"
+                }
+              }
+            ]
+          },
+          {
+            "label": "更多颜色…",
+            "command": "sheet.tabColor",
+            "params": {
+              "color": "custom"
+            }
+          }
+        ],
+        "presentation": "colorPalette"
+      },
+      {
+        "label": "隐藏",
+        "command": "sheet.hide"
+      },
+      {
+        "label": "取消隐藏…",
+        "command": "sheet.unhide"
+      },
+      {
+        "label": "选定全部工作表",
+        "command": null
+      }
+    ]
+  }
+}
