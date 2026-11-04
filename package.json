@@ -6,14 +6,23 @@
     "packages/plugin-sdk",
     "packages/devkit-core",
     "plugins/developer-kit",
+    "plugins/easel",
     "plugins/pdf-reader",
+    "plugins/spreadsheet-product",
     "packages/devkit-cli"
   ],
   "scripts": {
     "build:devkit": "node plugins/developer-kit/scripts/build.mjs",
     "build:pdf": "node plugins/pdf-reader/build.mjs",
+    "build:word": "node plugins/word/scripts/build.mjs",
+    "build:spreadsheet-product": "npm run build --workspace @openmuse/spreadsheet-product",
+    "spreadsheet:e2e": "bash ../Muse-Client/scripts/spreadsheet-product-e2e.sh all",
+    "word:plan": "node plugins/word/scripts/stack.mjs --dry-run",
+    "word:build": "node plugins/word/scripts/stack.mjs --gate build",
+    "word:e2e": "node plugins/word/scripts/stack.mjs --gate e2e",
+    "test:word": "node --test plugins/word/test/*.test.mjs",
     "test:devkit": "node --import tsx --test packages/devkit-core/test/*.test.ts plugins/developer-kit/test/*.test.ts plugins/pdf-reader/test/*.test.ts",
-    "typecheck": "tsc --noEmit --module NodeNext --moduleResolution NodeNext --target ES2023 --lib ES2023,DOM --esModuleInterop --skipLibCheck packages/devkit-core/src/index.ts packages/plugin-sdk/src/index.ts plugins/developer-kit/src/index.ts plugins/developer-kit/web/main.ts plugins/pdf-reader/src/index.ts packages/devkit-cli/src/index.ts"
+    "typecheck": "tsc --noEmit --module NodeNext --moduleResolution NodeNext --target ES2023 --lib ES2023,DOM --esModuleInterop --skipLibCheck packages/devkit-core/src/index.ts packages/plugin-sdk/src/index.ts plugins/developer-kit/src/index.ts plugins/developer-kit/web/main.ts plugins/pdf-reader/src/index.ts plugins/word/src/server.ts packages/devkit-cli/src/index.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/client": "2.3.1",

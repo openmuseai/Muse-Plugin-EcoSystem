@@ -35,7 +35,9 @@ Mobile 远端示例需另开终端在 `plugins/genoffice-pptx` 运行 `npm run s
 
 ## 文档
 
+- [Easel 社媒插件、安装引导与发布方案](plugins/easel/README.zh-CN.md)（独立 MCPB，Desktop macOS）
 - [Plugin DevKit 插件产品、开发者指南、技术方案与开发计划](plugins/developer-kit/README.zh-CN.md)（设计阶段，包含 PPTX/PDF 多能力依赖与双资源协作）
+- [Word 产品插件工程、跨端架构与开发计划](plugins/word/README.zh-CN.md)（资源与签名包骨架；内核和 Flutter 编辑表面保留在 `ioffice`）
 - [产品与平台方案](docs/PRODUCT.zh-CN.md)
 - [架构、服务和信任边界](docs/ARCHITECTURE.zh-CN.md)
 - [MCP、A2UI、WebView 与 Wasm 技术选型](docs/PLUGIN-PROTOCOL-SELECTION.zh-CN.md)
