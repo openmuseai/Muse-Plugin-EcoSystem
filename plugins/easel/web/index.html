@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Easel 安装向导</title><style>
+body{margin:0;background:#f7f8f6;color:#182520;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:780px;margin:30px auto;padding:0 22px 50px}.card{background:#fff;border:1px solid #dbe3dd;border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 5px 20px #18252009}h1{font-size:30px;margin:0}h2{font-size:20px;margin:0 0 12px}p{margin:8px 0;color:#52635a}.step{display:flex;gap:12px;align-items:center;border-top:1px solid #edf0ed;padding:11px 0}.step span:first-child{width:24px;height:24px;border-radius:50%;background:#e3eee6;text-align:center;color:#237247;font-weight:700}label{display:block;margin:12px 0 5px;font-weight:600}input[type=text]{width:100%;box-sizing:border-box;border:1px solid #b8c6bd;border-radius:9px;padding:10px;font:inherit}button{border:0;border-radius:10px;background:#197248;color:#fff;font:600 15px inherit;padding:11px 18px;cursor:pointer}button:disabled{background:#9caf9f;cursor:default}.muted{font-size:13px;color:#64766a}pre{white-space:pre-wrap;max-height:250px;overflow:auto;background:#15251c;color:#d4e9d9;padding:16px;border-radius:10px;font:12px/1.5 ui-monospace,monospace}.check{display:flex;gap:9px;align-items:flex-start}.check input{margin-top:6px}.ok{color:#177646;font-weight:700}.bad{color:#b34b25;font-weight:700}
+</style></head><body><main><h1>Easel</h1><p>社交媒体素材加工与发布。安装应用层后，由此向导准备本机依赖；账号授权和对外发布另行操作。</p>
+<section class="card"><h2>1. 环境检查</h2><div id="checks">正在检查…</div><p class="muted" id="data"></p></section>
+<section class="card"><h2>2. 准备依赖</h2><p>向导会在 Easel 专用目录创建 Python 环境，安装 Pillow、Playwright 与 Chromium。若 FFmpeg 尚未安装，可以明确同意通过 Homebrew 安装。</p>
+<label for="python">Python 3.11–3.14 路径（可留空自动查找）</label><input id="python" type="text" placeholder="例如 /opt/homebrew/bin/python3.12">
+<label for="ffmpeg">已有 FFmpeg 目录（同时包含 ffmpeg 与 ffprobe，可留空）</label><input id="ffmpeg" type="text" placeholder="例如 /opt/homebrew/bin">
+<label class="check"><input id="brew" type="checkbox">同意在本机执行 <code>brew install ffmpeg</code>（只在未指定已有目录时使用）</label>
+<p class="muted">安装会联网下载 Python 包与 Chromium。Homebrew 安装会修改其管理的软件目录；Easel 不收集系统密码，也不会自动发布内容。</p><button id="start">开始安装</button></section>
+<section class="card"><h2>3. 安装进度</h2><p id="state">尚未开始</p><pre id="log">等待开始…</pre><button id="refresh">重新检查</button></section>
+<section class="card"><h2>下一步</h2><p>依赖就绪后，在 OpenMuse 终端运行 <code>easel douyin check</code> 或 <code>easel zhihu check</code>，再按平台扫码登录。<code>plan</code> 与文章预览不对外发布；只有显式传入 <code>--exec</code> 才会提交。登录态和素材只保存在本机 Easel 数据目录。</p></section>
+</main><!--SCRIPT--></body></html>
