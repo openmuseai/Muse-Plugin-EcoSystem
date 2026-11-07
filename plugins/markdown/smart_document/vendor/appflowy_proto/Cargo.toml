@@ -1,0 +1,17 @@
+[package]
+name = "appflowy-proto"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "AGPL-3.0-or-later"
+# Reuse the checked generated bindings. Never generate/format into vendor sources.
+build = false
+[dependencies]
+uuid = { version = "1", features = ["serde"] }
+bytes = "1.9"
+thiserror = "2"
+collab-entity = { git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "e59260e524f33104b0ddcd6bb8f6218cad0f7e18" }
+collab = { git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "e59260e524f33104b0ddcd6bb8f6218cad0f7e18" }
+prost = { version = "0.13.4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_repr = "0.1"
