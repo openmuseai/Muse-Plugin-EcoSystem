@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "da2d9ac7-1f51-46b9-8cb2-18bff6df3bc2",
+  "datasetObjectId": "b50b2de7-5f11-4256-9be9-2c285bfdb208",
+  "checks": [
+    "original-native-objects-and-parent-child-resource-identities",
+    "view-config-and-child-edit-preserve-parent-reference",
+    "visible-projection-is-independent-of-original-row-dependencies",
+    "zero-HTTP-content-requests-during-hidden-row-reentry",
+    "actual-peer-UI-edit-of-hidden-row-reenters-filter-over-original-WS2",
+    "peer-view-config-replaces-committed-rule-while-local-draft-is-open",
+    "shared-multi-key-sort-reprojects-live-peer-value-with-stable-row-identity",
+    "actual-child-original-undo-redo-keeps-peer-cell-and-parent-reference",
+    "original-Root1-and-Row4-HTTP-repair-accepted-and-local-checkpoint-flushed"
+  ],
+  "platform": "web",
+  "rowA": "cb5b5650-016d-438d-89fa-a58d6dcea892",
+  "rowB": "dd05cbde-dd5f-4da9-af27-a9528b36be6d"
+}

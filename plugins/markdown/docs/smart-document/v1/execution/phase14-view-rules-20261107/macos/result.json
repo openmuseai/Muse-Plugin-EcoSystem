@@ -1,0 +1,19 @@
+{
+  "run": "rules-2b5b996a564b",
+  "device": "macos",
+  "status": "passed-rules-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "view_rules_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "view_rules_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 7,
+  "freshProcessChecks": 3
+}

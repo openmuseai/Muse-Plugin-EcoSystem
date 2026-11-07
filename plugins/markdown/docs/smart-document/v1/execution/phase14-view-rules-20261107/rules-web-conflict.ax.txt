@@ -1,0 +1,25 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container flt-semantic-node-155
+		23 text 视图设置
+		5 container flt-semantic-node-158
+			6 button 筛选, ID: flt-semantic-node-159
+			7 button 排序, ID: flt-semantic-node-161
+			8 text 当前视图的设置会同步给协作者，不会删除原始记录。
+			9 text 筛选条件
+			10 button 删除条件, ID: flt-semantic-node-165
+			11 button (collapsed) 字段 标题, ID: flt-semantic-node-166, Secondary Actions: Expand
+			12 button (collapsed) 条件 包含, ID: flt-semantic-node-167, Secondary Actions: Expand
+			13 container flt-semantic-node-168
+				14 text field (settable) 内容
+				15 text 忽略大小写；空内容不限制记录
+				16 text 还可输入 4,090 个字符
+			17 button 添加条件, ID: flt-semantic-node-171
+			18 button 添加条件组, ID: flt-semantic-node-172
+			19 text 筛选支持文本、数字、选项、复选框和链接。
+			24 text 视图规则或字段已被修改，请取消后重新打开
+		20 button 清除设置, ID: flt-semantic-node-174
+		21 button 取消, ID: flt-semantic-node-175
+		22 button 应用, ID: flt-semantic-node-176
+
+The focused UI element is 22 button 应用, ID: flt-semantic-node-176

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "da2d9ac7-1f51-46b9-8cb2-18bff6df3bc2",
+  "datasetObjectId": "b50b2de7-5f11-4256-9be9-2c285bfdb208",
+  "checks": [
+    "original-native-objects-and-parent-child-resource-identities",
+    "view-config-and-child-edit-preserve-parent-reference",
+    "fresh-IndexedDB-reopen-without-provider-or-transient-presence-and-readonly-floor",
+    "shared-filters-sorts-and-peer-row-retained-in-original-local-checkpoint"
+  ],
+  "platform": "web-reload",
+  "rowA": "cb5b5650-016d-438d-89fa-a58d6dcea892",
+  "rowB": "dd05cbde-dd5f-4da9-af27-a9528b36be6d"
+}

@@ -1,0 +1,19 @@
+{
+  "run": "rules-bf7cf1208b6f",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-rules-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "view_rules_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "view_rules_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 7,
+  "freshProcessChecks": 3
+}
