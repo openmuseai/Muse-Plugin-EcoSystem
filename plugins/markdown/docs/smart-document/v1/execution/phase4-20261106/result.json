@@ -1,0 +1,73 @@
+{
+  "changeId": "CR-SD-PARITY-20261106",
+  "date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  },
+  "parityCases": [],
+  "slices": {
+    "rust": {
+      "status": "passed",
+      "tests": 7
+    },
+    "flutter": {
+      "status": "passed",
+      "tests": 14
+    },
+    "infraHelper": {
+      "status": "passed",
+      "tests": 2
+    },
+    "macos": {
+      "status": "passed",
+      "checks": 8
+    },
+    "browserRegression": {
+      "status": "passed",
+      "steps": 12,
+      "browserChecks": 7,
+      "reloadChecks": 1,
+      "nativeReadbackChecks": 3
+    },
+    "ios": {
+      "status": "passed-cloud-slice",
+      "primaryChecks": 8,
+      "freshProcessChecks": 3,
+      "softKeyboardVisible": false,
+      "manualIme": "not-certified"
+    },
+    "android": {
+      "status": "unrun",
+      "reason": "User requested iOS only; no install/run"
+    },
+    "parityGateHelper": {
+      "status": "passed",
+      "tests": 3
+    }
+  },
+  "partialCapabilities": [
+    "stable type command/reference",
+    "Markdown block prefixes and atomic undo",
+    "literal multiline code renderer",
+    "nested heading visibility",
+    "projection indexes/order",
+    "Mobile reading mode vs write authorization",
+    "original Cloud two-user cross-platform exchange and offline recovery"
+  ],
+  "outstanding": [
+    "stable concurrent tree moves/split/join",
+    "math/table/media/resource registry",
+    "block references/backlinks and SiYuan advanced elements/import-export",
+    "WebSocket presence/relative anchors",
+    "durable ACK and complete ACL/revocation",
+    "private annotations/sharing/history",
+    "Agent preconditions/idempotency and Office/dataset collaboration",
+    "manual IME/physical-device/performance/accessibility/production Host release"
+  ],
+  "sourceScope": "Browser run source-lock retained separately; iOS run precedes desktop-only menu focus/state patch; final source-lock captures archival workspace inputs with final macOS/local tests",
+  "historicalEvidence": "phase3-mobile-20261105 unchanged; prior Mobile Cloud blocker resolved in this new run"
+}
