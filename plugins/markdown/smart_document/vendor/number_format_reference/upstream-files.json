@@ -1,0 +1,23 @@
+{
+  "package": "rusty-money",
+  "version": "0.4.1",
+  "crateSha256": "5b28f881005eac7ad8d46b6f075da5f322bd7f4f83a38720fc069694ddadd683",
+  "files": [
+    {
+      "path": "rusty-money-0.4.1/src/format.rs",
+      "sha256": "b86646f7b2d9767a4b4f7c2c0002bbc64155197ff6d15b5a50ce52afe56b7b1d"
+    },
+    {
+      "path": "rusty-money-0.4.1/src/locale.rs",
+      "sha256": "731248990533ad7e5b861c4b5f69ebad4da5869d3079d644198a424271b9f354"
+    },
+    {
+      "path": "rusty-money-0.4.1/src/money.rs",
+      "sha256": "70a81f6bfe7a439c078a6d6b020eb7abe5a074a0cede51ae8ddc2eb72dd66a64"
+    },
+    {
+      "path": "rusty-money-0.4.1/LICENSE",
+      "sha256": "3b41d3061b1359de338356d8ab406c2c89ff8a6d3221ea0e3b901f0b9a420aeb"
+    }
+  ]
+}
