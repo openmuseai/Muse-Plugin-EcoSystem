@@ -1,0 +1,20 @@
+{
+  "android": {
+    "package": "com.openmuseai.mobile.siyuanreview",
+    "installedSha256": "8f04deb34aad33f1feec0208285d17b5035f1aeca2b7f42fa0a03966d3de58b5",
+    "matchesArtifact": true
+  },
+  "macos": {
+    "installedPath": "/Users/mac/Applications/OpenMuse Resource Review 20261102.app",
+    "signatureVerified": true
+  },
+  "iosSimulator": {
+    "device": "02C59B16-550A-49A6-B84D-CE1A8D961403",
+    "package": "com.openmuseai.mobile.siyuanreview",
+    "installed": true
+  },
+  "iosDevice": {
+    "unsignedBuildOnly": true,
+    "uiTested": false
+  }
+}

@@ -1,0 +1,1499 @@
+{
+  "changeId": "CR-SD-PARITY-20261106",
+  "reference": {
+    "repository": "vendors/siyuan",
+    "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "version": "3.8.9",
+    "mode": "fixed local clean checkout, read only; no latest-remote claim"
+  },
+  "fullParityReady": false,
+  "requirements": [
+    {
+      "id": "SY-01",
+      "name": "稳定块地址和类型转换",
+      "task": "T05",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "块类型改变、并发文字、撤销/重开后 block/Y.Text/children 身份不变",
+      "knownGaps": [
+        "旧缩进/拖拽/部分上游快捷键尚未统一稳定身份命令"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-02",
+      "name": "段落、Unicode 与选区编辑",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "组合输入、换行、范围删除、emoji 和恢复一致",
+      "knownGaps": [
+        "真实中文 IME/长按/跨端边界未完整验收"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-03",
+      "name": "H1–H6 与正文",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "所有标题级别、混合选择与子内容可见",
+      "knownGaps": [
+        "折叠/跨层级组织与全部快捷键未齐"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-04",
+      "name": "内联文字样式",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "B/I/U/删除线/高亮/颜色/行内代码/链接等全量范围和续写行为",
+      "knownGaps": [
+        "上下标、kbd、标签、批注等标记与混合状态未齐",
+        "超链接基本域命令与三端增量已测；内部/文件导航、完整思源语料与资源解析仍未齐"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "execution/phase6-media-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-05",
+      "name": "列表、任务与编号",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "有序/无序/待办、嵌套、完成状态、拆合保持语义",
+      "knownGaps": [
+        "嵌套移动、编号重置、并发任务/缩进和全部 UI 状态待验"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-06",
+      "name": "代码块与语言",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "字面 Markdown/换行、语言、复制、编辑与持久化",
+      "knownGaps": [
+        "语法高亮、语言选择、退出代码/复制等完整行为未齐"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-07",
+      "name": "行内/块数学公式",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "unrun",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "公式源与排版、选区、导入导出一致",
+      "knownGaps": [
+        "P25 已实现原 math_equation 块、公式源/预览、过期草稿、删除恢复；macOS/iOS 各 9 UI + 3 重开通过，但尚未完成本轮 Web 同对象协作、离线/Cloud 重启回读和冻结归档",
+        "行内公式、完整 KaTeX/mhchem/自定义宏、$$ 快捷输入、Markdown 公式桥与公式内字符级协作未完成",
+        "当前 renderer 为原 flutter_math_fork 0.7.3 加一个可逆 Flutter 布局兼容补丁；超出渲染配置的源保留，不能等同完整思源排版保真"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "48-PHASE25-ORIGINAL-FORMULA-EDITOR.zh-CN.md"
+      ]
+    },
+    {
+      "id": "SY-08",
+      "name": "表格富文本与行列",
+      "task": "T05",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "单元格独立编辑/并发，行列增删/选区/调整",
+      "knownGaps": [
+        "可变行列/独立行列身份、合并拆分、跨格编辑/粘贴、全部键盘与无障碍尚未验收"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase5-table-20261106/result.json"
+      ],
+      "implementedSlice": "已实现固定网格的单元格文字/marks、稳定身份、同格/异格并发和三端恢复"
+    },
+    {
+      "id": "SY-09",
+      "name": "表格合并与粘贴",
+      "task": "T08",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "合并/拆分及富文本单元格往返",
+      "knownGaps": [
+        "rowspan/colspan、行高和跨应用表格粘贴未实现"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-10",
+      "name": "图片与说明/尺寸",
+      "task": "T15",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "真实资源、替代文本/说明、缩放/链接、离线恢复",
+      "knownGaps": [
+        "已接私有图片上传、说明/alt/尺寸/对齐、并发与重开；图片替换/链接、相册/拍照/云图片、粘贴/拖入与全部上下文未齐",
+        "传输字节进度、进行中取消、来源撤权推送、离线本机图转在线附件和完整生命周期未齐",
+        "Apple 系统选择器/相册及真机尚未验收；实际浏览器文件选择器已另测"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase6-media-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-11",
+      "name": "音频和视频",
+      "task": "T15",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "音视频同屏、来源和失败/撤权可见",
+      "knownGaps": [
+        "媒体 provider/上传/播放和格式桥未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-12",
+      "name": "附件与资源管理",
+      "task": "T15",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "上传重试、去重、权限、关闭/重开不丢草稿",
+      "knownGaps": [
+        "图片附件已有私有对象 API、草稿重试、校验缓存和反绕过；通用附件 UI/分块上传/历史 GC 未齐",
+        "跨资源来源权限、账户切换、全部撤权/恢复与传输取消尚未完整验收"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase6-media-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-13",
+      "name": "静态/动态块引用",
+      "task": "T10",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "引用、锚文本更新、删除目标与授权失效",
+      "knownGaps": [
+        "只有领域稳定块地址，未交付引用 token 与目标解析服务"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-14",
+      "name": "块嵌入与查询嵌入",
+      "task": "T10",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "同一来源、可见范围、循环依赖与离线行为",
+      "knownGaps": [
+        "未实现 transclusion/受限查询及缓存失效"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-15",
+      "name": "IAL 和自定义块属性",
+      "task": "T05",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "设置、删除、搜索、自定义属性与导出保真",
+      "knownGaps": [
+        "底层 JSON attrs 可保留，缺编辑/查询/迁移能力"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-16",
+      "name": "反链与未链接提及",
+      "task": "T10",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "反向引用更新、无权来源过滤、目标定位",
+      "knownGaps": [
+        "索引、权限投影与 UI 未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-17",
+      "name": "跨应用剪贴板/拖入",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "剪切/复制/粘贴语义、富文本/Markdown、附件与安全过滤",
+      "knownGaps": [
+        "已验证原生文字粘贴，HTML/图片/复杂片段未齐"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-18",
+      "name": "Markdown 快捷输入",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "前缀/围栏按原子事务转换，保留 ID 和可撤销性",
+      "knownGaps": [
+        "基础块触发已统一；行内全量、自动配对与复杂输入未全验"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-19",
+      "name": "Slash 与键盘命令",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "搜索、最近命令、上下文能力与多端可达",
+      "knownGaps": [
+        "桌面部分菜单可用，Mobile/插件贡献和全部按键未齐"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-20",
+      "name": "块选择、移动与拆合",
+      "task": "T05",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "多选/拖拽/缩进/折叠/拆分合并与稳定 ID",
+      "knownGaps": [
+        "旧 replacement 路径仍在，未通过并发拓扑门"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-21",
+      "name": "超级块/分栏",
+      "task": "T09",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "嵌套 row/col 布局与导入导出",
+      "knownGaps": [
+        "布局 schema/选择/拖动/跨端适配未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-22",
+      "name": "页签 Tabs",
+      "task": "T09",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "页签/页项 ID、切换/排序/嵌套与同步",
+      "knownGaps": [
+        "Spec 3 页签结构和 UI 未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-23",
+      "name": "Callout",
+      "task": "T08",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "提示类型、文字/子内容与往返",
+      "knownGaps": [
+        "独立 callout 语义及样式/格式桥未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-24",
+      "name": "思维导图",
+      "task": "T09",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "节点内容、排序/编号/任务、兼容旧形态",
+      "knownGaps": [
+        "Spec 5 节点/交互/布局未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-25",
+      "name": "图表和绘图渲染",
+      "task": "T09",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "源与呈现、错误、预算、导出跨端一致",
+      "knownGaps": [
+        "Mermaid/Graphviz/flowchart 等真实编辑与安全 renderer 未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-26",
+      "name": "HTML/iframe/widget",
+      "task": "T18",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "受控扩展与来源权限，不执行任意跨资源脚本",
+      "knownGaps": [
+        "能力约束、沙箱、生命周期和失效回退未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-27",
+      "name": "未知与自定义元素",
+      "task": "T18",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "安装/卸载、未知保留/只读、预算和恢复",
+      "knownGaps": [
+        "未形成完整 codec/renderer/migration 注册合同"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-28",
+      "name": "Markdown 源与格式桥",
+      "task": "T19",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "WYSIWYG/源视图同一命令真源、保真与损失报告",
+      "knownGaps": [
+        "已有快捷输入，未交付有损预览与完整双向转换"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "SY-29",
+      "name": "SiYuan .sy/.sydoc 兼容",
+      "task": "T19",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "Spec 2–6、ID 映射、未知与加密认证恢复保留",
+      "knownGaps": [
+        "原插件独立可用不计新格式达标；新桥未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-30",
+      "name": "目录、折叠、聚焦与视图",
+      "task": "T08",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "嵌套目录定位、折叠、主题/个人偏好与可读性",
+      "knownGaps": [
+        "P19 已验收 H1–H6 层级目录、目录子项收起、当前章节、稳定 ID 导航、跨断点状态与协作更新；正文折叠、聚焦、全部主题和持久偏好仍未齐，Android / Windows / Linux 未验收"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json"
+      ]
+    },
+    {
+      "id": "SY-31",
+      "name": "查找替换与全文索引",
+      "task": "T05",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "正文/属性检索、替换范围、权限投影",
+      "knownGaps": [
+        "未接文档/全资源索引及 UI"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-32",
+      "name": "版本历史与恢复",
+      "task": "T13",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "版本查询、只读预览、命名/恢复屏障、离线保留",
+      "knownGaps": [
+        "本机检查点不等于产品版本/历史 UI"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-33",
+      "name": "AV/数据库视图",
+      "task": "T16",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "字段/记录、筛选排序/计算、多视图同源并发",
+      "knownGaps": [
+        "已实现七类基础字段、文档内嵌共享 Grid、多视图全局字段与单选分组看板、绝对日期条件和原预填充；完整 18 字段/5 视图、其它分组/计算、相对时钟筛选、中文排序、来源块绑定未齐",
+        "原 row cell 为键值合并；文本单元格非字符级协作，复合日期值缺完整语义冲突处理",
+        "日期毫秒导入、完整格式/农历/提醒、日历视图仍缺；当前秒级类型不能宣称思源日期无损保真",
+        "协议级订阅、跨对象授权继承与恢复未齐，前128行客户端关注不等于1000行性能验收",
+        "已接入原条件预填充与隐藏新记录编辑；任意嵌套/否定条件不能保证自动满足，预填充不是约束求解器"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "38-PHASE15-DATABASE-CONCURRENT-RULES.zh-CN.md",
+        "execution/phase15-concurrent-views-20261107/result.json",
+        "39-PHASE16-DATABASE-DATE-FILTER-PREFILL.zh-CN.md",
+        "execution/phase16-date-filters-20261107/result.json",
+        "40-PHASE17-NESTED-SHARED-RULES.zh-CN.md",
+        "execution/phase17-nested-rules-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "SY-34",
+      "name": "模板与查询工具",
+      "task": "T17",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "变量、复用、授权边界、应用与提交状态",
+      "knownGaps": [
+        "模板、受限查询与业务组件未接"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-35",
+      "name": "导出与可恢复包",
+      "task": "T19",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "Markdown/HTML/PDF/Word 以及原件/损失报告/恢复",
+      "knownGaps": [
+        "缺完整格式桥和附件清单恢复"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "SY-36",
+      "name": "多端输入与扩展一致性",
+      "task": "T22",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "Desktop/Web/iOS/Android、IME、外键盘、旋转和插件贡献",
+      "knownGaps": [
+        "macOS 与网页子资源快捷键、iOS 基础日期 UI 增量已验证；网页 AX 重做需要恢复子控件焦点，物理连续输入未完整验收",
+        "iOS 模拟器为主，软件键盘真实几何、物理 IME、旋转、完整无障碍与 Android 仍未齐；Android 暂不安装"
+      ],
+      "source": "vendors/siyuan/docs/SY-FORMAT.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json"
+      ]
+    },
+    {
+      "id": "CO-01",
+      "name": "正文/样式并发与结构命令",
+      "task": "T06",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "多账号同段/marks/类型/删除合并与收敛",
+      "knownGaps": [
+        "内容 full-sync 已验收；完整结构并发与 WS 通道未齐"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-02",
+      "name": "离线、重复/乱序与追赶",
+      "task": "T07",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "本机耐久、重连、重复/乱序、重开与队列恢复",
+      "knownGaps": [
+        "已有离线和重复更新用例，背压/长断线矩阵未齐"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "38-PHASE15-DATABASE-CONCURRENT-RULES.zh-CN.md",
+        "execution/phase15-concurrent-views-20261107/result.json",
+        "39-PHASE16-DATABASE-DATE-FILTER-PREFILL.zh-CN.md",
+        "execution/phase16-date-filters-20261107/result.json",
+        "40-PHASE17-NESTED-SHARED-RULES.zh-CN.md",
+        "execution/phase17-nested-rules-20261107/result.json",
+        "41-PHASE18-USER-PRESENCE-ROSTER.zh-CN.md",
+        "execution/phase18-user-roster-20261107/result.json",
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-03",
+      "name": "服务端耐久确认",
+      "task": "T07",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "日志/快照持久边界、崩溃后状态与诚实 receipt",
+      "knownGaps": [
+        "服务已接收不等于耐久 ACK；完整崩溃窗口未验"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json"
+      ]
+    },
+    {
+      "id": "CO-04",
+      "name": "在线成员与光标/选区",
+      "task": "T06",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "同屏位置、过期清理、撤权/隐私和跨端恢复",
+      "knownGaps": [
+        "原 WS2/Awareness、文档与 Dataset 的同 UID 多端聚合、独立位置、关闭/重连与三端切片已通过；当前仅两用户四位置，完整多人规模、组织目录/头像、Office 在线范围、跨实例通知及性能故障仍未验收。",
+        "物理键盘/中文 IME、Android UI 及 Windows/Linux 本轮仍未专项验收。"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "41-PHASE18-USER-PRESENCE-ROSTER.zh-CN.md",
+        "execution/phase18-user-roster-20261107/result.json"
+      ]
+    },
+    {
+      "id": "CO-05",
+      "name": "角色、撤权与所有写入口",
+      "task": "T10",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "owner/editor/commenter/viewer、旧 session/epoch 与原始 update 一致校验",
+      "knownGaps": [
+        "非成员原始读写拒绝已测；评论者/撤权竞态未齐",
+        "已补注册对象 tombstone/scope/type 与文档终态保护；WS v2、完整动态角色/撤权、离线授权及所有入口仍待验收",
+        "P11 已验收真实 Guest 对根/行直接授权、降级、行撤权及根删除；资源注册表/权限继承和即时跨实例通知仍开放"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-06",
+      "name": "分享、邀请和链接权限",
+      "task": "T10",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "成员/访客邀请、到期、撤回、来源资源权限",
+      "knownGaps": [
+        "仅 fixture 邀请并禁邮件，产品分享和链接策略未接"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "CO-07",
+      "name": "锚点评论、回复和 @",
+      "task": "T10",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "范围/块锚点、解决/重开、失效/无权、通知幂等",
+      "knownGaps": [
+        "未接私有 annotation 服务、身份目录与 outbox"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "CO-08",
+      "name": "协作历史和恢复",
+      "task": "T13",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "多人编辑时恢复、历史引用、离线草稿和新版本",
+      "knownGaps": [
+        "未接 restore barrier 与完整版本域"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-09",
+      "name": "Agent 协作命令",
+      "task": "T11",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "并发用户修改时旧 patch 拒绝、重试不重复、取消/查询",
+      "knownGaps": [
+        "稳定块地址已具备；服务端读集/幂等/前置条件未接"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "CO-10",
+      "name": "表格/数据集事务",
+      "task": "T16",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "不同粒度协作、CAS/幂等与视图不复制数据",
+      "knownGaps": [
+        "已有原 Database/Row 1/4 独立同步与冻结根依赖发布；完整行/字段/视图命令、跨对象原子/幂等作业、关系及恢复未齐",
+        "P10 修复首次空单元格撤销移除后续协作者值；原子 cell、跨资源事务及完整键盘撤销路由仍未完整验收",
+        "根层及新共享嵌套规则并发、Dataset 单项撤销已增量修复；旧容器迁移、旧写入器协商、同 ID 创建、并发类型转换、跨对象原子语义与全局 CAS 仍未齐"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase5-table-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "38-PHASE15-DATABASE-CONCURRENT-RULES.zh-CN.md",
+        "execution/phase15-concurrent-views-20261107/result.json",
+        "39-PHASE16-DATABASE-DATE-FILTER-PREFILL.zh-CN.md",
+        "execution/phase16-date-filters-20261107/result.json",
+        "40-PHASE17-NESTED-SHARED-RULES.zh-CN.md",
+        "execution/phase17-nested-rules-20261107/result.json",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-11",
+      "name": "Office/媒体独立资源协作",
+      "task": "T14",
+      "implementation": "planned",
+      "completion": "unrun",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "unrun",
+        "web": "unrun",
+        "ios": "unrun",
+        "android": "unrun"
+      },
+      "acceptance": "页/区域/对象授权、进入子 surface、同源与版本",
+      "knownGaps": [
+        "独立 provider 方案未形成实际多端完整验证"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": []
+    },
+    {
+      "id": "CO-12",
+      "name": "服务端结构/配额校验",
+      "task": "T06",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "循环/多父/缺失块/异常 delta/配额在提交前统一拒绝",
+      "knownGaps": [
+        "客户端 candidate 校验已测；服务端领域校验/并发移动未齐"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json"
+      ]
+    },
+    {
+      "id": "CO-13",
+      "name": "协议/模型兼容和迁移",
+      "task": "T06",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "多版本、未知元素、恢复/回退不污染原状态",
+      "knownGaps": [
+        "固定 binding、epoch 不兼容拒绝已测；生产迁移/灰度未齐",
+        "P19 同时固定客户端/Cloud 的原 Yrs 0.23.5 GC 删除尾部修复；字节协议不变，旧解析器混用的协商、发布升级门禁及历史丢失删除的恢复仍未完成"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase6-media-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    },
+    {
+      "id": "CO-14",
+      "name": "跨端全链与运行保障",
+      "task": "T21",
+      "implementation": "partial",
+      "completion": "partial",
+      "requiredPlatforms": [
+        "desktop",
+        "web",
+        "ios",
+        "android"
+      ],
+      "verification": {
+        "desktop": "partial",
+        "web": "partial",
+        "ios": "partial",
+        "android": "unrun"
+      },
+      "acceptance": "多端同对象、故障观测、无敏感日志、服务健康、恢复/发布",
+      "knownGaps": [
+        "native/Web/iOS 主线通过；Android 与全故障/性能矩阵未齐"
+      ],
+      "source": "docs/smart-document/v1/09-COLLABORATION-PACKAGES.zh-CN.md",
+      "evidence": [
+        "execution/phase4-20261106/result.json",
+        "execution/phase5-table-20261106/result.json",
+        "execution/phase7-dataset-20261106/result.json",
+        "31-PHASE8-REALTIME-IMPLEMENTATION.zh-CN.md",
+        "execution/phase8-realtime-20261106/result.json",
+        "execution/phase9-choices-20261106/result.json",
+        "execution/phase10-embedded-20261106/result.json",
+        "execution/phase11-dataset-realtime-20261106/result.json",
+        "execution/phase12-dates-20261106/result.json",
+        "execution/phase13-lifecycle-20261107/result.json",
+        "37-PHASE14-DATABASE-VIEW-RULES.zh-CN.md",
+        "execution/phase14-view-rules-20261107/result.json",
+        "38-PHASE15-DATABASE-CONCURRENT-RULES.zh-CN.md",
+        "execution/phase15-concurrent-views-20261107/result.json",
+        "39-PHASE16-DATABASE-DATE-FILTER-PREFILL.zh-CN.md",
+        "execution/phase16-date-filters-20261107/result.json",
+        "40-PHASE17-NESTED-SHARED-RULES.zh-CN.md",
+        "execution/phase17-nested-rules-20261107/result.json",
+        "41-PHASE18-USER-PRESENCE-ROSTER.zh-CN.md",
+        "execution/phase18-user-roster-20261107/result.json",
+        "42-PHASE19-DOCUMENT-OUTLINE.zh-CN.md",
+        "execution/phase19-document-outline-20261107/result.json",
+        "43-PHASE20-NUMERIC-CELL-INTEGRITY.zh-CN.md",
+        "44-PHASE21-NUMBER-FORMAT-SETTINGS.zh-CN.md",
+        "45-PHASE22-LINKED-DATABASE-VIEWS.zh-CN.md",
+        "46-PHASE23-SHARED-VIEW-SCHEMA.zh-CN.md",
+        "47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md"
+      ]
+    }
+  ]
+}

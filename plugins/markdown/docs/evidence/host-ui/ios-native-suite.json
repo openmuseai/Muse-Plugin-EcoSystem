@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "errors": [],
+  "configuration": {
+    "liveAccount": false,
+    "liveDesktop": false,
+    "deleteAccount": false
+  },
+  "tests": {
+    "installed SiYuan opens from the real Host workbench and saves UI input": "success"
+  }
+}

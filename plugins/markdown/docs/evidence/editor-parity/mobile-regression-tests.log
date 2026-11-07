@@ -1,0 +1,20 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: Mobile startup shows a newer store release before work
+Installed plugin capability refresh unavailable
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/resource_center_shell_test.dart: reference cards and retention controls fit above keyboard at large text sizes
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: mobile distribution loads the GoTrue login plugin by default
+Installed plugin capability refresh unavailable
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: mobile distribution loads the GoTrue login plugin by default
+00:00 +3: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/resource_center_shell_test.dart: Home storage failure exposes retry and leaves Tasks navigation usable
+00:00 +4: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/resource_center_shell_test.dart: Home storage failure exposes retry and leaves Tasks navigation usable
+00:00 +5: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/resource_center_shell_test.dart: Home storage failure exposes retry and leaves Tasks navigation usable
+00:00 +6: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/resource_center_shell_test.dart: Home storage failure exposes retry and leaves Tasks navigation usable
+00:00 +7: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: same-account Desktop screen has no pairing-code step
+00:00 +8: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: Desktop workspace route enters the native catalog shell
+00:00 +9: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: service-backed composition opens a Remote DSH session
+00:00 +10: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: authorized DOCX catalog route opens and commits by receipt
+00:01 +11: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: authorized XLSX catalog route remains view only
+00:01 +12: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: authorized PPTX catalog route remains view only
+00:01 +13: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: PPTX route becomes available after market installation
+00:01 +14: /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/test/mobile_app_test.dart: authorized PDF catalog route is a text-only compatibility view
+00:01 +15: All tests passed!

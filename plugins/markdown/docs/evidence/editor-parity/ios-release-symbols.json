@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "symbols": [
+    "muse_siyuan_start",
+    "muse_siyuan_status",
+    "muse_siyuan_suspend",
+    "muse_siyuan_resume",
+    "muse_siyuan_flush",
+    "muse_siyuan_free"
+  ]
+}

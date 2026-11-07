@@ -1,0 +1,15 @@
+{
+  "platform": "ios",
+  "passed": true,
+  "entry": "OpenMuse Mobile → Workbench → SiYuan",
+  "checks": {
+    "compiledPluginInstalled": true,
+    "realHostWorkbenchEntry": true,
+    "originalFrontendCreatedDocument": true,
+    "uiInputPersisted": true,
+    "closeReopenPreservesContent": true
+  },
+  "marker": "OpenMuse Host UI ios 1793508935898823",
+  "testSourceSha256": "e10744557ec892b22eb85c3631acdd33ab25768987d31e1b927ef1c16371a40d",
+  "method": "Flutter native integration binding; original frontend controls and DOM input; plugin-owned .sy persistence and UI reopen verified"
+}

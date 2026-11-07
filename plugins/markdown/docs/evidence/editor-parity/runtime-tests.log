@@ -1,0 +1,10 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_links_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_links_test.dart: attachment, phone file, web and canonical resource links are distinct
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_links_test.dart: asset downloads carry the local session and never follow redirects
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_archive_test.dart: native document archive retains binary assets and attribute views
+00:00 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_archive_test.dart: raw sy is parsed and wrapped without flattening its native tree
+00:00 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/resource_archive_test.dart: rejects traversal, absolute and duplicate entries before import
+00:00 +5: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/client_export_test.dart: native export keeps original bytes and cancellation semantics
+00:00 +6: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/client_export_test.dart: native export keeps original bytes and cancellation semantics
+00:00 +7: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/test/client_export_test.dart: invalid export paths never reach the native writer
+00:00 +8: All tests passed!

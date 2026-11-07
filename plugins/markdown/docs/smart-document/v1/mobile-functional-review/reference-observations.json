@@ -1,0 +1,75 @@
+{
+  "referenceId": "WPS-MOB-20261105",
+  "platform": "Android / connected physical phone via existing mirror",
+  "captureDate": "2026-11-05",
+  "sourcePolicy": "Reference captures remain in ignored task build storage; prototype uses synthetic people and content. No WPS content is copied into the prototype.",
+  "screenshots": [
+    {
+      "localPath": ".build/mobile-wps-reference/01-edit-title.png",
+      "sha256": "6534cb4cf0abb0a40e48ab75a309047ab6017e045e6329286940fad054960a06",
+      "bytes": 146701
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/02-edit-keyboard.png",
+      "sha256": "be749d952aee36556a8ae5f7551adc2f4f2107a5a6ac9d021a05e701e7c36287",
+      "bytes": 156000
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/03-file-menu.png",
+      "sha256": "8165a534a898d24a41b97c506f43e6d94745bb1421e1b08cf76c4f745f7febef",
+      "bytes": 120980
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/04-insert.png",
+      "sha256": "58a292f1ac296e0d955d63b22f794999e7c33ef60cceefae52b4ae8f841dd43a",
+      "bytes": 111871
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/07-format-top.png",
+      "sha256": "53ea67b16f82bd8112252a9861268f87075dff4b9837e906879720d762153bb3",
+      "bytes": 151962
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/08-format-colors-highlight.png",
+      "sha256": "e0393e3128e715e1a0c0da795f61b21a14f2f0f9d0d91dea827af48a6d5d0c01",
+      "bytes": 157434
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/09-list-popover-keyboard.png",
+      "sha256": "85f3390b4149a666d0656cfda7a68dd4d5ed80aa1956af917d5073548340984d",
+      "bytes": 170888
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/10-align-indent-popover-keyboard.png",
+      "sha256": "bf045d0ee1e19b32a109dde994df9f41671833b0bc6598da80cd603776265bbe",
+      "bytes": 169449
+    },
+    {
+      "localPath": ".build/mobile-wps-reference/12-ai-composer-keyboard.png",
+      "sha256": "9dd40dfe0299006cfd580004d60507c12745b2a140d19c7cbd1d0ebdadfcc398",
+      "bytes": 147485
+    }
+  ],
+  "confirmed": [
+    "read header and floating edit/chat/outline/view dock",
+    "edit done/undo/redo/file menu/resource tabs/close",
+    "keyboard accessory: AI, insert, Aa, list, alignment, image, @ user, keyboard",
+    "Aa: H1-H6/body, B/I/U/strike, font palette including gradients, highlight palette including none",
+    "list: compact ordered/bulleted/todo popover retaining keyboard",
+    "alignment: compact left/center/right plus outdent/indent popover retaining keyboard",
+    "insert: table/image/cloud document/local file/video visible",
+    "file actions: save as/share/print/page settings/find replace/export Word/export other/save version/version history/comment history",
+    "user explicitly confirms @ is for users, not cloud documents",
+    "image placeholder and image block context actions observed; accidental placeholder insertion was immediately undone",
+    "AI retains keyboard and replaces accessory with composer; AI writing/polish/expand/shorten/grammar/deep thinking visible"
+  ],
+  "pending": [
+    "exact user-picker layout",
+    "view/chat/share/comment/history details and deeper picker actions",
+    "complete insert list below observed video item",
+    "iOS-specific reference differences"
+  ],
+  "excludedByUser": [
+    "Complete WPS AI feature/menu parity. User requested preserving current AI layout and using Muse Agent capabilities."
+  ]
+}

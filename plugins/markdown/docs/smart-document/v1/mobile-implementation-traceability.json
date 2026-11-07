@@ -1,0 +1,253 @@
+{
+  "baselineId": "SD-MOB-1.3-20261105",
+  "milestone": "M3-A",
+  "requirements": [
+    {
+      "id": "MA-01",
+      "name": "阅读与导航",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-02",
+      "name": "编辑导航与撤销",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-03",
+      "name": "文档头元信息",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-04",
+      "name": "AI composer",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-D",
+      "implementation": "style-only",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-05",
+      "name": "插入",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json",
+      "additionalEvidence": "execution/phase4-20261106/result.json",
+      "tableEvidence": "execution/phase5-table-20261106/result.json"
+    },
+    {
+      "id": "MA-06",
+      "name": "H1–H6/正文",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json",
+      "additionalEvidence": "execution/phase4-20261106/result.json"
+    },
+    {
+      "id": "MA-07",
+      "name": "B/I/U/删除线",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json",
+      "additionalEvidence": "execution/phase4-20261106/result.json"
+    },
+    {
+      "id": "MA-08",
+      "name": "字体颜色/渐变",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json",
+      "additionalEvidence": "execution/phase4-20261106/result.json"
+    },
+    {
+      "id": "MA-09",
+      "name": "高亮",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "implemented-unverified",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-10",
+      "name": "列表浮层",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-11",
+      "name": "对齐/缩进",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-12",
+      "name": "图片来源",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-B",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-13",
+      "name": "@ 用户",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-C",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-14",
+      "name": "键盘开关",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-15",
+      "name": "文字选区",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-16",
+      "name": "图片上下文",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-B",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-17",
+      "name": "表格上下文",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-B",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-18",
+      "name": "目录",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-19",
+      "name": "个人视图",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-20",
+      "name": "文件/更多",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase3-mobile-20261105/result.json"
+    },
+    {
+      "id": "MA-21",
+      "name": "分享与权限",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-C",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-22",
+      "name": "评论锚点",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-C",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-23",
+      "name": "Office/来源区域",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-B",
+      "implementation": "not-implemented",
+      "fullAcceptance": "not-complete",
+      "evidence": null
+    },
+    {
+      "id": "MA-24",
+      "name": "保存/离线/恢复",
+      "targetSource": "21-MOBILE-PRODUCT-UX.zh-CN.md",
+      "design": "22-MOBILE-DESIGN-REVIEW.zh-CN.md",
+      "batch": "M3-A",
+      "implementation": "partial-cloud-slice-passed",
+      "fullAcceptance": "not-complete",
+      "evidence": "execution/phase4-20261106/result.json"
+    }
+  ],
+  "productStatus": "partial; iOS authenticated Cloud, fixed-grid table editing and credential-free fresh process passed; full MA acceptance not complete",
+  "latestExecution": "execution/phase5-table-20261106/result.json"
+}

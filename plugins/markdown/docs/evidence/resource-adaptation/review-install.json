@@ -1,0 +1,30 @@
+{
+  "desktop": {
+    "installed": "/Users/mac/Applications/OpenMuse Resource Review 20261102.app",
+    "signatureVerified": true,
+    "nativeKeyboardUiPassed": true,
+    "screens": [
+      "screens/macos-keyboard-saved.png",
+      "screens/macos-reopened.png"
+    ]
+  },
+  "android": {
+    "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02/OpenMuse-android-arm64-debug.apk",
+    "physicalInstall": "success",
+    "physicalNativeUiPassed": true,
+    "installedSha256": "24b9f99347b622353205cd6fc0e06e46e9fa0570a5371c125a1c4850c1871961",
+    "device": "OPPO PKM110 / Android 16",
+    "ordinaryLaunch": "region selection rendered; full editor flow verified by native integration suite"
+  },
+  "iosSimulator": {
+    "installed": true,
+    "device": "02C59B16-550A-49A6-B84D-CE1A8D961403",
+    "package": "com.openmuseai.mobile.siyuanreview",
+    "nativeUiPassed": true
+  },
+  "iosDevice": {
+    "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02/OpenMuse-iOS-device-unsigned.app",
+    "signed": false,
+    "physicalUiTested": false
+  }
+}

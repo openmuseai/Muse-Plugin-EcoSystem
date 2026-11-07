@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "errors": [],
+  "configuration": {
+    "liveAccount": false,
+    "liveDesktop": false,
+    "deleteAccount": false
+  },
+  "tests": {
+    "SiYuan participates in actual Mobile Home resource create edit save reopen": "success"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "builtAt": "2026-11-02T18:51:41.222396+08:00",
+  "platforms": {
+    "macos": {
+      "platform": "macos",
+      "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-macos.app",
+      "passed": true,
+      "commands": [
+        [
+          "flutter",
+          "build",
+          "macos",
+          "--debug",
+          "--no-pub",
+          "--target",
+          "lib/main.dart"
+        ],
+        [
+          "codesign",
+          "--verify",
+          "--deep",
+          "--strict",
+          "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-macos.app"
+        ]
+      ],
+      "runtimeSha256": "54dd04b3c3d69367eeb004660eeecd0bcb64f074cb828037eb9d6e96f4fa5d32",
+      "logSha256": "4ebc92a917dace7a8c4a06fe21ed77a782a7205901ea4b01899e183262f33001",
+      "upstream": {
+        "repository": "https://github.com/siyuan-note/siyuan",
+        "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+        "version": "3.8.9",
+        "license": "AGPL-3.0-or-later",
+        "go": "1.26.10",
+        "buildTags": [
+          "fts5",
+          "sqlcipher"
+        ]
+      },
+      "nativeSourceArtifacts": {
+        "macos/Libraries/libmuse_siyuan.dylib": "85ddde698005172dbe3c43aba9fbaada45679db0b056b2334668972ecab45e18",
+        "macos/Libraries/libonnxruntime.dylib": "81b90223e770bfaea12783cb99370258387bae7ed70ff7e99f2717382800d217"
+      },
+      "adapterSourceSha256": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846",
+      "signatureVerified": true,
+      "signatureResealed": false
+    },
+    "android": {
+      "platform": "android",
+      "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-android-arm64-debug.apk",
+      "passed": true,
+      "commands": [
+        [
+          "./gradlew",
+          "-I",
+          "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/scripts/android_arm64.init.gradle",
+          "--no-daemon",
+          "-Ptarget-platform=android-arm64",
+          "-Ptarget=/Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/lib/main.dart",
+          "-Pbase-application-name=android.app.Application",
+          "-Pdart-obfuscation=false",
+          "-Ptrack-widget-creation=true",
+          "-Ptree-shake-icons=false",
+          "assembleDebug"
+        ]
+      ],
+      "runtimeSha256": "54dd04b3c3d69367eeb004660eeecd0bcb64f074cb828037eb9d6e96f4fa5d32",
+      "logSha256": "eabc93d33b4691960bd42e4ae6e04772295bd83231abe34bc124986a3334aac1",
+      "upstream": {
+        "repository": "https://github.com/siyuan-note/siyuan",
+        "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+        "version": "3.8.9",
+        "license": "AGPL-3.0-or-later",
+        "go": "1.26.10",
+        "buildTags": [
+          "fts5",
+          "sqlcipher"
+        ]
+      },
+      "nativeSourceArtifacts": {
+        "android/src/main/jniLibs/arm64-v8a/libmuse_siyuan.so": "b90d0e695717af3630d1a9f514354e47059abea6973a0791737cce2721c298f7",
+        "android/src/main/jniLibs/arm64-v8a/libsiyuan_ort.so": "9fcaade7202c101d2f72eeed3c93dbddfbb25eb1236f5c9de50f3a79ca459860"
+      },
+      "adapterSourceSha256": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846",
+      "package": "com.openmuseai.mobile.siyuanreview",
+      "sha256": "8f04deb34aad33f1feec0208285d17b5035f1aeca2b7f42fa0a03966d3de58b5"
+    },
+    "ios-simulator": {
+      "platform": "ios-simulator",
+      "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-iOS-simulator.app",
+      "passed": true,
+      "commands": [
+        [
+          "flutter",
+          "build",
+          "ios",
+          "--simulator",
+          "--debug",
+          "--no-pub",
+          "--config-only",
+          "--target",
+          "lib/main.dart"
+        ],
+        [
+          "xcodebuild",
+          "-workspace",
+          "Runner.xcworkspace",
+          "-scheme",
+          "Runner",
+          "-configuration",
+          "Debug",
+          "-sdk",
+          "iphonesimulator",
+          "-destination",
+          "id=02C59B16-550A-49A6-B84D-CE1A8D961403",
+          "ARCHS=arm64",
+          "ONLY_ACTIVE_ARCH=YES",
+          "EXCLUDED_ARCHS=x86_64",
+          "BUILD_DIR=/Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/build/ios",
+          "CODE_SIGNING_ALLOWED=YES",
+          "CODE_SIGN_IDENTITY=-",
+          "OPENMUSE_DEBUG_BUNDLE_IDENTIFIER=com.openmuseai.mobile.siyuanreview",
+          "-quiet"
+        ]
+      ],
+      "runtimeSha256": "54dd04b3c3d69367eeb004660eeecd0bcb64f074cb828037eb9d6e96f4fa5d32",
+      "logSha256": "6ed7749f7f70c42f213e115f8920e0e0f4ca890ea25098cbb9ee08b3fabfd9a5",
+      "upstream": {
+        "repository": "https://github.com/siyuan-note/siyuan",
+        "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+        "version": "3.8.9",
+        "license": "AGPL-3.0-or-later",
+        "go": "1.26.10",
+        "buildTags": [
+          "fts5",
+          "sqlcipher"
+        ]
+      },
+      "nativeSourceArtifacts": {
+        "ios/Libraries/ios-simulator/libmuse_siyuan.a": "bd300dcc9c539d24322cd508b486ee8dc0b4ba241a19fabffbfe097026f5d77e"
+      },
+      "adapterSourceSha256": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846",
+      "package": "com.openmuseai.mobile.siyuanreview"
+    },
+    "ios": {
+      "platform": "ios",
+      "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-iOS-device-unsigned.app",
+      "passed": true,
+      "commands": [
+        [
+          "flutter",
+          "build",
+          "ios",
+          "--release",
+          "--no-codesign",
+          "--no-pub",
+          "--target",
+          "lib/main.dart"
+        ]
+      ],
+      "runtimeSha256": "54dd04b3c3d69367eeb004660eeecd0bcb64f074cb828037eb9d6e96f4fa5d32",
+      "logSha256": "be796b308d54d02bcdd8e0d513f40818403a26cc15f503aa5678a14f31f32036",
+      "upstream": {
+        "repository": "https://github.com/siyuan-note/siyuan",
+        "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+        "version": "3.8.9",
+        "license": "AGPL-3.0-or-later",
+        "go": "1.26.10",
+        "buildTags": [
+          "fts5",
+          "sqlcipher"
+        ]
+      },
+      "nativeSourceArtifacts": {
+        "ios/Libraries/ios/libmuse_siyuan.a": "e6c9b508d644d9458e837187debdff097ef5de32a080bec9660c3baf5ef1cd34"
+      },
+      "adapterSourceSha256": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846"
+    }
+  },
+  "sourceSha256": {
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/web/resource_entry.ts": "8f59cb108455bc3dc5131f4e55244c03fba378d151dd61675f9a1035d556f414",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/web/resource_mobile.tpl": "02f7a36d60c0a40df1c4c973336d15f87844147a4c23a30d00f7e4525606639c",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/web/resource.tpl": "515ae01b6856f4af6198389b8b4299c5323b5d7625f9e812fad5921610841925",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/web/webpack.resource.cjs": "65819f4e51f7c2a6240948f4454d70f7e0aa2abebdb742f52f9ce556daefa110",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/scripts/build.py": "51b636458083d644689ee3433b37f9f43bcf3d9831f65b2678ffc0e7b1afd550",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/lib/src/resource_view.dart": "8ac32b474da53c8f051cc64756987f7327ce14dbf5247f34e8cee27b9c63da8e",
+    "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/flutter_runtime/lib/src/resource_links.dart": "d189827814b1bc0235a7f78a8a3c9d07e8d00c04bcb05486b58cdaae2491328f",
+    "/Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/lib/openmuse_siyuan_plugin.dart": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846",
+    "/Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/lib/src/linked_content.dart": "e72c484a887466eb2e0a1c1f40fbc32e2bc5de340cd845612fd3ad980903469c",
+    "/Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_plugin_sdk/lib/src/resource_capabilities.dart": "4bec52b13a427e6db242db3a4db2582deabc200e429ce4e3cf07e30f3d1e6072",
+    "/Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_resource_center/lib/src/resource_open.dart": "1edc4154440a750d9cd25d153a0097c28aed500c0d8dcadba7091a36780bc571",
+    "/Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_resource_center/lib/src/controller.dart": "e486e49ca6e9bb037badcfae73b6a7b4a09781ac580d508b65efb1b3295b9d2b",
+    "/Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_resource_center/lib/src/resource_view.dart": "7a8908f440d48a8e0b9d8be7e9a5f068a3a7db268cc87d47d6af0913b3ac612a",
+    "/Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_resource_center_host/lib/openmuse_resource_center_host.dart": "f5462d9def17de5a87774d8bbd4e96698a4da9f33937f7cd94149bccd086f6ec"
+  },
+  "vendorClean": true
+}

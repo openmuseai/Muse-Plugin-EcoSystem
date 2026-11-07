@@ -1,0 +1,423 @@
+{
+  "changeId": "CR-SD-REUSE-20261106",
+  "fullReady": false,
+  "familyLedger": "siyuan-collaboration-parity.json",
+  "referenceCommit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+  "incrementEvidence": "execution/phase6-media-20261106/result.json",
+  "items": [
+    {
+      "id": "SY-04-LINK",
+      "family": "SY-04",
+      "state": "partial",
+      "design": "Desktop toolbar/Cmd-K; Mobile existing insert panel",
+      "reuse": [
+        "AppFlowy href",
+        "Yrs StickyIndex"
+      ],
+      "remaining": [
+        "resource/internal/file navigation",
+        "all SiYuan command fixtures",
+        "full cross-platform input/accessibility"
+      ]
+    },
+    {
+      "id": "SY-10-PRIVATE-IMAGE",
+      "family": "SY-10",
+      "state": "partial",
+      "design": "existing insert/image entries and image context",
+      "reuse": [
+        "AppFlowy ImageBlockComponent/ResizableImage",
+        "Cloud bucket/access control"
+      ],
+      "remaining": [
+        "replacement",
+        "clipboard/drop",
+        "photos/camera/cloud image sources",
+        "progress/in-flight cancellation",
+        "full revocation/lifecycle"
+      ]
+    },
+    {
+      "id": "CO-13-TRANSPORT",
+      "family": "CO-13",
+      "state": "partial",
+      "reuse": [
+        "original Cloud collab HTTP protocol"
+      ],
+      "remaining": [
+        "WS/awareness",
+        "durable ACK",
+        "migration and production assembly"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-block",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "block",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-text",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "text",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json"
+      ],
+      "implementation": "original AppFlowy type-option/core + independent Grid; complete SiYuan semantic checks remain open"
+    },
+    {
+      "id": "SY-33-FIELD-number",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "number",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json"
+      ],
+      "implementation": "original AppFlowy type-option/core + independent Grid; complete SiYuan semantic checks remain open"
+    },
+    {
+      "id": "SY-33-FIELD-date",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "date",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-select",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "select",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "implementation": "original SingleSelect/MultiSelect type options, stable ID cell codecs, field/cell hash preconditions and shared Flutter choice surface",
+      "evidence": [
+        "32-PHASE9-DATABASE-FIELDS.zh-CN.md"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-mSelect",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "mSelect",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "implementation": "original SingleSelect/MultiSelect type options, stable ID cell codecs, field/cell hash preconditions and shared Flutter choice surface",
+      "evidence": [
+        "32-PHASE9-DATABASE-FIELDS.zh-CN.md"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-url",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "url",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json"
+      ],
+      "implementation": "original AppFlowy type-option/core + independent Grid; complete SiYuan semantic checks remain open"
+    },
+    {
+      "id": "SY-33-FIELD-email",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "email",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-phone",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "phone",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-location",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "location",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-mAsset",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "mAsset",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-template",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "template",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-created",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "created",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-updated",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "updated",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-checkbox",
+      "family": "SY-33",
+      "state": "partial",
+      "semanticType": "checkbox",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ],
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json"
+      ],
+      "implementation": "original AppFlowy type-option/core + independent Grid; complete SiYuan semantic checks remain open"
+    },
+    {
+      "id": "SY-33-FIELD-relation",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "relation",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-rollup",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "rollup",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-FIELD-lineNumber",
+      "family": "SY-33",
+      "state": "planned",
+      "semanticType": "lineNumber",
+      "source": "vendors/siyuan/kernel/av/av.go",
+      "design": "29-DATABASE-ADAPTER-DESIGN.zh-CN.md",
+      "requiredChecks": [
+        "golden semantics",
+        "conversion/unknown preservation",
+        "permissions",
+        "concurrency/undo/reopen",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-VIEW-table",
+      "family": "SY-33",
+      "state": "partial",
+      "view": "table",
+      "source": "vendors/siyuan/kernel/av",
+      "requiredChecks": [
+        "same dataset/row identities",
+        "filter/sort/group/order",
+        "editing and focus",
+        "permissions",
+        "actual multi-platform UI"
+      ],
+      "evidence": [
+        "execution/phase7-dataset-20261106/result.json"
+      ],
+      "implementation": "original AppFlowy type-option/core + independent Grid; complete SiYuan semantic checks remain open"
+    },
+    {
+      "id": "SY-33-VIEW-kanban",
+      "family": "SY-33",
+      "state": "planned",
+      "view": "kanban",
+      "source": "vendors/siyuan/kernel/av",
+      "requiredChecks": [
+        "same dataset/row identities",
+        "filter/sort/group/order",
+        "editing and focus",
+        "permissions",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-VIEW-calendar",
+      "family": "SY-33",
+      "state": "planned",
+      "view": "calendar",
+      "source": "vendors/siyuan/kernel/av",
+      "requiredChecks": [
+        "same dataset/row identities",
+        "filter/sort/group/order",
+        "editing and focus",
+        "permissions",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-VIEW-list",
+      "family": "SY-33",
+      "state": "planned",
+      "view": "list",
+      "source": "vendors/siyuan/kernel/av",
+      "requiredChecks": [
+        "same dataset/row identities",
+        "filter/sort/group/order",
+        "editing and focus",
+        "permissions",
+        "actual multi-platform UI"
+      ]
+    },
+    {
+      "id": "SY-33-VIEW-gallery",
+      "family": "SY-33",
+      "state": "planned",
+      "view": "gallery",
+      "source": "vendors/siyuan/kernel/av",
+      "requiredChecks": [
+        "same dataset/row identities",
+        "filter/sort/group/order",
+        "editing and focus",
+        "permissions",
+        "actual multi-platform UI"
+      ]
+    }
+  ],
+  "datasetEvidence": "execution/phase7-dataset-20261106/result.json"
+}

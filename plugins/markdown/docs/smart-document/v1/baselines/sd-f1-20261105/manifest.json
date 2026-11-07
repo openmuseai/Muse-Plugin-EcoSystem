@@ -1,0 +1,31 @@
+{
+  "baselineId": "SD-F1-20261105",
+  "productBaselineId": "SD-BL-1.2-20261105",
+  "files": [
+    {
+      "path": "14-ENGINEERING-DESIGN.zh-CN.md",
+      "bytes": 17790,
+      "sha256": "41b161fb469ea8181352872236efdfa521dd5cd82bb5630d14094b9fb011b574"
+    },
+    {
+      "path": "15-EXECUTION-PLAN.zh-CN.md",
+      "bytes": 11985,
+      "sha256": "9b5df6108d2ea1d07bf7a4f7dc22d22a2215aa8ef946f11d1bce35f25dfe3532"
+    },
+    {
+      "path": "16-PHASE1-IMPLEMENTATION.zh-CN.md",
+      "bytes": 7156,
+      "sha256": "fccc5d1a41da23736003a526972e9ed895835790d2a6b2d2987632da2c911ec2"
+    },
+    {
+      "path": "BASELINE.zh-CN.md",
+      "bytes": 1348,
+      "sha256": "304261ac45c69ba975af65e6a35d1d342695107b9f5333431297d2f29ef30481"
+    },
+    {
+      "path": "source-evidence.json",
+      "bytes": 1112,
+      "sha256": "12f18fb795efb8c889349221ee6b7a6d0c91b92e4d408c538816a030073acc11"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "platform": "android",
+  "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02/OpenMuse-android-arm64-debug.apk",
+  "passed": true,
+  "commands": [
+    [
+      "./gradlew",
+      "-I",
+      "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/scripts/android_arm64.init.gradle",
+      "--no-daemon",
+      "-Ptarget-platform=android-arm64",
+      "-Ptarget=/Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/lib/main.dart",
+      "-Pbase-application-name=android.app.Application",
+      "-Pdart-obfuscation=false",
+      "-Ptrack-widget-creation=true",
+      "-Ptree-shake-icons=false",
+      "assembleDebug"
+    ]
+  ],
+  "runtimeSha256": "6ad04d3dda90ddabd33b95982c6a0f3e3c2e3ea2daa1c14be265ea5f824c03a3",
+  "logSha256": "d7a73ba113e7aa79d486fecb2b03abd544b591de0cbabc74f468bf9b9b94d0ba",
+  "upstream": {
+    "repository": "https://github.com/siyuan-note/siyuan",
+    "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "version": "3.8.9",
+    "license": "AGPL-3.0-or-later",
+    "go": "1.26.10",
+    "buildTags": [
+      "fts5",
+      "sqlcipher"
+    ]
+  },
+  "nativeSourceArtifacts": {
+    "android/src/main/jniLibs/arm64-v8a/libmuse_siyuan.so": "b90d0e695717af3630d1a9f514354e47059abea6973a0791737cce2721c298f7",
+    "android/src/main/jniLibs/arm64-v8a/libsiyuan_ort.so": "9fcaade7202c101d2f72eeed3c93dbddfbb25eb1236f5c9de50f3a79ca459860"
+  },
+  "adapterSourceSha256": "72d385a00bda4915a1371b7b1f1418eeed1c63db0c2d8e46ab5ded5a1b54876b",
+  "package": "com.openmuseai.mobile.siyuanreview",
+  "sha256": "24b9f99347b622353205cd6fc0e06e46e9fa0570a5371c125a1c4850c1871961"
+}

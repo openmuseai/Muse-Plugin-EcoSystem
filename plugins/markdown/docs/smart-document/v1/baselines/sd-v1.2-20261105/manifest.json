@@ -1,0 +1,184 @@
+{
+  "baselineId": "SD-BL-1.2-20261105",
+  "createdAt": "2026-11-05T10:42:44.544713+00:00",
+  "status": "product_and_interaction_frozen",
+  "authorization": "User explicitly requested saving the design, linking PRD, and freezing product and design.",
+  "authority": [
+    "04-PRODUCT-PRD.zh-CN.md",
+    "05-UX-SPEC.zh-CN.md",
+    "12-FUNCTIONAL-ALIGNMENT.zh-CN.md"
+  ],
+  "openItems": [
+    "Exact WPS target-page layout",
+    "Final Mobile high-fidelity layout and real keyboard",
+    "Engineering schema/version/API freeze and real-product validation"
+  ],
+  "linkRewriting": "Markdown local links mapped to frozen copies or correct external working-tree targets. Visual source unchanged.",
+  "integrity": "Unsigned local SHA-256 file inventory; not a source/build lock or Git commit.",
+  "files": [
+    {
+      "path": "04-PRODUCT-PRD.zh-CN.md",
+      "bytes": 11947,
+      "sha256": "1d768163de2919fab98d9883c468816ec6a5ad01220db2dd031baf674284cc32",
+      "sourcePath": "04-PRODUCT-PRD.zh-CN.md",
+      "sourceSha256": "5f07e7bcb23fb4e8607a24e0aba48b8735adf1d687e5b8d21b3ab14a6404480a"
+    },
+    {
+      "path": "05-UX-SPEC.zh-CN.md",
+      "bytes": 19772,
+      "sha256": "9e00acddc5fb836d5088b7380ec2168daf108bf1ca8762823ed1b556459d3dba",
+      "sourcePath": "05-UX-SPEC.zh-CN.md",
+      "sourceSha256": "d1ca23c4a12db16c88c9a03acf8ceb7295c757659740deb917693d2ac0b13e51"
+    },
+    {
+      "path": "07-ACCEPTANCE.zh-CN.md",
+      "bytes": 9812,
+      "sha256": "d2b4c3d487123f1b76fb5f771fcf6ea2f8783b6255a8814eae7603a8b9a96744",
+      "sourcePath": "07-ACCEPTANCE.zh-CN.md",
+      "sourceSha256": "8d105b1667c261df64f57d875f02fdfdc9cd1b159edd9876d6279b8a62793f33"
+    },
+    {
+      "path": "08-PRODUCT-REFINEMENT.zh-CN.md",
+      "bytes": 7384,
+      "sha256": "a22e8e8f8af1564ca8f5a108813a6d76f25e1e5899f6422e8cd33d49fe5be8bd",
+      "sourcePath": "08-PRODUCT-REFINEMENT.zh-CN.md",
+      "sourceSha256": "b697a5afa2a2186297ee9fedddc450e6175ecc1d57f2b15460045d02acbd7ab9"
+    },
+    {
+      "path": "11-WPS-DESKTOP-REFERENCE.zh-CN.md",
+      "bytes": 4461,
+      "sha256": "a4eb1224c8c5440532bca62093abc033055792b913a088f97a33c3a8109c5bbe",
+      "sourcePath": "11-WPS-DESKTOP-REFERENCE.zh-CN.md",
+      "sourceSha256": "831138be8ad05ad44f6db09b1321d3f8bfe823f8e712f71b11c55061e8dc9dfd"
+    },
+    {
+      "path": "12-FUNCTIONAL-ALIGNMENT.zh-CN.md",
+      "bytes": 11019,
+      "sha256": "88ad1e09f129f2efef76b5d0fec0d6d2a00a9b94809177620a356058848232b7",
+      "sourcePath": "12-FUNCTIONAL-ALIGNMENT.zh-CN.md",
+      "sourceSha256": "5b0a2b3f752d704e2376b8c5a679acce26b5001176c539ca4553b46f368ebc82"
+    },
+    {
+      "path": "BASELINE.zh-CN.md",
+      "bytes": 1604,
+      "sha256": "7267be605fa12635e430c587a08670a99b8f1de94e7171d5a990aa6e098daf77"
+    },
+    {
+      "path": "implementation-traceability.json",
+      "bytes": 12252,
+      "sha256": "ddade49b15c2d8ea4a34048711fa77ffd9f9121d16fd927bd4fb4e9e1d82f77d",
+      "sourcePath": "implementation-traceability.json",
+      "sourceSha256": "ddade49b15c2d8ea4a34048711fa77ffd9f9121d16fd927bd4fb4e9e1d82f77d"
+    },
+    {
+      "path": "source-evidence.json",
+      "bytes": 4231,
+      "sha256": "6dc687300f1aebd61d5cce55926cca6b0d78a0633b937cbb3df823dc21cd89f7"
+    },
+    {
+      "path": "wps-functional-review/README.zh-CN.md",
+      "bytes": 1946,
+      "sha256": "aafd18734d1581ab8f12f57cc283613cbfe20b920a9355eb16e2ee5bc157b55e",
+      "sourcePath": "wps-functional-review/README.zh-CN.md",
+      "sourceSha256": "14eeeaa533e0762c7fd633370f8b4d9f4363ddefec0d65a3e03de18d46ccacfe"
+    },
+    {
+      "path": "wps-functional-review/index.html",
+      "bytes": 148487,
+      "sha256": "ef9ca5210c72ee0fd7676f939a9253d161b769db59ace87aa0093ff5268f238a",
+      "sourcePath": "wps-functional-review/index.html",
+      "sourceSha256": "ef9ca5210c72ee0fd7676f939a9253d161b769db59ace87aa0093ff5268f238a"
+    },
+    {
+      "path": "wps-functional-review/prototype.fragment.html",
+      "bytes": 51455,
+      "sha256": "12edfb58ca35cd58cbdc0dcde7fcde8ab56a5db7e14a8aea7475b1537f02365f",
+      "sourcePath": "wps-functional-review/prototype.fragment.html",
+      "sourceSha256": "12edfb58ca35cd58cbdc0dcde7fcde8ab56a5db7e14a8aea7475b1537f02365f"
+    },
+    {
+      "path": "wps-functional-review/review-check.cjs",
+      "bytes": 9956,
+      "sha256": "c812aad01edfcaf6dee0a37ed5970f613f4b51f99590fa277da4722062c5bb78",
+      "sourcePath": "wps-functional-review/review-check.cjs",
+      "sourceSha256": "c812aad01edfcaf6dee0a37ed5970f613f4b51f99590fa277da4722062c5bb78"
+    },
+    {
+      "path": "wps-functional-review/screens/QA.json",
+      "bytes": 1142,
+      "sha256": "a09390b3f8f161ee468a80718208b04299d8af23095f2fac721335ead8193ca4",
+      "sourcePath": "wps-functional-review/screens/QA.json",
+      "sourceSha256": "a09390b3f8f161ee468a80718208b04299d8af23095f2fac721335ead8193ca4"
+    },
+    {
+      "path": "wps-functional-review/screens/collaboration-comments.png",
+      "bytes": 186887,
+      "sha256": "cd63422e996847c5fb99f0dddf013301da18ba1b28fce85f29174cb146dde498",
+      "sourcePath": "wps-functional-review/screens/collaboration-comments.png",
+      "sourceSha256": "cd63422e996847c5fb99f0dddf013301da18ba1b28fce85f29174cb146dde498"
+    },
+    {
+      "path": "wps-functional-review/screens/desktop-dark.png",
+      "bytes": 186826,
+      "sha256": "3165aa2ac8a382c2fcd499f2b7a50f33f15c9dbe0bd4880c3d41d96b98fcd0a5",
+      "sourcePath": "wps-functional-review/screens/desktop-dark.png",
+      "sourceSha256": "3165aa2ac8a382c2fcd499f2b7a50f33f15c9dbe0bd4880c3d41d96b98fcd0a5"
+    },
+    {
+      "path": "wps-functional-review/screens/desktop-editor.png",
+      "bytes": 179631,
+      "sha256": "38a0a8d4a10258c212a40298e7dc823761e7ac6c249eab0717428151aa3e6389",
+      "sourcePath": "wps-functional-review/screens/desktop-editor.png",
+      "sourceSha256": "38a0a8d4a10258c212a40298e7dc823761e7ac6c249eab0717428151aa3e6389"
+    },
+    {
+      "path": "wps-functional-review/screens/history-preview.png",
+      "bytes": 162879,
+      "sha256": "cc71645f6532dcdb1e8d657c3c83ec480e5b3dd8c77183bfdb750f8da8ef6bcc",
+      "sourcePath": "wps-functional-review/screens/history-preview.png",
+      "sourceSha256": "cc71645f6532dcdb1e8d657c3c83ec480e5b3dd8c77183bfdb750f8da8ef6bcc"
+    },
+    {
+      "path": "wps-functional-review/screens/narrow-dark.png",
+      "bytes": 179854,
+      "sha256": "0f0705be38cf38759475992310111df420978a2f3eae58e16edecbfd42af8aa1",
+      "sourcePath": "wps-functional-review/screens/narrow-dark.png",
+      "sourceSha256": "0f0705be38cf38759475992310111df420978a2f3eae58e16edecbfd42af8aa1"
+    },
+    {
+      "path": "wps-functional-review/screens/narrow-light.png",
+      "bytes": 179357,
+      "sha256": "7c285b5e681ad89572b414ec0affe23219837c88d5e19660dcd743e549026305",
+      "sourcePath": "wps-functional-review/screens/narrow-light.png",
+      "sourceSha256": "7c285b5e681ad89572b414ec0affe23219837c88d5e19660dcd743e549026305"
+    },
+    {
+      "path": "wps-functional-review/screens/offline-editing.png",
+      "bytes": 199548,
+      "sha256": "1ff2aaa852a04cd62f5814a90582246054ef34ac4ed69e03fb44977394252bab",
+      "sourcePath": "wps-functional-review/screens/offline-editing.png",
+      "sourceSha256": "1ff2aaa852a04cd62f5814a90582246054ef34ac4ed69e03fb44977394252bab"
+    },
+    {
+      "path": "wps-functional-review/screens/selection-format.png",
+      "bytes": 171841,
+      "sha256": "c3dc7a6031293c98eee7423a4a5e07dd112e22dc3e8ced45aef882b9d4aaa931",
+      "sourcePath": "wps-functional-review/screens/selection-format.png",
+      "sourceSha256": "c3dc7a6031293c98eee7423a4a5e07dd112e22dc3e8ced45aef882b9d4aaa931"
+    },
+    {
+      "path": "wps-functional-review/screens/share-permissions.png",
+      "bytes": 213012,
+      "sha256": "b1113dbd3d578228a6493a701a0259044adfb7cbbd89a20706d5982d22d3b129",
+      "sourcePath": "wps-functional-review/screens/share-permissions.png",
+      "sourceSha256": "b1113dbd3d578228a6493a701a0259044adfb7cbbd89a20706d5982d22d3b129"
+    },
+    {
+      "path": "wps-functional-review/screens/slash-insert.png",
+      "bytes": 186790,
+      "sha256": "800c375e891da3a041f78a348dae51ce77981eb2c8a5d824be746620a3a7988a",
+      "sourcePath": "wps-functional-review/screens/slash-insert.png",
+      "sourceSha256": "800c375e891da3a041f78a348dae51ce77981eb2c8a5d824be746620a3a7988a"
+    }
+  ]
+}

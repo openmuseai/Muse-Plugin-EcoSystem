@@ -1,0 +1,17 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/app/openmuse_host/integration_test/siyuan_resource_ui_acceptance_test.dart
+The following plugins do not support Swift Package Manager for macos:
+  - flutter_pty
+  - flutter_secure_storage_macos
+  - openmuse_dsh_plugin
+  - openmuse_file_viewer
+  - openmuse_native_text_gate
+  - openmuse_resource_clipboard
+  - openmuse_siyuan_client
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/OpenMuse.app
+Failed to foreground app; open returned 1
+00:00 +0: (setUpAll)
+00:01 +0: SiYuan opens inside actual Desktop workspace resource tabs
+00:11 +1: (tearDownAll)
+00:11 +1: All tests passed!

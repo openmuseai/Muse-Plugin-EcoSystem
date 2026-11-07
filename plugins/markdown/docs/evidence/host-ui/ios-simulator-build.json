@@ -1,0 +1,53 @@
+{
+  "platform": "ios-simulator",
+  "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-01/OpenMuse-iOS-simulator.app",
+  "passed": true,
+  "commands": [
+    [
+      "flutter",
+      "build",
+      "ios",
+      "--simulator",
+      "--debug",
+      "--no-pub",
+      "--config-only",
+      "--target",
+      "lib/main.dart"
+    ],
+    [
+      "xcodebuild",
+      "-workspace",
+      "Runner.xcworkspace",
+      "-scheme",
+      "Runner",
+      "-configuration",
+      "Debug",
+      "-sdk",
+      "iphonesimulator",
+      "-destination",
+      "id=02C59B16-550A-49A6-B84D-CE1A8D961403",
+      "ARCHS=arm64",
+      "ONLY_ACTIVE_ARCH=YES",
+      "EXCLUDED_ARCHS=x86_64",
+      "BUILD_DIR=/Users/mac/src/openmuse-io/Muse-Client/app/openmuse_mobile/build/ios",
+      "CODE_SIGNING_ALLOWED=YES",
+      "CODE_SIGN_IDENTITY=-",
+      "OPENMUSE_DEBUG_BUNDLE_IDENTIFIER=com.openmuseai.mobile.siyuanreview",
+      "-quiet"
+    ]
+  ],
+  "runtimeSha256": "e6c52744e621a4c37536051ac38bae0b9c1720a81b464e9f709ad6e1d38eadec",
+  "logSha256": "41f8e090dd7ef9fa211ff4bc00f6a85d285c375798905de085e132ac0592a9f2",
+  "upstream": {
+    "repository": "https://github.com/siyuan-note/siyuan",
+    "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "version": "3.8.9",
+    "license": "AGPL-3.0-or-later",
+    "go": "1.26.10",
+    "buildTags": [
+      "fts5",
+      "sqlcipher"
+    ]
+  },
+  "package": "com.openmuseai.mobile.siyuanreview"
+}

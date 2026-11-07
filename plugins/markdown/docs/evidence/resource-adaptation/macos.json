@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "platform": "macos",
+  "checks": {
+    "resourceCenterCreator": true,
+    "standaloneEditorWithoutApplicationShell": true,
+    "editorThemeAndIcons": true,
+    "dirtyCloseGuard": true,
+    "editAndVersionedSave": true,
+    "recentReopenAndReadOnlyView": true,
+    "hostNavigationAndDocumentTitle": true
+  },
+  "resource": "Blocks-1793603081975373.sydoc",
+  "marker": "OpenMuse resource UI macos 1793603081975373",
+  "method": "Native Host UI and original Protyle DOM input; resource-center create, CAS save and recent reopen",
+  "existingWorkspaceFilePreserved": true,
+  "testLogSha256": "f54cfa2c728d88fe30392e4a9d4c95da630b4160bd3d756c7037d392a8b21297",
+  "runtimeSha256": "6ad04d3dda90ddabd33b95982c6a0f3e3c2e3ea2daa1c14be265ea5f824c03a3"
+}

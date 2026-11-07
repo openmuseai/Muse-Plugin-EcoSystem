@@ -1,0 +1,43 @@
+{
+  "platform": "macos",
+  "artifact": "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-macos.app",
+  "passed": true,
+  "commands": [
+    [
+      "flutter",
+      "build",
+      "macos",
+      "--debug",
+      "--no-pub",
+      "--target",
+      "lib/main.dart"
+    ],
+    [
+      "codesign",
+      "--verify",
+      "--deep",
+      "--strict",
+      "/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-macos.app"
+    ]
+  ],
+  "runtimeSha256": "54dd04b3c3d69367eeb004660eeecd0bcb64f074cb828037eb9d6e96f4fa5d32",
+  "logSha256": "4ebc92a917dace7a8c4a06fe21ed77a782a7205901ea4b01899e183262f33001",
+  "upstream": {
+    "repository": "https://github.com/siyuan-note/siyuan",
+    "commit": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "version": "3.8.9",
+    "license": "AGPL-3.0-or-later",
+    "go": "1.26.10",
+    "buildTags": [
+      "fts5",
+      "sqlcipher"
+    ]
+  },
+  "nativeSourceArtifacts": {
+    "macos/Libraries/libmuse_siyuan.dylib": "85ddde698005172dbe3c43aba9fbaada45679db0b056b2334668972ecab45e18",
+    "macos/Libraries/libonnxruntime.dylib": "81b90223e770bfaea12783cb99370258387bae7ed70ff7e99f2717382800d217"
+  },
+  "adapterSourceSha256": "7c2429989542c534040975c7ad2ec95776dbfb50e84c6f2923b2f79d9cc8f846",
+  "signatureVerified": true,
+  "signatureResealed": false
+}

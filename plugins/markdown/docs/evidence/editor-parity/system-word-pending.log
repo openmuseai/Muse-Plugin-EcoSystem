@@ -1,0 +1,7 @@
+Installing isolated acceptance APK (upgrade only).
+/Users/mac/src/openmuse-io/Muse-Client/target/manual-acceptance/siyuan/2026-11-02-editor-parity/OpenMuse-resource-acceptance.apk: 1 file pushed, 0 skipped. 59.7 MB/s (416162810 bytes in 6.652s)
+Performing Push Install
+Success
+
+Waiting for the native suite.
+Native resource UI suite timed out

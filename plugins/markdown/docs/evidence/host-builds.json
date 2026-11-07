@@ -1,0 +1,25 @@
+{
+  "macos": {
+    "command": "flutter build macos --debug --no-pub",
+    "artifact": "Muse-Client/app/openmuse_host/build/macos/Build/Products/Debug/OpenMuse.app",
+    "minimumOS": "12.0",
+    "configuration": "Debug",
+    "passed": true,
+    "logSha256": "1f813c5205dfb17ebd90824925ffeb8432aa35cbb7b9e89326038f5f7ab16e71"
+  },
+  "android": {
+    "command": "flutter build apk --debug --target-platform android-arm64 --no-pub",
+    "artifact": "Muse-Client/app/openmuse_mobile/build/app/outputs/flutter-apk/app-debug.apk",
+    "configuration": "Debug",
+    "passed": true,
+    "logSha256": "47adec44dbb20591b00d5b5ba012fac74f733d53caa5bfc4f5c234087f4817e5"
+  },
+  "ios": {
+    "command": "flutter build ios --release --no-codesign --no-pub",
+    "artifact": "Muse-Client/app/openmuse_mobile/build/ios/iphoneos/Runner.app",
+    "minimumOS": "15.1",
+    "configuration": "Release, unsigned",
+    "passed": true,
+    "logSha256": "7392efe67318240d26cf6751ecc5331121b4afe09184ae5b1d482a560b42d4d2"
+  }
+}

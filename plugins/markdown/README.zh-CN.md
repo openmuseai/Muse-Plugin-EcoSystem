@@ -1,5 +1,9 @@
 # 思源客户端插件
 
+> 智能文档新产品：[已冻结产品与设计](docs/smart-document/v1/13-FROZEN-BASELINE.zh-CN.md) · [详细技术方案](docs/smart-document/v1/14-ENGINEERING-DESIGN.zh-CN.md) · [实施计划](docs/smart-document/v1/15-EXECUTION-PLAN.zh-CN.md) · [第一阶段可运行实现](smart_document/README.zh-CN.md) · [原生验收](docs/smart-document/v1/17-PHASE1-ACCEPTANCE.zh-CN.md) · [Web/native 互通验收](docs/smart-document/v1/19-WEB-COLLAB-ACCEPTANCE.zh-CN.md)。下文继续描述当前已实现的思源兼容插件，两者不混为已完成的新编辑器。
+
+面向 Agent、多人协作与 Mobile/Web/Desktop 的后续智能文档设计，见 [架构、产品稿、可点击视觉稿与开发计划 v1.2](docs/smart-document/v1/README.zh-CN.md)（2026-11-05；含协作 package/plugin 解耦设计，已实施 macOS/Web 真核心与 Cloud 跨端链路、独立协作合同预览，完整三端产品尚未完成）。[前期架构讨论](docs/smart-document/README.zh-CN.md)与 [思源 + AppFlowy 融合评估](docs/collaboration/README.zh-CN.md)保留为来源记录；以下描述仍为当前已实现的思源插件。
+
 资源能力插件：使用固定版本的 Protyle 编辑器和 Go 内核。无需部署服务端，不连接远端思源实例。原始源码位于 `vendors/siyuan`，插件构建在独立目录进行，不覆盖上游产品产物。
 
 领域归属：笔记本、块、Protyle、属性视图、搜索、引用、关系图、附件、闪卡、历史、加密及工作空间数据均归思源插件。客户端 Host 只消费公开插件贡献接口，不增加思源 API、数据库、文件格式或原生桥接分支。
@@ -54,3 +58,12 @@ python3 scripts/collect_acceptance.py
 `Muse-Client/plugins/siyuan-client` 实现公开资源 handler、creator 和 context 贡献；`distribution/openmuse_client_plugins` 负责装配。Host 只增加通用资源会话与工作区标签之间的承载桥，没有思源 API、数据结构或插件 ID 分支。原有下载式 HTML 的 CSP 和网络隔离保持不变。
 
 许可证：上游 AGPL-3.0-or-later 及第三方许可随客户端资源打包，发行时需同步提供完整对应源码及构建适配。思源商业云服务、支付、平台商店授权不由本插件或 Muse Host 代为实现。
+
+
+Mobile 最新增量：[完整产品交互与视觉稿](docs/smart-document/v1/22-MOBILE-DESIGN-REVIEW.zh-CN.md) · [M3-A 实施与实际验证](docs/smart-document/v1/23-MOBILE-IMPLEMENTATION.zh-CN.md)。已实现 iOS 首批本机编辑/保存/新进程重开；[P4 新增](docs/smart-document/v1/25-PHASE4-IMPLEMENTATION.zh-CN.md)已通过 iOS 双账号 Cloud、补齐稳定块类型/Markdown/代码，并重跑 macOS/Web 协作。完整思源编辑/协作按 [50 项门槛](docs/smart-document/v1/24-SIYUAN-PARITY-PLAN.zh-CN.md)继续推进，尚未全部交付。
+
+智能文档最新开发：[P5-A 固定网格表格与跨端协作](docs/smart-document/v1/26-PHASE5-TABLE-IMPLEMENTATION.zh-CN.md)，沿用同一 Rust/AppFlowy 核心与原 Cloud；完整思源编辑/协作门仍未完成。
+
+继续实施：[思源功能复用与交付计划](docs/smart-document/v1/27-SIYUAN-REUSE-AND-DELIVERY.zh-CN.md) · [P6 链接、私有图片及领域边界](docs/smart-document/v1/28-PHASE6-LINKS-ASSETS-IMPLEMENTATION.zh-CN.md) · [数据库适配方案](docs/smart-document/v1/29-DATABASE-ADAPTER-DESIGN.zh-CN.md)。数据库原内核已做原生/Web 运行资格验证；完整数据库 UI 与完整协作仍在实施范围内。
+
+独立数据库基础增量：[P7 实施、复用与验收范围](docs/smart-document/v1/30-PHASE7-DATASET-IMPLEMENTATION.zh-CN.md)；原 Root/Row 分离，公开 SDK 资源，Desktop/Web/iOS 共享 Grid，完整语义和协作继续按能力门推进。

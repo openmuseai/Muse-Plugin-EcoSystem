@@ -1,0 +1,20 @@
+{
+  "baselineId": "SD-BL-1.2-20261105",
+  "verifiedAt": "2026-11-05T10:44:03.130498+00:00",
+  "manifestSha256": "2b84131fad79b5066d24d95739e5a74a36e837fece2527fc0e57a8e56f637c2d",
+  "checks": {
+    "frozenFileIntegrity": 24,
+    "productRequirements": 17,
+    "functionalAlignment": 14,
+    "interactionFrames": 12,
+    "prototypeChecksPassed": 19,
+    "productAcceptanceStatus": "unrun",
+    "localMarkdownLinks": "passed",
+    "codeFences": "passed",
+    "changedFileRejected": "passed",
+    "missingFileRejected": "passed",
+    "frozenInPlaceOutputRejected": "passed",
+    "visualSourceByteIdentity": "passed"
+  },
+  "notes": "No production package, service change, native/WASM build or real-product acceptance executed."
+}

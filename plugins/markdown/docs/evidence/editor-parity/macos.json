@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "platform": "macos",
+  "checks": {
+    "resourceCenterCreator": true,
+    "deviceSourceNavigation": true,
+    "standaloneEditorWithoutApplicationShell": true,
+    "editorThemeAndIcons": true,
+    "nativeEditControlsAndAutosave": true,
+    "noInjectedEditorToolbar": true,
+    "automaticSaveAndCloseBarrier": true,
+    "recentReopenAndReadOnlyView": true,
+    "packageImageRendering": true,
+    "hostNavigationAndDocumentTitle": true
+  },
+  "resource": "Blocks-1793615952235181.sydoc",
+  "marker": "OpenMuse resource UI macos 1793615952235181",
+  "method": "Native Host UI and original Protyle DOM input; resource-center create, CAS save and recent reopen"
+}

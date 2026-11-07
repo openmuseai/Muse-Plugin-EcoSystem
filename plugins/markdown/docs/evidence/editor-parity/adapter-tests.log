@@ -1,0 +1,6 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/test/linked_content_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/test/linked_content_test.dart: Word, Excel and PPTX attachments retain their OOXML media types
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/test/resource_capabilities_test.dart: resource plugin contributes capabilities without a nested application panel
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/test/resource_capabilities_test.dart: archive routing declines unrelated ZIP and Markdown resources
+00:00 +3: /Users/mac/src/openmuse-io/Muse-Client/plugins/siyuan-client/test/resource_capabilities_test.dart: standalone sy is explicitly read only while a complete note package can edit
+00:00 +4: All tests passed!
