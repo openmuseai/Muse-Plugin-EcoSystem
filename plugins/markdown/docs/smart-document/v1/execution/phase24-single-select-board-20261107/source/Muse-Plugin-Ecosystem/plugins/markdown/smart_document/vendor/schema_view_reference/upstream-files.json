@@ -1,0 +1,38 @@
+[
+  {
+    "path": "upstream/siyuan/kernel/av/av.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "6177be2cfd82f3aa7e665d4b7c64b5977d00a60a",
+    "sha256": "3c5b2b3e9939e2f685f89fb2d7db522cc57aad87db12b3c3fc92b5d3b5441369"
+  },
+  {
+    "path": "upstream/siyuan/kernel/av/layout_table.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "045c44b91884bb4945e7a3945407bceffa0d2912",
+    "sha256": "ce7ae58eae92be40cc26c5ea80a2346c09b1933a6a9471a4c09d6ec7b0c026a0"
+  },
+  {
+    "path": "upstream/siyuan/LICENSE",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "bae94e189e62df1b8d5bd11435d954b25bee9d7b",
+    "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b"
+  },
+  {
+    "path": "upstream/appflowy-collab/collab-database/src/database.rs",
+    "revision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+    "gitBlob": "6b735fcb0b3c0fd70aa2d25e20c3c655dd793dd6",
+    "sha256": "30ee39def695f2bdc259a0142a2169ce815dfd93e5dcec0207e8f49d69868434"
+  },
+  {
+    "path": "upstream/appflowy-collab/collab-database/src/fields/field_settings.rs",
+    "revision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+    "gitBlob": "c58e7acdc5011b96c420d40b1fadf85262f5e31d",
+    "sha256": "cb5d413e34885e66075476793d3c34ae5440b82ebbfa086698820facb770d1b5"
+  },
+  {
+    "path": "upstream/appflowy-collab/collab-database/LICENSE",
+    "revision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+    "gitBlob": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+  }
+]

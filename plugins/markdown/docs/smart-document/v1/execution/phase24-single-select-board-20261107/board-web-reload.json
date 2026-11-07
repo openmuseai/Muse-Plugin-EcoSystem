@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "e0029503-ad54-4133-bbe2-65e42e461007",
+  "datasetObjectId": "98dbb156-d77c-4da6-9a3d-5e5b48c7efec",
+  "platform": "web-reload",
+  "checks": [
+    "same-native-document-and-independent-original-database",
+    "original-native-board-group-setting-loads-in-wasm",
+    "native-fields-and-original-row-values-survive-cross-platform-open",
+    "parent-reference-remains-unchanged",
+    "peer-original-card-move-and-independent-number-cell-are-preserved",
+    "all-views-render-the-same-three-row-identities-without-card-copies"
+  ],
+  "webViewId": "32f8db87-0406-42d7-995b-88d9e35a1403",
+  "webRowId": "934d3df3-0989-494b-8769-1cf6c36eaa80",
+  "fieldId": "c1515e73-ebe1-4fd0-8fba-70a373068bed",
+  "numberFieldId": "466590f3-97ac-4028-8a26-bb973b6e012f",
+  "branch": {},
+  "history": [],
+  "views": [
+    {
+      "id": "3cdf6e86-a377-5134-a8b0-f7cb76be4752",
+      "layout": 0,
+      "rowIds": [
+        "ed4923fb-a873-4a7b-b945-bd1bad4c0eb7",
+        "63f603d3-21a1-4821-a9a0-abb3bcb97b06",
+        "934d3df3-0989-494b-8769-1cf6c36eaa80"
+      ],
+      "groups": null
+    },
+    {
+      "id": "32f8db87-0406-42d7-995b-88d9e35a1403",
+      "layout": 1,
+      "rowIds": [
+        "ed4923fb-a873-4a7b-b945-bd1bad4c0eb7",
+        "63f603d3-21a1-4821-a9a0-abb3bcb97b06",
+        "934d3df3-0989-494b-8769-1cf6c36eaa80"
+      ],
+      "groups": [
+        {
+          "id": "c1515e73-ebe1-4fd0-8fba-70a373068bed",
+          "rowIds": []
+        },
+        {
+          "id": "d2a9c8a2-b57b-4adf-9366-9fdcf299a754",
+          "rowIds": []
+        },
+        {
+          "id": "94f38828-bcbc-4237-b6d4-61dc9e4f66ab",
+          "rowIds": []
+        },
+        {
+          "id": "ba074d04-6257-4876-a858-ca2ddad826a2",
+          "rowIds": [
+            "ed4923fb-a873-4a7b-b945-bd1bad4c0eb7",
+            "63f603d3-21a1-4821-a9a0-abb3bcb97b06",
+            "934d3df3-0989-494b-8769-1cf6c36eaa80"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dd6db1cb-53c8-49ed-af52-960bc988bea9",
+      "layout": 1,
+      "rowIds": [
+        "ed4923fb-a873-4a7b-b945-bd1bad4c0eb7",
+        "934d3df3-0989-494b-8769-1cf6c36eaa80",
+        "63f603d3-21a1-4821-a9a0-abb3bcb97b06"
+      ],
+      "groups": [
+        {
+          "id": "c1515e73-ebe1-4fd0-8fba-70a373068bed",
+          "rowIds": []
+        },
+        {
+          "id": "d2a9c8a2-b57b-4adf-9366-9fdcf299a754",
+          "rowIds": []
+        },
+        {
+          "id": "94f38828-bcbc-4237-b6d4-61dc9e4f66ab",
+          "rowIds": []
+        },
+        {
+          "id": "ba074d04-6257-4876-a858-ca2ddad826a2",
+          "rowIds": [
+            "ed4923fb-a873-4a7b-b945-bd1bad4c0eb7",
+            "934d3df3-0989-494b-8769-1cf6c36eaa80",
+            "63f603d3-21a1-4821-a9a0-abb3bcb97b06"
+          ]
+        }
+      ]
+    }
+  ]
+}

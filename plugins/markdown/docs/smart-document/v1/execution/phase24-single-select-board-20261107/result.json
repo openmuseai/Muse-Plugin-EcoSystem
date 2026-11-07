@@ -1,0 +1,29 @@
+{
+  "phase": "P24-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "datasetRustTests": 66,
+    "datasetFullTests": 64,
+    "datasetSdkTests": 3,
+    "appleUiChecksPerPlatform": 9,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 11,
+    "webPeerChecks": 10,
+    "webReloadChecks": 6,
+    "nativeWebReadbackAfterCloudRestartChecks": 7
+  },
+  "limits": [
+    "Single-select grouped board only; other grouping types and full five layouts remain open",
+    "Card manual ordering, cover settings, group editing and grouping-field changes remain open",
+    "Concurrent moves of the same register retain original Yrs semantics, not global CAS",
+    "Full SiYuan editing, production Host permissions, durable ACK/outbox, sharing/comments/history/Agent/Office remain open",
+    "Android, Windows/Linux and physical IME/keyboard geometry remain unqualified"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

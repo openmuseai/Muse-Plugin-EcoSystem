@@ -1,0 +1,67 @@
+Browser tab: 22, Title: "127.0.0.1:50946/?actor=alice&board=fd14b570af4a", URL: "http://127.0.0.1:50946/?actor=alice&board=fd14b570af4a".
+1 AXWebArea 127.0.0.1:50946/?actor=alice&board=fd14b570af4a
+	2 container
+		4 container flt-semantic-node-3
+			64 button 显示目录, ID: flt-semantic-node-23
+			79 text 智能文档 · 看板协作
+			7 button (disabled) 撤销, ID: flt-semantic-node-6
+			8 button (disabled) 重做, ID: flt-semantic-node-7
+			9 button 加粗, ID: flt-semantic-node-8
+			10 button 斜体, ID: flt-semantic-node-9
+			11 button 下划线, ID: flt-semantic-node-10
+			12 button 超链接, ID: flt-semantic-node-11
+			13 button (collapsed) 块类型, ID: flt-semantic-node-12, Secondary Actions: Expand
+			14 button (collapsed) 插入内容, ID: flt-semantic-node-13, Secondary Actions: Expand
+			15 container flt-semantic-node-22
+				16 container flt-semantic-node-17
+					17 button (collapsed) 数据库引用操作, ID: flt-semantic-node-18, Secondary Actions: Expand
+					18 container Description: 项目数据库 在线协作 已保存到本机 · 协作服务已接收, ID: flt-semantic-node-19
+						19 button 2 人, ID: flt-semantic-node-34
+						20 container flt-semantic-node-90
+							21 button (collapsed) Web看板, ID: flt-semantic-node-91, Secondary Actions: Expand
+							22 button 新增视图, ID: flt-semantic-node-92
+							23 button 视图设置, ID: flt-semantic-node-93
+							24 button 筛选, ID: flt-semantic-node-94
+							25 button 排序, ID: flt-semantic-node-95
+							26 button 撤销, ID: flt-semantic-node-96
+							27 button (disabled) 重做, ID: flt-semantic-node-97
+							28 button 新增记录, ID: flt-semantic-node-98
+							83 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-99, Secondary Actions: Expand
+						30 container flt-semantic-node-120
+							31 container Description: 未分组 · 0, ID: flt-semantic-node-101
+								32 button 在未分组新增记录, ID: flt-semantic-node-102
+							33 container Description: 待处理 · 0, ID: flt-semantic-node-104
+								34 button 在待处理新增记录, ID: flt-semantic-node-105
+							35 container Description: 进行中 · 0, ID: flt-semantic-node-107
+								36 button 在进行中新增记录, ID: flt-semantic-node-108
+							37 container Description: 已完成 · 3, ID: flt-semantic-node-110
+								38 button 在已完成新增记录, ID: flt-semantic-node-111
+								39 container flt-semantic-node-119
+									84 container Description: 卡片详情中编辑, ID: flt-semantic-node-267
+										85 button 移动卡片, ID: flt-semantic-node-268
+									86 container Description: 并发新增任务, ID: flt-semantic-node-270
+										87 button 移动卡片, ID: flt-semantic-node-271
+									88 container Description: Web卡片详情 Web工时：12.5, ID: flt-semantic-node-273
+										89 button 移动卡片, ID: flt-semantic-node-274
+						46 button 立即同步, ID: flt-semantic-node-62
+			49 text 已保存到本机 · 协作服务已接收
+			63 button 立即同步, ID: flt-semantic-node-25
+			65 container flt-semantic-node-33
+				66 text 看板验收 · alice
+				67 button (disabled) 验证最终看板并保存, ID: flt-semantic-node-29
+				68 text 阶段 4 · 3 个视图 · 3 条记录
+				69 text ✓ same-native-document-and-independent-original-database
+				70 text ✓ original-native-board-group-setting-loads-in-wasm
+				71 text ✓ native-fields-and-original-row-values-survive-cross-platform-open
+				72 text ✓ parent-reference-remains-unchanged
+				73 text ✓ independent-unpublished-board-and-row-branches
+				74 text ✓ original-protobuf-websocket-frames-are-held-before-publish
+				75 text ✓ shared-native-and-web-views-converge-on-three-original-row-identities
+				76 text ✓ actual-web-card-move-and-record-detail-reach-the-peer
+				90 text ✓ peer-original-card-move-and-independent-number-cell-are-preserved
+				91 text ✓ all-views-render-the-same-three-row-identities-without-card-copies
+				92 text ✓ actual-original-undo-redo-retain-the-peer-card-location-and-number-value
+				93 text PASS · 11 项
+				94 button 保存并离开, ID: flt-semantic-node-280
+
+The focused UI element is 67 button (disabled) 验证最终看板并保存, ID: flt-semantic-node-29

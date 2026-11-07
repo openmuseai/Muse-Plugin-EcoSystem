@@ -1,0 +1,67 @@
+Browser tab: 23, Title: "127.0.0.1:50946/?actor=bob&board=fd14b570af4a", URL: "http://127.0.0.1:50946/?actor=bob&board=fd14b570af4a".
+1 AXWebArea 127.0.0.1:50946/?actor=bob&board=fd14b570af4a
+	2 container
+		3 container flt-semantic-node-3
+			4 button 显示目录, ID: flt-semantic-node-23
+			5 text 智能文档 · 看板协作
+			6 button (disabled) 撤销, ID: flt-semantic-node-6
+			7 button (disabled) 重做, ID: flt-semantic-node-7
+			8 button 加粗, ID: flt-semantic-node-8
+			9 button 斜体, ID: flt-semantic-node-9
+			10 button 下划线, ID: flt-semantic-node-10
+			11 button 超链接, ID: flt-semantic-node-11
+			12 button (collapsed) 块类型, ID: flt-semantic-node-12, Secondary Actions: Expand
+			13 button (collapsed) 插入内容, ID: flt-semantic-node-13, Secondary Actions: Expand
+			14 container flt-semantic-node-22
+				15 container flt-semantic-node-17
+					16 button (collapsed) 数据库引用操作, ID: flt-semantic-node-18, Secondary Actions: Expand
+					17 container Description: 项目数据库 在线协作 实时连接正常 · 接收确认暂不可用 · 本机修改保留 实时连接正常 · 接收确认暂不可用 · 本机修改保留, ID: flt-semantic-node-19
+						18 button 1 人, ID: flt-semantic-node-34
+						19 button (collapsed) 表格, ID: flt-semantic-node-35, Secondary Actions: Expand
+						20 button 新增视图, ID: flt-semantic-node-36
+						21 button 视图设置, ID: flt-semantic-node-37
+						22 button 筛选, ID: flt-semantic-node-38
+						23 button 排序, ID: flt-semantic-node-39
+						24 button 撤销, ID: flt-semantic-node-40
+						25 button (disabled) 重做, ID: flt-semantic-node-41
+						26 button 新增记录, ID: flt-semantic-node-42
+						27 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-43, Secondary Actions: Expand
+						65 button 重试, ID: flt-semantic-node-76
+						28 container flt-semantic-node-44
+							29 text #
+							30 button 标题, ID: flt-semantic-node-46
+							31 button 完成, ID: flt-semantic-node-47
+							32 button 链接, ID: flt-semantic-node-48
+							33 button 状态, ID: flt-semantic-node-49
+							34 container flt-semantic-node-61
+								35 container Description: 1, ID: flt-semantic-node-51
+									36 button 第 1 行，标题 卡片详情中编辑, ID: flt-semantic-node-52
+									37 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-53
+									38 button 第 1 行，链接, ID: flt-semantic-node-54
+									39 button 已完成 第 1 行，状态 已完成, ID: flt-semantic-node-55
+								40 container Description: 2, ID: flt-semantic-node-56
+									41 button 第 2 行，标题 并发新增任务, ID: flt-semantic-node-57
+									42 checkbox Description: 第 2 行，完成, Value: 0, ID: flt-semantic-node-58
+									43 button 第 2 行，链接, ID: flt-semantic-node-59
+									44 button 已完成 第 2 行，状态 已完成, ID: flt-semantic-node-60
+								56 container Description: 3, ID: flt-semantic-node-68
+									57 button 第 3 行，标题 Web任务, ID: flt-semantic-node-69
+									58 checkbox Description: 第 3 行，完成, Value: 0, ID: flt-semantic-node-70
+									59 button 第 3 行，链接, ID: flt-semantic-node-71
+									60 button 待处理 第 3 行，状态 待处理, ID: flt-semantic-node-72
+						45 button 立即同步, ID: flt-semantic-node-62
+			46 text 已保存到本机 · 协作服务已接收
+			47 button 立即同步, ID: flt-semantic-node-25
+			48 container flt-semantic-node-33
+				49 text 看板验收 · bob
+				50 button 发布并发修改, ID: flt-semantic-node-29
+				61 text 阶段 2 · 2 个视图 · 3 条记录
+				52 text ✓ same-native-document-and-independent-original-database
+				53 text ✓ original-native-board-group-setting-loads-in-wasm
+				54 text ✓ native-fields-and-original-row-values-survive-cross-platform-open
+				55 text ✓ parent-reference-remains-unchanged
+				62 text ✓ independent-unpublished-board-and-row-branches
+				63 text ✓ original-protobuf-websocket-frames-are-held-before-publish
+				64 button 保存并离开, ID: flt-semantic-node-75
+
+The focused UI element is 50 button 发布并发修改, ID: flt-semantic-node-29

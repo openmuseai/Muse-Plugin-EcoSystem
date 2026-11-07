@@ -1,0 +1,970 @@
+    Blocking waiting for file lock on package cache
+warning: unused import: `ArrayRef`
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:17:39
+   |
+17 | use crate::types::array::{ArrayEvent, ArrayRef};
+   |                                       ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `XmlElementRef` and `XmlTextRef`
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:22:25
+   |
+22 | use crate::types::xml::{XmlElementRef, XmlEvent, XmlTextEvent, XmlTextRef};
+   |                         ^^^^^^^^^^^^^                          ^^^^^^^^^^
+
+warning: value assigned to `left` is never read
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block.rs:288:24
+    |
+288 |         let mut left = None;
+    |                        ^^^^ this value is reassigned later and never used
+...
+334 |                 left = parent_branch.map.get(sub).cloned();
+    |                 ------------------------------------------ `left` is overwritten here before the previous value is read
+    |
+    = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block.rs:644:29
+    |
+644 |                 if let Some(mut left) = this.left {
+    |                             ----^^^^
+    |                             |
+    |                             help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `ptr`
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block.rs:730:25
+    |
+730 |                     let ptr = BranchPtr::from(branch);
+    |                         ^^^ help: if this is intentional, prefix it with an underscore: `_ptr`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `branch`
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/update.rs:447:35
+    |
+447 |                 ItemContent::Type(branch) => {
+    |                                   ^^^^^^ help: if this is intentional, prefix it with an underscore: `_branch`
+
+warning: method `clock_end` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block.rs:136:12
+    |
+126 | impl BlockCell {
+    | -------------- method in this implementation
+...
+136 |     pub fn clock_end(&self) -> u32 {
+    |            ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `get_block_mut` is never used
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_store.rs:79:8
+   |
+23 | impl ClientBlockList {
+   | -------------------- method in this implementation
+...
+79 |     fn get_block_mut(&mut self, clock: u32) -> Option<&mut BlockCell> {
+   |        ^^^^^^^^^^^^^
+
+warning: methods `contains` and `get_block_mut` are never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_store.rs:306:12
+    |
+299 | impl BlockStore {
+    | --------------- methods in this implementation
+...
+306 |     pub fn contains(&self, id: &ID) -> bool {
+    |            ^^^^^^^^
+...
+381 |     pub(crate) fn get_block_mut(&mut self, id: &ID) -> Option<&mut BlockCell> {
+    |                   ^^^^^^^^^^^^^
+
+warning: struct `Blocks` is never constructed
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_store.rs:486:19
+    |
+486 | pub(crate) struct Blocks<'a> {
+    |                   ^^^^^^
+
+warning: associated function `new` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_store.rs:492:8
+    |
+491 | impl<'a> Blocks<'a> {
+    | ------------------- associated function in this implementation
+492 |     fn new(update: &'a BlockStore) -> Self {
+    |        ^^^
+
+warning: constant `WEAK_REF_FLAGS_QUOTE` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:216:7
+    |
+216 | const WEAK_REF_FLAGS_QUOTE: u8 = 0b0000_0001;
+    |       ^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_ASSOC` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:218:7
+    |
+218 | const WEAK_REF_FLAGS_START_ASSOC: u8 = 0b0000_0010;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_ASSOC` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:220:7
+    |
+220 | const WEAK_REF_FLAGS_END_ASSOC: u8 = 0b0000_0100;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_UNBOUNDED` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:222:7
+    |
+222 | const WEAK_REF_FLAGS_START_UNBOUNDED: u8 = 0b0000_1000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_UNBOUNDED` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:224:7
+    |
+224 | const WEAK_REF_FLAGS_END_UNBOUNDED: u8 = 0b0001_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_PARENT_ROOT` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:226:7
+    |
+226 | const WEAK_REF_FLAGS_PARENT_ROOT: u8 = 0b0010_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method `blocks` is never used
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/update.rs:45:19
+   |
+29 | impl UpdateBlocks {
+   | ----------------- method in this implementation
+...
+45 |     pub(crate) fn blocks(&self) -> Blocks<'_> {
+   |                   ^^^^^^
+
+warning: methods `last_id` and `into_block` are never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/update.rs:934:19
+    |
+879 | impl BlockCarrier {
+    | ----------------- methods in this implementation
+...
+934 |     pub(crate) fn last_id(&self) -> ID {
+    |                   ^^^^^^^
+...
+963 |     pub fn into_block(self) -> Option<Box<Item>> {
+    |            ^^^^^^^^^^
+
+warning: struct `Blocks` is never constructed
+    --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/update.rs:1076:19
+     |
+1076 | pub(crate) struct Blocks<'a> {
+     |                   ^^^^^^
+
+warning: associated function `new` is never used
+    --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/update.rs:1082:8
+     |
+1081 | impl<'a> Blocks<'a> {
+     | ------------------- associated function in this implementation
+1082 |     fn new(update: &'a UpdateBlocks) -> Self {
+     |        ^^^
+
+warning: methods `move_to`, `forward`, `backward`, and `values` are never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_iter.rs:73:12
+    |
+ 23 | impl BlockIter {
+    | -------------- methods in this implementation
+...
+ 73 |     pub fn move_to(&mut self, index: u32, txn: &mut TransactionMut) {
+    |            ^^^^^^^
+...
+ 99 |     pub fn forward<T: ReadTxn>(&mut self, txn: &T, len: u32) {
+    |            ^^^^^^^
+...
+186 |     pub fn backward<T: ReadTxn>(&mut self, txn: &mut T, mut len: u32) {
+    |            ^^^^^^^^
+...
+514 |     pub fn values<'a, 'txn, T: ReadTxn>(
+    |            ^^^^^^
+
+warning: struct `Values` is never constructed
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_iter.rs:522:12
+    |
+522 | pub struct Values<'a, 'txn> {
+    |            ^^^^^^
+
+warning: associated function `new` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/block_iter.rs:528:8
+    |
+527 | impl<'a, 'txn> Values<'a, 'txn> {
+    | ------------------------------- associated function in this implementation
+528 |     fn new(iter: &'a mut BlockIter, txn: &'txn mut TransactionMut<'txn>) -> Self {
+    |        ^^^
+
+warning: method `remove_at` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/branch.rs:427:19
+    |
+245 | impl Branch {
+    | ----------- method in this implementation
+...
+427 |     pub(crate) fn remove_at(&self, txn: &mut TransactionMut, index: u32, len: u32) -> u32 {
+    |                   ^^^^^^^^^
+
+warning: trait `BlockIterator` is never used
+ --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:7:18
+  |
+7 | pub(crate) trait BlockIterator: TxnIterator<Item = ItemPtr> + Sized {
+  |                  ^^^^^^^^^^^^^
+
+warning: trait `BlockSliceIterator` is never used
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:21:18
+   |
+21 | pub(crate) trait BlockSliceIterator: TxnIterator<Item = ItemSlice> + Sized {
+   |                  ^^^^^^^^^^^^^^^^^^
+
+warning: struct `BlockSlices` is never constructed
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:283:19
+    |
+283 | pub(crate) struct BlockSlices<I>(I)
+    |                   ^^^^^^^^^^^
+
+warning: struct `RangeIter` is never constructed
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:311:19
+    |
+311 | pub(crate) struct RangeIter<I> {
+    |                   ^^^^^^^^^
+
+warning: associated items `new` and `begin` are never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:322:8
+    |
+318 | / impl<I> RangeIter<I>
+319 | | where
+320 | |     I: TxnIterator<Item = ItemPtr>,
+    | |___________________________________- associated items in this implementation
+321 |   {
+322 |       fn new(iter: I, start: StickyIndex, end: StickyIndex) -> Self {
+    |          ^^^
+...
+331 |       fn begin<T: ReadTxn>(&mut self, txn: &T, start_offset: &mut u32) -> Option<ItemPtr> {
+    |          ^^^^^
+
+warning: enum `RangeIterState` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:439:6
+    |
+439 | enum RangeIterState {
+    |      ^^^^^^^^^^^^^^
+
+warning: struct `Values` is never constructed
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:450:19
+    |
+450 | pub(crate) struct Values<I> {
+    |                   ^^^^^^
+
+warning: associated function `new` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/iter.rs:456:8
+    |
+455 | impl<I> Values<I> {
+    | ----------------- associated function in this implementation
+456 |     fn new(iter: I) -> Self {
+    |        ^^^
+
+warning: method `get_item` is never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/moving.rs:640:19
+    |
+410 | impl StickyIndex {
+    | ---------------- method in this implementation
+...
+640 |     pub(crate) fn get_item<T: ReadTxn>(&self, txn: &T) -> Option<ItemPtr> {
+    |                   ^^^^^^^^
+
+warning: methods `contains_id`, `right`, and `left` are never used
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/slice.rs:174:12
+    |
+100 | impl ItemSlice {
+    | -------------- methods in this implementation
+...
+174 |     pub fn contains_id(&self, id: &ID) -> bool {
+    |            ^^^^^^^^^^^
+...
+244 |     pub fn right(&self) -> Option<ItemSlice> {
+    |            ^^^^^
+...
+264 |     pub fn left(&self) -> Option<ItemSlice> {
+    |            ^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/event.rs:63:18
+   |
+63 |     pub fn added(&self) -> SubdocsEventIter {
+   |                  ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                  |
+   |                  the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+63 |     pub fn added(&self) -> SubdocsEventIter<'_> {
+   |                                            ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/event.rs:69:20
+   |
+69 |     pub fn removed(&self) -> SubdocsEventIter {
+   |                    ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                    |
+   |                    the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+69 |     pub fn removed(&self) -> SubdocsEventIter<'_> {
+   |                                              ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/event.rs:75:19
+   |
+75 |     pub fn loaded(&self) -> SubdocsEventIter {
+   |                   ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                   |
+   |                   the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+75 |     pub fn loaded(&self) -> SubdocsEventIter<'_> {
+   |                                             ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/id_set.rs:595:34
+    |
+595 |     pub(crate) fn deleted_blocks(&self) -> DeletedBlocks {
+    |                                  ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                  |
+    |                                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+595 |     pub(crate) fn deleted_blocks(&self) -> DeletedBlocks<'_> {
+    |                                                         ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:345:20
+    |
+345 |     pub fn subdocs(&self) -> SubdocsIter {
+    |                    ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                    |
+    |                    the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+345 |     pub fn subdocs(&self) -> SubdocsIter<'_> {
+    |                                         ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:351:25
+    |
+351 |     pub fn subdoc_guids(&self) -> SubdocGuids {
+    |                         ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                         |
+    |                         the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+351 |     pub fn subdoc_guids(&self) -> SubdocGuids<'_> {
+    |                                              ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:431:28
+    |
+431 |     pub(crate) fn try_read(&self) -> Option<RwLockReadGuard<Store>> {
+    |                            ^^^^^            ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                            |
+    |                            the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+431 |     pub(crate) fn try_read(&self) -> Option<RwLockReadGuard<'_, Store>> {
+    |                                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:436:33
+    |
+436 |     pub(crate) fn read_blocking(&self) -> RwLockReadGuard<Store> {
+    |                                 ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                 |
+    |                                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+436 |     pub(crate) fn read_blocking(&self) -> RwLockReadGuard<'_, Store> {
+    |                                                           +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:445:30
+    |
+445 |     pub(crate) fn read_async(&self) -> Read<Store> {
+    |                              ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                              |
+    |                              the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+445 |     pub(crate) fn read_async(&self) -> Read<'_, Store> {
+    |                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:449:29
+    |
+449 |     pub(crate) fn try_write(&self) -> Option<RwLockWriteGuard<Store>> {
+    |                             ^^^^^            ^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                             |
+    |                             the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+449 |     pub(crate) fn try_write(&self) -> Option<RwLockWriteGuard<'_, Store>> {
+    |                                                               +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:454:34
+    |
+454 |     pub(crate) fn write_blocking(&self) -> RwLockWriteGuard<Store> {
+    |                                  ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                  |
+    |                                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+454 |     pub(crate) fn write_blocking(&self) -> RwLockWriteGuard<'_, Store> {
+    |                                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/store.rs:463:31
+    |
+463 |     pub(crate) fn write_async(&self) -> Write<Store> {
+    |                               ^^^^^     ^^^^^^^^^^^^ the same lifetime is hidden here
+    |                               |
+    |                               the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+463 |     pub(crate) fn write_async(&self) -> Write<'_, Store> {
+    |                                               +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transaction.rs:166:18
+    |
+166 |     fn root_refs(&self) -> RootRefs {
+    |                  ^^^^^     ^^^^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+166 |     fn root_refs(&self) -> RootRefs<'_> {
+    |                                    ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transaction.rs:173:21
+    |
+173 |     fn subdoc_guids(&self) -> SubdocGuids {
+    |                     ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                     |
+    |                     the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+173 |     fn subdoc_guids(&self) -> SubdocGuids<'_> {
+    |                                          ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transaction.rs:179:16
+    |
+179 |     fn subdocs(&self) -> SubdocsIter {
+    |                ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                |
+    |                the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+179 |     fn subdocs(&self) -> SubdocsIter<'_> {
+    |                                     ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/types/mod.rs:1108:17
+     |
+1108 |     pub fn iter(&self) -> EventsIter {
+     |                 ^^^^^     ^^^^^^^^^^ the same lifetime is hidden here
+     |                 |
+     |                 the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+     |
+1108 |     pub fn iter(&self) -> EventsIter<'_> {
+     |                                     ++++
+
+warning: types that do not implement `Drop` can still have drop glue, consider instead using `std::mem::needs_drop` to detect whether a type is trivially dropped
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/observer.rs:272:33
+    |
+272 | pub type Subscription = Arc<dyn Drop + Send + Sync + 'static>;
+    |                                 ^^^^
+    |
+    = note: `#[warn(dyn_drop)]` on by default
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/state_vector.rs:93:17
+   |
+93 |     pub fn iter(&self) -> std::collections::hash_map::Iter<ClientID, u32> {
+   |                 ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+93 |     pub fn iter(&self) -> std::collections::hash_map::Iter<'_, ClientID, u32> {
+   |                                                            +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/sync/awareness.rs:178:17
+    |
+178 |     pub fn iter(&self) -> AwarenessIter {
+    |                 ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+178 |     pub fn iter(&self) -> AwarenessIter<'_> {
+    |                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:18:21
+   |
+18 |     fn try_transact(&self) -> Result<Transaction, TransactionAcqError>;
+   |                     ^^^^^            ^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+18 |     fn try_transact(&self) -> Result<Transaction<'_>, TransactionAcqError>;
+   |                                                 ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:29:25
+   |
+29 |     fn try_transact_mut(&self) -> Result<TransactionMut, TransactionAcqError>;
+   |                         ^^^^^            ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                         |
+   |                         the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+29 |     fn try_transact_mut(&self) -> Result<TransactionMut<'_>, TransactionAcqError>;
+   |                                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:43:33
+   |
+43 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut, TransactionAcqError>
+   |                                 ^^^^^                       ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                                 |
+   |                                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+43 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut<'_>, TransactionAcqError>
+   |                                                                           ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:60:29
+   |
+60 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut
+   |                             ^^^^^                ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                             |
+   |                             the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+60 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut<'_>
+   |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:71:17
+   |
+71 |     fn transact(&self) -> Transaction;
+   |                 ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+71 |     fn transact(&self) -> Transaction<'_>;
+   |                                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:83:21
+   |
+83 |     fn transact_mut(&self) -> TransactionMut;
+   |                     ^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+83 |     fn transact_mut(&self) -> TransactionMut<'_>;
+   |                                             ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:87:21
+   |
+87 |     fn try_transact(&self) -> Result<Transaction, TransactionAcqError> {
+   |                     ^^^^^            ^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+87 |     fn try_transact(&self) -> Result<Transaction<'_>, TransactionAcqError> {
+   |                                                 ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:94:25
+   |
+94 |     fn try_transact_mut(&self) -> Result<TransactionMut, TransactionAcqError> {
+   |                         ^^^^^            ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                         |
+   |                         the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+94 |     fn try_transact_mut(&self) -> Result<TransactionMut<'_>, TransactionAcqError> {
+   |                                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:101:33
+    |
+101 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut, TransactionAcqError>
+    |                                 ^^^^^                       ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                 |
+    |                                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+101 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut<'_>, TransactionAcqError>
+    |                                                                           ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:115:29
+    |
+115 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut
+    |                             ^^^^^                ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                             |
+    |                             the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+115 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut<'_>
+    |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:123:17
+    |
+123 |     fn transact(&self) -> Transaction {
+    |                 ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+123 |     fn transact(&self) -> Transaction<'_> {
+    |                                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/yrs/src/transact.rs:128:21
+    |
+128 |     fn transact_mut(&self) -> TransactionMut {
+    |                     ^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                     |
+    |                     the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+128 |     fn transact_mut(&self) -> TransactionMut<'_> {
+    |                                             ++++
+
+warning: `yrs` (lib) generated 66 warnings (run `cargo fix --lib -p yrs` to apply 35 suggestions)
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:170:23
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut {
+    |                       ^^^^^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                       |
+    |                       the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut<'_> {
+    |                                                   ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:210:19
+    |
+210 |   pub fn transact(&self) -> Transaction {
+    |                   ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                   |
+    |                   the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+210 |   pub fn transact(&self) -> Transaction<'_> {
+    |                                        ++++
+
+warning: `collab` (lib) generated 2 warnings (run `cargo fix --lib -p collab` to apply 2 suggestions)
+warning: unused import: `trace`
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/rows/row.rs:30:22
+   |
+30 | use tracing::{error, trace};
+   |                      ^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:408:19
+    |
+399 |             code: "",
+    |                   -- matches all the relevant values
+...
+408 |             code: "",
+    |                   ^^ no value can reach this
+    |
+    = note: `#[warn(unreachable_patterns)]` (part of `#[warn(unused)]`) on by default
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:426:19
+    |
+417 |             code: "USD",
+    |                   ----- matches all the relevant values
+...
+426 |             code: "USD",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:435:19
+    |
+417 |             code: "USD",
+    |                   ----- matches all the relevant values
+...
+435 |             code: "USD",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:444:19
+    |
+417 |             code: "USD",
+    |                   ----- matches all the relevant values
+...
+444 |             code: "USD",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:453:19
+    |
+417 |             code: "USD",
+    |                   ----- matches all the relevant values
+...
+453 |             code: "USD",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:489:19
+    |
+480 |             code: "CNY",
+    |                   ----- matches all the relevant values
+...
+489 |             code: "CNY",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:584:19
+    |
+417 |             code: "USD",
+    |                   ----- matches all the relevant values
+...
+584 |             code: "USD",
+    |                   ^^^^^ no value can reach this
+
+warning: unreachable pattern
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/fields/type_option/number_type_option.rs:643:19
+    |
+633 |             code: "CZK",
+    |                   ----- matches all the relevant values
+...
+643 |             code: "CZK",
+    |                   ^^^^^ no value can reach this
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/workspace_database/body.rs:64:23
+   |
+64 |   pub fn add_database(&mut self, database_id: &str, view_ids: Vec<String>) -> TransactionMut {
+   |                       ^^^^^^^^^ the lifetime is elided here                   ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+64 |   pub fn add_database(&mut self, database_id: &str, view_ids: Vec<String>) -> TransactionMut<'_> {
+   |                                                                                             ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/workspace_database/body.rs:71:5
+   |
+71 |     &mut self,
+   |     ^^^^^^^^^ the lifetime is elided here
+72 |     view_ids_by_database_id: HashMap<String, Vec<String>>,
+73 |   ) -> TransactionMut {
+   |        ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+73 |   ) -> TransactionMut<'_> {
+   |                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/workspace_database/body.rs:83:5
+   |
+83 |     &mut self,
+   |     ^^^^^^^^^ the lifetime is elided here
+...
+86 |   ) -> TransactionMut {
+   |        ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+86 |   ) -> TransactionMut<'_> {
+   |                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/src/workspace_database/body.rs:93:26
+   |
+93 |   pub fn delete_database(&mut self, database_id: &str) -> TransactionMut {
+   |                          ^^^^^^^^^                        ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                          |
+   |                          the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+93 |   pub fn delete_database(&mut self, database_id: &str) -> TransactionMut<'_> {
+   |                                                                         ++++
+
+warning: `collab-database` (lib) generated 13 warnings (run `cargo fix --lib -p collab-database` to apply 5 suggestions)
+   Compiling muse-dataset-core v0.1.0 (/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.85s
+     Running unittests src/lib.rs (dataset/rust/target/debug/deps/muse_dataset_core-18b8f0ab7c1ec38f)
+
+running 66 tests
+test date_filter_tests::unconfigured_known_date_condition_is_disabled_not_an_unknown_rule ... ok
+test date_filter_tests::siyuan_open_range_end_is_empty_nonrange_end_uses_start ... ok
+test date_filter_tests::calendar_filter_uses_field_zone_and_inclusive_normalized_range ... ok
+test number_tests::exact_numeric_boundary_has_no_partial_parse_or_rounding ... ok
+test number_tests::new_numeric_writes_reject_partial_numbers_and_nonfinite_or_lossy_values ... ok
+test date_tests::original_date_codec_civil_ranges_epoch_clear_and_hidden_time_roundtrip ... ok
+test date_tests::invalid_dates_dst_precision_and_wrong_offsets_are_never_coerced ... ok
+test date_tests::malformed_external_options_or_values_and_reminders_are_preserved_readonly ... ok
+test linked_view_tests::hidden_primary_membership_has_the_same_scope_and_row_validation_as_visible_views ... ok
+test number_tests::long_currency_grouping_repeats_the_original_locale_pattern_to_decimal_capacity ... ok
+test number_tests::numeric_projection_keeps_exact_input_separate_from_original_money_display ... ok
+test number_tests::unknown_original_numeric_value_and_options_remain_readonly_and_untouched ... ok
+test prefill_tests::duplicate_field_filters_skip_seed_and_or_uses_first_branch_without_solver ... ok
+test number_tests::original_number_options_keep_all_known_currency_amounts_separate_from_display ... ok
+test date_filter_tests::civil_filter_handles_dst_midnight_gap_epoch_and_rejects_wholly_skipped_day ... ok
+test prefill_tests::unknown_number_format_is_read_only_without_destroying_metadata ... ok
+test prefill_tests::original_seed_decisions_and_precise_arithmetic_with_overflow_guard ... ok
+test date_filter_tests::original_date_seed_obeys_zone_and_declines_unrepresentable_or_empty_conditions ... ok
+test linked_view_tests::stale_linked_order_cannot_resurrect_a_concurrently_removed_primary_member ... ok
+test tests::root_undo_hides_created_row_without_destroying_independent_row_state ... ok
+test tests::foreign_row_state_is_rejected_atomically_and_unknown_fields_are_preserved ... ok
+test prefill_tests::explicit_cells_win_and_hidden_row_query_preserves_shared_rules_and_references ... ok
+test board_tests::original_group_order_visibility_hide_empty_and_unknown_configuration_are_preserved ... ok
+test undo_api_tests::bounded_redo_processes_only_one_captured_command_at_a_time ... ok
+test undo_api_tests::optional_single_pop_preserves_old_default_and_does_not_touch_an_earlier_command ... ok
+test number_tests::number_commands_reject_invalid_or_stale_drafts_without_changing_original_bytes ... ok
+test tests::upstream_root_rows_types_cell_writers_and_reopen ... ok
+test tests::first_write_undo_does_not_remove_a_causally_later_peer_value_in_the_same_cell ... ok
+test tests::stale_cell_invalid_type_and_missing_rows_cannot_be_overwritten ... ok
+test tests::original_select_id_codecs_preserve_comma_names_colors_clear_and_reopen ... ok
+test date_filter_tests::date_rules_roundtrip_original_storage_shared_root_history_and_hidden_dependencies ... ok
+test linked_view_tests::original_linked_view_creation_and_concurrent_row_insert_keep_all_members ... ok
+test view_rules_tests::empty_group_has_original_tristate_semantics_inside_and_or ... ok
+test tests::timeline_walks_root_and_independent_rows_without_replaying_remote_edits ... ok
+test view_rules_tests::invalid_nodes_numbers_and_duplicate_keys_fail_without_dropping_unknowns ... ok
+test view_rules_tests::group_mode_change_and_peer_child_edit_are_independent_shared_intents ... ok
+test view_rules_tests::hidden_rows_remain_authoritative_dependencies_and_reproject_on_original_row_merge ... ok
+test tests::independent_cells_converge_and_origin_undo_preserves_peer ... ok
+test tests::select_invalid_or_stale_inputs_reject_without_mutation_and_unknown_config_is_preserved ... ok
+test view_rules_tests::concurrent_independent_additions_to_empty_original_view_arrays_are_preserved ... ok
+test view_rules_tests::concurrent_original_sort_moves_converge_without_duplicate_nodes ... ok
+test view_rules_tests::malformed_cell_types_do_not_silently_filter_out_or_sort_as_empty ... ok
+test view_rules_tests::missing_rows_are_not_empty_filter_results_and_reopen_retains_original_rules ... ok
+test view_rules_tests::legacy_atomic_and_original_fill_children_require_coordinated_upgrade_only_for_child_edits ... ok
+test tests::original_select_cells_converge_and_original_origin_undo_preserves_peer_cell ... ok
+test linked_view_tests::linked_view_commands_preserve_peer_rows_and_stale_names_without_redirecting_identity ... ok
+test view_rules_tests::peer_nested_child_edit_survives_ancestor_group_deletion_without_resurrection ... ok
+test view_rules_tests::filter_command_is_root_history_and_peer_cell_edit_survives_undo ... ok
+test view_rules_tests::stale_config_and_changed_field_drafts_reject_without_mutation ... ok
+test view_rules_tests::unknown_rule_is_preserved_in_manual_read_only_projection_and_cannot_be_overwritten ... ok
+test board_tests::concurrent_board_creation_and_row_insert_keep_shared_membership ... ok
+test number_tests::number_name_and_format_are_one_root_history_item_and_preserve_peer_row_edit ... ok
+test date_tests::date_commands_protect_schema_and_cell_and_original_row_undo_reopen_converge ... ok
+test board_tests::board_is_pure_projection_and_moves_the_original_row_with_independent_undo ... ok
+test view_rules_tests::original_filter_tree_stable_multi_sort_and_does_not_remove_rows ... ok
+test view_rules_tests::stable_priority_sort_uses_secondary_key_and_manual_order_for_equal_keys ... ok
+test view_rules_tests::nested_original_array_distinct_inserts_delete_edit_and_origin_undo_preserve_peers ... ok
+test view_rules_tests::view_undo_after_causally_later_peer_rule_edit_does_not_fall_through_to_prior_root_command ... ok
+test view_rules_tests::deeply_nested_child_move_keeps_peer_edit_and_stable_ids_after_reopen ... ok
+test view_rules_tests::nested_distinct_leaf_edits_preserve_both_intents_and_original_filter_json ... ok
+test view_rules_tests::concurrent_new_distinct_filters_and_remove_versus_existing_edit_have_valid_original_semantics ... ok
+test view_rules_tests::original_option_ids_declared_rank_checkbox_and_explicit_date_instants_sort ... ok
+test linked_view_tests::concurrent_original_view_and_field_creation_project_the_same_global_schema ... ok
+test view_rules_tests::simultaneous_filter_and_sort_edits_preserve_independent_shared_view_intents ... ok
+test view_rules_tests::simultaneous_existing_leaf_edits_converge_without_duplicate_filter_nodes ... ok
+test view_rules_tests::concurrent_rule_condition_content_pairs_remain_coherent_under_both_client_orders ... ok
+
+test result: ok. 66 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.34s
+
+   Doc-tests muse_dataset_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

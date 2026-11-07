@@ -1,0 +1,172 @@
+/// Read projection only; opaque original CRDT state remains authoritative.
+final class DatasetColumn {
+  DatasetColumn.fromJson(Map value)
+    : id = value['id'] as String,
+      name = value['name'] as String,
+      semanticType = value['semanticType'] as String,
+      storageType = value['storageType'] as int,
+      editable = value['editable'] == true,
+      fieldHash = value['fieldHash'] as String?,
+      timezone = (value['dateOptions'] as Map?)?['timezone'] as String?,
+      numberFormat = (value['numberOptions'] as Map?)?['format'] as int?,
+      options = List.unmodifiable(
+        (value['options'] as List? ?? const []).map(
+          (v) => DatasetChoice.fromJson(v as Map),
+        ),
+      );
+  final String id, name, semanticType;
+  final int storageType;
+  final bool editable;
+  final String? fieldHash;
+  final String? timezone;
+  final int? numberFormat;
+  final List<DatasetChoice> options;
+  bool get isChoice =>
+      semanticType == 'singleSelect' || semanticType == 'multiSelect';
+}
+
+final class DatasetChoice {
+  DatasetChoice.fromJson(Map value)
+    : id = value['id'] as String,
+      name = value['name'] as String,
+      color = value['color'] as int;
+  final String id, name;
+  final int color;
+}
+
+final class DatasetOptionDraft {
+  const DatasetOptionDraft({required this.name, this.color = 0});
+  final String name;
+  final int color;
+}
+
+final class DatasetCell {
+  DatasetCell.fromJson(Map value)
+    : value = value['value'],
+      hash = value['hash'] as String,
+      selectedOptionIds = List.unmodifiable(
+        (value['selectedOptionIds'] as List? ?? const []).cast<String>(),
+      ),
+      unresolvedOptions = value['unresolvedOptions'] == true,
+      unresolvedDate = value['unresolvedDate'] == true,
+      unresolvedNumber = value['unresolvedNumber'] == true,
+      numberInput = value['numberInput'] as String?;
+  final Object? value;
+  final String hash;
+  final List<String> selectedOptionIds;
+  final bool unresolvedOptions;
+  final bool unresolvedDate;
+  final bool unresolvedNumber;
+  final String? numberInput;
+}
+
+final class DatasetRow {
+  DatasetRow.fromJson(Map value)
+    : id = value['id'] as String,
+      loaded = value['loaded'] == true,
+      cells = Map.unmodifiable({
+        for (final entry in (value['cells'] as Map? ?? {}).entries)
+          entry.key as String: DatasetCell.fromJson(entry.value as Map),
+      });
+  final String id;
+  final bool loaded;
+  final Map<String, DatasetCell> cells;
+}
+
+final class DatasetViewProjection {
+  DatasetViewProjection.fromJson(Map value)
+    : board = value['board'] is Map
+          ? DatasetBoard.fromJson(value['board'] as Map)
+          : null,
+      rulesReady = value['rulesReady'] != false,
+      rulesError = value['rulesError'] as String?,
+      rulesHash = value['rulesHash'] as String?,
+      fieldsHash = value['fieldsHash'] as String?,
+      dateFilterInputs = Map.unmodifiable(
+        Map<String, dynamic>.from(
+          value['dateFilterInputs'] as Map? ?? const {},
+        ),
+      ),
+      filters = List.unmodifiable(
+        (value['filters'] as List? ?? const []).map(
+          (v) => Map<String, dynamic>.from(v as Map),
+        ),
+      ),
+      sorts = List.unmodifiable(
+        (value['sorts'] as List? ?? const []).map(
+          (v) => Map<String, dynamic>.from(v as Map),
+        ),
+      ),
+      totalRows = value['totalRows'] as int? ?? (value['rows'] as List).length,
+      matchedRows =
+          value['matchedRows'] as int? ?? (value['rows'] as List).length,
+      id = value['id'] as String,
+      name = value['name'] as String,
+      layout = value['layout'] as int,
+      columns = List.unmodifiable(
+        (value['columns'] as List).map((v) => DatasetColumn.fromJson(v as Map)),
+      ),
+      allRows = List.unmodifiable(
+        ((value['rowObjects'] ?? value['rows']) as List).map(
+          (v) => DatasetRow.fromJson(v as Map),
+        ),
+      ),
+      rows = List.unmodifiable(
+        (value['rows'] as List).map((v) => DatasetRow.fromJson(v as Map)),
+      );
+  final String id, name;
+  final DatasetBoard? board;
+  bool get supportedLayout =>
+      layout == 0 || (layout == 1 && board?.ready == true);
+  final bool rulesReady;
+  final String? rulesError, rulesHash, fieldsHash;
+  final List<Map<String, dynamic>> filters, sorts;
+  final Map<String, dynamic> dateFilterInputs;
+  final int totalRows, matchedRows;
+  final int layout;
+  final List<DatasetColumn> columns;
+
+  /// Authoritative row dependencies, independent of the visible filter/order.
+  final List<DatasetRow> allRows;
+  final List<DatasetRow> rows;
+}
+
+/// Derived original group configuration. No independently persisted card state.
+final class DatasetBoard {
+  DatasetBoard.fromJson(Map value)
+    : ready = value['ready'] == true,
+      fieldId = value['fieldId'] as String?,
+      hash = value['hash'] as String?,
+      error = value['error'] as String?,
+      groups = List.unmodifiable(
+        (value['groups'] as List? ?? []).map(
+          (g) => DatasetBoardGroup.fromJson(g as Map),
+        ),
+      ),
+      targets = List.unmodifiable(
+        (value['targets'] as List? ?? []).map(
+          (g) => DatasetBoardGroup.fromJson(g as Map),
+        ),
+      ),
+      unresolvedRowIds = List.unmodifiable(
+        (value['unresolvedRowIds'] as List? ?? []).cast<String>(),
+      ),
+      unloadedRowIds = List.unmodifiable(
+        (value['unloadedRowIds'] as List? ?? []).cast<String>(),
+      );
+  final bool ready;
+  final String? fieldId, hash, error;
+  final List<DatasetBoardGroup> groups, targets;
+  final List<String> unresolvedRowIds, unloadedRowIds;
+}
+
+final class DatasetBoardGroup {
+  DatasetBoardGroup.fromJson(Map value)
+    : id = value['id'] as String,
+      name = value['name'] as String,
+      color = value['color'] as int,
+      rowIds = List.unmodifiable((value['rowIds'] as List).cast<String>());
+  final String id, name;
+  final int color;
+  final List<String> rowIds;
+}

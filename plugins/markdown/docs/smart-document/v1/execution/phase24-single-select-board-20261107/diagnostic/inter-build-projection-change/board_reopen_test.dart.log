@@ -1,0 +1,318 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/board_reopen_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: fresh offline process preserves original board groups and independent row values
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: [
+            {
+              'board': null,
+              'columns': [
+                {
+                  'dateOptions': null,
+                  'editable': true,
+                  'fieldHash': '7d0032d70191f8e8129a16016e52c54a1cbbedc75d8de4582275bd13641b9a37',
+                  'id': 'title',
+                  'name': '标题',
+                  'numberOptions': null,
+                  'options': null,
+                  'raw': {
+                    'field_type': 0,
+                    'icon': '',
+                    'id': 'title',
+                    'is_primary': true,
+                    'name': '标题',
+                    'type_options': {'0': {}}
+                  },
+                  'semanticType': 'text',
+                  'storageType': 0
+                },
+                {
+                  'dateOptions': null,
+                  'editable': true,
+                  'fieldHash': 'c648cdb09c0c6b364b73b3d4b76fe5c938d2c2cdac514bde429f99a1b10b353f',
+                  'id': 'done',
+                  'name': '完成',
+                  'numberOptions': null,
+                  'options': null,
+                  'raw': {
+                    'field_type': 5,
+                    'icon': '',
+                    'id': 'done',
+                    'is_primary': false,
+                    'name': '完成',
+                    'type_options': {'5': {}}
+                  },
+                  'semanticType': 'checkbox',
+                  'storageType': 5
+                },
+                {
+                  'dateOptions': null,
+                  'editable': true,
+                  'fieldHash': '7e4e829aae3ce739a2c1030074c84871a05a48330db8376211e243ee929eefee',
+                  'id': 'url',
+                  'name': '链接',
+                  'numberOptions': null,
+                  'options': null,
+                  'raw': {
+                    'field_type': 6,
+                    'icon': '',
+                    'id': 'url',
+                    'is_primary': false,
+                    'name': '链接',
+                    'type_options': {'6': {'content': '', 'url': ''}}
+                  },
+                  'semanticType': 'url',
+                  'storageType': 6
+                },
+                {
+                  'dateOptions': null,
+                  'editable': true,
+                  'fieldHash': '540a3a3641a3d8af9bdc7d10ca7649ed9a1ea87dd1a77f274578d83cb8281847',
+                  'id': '7383e54b-b362-46ba-8ee9-20bcd93b959c',
+                  'name': '状态',
+                  'numberOptions': null,
+                  'options': [
+                    {
+                      'color': 1,
+                      'id': '481d8854-c9cd-4999-908c-9ff574e92a25',
+                      'name': '待处理'
+                    },
+                    {
+                      'color': 2,
+                      'id': '9af9d243-dcae-4564-a3df-97df4ef2f14f',
+                      'name': '进行中'
+                    },
+                    {
+                      'color': 3,
+                      'id': '2cfbc258-8ff7-45ff-9137-096e17d1fea4',
+                      'name': '已完成'
+                    }
+                  ],
+                  'raw': {
+                    'field_type': 3,
+                    'icon': '',
+                    'id': '7383e54b-b362-46ba-8ee9-20bcd93b959c',
+                    'is_primary': false,
+                    'name': '状态',
+                    'type_options': {
+                      '3': {
+                        'content':
+'{"options":[{"id":"481d8854-c9cd-4999-908c-9ff574e92a25","name":"待处理","color":"Pink"},{"id":"9af9d243-dcae-4564-a3df-97df4ef2f14f","name":"进行中","color":"LightPink"},{"id":"2cfbc258-8ff7-45ff-9137-096e17d1fea4","name":"已完成","color":"Orange"}],"disable_color":false}'
+                      }
+                    }
+                  },
+                  'semanticType': 'singleSelect',
+                  'storageType': 3
+                }
+              ],
+              'dateFilterInputs': {},
+              'fieldsHash': '5a44bc8d1ec947330a7495885ba9bb5e46b5df72d1e56c3fc2f12c7b12500c3a',
+              'filters': [],
+              'id': '031fb123-5150-5fbe-a5ab-84e9907fd664',
+              'isDefault': true,
+              'layout': 0,
+              'matchedRows': 2,
+              'name': '表格',
+              'raw': {
+                'created_at': 0,
+                'database_id': 'a35dad4d-ad9d-4352-a2c3-db69450f71a4',
+                'field_orders': [
+                  {'id': 'title'},
+                  {'id': 'done'},
+                  {'id': 'url'},
+                  {'id': '7383e54b-b362-46ba-8ee9-20bcd93b959c'}
+                ],
+                'field_settings': {'7383e54b-b362-46ba-8ee9-20bcd93b959c': {}},
+                'filters': [],
+                'group_settings': [],
+                'id': '031fb123-5150-5fbe-a5ab-84e9907fd664',
+                'is_inline': false,
+                'layout': 0,
+                'layout_settings': {},
+                'modified_at': 1794006043,
+                'name': '表格',
+                'row_orders': [
+                  {'height': 60, 'id': '51f78e4f-3573-469f-903b-27cab5f5d3bf'},
+                  {'height': 60, 'id': '0e4c48f1-4140-46b6-b058-7364bcf4437d'}
+                ],
+                'sorts': []
+              },
+              'rowObjects': [
+                {'id': '51f78e4f-3573-469f-903b-27cab5f5d3bf', 'loaded': true},
+                {'id': '0e4c48f1-4140-46b6-b058-7364bcf4437d', 'loaded': true}
+              ],
+              'rows': [
+                {
+                  'cells': {
+                    '7383e54b-b362-46ba-8ee9-20bcd93b959c': {
+                      'hash': '72000bb4f478af29eaf509ee6f66b91e7baeb61a4f7dc90638ebce2cb5c3a950',
+                      'numberInput': null,
+                      'raw': {
+                        'created_at': 1794006044,
+                        'data': '2cfbc258-8ff7-45ff-9137-096e17d1fea4',
+                        'field_type': 3,
+                        'last_modified': 1794006046
+                      },
+                      'selectedOptionIds': ['2cfbc258-8ff7-45ff-9137-096e17d1fea4'],
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': '已完成'
+                    },
+                    'done': {
+                      'hash': '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
+                      'numberInput': null,
+                      'raw': {},
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': null
+                    },
+                    'title': {
+                      'hash': '8d424cc604ac9b5a82c46cb3a257f03a9ca18453f8c68b34428aa9ab6cf76123',
+                      'numberInput': null,
+                      'raw': {
+                        'created_at': 1794006044,
+                        'data': '卡片详情中编辑',
+                        'field_type': 0,
+                        'last_modified': 1794006048
+                      },
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': '卡片详情中编辑'
+                    },
+                    'url': {
+                      'hash': '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
+                      'numberInput': null,
+                      'raw': {},
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': null
+                    }
+                  },
+                  'id': '51f78e4f-3573-469f-903b-27cab5f5d3bf',
+                  'loaded': true
+                },
+                {
+                  'cells': {
+                    '7383e54b-b362-46ba-8ee9-20bcd93b959c': {
+                      'hash': '549b46c79f2516108c0e1860b489be3ec72a395828ba93362e4943e075adfd90',
+                      'numberInput': null,
+                      'raw': {'data': '2cfbc258-8ff7-45ff-9137-096e17d1fea4', 'field_type': 3},
+                      'selectedOptionIds': ['2cfbc258-8ff7-45ff-9137-096e17d1fea4'],
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': '已完成'
+                    },
+                    'done': {
+                      'hash': '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
+                      'numberInput': null,
+                      'raw': {},
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': null
+                    },
+                    'title': {
+                      'hash': '3bfb2938818a516456a4f468da4319f48b4547e61181939c4a72befbd9547555',
+                      'numberInput': null,
+                      'raw': {'data': '并发新增任务', 'field_type': 0},
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': '并发新增任务'
+                    },
+                    'url': {
+                      'hash': '74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b',
+                      'numberInput': null,
+                      'raw': {},
+                      'selectedOptionIds': null,
+                      'unresolvedDate': false,
+                      'unresolvedNumber': false,
+                      'unresolvedOptions': false,
+                      'value': null
+                    }
+                  },
+                  'id': '0e4c48f1-4140-46b6-b058-7364bcf4437d',
+                  'loaded': true
+                }
+              ],
+              'rulesError': null,
+              'rulesHash': '3dd123ac383a159f7f383c97731ab4381f5869a58b5d114914087f4c6dc5c25a',
+              'rulesReady': true,
+              'sorts': [],
+              'totalRows': 2
+            },
+            {
+              'board': {
+                'fieldId': '7383e54b-b362-46ba-8ee9-20bcd93b959c',
+                'groups': [
+                  {
+                    'color': 0,
+                    'id': '7383e54b-b362-46ba-8ee9-20bcd93b959c',
+                    'name': '未分组',
+                    'rowIds': [],
+                    'visible': true
+                  },
+                  {
+                    'color': 1,
+                    'id': '481d8854-c9cd-4999-908c-9ff574e92a25',
+                    'name': '待处理',
+                    'rowIds': [],
+                    'visible': true
+                  },
+                  {
+                    'color': 2,
+                    'id': '9af9d243-dcae-4564-a3df-97df4ef2f14f',
+                    'name': '进行中',
+                    'rowIds': [],
+                    'visible': true
+                  },
+                  {
+                    'color': 3,
+                    'id': '2cfbc258-8ff7-45ff-9137-096e17d1fea4',
+                    'name': '已完成',
+                    'rowIds': [
+                      '51f78e4f-3573-469f-903b-27cab5f5d3bf',
+                      '0e4c48f1-4140-46b6-b058-7364bcf4437d'
+                    ],
+                    'visible': true
+                  }
+                ],
+                'hash': '28a75692c62bc0b041e2d6f8af575b41c17049e88b0601592aff8b2814f488bb',
+                'ready': true,
+                'unloadedRowIds': [],
+                'unresolvedRowIds': []
+              },
+              'columns': [
+                {
+                  'dateOptions': null,
+                  'editable': true,
+                  'fieldHash': '7d0032d70191f8e8129a16016e52c54a1cbbedc75d8de4582275bd13641b9a37',
+                  'id': 'title',
+                  'name': '标题',
+                  'numberOptions': null,
+                  'options': null,
+                  'raw': {
+                    'field_type': 0,
+                    'icon': '',
+                    'id': 'title',
+00:01 +0 -1: fresh offline process preserves original board groups and independent row values [E]
+  Test failed. See exception logs above.
+  The test description was: fresh offline process preserves original board groups and independent row values
+  
+00:01 +0 -1: (tearDownAll)
+00:01 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/board_reopen_test.dart: fresh offline process preserves original board groups and independent row values
