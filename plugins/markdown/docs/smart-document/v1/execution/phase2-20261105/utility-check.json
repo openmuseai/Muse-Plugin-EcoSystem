@@ -1,0 +1,7 @@
+{
+  "command": "python3 scripts/stop_web_fixture.py --dry-run",
+  "exitCode": 0,
+  "output": "Registered task review server verified; no action taken",
+  "sourceSha256": "20684fa89a6d835d5b38aa4696ed2f18dc7f416ddde5dcbd885cec76f0e8aa8f",
+  "scope": "Read-only ownership check; stop action not executed"
+}

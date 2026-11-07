@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "platform": "web-browser",
+  "checks": [
+    "browser-wasm-reads-native-created-document-from-original-cloud",
+    "browser-offline-writes-are-local-before-exchange",
+    "two-authenticated-browser-members-converge-unicode-and-marks",
+    "browser-origin-undo-redo-preserves-peer-text",
+    "browser-inserted-block-projects-with-stable-native-id",
+    "browser-nonmember-read-and-raw-write-rejected-by-cloud",
+    "browser-indexeddb-write-transaction-completed"
+  ],
+  "date": "2026-11-05T13:27:10.789Z"
+}

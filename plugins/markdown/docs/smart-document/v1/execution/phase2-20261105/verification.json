@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "date": "2026-11-05T13:36:26.712273+00:00",
+  "checks": [
+    "new-documentation-links-and-code-fences",
+    "current-owned-source-hashes-match-tested-source-locks",
+    "all-12-phase2-and-16-native-regression-log-hashes-match",
+    "browser-7-reload-1-native-readback-3-receipts-passed",
+    "no-JWT-in-archived-logs",
+    "actual-WASM-artifact-matches-digest",
+    "review-server-ownership-dry-run"
+  ],
+  "sourceHashEntriesChecked": 86
+}

@@ -1,0 +1,7 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/controller_test.dart
+00:00 +0: incompatible engine binding is rejected before reading storage or network
+00:00 +1: AppFlowy transactions reach Rust and survive a real file reopen
+00:00 +2: readonly refuses local mutation without changing stored state
+00:00 +3: failed durable write remains visible and recovers without discarding the edit
+00:00 +4: rejected editor command blocks closing until explicitly discarded
+00:00 +5: All tests passed!

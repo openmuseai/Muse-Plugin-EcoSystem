@@ -1,0 +1,114 @@
+[
+  {
+    "name": "product-baseline",
+    "exitCode": 0,
+    "seconds": 0.03,
+    "log": "product-baseline.log",
+    "sha256": "aca19579a765b9f6d0acb01446c5af55d180922b300663ecf026eaee242f17a2"
+  },
+  {
+    "name": "editor-source",
+    "exitCode": 0,
+    "seconds": 0.03,
+    "log": "editor-source.log",
+    "sha256": "035f1879f456e7a0b4e562af9a4ea7f34c719b6fcc618147db45c405792bd02f"
+  },
+  {
+    "name": "rust-tests",
+    "exitCode": 0,
+    "seconds": 0.09,
+    "log": "rust-tests.log",
+    "sha256": "4ef52b75b88f3ad8ee42a43c53570f78fa7ff4f7e628bbde229f77b4822b0d3f"
+  },
+  {
+    "name": "flutter-dependencies",
+    "exitCode": 0,
+    "seconds": 0.82,
+    "log": "flutter-dependencies.log",
+    "sha256": "2288c9f2b316b39c5a11ef3d48118d7f9511368d664a554d6390ad2706562cfa"
+  },
+  {
+    "name": "flutter-analysis",
+    "exitCode": 0,
+    "seconds": 4.66,
+    "log": "flutter-analysis.log",
+    "sha256": "e088b914df7ca6b086e5d04d00585bbe993fb1d782b1042e2214213220d20e2f"
+  },
+  {
+    "name": "flutter-local",
+    "exitCode": 0,
+    "seconds": 3.47,
+    "log": "flutter-local.log",
+    "sha256": "658389e2ab16b3dbb5911d18ec8607ef4343cdb3ea87a537b6c979ffabe159f8"
+  },
+  {
+    "name": "plugin-dependencies",
+    "exitCode": 0,
+    "seconds": 0.71,
+    "log": "plugin-dependencies.log",
+    "sha256": "0e21ee9e042e1844452ef8db4e856d948d60f041f6e8e7b8f5035376f1b1c669"
+  },
+  {
+    "name": "plugin-analysis",
+    "exitCode": 0,
+    "seconds": 3.03,
+    "log": "plugin-analysis.log",
+    "sha256": "79dbb64cfc86d3c7fcd3501084b8716dcb876f95f0b137a7cfe67c8c0dbf5013"
+  },
+  {
+    "name": "old-contract-goldens",
+    "exitCode": 0,
+    "seconds": 1.32,
+    "log": "old-contract-goldens.log",
+    "sha256": "45a28db6af289a51bedae5a7fc3c8902b7ff62e7ad1c45df2a0c399cd149bc13"
+  },
+  {
+    "name": "cloud-build",
+    "exitCode": 0,
+    "seconds": 1.02,
+    "log": "cloud-build.log",
+    "sha256": "955661041420f8dd23d3e1a0f59065d687071dec5a26758c0ae7607becdb0c4d"
+  },
+  {
+    "name": "isolated-stack",
+    "exitCode": 0,
+    "seconds": 5.9,
+    "log": "isolated-stack.log",
+    "sha256": "2517dc38e45f3d7a0d82bcb467e5b14d495f8e2cc37c4f4418ec13966d7c2d36"
+  },
+  {
+    "name": "fixture",
+    "exitCode": 0,
+    "seconds": 0.64,
+    "log": "fixture.log",
+    "sha256": "b0cd83ea50df51b0009ef14ffd91149da82b104915aa8f1cbc9230b3a66cb9e3"
+  },
+  {
+    "name": "cloud-e2e",
+    "exitCode": 0,
+    "seconds": 9.34,
+    "log": "cloud-e2e.log",
+    "sha256": "cb25e295225bea896d4b93cd849e2c15248f1d6c964f557089ea26efe3871ad8"
+  },
+  {
+    "name": "native-dependencies",
+    "exitCode": 0,
+    "seconds": 0.79,
+    "log": "native-dependencies.log",
+    "sha256": "4f6eb51f176cdfedacc5a5db2a7ced2413865352abb13a05768db57aecead469"
+  },
+  {
+    "name": "native-analysis",
+    "exitCode": 0,
+    "seconds": 3.25,
+    "log": "native-analysis.log",
+    "sha256": "af3baf96641b9d0905cb8ed5bef56f2573fccda8fd9b3e8d72a33f34d2dc4b21"
+  },
+  {
+    "name": "native-e2e",
+    "exitCode": 0,
+    "seconds": 23.39,
+    "log": "native-e2e.log",
+    "sha256": "1dfc4c2d0f1830465eb5e7914108aadd688035a604adbeb7b191b7b95088cc86"
+  }
+]
