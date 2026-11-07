@@ -1,0 +1,10 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/nested_view_document_test.dart
+The following plugins do not support Swift Package Manager for ios:
+  - keyboard_height_plugin
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Running Xcode build...                                          
+Xcode build done.                                           21.1s
+00:00 +0: nested original view commands preserve independent child and group intents
+SMARTDOC_NESTED_EVIDENCE=/Users/mac/Library/Developer/CoreSimulator/Devices/5F0D9070-BE32-4063-BF7D-B7EB3B48D105/data/Containers/Data/Application/698142EC-5558-4EBC-B401-536A759BD784/Library/Application Support/SmartDocumentStage1/nested-b1d63b963e98/evidence
+00:17 +1: (tearDownAll)
+00:17 +1: All tests passed!

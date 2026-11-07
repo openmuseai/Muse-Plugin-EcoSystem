@@ -1,0 +1,28 @@
+{
+  "phase": "P17-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "datasetCoreChecks": 50,
+    "datasetFullPackageTests": 51,
+    "appleUiChecksPerPlatform": 7,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 8,
+    "webPeerChecks": 7,
+    "webReloadChecks": 5,
+    "nativeWebReadbackChecks": 4
+  },
+  "limits": [
+    "Seven basic fields and one editable Grid; full 18 fields/5 views, relative date clocks, date unequal shortcut, Chinese collation, grouping/calculation and source-block binding remain open",
+    "Original filter seed is best effort, not a general nested or negative constraint solver; text cells remain key/value CRDTs",
+    "New shared nested child intents are qualified; legacy migration, old writer negotiation, same-ID creation, concurrent shape changes and complete collaborative history remain open",
+    "Durable ACK, distributed immediate revoke, Host registry/session pooling/inherited grants, UID multi-device roster and scoped subscription remain open",
+    "Physical IME/soft-keyboard geometry, Android, comments/history/Agent/Office and full editing parity remain open"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collabRevision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+  "bindgenVersion": "0.2.128",
+  "artifacts": [
+    {
+      "file": "muse_dataset_core.js",
+      "bytes": 16024,
+      "sha256": "4bd4861183ce69dc607975bba53272029b40e9eee54770d1100748c6a552057c"
+    },
+    {
+      "file": "muse_dataset_core_bg.wasm",
+      "bytes": 4755316,
+      "sha256": "83ed180826d9166aa0ad56010ac40654b03cd4d326ae195720fdcdca2eb9b942"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			4 text Nested shared view qualification
+			5 button (disabled) 撤销, ID: flt-semantic-node-13
+			6 button (disabled) 重做, ID: flt-semantic-node-14
+			7 button 加粗, ID: flt-semantic-node-15
+			8 button 斜体, ID: flt-semantic-node-16
+			9 button 下划线, ID: flt-semantic-node-17
+			10 button 超链接, ID: flt-semantic-node-18
+			11 button (collapsed) 块类型, ID: flt-semantic-node-19, Secondary Actions: Expand
+			12 button (collapsed) 插入内容, ID: flt-semantic-node-20, Secondary Actions: Expand
+			13 container flt-semantic-node-29
+				14 text 项目计划｜并发视图与命令撤销
+				15 container flt-semantic-node-24
+					16 button (collapsed) 数据库引用操作, ID: flt-semantic-node-25, Secondary Actions: Expand
+					17 container Description: 项目数据库 在线协作 实时连接正常 · 接收确认暂不可用 · 本机修改保留 显示 0 / 2 条记录 实时连接正常 · 接收确认暂不可用 · 本机修改保留, ID: flt-semantic-node-26
+						18 button 2 人, ID: flt-semantic-node-32
+						19 button (collapsed) 表格, ID: flt-semantic-node-33, Secondary Actions: Expand
+						20 button 筛选 · 已启用, ID: flt-semantic-node-34
+						21 button 排序, ID: flt-semantic-node-35
+						22 button 撤销, ID: flt-semantic-node-36
+						23 button (disabled) 重做, ID: flt-semantic-node-37
+						24 button 新增记录, ID: flt-semantic-node-38
+						25 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-39, Secondary Actions: Expand
+						26 button 重试, ID: flt-semantic-node-101
+						27 container flt-semantic-node-40
+							28 text #
+							29 button 标题, ID: flt-semantic-node-42
+							30 button 完成, ID: flt-semantic-node-43
+							31 button 链接, ID: flt-semantic-node-44
+							52 text 没有符合筛选的记录
+						36 button 立即同步, ID: flt-semantic-node-55
+			37 text 已保存到本机 · 协作服务已接收
+			38 button 立即同步, ID: flt-semantic-node-31
+			39 container flt-semantic-node-11
+				40 text Nested rules: alice
+				53 text Children: Muse A/B; mode: 0; rows: 0/2
+				54 text Phase: 2; held frames: 15; HTTP: held
+				43 text History:
+				44 button Restore HTTP, ID: flt-semantic-node-57
+				45 button Verify final, ID: flt-semantic-node-62
+				47 text OK: same-native-document-and-independent-dataset-identities
+				48 text OK: nested-rule-edits-preserve-parent-resource-reference
+				49 text OK: original-filter-JSON-and-filter-independent-row-dependencies
+				50 text OK: independent-child-branches-committed-before-any-original-frame-is-published
+				55 text OK: original-WS2-keeps-both-independent-child-intents-with-HTTP-held
+
+The focused UI element is 45 button Verify final, ID: flt-semantic-node-62
