@@ -1,0 +1,5 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/plugins/dataset/test/resource_test.dart
+00:00 +0: public SDK resource keeps original row objects, uses stable scoped store and refuses duplicate owner
+00:00 +1: embedded public session retains owner and failed resource checkpoint for explicit retry
+00:00 +2: historical resource ignores live cache and collaboration capabilities and stays read only
+00:00 +3: All tests passed!

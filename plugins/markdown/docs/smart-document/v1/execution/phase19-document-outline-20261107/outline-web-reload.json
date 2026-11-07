@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "e9b856b9-0a18-433a-8b66-00fe141b9919",
+  "checks": [
+    "native-browser-original-object-identity",
+    "offline-original-checkpoint-reconstructs-final-outline",
+    "offline-provider-free-readonly-open",
+    "credentials-absent-from-content-checkpoint"
+  ],
+  "platform": "web-reload",
+  "outline": {
+    "entries": [
+      {
+        "blockId": "BTDET4",
+        "depth": 0,
+        "level": 1,
+        "parentId": null,
+        "text": "项目计划",
+        "truncated": false
+      },
+      {
+        "blockId": "kwunbe",
+        "depth": 1,
+        "level": 3,
+        "parentId": "BTDET4",
+        "text": "Web 重连 远端 协作章节😀",
+        "truncated": false
+      },
+      {
+        "blockId": "ipemly",
+        "depth": 1,
+        "level": 2,
+        "parentId": "BTDET4",
+        "text": "验收清单",
+        "truncated": false
+      }
+    ],
+    "profile": "muse.document.outline/1",
+    "ready": true,
+    "warnings": 0
+  },
+  "phase": 0
+}

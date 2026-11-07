@@ -1,0 +1,66 @@
+[
+  {
+    "verifier": "verify_choices_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_concurrent_views_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_dataset_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_dataset_realtime_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_date_filter_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_dates_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_embedded_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_lifecycle_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_media_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_mobile_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_nested_rules_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_phase4_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_realtime_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_table_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_user_roster_evidence.py",
+    "exitCode": 0
+  },
+  {
+    "verifier": "verify_view_rules_evidence.py",
+    "exitCode": 0
+  }
+]

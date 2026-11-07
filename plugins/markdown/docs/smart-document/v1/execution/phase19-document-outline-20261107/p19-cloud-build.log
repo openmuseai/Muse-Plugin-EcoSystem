@@ -1,0 +1,295 @@
+   Compiling yrs v0.23.5 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/vendor/yrs)
+warning: unused import: `ArrayRef`
+  --> vendor/yrs/src/types/mod.rs:17:39
+   |
+17 | use crate::types::array::{ArrayEvent, ArrayRef};
+   |                                       ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused imports: `XmlElementRef` and `XmlTextRef`
+  --> vendor/yrs/src/types/mod.rs:22:25
+   |
+22 | use crate::types::xml::{XmlElementRef, XmlEvent, XmlTextEvent, XmlTextRef};
+   |                         ^^^^^^^^^^^^^                          ^^^^^^^^^^
+
+warning: value assigned to `left` is never read
+   --> vendor/yrs/src/block.rs:288:17
+    |
+288 |         let mut left = None;
+    |                 ^^^^
+    |
+    = help: maybe it is overwritten before being read?
+    = note: `#[warn(unused_assignments)]` on by default
+
+warning: unused variable: `ptr`
+   --> vendor/yrs/src/block.rs:730:25
+    |
+730 |                     let ptr = BranchPtr::from(branch);
+    |                         ^^^ help: if this is intentional, prefix it with an underscore: `_ptr`
+    |
+    = note: `#[warn(unused_variables)]` on by default
+
+warning: variable does not need to be mutable
+   --> vendor/yrs/src/block.rs:644:29
+    |
+644 |                 if let Some(mut left) = this.left {
+    |                             ----^^^^
+    |                             |
+    |                             help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+warning: unused variable: `branch`
+   --> vendor/yrs/src/update.rs:447:35
+    |
+447 |                 ItemContent::Type(branch) => {
+    |                                   ^^^^^^ help: if this is intentional, prefix it with an underscore: `_branch`
+
+warning: method `clock_end` is never used
+   --> vendor/yrs/src/block.rs:136:12
+    |
+126 | impl BlockCell {
+    | -------------- method in this implementation
+...
+136 |     pub fn clock_end(&self) -> u32 {
+    |            ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` on by default
+
+warning: method `get_block_mut` is never used
+  --> vendor/yrs/src/block_store.rs:79:8
+   |
+23 | impl ClientBlockList {
+   | -------------------- method in this implementation
+...
+79 |     fn get_block_mut(&mut self, clock: u32) -> Option<&mut BlockCell> {
+   |        ^^^^^^^^^^^^^
+
+warning: methods `contains` and `get_block_mut` are never used
+   --> vendor/yrs/src/block_store.rs:306:12
+    |
+299 | impl BlockStore {
+    | --------------- methods in this implementation
+...
+306 |     pub fn contains(&self, id: &ID) -> bool {
+    |            ^^^^^^^^
+...
+381 |     pub(crate) fn get_block_mut(&mut self, id: &ID) -> Option<&mut BlockCell> {
+    |                   ^^^^^^^^^^^^^
+
+warning: struct `Blocks` is never constructed
+   --> vendor/yrs/src/block_store.rs:486:19
+    |
+486 | pub(crate) struct Blocks<'a> {
+    |                   ^^^^^^
+
+warning: associated function `new` is never used
+   --> vendor/yrs/src/block_store.rs:492:8
+    |
+491 | impl<'a> Blocks<'a> {
+    | ------------------- associated function in this implementation
+492 |     fn new(update: &'a BlockStore) -> Self {
+    |        ^^^
+
+warning: constant `WEAK_REF_FLAGS_QUOTE` is never used
+   --> vendor/yrs/src/types/mod.rs:216:7
+    |
+216 | const WEAK_REF_FLAGS_QUOTE: u8 = 0b0000_0001;
+    |       ^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_ASSOC` is never used
+   --> vendor/yrs/src/types/mod.rs:218:7
+    |
+218 | const WEAK_REF_FLAGS_START_ASSOC: u8 = 0b0000_0010;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_ASSOC` is never used
+   --> vendor/yrs/src/types/mod.rs:220:7
+    |
+220 | const WEAK_REF_FLAGS_END_ASSOC: u8 = 0b0000_0100;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_UNBOUNDED` is never used
+   --> vendor/yrs/src/types/mod.rs:222:7
+    |
+222 | const WEAK_REF_FLAGS_START_UNBOUNDED: u8 = 0b0000_1000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_UNBOUNDED` is never used
+   --> vendor/yrs/src/types/mod.rs:224:7
+    |
+224 | const WEAK_REF_FLAGS_END_UNBOUNDED: u8 = 0b0001_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_PARENT_ROOT` is never used
+   --> vendor/yrs/src/types/mod.rs:226:7
+    |
+226 | const WEAK_REF_FLAGS_PARENT_ROOT: u8 = 0b0010_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method `blocks` is never used
+  --> vendor/yrs/src/update.rs:45:19
+   |
+29 | impl UpdateBlocks {
+   | ----------------- method in this implementation
+...
+45 |     pub(crate) fn blocks(&self) -> Blocks<'_> {
+   |                   ^^^^^^
+
+warning: methods `last_id` and `into_block` are never used
+   --> vendor/yrs/src/update.rs:934:19
+    |
+879 | impl BlockCarrier {
+    | ----------------- methods in this implementation
+...
+934 |     pub(crate) fn last_id(&self) -> ID {
+    |                   ^^^^^^^
+...
+963 |     pub fn into_block(self) -> Option<Box<Item>> {
+    |            ^^^^^^^^^^
+
+warning: struct `Blocks` is never constructed
+    --> vendor/yrs/src/update.rs:1076:19
+     |
+1076 | pub(crate) struct Blocks<'a> {
+     |                   ^^^^^^
+
+warning: associated function `new` is never used
+    --> vendor/yrs/src/update.rs:1082:8
+     |
+1081 | impl<'a> Blocks<'a> {
+     | ------------------- associated function in this implementation
+1082 |     fn new(update: &'a UpdateBlocks) -> Self {
+     |        ^^^
+
+warning: methods `move_to`, `forward`, `backward`, and `values` are never used
+   --> vendor/yrs/src/block_iter.rs:73:12
+    |
+23  | impl BlockIter {
+    | -------------- methods in this implementation
+...
+73  |     pub fn move_to(&mut self, index: u32, txn: &mut TransactionMut) {
+    |            ^^^^^^^
+...
+99  |     pub fn forward<T: ReadTxn>(&mut self, txn: &T, len: u32) {
+    |            ^^^^^^^
+...
+186 |     pub fn backward<T: ReadTxn>(&mut self, txn: &mut T, mut len: u32) {
+    |            ^^^^^^^^
+...
+514 |     pub fn values<'a, 'txn, T: ReadTxn>(
+    |            ^^^^^^
+
+warning: associated function `new` is never used
+   --> vendor/yrs/src/block_iter.rs:528:8
+    |
+527 | impl<'a, 'txn> Values<'a, 'txn> {
+    | ------------------------------- associated function in this implementation
+528 |     fn new(iter: &'a mut BlockIter, txn: &'txn mut TransactionMut<'txn>) -> Self {
+    |        ^^^
+
+warning: method `remove_at` is never used
+   --> vendor/yrs/src/branch.rs:427:19
+    |
+245 | impl Branch {
+    | ----------- method in this implementation
+...
+427 |     pub(crate) fn remove_at(&self, txn: &mut TransactionMut, index: u32, len: u32) -> u32 {
+    |                   ^^^^^^^^^
+
+warning: trait `BlockIterator` is never used
+ --> vendor/yrs/src/iter.rs:7:18
+  |
+7 | pub(crate) trait BlockIterator: TxnIterator<Item = ItemPtr> + Sized {
+  |                  ^^^^^^^^^^^^^
+
+warning: trait `BlockSliceIterator` is never used
+  --> vendor/yrs/src/iter.rs:21:18
+   |
+21 | pub(crate) trait BlockSliceIterator: TxnIterator<Item = ItemSlice> + Sized {
+   |                  ^^^^^^^^^^^^^^^^^^
+
+warning: associated function `new` is never used
+   --> vendor/yrs/src/iter.rs:322:8
+    |
+318 | / impl<I> RangeIter<I>
+319 | | where
+320 | |     I: TxnIterator<Item = ItemPtr>,
+    | |___________________________________- associated function in this implementation
+321 |   {
+322 |       fn new(iter: I, start: StickyIndex, end: StickyIndex) -> Self {
+    |          ^^^
+
+warning: variant `Opened` is never constructed
+   --> vendor/yrs/src/iter.rs:441:5
+    |
+439 | enum RangeIterState {
+    |      -------------- variant in this enum
+440 |     /// Ranged iterator position hasn't reach chosen ID range yet.
+441 |     Opened,
+    |     ^^^^^^
+    |
+    = note: `RangeIterState` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: associated function `new` is never used
+   --> vendor/yrs/src/iter.rs:456:8
+    |
+455 | impl<I> Values<I> {
+    | ----------------- associated function in this implementation
+456 |     fn new(iter: I) -> Self {
+    |        ^^^
+
+warning: method `get_item` is never used
+   --> vendor/yrs/src/moving.rs:640:19
+    |
+410 | impl StickyIndex {
+    | ---------------- method in this implementation
+...
+640 |     pub(crate) fn get_item<T: ReadTxn>(&self, txn: &T) -> Option<ItemPtr> {
+    |                   ^^^^^^^^
+
+warning: methods `contains_id`, `right`, and `left` are never used
+   --> vendor/yrs/src/slice.rs:174:12
+    |
+100 | impl ItemSlice {
+    | -------------- methods in this implementation
+...
+174 |     pub fn contains_id(&self, id: &ID) -> bool {
+    |            ^^^^^^^^^^^
+...
+244 |     pub fn right(&self) -> Option<ItemSlice> {
+    |            ^^^^^
+...
+264 |     pub fn left(&self) -> Option<ItemSlice> {
+    |            ^^^^
+
+warning: types that do not implement `Drop` can still have drop glue, consider instead using `std::mem::needs_drop` to detect whether a type is trivially dropped
+   --> vendor/yrs/src/observer.rs:272:33
+    |
+272 | pub type Subscription = Arc<dyn Drop + Send + Sync + 'static>;
+    |                                 ^^^^
+    |
+    = note: `#[warn(dyn_drop)]` on by default
+
+warning: `yrs` (lib) generated 32 warnings (run `cargo fix --lib -p yrs` to apply 3 suggestions)
+   Compiling collab v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling collab-entity v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling database-entity v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/database-entity)
+   Compiling appflowy-proto v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/appflowy-proto)
+   Compiling collab-document v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling collab-folder v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling collab-database v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling collab-rt-protocol v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/collab-rt-protocol)
+   Compiling collab-user v0.2.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling collab-stream v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/collab-stream)
+   Compiling workspace-template v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/workspace-template)
+   Compiling collab-importer v0.1.0 (https://github.com/AppFlowy-IO/AppFlowy-Collab?rev=e59260e524f33104b0ddcd6bb8f6218cad0f7e18#e59260e5)
+   Compiling shared-entity v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/shared-entity)
+   Compiling collab-rt-entity v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/collab-rt-entity)
+   Compiling database v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/database)
+   Compiling indexer v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/indexer)
+   Compiling access-control v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/access-control)
+   Compiling appflowy-collaborate v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate)
+   Compiling appflowy-cloud v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 48.78s

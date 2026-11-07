@@ -1,0 +1,13 @@
+error: failed to select a version for `wasm-bindgen`.
+    ... required by package `app-error v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/app-error)`
+    ... which satisfies path dependency `app-error` (locked to 0.1.0) of package `appflowy-cloud v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud)`
+versions that meet the requirements `^0.2.84` are: 0.2.129, 0.2.128, 0.2.127, 0.2.121, 0.2.112
+
+all possible versions conflict with previously selected packages
+
+  previously selected package `wasm-bindgen v0.2.100`
+    ... which satisfies dependency `wasm-bindgen = "=0.2.100"` of package `wasm-bindgen-futures v0.4.50`
+    ... which satisfies dependency `wasm-bindgen-futures = "^0.4.40"` (locked to 0.4.50) of package `client-api v0.2.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/client-api)`
+    ... which satisfies path dependency `client-api` (locked to 0.2.0) of package `appflowy-cloud v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud)`
+
+failed to select a version for `wasm-bindgen` which could resolve this conflict

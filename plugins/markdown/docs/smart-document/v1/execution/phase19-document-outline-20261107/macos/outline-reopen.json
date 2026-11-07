@@ -1,0 +1,1 @@
+{"status":"passed","run":"outline-d06d45ac0718","objectId":"e9b856b9-0a18-433a-8b66-00fe141b9919","checks":["same-resource-and-original-content-outline-restored","fresh-kernel-derives-identical-hierarchy-without-network-or-credentials","no-realtime-session-in-offline-reopen"]}

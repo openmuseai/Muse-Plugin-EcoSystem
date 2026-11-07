@@ -1,0 +1,8 @@
+{
+  "status": "unqualified",
+  "reason": [
+    "Premature verifier click before WS projection",
+    "Peer receipt checks empty and correctly rejected"
+  ],
+  "repair": "Gate verifier on actual projection; add four original peer command assertions; rerun with separate native iOS object"
+}

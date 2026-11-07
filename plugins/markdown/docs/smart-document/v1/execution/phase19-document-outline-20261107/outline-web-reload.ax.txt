@@ -1,0 +1,83 @@
+Browser tab: 22, Title: "127.0.0.1:50946/?reopen=1", URL: "http://127.0.0.1:50946/?reopen=1".
+1 AXWebArea 127.0.0.1:50946/?reopen=1
+	2 container
+		3 container flt-semantic-node-3
+			4 button 显示目录, ID: flt-semantic-node-73
+			5 text 智能文档 · 目录协作验证
+			6 button (disabled) 撤销, ID: flt-semantic-node-7
+			7 button (disabled) 重做, ID: flt-semantic-node-8
+			8 button (disabled) 加粗, ID: flt-semantic-node-9
+			9 button (disabled) 斜体, ID: flt-semantic-node-10
+			10 button (disabled) 下划线, ID: flt-semantic-node-11
+			11 button (disabled) 超链接, ID: flt-semantic-node-12
+			12 button (disabled, collapsed) 块类型, ID: flt-semantic-node-13, Secondary Actions: Expand
+			13 button (disabled, collapsed) 插入内容, ID: flt-semantic-node-14, Secondary Actions: Expand
+			14 container flt-semantic-node-72
+				15 text Web Bob 前缀
+				16 text Bob 前缀
+				17 text 项目计划
+				18 text 第 0 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				19 text 第 1 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				20 text 第 2 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				21 text 第 3 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				22 text 第 4 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				23 text 第 5 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				24 text 第 6 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				25 text 第 7 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				26 text 第 8 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				27 text 第 9 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				28 text 第 10 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				29 text 第 11 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				30 text 第 12 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				31 text 第 13 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				32 text 第 14 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				33 text 第 15 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				34 text 第 16 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				35 text 第 17 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				36 text 第 18 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				37 text 第 19 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				38 text 第 20 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				39 text 第 21 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				40 text 第 22 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				41 text 第 23 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				42 text 第 24 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				43 text 第 25 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				44 text 第 26 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				45 text 第 27 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				46 text 第 28 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				47 text 第 29 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				48 text 第 30 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				49 text 第 31 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				50 text Web 重连 远端 协作章节😀
+				51 text 验收清单
+				52 text 后续 0 段正文。
+				53 text 后续 1 段正文。
+				54 text 后续 2 段正文。
+				55 text 后续 3 段正文。
+				56 text 后续 4 段正文。
+				57 text 后续 5 段正文。
+				58 text 后续 6 段正文。
+				59 text 后续 7 段正文。
+				60 text 后续 8 段正文。
+				61 text 后续 9 段正文。
+				62 text 后续 10 段正文。
+				63 text 后续 11 段正文。
+				64 text 后续 12 段正文。
+				65 text 后续 13 段正文。
+				66 text 后续 14 段正文。
+				67 text 后续 15 段正文。
+			68 text 只读
+			69 text 已保存到本机 · 本机文档
+			70 container flt-semantic-node-84
+				71 text 目录验收 · alice / offline
+				72 button (disabled) 验证离线目录, ID: flt-semantic-node-79
+				73 button 导出内容诊断, ID: flt-semantic-node-81
+				74 text 阶段 0
+				75 text 目录 3 项
+				76 text ✓ native-browser-original-object-identity
+				77 text ✓ offline-original-checkpoint-reconstructs-final-outline
+				78 text ✓ offline-provider-free-readonly-open
+				79 text ✓ credentials-absent-from-content-checkpoint
+				80 text PASS · 4 项
+
+The focused UI element is 72 button (disabled) 验证离线目录, ID: flt-semantic-node-79

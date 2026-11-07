@@ -1,0 +1,16 @@
+{
+  "collabRevision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+  "bindgenVersion": "0.2.128",
+  "artifacts": [
+    {
+      "file": "muse_appflowy_realtime.js",
+      "bytes": 8674,
+      "sha256": "3a22828c26369e178be116ed19f0878e99f13c4e21e3092dbd3d9065eac850b5"
+    },
+    {
+      "file": "muse_appflowy_realtime_bg.wasm",
+      "bytes": 510119,
+      "sha256": "f5e9776b8bc5605e57db9f27b142e3d0fdd43104331cb5a139fa1c1da0e3d825"
+    }
+  ]
+}

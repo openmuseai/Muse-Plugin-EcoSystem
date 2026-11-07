@@ -1,0 +1,106 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		4 container flt-semantic-node-3
+			5 container Description: 在线协作, ID: flt-semantic-node-6
+				6 button 2 人, ID: flt-semantic-node-7
+			7 text 智能文档 · 目录协作验证
+			8 button (disabled) 撤销, ID: flt-semantic-node-8
+			9 button (disabled) 重做, ID: flt-semantic-node-9
+			10 button 加粗, ID: flt-semantic-node-10
+			11 button 斜体, ID: flt-semantic-node-11
+			12 button 下划线, ID: flt-semantic-node-12
+			13 button 超链接, ID: flt-semantic-node-13
+			14 button (collapsed) 块类型, ID: flt-semantic-node-14, Secondary Actions: Expand
+			15 button (collapsed) 插入内容, ID: flt-semantic-node-15, Secondary Actions: Expand
+			16 container flt-semantic-node-72
+				157 text Web Bob 前缀
+				158 text Bob 前缀
+				159 text 项目计划
+				160 text 第 0 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				161 text 第 1 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				162 text 第 2 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				163 text 第 3 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				164 text 第 4 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				165 text 第 5 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				166 text 第 6 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				167 text 第 7 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				168 text 第 8 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				169 text 第 9 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				170 text 第 10 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				171 text 第 11 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				172 text 第 12 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				173 text 第 13 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				174 text 第 14 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				175 text 第 15 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				176 text 第 16 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				177 text 第 17 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				178 text 第 18 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				179 text 第 19 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				180 text 第 20 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				181 text 第 21 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				182 text 第 22 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				183 text 第 23 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				184 text 第 24 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				185 text 第 25 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				186 text 第 26 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				187 text 第 27 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				188 text 第 28 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				189 text 第 29 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				190 text 第 30 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				191 text 第 31 段：智能文档沿用原 AppFlowy 内容与协作内核。
+				192 text 验收清单
+				193 text 后续 0 段正文。
+				194 text 后续 1 段正文。
+				195 text 后续 2 段正文。
+				196 text 后续 3 段正文。
+				197 text 后续 4 段正文。
+				198 text 后续 5 段正文。
+				199 text 后续 6 段正文。
+				200 text 后续 7 段正文。
+				201 text 后续 8 段正文。
+				202 text 后续 9 段正文。
+				203 text 后续 10 段正文。
+				204 text 后续 11 段正文。
+				205 text 后续 12 段正文。
+				206 text 后续 13 段正文。
+				207 text 后续 14 段正文。
+				208 text 后续 15 段正文。
+				209 text 后续 16 段正文。
+				210 text 后续 17 段正文。
+				211 text 后续 18 段正文。
+				212 text 后续 19 段正文。
+				213 text 后续 20 段正文。
+				214 text 后续 21 段正文。
+				215 text 后续 22 段正文。
+				216 text 后续 23 段正文。
+				217 text 后续 24 段正文。
+				218 text 后续 25 段正文。
+				219 text 后续 26 段正文。
+				220 text 后续 27 段正文。
+				221 text 后续 28 段正文。
+				222 text 后续 29 段正文。
+			69 text 目录
+			88 container flt-semantic-node-99
+				89 container flt-semantic-node-92
+					90 button 收起子目录, ID: flt-semantic-node-93
+					93 button 项目计划, ID: flt-semantic-node-94
+				223 button 验收清单, ID: flt-semantic-node-181
+			76 button 隐藏目录, ID: flt-semantic-node-73
+			148 text 已保存到本机 · 协作服务已接收
+			80 button 立即同步, ID: flt-semantic-node-75
+			81 container flt-semantic-node-87
+				82 text 目录验收 · alice
+				83 button (disabled) 验证恢复并保存, ID: flt-semantic-node-80
+				84 button 导出内容诊断, ID: flt-semantic-node-82
+				225 text 阶段 2
+				224 text 目录 2 项
+				151 text ✓ original-wasm-checkpoint-roundtrip-matches-live-outline
+				152 text ✓ native-browser-original-object-identity
+				153 text ✓ original-profile-authenticated
+				154 text ✓ live-peer-prefix-and-title-update-projects-stable-identity
+				155 text ✓ fresh-path-resolves-two-peer-prefix-insertions
+				226 text ✓ remote-title-deletion-removes-derived-outline-entry
+				227 button 保存并离开, ID: flt-semantic-node-183
+
+The focused UI element is 90 button 收起子目录, ID: flt-semantic-node-93

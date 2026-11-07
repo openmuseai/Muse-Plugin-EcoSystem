@@ -1,0 +1,10 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/outline_document_test.dart
+The following plugins do not support Swift Package Manager for ios:
+  - keyboard_height_plugin
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Running Xcode build...                                          
+Xcode build done.                                           50.2s
+00:00 +0: original editor outline UI follows Cloud peer headings with stable identity
+SMARTDOC_OUTLINE_EVIDENCE=/Users/mac/Library/Developer/CoreSimulator/Devices/5F0D9070-BE32-4063-BF7D-B7EB3B48D105/data/Containers/Data/Application/5715D373-A81F-4738-A4B8-DB9EC4F183A0/Library/Application Support/SmartDocumentStage1/outline-f933950b1972/evidence
+00:07 +1: (tearDownAll)
+00:07 +1: All tests passed!

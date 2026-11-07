@@ -1,0 +1,38 @@
+[
+  {
+    "path": "upstream/siyuan/kernel/model/outline.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "0a90bc4a11779b9adb81dc0a1824cb7c771764ec099358cd481a582019c7efe3",
+    "gitBlob": "94d7eec95fc953c9fa65ca2ecd6fc304c15a1c5a"
+  },
+  {
+    "path": "upstream/siyuan/kernel/model/heading_number.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "19342f08ea8fbd63f5dd639cd9a81eb2af19f401bf2dfcc5beecc28a7af2c679",
+    "gitBlob": "96a612e2b4477f9f68bb47674b6d2068ecd562a5"
+  },
+  {
+    "path": "upstream/siyuan/kernel/model/render.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "fc6e55b483e111146722bb3539489d8c6c82f2d7eee36bdba5626f39e8a72d07",
+    "gitBlob": "01241a64207a4f77cbbf073f70c0b6501d6f9b3b"
+  },
+  {
+    "path": "upstream/siyuan/LICENSE",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b",
+    "gitBlob": "bae94e189e62df1b8d5bd11435d954b25bee9d7b"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/outline/outline_block_component.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "228495a5c55e95d1deee8415181d6a4bdf9f540159b942556f0b613424f9b870",
+    "gitBlob": "882d93a9bedc8137f50b9676050153cd0a2d7dfd"
+  },
+  {
+    "path": "upstream/appflowy/LICENSE",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "gitBlob": "0ad25db4bd1d86c452db3f9602ccdbe172438f52"
+  }
+]

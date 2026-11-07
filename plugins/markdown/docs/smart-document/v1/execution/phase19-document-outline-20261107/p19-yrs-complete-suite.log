@@ -1,0 +1,999 @@
+warning: unused import: `ArrayRef`
+  --> src/types/mod.rs:17:39
+   |
+17 | use crate::types::array::{ArrayEvent, ArrayRef};
+   |                                       ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `XmlElementRef` and `XmlTextRef`
+  --> src/types/mod.rs:22:25
+   |
+22 | use crate::types::xml::{XmlElementRef, XmlEvent, XmlTextEvent, XmlTextRef};
+   |                         ^^^^^^^^^^^^^                          ^^^^^^^^^^
+
+warning: value assigned to `left` is never read
+   --> src/block.rs:288:24
+    |
+288 |         let mut left = None;
+    |                        ^^^^ this value is reassigned later and never used
+...
+334 |                 left = parent_branch.map.get(sub).cloned();
+    |                 ------------------------------------------ `left` is overwritten here before the previous value is read
+    |
+    = note: `#[warn(unused_assignments)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> src/block.rs:644:29
+    |
+644 |                 if let Some(mut left) = this.left {
+    |                             ----^^^^
+    |                             |
+    |                             help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `ptr`
+   --> src/block.rs:730:25
+    |
+730 |                     let ptr = BranchPtr::from(branch);
+    |                         ^^^ help: if this is intentional, prefix it with an underscore: `_ptr`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `branch`
+   --> src/update.rs:447:35
+    |
+447 |                 ItemContent::Type(branch) => {
+    |                                   ^^^^^^ help: if this is intentional, prefix it with an underscore: `_branch`
+
+warning: method `clock_end` is never used
+   --> src/block.rs:136:12
+    |
+126 | impl BlockCell {
+    | -------------- method in this implementation
+...
+136 |     pub fn clock_end(&self) -> u32 {
+    |            ^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `get_block_mut` is never used
+  --> src/block_store.rs:79:8
+   |
+23 | impl ClientBlockList {
+   | -------------------- method in this implementation
+...
+79 |     fn get_block_mut(&mut self, clock: u32) -> Option<&mut BlockCell> {
+   |        ^^^^^^^^^^^^^
+
+warning: methods `contains` and `get_block_mut` are never used
+   --> src/block_store.rs:306:12
+    |
+299 | impl BlockStore {
+    | --------------- methods in this implementation
+...
+306 |     pub fn contains(&self, id: &ID) -> bool {
+    |            ^^^^^^^^
+...
+381 |     pub(crate) fn get_block_mut(&mut self, id: &ID) -> Option<&mut BlockCell> {
+    |                   ^^^^^^^^^^^^^
+
+warning: struct `Blocks` is never constructed
+   --> src/block_store.rs:486:19
+    |
+486 | pub(crate) struct Blocks<'a> {
+    |                   ^^^^^^
+
+warning: associated function `new` is never used
+   --> src/block_store.rs:492:8
+    |
+491 | impl<'a> Blocks<'a> {
+    | ------------------- associated function in this implementation
+492 |     fn new(update: &'a BlockStore) -> Self {
+    |        ^^^
+
+warning: constant `WEAK_REF_FLAGS_QUOTE` is never used
+   --> src/types/mod.rs:216:7
+    |
+216 | const WEAK_REF_FLAGS_QUOTE: u8 = 0b0000_0001;
+    |       ^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_ASSOC` is never used
+   --> src/types/mod.rs:218:7
+    |
+218 | const WEAK_REF_FLAGS_START_ASSOC: u8 = 0b0000_0010;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_ASSOC` is never used
+   --> src/types/mod.rs:220:7
+    |
+220 | const WEAK_REF_FLAGS_END_ASSOC: u8 = 0b0000_0100;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_START_UNBOUNDED` is never used
+   --> src/types/mod.rs:222:7
+    |
+222 | const WEAK_REF_FLAGS_START_UNBOUNDED: u8 = 0b0000_1000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_END_UNBOUNDED` is never used
+   --> src/types/mod.rs:224:7
+    |
+224 | const WEAK_REF_FLAGS_END_UNBOUNDED: u8 = 0b0001_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: constant `WEAK_REF_FLAGS_PARENT_ROOT` is never used
+   --> src/types/mod.rs:226:7
+    |
+226 | const WEAK_REF_FLAGS_PARENT_ROOT: u8 = 0b0010_0000;
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: methods `last_id` and `into_block` are never used
+   --> src/update.rs:934:19
+    |
+879 | impl BlockCarrier {
+    | ----------------- methods in this implementation
+...
+934 |     pub(crate) fn last_id(&self) -> ID {
+    |                   ^^^^^^^
+...
+963 |     pub fn into_block(self) -> Option<Box<Item>> {
+    |            ^^^^^^^^^^
+
+warning: methods `move_to`, `forward`, `backward`, and `values` are never used
+   --> src/block_iter.rs:73:12
+    |
+ 23 | impl BlockIter {
+    | -------------- methods in this implementation
+...
+ 73 |     pub fn move_to(&mut self, index: u32, txn: &mut TransactionMut) {
+    |            ^^^^^^^
+...
+ 99 |     pub fn forward<T: ReadTxn>(&mut self, txn: &T, len: u32) {
+    |            ^^^^^^^
+...
+186 |     pub fn backward<T: ReadTxn>(&mut self, txn: &mut T, mut len: u32) {
+    |            ^^^^^^^^
+...
+514 |     pub fn values<'a, 'txn, T: ReadTxn>(
+    |            ^^^^^^
+
+warning: struct `Values` is never constructed
+   --> src/block_iter.rs:522:12
+    |
+522 | pub struct Values<'a, 'txn> {
+    |            ^^^^^^
+
+warning: associated function `new` is never used
+   --> src/block_iter.rs:528:8
+    |
+527 | impl<'a, 'txn> Values<'a, 'txn> {
+    | ------------------------------- associated function in this implementation
+528 |     fn new(iter: &'a mut BlockIter, txn: &'txn mut TransactionMut<'txn>) -> Self {
+    |        ^^^
+
+warning: method `remove_at` is never used
+   --> src/branch.rs:427:19
+    |
+245 | impl Branch {
+    | ----------- method in this implementation
+...
+427 |     pub(crate) fn remove_at(&self, txn: &mut TransactionMut, index: u32, len: u32) -> u32 {
+    |                   ^^^^^^^^^
+
+warning: method `get_item` is never used
+   --> src/moving.rs:640:19
+    |
+410 | impl StickyIndex {
+    | ---------------- method in this implementation
+...
+640 |     pub(crate) fn get_item<T: ReadTxn>(&self, txn: &T) -> Option<ItemPtr> {
+    |                   ^^^^^^^^
+
+warning: methods `contains_id`, `right`, and `left` are never used
+   --> src/slice.rs:174:12
+    |
+100 | impl ItemSlice {
+    | -------------- methods in this implementation
+...
+174 |     pub fn contains_id(&self, id: &ID) -> bool {
+    |            ^^^^^^^^^^^
+...
+244 |     pub fn right(&self) -> Option<ItemSlice> {
+    |            ^^^^^
+...
+264 |     pub fn left(&self) -> Option<ItemSlice> {
+    |            ^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/event.rs:63:18
+   |
+63 |     pub fn added(&self) -> SubdocsEventIter {
+   |                  ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                  |
+   |                  the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+63 |     pub fn added(&self) -> SubdocsEventIter<'_> {
+   |                                            ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/event.rs:69:20
+   |
+69 |     pub fn removed(&self) -> SubdocsEventIter {
+   |                    ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                    |
+   |                    the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+69 |     pub fn removed(&self) -> SubdocsEventIter<'_> {
+   |                                              ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/event.rs:75:19
+   |
+75 |     pub fn loaded(&self) -> SubdocsEventIter {
+   |                   ^^^^^     ^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                   |
+   |                   the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+75 |     pub fn loaded(&self) -> SubdocsEventIter<'_> {
+   |                                             ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/id_set.rs:595:34
+    |
+595 |     pub(crate) fn deleted_blocks(&self) -> DeletedBlocks {
+    |                                  ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                  |
+    |                                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+595 |     pub(crate) fn deleted_blocks(&self) -> DeletedBlocks<'_> {
+    |                                                         ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:345:20
+    |
+345 |     pub fn subdocs(&self) -> SubdocsIter {
+    |                    ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                    |
+    |                    the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+345 |     pub fn subdocs(&self) -> SubdocsIter<'_> {
+    |                                         ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:351:25
+    |
+351 |     pub fn subdoc_guids(&self) -> SubdocGuids {
+    |                         ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                         |
+    |                         the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+351 |     pub fn subdoc_guids(&self) -> SubdocGuids<'_> {
+    |                                              ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:431:28
+    |
+431 |     pub(crate) fn try_read(&self) -> Option<RwLockReadGuard<Store>> {
+    |                            ^^^^^            ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                            |
+    |                            the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+431 |     pub(crate) fn try_read(&self) -> Option<RwLockReadGuard<'_, Store>> {
+    |                                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:436:33
+    |
+436 |     pub(crate) fn read_blocking(&self) -> RwLockReadGuard<Store> {
+    |                                 ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                 |
+    |                                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+436 |     pub(crate) fn read_blocking(&self) -> RwLockReadGuard<'_, Store> {
+    |                                                           +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:445:30
+    |
+445 |     pub(crate) fn read_async(&self) -> Read<Store> {
+    |                              ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                              |
+    |                              the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+445 |     pub(crate) fn read_async(&self) -> Read<'_, Store> {
+    |                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:449:29
+    |
+449 |     pub(crate) fn try_write(&self) -> Option<RwLockWriteGuard<Store>> {
+    |                             ^^^^^            ^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                             |
+    |                             the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+449 |     pub(crate) fn try_write(&self) -> Option<RwLockWriteGuard<'_, Store>> {
+    |                                                               +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:454:34
+    |
+454 |     pub(crate) fn write_blocking(&self) -> RwLockWriteGuard<Store> {
+    |                                  ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                  |
+    |                                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+454 |     pub(crate) fn write_blocking(&self) -> RwLockWriteGuard<'_, Store> {
+    |                                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/store.rs:463:31
+    |
+463 |     pub(crate) fn write_async(&self) -> Write<Store> {
+    |                               ^^^^^     ^^^^^^^^^^^^ the same lifetime is hidden here
+    |                               |
+    |                               the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+463 |     pub(crate) fn write_async(&self) -> Write<'_, Store> {
+    |                                               +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transaction.rs:166:18
+    |
+166 |     fn root_refs(&self) -> RootRefs {
+    |                  ^^^^^     ^^^^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+166 |     fn root_refs(&self) -> RootRefs<'_> {
+    |                                    ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transaction.rs:173:21
+    |
+173 |     fn subdoc_guids(&self) -> SubdocGuids {
+    |                     ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                     |
+    |                     the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+173 |     fn subdoc_guids(&self) -> SubdocGuids<'_> {
+    |                                          ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transaction.rs:179:16
+    |
+179 |     fn subdocs(&self) -> SubdocsIter {
+    |                ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                |
+    |                the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+179 |     fn subdocs(&self) -> SubdocsIter<'_> {
+    |                                     ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> src/types/mod.rs:1108:17
+     |
+1108 |     pub fn iter(&self) -> EventsIter {
+     |                 ^^^^^     ^^^^^^^^^^ the same lifetime is hidden here
+     |                 |
+     |                 the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+     |
+1108 |     pub fn iter(&self) -> EventsIter<'_> {
+     |                                     ++++
+
+warning: non-local `impl` definition, `impl` blocks should be written at the same level as their item
+  --> src/encoding/mod.rs:45:21
+   |
+45 |     #[derive(Debug, Arbitrary)]
+   |                     ^--------
+   |                     |
+   |                     `Arbitrary` is not local
+   |                     move the `impl` block outside of this constant `_IMPL_ARBITRARY_FOR_EncodingTypes`
+46 |     enum EncodingTypes {
+   |          ------------- `EncodingTypes` is not local
+   |
+   = note: the derive macro `Arbitrary` defines the non-local `impl`, and may need to be changed
+   = note: the derive macro `Arbitrary` may come from an old version of the `proptest_derive` crate, try updating your dependency with `cargo update -p proptest_derive`
+   = note: an `impl` is never scoped, even when it is nested inside an item, as it may impact type checking outside of that item, which can be the case if neither the trait or the self type are at the same nesting level as the `impl`
+   = note: items in an anonymous const item (`const _: () = { ... }`) are treated as in the same scope as the anonymous const's declaration for the purpose of this lint
+   = note: `#[warn(non_local_definitions)]` on by default
+   = note: this warning originates in the derive macro `Arbitrary` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: types that do not implement `Drop` can still have drop glue, consider instead using `std::mem::needs_drop` to detect whether a type is trivially dropped
+   --> src/observer.rs:280:33
+    |
+280 | pub type Subscription = Arc<dyn Drop + 'static>;
+    |                                 ^^^^
+    |
+    = note: `#[warn(dyn_drop)]` on by default
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/state_vector.rs:93:17
+   |
+93 |     pub fn iter(&self) -> std::collections::hash_map::Iter<ClientID, u32> {
+   |                 ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+93 |     pub fn iter(&self) -> std::collections::hash_map::Iter<'_, ClientID, u32> {
+   |                                                            +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/sync/awareness.rs:178:17
+    |
+178 |     pub fn iter(&self) -> AwarenessIter {
+    |                 ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+178 |     pub fn iter(&self) -> AwarenessIter<'_> {
+    |                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/test_utils.rs:432:18
+    |
+432 |     pub fn peers(&self) -> Peers {
+    |                  ^^^^^     ^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+432 |     pub fn peers(&self) -> Peers<'_> {
+    |                                 ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/test_utils.rs:487:14
+    |
+487 |     fn state(&self) -> MutexGuard<TestPeerState> {
+    |              ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |              |
+    |              the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+487 |     fn state(&self) -> MutexGuard<'_, TestPeerState> {
+    |                                   +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:18:21
+   |
+18 |     fn try_transact(&self) -> Result<Transaction, TransactionAcqError>;
+   |                     ^^^^^            ^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+18 |     fn try_transact(&self) -> Result<Transaction<'_>, TransactionAcqError>;
+   |                                                 ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:29:25
+   |
+29 |     fn try_transact_mut(&self) -> Result<TransactionMut, TransactionAcqError>;
+   |                         ^^^^^            ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                         |
+   |                         the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+29 |     fn try_transact_mut(&self) -> Result<TransactionMut<'_>, TransactionAcqError>;
+   |                                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:43:33
+   |
+43 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut, TransactionAcqError>
+   |                                 ^^^^^                       ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                                 |
+   |                                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+43 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut<'_>, TransactionAcqError>
+   |                                                                           ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:60:29
+   |
+60 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut
+   |                             ^^^^^                ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                             |
+   |                             the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+60 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut<'_>
+   |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:71:17
+   |
+71 |     fn transact(&self) -> Transaction;
+   |                 ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+71 |     fn transact(&self) -> Transaction<'_>;
+   |                                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:83:21
+   |
+83 |     fn transact_mut(&self) -> TransactionMut;
+   |                     ^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+83 |     fn transact_mut(&self) -> TransactionMut<'_>;
+   |                                             ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:87:21
+   |
+87 |     fn try_transact(&self) -> Result<Transaction, TransactionAcqError> {
+   |                     ^^^^^            ^^^^^^^^^^^ the same lifetime is hidden here
+   |                     |
+   |                     the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+87 |     fn try_transact(&self) -> Result<Transaction<'_>, TransactionAcqError> {
+   |                                                 ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> src/transact.rs:94:25
+   |
+94 |     fn try_transact_mut(&self) -> Result<TransactionMut, TransactionAcqError> {
+   |                         ^^^^^            ^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                         |
+   |                         the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+94 |     fn try_transact_mut(&self) -> Result<TransactionMut<'_>, TransactionAcqError> {
+   |                                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transact.rs:101:33
+    |
+101 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut, TransactionAcqError>
+    |                                 ^^^^^                       ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                 |
+    |                                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+101 |     fn try_transact_mut_with<T>(&self, origin: T) -> Result<TransactionMut<'_>, TransactionAcqError>
+    |                                                                           ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transact.rs:115:29
+    |
+115 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut
+    |                             ^^^^^                ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                             |
+    |                             the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+115 |     fn transact_mut_with<T>(&self, origin: T) -> TransactionMut<'_>
+    |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transact.rs:123:17
+    |
+123 |     fn transact(&self) -> Transaction {
+    |                 ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+123 |     fn transact(&self) -> Transaction<'_> {
+    |                                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> src/transact.rs:128:21
+    |
+128 |     fn transact_mut(&self) -> TransactionMut {
+    |                     ^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                     |
+    |                     the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+128 |     fn transact_mut(&self) -> TransactionMut<'_> {
+    |                                             ++++
+
+warning: `yrs` (lib test) generated 58 warnings (run `cargo fix --lib -p yrs --tests` to apply 37 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.17s
+     Running unittests src/lib.rs (.build/yrs-original-test-target/debug/deps/yrs-a87df15a607467f2)
+
+running 306 tests
+test block::test::splittable_string_split_str ... ok
+test block::test::splittable_string_len ... ok
+test atomic::test::update ... ok
+test block::test::splittable_string_push_str ... ok
+test atomic::test::init_get ... ok
+test doc::test::encoding_buffer_overflow_errors ... ok
+test alt::test::encode_state_vector_compatibility_v1 ... ok
+test alt::test::diff_updates_compatibility_v1 ... ok
+test alt::test::merge_updates_compatibility_v1 ... ok
+test alt::test::merge_updates_compatibility_v1_2 ... ok
+test doc::test::snapshots_splitting_text ... ok
+test doc::test::force_gc ... ok
+test doc::test::apply_update_basic_v2 ... ok
+test doc::test::integrate ... ok
+test doc::test::snapshot_non_splitting_text ... ok
+test doc::test::partially_duplicated_update ... ok
+test doc::test::apply_snapshot_updates ... ok
+test doc::test::apply_update_basic_v1 ... ok
+test doc::test::root_refs ... ok
+test doc::test::encode_basic ... ok
+test doc::test::observe_transaction_cleanup ... ok
+test doc::test::pending_update_integration ... ok
+test doc::test::uuid_generation ... ok
+test doc::test::observe_after_transaction ... ok
+test doc::test::on_update ... ok
+test doc::test::out_of_order_updates ... ok
+test encoding::serde::de::test::test_any_deserializer_multiple_borrows ... ok
+test doc::test::incremental_observe_update ... ok
+test encoding::serde::de::test::test_deserialize_any_from_bool ... ok
+test encoding::serde::de::test::test_deserialize_any_from_array ... ok
+test doc::test::integrate_block_with_parent_gc ... ok
+test encoding::serde::de::test::test_any_deserializer_int_does_not_fit_error ... ok
+test doc::test::subdoc_load_edge_cases ... ok
+test encoding::serde::de::test::test_any_deserializer_undefined ... ok
+test encoding::serde::de::test::test_any_deserializer_type_mismatch_error ... ok
+test doc::test::subdoc_auto_load_edge_cases ... ok
+test encoding::serde::de::test::test_deserialize_any_from_int ... ok
+test doc::test::ypy_issue_32 ... ok
+test encoding::serde::de::test::test_any_deserializer_many_fields ... ok
+test doc::test::yrb_issue_45 ... ok
+test encoding::serde::de::test::test_any_deserializer_nested_array ... ok
+test encoding::serde::de::test::test_deserialize_any_from_null ... ok
+test doc::test::ycrdt_issue_174 ... ok
+test doc::test::to_json ... ok
+test doc::test::subdoc ... ok
+test encoding::serde::de::test::test_deserialize_any_from_string ... ok
+test encoding::serde::de::test::test_deserialize_any_to_any ... ok
+test encoding::serde::de::test::test_deserialize_any_from_float ... ok
+test encoding::serde::de::test::test_deserialize_any_from_map ... ok
+test encoding::serde::de::test::test_deserialize_any_from_int_unrepresentable ... ok
+test encoding::serde::ser::test::test_any_serializer_newtype_u64_within_bounds ... ok
+test encoding::serde::de::test::test_deserialize_any_from_nested_map ... ok
+test encoding::serde::ser::test::test_any_serializer_nested_array ... ok
+test encoding::serde::ser::test::test_any_serializer_many_fields ... ok
+test encoding::serde::ser::test::test_any_serializer_non_string_keys_error ... ok
+test encoding::serde::ser::test::test_any_serializer_u64_error ... ok
+test encoding::serde::ser::test::test_serialize_any_to_any ... ok
+test encoding::serde::ser::test::test_serialize_any_to_array ... ok
+test encoding::serde::ser::test::test_serialize_any_to_bool ... ok
+test encoding::serde::ser::test::test_serialize_any_to_buffer ... ok
+test encoding::serde::ser::test::test_serialize_any_to_complex_map ... ok
+test encoding::serde::ser::test::test_serialize_any_to_float ... ok
+test encoding::serde::ser::test::test_serialize_any_to_int ... ok
+test encoding::serde::ser::test::test_serialize_any_to_map ... ok
+test encoding::serde::ser::test::test_serialize_any_to_null ... ok
+test encoding::serde::ser::test::test_serialize_any_to_string ... ok
+test encoding::serde::ser::test::test_serialize_any_to_undefined ... ok
+test encoding::serde::test::json_any_null ... ok
+test encoding::serde::test::json_any_number ... ok
+test encoding::serde::test::json_any_bool ... ok
+test encoding::serde::test::json_any_string ... ok
+test encoding::serde::test::json_any_array ... ok
+test encoding::serde::test::json_any_map ... ok
+test encoding::serde::test::test_any_to_json_roundtrip ... ok
+test encoding::serde::test::test_struct_any_roundtrip ... ok
+test encoding::serde::test::any_is_serde_json_convertible ... ok
+test id_set::test::id_range_compact ... ok
+test id_set::test::id_range_contains ... ok
+test id_set::test::id_range_encode_decode ... ok
+test id_set::test::deleted_blocks2 ... ok
+test id_set::test::id_range_invert ... ok
+test id_set::test::deleted_blocks ... ok
+test encoding::serde::test::test_enum_untagged_any_roundtrip ... ok
+test id_set::test::id_range_merge_continous ... ok
+test id_set::test::id_range_push ... ok
+test id_set::test::id_set_encode_decode ... ok
+test iter::test::move_last_elem_iter ... ok
+test iter::test::move_2 ... ok
+test iter::test::move_1 ... ok
+test iter::test::range_bounded ... ok
+test iter::test::range_right_exclusive_2 ... ok
+test iter::test::range_right_exclusive ... ok
+test iter::test::range_left_unbounded ... ok
+test iter::test::range_left_exclusive_2 ... ok
+test iter::test::range_left_exclusive ... ok
+test iter::test::move_cycles ... ok
+test iter::test::range_right_unbounded ... ok
+test iter::test::range_single_slice ... ok
+test iter::test::range_unbounded ... ok
+test json_path::iter_any::test::eval_descent_flat ... ok
+test json_path::iter_any::test::eval_descent_multi_level ... ok
+test json_path::iter_any::test::eval_member_full ... ok
+test json_path::iter_any::test::eval_member_negative_index ... ok
+test json_path::iter_any::test::eval_index_union ... ok
+test json_path::iter_any::test::eval_member_slice ... ok
+test json_path::iter_any::test::eval_member_union ... ok
+test json_path::iter_any::test::eval_member_wildcard_array ... ok
+test json_path::iter_any::test::eval_member_partial ... ok
+test json_path::iter_txn::test::eval_descent_flat ... ok
+test json_path::iter_txn::test::eval_member_full ... ok
+test json_path::iter_txn::test::eval_index_union ... ok
+test json_path::iter_txn::test::eval_member_negative_index ... ok
+test json_path::parse::test::parse_complex ... ok
+test json_path::iter_txn::test::eval_member_slice ... ok
+test json_path::iter_txn::test::eval_member_partial ... ok
+test json_path::parse::test::parse_current ... ok
+test json_path::parse::test::parse_descend ... ok
+test json_path::parse::test::parse_descend_gradual ... ok
+test json_path::iter_txn::test::eval_member_union ... ok
+test json_path::parse::test::parse_dot_member ... ok
+test json_path::iter_txn::test::eval_member_wildcard_array ... ok
+test json_path::parse::test::parse_index ... ok
+test json_path::parse::test::parse_index_union ... ok
+test json_path::parse::test::parse_member_union ... ok
+test json_path::parse::test::parse_negative_index ... ok
+test json_path::iter_txn::test::eval_on_fresh_document ... ok
+test json_path::parse::test::parse_predicate_error ... ok
+test json_path::parse::test::parse_quote_member ... ok
+test json_path::parse::test::parse_root ... ok
+test json_path::parse::test::parse_slice_left_unbounded ... ok
+test json_path::parse::test::parse_slice_bounded ... ok
+test json_path::parse::test::parse_slice_right_unbounded ... ok
+test json_path::parse::test::parse_slice_with_step ... ok
+test json_path::parse::test::parse_wildcard ... ok
+test json_path::parse::test::parse_wildcard_quoted ... ok
+test moving::test::sticky_index_association_difference ... ok
+test moving::test::sticky_index_case_2 ... ok
+test moving::test::sticky_index_case_1 ... ok
+test moving::test::sticky_index_case_3 ... ok
+test moving::test::sticky_index_case_6 ... ok
+test moving::test::sticky_index_case_5 ... ok
+test moving::test::sticky_index_case_4 ... ok
+test moving::test::sticky_index_is_yjs_compatible ... ok
+test observer::test::subscribers_predicate ... ok
+test observer::test::subscribe_with_replaced_old_callback ... ok
+test state_vector::test::ordering ... ok
+test state_vector::test::ordering_one_of ... ok
+test observer::test::subscription ... ok
+test state_vector::test::ordering_missing_fields ... ok
+test sync::protocol::test::protocol_init ... ok
+test sync::protocol::test::protocol_sync_steps ... ok
+test sync::awareness::test::awareness_summary ... ok
+test sync::protocol::test::message_encoding ... ok
+test sync::protocol::test::protocol_sync_step_update ... ok
+test sync::protocol::test::protocol_awareness_sync ... ok
+test sync::awareness::test::awareness ... ok
+test tests::compatibility_tests::state_vector ... ok
+test tests::compatibility_tests::map_set ... ok
+test tests::compatibility_tests::array_insert ... ok
+test tests::compatibility_tests::negative_zero_decoding_v2 ... ok
+test tests::compatibility_tests::text_insert_delete ... ok
+test tests::compatibility_tests::xml_fragment_insert ... ok
+test tests::compatibility_tests::utf32_lib0_v2_decoding ... ok
+test types::array::test::basic ... ok
+test types::array::test::concurrent_insert_remove_with_3_conflicts ... ok
+test transaction::muse_gc_prefix_tests::gc_prefix_does_not_skip_live_deletion_tail ... ok
+test observer::test::drop_subscription ... ok
+test types::array::test::concurrent_insert_with_3_conflicts ... ok
+test observer::test::unsubscribe ... ok
+test observer::test::clean ... ok
+test types::array::test::get_at_removed_index ... ok
+test types::array::test::insert_3_elements_try_re_get ... ok
+test types::array::test::insert_empty_range ... ok
+test types::array::test::insert ... ok
+test observer::test::drop_subscription2 ... ok
+test observer::test::unsubscribe2 ... ok
+test types::array::test::insert_and_remove_events ... ok
+test types::array::test::insert_and_remove_event_changes ... ok
+test types::array::test::insert_then_merge_delete_on_sync ... ok
+test types::array::test::move_1 ... ok
+test types::array::test::iter_array_containing_types ... ok
+test types::array::test::insertions_in_late_sync ... ok
+test types::array::test::move_range_to ... ignored
+test types::array::test::move_cycles ... ok
+test types::array::test::len ... ok
+test types::array::test::move_last_elem_iter ... ok
+test types::array::test::observe_deep_event_order ... ok
+test types::array::test::push_back ... ok
+test types::array::test::remove_insert ... ok
+test types::array::test::push_front ... ok
+test types::array::test::move_2 ... ok
+test types::array::test::removals_in_late_sync ... ok
+test types::array::test::target_on_local_and_remote ... ok
+test types::map::test::get_or_init ... ok
+test types::map::test::get_as ... ok
+test types::array::test::fuzzy_test_6 ... ok
+test types::map::test::insert_and_remove_events ... ok
+test types::map::test::map_basic ... ok
+test types::map::test::map_clear ... ok
+test types::map::test::map_clear_sync ... ok
+test types::map::test::map_get_set_sync_with_conflicts ... ok
+test types::map::test::map_get_set ... ok
+test types::map::test::map_get_set_remove_with_3_way_conflicts ... ok
+test types::map::test::map_get_set_with_3_way_conflicts ... ok
+test types::map::test::map_len_remove ... ok
+test types::map::test::try_update ... ok
+test types::map::test::observe_deep ... ok
+test types::text::test::append_mutli_character_blocks ... ok
+test types::text::test::append_single_character_blocks ... ok
+test types::text::test::append_concurrent ... ok
+test types::text::test::concurrent_insert_delete ... ok
+test types::text::test::delete_3_byte_character_from_middle_1 ... ok
+test types::text::test::delete_3_byte_character_from_middle_2 ... ok
+test types::text::test::delete_4_byte_character_from_middle ... ok
+test types::text::test::delete_3_byte_character_from_middle_after_insert_and_format ... ok
+test types::text::test::basic_format ... ok
+test types::text::test::delete_multi_byte_character_from_middle_after_insert_and_format ... ok
+test types::text::test::delete_multiple_blocks_with_slicing ... ok
+test types::text::test::delete_multiple_whole_blocks ... ok
+test types::text::test::delete_single_block_end ... ok
+test types::text::test::delete_single_block_start ... ok
+test types::text::test::delete_slice_of_block ... ok
+test types::text::test::delta_snapshots ... ok
+test types::text::test::delta_with_embeds ... ok
+test types::text::test::delta_with_shared_ref ... ok
+test types::text::test::diff_with_embedded_items ... ok
+test types::text::test::embed_with_attributes ... ok
+test types::text::test::insert_after_block ... ok
+test types::text::test::empty_delta_chunks ... ok
+test types::text::test::insert_after_delete ... ok
+test types::text::test::insert_concurrent_root ... ok
+test types::text::test::insert_concurrent_in_the_middle ... ok
+test types::text::test::insert_empty_string ... ok
+test types::text::test::insert_and_remove_event_changes ... ok
+test types::text::test::insert_empty_string_with_attributes ... ok
+test types::map::test::fuzzy_test_6 ... ok
+test types::text::test::insert_inside_of_block ... ok
+test types::text::test::insert_string_with_no_attribute ... ok
+test types::text::test::multiline_format ... ok
+test types::text::test::issue_101 ... ok
+test types::text::test::prepend_mutli_character_blocks ... ok
+test types::text::test::prepend_single_character_blocks ... ok
+test types::text::test::observer ... ok
+test types::text::test::snapshot_delete_after ... ok
+test types::text::test::snapshots ... ok
+test types::text::test::text_diff_adjacent ... ok
+test types::text::test::text_remove_3_byte_range ... ok
+test types::text::test::text_remove_4_byte_range ... ok
+test types::xml::test::format_attributes_decode_compatibility_v1 ... ok
+test types::xml::test::format_attributes_decode_compatibility_v2 ... ok
+test types::text::test::yrs_delete ... ok
+test types::xml::test::insert_attribute ... ok
+test types::xml::test::serialization_compatibility ... ok
+test types::xml::test::event_observers ... ok
+test types::xml::test::serialization ... ok
+test types::xml::test::siblings ... ok
+test types::xml::test::text_attributes ... ok
+test types::xml::test::xml_to_string ... ok
+test types::xml::test::tree_walker ... ok
+test types::xml::test::xml_to_string_2 ... ok
+test undo::test::double_undo ... ok
+test undo::test::github_issue_345 ... ok
+test undo::test::github_issue_345_part_2 ... ok
+test undo::test::consecutive_redo_bug ... ok
+test undo::test::issue_371_2 ... ok
+test types::text::test::fuzzy_test_3 ... ok
+test undo::test::issue_371 ... ok
+test undo::test::issue_380 ... ok
+test undo::test::special_deletion_case ... ok
+test undo::test::nested_undo ... ok
+test undo::test::undo_events ... ok
+test undo::test::undo_delete_text_format ... ok
+test undo::test::undo_array ... ok
+test undo::test::undo_block_bug ... ok
+test undo::test::undo_in_embed ... ok
+test undo::test::undo_map ... ok
+test undo::test::undo_xml ... ok
+test undo::test::undo_until_change_performed ... ok
+test update::test::empty_update_v1 ... ok
+test update::test::empty_update_v2 ... ok
+test undo::test::undo_text ... ok
+test update::test::pending_update_check ... ok
+test update::test::test_extends ... ok
+test undo::test::undo_xml_bug ... ok
+test update::test::test_multiple_clients_in_one_update ... ok
+test update::test::test_duplicate_updates ... ok
+test update::test::merge_pending_updates ... ok
+test update::test::update_decode ... ok
+test update::test::test_v2_encoding_of_fragmented_delete_set ... ok
+test update::test::update_merge ... ok
+test update::test::update_state_vector_with_skips ... ok
+test update::test::update_v2_with_skips ... ok
+test types::array::test::fuzzy_test_300 ... ok
+test encoding::test::encoding_prop ... ok
+test types::text::test::multi_threading ... ok
+test types::map::test::multi_threading ... ok
+test types::array::test::multi_threading ... ok
+test encoding::test::encoding_any_prop ... ok
+test transact::test::multi_thread_transact_mut ... ok
+test tests::edit_traces_tests::edit_trace_friendsforever ... ok
+test tests::compatibility_tests::test_small_data_set ... ok
+test tests::edit_traces_tests::edit_trace_sveltecomponent ... ok
+test tests::compatibility_tests::test_medium_data_set ... ok
+test tests::edit_traces_tests::edit_trace_rustcode ... ok
+test tests::edit_traces_tests::edit_trace_automerge has been running for over 60 seconds
+test tests::edit_traces_tests::edit_trace_sephblog1 has been running for over 60 seconds
+test tests::edit_traces_tests::edit_trace_sephblog1 ... ok
+test tests::edit_traces_tests::edit_trace_automerge ... ok
+
+test result: ok. 305 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 245.17s
+
