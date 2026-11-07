@@ -1,0 +1,19 @@
+{
+  "run": "dataset-786955b880fd",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-dataset-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "dataset_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "dataset_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 6,
+  "freshProcessChecks": 4
+}

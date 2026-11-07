@@ -1,0 +1,19 @@
+{
+  "run": "dataset-6cda1cebba05",
+  "device": "macos",
+  "status": "passed-dataset-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "dataset_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "dataset_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 6,
+  "freshProcessChecks": 4
+}

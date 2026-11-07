@@ -1,0 +1,17 @@
+{
+  "run": "dataset-1313ce56c91c",
+  "device": "macos",
+  "status": "failed",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "dataset_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "dataset_reopen_test.dart",
+      "exitCode": 1
+    }
+  ],
+  "reason": "RuntimeError: dataset_reopen_test.dart failed; inspect its local log"
+}

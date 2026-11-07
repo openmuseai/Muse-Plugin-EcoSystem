@@ -1,0 +1,9 @@
+{
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:50939",
+  "SMARTDOC_WORKSPACE": "1c1d933c-5d0e-4569-9a0f-5181c435c163",
+  "SMARTDOC_RUN": "dataset-web-21bbae864dea",
+  "DATASET_OBJECT": "aae193d8-e593-44bb-85cd-3e94ebb52803",
+  "DATASET_NONCE": "82c0271c95154ca08c196073302425a3",
+  "CLOUD_ORIGIN": "http://127.0.0.1:18000",
+  "relay": "fixed loopback development proxy, original Cloud authorization/protocol unchanged"
+}

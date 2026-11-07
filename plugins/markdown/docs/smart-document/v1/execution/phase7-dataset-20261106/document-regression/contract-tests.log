@@ -1,0 +1,5 @@
+00:00 +0: loading test/binding_test.dart
+00:00 +0: test/binding_test.dart: document and independent workbook can use the same neutral binding type
+00:00 +1: test/binding_test.dart: unknown contract, extra fields and invalid epoch are rejected
+00:00 +2: test/binding_test.dart: engine, encoding, schema, protocol or epoch cannot change implicitly
+00:00 +3: All tests passed!

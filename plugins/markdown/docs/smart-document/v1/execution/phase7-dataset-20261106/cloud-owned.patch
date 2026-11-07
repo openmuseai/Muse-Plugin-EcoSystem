@@ -1,0 +1,411 @@
+diff --git a/libs/database/src/collab/collab_storage.rs b/libs/database/src/collab/collab_storage.rs
+index f99064f..c9685f6 100644
+--- a/libs/database/src/collab/collab_storage.rs
++++ b/libs/database/src/collab/collab_storage.rs
+@@ -32,6 +32,14 @@ impl From<i64> for GetCollabOrigin {
+ /// Implementors of this trait should provide the actual storage logic, be it in-memory, file-based, database-backed, etc.
+ #[async_trait]
+ pub trait CollabStore: Send + Sync + 'static {
++  /// Reject registered cross-scope/type IDs and tombstones before stale caches/streams.
++  async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()>;
++
+   async fn upsert_collab(
+     &self,
+     workspace_id: Uuid,
+diff --git a/libs/database/src/collab/mod.rs b/libs/database/src/collab/mod.rs
+index a3fdf62..6f0c450 100644
+--- a/libs/database/src/collab/mod.rs
++++ b/libs/database/src/collab/mod.rs
+@@ -1,5 +1,7 @@
+ mod collab_db_ops;
+ mod collab_storage;
++mod lifecycle;
++pub use lifecycle::check_collab_lifecycle;
+ 
+ pub use collab_db_ops::*;
+ use collab_entity::CollabType;
+diff --git a/services/appflowy-collaborate/src/collab/cache/collab_cache.rs b/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
+index 9c4707e..9db756d 100644
+--- a/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
++++ b/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
+@@ -46,6 +46,18 @@ pub struct CollabCache {
+ }
+ 
+ impl CollabCache {
++  pub async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> Result<(), AppError> {
++    self
++      .disk_cache
++      .check_collab_lifecycle(workspace_id, object_id, collab_type)
++      .await
++  }
++
+   pub fn new(
+     thread_pool: Arc<ThreadPoolNoAbort>,
+     redis_conn_manager: redis::aio::ConnectionManager,
+@@ -261,6 +273,9 @@ impl CollabCache {
+   ) -> Result<TimestampedEncodedCollab, AppError> {
+     let object_id = query.object_id;
+     let collab_type = query.collab_type;
++    self
++      .check_collab_lifecycle(workspace_id, &object_id, collab_type)
++      .await?;
+     let (rid, mut encoded_collab) = match self.get_snapshot_collab(workspace_id, query).await {
+       Ok((rid, encoded_collab)) => {
+         debug!(
+@@ -526,6 +541,18 @@ impl CollabCache {
+     let mut dirty_queries = Vec::new();
+ 
+     for query in queries {
++      if let Err(error) = self
++        .check_collab_lifecycle(workspace_id, &query.object_id, query.collab_type)
++        .await
++      {
++        results.insert(
++          query.object_id,
++          QueryCollabResult::Failed {
++            error: error.to_string(),
++          },
++        );
++        continue;
++      }
+       if self.is_dirty_since(&query.object_id, MillisSeconds::now()) {
+         dirty_queries.push(query);
+       } else {
+diff --git a/services/appflowy-collaborate/src/collab/cache/disk_cache.rs b/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
+index 02bbab7..7e0c19b 100644
+--- a/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
++++ b/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
+@@ -38,6 +38,16 @@ pub struct CollabDiskCache {
+ }
+ 
+ impl CollabDiskCache {
++  pub async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()> {
++    database::collab::check_collab_lifecycle(&self.pg_pool, workspace_id, object_id, collab_type)
++      .await
++  }
++
+   pub fn new(
+     thread_pool: Arc<ThreadPoolNoAbort>,
+     pg_pool: PgPool,
+diff --git a/services/appflowy-collaborate/src/collab/collab_store.rs b/services/appflowy-collaborate/src/collab/collab_store.rs
+index bedb81c..8075e58 100644
+--- a/services/appflowy-collaborate/src/collab/collab_store.rs
++++ b/services/appflowy-collaborate/src/collab/collab_store.rs
+@@ -149,6 +149,18 @@ impl CollabStoreImpl {
+ 
+ #[async_trait]
+ impl CollabStore for CollabStoreImpl {
++  async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()> {
++    self
++      .cache
++      .check_collab_lifecycle(workspace_id, object_id, collab_type)
++      .await
++  }
++
+   async fn upsert_collab(
+     &self,
+     workspace_id: Uuid,
+@@ -158,6 +170,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_or_update_permission(uid, &workspace_id, &params.object_id)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     self
+       .cache
+       .insert_encode_collab_to_disk(&workspace_id, uid, params)
+@@ -174,6 +189,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_or_update_permission(uid, &workspace_id, &params.object_id)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     trace!(
+       "Queue insert collab:{}:{}",
+       params.object_id,
+@@ -215,6 +233,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_write_workspace_permission(&workspace_id, uid)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     self
+       .access_control
+       .update_access_level_policy(uid, &params.object_id, AFAccessLevel::FullAccess)
+@@ -251,6 +272,9 @@ impl CollabStore for CollabStoreImpl {
+       .await?;
+ 
+     for params in &params_list {
++      self
++        .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++        .await?;
+       self
+         .access_control
+         .update_access_level_policy(uid, &params.object_id, AFAccessLevel::FullAccess)
+@@ -286,13 +310,10 @@ impl CollabStore for CollabStoreImpl {
+         uid,
+         object_id
+       );
+-      let collab_exists = self.cache.is_exist(workspace_id, object_id).await?;
+-      if collab_exists {
+-        self
+-          .access_control
+-          .enforce_action(workspace_id, &uid, object_id, Action::Read)
+-          .await?;
+-      }
++      self
++        .access_control
++        .enforce_action(workspace_id, &uid, object_id, Action::Read)
++        .await?;
+     }
+ 
+     self
+diff --git a/services/appflowy-collaborate/src/group/group_init.rs b/services/appflowy-collaborate/src/group/group_init.rs
+index 5246a46..f39e12d 100644
+--- a/services/appflowy-collaborate/src/group/group_init.rs
++++ b/services/appflowy-collaborate/src/group/group_init.rs
+@@ -356,14 +356,10 @@ impl CollabGroup {
+     &self,
+     state_vector: StateVector,
+   ) -> Result<Vec<u8>, RealtimeError> {
+-    {
+-      // first check if we need to send any updates
+-      let collab_sv = self.state.state_vector.read().await;
+-      if *collab_sv <= state_vector {
+-        return Ok(vec![]);
+-      }
+-    }
+-
++    // A state vector accounts for inserted structs, not the deletion set.
++    // Equal vectors can still differ after delete/undo operations. Always let
++    // Yrs encode the diff, including deletion ranges, instead of returning an
++    // empty update based only on clock comparison.
+     let encoded_collab = self.encode_collab().await?;
+     let options = CollabOptions::new(self.object_id().to_string(), default_client_id())
+       .with_data_source(DataSource::DocStateV1(encoded_collab.doc_state.into()));
+@@ -657,6 +653,12 @@ impl CollabGroup {
+     origin: &CollabOrigin,
+     msg: Message,
+   ) -> Result<Option<Vec<u8>>, RTProtocolError> {
++    state
++      .persister
++      .storage
++      .check_collab_lifecycle(&state.workspace_id, &state.object_id, state.collab_type)
++      .await
++      .map_err(|e| RTProtocolError::Internal(e.into()))?;
+     match msg {
+       Message::Sync(msg) => match msg {
+         SyncMessage::SyncStep1(sv) => Self::handle_sync_step1(state, &sv).await,
+@@ -985,6 +987,11 @@ impl CollabPersister {
+     sender: CollabOrigin,
+     update: Vec<u8>,
+   ) -> Result<MessageId, StreamError> {
++    self
++      .storage
++      .check_collab_lifecycle(&self.workspace_id, &self.object_id, self.collab_type)
++      .await
++      .map_err(|e| StreamError::Internal(e.into()))?;
+     let len = update.len();
+     // send updates to redis queue
+     let update = CollabStreamUpdate::new(update, sender, UpdateFlags::default());
+diff --git a/src/api/file_storage.rs b/src/api/file_storage.rs
+index a94d6aa..2a7aa2a 100644
+--- a/src/api/file_storage.rs
++++ b/src/api/file_storage.rs
+@@ -20,6 +20,9 @@ use database_entity::file_dto::{
+   UploadPartResponse,
+ };
+ 
++use crate::api::private_assets::{
++  deny_public_private_asset, is_private_asset_path, private_assets_scope,
++};
+ use crate::biz::authentication::jwt::UserUuid;
+ use crate::biz::data_import::LimitedPayload;
+ use crate::state::AppState;
+@@ -41,6 +44,7 @@ use tracing::{error, event, info, instrument, trace};
+ 
+ pub fn file_storage_scope() -> Scope {
+   web::scope("/api/file_storage")
++    .service(private_assets_scope())
+     .service(
+       // Deprecated, use put_blob_handler_v1 instead
+       web::resource("/{workspace_id}/blob/{file_id}")
+@@ -95,6 +99,8 @@ async fn create_upload(
+   req: web::Json<CreateUploadRequest>,
+ ) -> Result<JsonAppResponse<CreateUploadResponse>> {
+   let req = req.into_inner();
++  deny_public_private_asset(&req.parent_dir)?;
++  deny_public_private_asset(&req.file_id)?;
+   if req.parent_dir.is_empty() {
+     return Err(AppError::InvalidRequest("parent_dir is empty".to_string()).into());
+   }
+@@ -141,6 +147,8 @@ async fn upload_part_handler(
+   mut payload: Payload,
+ ) -> Result<JsonAppResponse<UploadPartResponse>> {
+   let path_params = path.into_inner();
++  deny_public_private_asset(&path_params.parent_dir)?;
++  deny_public_private_asset(&path_params.file_id)?;
+   trace!(
+     "upload part: workspace_id: {}, parent_dir: {}, file_id: {}, upload_id: {}, part_num: {}",
+     path_params.workspace_id,
+@@ -200,6 +208,8 @@ async fn complete_upload_handler(
+   req: web::Json<CompleteUploadRequest>,
+ ) -> Result<JsonAppResponse<()>> {
+   let req = req.into_inner();
++  deny_public_private_asset(&req.parent_dir)?;
++  deny_public_private_asset(&req.file_id)?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   let workspace_id = workspace_id.into_inner();
+   state
+@@ -231,6 +241,7 @@ async fn put_blob_handler(
+   payload: Payload,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   let workspace_id = path.workspace_id;
+   state
+@@ -305,6 +316,7 @@ async fn delete_blob_handler(
+   path: web::Path<BlobPathV0>,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let workspace_id = path.workspace_id;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+@@ -327,6 +339,7 @@ async fn get_blob_v1_handler(
+   req: HttpRequest,
+ ) -> Result<HttpResponse<BoxBody>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   get_blob_by_object_key(state, &path, req).await
+ }
+ 
+@@ -337,6 +350,7 @@ async fn delete_blob_v1_handler(
+   path: web::Path<BlobPathV1>,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let workspace_id = path.workspace_id;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+@@ -352,7 +366,7 @@ async fn delete_blob_v1_handler(
+   Ok(AppResponse::Ok().into())
+ }
+ 
+-async fn get_blob_by_object_key(
++pub(super) async fn get_blob_by_object_key(
+   state: Data<AppState>,
+   key: &impl BlobKey,
+   req: HttpRequest,
+@@ -449,6 +463,7 @@ async fn get_blob_handler(
+   req: HttpRequest,
+ ) -> Result<HttpResponse<BoxBody>> {
+   let blob_path = path.into_inner();
++  deny_public_private_asset(&blob_path.object_key())?;
+   get_blob_by_object_key(state, &blob_path, req).await
+ }
+ 
+@@ -458,6 +473,7 @@ async fn get_blob_metadata_handler(
+   path: web::Path<BlobPathV0>,
+ ) -> Result<JsonAppResponse<BlobMetadata>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+ 
+   // Get the metadata
+   let metadata = state
+@@ -482,6 +498,7 @@ async fn get_blob_metadata_v1_handler(
+   path: web::Path<BlobPathV1>,
+ ) -> Result<JsonAppResponse<BlobMetadata>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+ 
+   // Get the metadata
+   let metadata = state
+@@ -524,6 +541,7 @@ async fn get_all_workspace_blob_metadata_handler(
+     .await
+     .map_err(AppResponseError::from)?
+     .into_iter()
++    .filter(|meta| !is_private_asset_path(&meta.file_id))
+     .map(|meta| BlobMetadata {
+       workspace_id: meta.workspace_id,
+       file_id: meta.file_id,
+@@ -555,6 +573,7 @@ async fn put_blob_handler_v1(
+   payload: Payload,
+ ) -> Result<JsonAppResponse<PutFileResponse>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.parent_dir)?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+     .workspace_access_control
+diff --git a/src/api/mod.rs b/src/api/mod.rs
+index 0ba4ca2..8035f36 100644
+--- a/src/api/mod.rs
++++ b/src/api/mod.rs
+@@ -4,6 +4,7 @@ pub mod billing;
+ pub mod chat;
+ pub mod data_import;
+ pub mod file_storage;
++pub mod private_assets;
+ pub mod guest;
+ pub mod invite_code;
+ pub mod metrics;
+diff --git a/src/api/workspace.rs b/src/api/workspace.rs
+index 118436e..b727e0e 100644
+--- a/src/api/workspace.rs
++++ b/src/api/workspace.rs
+@@ -2908,6 +2908,10 @@ async fn collab_full_sync_handler(
+     return Err(AppError::InvalidRequest("doc state is empty".to_string()).into());
+   }
+ 
++  if params.object_id != object_id.to_string() {
++    return Err(AppError::InvalidRequest("object_id does not match route".to_string()).into());
++  }
++
+   let collab_type = CollabType::from(params.collab_type);
+   let compression_type = PayloadCompressionType::try_from(params.compression).map_err(|err| {
+     AppError::InvalidRequest(format!("Failed to parse PayloadCompressionType: {}", err))
+@@ -2946,6 +2950,20 @@ async fn collab_full_sync_handler(
+     .await
+     .map_err(AppResponseError::from)?;
+ 
++  // Full-sync uploads a document update, including through HTTP fallback.
++  // Reject unauthorized writes before enqueueing: the realtime stream is
++  // asynchronous and its downstream denial cannot be reported by this request.
++  state
++    .collab_access_control
++    .enforce_action(&workspace_id, &uid, &object_id, Action::Write)
++    .await?;
++  guest::ensure_guest_collab_access(&state, uid, workspace_id, object_id, true).await?;
++
++  state
++    .collab_storage
++    .check_collab_lifecycle(&workspace_id, &object_id, collab_type)
++    .await?;
++
+   let user = RealtimeUser {
+     uid,
+     device_id,

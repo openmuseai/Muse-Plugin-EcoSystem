@@ -1,0 +1,3 @@
+00:00 +0: loading test/file_store_test.dart
+00:00 +0: test/file_store_test.dart: concurrent adapters never collide staging files or produce torn snapshots
+00:00 +1: All tests passed!

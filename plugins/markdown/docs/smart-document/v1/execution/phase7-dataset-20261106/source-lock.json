@@ -1,0 +1,666 @@
+{
+  "date": "2026-11-06T05:18:21.946768+00:00",
+  "mode": "working-tree increment, not a clean multi-repository release",
+  "files": [
+    {
+      "path": "Muse-Client/packages/muse_appflowy_transport/lib/muse_appflowy_transport.dart",
+      "sha256": "2b3eb951c17a77ab2a2cac845613a11d6b88375610973f059c1cd5a7b9f26c32"
+    },
+    {
+      "path": "Muse-Client/packages/muse_appflowy_transport/pubspec.lock",
+      "sha256": "14fb4c39e89cefe2fff3df84bf7f35920b420c1769e9f9fc5df3df8ac403e379"
+    },
+    {
+      "path": "Muse-Client/packages/muse_appflowy_transport/pubspec.yaml",
+      "sha256": "8145b181720f5315ef7630c56c3df6f38655cec50110e844ebd00bbd8645cbda"
+    },
+    {
+      "path": "Muse-Client/packages/muse_appflowy_transport/test/transport_test.dart",
+      "sha256": "359cc083e3b21d45b2adbbf6af8ddc490e14fc161c7b2382bc6e540b3773a543"
+    },
+    {
+      "path": "Muse-Client/packages/muse_asset_contract/lib/muse_asset_contract.dart",
+      "sha256": "e74fc9cdda4ac0e0e166036cc65c3e7f72c8b50af8e6e6210f7fcced50aea163"
+    },
+    {
+      "path": "Muse-Client/packages/muse_asset_contract/pubspec.lock",
+      "sha256": "dc66654fd79d41de914faff59f75daaf39fc528b7a70f3a5eeeab70f19baa8b3"
+    },
+    {
+      "path": "Muse-Client/packages/muse_asset_contract/pubspec.yaml",
+      "sha256": "7065e8dfec1e20519658577fe0748bff075fd69ddf43333ecabb689b48dbc513"
+    },
+    {
+      "path": "Muse-Client/packages/muse_asset_contract/test/reference_test.dart",
+      "sha256": "6195e0c16615a41b65bea22f74c9f5c32e879ae2feb7e73ea411bccac40730c4"
+    },
+    {
+      "path": "Muse-Client/packages/muse_collab_contract/README.zh-CN.md",
+      "sha256": "701594701c914c67c441a73a270a15d95a706490913f57db107d46faabeaeadb"
+    },
+    {
+      "path": "Muse-Client/packages/muse_collab_contract/lib/muse_collab_contract.dart",
+      "sha256": "1fa01df36c830eabc2e17d8fa62ee471e77cda5917ab0ae039c5971cf46b6b4c"
+    },
+    {
+      "path": "Muse-Client/packages/muse_collab_contract/pubspec.lock",
+      "sha256": "a63ec0673fdf5dcee61b7ce784ff4045ba2f16096685220977d520b2921fbd20"
+    },
+    {
+      "path": "Muse-Client/packages/muse_collab_contract/pubspec.yaml",
+      "sha256": "80ce2efbf40ab0ac8e9d9deee35447a8e5c5cc1e7dafb6c446e5e2d60d63308b"
+    },
+    {
+      "path": "Muse-Client/packages/muse_collab_contract/test/binding_test.dart",
+      "sha256": "a4fb45eeeeabae667d392860d8a28223a5ba9222adc8b4cf94a902413eec30c9"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/README.zh-CN.md",
+      "sha256": "6c0ab155a341bd72190ad5726b2d51e645e44156f1356348ed76e4f891734c75"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/browser.dart",
+      "sha256": "a02a6743dcbf3dea626d0bd23731f0e1c28e736056fd894c5471950376c2bac7"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/io.dart",
+      "sha256": "fc7e4960d3eed5c4d5d48defc8dc3f320bda0a89d1a006a8fe702373bc2603cf"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/muse_content_store.dart",
+      "sha256": "9fc325c2c993ea0c35f8b7de1766f531b7176896bb296f902ffabbc74aa0e24e"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/snapshot_store.dart",
+      "sha256": "7449a9091ab3cfde1befa16636a920111b0a921bdddab5b4390415ee093b5f85"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/src/file_store.dart",
+      "sha256": "eafd70d807b30bcdaf69e17ab90c6b446cf1e45f646ea7c4d6eb1ba47685fb23"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/lib/src/indexeddb_store.dart",
+      "sha256": "0a35eaabcfe45bcfcf66aae1589352c4f70bcc769c7b52ba08f03a442c9dcb3d"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/pubspec.lock",
+      "sha256": "3c85bb260ed7d8788d48a3ff6d3a87dff218add6f6fa5efd0ab92d912476d174"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/pubspec.yaml",
+      "sha256": "c7eb42e7c4eb6a9094e893c60825f63a4b4c68b451541d623ec9794a95d509cf"
+    },
+    {
+      "path": "Muse-Client/packages/muse_content_store/test/file_store_test.dart",
+      "sha256": "08ac14525c098531563d1ba125e5bdca144b6ed11493e391fd03f36145974bce"
+    },
+    {
+      "path": "Muse-Client/plugins/dataset/README.zh-CN.md",
+      "sha256": "409eab435c93e53e4d559b42e4585e5f7de63afc83cd7352ecefa55c874fa0a3"
+    },
+    {
+      "path": "Muse-Client/plugins/dataset/lib/openmuse_dataset_plugin.dart",
+      "sha256": "f204d536fd7ccee9eb6b40029a5e03d441343dc12d7fd42167bf4ecc47198a7c"
+    },
+    {
+      "path": "Muse-Client/plugins/dataset/pubspec.lock",
+      "sha256": "40963996281a4cdd5305c99b31717ee61874ab851d920efcb6c56765cf6cfe35"
+    },
+    {
+      "path": "Muse-Client/plugins/dataset/pubspec.yaml",
+      "sha256": "9f78427961b91eefe51e7256c8fee9a76185fff06848495d861949a797f4ebd0"
+    },
+    {
+      "path": "Muse-Client/plugins/dataset/test/resource_test.dart",
+      "sha256": "8b916dfda65635c64ada00e8363063b408fd502d2bc4c1d6f8779eae62e18fc2"
+    },
+    {
+      "path": "Muse-Client/plugins/smart-document/README.zh-CN.md",
+      "sha256": "0cfbed5ab8a34d265c2bcbf2fb489ba9a92d421ab1fbd4abfeb74afba9a6ef49"
+    },
+    {
+      "path": "Muse-Client/plugins/smart-document/lib/openmuse_smart_document_plugin.dart",
+      "sha256": "33f2239622b67802902f0bb298ebecc0728d1520bd356f8d2172cc2f28d3f9e3"
+    },
+    {
+      "path": "Muse-Client/plugins/smart-document/pubspec.lock",
+      "sha256": "60200323adac24b01f115c5896b5c16a506e09f3f36c253389942e377fbb1566"
+    },
+    {
+      "path": "Muse-Client/plugins/smart-document/pubspec.yaml",
+      "sha256": "75b529a09f429e5883ed98176fa58d113bd4eb3cbbbb202d6a7b30884ae0d860"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/docs/smart-document/v1/30-PHASE7-DATASET-IMPLEMENTATION.zh-CN.md",
+      "sha256": "1b8e398ba8c4aa582f9ba0c0665c07dfc0eb39926509cbc2639303deb8c89cdd"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/docs/smart-document/v1/scripts/verify_dataset_evidence.py",
+      "sha256": "e109a99beef196fb1f7fbf7b37c71d3dd4b9381a8a5555c70ab1945b6a09ac8c"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/README.zh-CN.md",
+      "sha256": "a53259a41a7a123942b78d2bb9e85c9b8f59e693337a73db2400087d6bdd60a3"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/hook/build.dart",
+      "sha256": "13ed9f502416a28221b25363449599d6e2c64197efcdbd225142c1ca4e176ff8"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/openmuse_dataset.dart",
+      "sha256": "66999bd68111f378ac2708130c9552ac6b98cecf1647ffa90340a246733121da"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/controller.dart",
+      "sha256": "e0284a5ce3facfdc10b3ad0af22e6138217744247336551f0e0b74df89ad226b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/core.dart",
+      "sha256": "a8cfd0fb33072c0cfc01ad46922f518454032dfcc25bfef2d8789e14cdf96b4a"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/core_api.dart",
+      "sha256": "7f5796c8d364c382dc00a8fea47c1f7a264b4f674a52053e8777f86472a78cd5"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/dialogs.dart",
+      "sha256": "ca77540c283afb190f26b9cc38c5623f6ecde54a9edc66f55e6f4b536fd17269"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/native_core_io.dart",
+      "sha256": "43b3c89e183fc191dbc4673257f146896cb364f7d5be8896eebc1db5aab3548c"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/projection.dart",
+      "sha256": "0a2bf2e7658e28222ac9be5f149f3a74982bfed89e919518cfcc6935d5af9c81"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/surface.dart",
+      "sha256": "b1f0e2e09284fe6963a0859feff32a2a530332189f747d8d6479c55b7560ba2f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/lib/src/wasm_core.dart",
+      "sha256": "2a38bd7068d1e5edb9394e0418b1713613c6f4fd71e578b98c73dd98c2b146b6"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/pubspec.lock",
+      "sha256": "4ca655a3d4802003f24638a5a5fe923bf480edc0a4562aebd77776503942309e"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/pubspec.yaml",
+      "sha256": "995e9fbbd2152cd83cc4d1c6c3ec0b3bde5974aec286a213f5c3af5728d2f690"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_deletion_test.dart",
+      "sha256": "ebc3c03cb90b4759cc969b33752083fc39db22e82e5826241d1e907fbf78c53b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_test.dart",
+      "sha256": "44d1f287deb1e9461a771314475e332f876b0947649b936ae9cf5270d0cf5827"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart",
+      "sha256": "3736d0830eb8d658ec8a28a9c4c809931481b670ad20ab0c86b79dd638ee9235"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/support.dart",
+      "sha256": "64599350bdd745dcf5d86109d362f715c089c126a2a9aa78ce5abbecdc9a8164"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart",
+      "sha256": "172d5a2d752affae40a55b53f74512693fb943cae9b505c43a5513bbcdcd793e"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/Cargo.lock",
+      "sha256": "7533c4e25205d90b6ee0bfbfc728c2a32a717dbefef854422f58130b45e6456d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/Cargo.toml",
+      "sha256": "d3dbe117297bd6064249f6b9d1bf1876d1bf1766e7a82e6598d7628a94e9080f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/commands.rs",
+      "sha256": "41ac7bcce21210ef25f0fff37b86dc272d5f94791efad2fda7fd459877ad9977"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/lib.rs",
+      "sha256": "eb4705028399596e122796865830f163ccbd6dc4bebdf6d33aa193b0b73dc51d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/model.rs",
+      "sha256": "dee0f9cb7e5827c98799abfc7a3a2d3f31966c020eab05c779bff0f618ff4cd8"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/reader.rs",
+      "sha256": "5cf928ca6b3e26c573807726944002d87e767e0be61695f40fc3a7931519e9ef"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/session.rs",
+      "sha256": "d811a36ef83b26ea86001190ce521ff9bdd2f90c1376936bc72da7761d3cc8c0"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/rust/src/tests.rs",
+      "sha256": "49d80456183ca772ab8e95013b72225e98b2876e303911eac3b2e621d85af8ed"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_document_test.dart",
+      "sha256": "e15814923e9c4b92ee05b7454b977bb0820e4edbf2732f20308dd03c92376f01"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_reopen_test.dart",
+      "sha256": "3aeba477769d09971f98db53139a92d83a2507cad3a9187ad50fc8614d77a21e"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/media_document_test.dart",
+      "sha256": "27eee4e1eb409402cf82743ee76f95ad5db5b7673e970c08b37da52d21f38ec5"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/media_reopen_test.dart",
+      "sha256": "7f292a905357f501e53f4972d09bd0bd5f62a7e15295a9130cc56d17643d40f4"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/mobile_document_test.dart",
+      "sha256": "9243b8e88024883120908c6a2617306cdbc68288cb41df052c13ce89583e97e8"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/mobile_reopen_test.dart",
+      "sha256": "263ba0772a10360a696d8937bcd044ce6d7636d22157b2ca513caa6e1bd9ff64"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/smart_document_test.dart",
+      "sha256": "3644d08306e71e845d69652791aa624c044a413fef27c76142971ba6556aea00"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/table_document_test.dart",
+      "sha256": "1080306c988906288f85bc1e4a7e892c525c9eed27bcd8396c07de887bf8c7e5"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/table_reopen_test.dart",
+      "sha256": "68c10277a5b668c712863b76d8ca970b7b1bee9e829d6456645bdf3c15ea7583"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/lib/dataset_main.dart",
+      "sha256": "61d720c1703e74437c741b98ca735fc49d573c065cc5208a13c91d9e931adb0e"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/lib/main.dart",
+      "sha256": "8b2cdab89db222cbbaa9d437a9e37bff372c2aa98631f6205c004cbb10bf091d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/pubspec.lock",
+      "sha256": "b4c816f4c184792612d608fcb8594e202044148bdc268d83608528314bf1af46"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/pubspec.yaml",
+      "sha256": "69561554b16b2c505c16935cf9dfddccd34c60158b10b466408814f9d210a399"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/hook/build.dart",
+      "sha256": "e21268dd77b1ed0a788f1f6ed4ac329f7e45cce977dae99ae083c8e9c7895daf"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/browser.dart",
+      "sha256": "24c0bed40220f82e433c4045e0ec204be4931fd71cfe6100ed0059d65b5e48e8"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/openmuse_smart_document.dart",
+      "sha256": "94896991496d4ddfa4843386a35c9024fb4943cf21925179c7265e27daac514f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/asset_repository.dart",
+      "sha256": "e35b6817b04d83464146603afea026ecc41c19edd8f12ace0a6681c87eb32097"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/cloud_provider.dart",
+      "sha256": "996bd778162a3db73ec008b655b9de9e7449160b40a474ee4bb47fcb3f73ce76"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/controller.dart",
+      "sha256": "36ff755a641ef9a1f9b56e3719fffec78981b1fc2ae8b3e59a503a76f6640d2d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/core_api.dart",
+      "sha256": "bb2d1e4a446d7f7963d363d43513130f73c587255d8f1b01b2710f793e9132f5"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/document_view.dart",
+      "sha256": "b9da82b8eb71b17360b684194efd344ffed6867d3f2dbc8902a1fa6d9e3f0345"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/editor_components.dart",
+      "sha256": "90dddcfccd996f2aa3c3addd43029abab0ce5ae35724c90f5eb3d343e671c409"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/image_commands.dart",
+      "sha256": "a4fbaddfa6f6d98991ee2ae00675d9c897e5735e530a9674610a100d3e98f8fb"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/image_components.dart",
+      "sha256": "a0da61b83dc21867c7d9518f4c6aa71f1ff48ddf87fd0f54e01add33e8148904"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/link_commands.dart",
+      "sha256": "7928ed24eae2e05ef1529ec7ed09cf63e5537ae866581417d3e88b07cc049a53"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/link_ui.dart",
+      "sha256": "4b51dfd8d907db7fe39cd56f4b7be99d2a69e098b348a52f7830eaf7f859a679"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/media_session.dart",
+      "sha256": "282c6ef5b5a59afffa3139df275252ec41a7093ad41fe118b65dcfb2bfcbaef3"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/mobile_document_view.dart",
+      "sha256": "29a20c193a44391633873f9888ad4a2c7270ac05d1c4a646a7b66a152a5468ab"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/native_core.dart",
+      "sha256": "a8cfd0fb33072c0cfc01ad46922f518454032dfcc25bfef2d8789e14cdf96b4a"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/native_core_io.dart",
+      "sha256": "086682737ecf68974f08c4df119272164b5f629d99c4dfdb6682a2b4be283ccf"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/store.dart",
+      "sha256": "a182a5c7f31aae9a73f83f3e24444be23677f686d4d1b3e6505555a51823d43b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/store_api.dart",
+      "sha256": "1028a813aa7cbb61f6737d3a6e4c55a3ffda344d16ef84979a7f1aabc653ea5c"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/store_io.dart",
+      "sha256": "03dfc9cdff5781376b91bf3a11552fb2062a95a1b35c37024cd76fe0f137ecf1"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/store_web.dart",
+      "sha256": "c1edba49614481e3b8b973102d9b3b993e38a212d427d44cc2647353433f7820"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/table_components.dart",
+      "sha256": "a4fac289df7864bb6ccbcdbc1a972768eb38a4e85486f8858dfd87891ce2ed9c"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/wasm_core.dart",
+      "sha256": "fc192a6324abec088378475bddd9c2c5ccbbe80ce6ad04d6e0e471a6792bbef5"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/pubspec.lock",
+      "sha256": "eacc27ef94a47a24ec5d276c43a6127f4187ddd2590a711add3847bb3954ba45"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/pubspec.yaml",
+      "sha256": "3dbd9fdab5577bcd691308a13ef74952be2b108eb59589731f789fb9934c2973"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/asset_repository_test.dart",
+      "sha256": "c1ee424afd4fd8103319ed509c9187d1a2c88352f213232031e151426e3aec3d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_deletion_test.dart",
+      "sha256": "51ca053f9e487dbefa73ad5d81ca0c813cce23b7758959e495894c765775f0ff"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart",
+      "sha256": "69ef12ef11a52f82fe244684cb61f32314944903865ba55fbbe60a0ebd9bd763"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/controller_test.dart",
+      "sha256": "f82ffc89a73822c26d4d2ea7483ea7263b3096f28318f9af6caca7927ad4330c"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart",
+      "sha256": "ec7b9567e139a5694d194fda4a702921c1ce9e5c54c030860e1b68c117225734"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart",
+      "sha256": "33dbf1a92318d97c43b8297b640b98134e66b0bbad2b9956401522cd5890bb3d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/editor_commands_test.dart",
+      "sha256": "e64ef1d9e97176a03f688e25d7be574f52385a8abee6a0ed02251016aeec7867"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/media_session_test.dart",
+      "sha256": "8825fd2563c70961833c47a492793d1edbcea4e82d31b22fa9ab97d56f114078"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/media_web_readback_test.dart",
+      "sha256": "1c42478c8a44fa4a16e09ef2f63c169a88fbdd4d485aa8d4769a87a4b0106c2d"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/mobile_view_test.dart",
+      "sha256": "428572b2acebda574ee3c11f700502d0f683d1b1b40ad36066f346ffd34b5c6f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/table_test.dart",
+      "sha256": "983ec53f3ceb20959cf8037b71a8488ac23072f1ca8622ffa18d62ef70a14360"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/web_core_test.dart",
+      "sha256": "734170ae09bb0c3a881327b58a45103be1c8101ebe5787da4af29c05c645daac"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/web_example/lib/dataset_main.dart",
+      "sha256": "b78459dccb887a90379f8d929786755e1fe85e2a1087531f8d7a332d4d3d257a"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/web_example/lib/main.dart",
+      "sha256": "3aba0230170834770f7353de0916d8392c703094182cd0cc1de98b8aedfb09d6"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/web_example/pubspec.lock",
+      "sha256": "1724cc485e21cb8354b50c524c0e9181b3ef6c79c06d30bc56bc6107e21faad3"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/web_example/pubspec.yaml",
+      "sha256": "aff656b75f18a7cfbe6a67713acb22a39869a96bbd6af6af3a3e76ddb5d1f92f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/runtime/appflowy_wire/Cargo.lock",
+      "sha256": "b9ca9a29bdf6aedfec49d39c08fa0386911dd099ffb69b2cf1952ac31f279aab"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/runtime/appflowy_wire/Cargo.toml",
+      "sha256": "3b24f27da9b5ea915c30d115cdad3ca0800d6567327c40558b850c1a7b725fe1"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/runtime/appflowy_wire/README.md",
+      "sha256": "e6a94594d3cb0dea5302c9b375ef2b2aff4cc1d4b129f18ad9f9d66f996435b4"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/runtime/appflowy_wire/examples/write_empty_update.rs",
+      "sha256": "898f0c8889e95c39caab911fcaf49f311af5db8bf8312208b9d7dafc4f00ac43"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/runtime/appflowy_wire/src/lib.rs",
+      "sha256": "6d429dd2a7fbcf3ce36e19e29914a1e05ea1b04fe21e0c3ba644c8c1616886dd"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust/Cargo.lock",
+      "sha256": "94796c5c8abda6c1d045d573da30379c67537975d0a8984bdae9d7f9fd2346a9"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust/Cargo.toml",
+      "sha256": "5f91ac6649f364b2ebe32ab2990088a6930470399a198ac87b4460ebe035f62a"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust/src/images.rs",
+      "sha256": "6b653d18e89819e4e8ce42e4e4fcc314a4183d8eab85dd2ec17a81f775f9a828"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust/src/lib.rs",
+      "sha256": "702b151cb98a1f40e928f7d153b148814e05d6bbd876cf7da08803a37cb0f5dd"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust/src/links.rs",
+      "sha256": "4ccfffabeeaede5be335ce254a46c4826a90efd66add267dbbe0d0a0ade9e9d3"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/build_dataset_web_core.py",
+      "sha256": "3882a16bef8a35cdf4c9dff65ab3b8127a034f33eafc1730e2fa49666f5c8e91"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/build_web_core.py",
+      "sha256": "217e9649e988a6353307bb6cebbef2e6ea405b53504324f30b47d2be1dbb7b56"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/collect_dataset_evidence.py",
+      "sha256": "b7f21a29a410c8639234201963d61abfcf1f79c466ad6bca6be6fc3d6bb22869"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/collect_media_evidence.py",
+      "sha256": "776c5336b55296bc9ac797615566703546e43009080a500e2e8a8bd893edf69b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/dev_stack.py",
+      "sha256": "20c19e92c8d9df22be0d976f0858be51453128a4d0b491e0c47237191c3132ef"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/provision_e2e.py",
+      "sha256": "0c4ae02ea1ae7358a3fd90e4f5bdbae4f4280d26bb987306b1444e6b82a4c1c7"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/serve_dataset_fixture.py",
+      "sha256": "16ce4b14ed44f4979954c8eb19281b3da6b8def01f32648057bb2988aa9471f4"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/serve_web_fixture.py",
+      "sha256": "2b7ca5197ecd34b555dce17bc1d08db9a3246b286ce3cf0f566a12525fed82cb"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/stop_web_fixture.py",
+      "sha256": "20684fa89a6d835d5b38aa4696ed2f18dc7f416ddde5dcbd885cec76f0e8aa8f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/test_dev_stack.py",
+      "sha256": "a8323549c87c87667560cac0560a3f299e6ac8fc9ac214010b4a2c1964bbf739"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/test_verify_parity.py",
+      "sha256": "d53b47a5f6f30baff780f3baca1cd1237a48cc149926203a3fd285841eab613e"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_database_probe.py",
+      "sha256": "13d7d4038d232f0701469c36a0ecba8bc70c0fb06cc126916d161b041e371285"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_dataset.py",
+      "sha256": "0fdf3a89848f61aa42e042ca1b2d3daef3102a4b5d4479d9b5d1def949aae242"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_editor.py",
+      "sha256": "c556a94fdf829b9140d6a1dfabd6699b7bbead08f265676d4a0890ea1abd9a32"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_media.py",
+      "sha256": "4eedaa7aad960073e0b53cc4d75040978401f926049493c64f22ab68e0cde65f"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_mobile.py",
+      "sha256": "0a06a9523d2a21183771093893d7891f2b2e3a2572ac4f8ecfb3cc5fee257f94"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_parity.py",
+      "sha256": "f7071c5e7ae8c37baa6a16e796fe32ebe7bbd25ea4f41a5db7137a1c2700555b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_phase1.py",
+      "sha256": "4b9ef7e866cbbc7fc74c3a15b6760ac7077c1ba851d95ef272cf6e3f019cd066"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_phase2.py",
+      "sha256": "9810e96b2406434f0035982c162e46e04d07be3c8c3b9e0ba21faeaf948cbcf0"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_private_assets.py",
+      "sha256": "ff68c805ae3c7b1d7859ae1dbdc492510caf246e6f621b2000d81c13befd926b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/scripts/verify_table.py",
+      "sha256": "681e0382d7ddf934bd14b7fc67f70341eac44b6ac1f172e468b05bac75a31a17"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/openmuse-upstream.json",
+      "sha256": "a6ce636b19d32628964b455bfd9fce130c87042909e3176f28934dc3238e21db"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/openmuse.patch",
+      "sha256": "9a81f49f089538084f44d362d46c08f6fc3fbf1c5227436bab4f0b8dad3e0c0b"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/upstream-files.json",
+      "sha256": "ddbad3223a85492b7ed82ca26654770ff320eba7f43f2cfda821d5fa719333fa"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/openmuse-upstream.json",
+      "sha256": "d4f182cf51f84d91e0de798454bb2808daa15117d327fec66c63ec814a69c731"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/openmuse.patch",
+      "sha256": "c22ddf95b3b120388777d922303a496778f398444d3fd63d5a9d192fdf8e3eb0"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_database/upstream-files.json",
+      "sha256": "801543f9ef94485077c5d57bd086c4d5ea9553cfdaff09395e970d4bc100c182"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_editor/openmuse-upstream.json",
+      "sha256": "e607c64a9e4b7ccc317107921098a782627e95ebea661e4b01c7b0e254cf6a29"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_editor/openmuse.patch",
+      "sha256": "0f001a84915ad0c04884511015cbaaf3f7cdcbacda5ba0796106290fc17671fd"
+    },
+    {
+      "path": "Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_editor/upstream-files.json",
+      "sha256": "3c045e3e9f7a0cd0b1c1d189c182794abd9e711bff37d222c0ac35fc436cf359"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/libs/database/src/collab/collab_storage.rs",
+      "sha256": "c50c3031c4e1e368fae6976e57cb1218621b2f3d83ca27f6368705510901a989"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/libs/database/src/collab/lifecycle.rs",
+      "sha256": "c3ff38fe76152ddde182c2082e9a6ad3fbfa2b54d853d4b4989ed17594bd32bc"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/libs/database/src/collab/mod.rs",
+      "sha256": "595ed19218cf53c21c67c27218c272e8ad932f599937a93e0351e56ef0771737"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate/src/collab/cache/collab_cache.rs",
+      "sha256": "6a46fabaf92b391f247022c9cd26ff3fef9fdf9e1ccf9bec56a51aafd56e180b"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate/src/collab/cache/disk_cache.rs",
+      "sha256": "88f238e52a481482ed96433282cc1bd2a2b8163a5f7cb31a9350916186747665"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate/src/collab/collab_store.rs",
+      "sha256": "84c83027b88e8c5151842093c4208963c1a4c7270a8027c1f589aed60a185514"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate/src/group/group_init.rs",
+      "sha256": "1b02cfd36bbba0427a7d6b58e9aeb57e053bea0b1f1fc9412e7dce4784c231fb"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/src/api/file_storage.rs",
+      "sha256": "0d1afe1eb609f8e1373a6b64ee2bcc1c420d2cec87dc84565965a1d335648829"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/src/api/mod.rs",
+      "sha256": "99b12954b764819ddc93f13607db73680e3b5ac4bfd42e459b41776d2be5e57a"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/src/api/private_assets.rs",
+      "sha256": "230219093b91e2f3bac822e3c187e2910dd903036b656774e404434eb3becde6"
+    },
+    {
+      "path": "Muse-Server/AppFlowy-Cloud/src/api/workspace.rs",
+      "sha256": "2635ef15c70ceb91010728d08ec2b2e51b1e7aec22b3a20f17f2b69033002a7a"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_reopen_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: fresh process no cloud credential dataset SDK resource reopen
+SMARTDOC_DATASET_REOPEN=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/DatasetStage1/dataset-1313ce56c91c/evidence
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following assertion was thrown running a test:
+A SemanticsHandle was active at the end of the test.
+All SemanticsHandle instances must be disposed by calling dispose() on the SemanticsHandle.
+
+When the exception was thrown, this was the stack:
+#0      WidgetTester._verifySemanticsHandlesWereDisposed (package:flutter_test/src/widget_tester.dart:1074:7)
+#1      WidgetTester._endOfTestVerifications (package:flutter_test/src/widget_tester.dart:1063:5)
+#2      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1968:22)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  fresh process no cloud credential dataset SDK resource reopen
+════════════════════════════════════════════════════════════════════════════════════════════════════
+01:09 +0 -1: fresh process no cloud credential dataset SDK resource reopen [E]
+  Test failed. See exception logs above.
+  The test description was: fresh process no cloud credential dataset SDK resource reopen
+  
+01:09 +0 -1: (tearDownAll)
+01:09 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_reopen_test.dart: fresh process no cloud credential dataset SDK resource reopen
