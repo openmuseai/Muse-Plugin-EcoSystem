@@ -248,6 +248,9 @@
       "evidence": "execution/phase4-20261106/result.json"
     }
   ],
-  "productStatus": "partial; iOS authenticated Cloud, fixed-grid table editing and credential-free fresh process passed; full MA acceptance not complete",
-  "latestExecution": "execution/phase5-table-20261106/result.json"
+  "productStatus": "partial; repeated iOS simulator slices qualified through P24; P25 native formula passed but slice freeze and full platform acceptance remain open",
+  "latestExecution": "execution/phase5-table-20261106/result.json",
+  "latestQualifiedSlice": "execution/phase24-single-select-board-20261107/result.json",
+  "inProgressSlice": "48-PHASE25-ORIGINAL-FORMULA-EDITOR.zh-CN.md",
+  "statusReview": "49-PROGRESS-REVIEW-20261107.zh-CN.md"
 }

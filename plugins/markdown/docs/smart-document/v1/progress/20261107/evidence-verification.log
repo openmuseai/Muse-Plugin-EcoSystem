@@ -1,0 +1,26 @@
+P24 evidence valid: 833 artifacts / 756 source-input snapshots; full product NOT COMPLETE
+P9: 47 artifacts verified; original choice-field/UI increment passed; full product NOT COMPLETE
+P15: 487 artifacts verified; concurrent rule/undo increment passed; full product NOT COMPLETE
+P7: 85 artifacts verified; independent Dataset and lifecycle increments passed; full product NOT COMPLETE
+P11: 328 artifacts verified; original dataset realtime/UI increment passed; full product NOT COMPLETE
+P16 evidence valid: 501 artifacts / 439 source-input snapshots; full product NOT COMPLETE
+P12: 356 artifacts verified; dates/contextual-history increment passed; full product NOT COMPLETE
+P10: 306 artifacts verified; original embedded database increment passed; full product NOT COMPLETE
+P13: 345 artifacts verified; lifecycle/authority increment passed; full product NOT COMPLETE
+P22 evidence valid: 801 artifacts / 711 source-input snapshots; full product NOT COMPLETE
+P6: 76 artifacts verified; link/image increments and database runtime qualification passed; full product NOT COMPLETE
+Mobile M3-A: 22 artifacts verified; iOS local/fresh process passed; Cloud/full acceptance remain incomplete
+P17 evidence valid: 505 artifacts / 448 source-input snapshots; full product NOT COMPLETE
+P20 evidence valid: 665 artifacts / 593 source-input snapshots; full product NOT COMPLETE
+P21 evidence valid: 757 artifacts / 688 source-input snapshots; full product NOT COMPLETE
+P19 evidence valid: 659 artifacts / 577 source-input snapshots; full product NOT COMPLETE
+P4: 50 artifacts verified; macOS/Web/iOS Cloud slices passed; full parity NOT COMPLETE
+P8: 74 artifacts verified; original realtime/UI increment passed; full product NOT COMPLETE
+P23 evidence valid: 815 artifacts / 730 source-input snapshots; full product NOT COMPLETE
+P5-A: 56 artifacts verified; fixed-grid macOS/iOS/Web collaboration slices passed; full parity NOT COMPLETE
+P18 evidence valid: 539 artifacts / 463 source-input snapshots; full product NOT COMPLETE
+P14: 389 artifacts verified; shared view increment passed; full product NOT COMPLETE
+Parity ledger valid: 36 editing + 14 collaboration requirements; full product acceptance: NOT COMPLETE
+P25: 381 original package files, original archive, one reversible compatibility patch and eight pinned formula references verified
+Parity ledger valid: 36 editing + 14 collaboration requirements; full product acceptance: NOT COMPLETE
+Full parity gate rejected: incomplete implementation/platform coverage; see each knownGaps entry

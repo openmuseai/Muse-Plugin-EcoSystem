@@ -419,5 +419,8 @@
       ]
     }
   ],
-  "datasetEvidence": "execution/phase7-dataset-20261106/result.json"
+  "datasetEvidence": "execution/phase7-dataset-20261106/result.json",
+  "statusReview": "49-PROGRESS-REVIEW-20261107.zh-CN.md",
+  "latestQualifiedSlice": "execution/phase24-single-select-board-20261107/result.json",
+  "inProgressSlice": "48-PHASE25-ORIGINAL-FORMULA-EDITOR.zh-CN.md"
 }

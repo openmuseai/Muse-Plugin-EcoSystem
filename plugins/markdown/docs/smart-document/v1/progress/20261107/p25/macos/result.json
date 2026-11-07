@@ -1,0 +1,19 @@
+{
+  "run": "formula-52f77f12dd23",
+  "device": "macos",
+  "status": "passed-formula-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "formula_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "formula_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 9,
+  "freshProcessChecks": 3
+}

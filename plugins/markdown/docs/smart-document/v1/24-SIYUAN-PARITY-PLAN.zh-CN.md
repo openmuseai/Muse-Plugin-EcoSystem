@@ -1,5 +1,7 @@
 # 思源编辑对齐与完整协作：开发与完成门槛
 
+> 2026-11-07 进度评审：本文件保留原范围和历史语境；当前状态、依赖及下一步以 [49 盘点](49-PROGRESS-REVIEW-20261107.zh-CN.md)、[50 更新计划](50-REVISED-DEVELOPMENT-PLAN.zh-CN.md) 与 [51 交接](51-DEVELOPMENT-HANDOFF.zh-CN.md) 为准。历史“未有 WS/presence”等描述不代表当前实现。
+
 2026-11-06 · **CR-SD-PARITY-20261106**。依据用户“继续基于方案推进，保证编辑功能与思源一致、协作完整”的要求，把完整目标拆为可验证能力，不将既有 0.1 有限切片等同于全量交付。原产品/交互快照及 Mobile 冻结稿保留；本变更追加验收范围和实施顺序。
 
 当前路线保持 Flutter 编辑面 + 同一 Rust native/WASM 文档内核 + Muse-Server/AppFlowy-Cloud。协作协议/runtime/provider 与内容领域分开；本轮新增稳定块地址属于智能文档领域，不放进中立 transport package，也不把 Office/数据集塞进文档 AST。

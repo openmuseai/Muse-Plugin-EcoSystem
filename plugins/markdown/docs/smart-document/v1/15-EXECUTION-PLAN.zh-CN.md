@@ -1,5 +1,7 @@
 # 冻结基线后的实施计划与开工清单
 
+> 2026-11-07 进度评审：本文件保留原范围和历史语境；当前状态、依赖及下一步以 [49 盘点](49-PROGRESS-REVIEW-20261107.zh-CN.md)、[50 更新计划](50-REVISED-DEVELOPMENT-PLAN.zh-CN.md) 与 [51 交接](51-DEVELOPMENT-HANDOFF.zh-CN.md) 为准。历史“未有 WS/presence”等描述不代表当前实现。
+
 > 2026-11-06 范围追加：用户要求完整思源编辑与完整协作，最新执行批次与完成门见 [24](24-SIYUAN-PARITY-PLAN.zh-CN.md)，实际 P4 结果见 [25](25-PHASE4-IMPLEMENTATION.zh-CN.md)。本文件的旧 0.1 人周/周数不作为全量对齐承诺。
 
 2026-11-05。产品输入：[SD-BL-1.2-20261105](13-FROZEN-BASELINE.zh-CN.md)；技术首稿：[14](14-ENGINEERING-DESIGN.zh-CN.md)；容量与全量任务：[06](06-IMPLEMENTATION-PLAN.zh-CN.md)。状态：**已形成 SD-F1 阶段工程冻结输入，第一阶段切片已实施并进入实际验收；全量 G0/M1–M4 尚未完成**。阶段 F1-01–06 及实际结果分别见 [16](16-PHASE1-IMPLEMENTATION.zh-CN.md)、[17](17-PHASE1-ACCEPTANCE.zh-CN.md)。

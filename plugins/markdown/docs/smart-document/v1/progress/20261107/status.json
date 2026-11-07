@@ -1,0 +1,103 @@
+{
+  "reviewId": "SD-REVIEW-20261107",
+  "asOf": "2026-11-07T22:52:13+08:00",
+  "timeZone": "Asia/Shanghai",
+  "scope": "Intelligent document and decoupled collaboration; management review, not a release acceptance",
+  "overall": "not-release-ready",
+  "scheduleVariance": "not-assessable-no-approved-capacity-and-effort-baseline",
+  "fullParityReady": false,
+  "families": {
+    "editing": 36,
+    "collaboration": 14,
+    "total": 50,
+    "implementation": {
+      "partial": 28,
+      "planned": 22
+    },
+    "completion": {
+      "partial": 28,
+      "unrun": 22
+    },
+    "fullyAccepted": 0
+  },
+  "platforms": {
+    "desktop": {
+      "partial": 28,
+      "unrun": 22
+    },
+    "web": {
+      "partial": 27,
+      "unrun": 23
+    },
+    "ios": {
+      "partial": 28,
+      "unrun": 22
+    },
+    "android": {
+      "unrun": 50
+    }
+  },
+  "latestFrozenSlice": {
+    "phase": "P24",
+    "result": "../../execution/phase24-single-select-board-20261107/result.json",
+    "artifacts": 833,
+    "sourceInputs": 756,
+    "fullProductAcceptance": "not-complete"
+  },
+  "activeSlice": {
+    "phase": "P25",
+    "state": "verification_pending",
+    "documentRustTests": 31,
+    "documentUnitTests": 51,
+    "manualBrowserFilepickerProbe": "not-qualified-missing-previous-upload-fixture; assertions-retained-and-tagged",
+    "appleUiChecksPerPlatform": 9,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webEndToEnd": "unrun",
+    "webStaticAnalysis": "six-style-info-issues-unresolved",
+    "executionFreeze": "not-created",
+    "fullProductAcceptance": "not-complete"
+  },
+  "validation": {
+    "immutableEvidenceGroups": 22,
+    "immutableEvidenceVerification": "checks.json",
+    "fullParityGateExpectedExitCode": 1,
+    "scope": "Archive integrity only; no claim every historical source matches current working tree"
+  },
+  "constraints": [
+    "Do not install or run Android until the user changes the standing iOS-only instruction",
+    "Do not change frozen baseline/execution archives",
+    "Do not count existing standalone SiYuan/Office features as intelligent-document acceptance",
+    "Do not modify unrelated PDF/Word/spreadsheet/Host/deploy changes"
+  ],
+  "nextWorkOrder": [
+    "SDR-01",
+    "SDR-02",
+    "SDR-03",
+    "SDR-04",
+    "SDR-05",
+    "SDR-06",
+    "SDR-07"
+  ],
+  "links": {
+    "review": "../../49-PROGRESS-REVIEW-20261107.zh-CN.md",
+    "plan": "../../50-REVISED-DEVELOPMENT-PLAN.zh-CN.md",
+    "backlog": "../../development-backlog.json",
+    "ledger": "../../siyuan-collaboration-parity.json"
+  },
+  "limitations": [
+    "Family counts indicate coverage states, not weighted work-completion percentages",
+    "No verified velocity, person-days, committed dates or earned-value baseline",
+    "P25 copied receipts are management evidence; no complete source/production release lock"
+  ],
+  "postReviewUpdates": {
+    "codeAndEvidenceLocalCommits": 53,
+    "commitsManifest": "../../handoff-commits.json",
+    "codeCheckpoint": "committed; clean build reproduction and P25 Web acceptance remain open",
+    "webStaticAnalysis": "passed after six pure-style fixes",
+    "sharedSmartDocumentSdkStaticAnalysis": "passed",
+    "clientPackageTestCommands": 8,
+    "clientPackageTestFailures": 0,
+    "pushed": false,
+    "gitExportChecks": 25
+  }
+}

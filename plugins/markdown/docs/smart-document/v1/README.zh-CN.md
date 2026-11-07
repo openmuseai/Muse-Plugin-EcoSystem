@@ -1,5 +1,7 @@
 # 可扩展协作文档平台与智能文档：设计基线 v1.2
 
+当前接力入口：[进度盘点](49-PROGRESS-REVIEW-20261107.zh-CN.md) · [更新开发计划](50-REVISED-DEVELOPMENT-PLAN.zh-CN.md) · [详细交接](51-DEVELOPMENT-HANDOFF.zh-CN.md) · [细粒度提交清单](handoff-commits.json)。P24 已冻结，P25 待完成 Web 全链，完整产品未通过。
+
 推进中：[P25 原数学公式编辑器](48-PHASE25-ORIGINAL-FORMULA-EDITOR.zh-CN.md)。复用原 AppFlowy 公式 schema 与 Flutter TeX 引擎；领域与界面已接入，三端端到端验收正在进行。
 
 已验收：[P24 单选分组看板](47-PHASE24-SINGLE-SELECT-BOARD.zh-CN.md)。原分组配置、共享卡片、详情编辑与跨组移动已完成三端真实协作切片验收；其它分组、完整视图及协作门仍开放。

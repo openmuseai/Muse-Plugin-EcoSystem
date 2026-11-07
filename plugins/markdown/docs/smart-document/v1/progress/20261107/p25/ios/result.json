@@ -1,0 +1,19 @@
+{
+  "run": "formula-4cf62c0e79ae",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-formula-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "formula_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "formula_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 9,
+  "freshProcessChecks": 3
+}

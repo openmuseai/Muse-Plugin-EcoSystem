@@ -1,0 +1,201 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_READY 390.0
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with text "编辑" (ignoring all but last): [
+  Text("编辑", inherit: true, size: 10.0, dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:00 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +5: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +6: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +7: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +8: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +8: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.mobile.insert'>]: [
+  IconButton-[<'smart-document.mobile.insert'>](tooltip: 插入, disabled, disabled, dependencies: [InheritedCupertinoTheme, _InheritedTheme, _LocalizationsScope-[GlobalKey#d362b]]),
+]
+00:00 +9: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +10: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +11: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +12: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +12 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cross_platform_test.dart: native prepares or verifies the same object used by the browser
+00:00 +12 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/media_web_readback_test.dart: real browser file chooser image is readable by a second user through native core [E]
+  Bad state: No element
+  dart:collection                          ListBase.singleWhere
+  test/media_web_readback_test.dart 30:30  main.<fn>
+  
+00:01 +12 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with text "公式" (ignoring all but last): [
+  Text("公式", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:01 +13 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  FilledButton-[<'smart-document.formula-apply'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#d362b]], state: _ButtonStyleState#95976),
+]
+00:01 +14 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +15 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +16 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +17 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +18 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +19 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +20 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_STATE epoch=1 types=[paragraph, math_equation] failure=null editable=true text=[完成, 智能文档, 已保存到本机 · 本机文档]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>]: [
+  InkWell-[<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>],
+]
+00:01 +21 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +22 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +23 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +24 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +25 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +26 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +27 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:01 +28 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_DRAFT
+00:01 +29 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_KEYS
+FORMULA_UI_REMOTE
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#765b1(DEFUNCT)(no widget),
+]
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:01 +30 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>]: [
+  InkWell-[<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>](dependencies: [_ScrollableScope]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#96cd9(DEFUNCT)(no widget),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>]: [
+  InkWell-[<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>](dependencies: [_ScrollableScope]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-delete'>]: [
+  TextButton-[<'smart-document.formula-delete'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#d362b]], state: _ButtonStyleState#5e770),
+]
+00:02 +31 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+00:02 +32 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>]: [
+  InkWell-[<'smart-document.formula.cf6dbeed-4b11-4ecb-a2a8-c0e8b6ba0ced'>],
+]
+00:02 +33 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 390.0
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:02 +34 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:02 +34 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_READY 700.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.insert'>]: [
+  PopupMenuButton<String>-[<'smart-document.insert'>](dependencies: [IconTheme, InheritedCupertinoTheme, _InheritedTheme, _LocalizationsScope-[GlobalKey#408ee]], state: PopupMenuButtonState<String>#d5f0a),
+]
+00:02 +35 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:02 +35 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_TAP Found 1 widget with text "公式" (ignoring all but last): [
+  Text("公式", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  FilledButton-[<'smart-document.formula-apply'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#408ee]], state: _ButtonStyleState#4a326),
+]
+00:02 +36 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:02 +37 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +38 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +38 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_STATE epoch=1 types=[paragraph, math_equation] failure=null editable=true text=[智能文档, 已保存到本机 · 本机文档]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>]: [
+  InkWell-[<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>],
+]
+00:03 +39 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +39 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_DRAFT
+FORMULA_UI_KEYS
+FORMULA_UI_REMOTE
+00:03 +40 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +40 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#9aedc(DEFUNCT)(no widget),
+]
+00:03 +41 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +41 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:03 +42 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +42 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>]: [
+  InkWell-[<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>](dependencies: [_ScrollableScope]),
+]
+00:03 +43 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +44 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +45 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +46 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +47 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +47 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 700.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#d0cd7(DEFUNCT)(no widget),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>]: [
+  InkWell-[<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>](dependencies: [_ScrollableScope]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-delete'>]: [
+  TextButton-[<'smart-document.formula-delete'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#408ee]], state: _ButtonStyleState#67810),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>]: [
+  InkWell-[<'smart-document.formula.3133acce-f0c0-4884-ad04-245bf6bc58fb'>],
+]
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:03 +48 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:03 +48 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/formula_test.dart: formula insertion, original renderer, stale source and readonly at 1200.0
+FORMULA_UI_READY 1200.0
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.insert'>]: [
+  PopupMenuButton<String>-[<'smart-document.insert'>](dependencies: [IconTheme, InheritedCupertinoTheme, _InheritedTheme, _LocalizationsScope-[GlobalKey#f9a3f]], state: PopupMenuButtonState<String>#c52fd),
+]
+FORMULA_UI_TAP Found 1 widget with text "公式" (ignoring all but last): [
+  Text("公式", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  FilledButton-[<'smart-document.formula-apply'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#f9a3f]], state: _ButtonStyleState#32747),
+]
+FORMULA_UI_STATE epoch=1 types=[paragraph, math_equation] failure=null editable=true text=[智能文档, 已保存到本机 · 本机文档]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>]: [
+  InkWell-[<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>],
+]
+FORMULA_UI_DRAFT
+FORMULA_UI_KEYS
+FORMULA_UI_REMOTE
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#1f1ac(DEFUNCT)(no widget),
+]
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>]: [
+  InkWell-[<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>](dependencies: [_ScrollableScope]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-apply'>]: [
+  StatefulElement#b6e17(DEFUNCT)(no widget),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>]: [
+  InkWell-[<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>](dependencies: [_ScrollableScope]),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula-delete'>]: [
+  TextButton-[<'smart-document.formula-delete'>](dependencies: [IconTheme, InheritedCupertinoTheme, MediaQuery, _InheritedTheme, _LocalizationsScope-[GlobalKey#f9a3f]], state: _ButtonStyleState#725ee),
+]
+FORMULA_UI_TAP Found 1 widget with key [<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>]: [
+  InkWell-[<'smart-document.formula.9259af84-c77f-48c2-aafc-abde340233ff'>],
+]
+FORMULA_UI_TAP Found 1 widget with text "取消" (ignoring all but last): [
+  Text("取消", dependencies: [DefaultSelectionStyle, DefaultTextStyle, MediaQuery]),
+]
+00:04 +49 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:04 +50 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
+00:07 +51 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/media_web_readback_test.dart: real browser file chooser image is readable by a second user through native core
