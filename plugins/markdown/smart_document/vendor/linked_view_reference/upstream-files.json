@@ -1,0 +1,38 @@
+[
+  {
+    "path": "upstream/siyuan/kernel/av/av.go",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "6177be2cfd82f3aa7e665d4b7c64b5977d00a60a",
+    "sha256": "3c5b2b3e9939e2f685f89fb2d7db522cc57aad87db12b3c3fc92b5d3b5441369"
+  },
+  {
+    "path": "upstream/siyuan/app/src/protyle/render/av/view.ts",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "bbb0cbacfc077d6cfca5a4f4d954d9f8c20e2357",
+    "sha256": "4d6cc363092271b67afd6dbdde574b5e90121b20ca0b7d8e90124efcc80e04af"
+  },
+  {
+    "path": "upstream/siyuan/LICENSE",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "gitBlob": "bae94e189e62df1b8d5bd11435d954b25bee9d7b",
+    "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/database/widgets/database_view_widget.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "gitBlob": "a218e1ed68f5f97ef45195fa90220afdfbfe9357",
+    "sha256": "0d903d7bd7d713b49956f163d8483d49e2eea0f4a980b4f36a02d57a1f054927"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/database/widgets/setting/database_layout_selector.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "gitBlob": "b4ee4134c92526820545dcf2244cb658c175aef7",
+    "sha256": "85635d8236b4ac994b81b3e0238403c5228d5691a41e96697aecf9a55ba3de8b"
+  },
+  {
+    "path": "upstream/appflowy/LICENSE",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "gitBlob": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+  }
+]
