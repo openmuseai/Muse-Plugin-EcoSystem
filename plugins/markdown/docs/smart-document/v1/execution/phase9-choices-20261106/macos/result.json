@@ -1,0 +1,19 @@
+{
+  "run": "choices-56dcf92cd2a1",
+  "device": "macos",
+  "status": "passed-choices-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "choices_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "choices_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 8,
+  "freshProcessChecks": 4
+}
