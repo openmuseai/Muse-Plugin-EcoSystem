@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "platform": "original-cloud-http",
+  "checks": [
+    "authenticated-object-scoped-upload-reuses-original-cloud-bucket",
+    "second-authenticated-member-reads-identical-private-bytes-with-no-public-cache",
+    "anonymous-and-nonmember-read-write-rejected",
+    "legacy-v0-v1-encoded-slash-and-metadata-read-bypasses-rejected",
+    "legacy-upload-delete-and-multipart-bypasses-rejected",
+    "digest-mismatch-and-missing-source-object-rejected",
+    "legacy-listing-does-not-disclose-private-asset-metadata",
+    "content-addressed-retry-is-idempotent-and-original-bytes-remain-intact"
+  ],
+  "objectId": "f5bbbe0b-1851-4ed1-a2f9-f5cab7a539ab",
+  "workspaceId": "bcf856e5-2861-4279-8864-3a23ed21e3c3",
+  "assetSha256": "26130bef17cdf40c886eba70e8f8d97746f90b6d1fb84be61352101dda2b2e9a",
+  "fullProductAcceptance": "not-complete"
+}

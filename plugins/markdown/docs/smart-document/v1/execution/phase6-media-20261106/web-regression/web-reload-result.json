@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "platform": "web-reload",
+  "checks": [
+    "page-reload-restores-actual-indexeddb-without-cloud",
+    "page-reload-restores-table-cell-identities-and-rich-text",
+    "page-reload-restores-image-registers-href-and-private-indexeddb-bytes"
+  ],
+  "date": "2026-11-06T03:54:35.961Z"
+}

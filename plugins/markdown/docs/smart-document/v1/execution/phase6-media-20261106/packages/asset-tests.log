@@ -1,0 +1,3 @@
+00:00 +0: loading test/reference_test.dart
+00:00 +0: test/reference_test.dart: construction and JSON ingress enforce the same content-neutral value invariants
+00:00 +1: All tests passed!

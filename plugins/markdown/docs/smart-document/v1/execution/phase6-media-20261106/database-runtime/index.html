@@ -1,0 +1,7 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>AppFlowy Database 原内核跨端资格验证</title>
+<style>body{font:16px system-ui;background:#f6f7fb;color:#25314b;max-width:840px;margin:60px auto;padding:24px}button{padding:14px 24px;border:0;border-radius:10px;background:#4c63d9;color:white;font-size:16px}pre{background:white;padding:24px;white-space:pre-wrap;border-radius:12px}small{display:block;margin:18px 0;color:#657087}</style>
+<h1>原 AppFlowy Database / Row · Web 运行验证</h1><p>固定版本 e59260e · 真实 WASM · 独立数据库与行对象</p>
+<button id="run">验证原内核</button><small>这是运行时资格探针。它不代表数据库编辑界面、18 类字段、5 类视图或数据库 Cloud 协作已完成。</small><pre data-testid="result">待验证</pre>
+<script src="muse_database_runtime_probe.js"></script><script>
+document.getElementById('run').onclick=async function(){this.disabled=true;try{await muse_database_probe();const result=JSON.parse(muse_database_probe.qualify_database_runtime());if(result.fieldCount!==3||result.viewCount!==1||result.rowCount!==1||result.databaseId===result.rowObjectId||!result.independentRowStateBytes)throw Error('invalid database shape');document.querySelector('pre').textContent=JSON.stringify({status:'passed-runtime-qualification',...result},null,2);}catch(e){document.querySelector('pre').textContent='FAILED: '+e;this.disabled=false;}};
+</script></html>

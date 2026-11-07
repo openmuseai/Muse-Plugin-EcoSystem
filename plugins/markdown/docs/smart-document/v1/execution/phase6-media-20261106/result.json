@@ -1,0 +1,35 @@
+{
+  "phase": "P6-20261106",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "rustTests": 17,
+    "flutterTests": 24,
+    "appleUiChecksPerPlatform": 7,
+    "appleFreshProcessChecksPerPlatform": 4,
+    "browserChecks": 10,
+    "browserReloadChecks": 3,
+    "nativeReadbackChecks": 6,
+    "privateAssetHttpGroups": 8,
+    "neutralAssetTests": 1,
+    "neutralTransportTests": 2
+  },
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  },
+  "remaining": [
+    "complete SiYuan editing and database semantics/UI",
+    "WebSocket presence/relative selections",
+    "durable ACK and server domain validation on all ingress",
+    "revocation/share/private comments/history",
+    "Agent/Office collaboration and production Host release"
+  ],
+  "limits": [
+    "Apple image pickers used injected synthetic input; actual browser filechooser independently exercised",
+    "runtime database qualification is not database product/UI acceptance",
+    "Android not installed under persistent user instruction"
+  ]
+}

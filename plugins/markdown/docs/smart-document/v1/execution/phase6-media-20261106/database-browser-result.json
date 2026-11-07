@@ -1,0 +1,9 @@
+{
+  "status": "passed-runtime-qualification",
+  "databaseId": "53624c55-aaf3-431d-a4dc-ef2b957e23a2",
+  "fieldCount": 3,
+  "independentRowStateBytes": 250,
+  "rowCount": 1,
+  "rowObjectId": "d78d0e8b-50ad-4440-bd19-2488161add8a",
+  "viewCount": 1
+}

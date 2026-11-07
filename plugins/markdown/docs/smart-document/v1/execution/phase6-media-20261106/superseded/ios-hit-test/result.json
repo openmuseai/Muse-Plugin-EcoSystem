@@ -1,0 +1,13 @@
+{
+  "run": "media-04a9e7e1d76d",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "failed",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "media_document_test.dart",
+      "exitCode": 1
+    }
+  ],
+  "reason": "RuntimeError: media_document_test.dart failed; inspect its local log"
+}

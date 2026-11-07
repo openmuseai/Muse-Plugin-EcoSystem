@@ -1,0 +1,12 @@
+[
+  {
+    "file": "muse_database_runtime_probe.js",
+    "bytes": 15018,
+    "sha256": "19e3ee30227daf65d2db63ebdefcb065164339ed01f9ea00110480bee3673500"
+  },
+  {
+    "file": "muse_database_runtime_probe_bg.wasm",
+    "bytes": 1358854,
+    "sha256": "087b0e2509d6b39cfcd64b4ccd401bbb23bcecfa6f4a5c7408962a9a42c15970"
+  }
+]

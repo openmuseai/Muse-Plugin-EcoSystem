@@ -1,0 +1,33 @@
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:170:23
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut {
+    |                       ^^^^^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                       |
+    |                       the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut<'_> {
+    |                                                   ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:210:19
+    |
+210 |   pub fn transact(&self) -> Transaction {
+    |                   ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                   |
+    |                   the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+210 |   pub fn transact(&self) -> Transaction<'_> {
+    |                                        ++++
+
+warning: `collab` (lib) generated 2 warnings (run `cargo fix --lib -p collab` to apply 2 suggestions)
+   Compiling muse-smart-document v0.1.0 (/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/rust)
+    Finished `release` profile [optimized] target(s) in 1.59s
+WASM core and JavaScript loader built and hashed
