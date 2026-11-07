@@ -1,0 +1,15 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/probes/realtime_client/test/ws2_cloud_test.dart
+00:00 +0: original WS2 peer update and actual nonmember read/write boundary
+00:01 +0 -1: original WS2 peer update and actual nonmember read/write boundary [E]
+  Expected: false
+    Actual: <true>
+  An authenticated outsider must not receive workspace content
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/ws2_cloud_test.dart 187:9                      main.<fn>
+  
+00:01 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/probes/realtime_client/test/ws2_cloud_test.dart: original WS2 peer update and actual nonmember read/write boundary

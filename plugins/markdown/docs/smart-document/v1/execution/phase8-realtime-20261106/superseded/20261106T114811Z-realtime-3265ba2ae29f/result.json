@@ -1,0 +1,13 @@
+{
+  "run": "realtime-3265ba2ae29f",
+  "device": "macos",
+  "status": "failed",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "realtime_document_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "reason": "RuntimeError: Missing/ambiguous realtime evidence"
+}

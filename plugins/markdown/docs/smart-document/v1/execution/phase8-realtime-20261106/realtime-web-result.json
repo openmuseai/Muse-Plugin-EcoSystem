@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "objectId": "8ad75444-8526-41ec-a1a0-243d37737d6e",
+  "checks": [
+    "actual-browser-input-in-original-editor-through-wasm",
+    "original-wasm-awareness-authenticated-two-user-presence",
+    "real-ws-update-renders-and-relative-anchor-follows-prefix",
+    "local-origin-undo-preserves-first-author-input",
+    "browser-reconnect-original-manifest-http-repair",
+    "untrusted-client-profile-is-not-rendered-as-identity",
+    "original-null-awareness-removes-avatar-and-remote-selection",
+    "indexeddb-content-checkpoint-does-not-persist-presence"
+  ],
+  "platform": "web",
+  "date": "2026-11-06T12:08:48.077Z"
+}

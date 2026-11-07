@@ -1,0 +1,1088 @@
+diff --git a/libs/appflowy-proto/src/client_message.rs b/libs/appflowy-proto/src/client_message.rs
+index ce3b66a..e796280 100644
+--- a/libs/appflowy-proto/src/client_message.rs
++++ b/libs/appflowy-proto/src/client_message.rs
+@@ -206,6 +206,11 @@ impl TryFrom<pb::Message> for ClientMessage {
+       Some(payload) => match payload {
+         Payload::CollabMessage(value) => {
+           let object_id = Uuid::parse_str(&value.object_id)?;
++          if !(0..=5).contains(&value.collab_type)
++            && !(value.collab_type == 6 && matches!(value.data, Some(Data::AwarenessUpdate(_))))
++          {
++            return Err(Error::MissingFields);
++          }
+           let collab_type = CollabType::from(value.collab_type);
+ 
+           match value.data {
+@@ -222,14 +227,18 @@ impl TryFrom<pb::Message> for ClientMessage {
+                   .last_message_id
+                   .as_ref()
+                   .ok_or(Error::MissingFields)?
+-                  .counter as u16,
++                  .counter
++                  .try_into()
++                  .map_err(|_| Error::InvalidRid)?,
+               },
+               state_vector: proto.state_vector,
+             }),
+             Some(Data::Update(proto)) => Ok(ClientMessage::Update {
+               object_id,
+               collab_type,
+-              flags: UpdateFlags::try_from(proto.flags as u8)?,
++              flags: UpdateFlags::try_from(
++                u8::try_from(proto.flags).map_err(|_| Error::MissingFields)?,
++              )?,
+               update: proto.payload,
+             }),
+             Some(Data::AwarenessUpdate(proto)) => Ok(ClientMessage::AwarenessUpdate {
+@@ -245,3 +254,36 @@ impl TryFrom<pb::Message> for ClientMessage {
+     }
+   }
+ }
++
++#[cfg(test)]
++mod boundary_tests {
++  use super::*;
++  #[test]
++  fn client_proto_rejects_narrowing_values_instead_of_wrapping() {
++    let frame = ClientMessage::Update {
++      object_id: Uuid::nil(),
++      collab_type: CollabType::Document,
++      flags: UpdateFlags::Lib0v1,
++      update: vec![0, 0],
++    };
++    let mut proto = pb::Message::from(frame);
++    if let Some(Payload::CollabMessage(value)) = &mut proto.payload {
++      if let Some(Data::Update(update)) = &mut value.data {
++        update.flags = 256;
++      }
++    }
++    assert!(ClientMessage::try_from(proto).is_err());
++    let mut proto = pb::Message::from(ClientMessage::Manifest {
++      object_id: Uuid::nil(),
++      collab_type: CollabType::Document,
++      last_message_id: Rid::default(),
++      state_vector: vec![0],
++    });
++    if let Some(Payload::CollabMessage(value)) = &mut proto.payload {
++      if let Some(Data::SyncRequest(sync)) = &mut value.data {
++        sync.last_message_id.as_mut().unwrap().counter = 65536;
++      }
++    }
++    assert!(ClientMessage::try_from(proto).is_err());
++  }
++}
+diff --git a/libs/database/src/collab/collab_storage.rs b/libs/database/src/collab/collab_storage.rs
+index f99064f..c9685f6 100644
+--- a/libs/database/src/collab/collab_storage.rs
++++ b/libs/database/src/collab/collab_storage.rs
+@@ -32,6 +32,14 @@ impl From<i64> for GetCollabOrigin {
+ /// Implementors of this trait should provide the actual storage logic, be it in-memory, file-based, database-backed, etc.
+ #[async_trait]
+ pub trait CollabStore: Send + Sync + 'static {
++  /// Reject registered cross-scope/type IDs and tombstones before stale caches/streams.
++  async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()>;
++
+   async fn upsert_collab(
+     &self,
+     workspace_id: Uuid,
+diff --git a/libs/database/src/collab/mod.rs b/libs/database/src/collab/mod.rs
+index a3fdf62..f925388 100644
+--- a/libs/database/src/collab/mod.rs
++++ b/libs/database/src/collab/mod.rs
+@@ -1,5 +1,7 @@
+ mod collab_db_ops;
+ mod collab_storage;
++mod lifecycle;
++pub use lifecycle::{check_collab_lifecycle, check_collab_lifecycle_any_type};
+ 
+ pub use collab_db_ops::*;
+ use collab_entity::CollabType;
+diff --git a/services/appflowy-collaborate/src/collab/cache/collab_cache.rs b/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
+index 9c4707e..aeec2ba 100644
+--- a/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
++++ b/services/appflowy-collaborate/src/collab/cache/collab_cache.rs
+@@ -46,6 +46,29 @@ pub struct CollabCache {
+ }
+ 
+ impl CollabCache {
++  pub async fn check_collab_lifecycle_any_type(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++  ) -> Result<(), AppError> {
++    self
++      .disk_cache
++      .check_collab_lifecycle_any_type(workspace_id, object_id)
++      .await
++  }
++
++  pub async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> Result<(), AppError> {
++    self
++      .disk_cache
++      .check_collab_lifecycle(workspace_id, object_id, collab_type)
++      .await
++  }
++
+   pub fn new(
+     thread_pool: Arc<ThreadPoolNoAbort>,
+     redis_conn_manager: redis::aio::ConnectionManager,
+@@ -261,6 +284,9 @@ impl CollabCache {
+   ) -> Result<TimestampedEncodedCollab, AppError> {
+     let object_id = query.object_id;
+     let collab_type = query.collab_type;
++    self
++      .check_collab_lifecycle(workspace_id, &object_id, collab_type)
++      .await?;
+     let (rid, mut encoded_collab) = match self.get_snapshot_collab(workspace_id, query).await {
+       Ok((rid, encoded_collab)) => {
+         debug!(
+@@ -526,6 +552,18 @@ impl CollabCache {
+     let mut dirty_queries = Vec::new();
+ 
+     for query in queries {
++      if let Err(error) = self
++        .check_collab_lifecycle(workspace_id, &query.object_id, query.collab_type)
++        .await
++      {
++        results.insert(
++          query.object_id,
++          QueryCollabResult::Failed {
++            error: error.to_string(),
++          },
++        );
++        continue;
++      }
+       if self.is_dirty_since(&query.object_id, MillisSeconds::now()) {
+         dirty_queries.push(query);
+       } else {
+diff --git a/services/appflowy-collaborate/src/collab/cache/disk_cache.rs b/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
+index 02bbab7..a719664 100644
+--- a/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
++++ b/services/appflowy-collaborate/src/collab/cache/disk_cache.rs
+@@ -38,6 +38,24 @@ pub struct CollabDiskCache {
+ }
+ 
+ impl CollabDiskCache {
++  pub async fn check_collab_lifecycle_any_type(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++  ) -> AppResult<()> {
++    database::collab::check_collab_lifecycle_any_type(&self.pg_pool, workspace_id, object_id).await
++  }
++
++  pub async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()> {
++    database::collab::check_collab_lifecycle(&self.pg_pool, workspace_id, object_id, collab_type)
++      .await
++  }
++
+   pub fn new(
+     thread_pool: Arc<ThreadPoolNoAbort>,
+     pg_pool: PgPool,
+diff --git a/services/appflowy-collaborate/src/collab/collab_manager.rs b/services/appflowy-collaborate/src/collab/collab_manager.rs
+index 8614582..591c05d 100644
+--- a/services/appflowy-collaborate/src/collab/collab_manager.rs
++++ b/services/appflowy-collaborate/src/collab/collab_manager.rs
+@@ -1,7 +1,7 @@
+ use crate::collab::cache::mem_cache::MillisSeconds;
+ use crate::collab::cache::CollabCache;
+ use access_control::act::Action;
+-use access_control::collab::CollabAccessControl;
++use access_control::collab::{CollabAccessControl, RealtimeAccessControl};
+ use anyhow::anyhow;
+ use app_error::AppError;
+ use appflowy_proto::{ObjectId, Rid, TimestampedEncodedCollab, UpdateFlags, WorkspaceId};
+@@ -43,6 +43,7 @@ use yrs::{ReadTxn, StateVector, Update};
+ pub struct CollabManager {
+   collab_cache: Arc<CollabCache>,
+   access_control: Arc<dyn CollabAccessControl>,
++  realtime_access_control: Arc<dyn RealtimeAccessControl>,
+   update_streams: Arc<StreamRouter>,
+   awareness_broadcast: Arc<AwarenessGossip>,
+   connection_manager: ConnectionManager,
+@@ -55,6 +56,7 @@ impl CollabManager {
+   pub fn new(
+     thread_pool: Arc<ThreadPoolNoAbort>,
+     access_control: Arc<dyn CollabAccessControl>,
++    realtime_access_control: Arc<dyn RealtimeAccessControl>,
+     collab_cache: Arc<CollabCache>,
+     connection_manager: ConnectionManager,
+     update_streams: Arc<StreamRouter>,
+@@ -63,6 +65,7 @@ impl CollabManager {
+   ) -> Arc<Self> {
+     Arc::new(Self {
+       access_control,
++      realtime_access_control,
+       collab_cache,
+       update_streams,
+       awareness_broadcast,
+@@ -139,15 +142,20 @@ impl CollabManager {
+     uid: &i64,
+     object_id: &ObjectId,
+   ) -> AppResult<()> {
+-    let collab_exists = self.collab_cache.is_exist(workspace_id, object_id).await?;
+-    if !collab_exists {
+-      // If the collab does not exist, we should not enforce the access control. We consider the user
+-      // has the permission to read the collab
+-      return Ok(());
+-    }
+     self
+       .access_control
+       .enforce_action(workspace_id, uid, object_id, Action::Read)
++      .await?;
++    if !self
++      .realtime_access_control
++      .can_read_collab(workspace_id, uid, object_id)
++      .await?
++    {
++      return Err(AppError::NotEnoughPermissions);
++    }
++    self
++      .collab_cache
++      .check_collab_lifecycle_any_type(workspace_id, object_id)
+       .await
+   }
+ 
+@@ -157,15 +165,20 @@ impl CollabManager {
+     uid: &i64,
+     object_id: &ObjectId,
+   ) -> AppResult<()> {
+-    let collab_exists = self.collab_cache.is_exist(workspace_id, object_id).await?;
+-    if !collab_exists {
+-      // If the collab does not exist, we should not enforce the access control. we consider the user
+-      // has the permission to write the collab
+-      return Ok(());
+-    }
+     self
+       .access_control
+       .enforce_action(workspace_id, uid, object_id, Action::Write)
++      .await?;
++    if !self
++      .realtime_access_control
++      .can_write_collab(workspace_id, uid, object_id)
++      .await?
++    {
++      return Err(AppError::NotEnoughPermissions);
++    }
++    self
++      .collab_cache
++      .check_collab_lifecycle_any_type(workspace_id, object_id)
+       .await
+   }
+ 
+@@ -192,16 +205,9 @@ impl CollabManager {
+     state_vector: StateVector,
+   ) -> AppResult<CollabState> {
+     let params = QueryCollab::new(object_id, collab_type);
+-    let collab_exists = self
+-      .collab_cache
+-      .is_exist(&workspace_id, &object_id)
++    self
++      .enforce_read_collab(&workspace_id, &user_id, &object_id)
+       .await?;
+-    if collab_exists {
+-      self
+-        .access_control
+-        .enforce_action(&workspace_id, &user_id, &object_id, Action::Read)
+-        .await?;
+-    }
+ 
+     let TimestampedEncodedCollab {
+       encoded_collab,
+@@ -252,6 +258,15 @@ impl CollabManager {
+       yrs::Update::decode_v1(&update)
+     );
+ 
++    if let Some(uid) = sender.client_user_id() {
++      self
++        .enforce_write_collab(&workspace_id, &uid, &object_id)
++        .await?;
++    }
++    self
++      .collab_cache
++      .check_collab_lifecycle(&workspace_id, &object_id, collab_type)
++      .await?;
+     let key = UpdateStreamMessage::stream_key(&workspace_id);
+     let mut conn = self.connection_manager.clone();
+     let rid: String = UpdateStreamMessage::prepare_command(
+@@ -291,6 +306,11 @@ impl CollabManager {
+     sender: CollabOrigin,
+     update: AwarenessUpdate,
+   ) -> anyhow::Result<()> {
++    if let Some(uid) = sender.client_user_id() {
++      self
++        .enforce_read_collab(&workspace_id, &uid, &object_id)
++        .await?;
++    }
+     let msg = AwarenessStreamUpdate {
+       data: update,
+       sender,
+diff --git a/services/appflowy-collaborate/src/collab/collab_store.rs b/services/appflowy-collaborate/src/collab/collab_store.rs
+index bedb81c..8075e58 100644
+--- a/services/appflowy-collaborate/src/collab/collab_store.rs
++++ b/services/appflowy-collaborate/src/collab/collab_store.rs
+@@ -149,6 +149,18 @@ impl CollabStoreImpl {
+ 
+ #[async_trait]
+ impl CollabStore for CollabStoreImpl {
++  async fn check_collab_lifecycle(
++    &self,
++    workspace_id: &Uuid,
++    object_id: &Uuid,
++    collab_type: CollabType,
++  ) -> AppResult<()> {
++    self
++      .cache
++      .check_collab_lifecycle(workspace_id, object_id, collab_type)
++      .await
++  }
++
+   async fn upsert_collab(
+     &self,
+     workspace_id: Uuid,
+@@ -158,6 +170,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_or_update_permission(uid, &workspace_id, &params.object_id)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     self
+       .cache
+       .insert_encode_collab_to_disk(&workspace_id, uid, params)
+@@ -174,6 +189,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_or_update_permission(uid, &workspace_id, &params.object_id)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     trace!(
+       "Queue insert collab:{}:{}",
+       params.object_id,
+@@ -215,6 +233,9 @@ impl CollabStore for CollabStoreImpl {
+     self
+       .check_write_workspace_permission(&workspace_id, uid)
+       .await?;
++    self
++      .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++      .await?;
+     self
+       .access_control
+       .update_access_level_policy(uid, &params.object_id, AFAccessLevel::FullAccess)
+@@ -251,6 +272,9 @@ impl CollabStore for CollabStoreImpl {
+       .await?;
+ 
+     for params in &params_list {
++      self
++        .check_collab_lifecycle(&workspace_id, &params.object_id, params.collab_type)
++        .await?;
+       self
+         .access_control
+         .update_access_level_policy(uid, &params.object_id, AFAccessLevel::FullAccess)
+@@ -286,13 +310,10 @@ impl CollabStore for CollabStoreImpl {
+         uid,
+         object_id
+       );
+-      let collab_exists = self.cache.is_exist(workspace_id, object_id).await?;
+-      if collab_exists {
+-        self
+-          .access_control
+-          .enforce_action(workspace_id, &uid, object_id, Action::Read)
+-          .await?;
+-      }
++      self
++        .access_control
++        .enforce_action(workspace_id, &uid, object_id, Action::Read)
++        .await?;
+     }
+ 
+     self
+diff --git a/services/appflowy-collaborate/src/group/group_init.rs b/services/appflowy-collaborate/src/group/group_init.rs
+index 5246a46..f39e12d 100644
+--- a/services/appflowy-collaborate/src/group/group_init.rs
++++ b/services/appflowy-collaborate/src/group/group_init.rs
+@@ -356,14 +356,10 @@ impl CollabGroup {
+     &self,
+     state_vector: StateVector,
+   ) -> Result<Vec<u8>, RealtimeError> {
+-    {
+-      // first check if we need to send any updates
+-      let collab_sv = self.state.state_vector.read().await;
+-      if *collab_sv <= state_vector {
+-        return Ok(vec![]);
+-      }
+-    }
+-
++    // A state vector accounts for inserted structs, not the deletion set.
++    // Equal vectors can still differ after delete/undo operations. Always let
++    // Yrs encode the diff, including deletion ranges, instead of returning an
++    // empty update based only on clock comparison.
+     let encoded_collab = self.encode_collab().await?;
+     let options = CollabOptions::new(self.object_id().to_string(), default_client_id())
+       .with_data_source(DataSource::DocStateV1(encoded_collab.doc_state.into()));
+@@ -657,6 +653,12 @@ impl CollabGroup {
+     origin: &CollabOrigin,
+     msg: Message,
+   ) -> Result<Option<Vec<u8>>, RTProtocolError> {
++    state
++      .persister
++      .storage
++      .check_collab_lifecycle(&state.workspace_id, &state.object_id, state.collab_type)
++      .await
++      .map_err(|e| RTProtocolError::Internal(e.into()))?;
+     match msg {
+       Message::Sync(msg) => match msg {
+         SyncMessage::SyncStep1(sv) => Self::handle_sync_step1(state, &sv).await,
+@@ -985,6 +987,11 @@ impl CollabPersister {
+     sender: CollabOrigin,
+     update: Vec<u8>,
+   ) -> Result<MessageId, StreamError> {
++    self
++      .storage
++      .check_collab_lifecycle(&self.workspace_id, &self.object_id, self.collab_type)
++      .await
++      .map_err(|e| StreamError::Internal(e.into()))?;
+     let len = update.len();
+     // send updates to redis queue
+     let update = CollabStreamUpdate::new(update, sender, UpdateFlags::default());
+diff --git a/services/appflowy-collaborate/src/ws2/actors/session.rs b/services/appflowy-collaborate/src/ws2/actors/session.rs
+index 91ddcc8..a7ccde3 100644
+--- a/services/appflowy-collaborate/src/ws2/actors/session.rs
++++ b/services/appflowy-collaborate/src/ws2/actors/session.rs
+@@ -13,8 +13,9 @@ use collab_stream::model::MessageId;
+ use std::time::{Duration, Instant};
+ use tracing::error;
+ use yrs::block::ClientID;
++use yrs::encoding::read::Read;
+ use yrs::sync::AwarenessUpdate;
+-use yrs::updates::decoder::Decode;
++use yrs::updates::decoder::{Decode, DecoderV1};
+ use yrs::StateVector;
+ 
+ pub const HEARTBEAT: Duration = Duration::from_secs(5);
+@@ -232,6 +233,14 @@ impl StreamHandler<Result<ws::Message, ws::ProtocolError>> for WsSession {
+               Item::FirstBinary(bytes) => self.buf = Some(bytes.into()),
+               Item::Continue(bytes) => {
+                 if let Some(ref mut buf) = self.buf {
++                  if buf.len().saturating_add(bytes.len())
++                    > collab_rt_entity::max_sync_message_size()
++                  {
++                    self.buf = None;
++                    ctx.close(Some((CloseCode::Size, "message too large").into()));
++                    ctx.stop();
++                    return;
++                  }
+                   buf.extend_from_slice(&bytes);
+                 } else {
+                   ctx.close(Some(CloseReason::from((
+@@ -242,6 +251,13 @@ impl StreamHandler<Result<ws::Message, ws::ProtocolError>> for WsSession {
+               },
+               Item::Last(bytes) => {
+                 if let Some(mut buf) = self.buf.take() {
++                  if buf.len().saturating_add(bytes.len())
++                    > collab_rt_entity::max_sync_message_size()
++                  {
++                    ctx.close(Some((CloseCode::Size, "message too large").into()));
++                    ctx.stop();
++                    return;
++                  }
+                   buf.extend_from_slice(&bytes);
+                   self.handle_protocol(buf.freeze(), ctx);
+                 } else {
+@@ -314,6 +330,16 @@ impl TryFrom<ClientMessage> for InputMessage {
+         ..
+       } => Ok(InputMessage::Update(collab_type, flags, update)),
+       ClientMessage::AwarenessUpdate { awareness, .. } => {
++        if awareness.len() > 16 * 1024 {
++          return Err("Awareness too large".into());
++        }
++        let mut decoder = DecoderV1::from(awareness.as_slice());
++        let clients: u64 = decoder
++          .read_var()
++          .map_err(|_| "Invalid awareness count".to_string())?;
++        if clients > 128 {
++          return Err("Too many awareness clients".into());
++        }
+         let awareness = AwarenessUpdate::decode_v1(&awareness).map_err(|err| err.to_string())?;
+         Ok(InputMessage::AwarenessUpdate(awareness))
+       },
+diff --git a/services/appflowy-collaborate/src/ws2/actors/workspace.rs b/services/appflowy-collaborate/src/ws2/actors/workspace.rs
+index a1f8231..215b5c1 100644
+--- a/services/appflowy-collaborate/src/ws2/actors/workspace.rs
++++ b/services/appflowy-collaborate/src/ws2/actors/workspace.rs
+@@ -25,6 +25,7 @@ use std::sync::Arc;
+ use std::time::{Duration, Instant};
+ use tokio::sync::RwLock;
+ use yrs::block::ClientID;
++use yrs::sync::AwarenessUpdate;
+ use yrs::updates::encoder::Encode;
+ use yrs::{StateVector, Update};
+ 
+@@ -105,6 +106,19 @@ impl Workspace {
+           .await
+         {
+           Ok(state) => {
++            sender.conn.do_send(WsOutput {
++              message: ServerMessage::AccessChanges {
++                object_id: msg.object_id,
++                collab_type,
++                can_read: true,
++                can_write: sender
++                  .can_write_collab(&store, &msg.object_id)
++                  .await
++                  .is_ok(),
++                reason: AccessChangedReason::PermissionDenied,
++              },
++            });
++
+             tracing::trace!(
+               "replying to {} manifest (client msg id: {}, server msg id: {})",
+               msg.object_id,
+@@ -159,6 +173,17 @@ impl Workspace {
+               },
+             });
+           },
++          Err(AppError::NotEnoughPermissions) => {
++            sender.conn.do_send(WsOutput {
++              message: ServerMessage::AccessChanges {
++                object_id: msg.object_id,
++                collab_type,
++                can_read: false,
++                can_write: false,
++                reason: AccessChangedReason::PermissionDenied,
++              },
++            });
++          },
+           Err(err) => {
+             tracing::error!(
+               "failed to resolve state of {}/{}/{}: {}",
+@@ -176,17 +201,20 @@ impl Workspace {
+           return;
+         }
+ 
+-        // Check if the user has permission to write to the collab
+-        if sender
+-          .can_write_collab(&store, &msg.object_id)
+-          .await
+-          .is_err()
+-        {
+-          tracing::trace!(
+-            "user {} lack of permission to write to collab {}",
+-            sender.uid,
+-            msg.object_id,
+-          );
++        if let Err(error) = sender.can_write_collab(&store, &msg.object_id).await {
++          sender.conn.do_send(WsOutput {
++            message: ServerMessage::AccessChanges {
++              object_id: msg.object_id,
++              collab_type,
++              can_read: sender.can_read_collab(&store, &msg.object_id).await.is_ok(),
++              can_write: false,
++              reason: if matches!(error, AppError::RecordDeleted(_)) {
++                AccessChangedReason::ObjectDeleted
++              } else {
++                AccessChangedReason::PermissionDenied
++              },
++            },
++          });
+           return;
+         }
+ 
+@@ -203,7 +231,17 @@ impl Workspace {
+           tracing::error!("failed to publish update: {:?}", err);
+         }
+       },
+-      InputMessage::AwarenessUpdate(update) => {
++      InputMessage::AwarenessUpdate(mut update) => {
++        if sender
++          .can_read_collab(&store, &msg.object_id)
++          .await
++          .is_err()
++        {
++          return;
++        }
++        if normalize_awareness(&mut update, msg.client_id, sender.uid).is_err() {
++          return;
++        }
+         if let Err(err) = store
+           .publish_awareness_update(
+             msg.workspace_id,
+@@ -465,26 +503,32 @@ impl StreamHandler<(ObjectId, Arc<AwarenessStreamUpdate>)> for Workspace {
+   fn handle(
+     &mut self,
+     (object_id, msg): (ObjectId, Arc<AwarenessStreamUpdate>),
+-    _: &mut Self::Context,
++    ctx: &mut Self::Context,
+   ) {
+-    tracing::trace!(
+-      "received awareness update for {}/{}",
+-      self.workspace_id,
+-      object_id
+-    );
+-    for (session_id, sender) in self.sessions_by_client_id.iter() {
+-      if sender.collab_origin == msg.sender {
+-        continue; // skip the sender
++    let store = self.manager.clone();
++    let sessions = self
++      .sessions_by_client_id
++      .values()
++      .filter(|s| s.collab_origin != msg.sender)
++      .cloned()
++      .collect::<Vec<_>>();
++    ctx.spawn(
++      async move {
++        for session in sessions {
++          if session.can_read_collab(&store, &object_id).await.is_ok() {
++            session.conn.do_send(WsOutput {
++              message: ServerMessage::AwarenessUpdate {
++                object_id,
++                collab_type: CollabType::Unknown,
++                awareness: msg.data.encode_v1().into(),
++              },
++            });
++          }
++        }
+       }
+-      tracing::trace!("sending awareness update to {}", session_id);
+-      sender.conn.do_send(WsOutput {
+-        message: ServerMessage::AwarenessUpdate {
+-          object_id,
+-          collab_type: CollabType::Unknown,
+-          awareness: msg.data.encode_v1().into(),
+-        },
+-      });
+-    }
++      .into_actor(self)
++      .map(|_, _, _| ()),
++    );
+   }
+ }
+ 
+@@ -816,71 +860,49 @@ impl WorkspaceSessionHandle {
+     }
+   }
+ 
++  // A cached hint is never an authorization grant. In particular Ok(false)
++  // must not become .is_ok() at a caller; the result has no boolean payload.
+   async fn can_write_collab(
+     &self,
+     store: &Arc<CollabManager>,
+     object_id: &ObjectId,
+-  ) -> Result<bool, AppError> {
+-    let now = Instant::now();
+-    if let Some((permission, cached_at)) = self.permission_cache.read().await.get(object_id) {
+-      if now.duration_since(*cached_at) < self.cache_ttl {
+-        return Ok(permission.can_write());
+-      }
+-    }
+-
+-    // Cache miss or expired, check permission and update cache
+-    let has_permission = store
++  ) -> Result<(), AppError> {
++    let decision = store
+       .enforce_write_collab(&self.workspace_id, &self.uid, object_id)
+-      .await
+-      .is_ok();
+-
+-    // Update cache with the actual permission state
+-    let permission_type = if has_permission {
+-      PermissionType::Write
+-    } else {
+-      PermissionType::NoAccess
+-    };
+-
+-    self
+-      .permission_cache
+-      .write()
+-      .await
+-      .insert(*object_id, (permission_type, now));
+-
+-    Ok(has_permission)
++      .await;
++    self.permission_cache.write().await.insert(
++      *object_id,
++      (
++        if decision.is_ok() {
++          PermissionType::Write
++        } else {
++          PermissionType::NoAccess
++        },
++        Instant::now(),
++      ),
++    );
++    decision
+   }
+-
+   async fn can_read_collab(
+     &self,
+     store: &Arc<CollabManager>,
+     object_id: &ObjectId,
+-  ) -> Result<bool, AppError> {
+-    let now = Instant::now();
+-    if let Some((permission, cached_at)) = self.permission_cache.read().await.get(object_id) {
+-      if now.duration_since(*cached_at) < self.cache_ttl {
+-        return Ok(permission.can_read());
+-      }
+-    }
+-
+-    let has_permission = store
++  ) -> Result<(), AppError> {
++    let decision = store
+       .enforce_read_collab(&self.workspace_id, &self.uid, object_id)
+-      .await
+-      .is_ok();
+-
+-    let mut cache = self.permission_cache.write().await;
+-    if has_permission {
+-      // Check if there's already a higher permission cached
+-      if let Some((existing_permission, _)) = cache.get(object_id) {
+-        if existing_permission.is_higher_than(&PermissionType::Read) {
+-          return Ok(true);
+-        }
+-      }
+-      cache.insert(*object_id, (PermissionType::Read, now));
+-    } else {
+-      cache.insert(*object_id, (PermissionType::NoAccess, now));
+-    }
+-
+-    Ok(has_permission)
++      .await;
++    self.permission_cache.write().await.insert(
++      *object_id,
++      (
++        if decision.is_ok() {
++          PermissionType::Read
++        } else {
++          PermissionType::NoAccess
++        },
++        Instant::now(),
++      ),
++    );
++    decision
+   }
+ 
+   /// Apply permission updates and send WebSocket notification
+@@ -888,20 +910,16 @@ impl WorkspaceSessionHandle {
+     let mut cache = self.permission_cache.write().await;
+     let now = Instant::now();
+     for update in updates {
+-      // Always allow updates from NoAccess, but prevent downgrades from higher permissions
+-      if let Some((existing_permission, _)) = cache.get(&update.object_id) {
+-        // Allow update if:
+-        // 1. Current permission is NoAccess (always allow upgrade from no access)
+-        // 2. New permission is at least as high as existing permission
+-        if *existing_permission == PermissionType::NoAccess
+-          || update.permission_type.is_at_least(existing_permission)
+-        {
+-          cache.insert(update.object_id, (update.permission_type, now));
+-        }
+-      } else {
+-        // No existing permission, insert the new one
+-        cache.insert(update.object_id, (update.permission_type, now));
+-      }
++      // Revocations/downgrades are authoritative, not monotonic upgrades.
++      cache.insert(update.object_id, (update.permission_type, now));
++      self.conn.do_send(WsOutput {
++        message: ServerMessage::Notification {
++          notification: appflowy_proto::WorkspaceNotification::ObjectAccessChanged {
++            object_id: update.object_id,
++            reason: AccessChangedReason::PermissionDenied,
++          },
++        },
++      });
+     }
+   }
+ 
+@@ -924,3 +942,70 @@ fn is_empty_update(update: &[u8], flag: &UpdateFlags) -> bool {
+   (flag == &UpdateFlags::Lib0v1 && update == Update::EMPTY_V1)
+     || (flag == &UpdateFlags::Lib0v2 && update == Update::EMPTY_V2)
+ }
++
++/// Authenticate the presence slot and actor without changing its Yrs clock.
++fn normalize_awareness(
++  update: &mut AwarenessUpdate,
++  client_id: ClientID,
++  uid: i64,
++) -> Result<(), AppError> {
++  update.clients.retain(|id, _| *id == client_id);
++  if update.clients.len() > 1 {
++    return Err(AppError::InvalidRequest(
++      "Invalid awareness ownership".into(),
++    ));
++  }
++  for entry in update.clients.values_mut() {
++    if entry.json.as_ref() == "null" {
++      continue;
++    }
++    if entry.json.len() > 16 * 1024 {
++      return Err(AppError::InvalidRequest("Awareness too large".into()));
++    }
++    let mut state: serde_json::Value = serde_json::from_str(&entry.json)
++      .map_err(|_| AppError::InvalidRequest("Invalid awareness state".into()))?;
++    let map = state
++      .as_object_mut()
++      .ok_or_else(|| AppError::InvalidRequest("Awareness must be an object".into()))?;
++    map.insert(
++      "actor".into(),
++      serde_json::json!({"uid":uid.to_string(), "clientId":client_id.to_string()}),
++    );
++    entry.json = Arc::from(state.to_string());
++  }
++  Ok(())
++}
++
++#[cfg(test)]
++mod ownership_tests {
++  use super::*;
++  use yrs::sync::awareness::AwarenessUpdateEntry;
++  #[test]
++  fn awareness_preserves_clock_owns_only_authenticated_slot_and_overwrites_actor_claims() {
++    let mut update = AwarenessUpdate {
++      clients: HashMap::from([
++        (
++          7,
++          AwarenessUpdateEntry {
++            clock: 3,
++            json: Arc::from(r#"{"actor":{"uid":"forged"},"selection":null}"#),
++          },
++        ),
++        (
++          8,
++          AwarenessUpdateEntry {
++            clock: 99,
++            json: Arc::from(r#"{"actor":{"uid":"peer"}}"#),
++          },
++        ),
++      ]),
++    };
++    normalize_awareness(&mut update, 7, 42).unwrap();
++    assert_eq!(update.clients.len(), 1);
++    assert_eq!(update.clients[&7].clock, 3);
++    let state: serde_json::Value = serde_json::from_str(&update.clients[&7].json).unwrap();
++    assert_eq!(state["actor"]["uid"], "42");
++    assert_eq!(state["actor"]["clientId"], "7");
++    assert_eq!(state["selection"], serde_json::Value::Null);
++  }
++}
+diff --git a/src/api/file_storage.rs b/src/api/file_storage.rs
+index a94d6aa..2a7aa2a 100644
+--- a/src/api/file_storage.rs
++++ b/src/api/file_storage.rs
+@@ -20,6 +20,9 @@ use database_entity::file_dto::{
+   UploadPartResponse,
+ };
+ 
++use crate::api::private_assets::{
++  deny_public_private_asset, is_private_asset_path, private_assets_scope,
++};
+ use crate::biz::authentication::jwt::UserUuid;
+ use crate::biz::data_import::LimitedPayload;
+ use crate::state::AppState;
+@@ -41,6 +44,7 @@ use tracing::{error, event, info, instrument, trace};
+ 
+ pub fn file_storage_scope() -> Scope {
+   web::scope("/api/file_storage")
++    .service(private_assets_scope())
+     .service(
+       // Deprecated, use put_blob_handler_v1 instead
+       web::resource("/{workspace_id}/blob/{file_id}")
+@@ -95,6 +99,8 @@ async fn create_upload(
+   req: web::Json<CreateUploadRequest>,
+ ) -> Result<JsonAppResponse<CreateUploadResponse>> {
+   let req = req.into_inner();
++  deny_public_private_asset(&req.parent_dir)?;
++  deny_public_private_asset(&req.file_id)?;
+   if req.parent_dir.is_empty() {
+     return Err(AppError::InvalidRequest("parent_dir is empty".to_string()).into());
+   }
+@@ -141,6 +147,8 @@ async fn upload_part_handler(
+   mut payload: Payload,
+ ) -> Result<JsonAppResponse<UploadPartResponse>> {
+   let path_params = path.into_inner();
++  deny_public_private_asset(&path_params.parent_dir)?;
++  deny_public_private_asset(&path_params.file_id)?;
+   trace!(
+     "upload part: workspace_id: {}, parent_dir: {}, file_id: {}, upload_id: {}, part_num: {}",
+     path_params.workspace_id,
+@@ -200,6 +208,8 @@ async fn complete_upload_handler(
+   req: web::Json<CompleteUploadRequest>,
+ ) -> Result<JsonAppResponse<()>> {
+   let req = req.into_inner();
++  deny_public_private_asset(&req.parent_dir)?;
++  deny_public_private_asset(&req.file_id)?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   let workspace_id = workspace_id.into_inner();
+   state
+@@ -231,6 +241,7 @@ async fn put_blob_handler(
+   payload: Payload,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   let workspace_id = path.workspace_id;
+   state
+@@ -305,6 +316,7 @@ async fn delete_blob_handler(
+   path: web::Path<BlobPathV0>,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let workspace_id = path.workspace_id;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+@@ -327,6 +339,7 @@ async fn get_blob_v1_handler(
+   req: HttpRequest,
+ ) -> Result<HttpResponse<BoxBody>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   get_blob_by_object_key(state, &path, req).await
+ }
+ 
+@@ -337,6 +350,7 @@ async fn delete_blob_v1_handler(
+   path: web::Path<BlobPathV1>,
+ ) -> Result<JsonAppResponse<()>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+   let workspace_id = path.workspace_id;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+@@ -352,7 +366,7 @@ async fn delete_blob_v1_handler(
+   Ok(AppResponse::Ok().into())
+ }
+ 
+-async fn get_blob_by_object_key(
++pub(super) async fn get_blob_by_object_key(
+   state: Data<AppState>,
+   key: &impl BlobKey,
+   req: HttpRequest,
+@@ -449,6 +463,7 @@ async fn get_blob_handler(
+   req: HttpRequest,
+ ) -> Result<HttpResponse<BoxBody>> {
+   let blob_path = path.into_inner();
++  deny_public_private_asset(&blob_path.object_key())?;
+   get_blob_by_object_key(state, &blob_path, req).await
+ }
+ 
+@@ -458,6 +473,7 @@ async fn get_blob_metadata_handler(
+   path: web::Path<BlobPathV0>,
+ ) -> Result<JsonAppResponse<BlobMetadata>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+ 
+   // Get the metadata
+   let metadata = state
+@@ -482,6 +498,7 @@ async fn get_blob_metadata_v1_handler(
+   path: web::Path<BlobPathV1>,
+ ) -> Result<JsonAppResponse<BlobMetadata>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.object_key())?;
+ 
+   // Get the metadata
+   let metadata = state
+@@ -524,6 +541,7 @@ async fn get_all_workspace_blob_metadata_handler(
+     .await
+     .map_err(AppResponseError::from)?
+     .into_iter()
++    .filter(|meta| !is_private_asset_path(&meta.file_id))
+     .map(|meta| BlobMetadata {
+       workspace_id: meta.workspace_id,
+       file_id: meta.file_id,
+@@ -555,6 +573,7 @@ async fn put_blob_handler_v1(
+   payload: Payload,
+ ) -> Result<JsonAppResponse<PutFileResponse>> {
+   let path = path.into_inner();
++  deny_public_private_asset(&path.parent_dir)?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
+   state
+     .workspace_access_control
+diff --git a/src/api/mod.rs b/src/api/mod.rs
+index 0ba4ca2..8035f36 100644
+--- a/src/api/mod.rs
++++ b/src/api/mod.rs
+@@ -4,6 +4,7 @@ pub mod billing;
+ pub mod chat;
+ pub mod data_import;
+ pub mod file_storage;
++pub mod private_assets;
+ pub mod guest;
+ pub mod invite_code;
+ pub mod metrics;
+diff --git a/src/api/workspace.rs b/src/api/workspace.rs
+index 118436e..b727e0e 100644
+--- a/src/api/workspace.rs
++++ b/src/api/workspace.rs
+@@ -2908,6 +2908,10 @@ async fn collab_full_sync_handler(
+     return Err(AppError::InvalidRequest("doc state is empty".to_string()).into());
+   }
+ 
++  if params.object_id != object_id.to_string() {
++    return Err(AppError::InvalidRequest("object_id does not match route".to_string()).into());
++  }
++
+   let collab_type = CollabType::from(params.collab_type);
+   let compression_type = PayloadCompressionType::try_from(params.compression).map_err(|err| {
+     AppError::InvalidRequest(format!("Failed to parse PayloadCompressionType: {}", err))
+@@ -2946,6 +2950,20 @@ async fn collab_full_sync_handler(
+     .await
+     .map_err(AppResponseError::from)?;
+ 
++  // Full-sync uploads a document update, including through HTTP fallback.
++  // Reject unauthorized writes before enqueueing: the realtime stream is
++  // asynchronous and its downstream denial cannot be reported by this request.
++  state
++    .collab_access_control
++    .enforce_action(&workspace_id, &uid, &object_id, Action::Write)
++    .await?;
++  guest::ensure_guest_collab_access(&state, uid, workspace_id, object_id, true).await?;
++
++  state
++    .collab_storage
++    .check_collab_lifecycle(&workspace_id, &object_id, collab_type)
++    .await?;
++
+   let user = RealtimeUser {
+     uid,
+     device_id,
+diff --git a/src/api/ws.rs b/src/api/ws.rs
+index 0208876..7f6f2ee 100644
+--- a/src/api/ws.rs
++++ b/src/api/ws.rs
+@@ -119,6 +119,10 @@ pub async fn establish_ws_connection_v2(
+   let auth = authorization_from_token(params.access_token.as_str(), &jwt_secret)?;
+   let user_uuid = UserUuid::from_auth(auth)?;
+   let uid = state.user_cache.get_user_uid(&user_uuid).await?;
++  state
++    .workspace_access_control
++    .enforce_action(&uid, &workspace_id, access_control::act::Action::Read)
++    .await?;
+   let info = SessionInfo::new(
+     params.client_id,
+     uid,
+diff --git a/src/application.rs b/src/application.rs
+index 5fabaa1..890e857 100644
+--- a/src/application.rs
++++ b/src/application.rs
+@@ -378,6 +378,7 @@ pub async fn init_state(config: &Config) -> Result<AppState, Error> {
+   let manager = CollabManager::new(
+     thread_pool.clone(),
+     collab_access_control.clone(),
++    realtime_access_control.clone(),
+     collab_cache.clone(),
+     redis_conn_manager.clone(),
+     redis_stream_router.clone(),

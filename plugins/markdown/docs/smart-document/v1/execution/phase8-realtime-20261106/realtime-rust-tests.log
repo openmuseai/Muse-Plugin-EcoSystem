@@ -1,0 +1,47 @@
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:170:23
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut {
+    |                       ^^^^^^^^^     ^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                       |
+    |                       the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+170 |   pub fn transact_mut(&mut self) -> TransactionMut<'_> {
+    |                                                   ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/vendor/appflowy_collab/collab/src/core/collab.rs:210:19
+    |
+210 |   pub fn transact(&self) -> Transaction {
+    |                   ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                   |
+    |                   the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+210 |   pub fn transact(&self) -> Transaction<'_> {
+    |                                        ++++
+
+warning: `collab` (lib) generated 2 warnings (run `cargo fix --lib -p collab` to apply 2 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.10s
+     Running unittests src/lib.rs (target/debug/deps/muse_appflowy_realtime-3938bd9d7ba16eed)
+
+running 4 tests
+test tests::original_protobuf_narrowing_and_frame_limits_are_checked_before_conversion ... ok
+test tests::original_client_types_and_stable_ids_roundtrip ... ok
+test tests::original_server_updates_v1_v2_keep_deletes_and_json_integer_identity ... ok
+test tests::original_awareness_clock_expiry_scope_and_null_leave_are_transient ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests muse_appflowy_realtime
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

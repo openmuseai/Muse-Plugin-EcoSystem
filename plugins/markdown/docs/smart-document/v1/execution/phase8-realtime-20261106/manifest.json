@@ -1,0 +1,374 @@
+{
+  "files": [
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 633,
+      "sha256": "4f169fbb337ea71408dd483caabdb179985abcf83f927e6caf4a0856703c7735"
+    },
+    {
+      "path": "cloud-binary.json",
+      "bytes": 175,
+      "sha256": "38a4d5901f2766a9026a7d9845e3275e3ed62ba9e70cb90216ee2502a8f11ce4"
+    },
+    {
+      "path": "cloud-new/libs/database/src/collab/lifecycle.rs",
+      "bytes": 3054,
+      "sha256": "7f9056bd4f314c7c1bec0abf12c03823afc57f7daa2998eadb3fe61a3d4fd1a3"
+    },
+    {
+      "path": "cloud-new/src/api/private_assets.rs",
+      "bytes": 6247,
+      "sha256": "230219093b91e2f3bac822e3c187e2910dd903036b656774e404434eb3becde6"
+    },
+    {
+      "path": "cloud-owned.patch",
+      "bytes": 38440,
+      "sha256": "fa78e15546b69190f267b1da41b227914c8435717cab8fb1d482fe68e999912c"
+    },
+    {
+      "path": "full-parity-gate.log",
+      "bytes": 200,
+      "sha256": "8f9c6c5f4b195679b706235a0c125f93470e3a6e56e0d5e749095c5d824b6f3f"
+    },
+    {
+      "path": "ios/realtime-e2e.json",
+      "bytes": 780,
+      "sha256": "26f9b6777c8430c05d8268f45205c6559893fd930284c38b6d81c82a07f3d899"
+    },
+    {
+      "path": "ios/realtime-editor.png",
+      "bytes": 34680,
+      "sha256": "fb5b2e6ddeb1aa9907bf843e66d83d66166068c4acbf689b0cf40a0f7f617977"
+    },
+    {
+      "path": "ios/realtime-reopen.json",
+      "bytes": 300,
+      "sha256": "1a836aeed08ae59424c6517c7cfc9b02986d424dd355cfb8dd65250b62c76120"
+    },
+    {
+      "path": "ios/realtime_document_test.dart.log",
+      "bytes": 932,
+      "sha256": "9c87a53315b01c50246c556da67f39601f818cd1ab749d2ac5fcdf79f971f8d7"
+    },
+    {
+      "path": "ios/realtime_reopen_test.dart.log",
+      "bytes": 911,
+      "sha256": "6e72d28a50824efac3f46fff3588343cbe77bf48bc5d5819078ea577de5bdf8b"
+    },
+    {
+      "path": "ios/result.json",
+      "bytes": 410,
+      "sha256": "5702634f070482669f1c5116cbdf2a0cf6dc57eaa4f3f948f41c729c6f7e4150"
+    },
+    {
+      "path": "macos/realtime-e2e.json",
+      "bytes": 782,
+      "sha256": "0fd844c1d8235995f0010db62dd937d7801b64444d8c75c16c612a00c6c87a03"
+    },
+    {
+      "path": "macos/realtime-editor.png",
+      "bytes": 24053,
+      "sha256": "80831304b51eeb88622715392aa665ee2f95a5f63f89ae5d8b754b957044b9e2"
+    },
+    {
+      "path": "macos/realtime-reopen.json",
+      "bytes": 300,
+      "sha256": "65401747cb8d8b7190fc275db8dc9f3fcf6d2c97cd3ad4d7df68ce066bb2cb83"
+    },
+    {
+      "path": "macos/realtime_document_test.dart.log",
+      "bytes": 697,
+      "sha256": "e3190d74f38b23afeae7b0f09eb412c4f48253f0c3c3c305680325c7cd7ba141"
+    },
+    {
+      "path": "macos/realtime_reopen_test.dart.log",
+      "bytes": 676,
+      "sha256": "000a5f14435457391a456335682a61acdbc64aecf3da1c74f8f15a6de19fc687"
+    },
+    {
+      "path": "macos/result.json",
+      "bytes": 381,
+      "sha256": "41c8359be0f3e51bad26f8f766842517cbdc3c5af6508f264864d9d9f03b9ac4"
+    },
+    {
+      "path": "realtime-browser-ui-observations.json",
+      "bytes": 551,
+      "sha256": "96d20508d61633c999254af044fe1a9c80a1699e44c2147c8a586c47fda6c26f"
+    },
+    {
+      "path": "realtime-cross-block-selection.log",
+      "bytes": 263,
+      "sha256": "fd2b909a816ebb6af7f4da0534b06749618da1fd8e830ab64cd0473f9fa3275e"
+    },
+    {
+      "path": "realtime-dev-stack-tests.log",
+      "bytes": 147,
+      "sha256": "2f1dc3836291551cff5a40f5b4f1806596d9fc443a911a4b44595536e3c8b47c"
+    },
+    {
+      "path": "realtime-document-adapter-result.json",
+      "bytes": 427,
+      "sha256": "c20a5e01db5acb4fa3923fb547d0f26b779f5dce29409c6f123ba24d5336571d"
+    },
+    {
+      "path": "realtime-final-analysis.log",
+      "bytes": 96,
+      "sha256": "41c9eda4c2c90f3baa415eded3ccabb3c4fd8b08df7f288968f36582e3022570"
+    },
+    {
+      "path": "realtime-package-analysis.log",
+      "bytes": 96,
+      "sha256": "20354996bb0ee10daf3f0f139db3195d3f607306e9f696e06b004d5fbb93924c"
+    },
+    {
+      "path": "realtime-package-tests.log",
+      "bytes": 548,
+      "sha256": "1239049183bb0ff18c40bce316a78480cdb8eb3e215beae3345d225f2f0c6bac"
+    },
+    {
+      "path": "realtime-permissions-result.json",
+      "bytes": 750,
+      "sha256": "090b08d4ee0a26e95fd83b32c00050a8709eae5fc5f9c1d5634b25cc7beab286"
+    },
+    {
+      "path": "realtime-rust-tests.log",
+      "bytes": 2307,
+      "sha256": "f813a2811fa059852e38f0cb126dc0d564d546b7f8f2c76a335eb90f1779c61a"
+    },
+    {
+      "path": "realtime-wasm-artifacts.json",
+      "bytes": 446,
+      "sha256": "dfdfee1cbcbf2d79aa074174028395a642657add791e356fcb84e94ed4c97a8e"
+    },
+    {
+      "path": "realtime-wasm-build.log",
+      "bytes": 1655,
+      "sha256": "ed3fb6e7619aa98737643aed17bb989899924eb1d50fdc1dc844d4c0eb27fa08"
+    },
+    {
+      "path": "realtime-web-collaborators.png",
+      "bytes": 18073,
+      "sha256": "21f74d595adbb8aacf5f9388754514c5f3137227d243ec95ff063a379499a57f"
+    },
+    {
+      "path": "realtime-web-editor.png",
+      "bytes": 22380,
+      "sha256": "ac7c1bb0d7c107ca9467c56f001c01000bdec8611603d23bc788a422dc6e270a"
+    },
+    {
+      "path": "realtime-web-final-build.log",
+      "bytes": 579,
+      "sha256": "3a9f829e6922a1dd9d11028f315b8cc52462df9f3c414a8ffde724c97cfb45dc"
+    },
+    {
+      "path": "realtime-web-passed.png",
+      "bytes": 20406,
+      "sha256": "c159140ca3efa7b9bec4660a67ae27b81ad047c1464f8204bf8e234b2591c58d"
+    },
+    {
+      "path": "realtime-web-public.json",
+      "bytes": 265,
+      "sha256": "46ad794bc1e44be60e7ba011440ba08201c7128798b2cc18d85c738daeb72d57"
+    },
+    {
+      "path": "realtime-web-reload.json",
+      "bytes": 309,
+      "sha256": "66a35f67ad2b4d0f555cd5cfab9349e9d1976b3ac05c1cd8af916b35744ad4a9"
+    },
+    {
+      "path": "realtime-web-reopen.png",
+      "bytes": 14945,
+      "sha256": "0ec57a9cdef947650b8ca1578b06edd24a06ee161708448e074e143b61454971"
+    },
+    {
+      "path": "realtime-web-result.json",
+      "bytes": 642,
+      "sha256": "b1f619edf84bfcdd1a55818a78729a6bb59c210ca0814ef54a3beb22daedd9a1"
+    },
+    {
+      "path": "regression/cloud-build.log",
+      "bytes": 1801,
+      "sha256": "f4d78703c14d8ae0c2e48e777216035b3cec0d6216945e17abb32e172da3ede7"
+    },
+    {
+      "path": "regression/cloud-e2e.json",
+      "bytes": 781,
+      "sha256": "bfffb30093285dbd90f92e217de39ff3c58b64cad0fc443ac425a71fb99126c3"
+    },
+    {
+      "path": "regression/cloud-e2e.log",
+      "bytes": 1001,
+      "sha256": "7d23e1f272708c32f1310abaa4ac67faf205406e243cc83dee2d0e74a24990cb"
+    },
+    {
+      "path": "regression/editor-source.log",
+      "bytes": 123,
+      "sha256": "5a4110bbd45a562b1a984c83e9dfc2f56b30d3bc95bbaa71f95cfcb9ac1855fb"
+    },
+    {
+      "path": "regression/fixture.log",
+      "bytes": 101,
+      "sha256": "b0cd83ea50df51b0009ef14ffd91149da82b104915aa8f1cbc9230b3a66cb9e3"
+    },
+    {
+      "path": "regression/flutter-analysis.log",
+      "bytes": 96,
+      "sha256": "b9de0cab51c22661e5f2325b05dfed09804f92372d20ed8e50cf97050c0ef0ff"
+    },
+    {
+      "path": "regression/flutter-dependencies.log",
+      "bytes": 1245,
+      "sha256": "2288c9f2b316b39c5a11ef3d48118d7f9511368d664a554d6390ad2706562cfa"
+    },
+    {
+      "path": "regression/flutter-local.log",
+      "bytes": 5859,
+      "sha256": "d4f69476e4bf76ee1a632d8134f7a7630503ce6cbcdcb48a92dab53232708301"
+    },
+    {
+      "path": "regression/isolated-stack.log",
+      "bytes": 394,
+      "sha256": "0cc947ce0cd6d5eeef1f3e0f2dd682de52fa4ce0e3e97a103602a5266eabdb4f"
+    },
+    {
+      "path": "regression/old-contract-goldens.log",
+      "bytes": 622,
+      "sha256": "45a28db6af289a51bedae5a7fc3c8902b7ff62e7ad1c45df2a0c399cd149bc13"
+    },
+    {
+      "path": "regression/plugin-analysis.log",
+      "bytes": 96,
+      "sha256": "a3037413e6e484042eff472a2c09b6ae6ef8f7b6fc1ae7a3dea7654dcf0b318d"
+    },
+    {
+      "path": "regression/plugin-dependencies.log",
+      "bytes": 1114,
+      "sha256": "0e21ee9e042e1844452ef8db4e856d948d60f041f6e8e7b8f5035376f1b1c669"
+    },
+    {
+      "path": "regression/product-baseline.log",
+      "bytes": 101,
+      "sha256": "aca19579a765b9f6d0acb01446c5af55d180922b300663ecf026eaee242f17a2"
+    },
+    {
+      "path": "regression/rust-tests.log",
+      "bytes": 3370,
+      "sha256": "6ce4ceb9e659b8187f2e820bdf3268cbf98cc67b68400f81cfb343499522d488"
+    },
+    {
+      "path": "regression/source-lock.json",
+      "bytes": 21046,
+      "sha256": "45b9a569c974377c4bf77af605a65052a7034526363da68294b0edf04fb3454a"
+    },
+    {
+      "path": "regression/steps.json",
+      "bytes": 2516,
+      "sha256": "7cd7d6cbcf819ada18e329884bd3921fb2fa174776508cbbf523a55fb55e37d7"
+    },
+    {
+      "path": "regression/summary.json",
+      "bytes": 3021,
+      "sha256": "7ece20813b6c1e39ab3d3ca82891975a75a1a61c90e08717379f01b75599d9b8"
+    },
+    {
+      "path": "result.json",
+      "bytes": 1078,
+      "sha256": "354b3e304b509fb5b5b40a632d4458535f3bc90bda90bad69a6157d9db2f24ad"
+    },
+    {
+      "path": "source-lock.json",
+      "bytes": 41157,
+      "sha256": "9e2986059b7c2b3bb2c4fba639f76eba97d9a578ed166a4c96df4e1f74dbda5d"
+    },
+    {
+      "path": "superseded/20261106T114811Z-realtime-3265ba2ae29f/realtime_document_test.dart.log",
+      "bytes": 697,
+      "sha256": "d2748d4d22ab7272ba12a69466af31ea2a046656da4c1c3270c0c6f75d843561"
+    },
+    {
+      "path": "superseded/20261106T114811Z-realtime-3265ba2ae29f/result.json",
+      "bytes": 283,
+      "sha256": "779c78c975a46eb0890b424c239b03d47655c1a1ecfaa0fde82240faf69a5c11"
+    },
+    {
+      "path": "superseded/20261106T114916Z-realtime-ba9565ca783c/realtime_document_test.dart.log",
+      "bytes": 2507,
+      "sha256": "c1789255f58a3726452630397fd17991eae641996eb01011503b65e63c1f9a4e"
+    },
+    {
+      "path": "superseded/20261106T114916Z-realtime-ba9565ca783c/result.json",
+      "bytes": 305,
+      "sha256": "6512f7f612ca82491e18118656e40fc6b1873ad1680218c7d82b018062edc31c"
+    },
+    {
+      "path": "superseded/20261106T115302Z-realtime-a292b44860e2/realtime_document_test.dart.log",
+      "bytes": 2611,
+      "sha256": "b5a28afd4ea29ee65f7f7cfb98b32e7c972b64bb03405d7de39239f860c9acbe"
+    },
+    {
+      "path": "superseded/20261106T115302Z-realtime-a292b44860e2/result.json",
+      "bytes": 305,
+      "sha256": "451afe52c535e03f7d2b83da76a51c29217d2388df1ea2ceb3f951b217c06170"
+    },
+    {
+      "path": "superseded/20261106T115521Z-realtime-b4bc60ad0df1/realtime_document_test.dart.log",
+      "bytes": 2611,
+      "sha256": "d6eeeb5687a34f59b666e3fbe833e39b46ddc71256f40fb697677e9944e5233c"
+    },
+    {
+      "path": "superseded/20261106T115521Z-realtime-b4bc60ad0df1/result.json",
+      "bytes": 305,
+      "sha256": "560ca6642d18b018fc6d5db523a906e6f7c048c8015616722df2cd4bcbb2faf2"
+    },
+    {
+      "path": "superseded/20261106T120214Z-realtime-54ccdbbf3770/realtime_document_test.dart.log",
+      "bytes": 6091,
+      "sha256": "57f51357ad04884968a1b5feb06230d619512db15f348c14d08159f0b5c01628"
+    },
+    {
+      "path": "superseded/20261106T120214Z-realtime-54ccdbbf3770/result.json",
+      "bytes": 336,
+      "sha256": "0d8ae6a80fd389298e5e64e7cf47c0b6d4337d7abdeddf295fdf5b758219fcd2"
+    },
+    {
+      "path": "superseded/ws2-before-authorization.json",
+      "bytes": 415,
+      "sha256": "9718de4bfa563c01824d73537c668056c9a987311afba17c0f476d0be3864827"
+    },
+    {
+      "path": "superseded/ws2-cloud-before.log",
+      "bytes": 844,
+      "sha256": "5e91dcd2792fcfd7abfe38c2e2f9eb2298e38ac841cff2d5982d91f7b7fd4ba4"
+    },
+    {
+      "path": "superseded/ws2-cloud-fixed.log",
+      "bytes": 857,
+      "sha256": "8ed98f9de92bcfcf3f31f723b4454574667664e2b0d3662c30940546d5d3d030"
+    },
+    {
+      "path": "ws2-cloud-presence.log",
+      "bytes": 251,
+      "sha256": "4974546ef568a857f2bd623bf66c1eee7205f3bd3635a6a8bfaff372c0ede074"
+    },
+    {
+      "path": "ws2-cloud-qualification.json",
+      "bytes": 634,
+      "sha256": "ca21499d3c38298c1c734c666d77f277d1cf3f1294b665a7b861dbc4b19e51ac"
+    },
+    {
+      "path": "ws2-lifecycle-tests.log",
+      "bytes": 1010,
+      "sha256": "b7d92bd0248639ef7cb95893144093ff491465851b402c75b545f15cd10e0118"
+    },
+    {
+      "path": "ws2-ownership-tests.log",
+      "bytes": 540,
+      "sha256": "6152031a12004369807336f79d7fbfc98779cc51399a01eef8a52a61556482b8"
+    },
+    {
+      "path": "ws2-proto-server-tests.log",
+      "bytes": 1686,
+      "sha256": "c93d9c1f5916900256368e83ba5aafc54fb3f9d4ce7e271c66af5668ee43df2a"
+    }
+  ]
+}
