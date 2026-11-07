@@ -1,0 +1,17 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.16s
+     Running unittests src/lib.rs (rust/target/debug/deps/muse_smart_document-4d33f0a1872f6ec7)
+
+running 4 tests
+test tests::invalid_batch_is_atomic_and_ids_survive_reopen ... ok
+test tests::rejects_out_of_bounds_and_split_surrogate_without_poisoning_session ... ok
+test tests::stable_block_insert_delete_and_duplicate_update ... ok
+test tests::concurrent_offline_unicode_and_marks_converge ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests muse_smart_document
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

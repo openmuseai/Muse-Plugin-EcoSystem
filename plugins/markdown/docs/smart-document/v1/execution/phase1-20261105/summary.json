@@ -1,0 +1,125 @@
+{
+  "phase": "SD-F1-20261105",
+  "status": "passed",
+  "native": true,
+  "steps": [
+    {
+      "name": "product-baseline",
+      "exitCode": 0,
+      "seconds": 0.03,
+      "log": "product-baseline.log",
+      "sha256": "aca19579a765b9f6d0acb01446c5af55d180922b300663ecf026eaee242f17a2"
+    },
+    {
+      "name": "editor-source",
+      "exitCode": 0,
+      "seconds": 0.03,
+      "log": "editor-source.log",
+      "sha256": "341736f24e98d9f8f015c514a984b256613fb8a93f730cf0293ed4b83220aced"
+    },
+    {
+      "name": "rust-tests",
+      "exitCode": 0,
+      "seconds": 0.5,
+      "log": "rust-tests.log",
+      "sha256": "53e7f8fa10a8b6d1f62738e035818123e0246485a50b91a9370c904840961f9c"
+    },
+    {
+      "name": "flutter-dependencies",
+      "exitCode": 0,
+      "seconds": 0.74,
+      "log": "flutter-dependencies.log",
+      "sha256": "2288c9f2b316b39c5a11ef3d48118d7f9511368d664a554d6390ad2706562cfa"
+    },
+    {
+      "name": "flutter-analysis",
+      "exitCode": 0,
+      "seconds": 5.11,
+      "log": "flutter-analysis.log",
+      "sha256": "65d2b8b7c4c3eb14ed4bc0da2ae59b1fe15c5147561084a4a0479ffb9ef094fc"
+    },
+    {
+      "name": "flutter-local",
+      "exitCode": 0,
+      "seconds": 2.99,
+      "log": "flutter-local.log",
+      "sha256": "8b57aeef235951158f3d13976416bbdbaf93696bbffda83985a3d8bf17faade3"
+    },
+    {
+      "name": "plugin-dependencies",
+      "exitCode": 0,
+      "seconds": 0.61,
+      "log": "plugin-dependencies.log",
+      "sha256": "0e21ee9e042e1844452ef8db4e856d948d60f041f6e8e7b8f5035376f1b1c669"
+    },
+    {
+      "name": "plugin-analysis",
+      "exitCode": 0,
+      "seconds": 2.44,
+      "log": "plugin-analysis.log",
+      "sha256": "a7079890564db9255f30a8601af6a340c4d5413c33e2b0e160f50fce88a452e5"
+    },
+    {
+      "name": "old-contract-goldens",
+      "exitCode": 0,
+      "seconds": 1.15,
+      "log": "old-contract-goldens.log",
+      "sha256": "45a28db6af289a51bedae5a7fc3c8902b7ff62e7ad1c45df2a0c399cd149bc13"
+    },
+    {
+      "name": "cloud-build",
+      "exitCode": 0,
+      "seconds": 1.03,
+      "log": "cloud-build.log",
+      "sha256": "3dbebdfe57c58e155ac8a657a434094c1504a64a2cee500df8a6e14e483660d2"
+    },
+    {
+      "name": "isolated-stack",
+      "exitCode": 0,
+      "seconds": 5.97,
+      "log": "isolated-stack.log",
+      "sha256": "2517dc38e45f3d7a0d82bcb467e5b14d495f8e2cc37c4f4418ec13966d7c2d36"
+    },
+    {
+      "name": "fixture",
+      "exitCode": 0,
+      "seconds": 0.65,
+      "log": "fixture.log",
+      "sha256": "b0cd83ea50df51b0009ef14ffd91149da82b104915aa8f1cbc9230b3a66cb9e3"
+    },
+    {
+      "name": "cloud-e2e",
+      "exitCode": 0,
+      "seconds": 9.4,
+      "log": "cloud-e2e.log",
+      "sha256": "cb25e295225bea896d4b93cd849e2c15248f1d6c964f557089ea26efe3871ad8"
+    },
+    {
+      "name": "native-dependencies",
+      "exitCode": 0,
+      "seconds": 0.79,
+      "log": "native-dependencies.log",
+      "sha256": "4f6eb51f176cdfedacc5a5db2a7ced2413865352abb13a05768db57aecead469"
+    },
+    {
+      "name": "native-analysis",
+      "exitCode": 0,
+      "seconds": 3.17,
+      "log": "native-analysis.log",
+      "sha256": "ca84059895d2b5f50dcbafcd5a64decc541b18882ca7ae71e047a9820967c445"
+    },
+    {
+      "name": "native-e2e",
+      "exitCode": 0,
+      "seconds": 21.16,
+      "log": "native-e2e.log",
+      "sha256": "94c3fb7240d6ece5e54e9fc930b5482d58fa76af61ca18884c8035b8d3ea1db7"
+    }
+  ],
+  "limits": [
+    "Full product AC groups remain partial/unrun",
+    "Web/Mobile artifacts and manual IME not certified",
+    "Production Host release composition is not enabled",
+    "Full-sync HTTP exchange is not a durable ACK"
+  ]
+}

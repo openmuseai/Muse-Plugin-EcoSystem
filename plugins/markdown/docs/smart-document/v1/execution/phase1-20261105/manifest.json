@@ -1,0 +1,126 @@
+{
+  "phase": "SD-F1-20261105",
+  "run": "20261105T114713Z",
+  "files": [
+    {
+      "path": "cloud-build.log",
+      "bytes": 72,
+      "sha256": "3dbebdfe57c58e155ac8a657a434094c1504a64a2cee500df8a6e14e483660d2"
+    },
+    {
+      "path": "cloud-e2e.json",
+      "bytes": 781,
+      "sha256": "86b5fb899460318e7306b6b22bef842788aad5f1a36401952b3075658c5b07af"
+    },
+    {
+      "path": "cloud-e2e.log",
+      "bytes": 251,
+      "sha256": "cb25e295225bea896d4b93cd849e2c15248f1d6c964f557089ea26efe3871ad8"
+    },
+    {
+      "path": "cloud-permission-and-delete-set.patch",
+      "bytes": 2418,
+      "sha256": "99822e3b916eb72af215664faf7a1df84b986dfc9e46d8ec9cfbc5c34c7c9a2d"
+    },
+    {
+      "path": "editor-source.log",
+      "bytes": 62,
+      "sha256": "341736f24e98d9f8f015c514a984b256613fb8a93f730cf0293ed4b83220aced"
+    },
+    {
+      "path": "fixture.log",
+      "bytes": 101,
+      "sha256": "b0cd83ea50df51b0009ef14ffd91149da82b104915aa8f1cbc9230b3a66cb9e3"
+    },
+    {
+      "path": "flutter-analysis.log",
+      "bytes": 96,
+      "sha256": "65d2b8b7c4c3eb14ed4bc0da2ae59b1fe15c5147561084a4a0479ffb9ef094fc"
+    },
+    {
+      "path": "flutter-dependencies.log",
+      "bytes": 1245,
+      "sha256": "2288c9f2b316b39c5a11ef3d48118d7f9511368d664a554d6390ad2706562cfa"
+    },
+    {
+      "path": "flutter-local.log",
+      "bytes": 471,
+      "sha256": "8b57aeef235951158f3d13976416bbdbaf93696bbffda83985a3d8bf17faade3"
+    },
+    {
+      "path": "isolated-stack.log",
+      "bytes": 394,
+      "sha256": "2517dc38e45f3d7a0d82bcb467e5b14d495f8e2cc37c4f4418ec13966d7c2d36"
+    },
+    {
+      "path": "native-analysis.log",
+      "bytes": 96,
+      "sha256": "ca84059895d2b5f50dcbafcd5a64decc541b18882ca7ae71e047a9820967c445"
+    },
+    {
+      "path": "native-app-build.json",
+      "bytes": 943,
+      "sha256": "d61a48e764c47e7ad337fb496f66144c414c409d490b8f84f5e38dfa8deb66ed"
+    },
+    {
+      "path": "native-dependencies.log",
+      "bytes": 1147,
+      "sha256": "4f6eb51f176cdfedacc5a5db2a7ced2413865352abb13a05768db57aecead469"
+    },
+    {
+      "path": "native-e2e.json",
+      "bytes": 706,
+      "sha256": "65710f2d2e5ab04f8117b03efd057a163e263efffc70fd3f6fe732f1345bdc52"
+    },
+    {
+      "path": "native-e2e.log",
+      "bytes": 703,
+      "sha256": "94c3fb7240d6ece5e54e9fc930b5482d58fa76af61ca18884c8035b8d3ea1db7"
+    },
+    {
+      "path": "native-editor.png",
+      "bytes": 28771,
+      "sha256": "591b38be0a6642e11fc7d74cba6833df6b38d05164b98883ff77681d9ae47a03"
+    },
+    {
+      "path": "old-contract-goldens.log",
+      "bytes": 622,
+      "sha256": "45a28db6af289a51bedae5a7fc3c8902b7ff62e7ad1c45df2a0c399cd149bc13"
+    },
+    {
+      "path": "plugin-analysis.log",
+      "bytes": 1210,
+      "sha256": "a7079890564db9255f30a8601af6a340c4d5413c33e2b0e160f50fce88a452e5"
+    },
+    {
+      "path": "plugin-dependencies.log",
+      "bytes": 1114,
+      "sha256": "0e21ee9e042e1844452ef8db4e856d948d60f041f6e8e7b8f5035376f1b1c669"
+    },
+    {
+      "path": "product-baseline.log",
+      "bytes": 101,
+      "sha256": "aca19579a765b9f6d0acb01446c5af55d180922b300663ecf026eaee242f17a2"
+    },
+    {
+      "path": "rust-tests.log",
+      "bytes": 713,
+      "sha256": "53e7f8fa10a8b6d1f62738e035818123e0246485a50b91a9370c904840961f9c"
+    },
+    {
+      "path": "source-lock.json",
+      "bytes": 7791,
+      "sha256": "99cf0cc491a4f3394c9272f02680683908c3efc681be55b45e9caf5ed083a243"
+    },
+    {
+      "path": "steps.json",
+      "bytes": 3096,
+      "sha256": "51b6cf30c7620a3a2cdd3cf28ad8b3f57bff451b52b6105976c245dc792e8365"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 3642,
+      "sha256": "617abd2ad6b8bd464be0387b419c16502ab730ff1bb21fb77ae0ffb494a710b1"
+    }
+  ]
+}
