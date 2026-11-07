@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Cargo.toml",
+    "sha256": "f5f270e4b837ce3c2666e9e6456222ceea2535db816587d1fd93e7abebda05c0"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+  },
+  {
+    "path": "openmuse.patch",
+    "sha256": "d4a956b80625c73ccbb98328bf94ad5b61e61b26ba37f68c89d2c93561ec0636"
+  },
+  {
+    "path": "openmuse-upstream.json",
+    "sha256": "ecbacc1e9ee2e98d93e1c321743a92e973078e9b091dd0e71df2e595c8cc49ba"
+  },
+  {
+    "path": "src/entities.rs",
+    "sha256": "c52afcbbe3ea0bc326526aa681c61503452bf2b030e9092eea9f13c2b039f0cc"
+  },
+  {
+    "path": "src/lib.rs",
+    "sha256": "bfabc1559b8c9e3f47c05317179cd01ba0bb80a95d1d4c3cba74a231d635bc5e"
+  },
+  {
+    "path": "src/number_filter.rs",
+    "sha256": "50de164edb4018c7e9ef4f00b7871f62a910334624e2dbcddefbc21b0a5c1bbd"
+  },
+  {
+    "path": "src/select_filter.rs",
+    "sha256": "e895f6eef6aef473ddba09f10694d89a7aadaffb941e144496fe8d78674e9a39"
+  },
+  {
+    "path": "src/text_filter.rs",
+    "sha256": "5d9dcf12687ca48c9f074cf5bf0ae43f8783e63f5411cc2b23e8da66fe4840d9"
+  }
+]

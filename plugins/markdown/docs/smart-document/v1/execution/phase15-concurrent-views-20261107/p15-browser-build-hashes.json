@@ -1,0 +1,23 @@
+{
+  "entrypoint": "lib/concurrent_view_main.dart",
+  "datasetWasmMatchesRuntimeArtifactReport": true,
+  "files": [
+    {
+      "file": "assets/packages/openmuse_dataset/assets/wasm/muse_dataset_core.js",
+      "bytes": 16024,
+      "sha256": "4bd4861183ce69dc607975bba53272029b40e9eee54770d1100748c6a552057c"
+    },
+    {
+      "file": "assets/packages/openmuse_dataset/assets/wasm/muse_dataset_core_bg.wasm",
+      "bytes": 4674794,
+      "sha256": "1afc58a94517ed7764745fd8f8fa494dafec1b524fea114b3c726c2936b4a68c"
+    },
+    {
+      "file": "main.dart.js",
+      "bytes": 4955367,
+      "sha256": "c44c3c9009e0dce612bc87660069c0382759c564184d2dd558500e9b683eeff3",
+      "archivedBytes": false,
+      "reason": "Flutter application bundle contains synthetic build-time credentials; digest only"
+    }
+  ]
+}

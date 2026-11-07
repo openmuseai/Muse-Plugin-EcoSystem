@@ -1,0 +1,10 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/concurrent_view_document_test.dart
+The following plugins do not support Swift Package Manager for ios:
+  - keyboard_height_plugin
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Running Xcode build...                                          
+Xcode build done.                                           24.9s
+00:00 +0: actual original concurrent view commands and one-item history preserve collaboration
+SMARTDOC_CONCURRENT_EVIDENCE=/Users/mac/Library/Developer/CoreSimulator/Devices/5F0D9070-BE32-4063-BF7D-B7EB3B48D105/data/Containers/Data/Application/BA297A57-4F99-47AC-9F17-2FB11D3C4485/Library/Application Support/SmartDocumentStage1/concurrent-1cc3fb214286/evidence
+00:19 +1: (tearDownAll)
+00:19 +1: All tests passed!

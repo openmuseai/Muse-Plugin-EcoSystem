@@ -1,0 +1,19 @@
+{
+  "run": "concurrent-1cc3fb214286",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-concurrent-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "concurrent_view_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "concurrent_view_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 7,
+  "freshProcessChecks": 3
+}

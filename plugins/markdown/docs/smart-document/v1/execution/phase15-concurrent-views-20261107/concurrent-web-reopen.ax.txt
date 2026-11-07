@@ -1,0 +1,47 @@
+Browser tab: 22, Title: "127.0.0.1:50946/?reopen=1", URL: "http://127.0.0.1:50946/?reopen=1".
+1 AXWebArea 127.0.0.1:50946/?reopen=1
+	2 container
+		3 container flt-semantic-node-3
+			4 text 智能文档 · 并发数据库视图
+			5 button (disabled) 撤销, ID: flt-semantic-node-15
+			6 button (disabled) 重做, ID: flt-semantic-node-16
+			7 button (disabled) 加粗, ID: flt-semantic-node-17
+			8 button (disabled) 斜体, ID: flt-semantic-node-18
+			9 button (disabled) 下划线, ID: flt-semantic-node-19
+			10 button (disabled) 超链接, ID: flt-semantic-node-20
+			11 button (disabled, collapsed) 块类型, ID: flt-semantic-node-21, Secondary Actions: Expand
+			12 button (disabled, collapsed) 插入内容, ID: flt-semantic-node-22, Secondary Actions: Expand
+			13 container flt-semantic-node-30
+				14 text 项目计划｜并发视图与命令撤销
+				15 container Description: 项目数据库 只读 显示 2 / 2 条记录 已保存到本机 · 本机数据集, ID: flt-semantic-node-27
+					16 button (collapsed) 表格, ID: flt-semantic-node-32, Secondary Actions: Expand
+					17 button (disabled) 筛选 · 已启用, ID: flt-semantic-node-33
+					18 button (disabled) 排序 · 1, ID: flt-semantic-node-34
+					19 button (disabled) 撤销, ID: flt-semantic-node-35
+					20 button (disabled) 重做, ID: flt-semantic-node-36
+					21 button (disabled) 新增记录, ID: flt-semantic-node-37
+					22 text 新增字段 新增字段
+					23 container flt-semantic-node-39
+						24 text #
+						25 text 标题
+						26 text 完成
+						27 text 链接
+						28 container flt-semantic-node-47
+							29 checkbox (disabled) Description: 1 第 1 行，标题 Muse A 第 1 行，完成 第 1 行，链接, Value: 0, ID: flt-semantic-node-45
+							30 checkbox (disabled) Description: 2 第 2 行，标题 Muse Browser 第 2 行，完成 第 2 行，链接, Value: 0, ID: flt-semantic-node-46
+			31 text 只读
+			32 text 已保存到本机 · 本机文档
+			33 container flt-semantic-node-12
+				34 text 真实并发验收辅助
+				35 text 当前测试会话：alice
+				36 text 只读恢复原文档与数据库本机副本
+				37 text 实际筛选：Muse；实际排序：0
+				38 button (disabled) 验收本机恢复, ID: flt-semantic-node-49
+				39 text 通过 5 项
+				40 text ✓ original-native-parent-and-dataset-resource-identities
+				41 text ✓ parent-keeps-only-original-generic-resource-reference
+				42 text ✓ authoritative-row-dependencies-stay-independent-of-visible-view
+				43 text ✓ fresh-IndexedDB-reopen-without-provider-or-transient-presence-and-readonly-floor
+				44 text ✓ shared-view-and-final-browser-row-restored-from-original-local-checkpoint
+
+The focused UI element is 38 button (disabled) 验收本机恢复, ID: flt-semantic-node-49

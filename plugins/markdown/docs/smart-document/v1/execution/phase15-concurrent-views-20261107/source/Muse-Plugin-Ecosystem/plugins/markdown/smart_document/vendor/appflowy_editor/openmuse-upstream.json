@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/AppFlowy-IO/appflowy-editor.git",
+  "revision": "470c4e77c71b63f693ce0923a927afcd667d6f3b",
+  "archiveSha256": "83631d5b1ea438d06fb0e24d47aeec8648effdfac9f12f1b3ff75ec1cffcd3b1",
+  "runtimeSubset": [
+    "lib",
+    "assets",
+    "pubspec.yaml",
+    "LICENSE"
+  ],
+  "patches": [
+    {
+      "file": "lib/src/editor/editor_component/service/ime/delta_input_service.dart",
+      "reason": "Implement the new TextInputClient.onFocusReceived callback on Flutter 3.44 without upgrading the editor or collaboration protocol.",
+      "sha256": "7127ebb38aa482f2b4d4d1b698a464391f17febe785cce33868149943c0e1676"
+    },
+    {
+      "file": "lib/src/editor_state.dart",
+      "reason": "Optional injection of domain-owned undo manager; keyboard and IME undo must use original Collab/Yrs origins rather than replay stale full-text snapshots. Allow remote projection while read-only without temporarily enabling local edits; the original isRemote path excludes local history and transaction observers.",
+      "sha256": "cf1dafa696fbe6bb089d7d6e2ba07279e896e2150b3a065805dbcc9545e0b55e"
+    },
+    {
+      "file": "pubspec.yaml",
+      "reason": "Allow intl 0.20 required by Flutter SDK localization; the resolved version remains pinned by the product lockfile.",
+      "sha256": "23f6aa77bc2acd62beb4de0c9df2e9a9ee97587ded2b75c3c80801330570dc4c"
+    },
+    {
+      "file": "lib/src/editor/block_component/image_block_component/image_block_component.dart",
+      "reason": "Optional asset content resolver/wrapper ports preserve original image resizing and selection while the application owns authorized bytes and metadata UI. Default behavior unchanged.",
+      "sha256": "6c385849c5c29d17c622f3bd2282698816ebf3168b09a623e2c3f341c51ccee3"
+    },
+    {
+      "file": "lib/src/editor/block_component/image_block_component/resizable_image.dart",
+      "reason": "Optional authorized image content port; reconcile remote/command dimensions and changed source in existing component state, preserve active local drag, and restore geometry on drag cancellation.",
+      "sha256": "f9edae2f99d70310c961c43188748ec014edbe91316684a3241cc9c5a24f220a"
+    }
+  ],
+  "patchSha256": "09532c07b74a6ecd510f2cbbd479cb59029df45b36e34eff3bc2928c3bb5ba01"
+}

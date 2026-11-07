@@ -1,0 +1,7 @@
+{
+  "preservedCandidate": "p15-unqualified-candidate-toast-capture",
+  "candidateManifestSha256": "850787121548007d8b8d5ca99c4a73d6c05e4c87458e245f3f99fb6983b00fa2",
+  "originalAxContainsMessage": false,
+  "recapturedAxContainsMessage": true,
+  "qualification": "additional visible UI capture on the same resources; final view restored and synchronized; original primary receipts retained"
+}

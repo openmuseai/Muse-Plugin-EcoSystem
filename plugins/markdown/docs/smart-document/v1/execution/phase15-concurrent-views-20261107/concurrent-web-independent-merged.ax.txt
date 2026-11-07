@@ -1,0 +1,56 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			4 text 智能文档 · 并发数据库视图
+			5 button (disabled) 撤销, ID: flt-semantic-node-17
+			6 button (disabled) 重做, ID: flt-semantic-node-18
+			7 button 加粗, ID: flt-semantic-node-19
+			8 button 斜体, ID: flt-semantic-node-20
+			9 button 下划线, ID: flt-semantic-node-21
+			10 button 超链接, ID: flt-semantic-node-22
+			11 button (collapsed) 块类型, ID: flt-semantic-node-23, Secondary Actions: Expand
+			12 button (collapsed) 插入内容, ID: flt-semantic-node-24, Secondary Actions: Expand
+			13 container flt-semantic-node-33
+				14 text 项目计划｜并发视图与命令撤销
+				15 container flt-semantic-node-28
+					16 button (collapsed) 数据库引用操作, ID: flt-semantic-node-29, Secondary Actions: Expand
+					17 container Description: 项目数据库 在线协作 实时连接正常 · 接收确认暂不可用 · 本机修改保留 显示 1 / 2 条记录 实时连接正常 · 接收确认暂不可用 · 本机修改保留, ID: flt-semantic-node-30
+						18 button 2 人, ID: flt-semantic-node-36
+						19 button (collapsed) 表格, ID: flt-semantic-node-37, Secondary Actions: Expand
+						20 button 筛选 · 已启用, ID: flt-semantic-node-38
+						21 button 排序 · 1, ID: flt-semantic-node-39
+						22 button 撤销, ID: flt-semantic-node-40
+						23 button (disabled) 重做, ID: flt-semantic-node-41
+						24 button 新增记录, ID: flt-semantic-node-42
+						25 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-43, Secondary Actions: Expand
+						26 button 重试, ID: flt-semantic-node-151
+						27 container flt-semantic-node-44
+							28 text #
+							29 button 标题, ID: flt-semantic-node-46
+							30 button 完成, ID: flt-semantic-node-47
+							31 button 链接, ID: flt-semantic-node-48
+							32 container Description: 1, ID: flt-semantic-node-50
+								33 button 第 1 行，标题 Muse A, ID: flt-semantic-node-51
+								34 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-52
+								35 button 第 1 行，链接, ID: flt-semantic-node-53
+						36 button 立即同步, ID: flt-semantic-node-59
+			37 text 已保存到本机 · 协作服务已接收
+			38 button 立即同步, ID: flt-semantic-node-35
+			39 container flt-semantic-node-15
+				40 text 真实并发验收辅助
+				41 text 当前测试会话：alice
+				55 text 恢复 HTTP 并将筛选改为 Muse。等待 Bob 改为 peer 后点击子表撤销，确认保留提示，再核对撤销边界。
+				54 text 实际筛选：Muse A；实际排序：0
+				44 text 已暂存原帧：2；HTTP 已阻止
+				45 button 恢复 HTTP, ID: flt-semantic-node-60
+				46 button 核对撤销边界, ID: flt-semantic-node-62
+				47 text ✓ original-native-parent-and-dataset-resource-identities
+				48 text ✓ parent-keeps-only-original-generic-resource-reference
+				49 text ✓ authoritative-row-dependencies-stay-independent-of-visible-view
+				50 text ✓ different-local-rule-branch-committed-before-any-original-frame-is-published
+				51 text ✓ concurrent-original-WS2-leaf-merge-keeps-one-stable-rule-with-HTTP-blocked
+				53 text ✓ independent-local-filter-and-sort-branches-committed-before-publication
+				56 text ✓ independent-concurrent-filter-and-sort-intents-both-survive-original-merge
+
+The focused UI element is 46 button 核对撤销边界, ID: flt-semantic-node-62
