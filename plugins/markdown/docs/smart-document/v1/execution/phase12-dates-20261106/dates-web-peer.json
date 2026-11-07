@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "actor": "bob",
+  "objectId": "16b0c8c1-9c8e-4e6e-9222-cfe5918eb533",
+  "datasetObjectId": "48e6590a-ba55-4dfa-9cba-b4e2001982a6",
+  "rowId": "b89e8842-8e1d-4fee-a35d-3e867a27fea5",
+  "fieldId": "40393a93-2172-430f-a34a-0e1bc6c6e627",
+  "checks": [
+    "native-parent-locator-resolves-the-same-independent-original-database-and-row",
+    "child-date-edits-preserve-parent-document-data",
+    "original-date-field2-uses-persisted-IANA-timezone-time-and-range-flags",
+    "actual-browser-date-form-values-keep-seconds-and-range-end-in-original-row",
+    "original-root-awareness-has-authenticated-peer",
+    "HTTP-content-routes-gated-with-zero-additional-network-requests",
+    "date-row-update-arrived-over-original-WS2-while-HTTP-gated"
+  ],
+  "platform": "web",
+  "date": "2026-11-06T15:44:37.278Z"
+}

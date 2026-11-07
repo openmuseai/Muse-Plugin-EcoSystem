@@ -1,0 +1,191 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/embedded_keyboard_history_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: embedded keyboard history owns child, modal draft and readonly boundary: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left")
+KEYBOARD_STEP: locator
+KEYBOARD_STEP: pump
+══╡ EXCEPTION CAUGHT BY WIDGETS ╞═══════════════════════════════════════════════════════════════════
+The following message was thrown:
+Warning: This application's locale, zh_CN, is not supported by all of its localization delegates.
+
+• A MaterialLocalizations delegate that supports the zh_CN locale was not found.
+• A CupertinoLocalizations delegate that supports the zh_CN locale was not found.
+
+The declared supported locales for this app are: en, bn_BN, ca, cs_CZ, da, de_DE, es_VE, fr_CA,
+fr_FR, hi_IN, hu_HU, id_ID, it_IT, ja_JP, ml_IN, nl_NL, pl_PL, pt_BR, pt_PT, ru_RU, tr_TR, zh_CN,
+zh_TW
+
+See https://flutter.dev/to/internationalization/ for more information about configuring an app's
+locale, supportedLocales, and localizationsDelegates parameters.
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following assertion was thrown building
+PopupMenuButton<String>-[<'smart-document.block-type'>](dirty, dependencies: [IconTheme,
+InheritedCupertinoTheme, _InheritedTheme, _LocalizationsScope-[GlobalKey#8386a]], state:
+PopupMenuButtonState<String>#112d7):
+No MaterialLocalizations found.
+PopupMenuButton<String> widgets require MaterialLocalizations to be provided by a Localizations
+widget ancestor.
+The material library uses Localizations to generate messages, labels, and abbreviations.
+To introduce a MaterialLocalizations, either use a MaterialApp at the root of your application to
+include them automatically, or add a Localization widget with a MaterialLocalizations delegate.
+The specific widget that could not find a MaterialLocalizations ancestor was:
+  PopupMenuButton<String>-[<'smart-document.block-type'>]
+The ancestors of this widget were:
+  ...
+  Wrap
+  Padding
+  Column
+  ColoredBox
+  ListenableBuilder
+  ...
+
+The relevant error-causing widget was:
+  PopupMenuButton<String>-[<'smart-document.block-type'>]
+  PopupMenuButton:file:///Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/document_view.dart:155:21
+
+When the exception was thrown, this was the stack:
+#0      debugCheckHasMaterialLocalizations.<anonymous closure> (package:flutter/src/material/debug.dart:97:7)
+#1      debugCheckHasMaterialLocalizations (package:flutter/src/material/debug.dart:117:4)
+#2      PopupMenuButtonState.build (package:flutter/src/material/popup_menu.dart:1748:12)
+#3      StatefulElement.build (package:flutter/src/widgets/framework.dart:5931:27)
+#4      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5817:15)
+#5      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#6      Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#7      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5799:5)
+#8      StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5973:11)
+#9      ComponentElement.mount (package:flutter/src/widgets/framework.dart:5793:5)
+#10     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#11     MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#12     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (4 frames)
+#16     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#17     MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#18     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (58 frames)
+#76     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#77     MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#78     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (126 frames)
+#204    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#205    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#206    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (194 frames)
+#400    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#401    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#402    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (492 frames)
+#894    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#895    Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#896    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#897    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#898    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#899    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#900    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#901    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#902    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#903    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#904    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#905    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#906    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#907    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#908    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#909    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#910    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#911    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#912    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#913    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#914    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#915    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#916    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#917    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#918    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#919    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#920    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#921    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#922    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#923    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#924    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#925    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#926    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#927    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#928    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#929    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#930    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#931    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#932    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#933    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#934    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#935    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#936    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#937    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#938    _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#939    _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#940    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#941    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#942    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#943    StatelessElement.update (package:flutter/src/widgets/framework.dart:5895:5)
+#944    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#945    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#946    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#947    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#948    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#949    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#950    RootElement._rebuild (package:flutter/src/widgets/binding.dart:2091:16)
+#951    RootElement.update (package:flutter/src/widgets/binding.dart:2069:5)
+#952    RootElement.performRebuild (package:flutter/src/widgets/binding.dart:2083:7)
+#953    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#954    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#955    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#956    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#957    WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1571:21)
+#958    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:509:5)
+#959    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1430:15)
+#960    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1345:9)
+#961    LiveTestWidgetsFlutterBinding.handleDrawFrame (package:flutter_test/src/binding.dart:2811:13)
+#962    SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1198:5)
+#966    _invoke (dart:ui/hooks.dart:425:10)
+#967    PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:447:5)
+#968    _drawFrame (dart:ui/hooks.dart:395:31)
+(elided 3 frames from dart:async)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following assertion was thrown building
+PopupMenuButton<String>-[<'smart-document.insert'>](dirty, dependencies: [IconTheme,
+InheritedCupertinoTheme, _InheritedTheme, _LocalizationsScope-[GlobalKey#8386a]], state:
+PopupMenuButtonState<String>#b5cc9):
+No MaterialLocalizations found.
+PopupMenuButton<String> widgets require MaterialLocalizations to be provided by a Localizations
+widget ancestor.
+The material library uses Localizations to generate messages, labels, and abbreviations.
+To introduce a MaterialLocalizations, either use a MaterialApp at the root of your application to
+include them automatically, or add a Localization widget with a MaterialLocalizations delegate.
+The specific widget that could not find a MaterialLocalizations ancestor was:
+  PopupMenuButton<String>-[<'smart-document.insert'>]
+The ancestors of this widget were:
+  ...
+  Wrap
+  Padding
+  Column
+  ColoredBox
+  ListenableBuilder
+  ...
+
+The relevant error-causing widget was:
+  PopupMenuButton<String>-[<'smart-document.insert'>]
+  PopupMenuButton:file:///Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/lib/src/document_view.dart:201:21
+
+When the exception was thrown, this was the stack:
+#0      debugCheckHasMaterialLocalizations.<anonymous closure> (package:flutter/src/material/debug.dart:97:7)
+#1      debugCheckHasMaterialLocalizations (package:flutter/src/material/debug.dart:117:4)
+00:00 +0 -1: embedded keyboard history owns child, modal draft and readonly boundary: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left") [E]
+  Test failed. See exception logs above.
+  The test description was: embedded keyboard history owns child, modal draft and readonly boundary: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left")
+  
+00:00 +0 -1: (tearDownAll)
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/embedded_keyboard_history_test.dart: embedded keyboard history owns child, modal draft and readonly boundary: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left")

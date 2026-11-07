@@ -1,0 +1,20 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/embedded_keyboard_history_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: embedded keyboard history owns child, modal draft and readonly boundary: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left")
+KEYBOARD_STEP: locator
+KEYBOARD_STEP: pump
+KEYBOARD_STEP: key undo
+KEYBOARD_STEP: key redo
+KEYBOARD_STEP: key undo
+KEYBOARD_STEP: cancel
+KEYBOARD_STEP: pump
+KEYBOARD_STEP: readonly
+KEYBOARD_STEP: key undo
+KEYBOARD_STEP: parent
+KEYBOARD_STEP: key undo
+KEYBOARD_STEP: close
+KEYBOARD_STEP: done
+00:05 +1: (tearDownAll)
+00:05 +1: All tests passed!

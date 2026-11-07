@@ -1,0 +1,24 @@
+Browser tab: 19, Title: "127.0.0.1:50944", URL: "http://127.0.0.1:50944/".
+1 AXWebArea 127.0.0.1:50944/
+	2 container flt-semantic-node-95
+		23 text 交付日期
+		5 container flt-semantic-node-98
+			6 text 时区：America/New_York
+			7 text field (settable) Description: 开始日期, Value: 2026-11-18T09:10:11-05:00
+			8 container Description: 选择开始日期, ID: flt-semantic-node-101
+				9 button 选择日期, ID: flt-semantic-node-102
+			10 container Description: 选择开始时间, ID: flt-semantic-node-103
+				11 button 选择时间, ID: flt-semantic-node-104
+			12 switch Description: 包含时间, Value: 1, ID: flt-semantic-node-105
+			13 switch Description: 结束日期, Value: 1, ID: flt-semantic-node-107
+			14 text field (settable) Description: 结束日期（可留空）, Value: 2026-11-19T12:13:14-05:00
+			15 container Description: 选择结束日期, ID: flt-semantic-node-110
+				16 button 选择日期, ID: flt-semantic-node-111
+			17 container Description: 选择结束时间, ID: flt-semantic-node-112
+				18 button 选择时间, ID: flt-semantic-node-113
+			19 text 使用字段时区。夏令时重复时刻需附偏移量，如 -04:00。
+		20 button 清空, ID: flt-semantic-node-115
+		21 button 取消, ID: flt-semantic-node-116
+		22 button 应用, ID: flt-semantic-node-117
+
+The focused UI element is 14 text field (settable) Description: 结束日期（可留空）, Value: 2026-11-19T12:13:14-05:00

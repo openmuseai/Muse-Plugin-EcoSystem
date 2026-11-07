@@ -1,0 +1,8 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/keyboard_history_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/keyboard_history_test.dart: child shortcuts own history and readonly keys never bubble to parent: LogicalKeyboardKey#e3a44(keyId: "0x200000106", keyLabel: "Meta Left", debugName: "Meta Left")
+00:01 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/keyboard_history_test.dart: child shortcuts own history and readonly keys never bubble to parent: LogicalKeyboardKey#d0ba2(keyId: "0x200000100", keyLabel: "Control Left", debugName: "Control Left")
+00:01 +2: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart
+00:02 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:03 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 430.0
+00:03 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 1100.0
+00:03 +5: All tests passed!

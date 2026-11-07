@@ -1,0 +1,19 @@
+{
+  "run": "dates-c20f7301cfe7",
+  "device": "macos",
+  "status": "passed-dates-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "dates_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "dates_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 7,
+  "freshProcessChecks": 3
+}
