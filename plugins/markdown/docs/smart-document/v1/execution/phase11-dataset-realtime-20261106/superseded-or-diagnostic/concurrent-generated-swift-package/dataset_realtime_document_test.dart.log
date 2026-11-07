@@ -1,0 +1,46 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart
+00:00 +0 -1: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart [E]
+  Failed to load "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart":
+  An error occurred when adding Swift Package Manager integration:
+    Error: Xcode failed to resolve Swift Package Manager dependencies:
+  2026-11-06 22:26:24.510 xcodebuild[26694:8150123] Writing error result bundle to /var/folders/gg/dzp5f_5n7rqbyyn9s0sd58z80000gn/T/ResultBundle_2026-06-11_22-26-0024.xcresult
+  xcodebuild: error: Could not resolve package dependencies:
+    error: input file '/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/macos/Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage/Package.swift' was modified during the build
+  error: input file '/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/macos/Flutter/ephemeral/Packages/FlutterGeneratedPluginSwiftPackage/Package.swift' was modified during the build
+  
+  
+  
+  Swift Package Manager is currently an experimental feature, please file a bug at
+    https://github.com/flutter/flutter/issues/new?template=01_activation.yml 
+  Consider including a copy of the following files in your bug report:
+    macos/Runner.xcodeproj/project.pbxproj
+    macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme (or the scheme for the flavor used)
+  
+  To add Swift Package Manager integration manually, please use the following instructions:
+  https://docs.flutter.dev/to/add-swift-package-manager-manually
+  
+  You can also disable Swift Package Manager for the project by following these instructions:
+    https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers#how-to-turn-off-swift-package-manager
+  Disabling Swift Package Manager will not be allowed in a future version of Flutter.
+  
+  package:flutter_tools/src/base/common.dart 34:3                                              throwToolExit
+  package:flutter_tools/src/migrations/swift_package_manager_integration_migration.dart 248:9  SwiftPackageManagerIntegrationMigration.migrate
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/project_migrator.dart 86:7                                    ProjectMigration.run
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/macos/build_macos.dart 114:3                                       buildMacOS
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/macos/macos_device.dart 67:5                                       MacOSDevice.buildForDevice
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/desktop_device.dart 108:7                                          DesktopDevice.startApp
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/integration_test_device.dart 57:39                            IntegrationTestTestDevice.start
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/flutter_platform.dart 680:51                                  FlutterPlatform._startTest.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/async_guard.dart 108:24                                       asyncGuard.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart

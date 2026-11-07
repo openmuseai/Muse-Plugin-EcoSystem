@@ -1,0 +1,35 @@
+{
+  "phase": "P11-20261106",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "documentRustTests": 20,
+    "datasetRustTests": 10,
+    "documentLocalChecks": 32,
+    "datasetFullChecks": 29,
+    "resourceSdkChecks": 3,
+    "sharedPresenceUiChecks": 1,
+    "documentCloudGroups": 4,
+    "liveWireChecks": 6,
+    "actualGuestChecks": 7,
+    "appleUiChecksPerPlatform": 8,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webAliceChecks": 9,
+    "webBobChecks": 7,
+    "webReloadChecks": 5,
+    "nativeWebReadbackChecks": 4
+  },
+  "limits": [
+    "6 basic field types/one Grid; complete SiYuan editing/database range remains open",
+    "original workspace broadcast; 128-row client attention window is not scoped wire subscription or qualified 1000-row interactive capacity",
+    "resource registry, inherited grants and cross-instance immediate revocation remain open; explicit root/row Guest grants were qualified",
+    "UID multi-device roster aggregation/client-id registry, contextual keyboard history and physical IME remain open",
+    "durable ACK/offline commands, comments/history/Agent/Office and Android remain open"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "run": "dataset_realtime-e41bf1626248",
+  "device": "macos",
+  "status": "passed-dataset_realtime-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "dataset_realtime_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "dataset_realtime_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 8,
+  "freshProcessChecks": 3
+}

@@ -1,0 +1,11 @@
+{
+  "SMARTDOC_RUN": "dataset_realtime-4a8911151755",
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:18000",
+  "SMARTDOC_WORKSPACE": "e8715d91-bcc4-468a-9688-9e07e35ce710",
+  "DATASET_REALTIME_OBJECT": "32ec62f6-d6eb-4adb-af03-e3b3fd359656",
+  "DATASET_REALTIME_DATASET": "841de1ce-b857-4ddd-bd72-00b2d7cbc64e",
+  "DATASET_REALTIME_ROW": "8c9b8bb3-3f57-4708-9d96-52845bb0bab2",
+  "DATASET_REALTIME_ROWS": "[\"8c9b8bb3-3f57-4708-9d96-52845bb0bab2\",\"c78504ae-ad7d-4cd9-899a-2477da244f55\"]",
+  "DATASET_REALTIME_TARGET": "{\"protocol\":\"openmuse.resource-embed/v1\",\"reference\":{\"protocol\":\"openmuse.resource-reference/v1\",\"identity\":{\"scope\":\"dataset-dataset_realtime-4a8911151755\",\"source\":\"source-jjho6IO0CrLC__dYoB8Q_bJm\",\"workspace\":\"personal\",\"mount\":\"documents\",\"resource\":\"r-J4IIQAbu2NyewfsrLvncyJ08\"}},\"surface\":\"dataset.grid\",\"selector\":{\"objectId\":\"841de1ce-b857-4ddd-bd72-00b2d7cbc64e\",\"viewId\":\"35d5fd84-7646-5f9e-b6f5-3baf063d2971\"}}",
+  "DATASET_REALTIME_NONCE": "05283732cadd41ed96db43c3062a307d"
+}

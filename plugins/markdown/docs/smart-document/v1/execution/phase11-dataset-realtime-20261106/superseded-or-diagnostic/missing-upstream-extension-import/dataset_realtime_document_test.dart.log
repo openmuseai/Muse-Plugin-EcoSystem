@@ -1,0 +1,31 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart
+Building macOS application...                                   
+integration_test/dataset_realtime_document_test.dart:50:33: Error: The method 'insertText' isn't defined for the type 'Transaction'.
+ - 'Transaction' is from 'package:appflowy_editor/src/core/transform/transaction.dart' ('../../vendor/appflowy_editor/lib/src/core/transform/transaction.dart').
+Try correcting the name to the name of an existing method, or defining a method named 'insertText'.
+        doc.editor.transaction..insertText(doc.blocks.first, 0, '项目计划｜数据库实时协作'),
+                                ^^^^^^^^^^
+Target kernel_snapshot_program failed: Exception
+Failed to package /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example.
+Command PhaseScriptExecution failed with a nonzero exit code
+** BUILD FAILED **
+
+00:00 +0 -1: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart [E]
+  Failed to load "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart": Build process failed
+  package:flutter_tools/src/base/common.dart 34:3                    throwToolExit
+  package:flutter_tools/src/macos/build_macos.dart 271:5             buildMacOS
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/macos/macos_device.dart 67:5             MacOSDevice.buildForDevice
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/desktop_device.dart 108:7                DesktopDevice.startApp
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/integration_test_device.dart 57:39  IntegrationTestTestDevice.start
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/flutter_platform.dart 680:51        FlutterPlatform._startTest.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/async_guard.dart 108:24             asyncGuard.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_realtime_document_test.dart
