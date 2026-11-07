@@ -1,0 +1,85 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/history_outcome_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/history_outcome_test.dart: history outcome belongs to its command while a newer peer projection arrives during checkpoint IO
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart: native reads the browser edits of the original native-created choice objects
+read type=1 start=0
+read type=1 end=34 bytes=4208
+core open start=35 end=3790
+read type=1 start=3795
+read type=1 end=3808 bytes=4208
+00:04 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/history_outcome_test.dart: history outcome belongs to its command while a newer peer projection arrives during checkpoint IO
+00:04 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart: native reads the browser edits of the original native-created choice objects
+core applyUpdate start=3809 end=3811
+core syncObject start=3816 end=3816
+read type=4 start=3817
+00:04 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_web_readback_test.dart: native reads the browser edits of the original native-created choice objects
+00:04 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart: native reads the browser edits of the original native-created choice objects
+read type=4 end=3826 bytes=1038
+core applyUpdate start=3827 end=3828
+core syncObject start=3830 end=3830
+core applySync start=3878 end=3880
+00:04 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:04 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart: native reads the browser edits of the original native-created choice objects
+core applySync start=3919 end=3920
+core close start=3931 end=3931
+00:04 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +5: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +6: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +7: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +8: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +9: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +10: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +11: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +12: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +13: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +14: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +15: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +16: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +17: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +18: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +19: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +20: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +21: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:05 +22: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:06 +23: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:06 +24: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/date_surface_test.dart: original date field UI, civil range, clear undo, stale timezone draft at 320.0
+00:06 +25: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:06 +26: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:07 +27: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:07 +28: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:07 +29: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:07 +30: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:07 +31: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +32: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +33: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +34: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +35: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +36: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +37: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +38: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +39: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +39: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_read_diagnostic_test.dart: diagnose native read and projection timing for same browser source
+{"step":"start","milliseconds":1}
+{"step":"first-root-read","milliseconds":45,"bytes":4208}
+{"step":"native-root-open","milliseconds":55}
+{"step":"second-root-read","milliseconds":71,"bytes":4208}
+{"step":"row-read","milliseconds":81,"bytes":1038}
+{"step":"native-row-merge","milliseconds":84}
+00:08 +40: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +41: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:08 +42: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:09 +43: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:09 +44: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:09 +44 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:09 +44 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_test.dart: original Cloud database type 1 and row type 4: two users, offline cells, undo, ACL and local reopen [E]
+  ClientException with SocketException: Connection refused (OS Error: Connection refused, errno = 61), address = 127.0.0.1, port = 50511, uri=http://127.0.0.1:18000/api/workspace/v1/e8715d91-bcc4-468a-9688-9e07e35ce710/collab/12b695ab-eab6-4302-9247-0509bbcc0556?collab_type=1
+  package:http/src/io_client.dart 227:7  IOClient.send
+  
+00:09 +45 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:10 +46 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:10 +47 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:14 +48 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_cloud_test.dart: original WS2 database/row updates and cell awareness work while reader HTTP is unavailable
+00:29 +49 -1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/realtime_permissions_cloud_test.dart: actual Guest root1 and row4 grants, raw writes, downgrade, independent row revoke and root deletion
+00:30 +50 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_test.dart: original Cloud database type 1 and row type 4: two users, offline cells, undo, ACL and local reopen

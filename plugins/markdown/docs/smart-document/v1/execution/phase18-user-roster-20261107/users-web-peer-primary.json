@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "actor": "bob",
+  "slot": "primary",
+  "objectId": "b5449cbb-9943-4141-9977-e31882ece7f8",
+  "datasetObjectId": "9da40da6-6684-4586-9c91-86b48890a6d5",
+  "checks": [
+    "same-original-native-document-and-independent-dataset-identities",
+    "roster-and-locations-do-not-rewrite-parent-content",
+    "profile-and-awareness-are-not-persisted-in-content",
+    "actual-Web-Rust-profile-UID-matches-native-full-i64-identity",
+    "four-live-positions-group-into-two-authenticated-users"
+  ],
+  "platform": "web",
+  "metrics": [],
+  "uid": "654985682871128064"
+}

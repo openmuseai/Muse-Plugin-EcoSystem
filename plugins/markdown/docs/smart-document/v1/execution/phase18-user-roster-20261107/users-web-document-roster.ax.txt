@@ -1,0 +1,14 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container 关闭 在线协作者 纱罩
+			4 container flt-semantic-node-1
+				5 container flt-semantic-node-97
+					6 button 关闭, ID: flt-semantic-node-98
+					7 text 在线协作者
+					8 container flt-semantic-node-103
+						9 text 我 当前会话
+						10 text 协作者 第 1 块
+				11 button 纱罩, ID: flt-semantic-node-94
+
+The focused UI element is 3 container 关闭 在线协作者 纱罩

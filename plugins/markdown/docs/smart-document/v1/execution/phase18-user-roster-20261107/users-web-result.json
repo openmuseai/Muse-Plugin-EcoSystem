@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "slot": "primary",
+  "objectId": "b5449cbb-9943-4141-9977-e31882ece7f8",
+  "datasetObjectId": "9da40da6-6684-4586-9c91-86b48890a6d5",
+  "checks": [
+    "same-original-native-document-and-independent-dataset-identities",
+    "roster-and-locations-do-not-rewrite-parent-content",
+    "profile-and-awareness-are-not-persisted-in-content",
+    "actual-Web-Rust-profile-UID-matches-native-full-i64-identity",
+    "user-and-position-counts-at-real-leave-stage-0",
+    "same-Bob-UID-position-lifetime-at-stage-0",
+    "original-independent-cursors-remain-at-stage-0",
+    "user-and-position-counts-at-real-leave-stage-1",
+    "same-Bob-UID-position-lifetime-at-stage-1",
+    "original-independent-cursors-remain-at-stage-1",
+    "user-and-position-counts-at-real-leave-stage-2",
+    "same-Bob-UID-position-lifetime-at-stage-2",
+    "original-independent-cursors-remain-at-stage-2",
+    "user-and-position-counts-at-real-leave-stage-3",
+    "same-Bob-UID-position-lifetime-at-stage-3",
+    "original-independent-cursors-remain-at-stage-3",
+    "user-and-position-counts-at-real-leave-stage-4",
+    "same-Bob-UID-position-lifetime-at-stage-4",
+    "original-independent-cursors-remain-at-stage-4",
+    "leader-disconnect-clears-and-original-authenticated-reconnect-restores-user-identity"
+  ],
+  "platform": "web",
+  "metrics": [
+    {
+      "stage": 0,
+      "remotePositions": 3,
+      "users": 2,
+      "bobPositions": 2
+    },
+    {
+      "stage": 1,
+      "remotePositions": 2,
+      "users": 2,
+      "bobPositions": 1
+    },
+    {
+      "stage": 2,
+      "remotePositions": 1,
+      "users": 1,
+      "bobPositions": 0
+    },
+    {
+      "stage": 3,
+      "remotePositions": 0,
+      "users": 1,
+      "bobPositions": 0
+    },
+    {
+      "stage": 4,
+      "remotePositions": 1,
+      "users": 2,
+      "bobPositions": 1
+    }
+  ],
+  "uid": "654985681893855232"
+}

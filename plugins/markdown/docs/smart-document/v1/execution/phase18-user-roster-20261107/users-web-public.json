@@ -1,0 +1,12 @@
+{
+  "SMARTDOC_RUN": "users-3095df289ea6",
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:18000",
+  "SMARTDOC_WORKSPACE": "e8715d91-bcc4-468a-9688-9e07e35ce710",
+  "USERS_OBJECT": "b5449cbb-9943-4141-9977-e31882ece7f8",
+  "USERS_DATASET": "9da40da6-6684-4586-9c91-86b48890a6d5",
+  "USERS_ROW": "ece3ead6-f659-4a0f-a065-5a55a75469b1",
+  "USERS_TARGET": "{\"protocol\": \"openmuse.resource-embed/v1\", \"reference\": {\"protocol\": \"openmuse.resource-reference/v1\", \"identity\": {\"scope\": \"dataset-users-3095df289ea6\", \"source\": \"source-J3NgRrY3U70vQIbsJNjjI9om\", \"workspace\": \"personal\", \"mount\": \"documents\", \"resource\": \"r-z8TKPtqOXm46Z_IJIrrJXdHR\"}}, \"surface\": \"dataset.grid\", \"selector\": {\"objectId\": \"9da40da6-6684-4586-9c91-86b48890a6d5\", \"viewId\": \"6c255374-5510-5c21-8f13-1af9a955d7fe\"}}",
+  "USERS_ALICE_UID": "654985681893855232",
+  "USERS_BOB_UID": "654985682871128064",
+  "USERS_NONCE": "1a52175f0f99d9e4c37f9434c26f08b9"
+}

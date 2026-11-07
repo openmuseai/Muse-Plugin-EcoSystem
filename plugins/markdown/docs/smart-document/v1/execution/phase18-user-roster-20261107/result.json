@@ -1,0 +1,35 @@
+{
+  "phase": "P18-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "realtimeRustChecks": 6,
+    "neutralContractTests": 5,
+    "sharedWidgetsTests": 5,
+    "realtimePackageTests": 4,
+    "datasetFullPackageTests": 51,
+    "documentSelectedTests": 43,
+    "documentIsolatedCloudLifecycleTests": 1,
+    "appleUiChecksPerPlatform": 8,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 20,
+    "webPeerChecksPerPosition": 5,
+    "webPeerPositions": 3,
+    "webReloadChecks": 4,
+    "nativeWebReadbackChecks": 4
+  },
+  "limits": [
+    "User roster qualified with two users/four positions for Document and Dataset; large scale, Host directory/avatars, Office range and cross-instance failure cases remain open",
+    "Profile UID is transient and origin-bound; it is not a sharing ACL or inherited resource grant",
+    "Full SiYuan editing, 18 fields/5 views, source blocks, rich cell collaboration and model migration remain open",
+    "Durable ACK/outbox, distributed immediate revoke, public share, comments/history/Agent/Office remain open",
+    "Physical IME/soft-keyboard geometry, Android and Windows/Linux UI remain unqualified",
+    "Old browser file-picker media readback prerequisite unavailable in current fixture; not counted as passed in P18; frozen P6 evidence preserved"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

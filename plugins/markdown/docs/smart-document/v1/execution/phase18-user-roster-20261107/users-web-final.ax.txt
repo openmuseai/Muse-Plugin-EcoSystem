@@ -1,0 +1,67 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			33 container Description: 在线协作, ID: flt-semantic-node-6
+				34 button 2 人, ID: flt-semantic-node-7
+			35 text 智能文档 · 多端在线
+			36 button (disabled) 撤销, ID: flt-semantic-node-8
+			37 button (disabled) 重做, ID: flt-semantic-node-9
+			5 button 加粗, ID: flt-semantic-node-10
+			6 button 斜体, ID: flt-semantic-node-11
+			7 button 下划线, ID: flt-semantic-node-12
+			8 button 超链接, ID: flt-semantic-node-13
+			9 button (collapsed) 块类型, ID: flt-semantic-node-14, Secondary Actions: Expand
+			10 button (collapsed) 插入内容, ID: flt-semantic-node-15, Secondary Actions: Expand
+			11 container flt-semantic-node-24
+				38 text 多端协作计划与在线位置
+				39 container flt-semantic-node-19
+					40 button (collapsed) 数据库引用操作, ID: flt-semantic-node-20, Secondary Actions: Expand
+					41 container Description: 项目数据库 在线协作 已保存到本机 · 协作服务已接收, ID: flt-semantic-node-21
+						42 button 2 人, ID: flt-semantic-node-32
+						43 button (collapsed) 表格, ID: flt-semantic-node-33, Secondary Actions: Expand
+						44 button 筛选, ID: flt-semantic-node-34
+						45 button 排序, ID: flt-semantic-node-35
+						46 button (disabled) 撤销, ID: flt-semantic-node-36
+						47 button (disabled) 重做, ID: flt-semantic-node-37
+						48 button 新增记录, ID: flt-semantic-node-38
+						49 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-39, Secondary Actions: Expand
+						50 container flt-semantic-node-40
+							51 text #
+							52 button 标题, ID: flt-semantic-node-42
+							53 button 完成, ID: flt-semantic-node-43
+							54 button 链接, ID: flt-semantic-node-44
+							55 container Description: 1, ID: flt-semantic-node-46
+								56 button 第 1 行，标题，协作者选中此单元格, ID: flt-semantic-node-47
+								57 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-48
+								58 button 第 1 行，链接, ID: flt-semantic-node-49
+						59 button 立即同步, ID: flt-semantic-node-51
+			84 text 已保存到本机 · 协作服务已接收
+			28 button 立即同步, ID: flt-semantic-node-26
+			29 container flt-semantic-node-31
+				31 button 重连协作, ID: flt-semantic-node-55
+				32 button 离开协作, ID: flt-semantic-node-57
+				64 button (disabled) 核对当前阶段, ID: flt-semantic-node-59
+				65 text ✓ same-original-native-document-and-independent-dataset-identities
+				66 text ✓ roster-and-locations-do-not-rewrite-parent-content
+				67 text ✓ profile-and-awareness-are-not-persisted-in-content
+				68 text ✓ actual-Web-Rust-profile-UID-matches-native-full-i64-identity
+				69 text ✓ user-and-position-counts-at-real-leave-stage-0
+				70 text ✓ same-Bob-UID-position-lifetime-at-stage-0
+				71 text ✓ original-independent-cursors-remain-at-stage-0
+				72 text ✓ user-and-position-counts-at-real-leave-stage-1
+				73 text ✓ same-Bob-UID-position-lifetime-at-stage-1
+				74 text ✓ original-independent-cursors-remain-at-stage-1
+				75 text ✓ user-and-position-counts-at-real-leave-stage-2
+				76 text ✓ same-Bob-UID-position-lifetime-at-stage-2
+				77 text ✓ original-independent-cursors-remain-at-stage-2
+				78 text ✓ user-and-position-counts-at-real-leave-stage-3
+				79 text ✓ same-Bob-UID-position-lifetime-at-stage-3
+				80 text ✓ original-independent-cursors-remain-at-stage-3
+				81 text ✓ user-and-position-counts-at-real-leave-stage-4
+				82 text ✓ same-Bob-UID-position-lifetime-at-stage-4
+				83 text ✓ original-independent-cursors-remain-at-stage-4
+				85 text ✓ leader-disconnect-clears-and-original-authenticated-reconnect-restores-user-identity
+				86 text PASS · 20 checks
+
+The focused UI element is 34 button 2 人, ID: flt-semantic-node-7

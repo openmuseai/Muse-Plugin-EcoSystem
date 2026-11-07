@@ -1,0 +1,43 @@
+Browser tab: 22, Title: "127.0.0.1:50946/?reopen=1", URL: "http://127.0.0.1:50946/?reopen=1".
+1 AXWebArea 127.0.0.1:50946/?reopen=1
+	2 container
+		3 container flt-semantic-node-3
+			4 text 智能文档 · 多端在线
+			5 button (disabled) 撤销, ID: flt-semantic-node-7
+			6 button (disabled) 重做, ID: flt-semantic-node-8
+			7 button (disabled) 加粗, ID: flt-semantic-node-9
+			8 button (disabled) 斜体, ID: flt-semantic-node-10
+			9 button (disabled) 下划线, ID: flt-semantic-node-11
+			10 button (disabled) 超链接, ID: flt-semantic-node-12
+			11 button (disabled, collapsed) 块类型, ID: flt-semantic-node-13, Secondary Actions: Expand
+			12 button (disabled, collapsed) 插入内容, ID: flt-semantic-node-14, Secondary Actions: Expand
+			13 container flt-semantic-node-22
+				14 text 多端协作计划与在线位置
+				15 container Description: 项目数据库 只读 已保存到本机 · 本机数据集, ID: flt-semantic-node-19
+					16 button (collapsed) 表格, ID: flt-semantic-node-29, Secondary Actions: Expand
+					17 button (disabled) 筛选, ID: flt-semantic-node-30
+					18 button (disabled) 排序, ID: flt-semantic-node-31
+					19 button (disabled) 撤销, ID: flt-semantic-node-32
+					20 button (disabled) 重做, ID: flt-semantic-node-33
+					21 button (disabled) 新增记录, ID: flt-semantic-node-34
+					22 text 新增字段 新增字段
+					23 container flt-semantic-node-36
+						24 text #
+						25 text 标题
+						26 text 完成
+						27 text 链接
+						28 checkbox (disabled) Description: 1 第 1 行，标题 第 1 行，完成 第 1 行，链接, Value: 0, ID: flt-semantic-node-42
+			29 text 只读
+			30 text 已保存到本机 · 本机文档
+			31 container flt-semantic-node-28
+				32 text 用户在线验收 · alice / primary / offline
+				33 text 阶段 0 · 原连接 0/0 · 光标 0
+				34 text 身份 待确认
+				35 button (disabled) 验收离线重开, ID: flt-semantic-node-45
+				36 text ✓ same-original-native-document-and-independent-dataset-identities
+				37 text ✓ roster-and-locations-do-not-rewrite-parent-content
+				38 text ✓ profile-and-awareness-are-not-persisted-in-content
+				39 text ✓ offline-IndexedDB-reopen-has-no-profile-provider-presence-or-edit-grant
+				40 text PASS · 4 checks
+
+The focused UI element is 35 button (disabled) 验收离线重开, ID: flt-semantic-node-45

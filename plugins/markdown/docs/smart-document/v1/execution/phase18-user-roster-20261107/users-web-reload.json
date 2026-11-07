@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "slot": "primary",
+  "objectId": "b5449cbb-9943-4141-9977-e31882ece7f8",
+  "datasetObjectId": "9da40da6-6684-4586-9c91-86b48890a6d5",
+  "checks": [
+    "same-original-native-document-and-independent-dataset-identities",
+    "roster-and-locations-do-not-rewrite-parent-content",
+    "profile-and-awareness-are-not-persisted-in-content",
+    "offline-IndexedDB-reopen-has-no-profile-provider-presence-or-edit-grant"
+  ],
+  "platform": "web-reload",
+  "metrics": [],
+  "uid": null
+}

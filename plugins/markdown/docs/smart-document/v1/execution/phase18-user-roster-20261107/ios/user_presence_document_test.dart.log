@@ -1,0 +1,10 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/user_presence_document_test.dart
+The following plugins do not support Swift Package Manager for ios:
+  - keyboard_height_plugin
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Running Xcode build...                                          
+Xcode build done.                                           20.3s
+00:00 +0: original authenticated same-user positions aggregate in document and dataset UI
+SMARTDOC_USERS_EVIDENCE=/Users/mac/Library/Developer/CoreSimulator/Devices/5F0D9070-BE32-4063-BF7D-B7EB3B48D105/data/Containers/Data/Application/0FE93D29-B03B-4B60-96BD-1B1C1BD315F7/Library/Application Support/SmartDocumentStage1/users-1a3a8cfc31db/evidence
+00:09 +1: (tearDownAll)
+00:09 +1: All tests passed!
