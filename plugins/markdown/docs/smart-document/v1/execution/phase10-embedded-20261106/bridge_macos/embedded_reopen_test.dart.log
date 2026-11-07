@@ -1,0 +1,8 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/embedded_reopen_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: fresh credential-free process restores document locator and separately checkpointed dataset
+SMARTDOC_EMBEDDED_REOPEN=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/SmartDocumentStage1/embedded-e294e0187c3e/evidence
+00:00 +1: (tearDownAll)
+00:00 +1: All tests passed!

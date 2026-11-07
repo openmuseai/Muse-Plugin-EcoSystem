@@ -1,0 +1,1 @@
+{"status":"passed","run":"embedded-e294e0187c3e","objectId":"6df13f2a-baa3-4966-8043-6524ce50c4ba","datasetObjectId":"cfa1ad53-3822-4671-88c7-221bb573c803","checks":["fresh-public-resource-ledgers-preserve-distinct-document-dataset-identities","exact-original-grid-reference-view-and-row-identity-restored","independent-resource-checkpoint-retains-peer-value-without-credentials"]}

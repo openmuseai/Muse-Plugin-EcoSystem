@@ -1,0 +1,34 @@
+{
+  "phase": "P10-20261106",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "documentRustTests": 20,
+    "datasetRustTests": 10,
+    "documentLocalChecks": 32,
+    "datasetFullChecks": 22,
+    "embeddedSessionChecks": 4,
+    "resourceSdkChecks": 3,
+    "neutralEmbedContractChecks": 1,
+    "documentCloudGroups": 4,
+    "appleUiChecksPerPlatform": 6,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webAssertions": 9,
+    "webUniqueChecks": 7,
+    "webReloadChecks": 3,
+    "nativeWebReadbackChecks": 3
+  },
+  "limits": [
+    "6 basic field types/one Grid; full 18 fields/5 layouts remain open",
+    "production Host catalog/session-owner unification and child resource registry/ACL inheritance remain open",
+    "Dataset realtime/presence, full keyboard undo routing and physical mobile IME remain open",
+    "same-cell values remain original atomic values; row reference undo is not resource deletion",
+    "immediate cross-instance revocation, durable ACK, comments/history/Agent/Office and Android remain open"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

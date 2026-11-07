@@ -1,0 +1,19 @@
+{
+  "run": "embedded-b26f3854e30b",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-embedded-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "embedded_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "embedded_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 6,
+  "freshProcessChecks": 3
+}

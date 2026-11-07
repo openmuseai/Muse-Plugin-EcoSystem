@@ -1,0 +1,13 @@
+{
+  "run": "embedded-e2a0d5f7bd87",
+  "device": "macos",
+  "status": "failed",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "embedded_document_test.dart",
+      "exitCode": 1
+    }
+  ],
+  "reason": "RuntimeError: embedded_document_test.dart failed; inspect its local log"
+}

@@ -1,0 +1,54 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_web_readback_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_web_readback_test.dart: native reads the browser edits of the original native-created choice objects
+00:47 +1: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_choices_test.dart
+00:48 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_choices_test.dart: original choice metadata and independent cell values converge over actual root/row Cloud objects
+00:49 +2: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart
+00:49 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_controller_diagnostic_test.dart: native reads the browser edits of the original native-created choice objects
+read type=1 start=0
+read type=1 end=24 bytes=4208
+core open start=25 end=32
+read type=1 start=35
+read type=1 end=48 bytes=4208
+core applyUpdate start=49 end=51
+core syncObject start=51 end=52
+read type=4 start=54
+read type=4 end=62 bytes=1038
+core applyUpdate start=62 end=64
+core syncObject start=64 end=64
+core applySync start=74 end=75
+core applySync start=85 end=86
+core close start=94 end=94
+00:49 +3: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart
+00:50 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart: dataset editing, timeline and fields at width 320.0
+00:51 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart: dataset editing, timeline and fields at width 430.0
+00:51 +5: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart: dataset editing, timeline and fields at width 1100.0
+00:51 +6: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/surface_test.dart: stale dialog preserves peer update and explicit draft
+00:51 +7: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/embedded_surface_test.dart
+00:52 +7: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/embedded_surface_test.dart: same resource shares one mutable session; explicit missing view never redirects; parent readonly narrows child
+00:52 +8: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/embedded_surface_test.dart: historical parent never calls a live resource resolver
+00:52 +9: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/embedded_surface_test.dart: failed close retains ownership and explicit retry flushes it before another opener
+00:52 +10: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/stale_read_connection_test.dart
+00:53 +10: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/stale_read_connection_test.dart: idempotent read recovers when a paused client missed the server keep-alive close
+01:01 +11: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_surface_test.dart
+01:01 +11: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_surface_test.dart: original single/multi select UI, clear and schema preconditions at 320.0
+01:02 +12: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_surface_test.dart: original single/multi select UI, clear and schema preconditions at 430.0
+01:03 +13: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_surface_test.dart: original single/multi select UI, clear and schema preconditions at 1100.0
+01:03 +14: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_test.dart
+01:03 +14: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_test.dart: original Cloud database type 1 and row type 4: two users, offline cells, undo, ACL and local reopen
+01:05 +15: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart
+01:05 +15: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart: original dataset/row values persist through a neutral store and stale drafts are refused
+01:05 +16: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart: write completion never marks a newer local revision saved or overlaps snapshot writes
+01:05 +17: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart: root publishing freezes dependency graph while editing stays available during row IO
+01:05 +18: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart: previously observed missing root never silently recreates on retry or reopen
+01:05 +19: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/controller_test.dart: observed remote row is never recreated after deletion, retry or process reopen
+01:05 +20: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_deletion_test.dart
+01:06 +20: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/cloud_deletion_test.dart: deleted Cloud row cannot be silently recreated by live session or reopened cache
+01:06 +21: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_read_diagnostic_test.dart
+01:06 +21: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/choices_read_diagnostic_test.dart: diagnose native read and projection timing for same browser source
+{"step":"start","milliseconds":0}
+{"step":"first-root-read","milliseconds":21,"bytes":4208}
+{"step":"native-root-open","milliseconds":28}
+{"step":"second-root-read","milliseconds":37,"bytes":4208}
+{"step":"row-read","milliseconds":42,"bytes":1038}
+{"step":"native-row-merge","milliseconds":44}
+01:06 +22: All tests passed!

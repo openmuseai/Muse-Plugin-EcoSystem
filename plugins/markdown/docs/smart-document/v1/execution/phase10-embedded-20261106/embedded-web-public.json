@@ -1,0 +1,10 @@
+{
+  "SMARTDOC_RUN": "embedded-e294e0187c3e",
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:50942",
+  "SMARTDOC_WORKSPACE": "e8715d91-bcc4-468a-9688-9e07e35ce710",
+  "EMBEDDED_OBJECT": "6df13f2a-baa3-4966-8043-6524ce50c4ba",
+  "EMBEDDED_DATASET": "cfa1ad53-3822-4671-88c7-221bb573c803",
+  "EMBEDDED_ROW": "bb5d22f8-08d4-49f4-88a4-f387ffed92ce",
+  "EMBEDDED_TARGET": "{\"protocol\":\"openmuse.resource-embed/v1\",\"reference\":{\"protocol\":\"openmuse.resource-reference/v1\",\"identity\":{\"scope\":\"dataset-embedded-e294e0187c3e\",\"source\":\"source-GswNcXO2cX6VDoB0-IUzr7G_\",\"workspace\":\"personal\",\"mount\":\"documents\",\"resource\":\"r-RnYZYPi-3JL8UISqgM1I9ydG\"}},\"surface\":\"dataset.grid\",\"selector\":{\"objectId\":\"cfa1ad53-3822-4671-88c7-221bb573c803\",\"viewId\":\"7de3b034-9d9c-5b29-80a9-7340a4af88a8\"}}",
+  "EMBEDDED_NONCE": "f2c707b86be9460c9897aba4a1e01869"
+}

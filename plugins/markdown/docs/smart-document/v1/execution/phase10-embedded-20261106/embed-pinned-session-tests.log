@@ -1,0 +1,7 @@
+Waiting for another flutter command to release the startup lock...
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/embedded_surface_test.dart
+00:00 +0: pinned digest is part of ownership key even if identity and revision match
+00:17 +1: same resource shares one mutable session; explicit missing view never redirects; parent readonly narrows child
+00:17 +2: historical parent never calls a live resource resolver
+00:18 +3: failed close retains ownership and explicit retry flushes it before another opener
+00:18 +4: All tests passed!
