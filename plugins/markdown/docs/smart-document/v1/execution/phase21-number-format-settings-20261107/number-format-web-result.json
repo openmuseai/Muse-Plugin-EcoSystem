@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "aae3d270-4936-41ad-8b45-ac648db809ad",
+  "datasetObjectId": "31991044-749a-48bf-953f-64cf5a29354c",
+  "rowId": "42330d9b-6e85-4cc2-90b3-24251d6bd1cf",
+  "fieldId": "4ac9dc4e-d8da-4266-9b80-43c6b99f154d",
+  "checks": [
+    "same-native-document-dataset-and-independent-row-identities",
+    "parent-document-retains-only-its-original-resource-reference",
+    "original-authenticated-actor-with-independent-row-collaboration",
+    "actual-editor-commits-decimal-above-JS-safe-integer-with-fraction-precision",
+    "actual-web-field-settings-atomically-update-original-name-and-format",
+    "original-money-formatter-repeats-locale-grouping-over-entire-exact-value",
+    "unchanged-editor-apply-does-not-rewrite-rounded-display-or-history",
+    "scientific-input-normalizes-to-exact-original-number-string",
+    "peer-cell-command-keeps-its-exact-value-while-local-stale-draft-is-rejected",
+    "peer-root-format-command-keeps-row-value-while-stale-schema-draft-is-rejected",
+    "final-28-digit-decimal-stays-an-original-Row4-string",
+    "peer-field-name-update-survives-stale-settings-draft"
+  ],
+  "platform": "web",
+  "phase": 5,
+  "value": "12345678901234567890.12345678",
+  "numberFormat": 1
+}

@@ -1,0 +1,30 @@
+{
+  "phase": "P21-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "datasetRustTests": 58,
+    "datasetFullTests": 57,
+    "datasetSdkTests": 3,
+    "appleUiChecksPerPlatform": 11,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 12,
+    "webPeerChecks": 6,
+    "webReloadChecks": 5,
+    "nativeWebReadbackAfterCloudRestartChecks": 4
+  },
+  "limits": [
+    "Five original format settings do not certify full SiYuan locale/currency/percent semantics",
+    "Full SiYuan editing, database fields/views and complete collaboration remain open",
+    "Draft digest guards are local optimistic checks, not distributed atomic CAS",
+    "Mixed old-writer/old-parser capability negotiation remains open",
+    "Android, Windows/Linux and physical IME/keyboard geometry remain unqualified",
+    "Durable ACK/outbox, distributed immediate revoke, full sharing/comments/history/Agent/Office remain open"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

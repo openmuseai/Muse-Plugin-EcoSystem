@@ -1,0 +1,14 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container flt-semantic-node-165
+		3 text 数字字段设置
+		4 container flt-semantic-node-168
+			10 container flt-semantic-node-169
+				11 text field (settable) Description: 字段名称, Value: 旧预算
+				12 text 字段已变化或名称无效，请重新检查
+			6 button (collapsed) 显示格式 美元, ID: flt-semantic-node-170, Secondary Actions: Expand
+			7 text 显示格式不改变原始数值。
+		8 button 取消, ID: flt-semantic-node-172
+		9 button 应用, ID: flt-semantic-node-173
+
+The focused UI element is 9 button 应用, ID: flt-semantic-node-173

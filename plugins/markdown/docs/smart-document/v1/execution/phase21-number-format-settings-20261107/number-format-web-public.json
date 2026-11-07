@@ -1,0 +1,12 @@
+{
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:18000",
+  "SMARTDOC_WORKSPACE": "e8715d91-bcc4-468a-9688-9e07e35ce710",
+  "SMARTDOC_RUN": "number-format-a91ac7860422",
+  "NUMBER_FORMAT_OBJECT": "aae3d270-4936-41ad-8b45-ac648db809ad",
+  "NUMBER_FORMAT_DATASET": "31991044-749a-48bf-953f-64cf5a29354c",
+  "NUMBER_FORMAT_ROW": "42330d9b-6e85-4cc2-90b3-24251d6bd1cf",
+  "NUMBER_FORMAT_FIELD": "4ac9dc4e-d8da-4266-9b80-43c6b99f154d",
+  "NUMBER_FORMAT_TARGET": "{\"protocol\": \"openmuse.resource-embed/v1\", \"reference\": {\"protocol\": \"openmuse.resource-reference/v1\", \"identity\": {\"scope\": \"dataset-number-format-a91ac7860422\", \"source\": \"source-_tJk4rT3t6_kTmQVxVSL7EGI\", \"workspace\": \"personal\", \"mount\": \"documents\", \"resource\": \"r-hN2KU8VD7p5ENQy2iRhsWxXW\"}}, \"surface\": \"dataset.grid\", \"selector\": {\"objectId\": \"31991044-749a-48bf-953f-64cf5a29354c\", \"viewId\": \"dd22d247-fb36-5680-9234-c2b2e5d53001\"}}",
+  "NUMBER_FORMAT_NONCE": "f0717a7ac4734d42aabcf9104054d868",
+  "NUMBER_FORMAT_PARENT_DATA": "{\"blocks\":{\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\":{\"children\":\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\",\"data\":{},\"external_id\":null,\"external_type\":null,\"id\":\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\",\"parent\":\"\",\"ty\":\"page\"},\"K9N5OmOizg\":{\"children\":\"cmd_RL_LEb\",\"data\":{},\"external_id\":\"ebr1tSVYqY\",\"external_type\":\"text\",\"id\":\"K9N5OmOizg\",\"parent\":\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\",\"ty\":\"paragraph\"},\"r92kDs\":{\"children\":\"children-r92kDs\",\"data\":{\"muse_embed\":{\"protocol\":\"openmuse.resource-embed/v1\",\"reference\":{\"identity\":{\"mount\":\"documents\",\"resource\":\"r-hN2KU8VD7p5ENQy2iRhsWxXW\",\"scope\":\"dataset-number-format-a91ac7860422\",\"source\":\"source-_tJk4rT3t6_kTmQVxVSL7EGI\",\"workspace\":\"personal\"},\"protocol\":\"openmuse.resource-reference/v1\"},\"selector\":{\"objectId\":\"31991044-749a-48bf-953f-64cf5a29354c\",\"viewId\":\"dd22d247-fb36-5680-9234-c2b2e5d53001\"},\"surface\":\"dataset.grid\"},\"parent_id\":\"aae3d270-4936-41ad-8b45-ac648db809ad\",\"view_id\":\"dd22d247-fb36-5680-9234-c2b2e5d53001\"},\"external_id\":null,\"external_type\":null,\"id\":\"r92kDs\",\"parent\":\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\",\"ty\":\"grid\"}},\"meta\":{\"children_map\":{\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\":[\"K9N5OmOizg\",\"r92kDs\"],\"children-r92kDs\":[],\"cmd_RL_LEb\":[]},\"text_map\":{\"ebr1tSVYqY\":\"[]\"}},\"page_id\":\"8dc7ee1a-32a1-5cd9-8af4-607a33f480aa\"}"
+}

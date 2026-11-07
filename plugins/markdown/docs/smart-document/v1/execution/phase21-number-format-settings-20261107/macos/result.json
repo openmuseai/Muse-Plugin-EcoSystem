@@ -1,0 +1,19 @@
+{
+  "run": "number-format-a91ac7860422",
+  "device": "macos",
+  "status": "passed-number-format-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "number_format_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "number_format_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 11,
+  "freshProcessChecks": 3
+}

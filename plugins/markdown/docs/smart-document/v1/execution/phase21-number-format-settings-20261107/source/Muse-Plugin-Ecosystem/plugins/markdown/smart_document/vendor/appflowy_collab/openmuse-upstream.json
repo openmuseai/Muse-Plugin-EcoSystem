@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/AppFlowy-IO/AppFlowy-Collab",
+  "revision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+  "archiveSha256": "9d456ed27abbafe65bb898633aeec7bc85535705d49b3b0172bcd8a01d486e02",
+  "reason": "Runtime collab subset; explicit browser clock for Yrs 0.23.5. Native defaults and wire encoding unchanged. Workspace members narrowed to archived runtime crate.",
+  "patches": [
+    {
+      "file": "Cargo.toml",
+      "sha256": "96e167cf56b159e9764adfd3fde3340fb7130e0e58acc06f217b8d93001a1b03"
+    },
+    {
+      "file": "collab/src/core/collab.rs",
+      "sha256": "0181df03d61d848e5c8c64bab93113b75a01cc3f498518ccc7da2809861355c0"
+    }
+  ],
+  "patchSha256": "9a81f49f089538084f44d362d46c08f6fc3fbf1c5227436bab4f0b8dad3e0c0b"
+}

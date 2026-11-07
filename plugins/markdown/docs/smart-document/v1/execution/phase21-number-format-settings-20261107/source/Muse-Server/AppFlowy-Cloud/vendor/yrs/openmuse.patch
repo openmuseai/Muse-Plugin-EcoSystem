@@ -1,0 +1,127 @@
+--- a/src/transaction.rs
++++ b/src/transaction.rs
+@@ -641,58 +641,53 @@
+                                     }
+                                     blocks = self.store.blocks.get_client_mut(client).unwrap();
+                                 }
+-
+-                                while index < blocks.len() {
+-                                    let block = &mut blocks[index];
+-                                    if let Some(item) = block.as_item() {
+-                                        if item.id.clock < clock_end {
+-                                            if !item.is_deleted() {
+-                                                if item.id.clock + item.len() > clock_end {
+-                                                    if let Some(split) =
+-                                                        self.store.blocks.split_block_inner(
+-                                                            item,
+-                                                            clock_end - item.id.clock,
+-                                                        )
+-                                                    {
+-                                                        if item.moved.is_some() {
+-                                                            if let Some(&prev_moved) =
+-                                                                self.prev_moved.get(&item)
+-                                                            {
+-                                                                self.prev_moved
+-                                                                    .insert(split, prev_moved);
+-                                                            }
++                            }
++                            // A deletion range can begin inside an existing GC block.
++                            // Still walk subsequent live items in the same range.
++                            while index < blocks.len() {
++                                let block = &mut blocks[index];
++                                if let Some(item) = block.as_item() {
++                                    if item.id.clock < clock_end {
++                                        if !item.is_deleted() {
++                                            if item.id.clock + item.len() > clock_end {
++                                                if let Some(split) =
++                                                    self.store.blocks.split_block_inner(
++                                                        item,
++                                                        clock_end - item.id.clock,
++                                                    )
++                                                {
++                                                    if item.moved.is_some() {
++                                                        if let Some(&prev_moved) =
++                                                            self.prev_moved.get(&item)
++                                                        {
++                                                            self.prev_moved
++                                                                .insert(split, prev_moved);
+                                                         }
+-                                                        if item.info.is_linked() {
+-                                                            if let Some(links) = self
+-                                                                .store
++                                                    }
++                                                    if item.info.is_linked() {
++                                                        if let Some(links) =
++                                                            self.store.linked_by.get(&item).cloned()
++                                                        {
++                                                            self.store
+                                                                 .linked_by
+-                                                                .get(&item)
+-                                                                .cloned()
+-                                                            {
+-                                                                self.store
+-                                                                    .linked_by
+-                                                                    .insert(split, links);
+-                                                            }
++                                                                .insert(split, links);
+                                                         }
+-
+-                                                        self.merge_blocks.push(*split.id());
+-                                                        index += 1;
+                                                     }
++
++                                                    self.merge_blocks.push(*split.id());
++                                                    index += 1;
+                                                 }
+-                                                self.delete(item);
+-                                                blocks = self
+-                                                    .store
+-                                                    .blocks
+-                                                    .get_client_mut(client)
+-                                                    .unwrap();
+-                                                // just to make the borrow checker happy
+                                             }
+-                                        } else {
+-                                            break;
++                                            self.delete(item);
++                                            blocks =
++                                                self.store.blocks.get_client_mut(client).unwrap();
++                                            // just to make the borrow checker happy
+                                         }
++                                    } else {
++                                        break;
+                                     }
+-                                    index += 1;
+                                 }
++                                index += 1;
+                             }
+                         }
+                     } else {
+@@ -1273,3 +1268,27 @@
+ impl_origin!(i64);
+ impl_origin!(i128);
+ impl_origin!(isize);
++
++#[cfg(test)]
++mod muse_gc_prefix_tests {
++    use crate::{DeleteSet, Doc, Map, MapPrelim, Options, Transact, ID};
++    #[test]
++    fn gc_prefix_does_not_skip_live_deletion_tail() {
++        let doc = Doc::with_options(Options {
++            client_id: 1,
++            ..Options::default()
++        });
++        let root = doc.get_or_insert_map("root");
++        root.insert(
++            &mut doc.transact_mut(),
++            "gone",
++            MapPrelim::from([("child", 1)]),
++        );
++        root.remove(&mut doc.transact_mut(), "gone");
++        root.insert(&mut doc.transact_mut(), "live", 2);
++        let mut deletes = DeleteSet::new();
++        deletes.insert(ID::new(1, 1), 2);
++        doc.transact_mut().apply_delete(&deletes);
++        assert!(root.get(&doc.transact(), "live").is_none());
++    }
++}
