@@ -1,0 +1,9 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container flt-semantic-node-61
+		3 text 金额
+		4 text field (settable) Description: 金额, Value: 9007199254740993.123456789
+		5 button 取消, ID: flt-semantic-node-65
+		6 button 应用, ID: flt-semantic-node-66
+
+The focused UI element is 4 text field (settable) Description: 金额, Value: 9007199254740993.123456789
