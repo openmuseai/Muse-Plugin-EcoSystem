@@ -1,0 +1,74 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			4 text 智能文档 · 日期筛选
+			5 button (disabled) 撤销, ID: flt-semantic-node-6
+			6 button (disabled) 重做, ID: flt-semantic-node-7
+			7 button 加粗, ID: flt-semantic-node-8
+			8 button 斜体, ID: flt-semantic-node-9
+			9 button 下划线, ID: flt-semantic-node-10
+			10 button 超链接, ID: flt-semantic-node-11
+			11 button (collapsed) 块类型, ID: flt-semantic-node-12, Secondary Actions: Expand
+			12 button (collapsed) 插入内容, ID: flt-semantic-node-13, Secondary Actions: Expand
+			13 container flt-semantic-node-22
+				14 text 项目计划｜日期筛选与记录编辑
+				15 container flt-semantic-node-17
+					16 button (collapsed) 数据库引用操作, ID: flt-semantic-node-18, Secondary Actions: Expand
+					17 container Description: 项目数据库 在线协作 显示 4 / 4 条记录 已保存到本机 · 协作服务已接收, ID: flt-semantic-node-19
+						18 button 2 人, ID: flt-semantic-node-27
+						19 button (collapsed) 表格, ID: flt-semantic-node-28, Secondary Actions: Expand
+						20 button 筛选 · 已启用, ID: flt-semantic-node-29
+						21 button 排序, ID: flt-semantic-node-30
+						22 button 撤销, ID: flt-semantic-node-31
+						23 button (disabled) 重做, ID: flt-semantic-node-32
+						24 button 新增记录, ID: flt-semantic-node-33
+						25 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-34, Secondary Actions: Expand
+						27 container flt-semantic-node-35
+							28 text #
+							29 button 标题, ID: flt-semantic-node-37
+							30 button 完成, ID: flt-semantic-node-38
+							31 button 链接, ID: flt-semantic-node-39
+							32 button 交付日期, ID: flt-semantic-node-40
+							33 container flt-semantic-node-94
+								34 container Description: 1, ID: flt-semantic-node-89
+									35 button 第 1 行，标题, ID: flt-semantic-node-90
+									36 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-91
+									37 button 第 1 行，链接, ID: flt-semantic-node-92
+									38 button 第 1 行，交付日期 2026-11-10 → 2026-11-11, ID: flt-semantic-node-93
+								39 container Description: 2, ID: flt-semantic-node-324
+									40 button 第 2 行，标题, ID: flt-semantic-node-325
+									41 checkbox Description: 第 2 行，完成, Value: 0, ID: flt-semantic-node-326
+									42 button 第 2 行，链接, ID: flt-semantic-node-327
+									43 button 第 2 行，交付日期 2026-11-08, ID: flt-semantic-node-328
+								44 container Description: 3, ID: flt-semantic-node-329
+									45 button 第 3 行，标题, ID: flt-semantic-node-330
+									46 checkbox Description: 第 3 行，完成, Value: 0, ID: flt-semantic-node-331
+									47 button 第 3 行，链接, ID: flt-semantic-node-332
+									48 button 第 3 行，交付日期 2026-11-08, ID: flt-semantic-node-333
+								49 container Description: 4, ID: flt-semantic-node-334
+									50 button 第 4 行，标题, ID: flt-semantic-node-335
+									51 checkbox Description: 第 4 行，完成, Value: 0, ID: flt-semantic-node-336
+									52 button 第 4 行，链接, ID: flt-semantic-node-337
+									53 button 第 4 行，交付日期 2026-11-11, ID: flt-semantic-node-338
+						54 button 立即同步, ID: flt-semantic-node-53
+			55 container flt-semantic-node-25
+				56 text 日期筛选验收 · alice
+				57 text 显示 4/4 条 · 条件 7
+				76 text HTTP 36 · WS更新 1
+				59 text 历史 undo,redo
+				60 button 阻断HTTP, ID: flt-semantic-node-57
+				61 button 验收浏览器, ID: flt-semantic-node-58
+				62 text ✓ native-parent-resolves-same-independent-Root1-Row4-dataset
+				63 text ✓ date-rules-and-row-edits-preserve-parent-generic-reference
+				64 text ✓ persisted-field-IANA-zone-used-by-browser-date-rules
+				69 text ✓ final-not-empty-rule-shows-four-authoritative-rows
+				70 text ✓ same-original-row-peer-date-edit-preserves-range-end
+				71 text ✓ actual-browser-created-row-local-date-edit-retained
+				72 text ✓ original-WS2-converges-Root1-and-Row4-with-HTTP-held
+				73 text ✓ actual-browser-child-original-undo-and-redo-at-core-boundary
+				75 text PASS · 8 checks
+			66 text 已保存到本机 · 协作服务已接收
+			67 button 立即同步, ID: flt-semantic-node-24
+
+The focused UI element is 20 button 筛选 · 已启用, ID: flt-semantic-node-29

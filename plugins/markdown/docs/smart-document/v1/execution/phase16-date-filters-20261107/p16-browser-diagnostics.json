@@ -1,0 +1,5 @@
+{
+  "initialSubmit": "Menu reflow made accessibility index input hit cancellation; stored condition remained 0, receipt correctly rejected. Stable visual submit stored 7 and passed.",
+  "nativeReadbackFirst": "Default 30-second test timeout on cold native load; retained log. Explicit 120-second cold-load/HTTP budget rerun passed in 3 seconds.",
+  "fullProductAcceptance": "not-complete"
+}

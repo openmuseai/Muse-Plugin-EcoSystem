@@ -1,0 +1,52 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			71 text 智能文档 · 日期筛选
+			36 button (disabled) 撤销, ID: flt-semantic-node-6
+			37 button (disabled) 重做, ID: flt-semantic-node-7
+			5 button 加粗, ID: flt-semantic-node-8
+			6 button 斜体, ID: flt-semantic-node-9
+			7 button 下划线, ID: flt-semantic-node-10
+			8 button 超链接, ID: flt-semantic-node-11
+			9 button (collapsed) 块类型, ID: flt-semantic-node-12, Secondary Actions: Expand
+			10 button (collapsed) 插入内容, ID: flt-semantic-node-13, Secondary Actions: Expand
+			11 container flt-semantic-node-22
+				38 text 项目计划｜日期筛选与记录编辑
+				39 container flt-semantic-node-17
+					40 button (collapsed) 数据库引用操作, ID: flt-semantic-node-18, Secondary Actions: Expand
+					41 container Description: 项目数据库 在线协作 实时连接正常 · 接收确认暂不可用 · 本机修改保留 显示 1 / 4 条记录 实时连接正常 · 接收确认暂不可用 · 本机修改保留, ID: flt-semantic-node-19
+						42 button 2 人, ID: flt-semantic-node-27
+						43 button (collapsed) 表格, ID: flt-semantic-node-28, Secondary Actions: Expand
+						44 button 筛选 · 已启用, ID: flt-semantic-node-29
+						45 button 排序, ID: flt-semantic-node-30
+						46 button 撤销, ID: flt-semantic-node-31
+						47 button (disabled) 重做 重做, ID: flt-semantic-node-32
+							72 text 重做
+							73 text 重做
+						48 button 新增记录, ID: flt-semantic-node-33
+						74 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-34, Secondary Actions: Expand
+						50 button 重试, ID: flt-semantic-node-86
+						51 container flt-semantic-node-35
+							52 text #
+							75 button 标题, ID: flt-semantic-node-37
+							76 button 完成, ID: flt-semantic-node-38
+							77 button 链接, ID: flt-semantic-node-39
+							78 button 交付日期, ID: flt-semantic-node-40
+							79 container Description: 1, ID: flt-semantic-node-89
+								80 button 第 1 行，标题, ID: flt-semantic-node-90
+								81 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-91
+								82 button 第 1 行，链接, ID: flt-semantic-node-92
+								83 button 第 1 行，交付日期 2026-11-10 → 2026-11-11, ID: flt-semantic-node-93
+						62 button 立即同步, ID: flt-semantic-node-53
+			63 container flt-semantic-node-25
+				64 text 日期筛选验收 · alice
+				84 text 显示 1/4 条 · 条件 0
+				66 text HTTP 15 · WS更新 1
+				85 text 历史 undo,redo
+				68 button 恢复HTTP, ID: flt-semantic-node-57
+				69 button 验收浏览器, ID: flt-semantic-node-58
+			70 text 已保存到本机 · 协作服务已接收
+			34 button 立即同步, ID: flt-semantic-node-24
+
+The focused UI element is 47 button (disabled) 重做 重做, ID: flt-semantic-node-32

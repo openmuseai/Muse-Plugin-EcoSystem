@@ -1,0 +1,205 @@
+--- a/lib/src/editor/editor_component/service/ime/delta_input_service.dart
++++ b/lib/src/editor/editor_component/service/ime/delta_input_service.dart
+@@ -5,6 +5,10 @@
+ import 'package:flutter/services.dart';
+ 
+ class DeltaTextInputService extends TextInputService with DeltaTextInputClient {
++  // Flutter 3.44 added this callback to DeltaTextInputClient.
++  @override
++  bool onFocusReceived() => false;
++
+   DeltaTextInputService({
+     required super.onInsert,
+     required super.onDelete,
+--- a/lib/src/editor_state.dart
++++ b/lib/src/editor_state.dart
+@@ -94,9 +94,10 @@
+     required this.document,
+     this.minHistoryItemDuration = const Duration(milliseconds: 50),
+     int? maxHistoryItemSize,
++    UndoManager? undoManager,
+   }) {
+-    undoManager = UndoManager(maxHistoryItemSize ?? 200);
+-    undoManager.state = this;
++    this.undoManager = undoManager ?? UndoManager(maxHistoryItemSize ?? 200);
++    this.undoManager.state = this;
+   }
+ 
+   @Deprecated('use EditorState.blank() instead')
+@@ -402,7 +403,7 @@
+     bool withUpdateSelection = true,
+     bool skipHistoryDebounce = false,
+   }) async {
+-    if (!editable || isDisposed) {
++    if ((!editable && !isRemote) || isDisposed) {
+       return;
+     }
+ 
+--- a/pubspec.yaml
++++ b/pubspec.yaml
+@@ -21,7 +21,7 @@
+   flutter_svg: "^2.0.6"
+   html: ^0.15.5
+   http: "^1.2.0"
+-  intl: "^0.19.0"
++  intl: ">=0.19.0 <0.21.0"
+   keyboard_height_plugin: "^0.1.5"
+   logging: "^1.2.0"
+   markdown: "^7.2.1"
+--- a/lib/src/editor/block_component/image_block_component/image_block_component.dart
++++ b/lib/src/editor/block_component/image_block_component/image_block_component.dart
+@@ -52,11 +52,21 @@
+   ImageBlockComponentWidgetState state,
+ );
+ 
++// Optional application asset ports; original resizing/selection stay intact.
++typedef ImageBlockContentBuilder = Widget Function(
++  BuildContext context, Node node, double width, double? height,
++);
++typedef ImageBlockContentWrapper = Widget Function(
++  BuildContext context, Node node, Widget child,
++);
++
+ class ImageBlockComponentBuilder extends BlockComponentBuilder {
+   ImageBlockComponentBuilder({
+     super.configuration,
+     this.showMenu = false,
+     this.menuBuilder,
++    this.contentBuilder,
++    this.contentWrapper,
+   });
+ 
+   /// Whether to show the menu of this block component.
+@@ -64,6 +74,8 @@
+ 
+   ///
+   final ImageBlockComponentMenuBuilder? menuBuilder;
++  final ImageBlockContentBuilder? contentBuilder;
++  final ImageBlockContentWrapper? contentWrapper;
+ 
+   @override
+   BlockComponentWidget build(BlockComponentContext blockComponentContext) {
+@@ -83,6 +95,8 @@
+       ),
+       showMenu: showMenu,
+       menuBuilder: menuBuilder,
++      contentBuilder: contentBuilder,
++      contentWrapper: contentWrapper,
+     );
+   }
+ 
+@@ -101,12 +115,16 @@
+     super.configuration = const BlockComponentConfiguration(),
+     this.showMenu = false,
+     this.menuBuilder,
++    this.contentBuilder,
++    this.contentWrapper,
+   });
+ 
+   /// Whether to show the menu of this block component.
+   final bool showMenu;
+ 
+   final ImageBlockComponentMenuBuilder? menuBuilder;
++  final ImageBlockContentBuilder? contentBuilder;
++  final ImageBlockContentWrapper? contentWrapper;
+ 
+   @override
+   State<ImageBlockComponentWidget> createState() =>
+@@ -144,6 +162,7 @@
+     final height = attributes[ImageBlockKeys.height]?.toDouble();
+ 
+     Widget child = ResizableImage(
++      imageContent: widget.contentBuilder?.call(context, node, width, height),
+       src: src,
+       width: width,
+       height: height,
+@@ -218,7 +237,7 @@
+       );
+     }
+ 
+-    return child;
++    return widget.contentWrapper?.call(context, node, child) ?? child;
+   }
+ 
+   @override
+--- a/lib/src/editor/block_component/image_block_component/resizable_image.dart
++++ b/lib/src/editor/block_component/image_block_component/resizable_image.dart
+@@ -16,11 +16,13 @@
+     required this.width,
+     required this.src,
+     this.height,
++    this.imageContent,
+   });
+ 
+   final String src;
+   final double width;
+   final double? height;
++  final Widget? imageContent;
+   final Alignment alignment;
+   final bool editable;
+ 
+@@ -39,6 +41,7 @@
+   double moveDistance = 0;
+ 
+   Image? _cacheImage;
++  bool _dragging = false;
+ 
+   @visibleForTesting
+   bool onFocus = false;
+@@ -48,6 +51,16 @@
+     super.initState();
+ 
+     imageWidth = widget.width;
++  }
++
++  @override
++  void didUpdateWidget(covariant ResizableImage oldWidget) {
++    super.didUpdateWidget(oldWidget);
++    if (oldWidget.width != widget.width && !_dragging) {
++      imageWidth = widget.width;
++      moveDistance = 0;
++    }
++    if (oldWidget.src != widget.src) _cacheImage = null;
+   }
+ 
+   @override
+@@ -73,7 +86,9 @@
+   Widget _buildResizableImage(BuildContext context) {
+     Widget child;
+     final src = widget.src;
+-    if (isBase64(src)) {
++    if (widget.imageContent != null) {
++      child = widget.imageContent!;
++    } else if (isBase64(src)) {
+       // load base64 image (url is raw base64 from web)
+       _cacheImage ??= Image.memory(
+         dataFromBase64String(src),
+@@ -184,6 +199,7 @@
+       width: width,
+       child: GestureDetector(
+         onHorizontalDragStart: (details) {
++          _dragging = true;
+           initialOffset = details.globalPosition.dx;
+         },
+         onHorizontalDragUpdate: (details) {
+@@ -196,6 +212,7 @@
+           }
+         },
+         onHorizontalDragEnd: (details) {
++          _dragging = false;
+           imageWidth =
+               max(_kImageBlockComponentMinWidth, imageWidth - moveDistance);
+           initialOffset = 0;
+@@ -203,6 +220,12 @@
+ 
+           widget.onResize(imageWidth);
+         },
++        onHorizontalDragCancel: () => setState(() {
++          _dragging = false;
++          initialOffset = 0;
++          moveDistance = 0;
++          imageWidth = widget.width;
++        }),
+         child: MouseRegion(
+           cursor: SystemMouseCursors.resizeLeftRight,
+           child: onFocus
