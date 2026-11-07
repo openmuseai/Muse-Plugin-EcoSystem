@@ -1,0 +1,19 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/controller_test.dart
+00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/table_test.dart: table insertion uses a stable anchor and preserves rich cell identities on reopen/delete/undo
+00:00 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/table_test.dart: table insertion uses a stable anchor and preserves rich cell identities on reopen/delete/undo
+00:00 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/table_test.dart: table insertion uses a stable anchor and preserves rich cell identities on reopen/delete/undo
+00:00 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +4: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +5: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +6: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +7: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +8: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +9: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +10: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +11: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +12: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/document_view_test.dart: mobile reading mode does not revoke permission after desktop resize
+00:00 +13: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/mobile_view_test.dart: 320-430 mobile widths keep 44px targets and one inset-aware toolbar
+00:01 +14: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/mobile_view_test.dart: 320-430 mobile widths keep 44px targets and one inset-aware toolbar
+00:01 +15: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/mobile_view_test.dart: nested heading and code content remain visible in the shared editor
+00:01 +16: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/mobile_view_test.dart: readonly mobile cannot enter writing or expose mutation tools
+00:01 +17: All tests passed!

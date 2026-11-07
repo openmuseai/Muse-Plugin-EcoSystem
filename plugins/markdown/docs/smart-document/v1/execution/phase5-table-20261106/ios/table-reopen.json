@@ -1,0 +1,1 @@
+{"status":"passed","platform":"ios","run":"table-d314e21f313e","objectId":"612e0a88-d2f0-474b-8a37-dd963e9b0c29","checks":["fresh-process-no-cloud-provider-or-credentials","same-sdk-resource-ledger-and-table-cell-identities","exact-unicode-multiline-rich-text-and-peer-cells","sdk-checkpoint-context-contains-collaborative-table-content"]}

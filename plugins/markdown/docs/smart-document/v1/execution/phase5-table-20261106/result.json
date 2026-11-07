@@ -1,0 +1,57 @@
+{
+  "phase": "P5-A-20261106",
+  "date": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "scope": "versioned fixed-grid rich-text table; original Cloud transport; no topology editing or full collaboration claim",
+  "slices": {
+    "rust": {
+      "status": "passed",
+      "tests": 10
+    },
+    "flutter": {
+      "status": "passed",
+      "tests": 17
+    },
+    "macos": {
+      "status": "passed-table-slice",
+      "primaryChecks": 6,
+      "credentialFreeFreshProcessChecks": 4
+    },
+    "ios": {
+      "status": "passed-table-slice",
+      "primaryChecks": 6,
+      "credentialFreeFreshProcessChecks": 4
+    },
+    "web": {
+      "status": "passed",
+      "runnerSteps": 12,
+      "browserChecks": 8,
+      "wholePageReloadChecks": 2,
+      "nativeReadbackChecks": 4
+    },
+    "python": {
+      "status": "passed",
+      "tests": 5
+    }
+  },
+  "remaining": [
+    "stable concurrent tree moves",
+    "mutable table topology/merge/split and structured clipboard",
+    "media/formulas/element registry and SiYuan advanced editing/import-export",
+    "server domain validation across all write ingress",
+    "WebSocket presence/relative anchors, complete ACL/revocation, durable ACK",
+    "private comments/@/share/history, Agent and independent Office/dataset collaboration",
+    "physical devices/manual IME/accessibility/performance/production Host"
+  ],
+  "inputLimits": "real application IME callback and framework pointer hit test; not manual CJK or physical iPhone certification",
+  "keyboardFlag": "native receipt records visibility at screenshot time after keyboard close; not input geometry certification",
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  },
+  "crossPlatformScope": "Apple platform slices use independent synthetic resources; native/Web readback uses the same object; full simultaneous three-device fault matrix remains unrun"
+}

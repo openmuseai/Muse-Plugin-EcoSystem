@@ -1,0 +1,1 @@
+{"status":"passed","checks":["same-native-block-id-after-browser-edits","native-reads-browser-concurrent-unicode-and-marks","native-reads-browser-inserted-block","native-reads-browser-table-cell-concurrent-unicode-and-marks"],"platform":"macos-native","date":"2026-11-05T18:12:12.024466Z"}

@@ -1,0 +1,16 @@
+{
+  "collabRevision": "e59260e524f33104b0ddcd6bb8f6218cad0f7e18",
+  "bindgenVersion": "0.2.128",
+  "artifacts": [
+    {
+      "file": "muse_smart_document.js",
+      "bytes": 13204,
+      "sha256": "37568bb7bd5385cff008b5f98c7c81ab8600876f5c452ffc32f77eec30788e51"
+    },
+    {
+      "file": "muse_smart_document_bg.wasm",
+      "bytes": 1333159,
+      "sha256": "21cddbebdce95e3bcbff3d896a6591a1ae9afecbe50294cb09291153ea7e0bd2"
+    }
+  ]
+}

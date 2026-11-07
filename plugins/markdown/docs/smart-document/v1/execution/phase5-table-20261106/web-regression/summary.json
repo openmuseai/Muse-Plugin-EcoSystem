@@ -1,0 +1,100 @@
+{
+  "phase": "SD-F2-20261105",
+  "status": "passed",
+  "run": "20261105T180747Z",
+  "steps": [
+    {
+      "name": "engineering-baseline",
+      "exitCode": 0,
+      "seconds": 0.03,
+      "log": "engineering-baseline.log",
+      "sha256": "ff9280cf399d04d920ccc453e3ce3e4ef16eccd895994d8a798e6949b31b4b1f"
+    },
+    {
+      "name": "contract-dependencies",
+      "exitCode": 0,
+      "seconds": 0.39,
+      "log": "contract-dependencies.log",
+      "sha256": "33c41b6ace0300fdfc57b5d356f0c0c5e93af9120b3efab9f2c35c99bf7e051e"
+    },
+    {
+      "name": "contract-analysis",
+      "exitCode": 0,
+      "seconds": 0.79,
+      "log": "contract-analysis.log",
+      "sha256": "6a7b6ac57afbdab6476b09a13e917fc5d522a21cd90ffe039eddc85936337f42"
+    },
+    {
+      "name": "contract-tests",
+      "exitCode": 0,
+      "seconds": 0.77,
+      "log": "contract-tests.log",
+      "sha256": "a0850d131d7cd03a707185cdc9faa4534ff2a3bd0a94cc7c00fc156cd0314027"
+    },
+    {
+      "name": "wasm-build",
+      "exitCode": 0,
+      "seconds": 0.48,
+      "log": "wasm-build.log",
+      "sha256": "0210cd956efc642d5cf6f06954b74ba222229cb447013f8875e3d6e594d94adc"
+    },
+    {
+      "name": "browser-dependencies",
+      "exitCode": 0,
+      "seconds": 0.95,
+      "log": "browser-dependencies.log",
+      "sha256": "302dfe8b1a02c74218b7938818c4eeb5fe3068201318c17883b817ea8fb3d64e"
+    },
+    {
+      "name": "native-regression",
+      "exitCode": 0,
+      "seconds": 71.64,
+      "log": "native-regression.log",
+      "sha256": "38fd9814a52f78b785e3420669d49c2f3101bd27c67b822a3e2f81473e35a3fe"
+    },
+    {
+      "name": "cross-platform-fixture",
+      "exitCode": 0,
+      "seconds": 0.69,
+      "log": "cross-platform-fixture.log",
+      "sha256": "b0cd83ea50df51b0009ef14ffd91149da82b104915aa8f1cbc9230b3a66cb9e3"
+    },
+    {
+      "name": "native-seed",
+      "exitCode": 0,
+      "seconds": 3.61,
+      "log": "native-seed.log",
+      "sha256": "730a43d95a6d5291d14e89eb1aba24c3279ed4a6ee08a67a08c96b1a3c72e3fc"
+    },
+    {
+      "name": "browser-build",
+      "exitCode": 0,
+      "seconds": 26.42,
+      "log": "browser-build.log",
+      "sha256": "a74a73c76b0a28c1691cd4ea378d287bc090820647351017f0d4a723e79b1a67"
+    },
+    {
+      "name": "browser-core-tests",
+      "exitCode": 0,
+      "seconds": 17.75,
+      "log": "browser-core-tests.log",
+      "sha256": "33a40c633cd9fd556c4d628c6768abf5b67a67e6184945e17a8099f48f9e7a7b"
+    },
+    {
+      "name": "native-readback",
+      "exitCode": 0,
+      "seconds": 3.74,
+      "log": "native-readback.log",
+      "sha256": "7e36968e9d411e37173ffaec4740af9dc66459ab1328325f370ced8f204aab8f"
+    }
+  ],
+  "browserChecks": 8,
+  "reloadChecks": 2,
+  "nativeReadbackChecks": 4,
+  "limits": [
+    "Browser workbench fixture, not production Host web composition",
+    "Flutter JS surface with real Rust WASM core",
+    "Mobile, manual IME, performance and full G0 not certified",
+    "HTTP exchange is not durable ACK"
+  ]
+}
