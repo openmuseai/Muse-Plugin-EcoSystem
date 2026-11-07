@@ -1,0 +1,19 @@
+{
+  "run": "lifecycle-06e4a7c441f1",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-lifecycle-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "lifecycle_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "lifecycle_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 6,
+  "freshProcessChecks": 3
+}

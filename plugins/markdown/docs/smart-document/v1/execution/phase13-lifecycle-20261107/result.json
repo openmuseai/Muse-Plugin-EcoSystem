@@ -1,0 +1,33 @@
+{
+  "phase": "P13-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "documentBeforeFailures": 5,
+    "datasetBeforeFailures": 6,
+    "documentLifecycleChecks": 6,
+    "datasetLifecycleChecks": 8,
+    "documentLocalUniqueChecks": 38,
+    "datasetLocalUniqueChecks": 33,
+    "datasetSdkChecks": 3,
+    "documentSdkUnitTests": "absent-not-counted",
+    "documentActualCloudGroups": 4,
+    "appleUiChecksPerPlatform": 6,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 8,
+    "webReloadChecks": 4,
+    "nativeWebReadbackChecks": 4
+  },
+  "limits": [
+    "full SiYuan 18 fields/5 views and remaining editing features remain open; seven basic fields/one Grid are an increment",
+    "client lifetime fencing is not a replacement for server ACL, distributed immediate revoke, durable ACK or offline commands",
+    "production Host registry/session pooling/inherited grants, UID multi-device roster and scoped wire subscription remain open",
+    "physical IME/soft-keyboard geometry, Android, comments/history/Agent/Office and full parity remain open"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

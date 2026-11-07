@@ -1,0 +1,24 @@
+Browser tab: 21, Title: "127.0.0.1:50945", URL: "http://127.0.0.1:50945/".
+1 AXWebArea 127.0.0.1:50945/
+	2 container
+		3 container flt-semantic-node-3
+			46 text 文档已关闭，本机副本已保留
+			38 container flt-semantic-node-17
+				39 text 实际 Cloud 生命周期验收辅助
+				47 text 子资源打开次数：2；已释放
+				41 text 先延迟行回包；在正文中移除数据库引用，再用正文撤销恢复。随后实际编辑该行标题为“浏览器恢复后的编辑”。
+				42 button (disabled) 延迟下次行回包, ID: flt-semantic-node-10
+				43 button (disabled) 放行旧行回包并核对, ID: flt-semantic-node-12
+				44 button (disabled) 延迟正文修复回包, ID: flt-semantic-node-14
+				45 button (disabled) 关闭并验收迟到回包, ID: flt-semantic-node-16
+				48 text 通过 8 项
+				49 text ✓ actual-remove-reference-and-document-undo-release-old-owner-and-open-one-new-child
+				50 text ✓ fresh-child-UI-edits-the-same-row-while-old-HTTP-response-remains-held
+				51 text ✓ closed-old-dataset-ignores-actual-delayed-row-response
+				52 text ✓ late-row-response-cannot-overwrite-current-session-or-IndexedDB-checkpoint
+				53 text ✓ parent-grid-locator-identity-survives-remove-and-undo
+				54 text ✓ actual-server-manifest-HTTP-repair-response-held
+				55 text ✓ document-and-socket-release-before-original-HTTP-response
+				56 text ✓ late-original-root-success-cannot-rewrite-closed-document-or-IndexedDB
+
+The focused UI element is 45 button (disabled) 关闭并验收迟到回包, ID: flt-semantic-node-16

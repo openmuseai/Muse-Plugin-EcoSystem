@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "objectId": "1895dd0e-bac7-4e8a-96b0-6f73a142a2e9",
+  "datasetObjectId": "51fac0a7-4bda-4ada-ae4c-615350a77b3c",
+  "rowId": "bd6f448a-8f8d-4bc7-9fe6-25af8c1427f9",
+  "checks": [
+    "actual-remove-reference-and-document-undo-release-old-owner-and-open-one-new-child",
+    "fresh-child-UI-edits-the-same-row-while-old-HTTP-response-remains-held",
+    "closed-old-dataset-ignores-actual-delayed-row-response",
+    "late-row-response-cannot-overwrite-current-session-or-IndexedDB-checkpoint",
+    "parent-grid-locator-identity-survives-remove-and-undo",
+    "actual-server-manifest-HTTP-repair-response-held",
+    "document-and-socket-release-before-original-HTTP-response",
+    "late-original-root-success-cannot-rewrite-closed-document-or-IndexedDB"
+  ],
+  "platform": "web",
+  "date": "2026-11-06T16:28:00.981Z"
+}

@@ -1,0 +1,71 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/collaboration_lifecycle_test.dart
+00:00 +0: dataset closes locally before outstanding root HTTP and ignores late FORBIDDEN
+00:01 +0 -1: dataset closes locally before outstanding root HTTP and ignores late FORBIDDEN [E]
+  Expected: <true>
+    Actual: <false>
+  local resource release must not wait for HTTP
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 76:11        main.<fn>
+  
+00:01 +0 -1: dataset closes locally before outstanding root HTTP and ignores late OBJECT_DELETED
+00:01 +0 -2: dataset closes locally before outstanding root HTTP and ignores late OBJECT_DELETED [E]
+  Expected: <true>
+    Actual: <false>
+  local resource release must not wait for HTTP
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 76:11        main.<fn>
+  
+00:01 +0 -2: dataset closes locally before outstanding root HTTP and ignores late OFFLINE
+00:01 +0 -3: dataset closes locally before outstanding root HTTP and ignores late OFFLINE [E]
+  Expected: <true>
+    Actual: <false>
+  local resource release must not wait for HTTP
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 76:11        main.<fn>
+  
+00:01 +0 -3: an older root read denial cannot overwrite a fresh authenticated grant
+00:01 +0 -4: an older root read denial cannot overwrite a fresh authenticated grant [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 111:7        main.<fn>
+  
+00:01 +0 -4: a root response after read revocation cannot merge previously authorized content
+00:01 +0 -5: a root response after read revocation cannot merge previously authorized content [E]
+  Expected: '[{"columns":[{"dateOptions":null,"editable":true,"fieldHash":"7d0032d70191f8e8129a16016e52c54a1cbbedc75d8de4582275bd13641b9a37","id":"title","name":"标题","options":null,"raw":{"field_type":0,"icon":"","id":"title","is_primary":true,"name":"标题","type_options":{"0":{}}},"semanticType":"text","storageType":0},{"dateOptions":null,"editable":true,"fieldHash":"c648cdb09c0c6b364b73b3d4b76fe5c938d2c2cdac514bde429f99a1b10b353f","id":"done","name":"完成","options":null,"raw":{"field_type":5,"icon":"","id":"done","is_primary":false,"name":"完成","type_options":{"5":{}}},"semanticType":"checkbox","storageType":5},{"dateOptions":null,"editable":true,"fieldHash":"7e4e829aae3ce739a2c1030074c84871a05a48330db8376211e243ee929eefee","id":"url","name":"链接","options":null,"raw":{"field_type":6,"icon":"","id":"url","is_primary":false,"name":"链接","type_options":{"6":{"content":"","url":""}}},"semanticType":"url","storageType":6}],"id":"483a4d20-667a-5112-8590-a58782be4e65","layout":0,"name":"表格","raw":{"created_at":0,"database_id":"6d36a4c9-0c52-42cd-8b8e-dc4a89d2c68a","field_orders":[{"id":"title"},{"id":"done"},{"id":"url"}],"field_settings":{},"filters":[],"group_settings":[],"id":"483a4d20-667a-5112-8590-a58782be4e65","is_inline":false,"layout":0,"layout_settings":{},"modified_at":0,"name":"表格","row_orders":[],"sorts":[]},"rows":[]}]'
+    Actual: '[{"columns":[{"dateOptions":null,"editable":true,"fieldHash":"7d0032d70191f8e8129a16016e52c54a1cbbedc75d8de4582275bd13641b9a37","id":"title","name":"标题","options":null,"raw":{"field_type":0,"icon":"","id":"title","is_primary":true,"name":"标题","type_options":{"0":{}}},"semanticType":"text","storageType":0},{"dateOptions":null,"editable":true,"fieldHash":"c648cdb09c0c6b364b73b3d4b76fe5c938d2c2cdac514bde429f99a1b10b353f","id":"done","name":"完成","options":null,"raw":{"field_type":5,"icon":"","id":"done","is_primary":false,"name":"完成","type_options":{"5":{}}},"semanticType":"checkbox","storageType":5},{"dateOptions":null,"editable":true,"fieldHash":"7e4e829aae3ce739a2c1030074c84871a05a48330db8376211e243ee929eefee","id":"url","name":"链接","options":null,"raw":{"field_type":6,"icon":"","id":"url","is_primary":false,"name":"链接","type_options":{"6":{"content":"","url":""}}},"semanticType":"url","storageType":6},{"dateOptions":null,"editable":true,"fieldHash":"e2e08696b9607d3019d699e57100674b578db1eaac14e496b64b8828634d99e6","id":"ff602dc0-5f68-444a-9d47-8d90777e7ade","name":"旧请求回包的字段","options":null,"raw":{"field_type":0,"icon":"","id":"ff602dc0-5f68-444a-9d47-8d90777e7ade","is_primary":false,"name":"旧请求回包的字段","type_options":{"0":{}}},"semanticType":"text","storageType":0}],"id":"483a4d20-667a-5112-8590-a58782be4e65","layout":0,"name":"表格","raw":{"created_at":0,"database_id":"6d36a4c9-0c52-42cd-8b8e-dc4a89d2c68a","field_orders":[{"id":"title"},{"id":"done"},{"id":"url"},{"id":"ff602dc0-5f68-444a-9d47-8d90777e7ade"}],"field_settings":{"ff602dc0-5f68-444a-9d47-8d90777e7ade":{}},"filters":[],"group_settings":[],"id":"483a4d20-667a-5112-8590-a58782be4e65","is_inline":false,"layout":0,"layout_settings":{},"modified_at":1793980657,"name":"表格","row_orders":[],"sorts":[]},"rows":[]}]'
+     Which: is different.
+            Expected: ... geType":6}],"id":"48 ...
+              Actual: ... geType":6},{"dateOpt ...
+                                    ^
+             Differ at offset 914
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 147:7        main.<fn>
+  
+00:01 +0 -5: pause-resume fences old root errors and preserves write authority
+00:01 +0 -6: pause-resume fences old root errors and preserves write authority [E]
+  Expected: <true>
+    Actual: <false>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test/collaboration_lifecycle_test.dart 166:7        main.<fn>
+  
+00:01 +0 -6: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/collaboration_lifecycle_test.dart: a root response after read revocation cannot merge previously authorized content
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/collaboration_lifecycle_test.dart: an older root read denial cannot overwrite a fresh authenticated grant
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/collaboration_lifecycle_test.dart: dataset closes locally before outstanding root HTTP and ignores late FORBIDDEN
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/dataset/flutter/test/collaboration_lifecycle_test.dart: dataset closes locally before outstanding root HTTP and ignores late OBJECT_DELETED
+  ... and 2 more
