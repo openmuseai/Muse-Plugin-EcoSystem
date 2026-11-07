@@ -1,0 +1,1 @@
+{"status":"passed","run":"linked-view-7568ee2595eb","objectId":"ea186fc8-edef-48fa-b9d2-d3d59a6a7d71","datasetObjectId":"2778ff12-59e5-4f71-aee8-b6636643d95c","checks":["same-document-dataset-and-three-view-identities-after-fresh-process","original-independent-rows-and-per-view-rules-survive-offline-checkpoint","no-auth-provider-or-transient-presence-in-offline-reopen"]}

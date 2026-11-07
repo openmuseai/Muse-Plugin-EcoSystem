@@ -1,0 +1,19 @@
+{
+  "run": "linked-view-ad1c17676eef",
+  "device": "macos",
+  "status": "passed-linked-view-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "linked_view_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "linked_view_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 9,
+  "freshProcessChecks": 3
+}

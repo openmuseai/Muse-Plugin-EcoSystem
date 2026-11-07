@@ -1,0 +1,19 @@
+{
+  "run": "linked-view-dfccd81746af",
+  "device": "5F0D9070-BE32-4063-BF7D-B7EB3B48D105",
+  "status": "passed-linked-view-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "linked_view_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "linked_view_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "ios",
+  "primaryChecks": 8,
+  "freshProcessChecks": 3
+}

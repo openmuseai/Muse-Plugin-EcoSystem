@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/y-crdt/y-crdt",
+  "version": "0.23.5",
+  "registryPackageChecksum": "197c2b4b298f35c3ba4d549884ac872a961112095b29f173ab45e3d5cf609018",
+  "license": "MIT",
+  "patches": [
+    {
+      "file": "src/undo.rs",
+      "sha256": "8f7b5c3a3b09825cfe981b01c23accb21f4580f8e9a7211f6074105f23459435"
+    },
+    {
+      "file": "src/transaction.rs",
+      "sha256": "ea6bd0096ea766d60171b70fe89e48748570ffa77dcf9ba12734ae92db53f7d2"
+    }
+  ],
+  "patchSha256": "c6ab9425651dae0c7e26595adeec4874961dde111224836e272894e452f4097d",
+  "scope": "Original 0.23.5, optional bounded undo and GC-prefix deletion-tail correctness fix; original wire encoding unchanged"
+}

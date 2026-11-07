@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "actor": "alice",
+  "objectId": "16368908-26c0-4595-a40b-bc61b68c07ad",
+  "datasetObjectId": "6edfb6b6-f26c-48cc-aa86-f7bc771ee076",
+  "checks": [
+    "same-original-native-document-dataset-and-three-view-identities",
+    "parent-document-retains-only-its-original-resource-reference",
+    "offline-original-five-views-and-three-row-identities-retain-independent-rules",
+    "offline-has-no-network-provider-presence-or-edit-grant",
+    "independent-checkpoint-contains-no-authentication-credentials"
+  ],
+  "platform": "web-reload",
+  "phase": 0,
+  "webViewId": "80c4f2e5-7213-4bd6-84e5-a2351df21eb0",
+  "temporaryViewId": "8a683db5-b4ff-4794-a1c4-eef425e705c2",
+  "peerRowId": "0feef801-64a1-4aa2-b6a4-a957f95bb4e2",
+  "branch": {},
+  "history": [],
+  "views": [
+    {
+      "id": "16537e5b-e48a-534f-9033-264c2374afbd",
+      "name": "表格",
+      "rowIds": [
+        "6f5785b8-1a79-4862-980d-623509627ebb",
+        "e4bc819f-03c0-4c36-b68c-dba68ca9f6ad",
+        "0feef801-64a1-4aa2-b6a4-a957f95bb4e2"
+      ],
+      "filterCount": 0
+    },
+    {
+      "id": "07c983bb-4774-48cc-a8e2-01bb408e66b1",
+      "name": "临时视图",
+      "rowIds": [
+        "6f5785b8-1a79-4862-980d-623509627ebb",
+        "e4bc819f-03c0-4c36-b68c-dba68ca9f6ad",
+        "0feef801-64a1-4aa2-b6a4-a957f95bb4e2"
+      ],
+      "filterCount": 0
+    },
+    {
+      "id": "80c4f2e5-7213-4bd6-84e5-a2351df21eb0",
+      "name": "Web远端视图",
+      "rowIds": [
+        "0feef801-64a1-4aa2-b6a4-a957f95bb4e2"
+      ],
+      "filterCount": 1
+    },
+    {
+      "id": "8a683db5-b4ff-4794-a1c4-eef425e705c2",
+      "name": "Web临时视图",
+      "rowIds": [
+        "6f5785b8-1a79-4862-980d-623509627ebb",
+        "e4bc819f-03c0-4c36-b68c-dba68ca9f6ad",
+        "0feef801-64a1-4aa2-b6a4-a957f95bb4e2"
+      ],
+      "filterCount": 0
+    },
+    {
+      "id": "fd6a728a-58b2-4fcc-a441-42d8d0e94d6a",
+      "name": "远端视图",
+      "rowIds": [
+        "e4bc819f-03c0-4c36-b68c-dba68ca9f6ad"
+      ],
+      "filterCount": 1
+    }
+  ]
+}

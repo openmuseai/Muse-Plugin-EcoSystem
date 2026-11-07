@@ -1,0 +1,8 @@
+{
+  "status": "superseded-by-explicit-view-switch-presence-check",
+  "macos": "20261106T213955Z-linked-view-731e80c75823",
+  "ios": "20261106T214127Z-linked-view-dfccd81746af",
+  "priorUiChecksPerPlatform": 8,
+  "priorReopenChecksPerPlatform": 3,
+  "notFinalSourceAcceptance": true
+}

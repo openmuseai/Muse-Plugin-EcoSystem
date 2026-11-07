@@ -1,0 +1,8 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/linked_view_document_test.dart
+Building macOS application...                                   
+✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
+Failed to foreground app; open returned 1
+00:00 +0: original linked views share concurrent row membership and retain explicit UI identity
+SMARTDOC_LINKED_VIEW_EVIDENCE=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/SmartDocumentStage1/linked-view-ad1c17676eef/evidence
+00:17 +1: (tearDownAll)
+00:17 +1: All tests passed!

@@ -1,0 +1,22 @@
+[package]
+name = "muse-appflowy-realtime"
+version = "0.1.0"
+edition = "2024"
+publish = false
+license = "AGPL-3.0-or-later"
+[lib]
+crate-type = ["cdylib", "rlib"]
+[dependencies]
+appflowy-proto = { path = "../../vendor/appflowy_proto" }
+collab = { git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "e59260e524f33104b0ddcd6bb8f6218cad0f7e18" }
+collab-entity = { git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "e59260e524f33104b0ddcd6bb8f6218cad0f7e18" }
+prost = "0.13"
+base64 = "0.22"
+serde_json = "1"
+uuid = "1"
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "=0.2.128"
+uuid = { version = "1", features = ["js"] }
+fastrand = { version = "2", features = ["js"] }
+[patch."https://github.com/AppFlowy-IO/AppFlowy-Collab"]
+collab = { path = "../../vendor/appflowy_collab/collab" }
