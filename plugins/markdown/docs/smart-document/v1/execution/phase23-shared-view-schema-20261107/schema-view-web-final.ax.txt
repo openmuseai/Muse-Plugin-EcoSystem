@@ -1,0 +1,79 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container
+		3 container flt-semantic-node-3
+			4 button 显示目录, ID: flt-semantic-node-23
+			49 text 智能文档 · 多视图协作
+			50 button (disabled) 撤销, ID: flt-semantic-node-6
+			51 button (disabled) 重做, ID: flt-semantic-node-7
+			5 button 加粗, ID: flt-semantic-node-8
+			6 button 斜体, ID: flt-semantic-node-9
+			7 button 下划线, ID: flt-semantic-node-10
+			8 button 超链接, ID: flt-semantic-node-11
+			9 button (collapsed) 块类型, ID: flt-semantic-node-12, Secondary Actions: Expand
+			10 button (collapsed) 插入内容, ID: flt-semantic-node-13, Secondary Actions: Expand
+			11 container flt-semantic-node-22
+				52 container flt-semantic-node-17
+					53 button (collapsed) 数据库引用操作, ID: flt-semantic-node-18, Secondary Actions: Expand
+					54 container Description: 项目金额 在线协作 已保存到本机 · 协作服务已接收, ID: flt-semantic-node-19
+						55 button 2 人, ID: flt-semantic-node-35
+						56 button (collapsed) Web临时视图, ID: flt-semantic-node-36, Secondary Actions: Expand
+						57 button 新增表格视图, ID: flt-semantic-node-37
+						58 button 视图设置, ID: flt-semantic-node-38
+						105 button 筛选, ID: flt-semantic-node-242
+						106 button 排序, ID: flt-semantic-node-243
+						61 button 撤销, ID: flt-semantic-node-41
+						62 button (disabled) 重做, ID: flt-semantic-node-42
+						63 button 新增记录, ID: flt-semantic-node-43
+						109 button (collapsed) 新增字段 新增字段, ID: flt-semantic-node-44, Secondary Actions: Expand
+						110 container flt-semantic-node-244
+							111 text #
+							112 button 标题, ID: flt-semantic-node-246
+							113 button 完成, ID: flt-semantic-node-247
+							114 button 链接, ID: flt-semantic-node-248
+							115 button 共享字段, ID: flt-semantic-node-249
+							116 button Web共享字段, ID: flt-semantic-node-250
+							117 container flt-semantic-node-255
+								118 container Description: 1, ID: flt-semantic-node-252
+									119 button 第 1 行，标题 已有记录, ID: flt-semantic-node-256
+									120 checkbox Description: 第 1 行，完成, Value: 0, ID: flt-semantic-node-257
+									121 button 第 1 行，链接, ID: flt-semantic-node-258
+									122 button 第 1 行，共享字段, ID: flt-semantic-node-259
+									123 button 第 1 行，Web共享字段, ID: flt-semantic-node-260
+								124 container Description: 2, ID: flt-semantic-node-253
+									125 button 第 2 行，标题 并发新增, ID: flt-semantic-node-261
+									126 checkbox Description: 第 2 行，完成, Value: 0, ID: flt-semantic-node-262
+									127 button 第 2 行，链接, ID: flt-semantic-node-263
+									128 button 第 2 行，共享字段 字段并发值, ID: flt-semantic-node-264
+									129 button 第 2 行，Web共享字段, ID: flt-semantic-node-265
+								130 container Description: 3, ID: flt-semantic-node-254
+									131 button 第 3 行，标题 Web新记录, ID: flt-semantic-node-266
+									132 checkbox Description: 第 3 行，完成, Value: 0, ID: flt-semantic-node-267
+									133 button 第 3 行，链接, ID: flt-semantic-node-268
+									134 button 第 3 行，共享字段, ID: flt-semantic-node-269
+									135 button 第 3 行，Web共享字段 Web字段值, ID: flt-semantic-node-270
+						91 button 立即同步, ID: flt-semantic-node-63
+			92 text 已保存到本机 · 协作服务已接收
+			45 button 立即同步, ID: flt-semantic-node-25
+			46 container flt-semantic-node-34
+				93 text 视图验收 · alice
+				47 button (disabled) 验证最终视图并保存, ID: flt-semantic-node-29
+				136 text 阶段 5 · 5 个视图
+				95 text 原主成员 3
+				96 text ✓ same-original-native-document-dataset-and-three-view-identities
+				97 text ✓ parent-document-retains-only-its-original-resource-reference
+				98 text ✓ original-authenticated-actor-owns-independent-root-and-row-session
+				99 text ✓ actual-new-view-commits-before-peer-row-and-before-any-network-publication
+				100 text ✓ concurrent-original-root-row-membership-converges-and-new-view-filter-is-independent
+				101 text ✓ actual-web-view-settings-and-filter-preserve-original-native-view-identities
+				102 text ✓ concurrent-global-field-id-is-projected-in-every-original-view
+				103 text ✓ actual-new-column-editor-keeps-original-field-id-and-independent-row-value
+				104 text ✓ peer-view-name-survives-actual-stale-settings-draft
+				137 text ✓ five-original-views-share-three-independent-rows-without-copying-document-content
+				138 text ✓ original-peer-field-id-and-value-survive-in-every-view-checkpoint
+				139 text ✓ actual-original-undo-removes-view-and-redo-restores-the-same-view-id
+				140 text ✓ independent-checkpoint-contains-no-authentication-credentials
+				141 text PASS · 13 项
+				142 button 保存并离开, ID: flt-semantic-node-277
+
+The focused UI element is 47 button (disabled) 验证最终视图并保存, ID: flt-semantic-node-29

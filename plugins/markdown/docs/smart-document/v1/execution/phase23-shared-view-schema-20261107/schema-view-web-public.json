@@ -1,0 +1,15 @@
+{
+  "SMARTDOC_ORIGIN": "http://127.0.0.1:18000",
+  "SMARTDOC_WORKSPACE": "e8715d91-bcc4-468a-9688-9e07e35ce710",
+  "SMARTDOC_RUN": "schema-view-0f4d17948961",
+  "SCHEMA_VIEW_OBJECT": "eda1894d-de87-448b-8154-66f1aedd0ed5",
+  "SCHEMA_VIEW_DATASET": "05641a3e-0579-4fb6-8034-9f855d8c34ae",
+  "SCHEMA_VIEW_FIRST": "d221e17e-808f-5af7-ae1a-a5e8f17894b4",
+  "SCHEMA_VIEW_NATIVE_LINKED": "110c2f2b-476e-45dd-a27a-38f1b4c5d917",
+  "SCHEMA_VIEW_NATIVE_TEMPORARY": "bd372c2a-5ece-4b69-b1a9-6ea4c12ab9a4",
+  "SCHEMA_VIEW_NATIVE_FIELD": "f7a38e71-e12f-4596-8182-66ac30993e10",
+  "SCHEMA_VIEW_TARGET": "{\"protocol\": \"openmuse.resource-embed/v1\", \"reference\": {\"protocol\": \"openmuse.resource-reference/v1\", \"identity\": {\"scope\": \"dataset-schema-view-0f4d17948961\", \"source\": \"source-8uy0TkkVLw2eP5EgeUB4iqnH\", \"workspace\": \"personal\", \"mount\": \"documents\", \"resource\": \"r-oHdyvHD-Wgqod13cI03pd6BK\"}}, \"surface\": \"dataset.grid\", \"selector\": {\"objectId\": \"05641a3e-0579-4fb6-8034-9f855d8c34ae\", \"viewId\": \"d221e17e-808f-5af7-ae1a-a5e8f17894b4\"}}",
+  "SCHEMA_VIEW_NONCE": "3116fa20b95843cca63d8bd342391457",
+  "SCHEMA_VIEW_PARENT_DATA": "{\"blocks\":{\"5c4161f8-a9c2-588c-be98-fa00c034c99f\":{\"children\":\"5c4161f8-a9c2-588c-be98-fa00c034c99f\",\"data\":{},\"external_id\":null,\"external_type\":null,\"id\":\"5c4161f8-a9c2-588c-be98-fa00c034c99f\",\"parent\":\"\",\"ty\":\"page\"},\"EMePP9\":{\"children\":\"children-EMePP9\",\"data\":{\"muse_embed\":{\"protocol\":\"openmuse.resource-embed/v1\",\"reference\":{\"identity\":{\"mount\":\"documents\",\"resource\":\"r-oHdyvHD-Wgqod13cI03pd6BK\",\"scope\":\"dataset-schema-view-0f4d17948961\",\"source\":\"source-8uy0TkkVLw2eP5EgeUB4iqnH\",\"workspace\":\"personal\"},\"protocol\":\"openmuse.resource-reference/v1\"},\"selector\":{\"objectId\":\"05641a3e-0579-4fb6-8034-9f855d8c34ae\",\"viewId\":\"d221e17e-808f-5af7-ae1a-a5e8f17894b4\"},\"surface\":\"dataset.grid\"},\"parent_id\":\"eda1894d-de87-448b-8154-66f1aedd0ed5\",\"view_id\":\"d221e17e-808f-5af7-ae1a-a5e8f17894b4\"},\"external_id\":null,\"external_type\":null,\"id\":\"EMePP9\",\"parent\":\"5c4161f8-a9c2-588c-be98-fa00c034c99f\",\"ty\":\"grid\"},\"zHCX5_QJEh\":{\"children\":\"gOel96jCTR\",\"data\":{},\"external_id\":\"oYcT8CtU1x\",\"external_type\":\"text\",\"id\":\"zHCX5_QJEh\",\"parent\":\"5c4161f8-a9c2-588c-be98-fa00c034c99f\",\"ty\":\"paragraph\"}},\"meta\":{\"children_map\":{\"5c4161f8-a9c2-588c-be98-fa00c034c99f\":[\"zHCX5_QJEh\",\"EMePP9\"],\"children-EMePP9\":[],\"gOel96jCTR\":[]},\"text_map\":{\"oYcT8CtU1x\":\"[]\"}},\"page_id\":\"5c4161f8-a9c2-588c-be98-fa00c034c99f\"}",
+  "SCHEMA_VIEW_NATIVE_ROW": "2fae0251-c599-4c7d-814c-dab33b0e0bfa"
+}

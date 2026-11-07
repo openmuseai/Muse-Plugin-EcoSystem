@@ -1,0 +1,29 @@
+{
+  "phase": "P23-20261107",
+  "status": "partial",
+  "fullProductAcceptance": "not-complete",
+  "parityCases": [],
+  "android": "unrun",
+  "slices": {
+    "datasetRustTests": 63,
+    "datasetFullTests": 60,
+    "datasetSdkTests": 3,
+    "appleUiChecksPerPlatform": 11,
+    "appleFreshProcessChecksPerPlatform": 3,
+    "webUiChecks": 13,
+    "webPeerChecks": 9,
+    "webReloadChecks": 5,
+    "nativeWebReadbackAfterCloudRestartChecks": 7
+  },
+  "limits": [
+    "Global schema projection does not certify full field deletion/conversion/visibility or five complete layouts",
+    "Original old frontends may still read stale copied field orders; capability negotiation remains open",
+    "Text cells remain original register values, not character-level collaboration",
+    "Full SiYuan editing, production permissions, durable ACK/outbox, sharing/comments/history/Agent/Office remain open",
+    "Android, Windows/Linux and physical IME/keyboard geometry remain unqualified"
+  ],
+  "fullParityGate": {
+    "status": "rejected-expected",
+    "exitCode": 1
+  }
+}

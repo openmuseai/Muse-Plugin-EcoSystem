@@ -1,0 +1,37 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/schema_view_document_test.dart
+The following plugins do not support Swift Package Manager for ios:
+  - keyboard_height_plugin
+This will become an error in a future version of Flutter. Please contact the plugin maintainers to request Swift Package Manager adoption.
+Running Xcode build...                                          
+Xcode build done.                                           26.1s
+00:00 +0: original concurrent view and field branches retain global schema and independent rows
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following StateError was thrown running a test:
+Bad state: No element
+
+When the exception was thrown, this was the stack:
+#0      Iterable.single (dart:core/iterable.dart:694:25)
+#1      WidgetController.element (package:flutter_test/src/controller.dart:888:30)
+#2      WidgetController.ensureVisible (package:flutter_test/src/controller.dart:2389:32)
+#3      main.<anonymous closure>.tap (file:///Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/schema_view_document_test.dart:54:17)
+#4      main.<anonymous closure> (file:///Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/schema_view_document_test.dart:224:13)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  original concurrent view and field branches retain global schema and independent rows
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:07 +0 -1: original concurrent view and field branches retain global schema and independent rows [E]
+  Test failed. See exception logs above.
+  The test description was: original concurrent view and field branches retain global schema and independent rows
+  
+00:07 +0 -1: (tearDownAll)
+00:07 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/schema_view_document_test.dart: original concurrent view and field branches retain global schema and independent rows

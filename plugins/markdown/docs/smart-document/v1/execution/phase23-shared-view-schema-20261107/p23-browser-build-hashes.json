@@ -1,0 +1,54 @@
+{
+  "allRuntimeArtifactsMatchReports": true,
+  "files": [
+    {
+      "domain": "document",
+      "file": "muse_smart_document.js",
+      "sha256": "37568bb7bd5385cff008b5f98c7c81ab8600876f5c452ffc32f77eec30788e51",
+      "bytes": 13204,
+      "archivedBytes": true
+    },
+    {
+      "domain": "document",
+      "file": "muse_smart_document_bg.wasm",
+      "sha256": "783f06371c7dc297efa963270ce9254b14708ff92097bdc05ce7c5835475d0a3",
+      "bytes": 1674753,
+      "archivedBytes": true
+    },
+    {
+      "domain": "dataset",
+      "file": "muse_dataset_core.js",
+      "sha256": "4bd4861183ce69dc607975bba53272029b40e9eee54770d1100748c6a552057c",
+      "bytes": 16024,
+      "archivedBytes": true
+    },
+    {
+      "domain": "dataset",
+      "file": "muse_dataset_core_bg.wasm",
+      "sha256": "f422241f591eeaa3531f6f27f322eb2c2dc22b66bcbf0d7d872cae41a5446e41",
+      "bytes": 4846110,
+      "archivedBytes": true
+    },
+    {
+      "domain": "realtime",
+      "file": "muse_appflowy_realtime.js",
+      "sha256": "3a22828c26369e178be116ed19f0878e99f13c4e21e3092dbd3d9065eac850b5",
+      "bytes": 8674,
+      "archivedBytes": true
+    },
+    {
+      "domain": "realtime",
+      "file": "muse_appflowy_realtime_bg.wasm",
+      "sha256": "f5e9776b8bc5605e57db9f27b142e3d0fdd43104331cb5a139fa1c1da0e3d825",
+      "bytes": 510119,
+      "archivedBytes": true
+    },
+    {
+      "domain": "application",
+      "file": "main.dart.js",
+      "sha256": "004a248a86cccf24124d30904f1b1267ff9c318a2f13cdd400db88014d232ec7",
+      "bytes": 5000898,
+      "archivedBytes": false
+    }
+  ]
+}

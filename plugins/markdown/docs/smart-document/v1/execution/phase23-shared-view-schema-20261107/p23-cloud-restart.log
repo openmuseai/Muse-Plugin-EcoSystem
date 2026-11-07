@@ -1,0 +1,7 @@
+ Container muse-smart-document-stage1-redis-1 Running 
+ Container muse-smart-document-stage1-postgres-1 Running 
+ Container muse-smart-document-stage1-minio-1 Running 
+ Container muse-smart-document-stage1-gotrue-1 Running 
+ Container muse-smart-document-stage1-postgres-1 Waiting 
+ Container muse-smart-document-stage1-postgres-1 Healthy 
+Isolated AppFlowy Cloud ready: http://127.0.0.1:18000

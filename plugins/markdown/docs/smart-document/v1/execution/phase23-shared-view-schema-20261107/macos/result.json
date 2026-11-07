@@ -1,0 +1,19 @@
+{
+  "run": "schema-view-0f4d17948961",
+  "device": "macos",
+  "status": "passed-schema-view-slice",
+  "fullProductAcceptance": "not-complete",
+  "steps": [
+    {
+      "name": "schema_view_document_test.dart",
+      "exitCode": 0
+    },
+    {
+      "name": "schema_view_reopen_test.dart",
+      "exitCode": 0
+    }
+  ],
+  "platform": "macos",
+  "primaryChecks": 11,
+  "freshProcessChecks": 3
+}

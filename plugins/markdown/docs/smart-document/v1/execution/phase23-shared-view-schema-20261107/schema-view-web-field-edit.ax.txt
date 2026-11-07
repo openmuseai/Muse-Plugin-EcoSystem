@@ -1,0 +1,9 @@
+Browser tab: 22, Title: "127.0.0.1:50946", URL: "http://127.0.0.1:50946/".
+1 AXWebArea 127.0.0.1:50946/
+	2 container flt-semantic-node-158
+		3 text Web共享字段
+		4 text entry area (settable) Description: Web共享字段, Value: Web字段值
+		5 button 取消, ID: flt-semantic-node-162
+		6 button 应用, ID: flt-semantic-node-163
+
+The focused UI element is 4 text entry area (settable) Description: Web共享字段, Value: Web字段值
