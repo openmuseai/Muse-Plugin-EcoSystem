@@ -18,3 +18,5 @@ export 'package:muse_appflowy_realtime/muse_appflowy_realtime.dart';
 
 export 'src/document_outline.dart';
 export 'src/outline_view.dart';
+
+export 'src/formula_commands.dart';

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "upstream/siyuan/app/src/protyle/render/mathRender.ts",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "154e83d2f1cbfc28cff7830901aa7a9d31ad1e6f486e5213ac938a8251d5756f",
+    "gitBlob": "25df9fe97cfcce653d9468fdb064c92bfa8123cf"
+  },
+  {
+    "path": "upstream/siyuan/app/src/protyle/render/mathRenderSecurity.ts",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "42f0fdc768e5062fdcee1ba5a3117f0b026eed90478aecfac402d5c84568b925",
+    "gitBlob": "af77f04432ae001f2dd5a01056b570ed37dd86b6"
+  },
+  {
+    "path": "upstream/siyuan/LICENSE",
+    "revision": "d3af9d5782082b379d45a69eedf4ebcfe8ba6889",
+    "sha256": "4df3c306dddaaf4baffdff5ca820cc679ac8cd6dc263c6a74517783e42fa7a3b",
+    "gitBlob": "bae94e189e62df1b8d5bd11435d954b25bee9d7b"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/math_equation/math_equation_block_component.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "a3321a60aa22c00bb25403f5dab80821bb2e31161d5731ec7748900510d2f69f",
+    "gitBlob": "2f724061eecca4b89eee1f2b779ca0bca2366175"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/math_equation/mobile_math_equation_toolbar_item.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "b97b3342ccedb8b29af5bec64189aa29f59b37b584e87d2d02e92d8810dbdec7",
+    "gitBlob": "62714ae93dbfc5bc9ac4166dd76f6a495672c2ec"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/lib/plugins/document/presentation/editor_plugins/parsers/math_equation_node_parser.dart",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "ea565445bc5294384d8d69ce8691f9542149ea02f88096d00ba4b809a3fe5e8a",
+    "gitBlob": "12b0f2e861403f3d15eda1eeabdeef43731726d7"
+  },
+  {
+    "path": "upstream/appflowy/frontend/appflowy_flutter/pubspec.lock",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "a593ace7bf232eead6acebcb640daf1e6c3c37b20f55dec7342f55fd082aff2c",
+    "gitBlob": "b9829a15c8a3c79b17410ec6c403c574953dc566"
+  },
+  {
+    "path": "upstream/appflowy/LICENSE",
+    "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
+    "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+    "gitBlob": "0ad25db4bd1d86c452db3f9602ccdbe172438f52"
+  }
+]

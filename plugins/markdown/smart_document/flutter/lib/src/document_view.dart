@@ -12,6 +12,7 @@ import 'embedded_resources.dart';
 import 'package:muse_resource_embed/muse_resource_embed.dart';
 import 'image_components.dart';
 import 'editor_components.dart';
+import 'formula_components.dart';
 import 'mobile_document_view.dart';
 
 /// Phase-one production surface. Only implemented capabilities are exposed;
@@ -247,6 +248,7 @@ final class _SmartDocumentViewState extends State<SmartDocumentView> {
                         PopupMenuItem(value: 'quote', child: Text('引用')),
                         PopupMenuItem(value: 'table', child: Text('表格（2 × 2）')),
                         PopupMenuItem(value: 'link', child: Text('超链接')),
+                        PopupMenuItem(value: 'formula', child: Text('公式')),
                         if (widget.embeds?.pick != null)
                           const PopupMenuItem(
                             value: 'database',
@@ -259,6 +261,14 @@ final class _SmartDocumentViewState extends State<SmartDocumentView> {
                           ),
                       ],
                       onSelected: (type) async {
+                        if (type == 'formula') {
+                          await showDocumentFormulaEditor(
+                            context,
+                            controller,
+                            after: _insertAfter,
+                          );
+                          return;
+                        }
                         if (type == 'database') {
                           await pickDocumentDatabase(
                             context,

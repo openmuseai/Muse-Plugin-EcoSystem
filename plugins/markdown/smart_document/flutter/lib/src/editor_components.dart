@@ -6,6 +6,7 @@ import 'table_components.dart';
 import 'media_session.dart';
 import 'image_components.dart';
 import 'embedded_resources.dart';
+import 'formula_components.dart';
 
 bool smartDocumentInTable(EditorState editor) =>
     editor.selection != null &&
@@ -79,6 +80,7 @@ Map<String, BlockComponentBuilder> smartDocumentBlockBuilders(
 }) => {
   ...standardBlockComponentBuilderMap,
   'image': documentImageBuilder(controller, media),
+  'math_equation': DocumentFormulaBuilder(controller),
   for (final type in ['grid', 'board', 'calendar'])
     type: DocumentDatabaseBuilder(controller),
   'table': SmartTableBuilder(controller),

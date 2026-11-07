@@ -7,6 +7,7 @@ import 'controller.dart';
 import 'realtime_session.dart';
 import 'collaborators_view.dart';
 import 'editor_components.dart';
+import 'formula_components.dart';
 import 'core_api.dart';
 import 'link_commands.dart';
 import 'link_ui.dart';
@@ -228,6 +229,11 @@ class _MobileSmartDocumentViewState extends State<MobileSmartDocumentView>
     _capture();
   });
   Future<void> _insert(String type) => _run(() async {
+    if (type == 'formula') {
+      if (mounted) setState(() => _panel = null);
+      await showDocumentFormulaEditor(context, c, after: _insertAfter);
+      return;
+    }
     if (type == 'database') {
       if (mounted) setState(() => _panel = null);
       await pickDocumentDatabase(
@@ -833,6 +839,7 @@ class _MobileSmartDocumentViewState extends State<MobileSmartDocumentView>
           ('代码块', 'code'),
           ('分隔线', 'divider'),
           ('超链接', 'link'),
+          ('公式', 'formula'),
         ])
           ListTile(title: Text(label), onTap: () => _insert(type)),
         ListTile(

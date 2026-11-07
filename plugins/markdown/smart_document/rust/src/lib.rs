@@ -17,6 +17,7 @@ use uuid::Uuid;
 mod embeds;
 #[cfg(test)]
 mod embeds_tests;
+mod formulas;
 mod images;
 mod links;
 mod outline;
@@ -201,6 +202,9 @@ fn resolve(data: &DocumentData, path: &[Value]) -> Result<String> {
 
 fn apply_operation(doc: &mut Document, op: &Value) -> Result<()> {
     match field(op, "op")? {
+        "insert_formula" => return formulas::insert(doc, op),
+        "update_formula" => return formulas::update(doc, op, false),
+        "delete_formula" => return formulas::update(doc, op, true),
         "insert_image" => return images::insert(doc, op),
         "update_image" => {
             return images::update(
@@ -312,6 +316,13 @@ fn apply_operation(doc: &mut Document, op: &Value) -> Result<()> {
         }
         "update" => {
             let id = resolve(&data, path)?;
+            if data
+                .blocks
+                .get(&id)
+                .is_some_and(|b| b.ty == "math_equation")
+            {
+                return Err("USE_FORMULA_COMMAND".into());
+            }
             if data.blocks.get(&id).is_some_and(|b| b.ty == "image") {
                 return images::update(
                     doc,
@@ -477,6 +488,7 @@ fn insert_node(
         "grid",
         "board",
         "calendar",
+        "math_equation",
     ]
     .contains(&ty.as_str())
     {
@@ -489,7 +501,7 @@ fn insert_node(
     let text_id = format!("text-{id}");
     let structural = matches!(
         ty.as_str(),
-        "table" | "table/cell" | "image" | "grid" | "board" | "calendar"
+        "table" | "table/cell" | "image" | "grid" | "board" | "calendar" | "math_equation"
     );
     let block = Block {
         id: id.clone(),
@@ -530,6 +542,9 @@ fn validate(data: &DocumentData) -> Result<()> {
             return Err("TREE_CYCLE_OR_MULTIPLE_PARENTS".into());
         }
         let block = data.blocks.get(&id).ok_or("MISSING_BLOCK")?;
+        if block.ty == "math_equation" {
+            formulas::validate(block, data)?;
+        }
         if block.ty == "image" {
             images::validate(block, data)?;
         }
@@ -733,6 +748,7 @@ pub fn call(request: Value) -> Result<Value> {
                 .ok_or("INVALID_OPERATIONS")?,
         ),
         "applyUpdate" => session.apply_update(&decode(field(&request, "update")?)?),
+        "formulaState" => formulas::state(&session.doc, field(&request, "blockId")?),
         "syncRequest" => session.sync_request(),
         "applySync" => {
             let bytes = decode(field(&request, "body")?)?;
@@ -1112,3 +1128,6 @@ mod tests {
         assert_eq!(a.snapshot().unwrap(), before);
     }
 }
+
+#[cfg(test)]
+mod formula_tests;

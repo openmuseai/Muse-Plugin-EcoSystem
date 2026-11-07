@@ -63,5 +63,8 @@ void main() {
       await c.close();
       await dir.delete(recursive: true);
     },
+    // Requires the actual browser file-picker step against this exact fixture
+    // object before running. Keep all assertions; this is not a unit seed.
+    tags: const ['manual-browser-filepicker'],
   );
 }

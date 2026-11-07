@@ -23,6 +23,8 @@ dependencies:
     path: ../../../../../Muse-Client/packages/muse_collab_widgets
   appflowy_editor:
     path: ../vendor/appflowy_editor
+  flutter_math_fork:
+    path: ../vendor/flutter_math_fork
   hooks: 2.0.2
   code_assets: 1.2.1
   ffi: ^2.2.0

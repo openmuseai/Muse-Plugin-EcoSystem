@@ -45,6 +45,7 @@ final class StageOneWorkbench {
   static Future<StageOneWorkbench> open({
     DocumentImagePicker? imagePicker,
     bool realtime = false,
+    AppFlowySocketFactory? realtimeSocketFactory,
     ResourceEmbedHost? Function(ResourceEditorSession)? embedHostFactory,
     http.Client Function()? transportClientFactory,
   }) async {
@@ -86,6 +87,7 @@ final class StageOneWorkbench {
                   clientId: clientId,
                   accessToken: () async => aliceToken,
                   codec: AppFlowyRealtimeCodec(wire),
+                  socketFactory: realtimeSocketFactory,
                 ),
               );
             }
