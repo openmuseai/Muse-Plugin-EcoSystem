@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T09:51:49.500072+00:00",
+  "checkedAt": "2026-11-19T10:12:09.241955+00:00",
   "service": "https://cn.openmuseai.com",
   "credentials": "operator-authorized local .account; contents excluded",
   "actualNativeGoTrueClient": {
@@ -42,20 +42,29 @@
     "crossDeviceTestBuild": 111845,
     "normalQaRestoredBuild": 111846,
     "milestones": 22,
-    "evidence": "mobile-smartdoc-autosave-111853.json",
+    "evidence": "mobile-smartdoc-recovered-111857.json",
     "nativeRealtime": true,
     "cloudHumanEditReadBackByAgent": true,
     "actualDesktopContributionReadByMobile": true,
     "autosaveAndNativeChildTestBuild": 111853,
-    "latestNormalQaRestoredBuild": 111856
+    "latestNormalQaRestoredBuild": 111858,
+    "finalTestBuild": 111857
   },
   "notes": "Final native Desktop UI and physical Mobile evidence supersede the earlier locked-screen/handshake blockers. CI Agent uses the explicitly authorized existing CN member delegation, not a separate cloud bot identity.",
-  "latestColdFollowup": {
+  "intermediateColdFailure": {
     "passed": false,
     "testBuild": 111855,
     "failedAt": "ci_document_get before native open",
     "independentCnHttps": "timed out",
     "normalQaRestoredBuild": 111856,
     "evidence": "mobile-cold-followup-111855.json"
+  },
+  "latestColdVerification": {
+    "passed": true,
+    "testBuild": 111857,
+    "normalQaRestoredBuild": 111858,
+    "milestones": 22,
+    "evidence": "mobile-smartdoc-recovered-111857-suite.json",
+    "serviceHealthAfterRecovery": 200
   }
 }

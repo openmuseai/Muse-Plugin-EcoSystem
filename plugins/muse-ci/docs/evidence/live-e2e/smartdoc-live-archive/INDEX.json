@@ -16,16 +16,16 @@
     "child": "agent-child.sydoc"
   },
   "identity": "existing CN member delegated to CI Agent",
-  "exportedAt": "2026-11-19T10:05:37.739Z",
+  "exportedAt": "2026-11-19T10:11:38.906Z",
   "exports": [
     {
       "documentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
       "parentId": "1a063419-5753-48a8-ae1a-3277d359bc93",
       "cloudParentViewId": "2fc350f2-84cf-4627-8323-70fbefa1d941",
       "title": "细化范围、规则与每一项验收条件",
-      "revision": 23,
+      "revision": 25,
       "path": "parent-prd.sydoc",
-      "sha256": "2b56eab6002a102f19090f25b2cb17bda232445e9cc28f80888e5bea28c293ed"
+      "sha256": "8f7acbd7d493e726e0d7f3005e6a432a331612c8df67c9b4398c22d34b5e5174"
     },
     {
       "documentId": "8ff69cb7-89e3-4b96-a5ca-bf47be906daf",
@@ -38,6 +38,6 @@
     }
   ],
   "desktopNativeLinkNavigationVerified": true,
-  "mobileNativeLinkNavigationEvidence": "../mobile-smartdoc-autosave-111853.json",
-  "readMode": "Retained native CI revisions, not a new live cloud read; latest cold follow-up service request timed out."
+  "mobileNativeLinkNavigationEvidence": "../mobile-smartdoc-recovered-111857.json",
+  "readMode": "Current original CN cloud read after service recovery"
 }

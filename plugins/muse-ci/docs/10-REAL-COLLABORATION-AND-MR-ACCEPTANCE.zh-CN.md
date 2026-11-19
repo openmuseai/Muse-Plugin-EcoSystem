@@ -20,7 +20,7 @@
 | AUTH-02 | QA 凭据安全存储、消费一次性插件导入，冷重启自动恢复 | Desktop 实际界面通过；无需再次登录/重新导入 token |
 | DSH-01 | 真实 DSH 模型发现已安装插件，仅在指定验收流程查询、标过、撤回、单节点运行、读取产物/事件 | 通过；[后端独立核验](evidence/live-e2e/desktop-dsh-ci-2026-11-19.json)、[会话与右侧画布](evidence/live-e2e/desktop-dsh-ci-live.jpg) |
 | SD-01 | Desktop 完整编辑器读取手机/Agent 内容，编辑进入云端，Agent 回读后实时回复 | 通过；[Agent 回执](evidence/live-e2e/desktop-agent-cloud-2026-11-19.json)、[原生编辑器](evidence/live-e2e/desktop-native-smartdoc-live.jpg) |
-| SD-02 | 手机普通 Host 入口 → 已安装 CI → 原生 SmartDoc → 读取 Desktop 修订 → 富文本写入云端 → Agent 回读/实时回复 | 真机通过 22 项，含原生子链接；[套件](evidence/live-e2e/mobile-smartdoc-autosave-111853-suite.json)、[内容/实时帧回执](evidence/live-e2e/mobile-smartdoc-autosave-111853.json) |
+| SD-02 | 手机普通 Host 入口 → 已安装 CI → 原生 SmartDoc → 读取 Desktop 修订 → 富文本写入云端 → Agent 回读/实时回复 | 最终包真机通过 22 项，含原生子链接；[套件](evidence/live-e2e/mobile-smartdoc-recovered-111857-suite.json)、[内容/实时帧回执](evidence/live-e2e/mobile-smartdoc-recovered-111857.json) |
 | SD-03 | 子文档归档、Agent 云端贡献、父文档原生引用与 Desktop/Mobile 实际点击跳转 | 通过；[原生归档索引](evidence/live-e2e/smartdoc-live-archive/INDEX.json)、[Desktop 子文档](evidence/live-e2e/desktop-native-child-live.jpg) |
 | MR-01 | 真实 GitHub MR 草稿 → 提审 → 等待平台检查 → 合并 → 回读 merge SHA | 通过；[MR #1](https://github.com/openmuseai/openmuse/pull/1)、[平台回执](evidence/live-e2e/mr-live-acceptance-2026-11-19.json) |
 | ENGINE-01 | 独立数据库 Schema/任务队列：重启、暂停、恢复、重跑、材料固定、审批过期、产物摘要 | 后端端到端 25 项通过；[报告](evidence/live-e2e/report.json) |
@@ -29,13 +29,13 @@ DSH-01 的实际 Run：`5a523216-135c-49df-aa5c-5f8ee4e0d318`。只运行 `featu
 
 MR-01 在专用验收源/目标分支完成：`codex/ci-acceptance-52d61ac2-head` → `codex/ci-acceptance-52d61ac2-base`。merge SHA 为 `75307d554274156ea07cb7dee2c75c87492cf355`。实际平台检查发现 macOS 14 runner 已停用后，在该独立分支将两处 runner 更新为 macOS 15，保留原检查脚本，全部检查通过后再合并。此 MR 验证了完整平台操作链，**没有把当前工作区所有产品代码或正式版本合并进主分支**。
 
-## 最后一次冷启动复查的环境故障
+## 联调中的服务故障与恢复
 
-构建 111853 的完整 22 项真机验收通过，并恢复普通 QA 111854。随后安装最终 UI 包后，构建 111855 冷启动恢复账号、Keystore 和 CI 页面均成功，但 `ci_document_get` 返回错误，尚未打开原生文档。[失败记录](evidence/live-e2e/mobile-cold-followup-111855.json) 与先前通过记录分别保留；当前普通 QA 已恢复为 **1.0.2+111856**。不能将最新冷启动套件计为通过。
+构建 111853 的完整 22 项真机验收通过，并恢复普通 QA 111854。随后安装最终 UI 包后，构建 111855 冷启动恢复账号、Keystore 和 CI 页面均成功，但 `ci_document_get` 返回错误，尚未打开原生文档。[失败记录](evidence/live-e2e/mobile-cold-followup-111855.json) 独立保留。健康检查恢复 HTTP 200 后，同一最终 UI 包的构建 **111857 完整 22 项再次通过**（17 秒），并恢复普通 QA **1.0.2+111858**。最新验收已通过，先前失败没有被覆盖。
 
-独立检查中，国内域名系统 DNS 与 AliDNS 均返回相同公开地址；手机 ICMP 可达。本机 `/gotrue/health` 在 TCP/TLS 建连后 8 秒内没有 HTTP 返回，另一次健康请求出现 TLS 建连超时。该观测只说明当前本机到国内服务的请求不可用，不能据此认定服务器全局停机或密码错误。未降低 TLS 校验、改用海外 OpenMuse 服务或重置账号。当前剩余验收是服务恢复后重跑普通入口与云文档冷启动。
+故障期间，国内域名系统 DNS 与 AliDNS 均返回相同公开地址；手机 ICMP 可达。本机 `/gotrue/health` 在 TCP/TLS 建连后 8 秒内没有 HTTP 返回，另一次健康请求出现 TLS 建连超时。该观测只说明当时本机到国内服务的请求不可用，不能据此认定服务器全局停机或密码错误。未降低 TLS 校验、改用海外 OpenMuse 服务或重置账号。服务恢复后已重跑普通入口、自动保存、云端回读、实时回复与原生子文档导航。
 
-原生归档此次读取 CI 已保留的原生修订，索引明确标识；没有把离线导出当成新一次云端成功。
+故障期间使用保留的原生修订导出；恢复后再次从原始国内云端读取并更新归档，索引标识读取方式。Desktop 还通过总文档「完整编辑器」入口补齐了既有总文档的新子文档连接，保留 [原生总文档画面](evidence/live-e2e/desktop-native-handbook-live.jpg)。
 
 ## 登录与签名问题的结论
 
