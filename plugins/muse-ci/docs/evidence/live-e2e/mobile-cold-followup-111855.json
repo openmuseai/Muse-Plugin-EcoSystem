@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "testBuild": 111855,
+  "restoredNormalBuild": 111856,
+  "failedStep": "ci_document_get returned isError before native open",
+  "priorCompletedSuite": "mobile-smartdoc-autosave-111853-suite.json",
+  "service": "https://cn.openmuseai.com",
+  "independentHttpsProbe": "timed out after 8 seconds; DNS resolved and physical-device ICMP succeeded",
+  "checkedAt": "2026-11-19T10:04:37.493187+00:00"
+}

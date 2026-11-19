@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-11-19T09:51:49.500072+00:00",
+  "service": "https://cn.openmuseai.com",
+  "credentials": "operator-authorized local .account; contents excluded",
+  "actualNativeGoTrueClient": {
+    "passwordLogin": 200,
+    "currentUser": 200,
+    "identityMatchesLocalAccount": true,
+    "workspaceBootstrapHttp": 200,
+    "workspaceBootstrapCode": 0
+  },
+  "actualBackendConnector": {
+    "authenticated": true,
+    "workspaceAuthorized": true
+  },
+  "actualNativeTransport": {
+    "httpsPasswordLogin": 200,
+    "authenticatedWs2": true,
+    "tlsValidation": "default"
+  },
+  "regression": {
+    "authPackageTests": 53,
+    "authAnalyze": "passed"
+  },
+  "fix": {
+    "commit": "5e18c643",
+    "behavior": "Only explicit GoTrue credential rejection is classified as invalid credentials; HTML/unknown gateway 400 responses remain server failures.",
+    "localAccountParserCommit": "35a1648c",
+    "transportCommit": "356fecc3"
+  },
+  "desktopUiLogin": {
+    "passed": true,
+    "application": "OpenMuse CI QA",
+    "accountSource": "operator-authorized local .account",
+    "nativeKeychainImportAndReadback": true,
+    "coldRestartRestoredAccountAndCI": true,
+    "signing": "Existing SDPXS943DW team and Xcode-selected development certificate; separate QA bundle identity; production App certificate/profile unchanged"
+  },
+  "collaborationMobileE2E": {
+    "passed": true,
+    "device": "authorized PKM110",
+    "crossDeviceTestBuild": 111845,
+    "normalQaRestoredBuild": 111846,
+    "milestones": 18,
+    "evidence": "mobile-smartdoc-cross-device-111845.json",
+    "nativeRealtime": true,
+    "cloudHumanEditReadBackByAgent": true,
+    "actualDesktopContributionReadByMobile": true
+  },
+  "notes": "Final native Desktop UI and physical Mobile evidence supersede the earlier locked-screen/handshake blockers. CI Agent uses the explicitly authorized existing CN member delegation, not a separate cloud bot identity."
+}

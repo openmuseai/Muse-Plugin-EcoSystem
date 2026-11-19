@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "projectId": "f52609f8a2d4c328a26824709b48b87d",
+  "documentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
+  "desktopMarker": "CIDESKTOPLIVE_1795079554753",
+  "agentReply": "CI Agent 已从云端回读 Desktop 原生修订 CIDESKTOPLIVE_1795079554753；手机贡献与已有文档均保留。",
+  "agentIdentity": "delegated-existing-CN-member",
+  "nativeDesktopContributionReadFromCloud": true,
+  "mobileContributionPreserved": true,
+  "cloudSync": "accepted",
+  "agentRealtimeConnected": true,
+  "at": "2026-11-19T09:15:10.935Z"
+}

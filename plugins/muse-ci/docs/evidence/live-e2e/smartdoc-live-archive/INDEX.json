@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "at": "2026-11-19T09:40:51.752Z",
+  "projectId": "f52609f8a2d4c328a26824709b48b87d",
+  "parentDocumentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
+  "childDocumentId": "8ff69cb7-89e3-4b96-a5ca-bf47be906daf",
+  "parentResourceUri": "openmuse-resource://v1/eyJwcm90b2NvbCI6Im9wZW5tdXNlLnJlc291cmNlLXJlZmVyZW5jZS92MSIsImlkZW50aXR5Ijp7InNjb3BlIjoiMWQwMjc5NTYtNmU5Yi00ZTA5LThiNmEtYzQ3MTk4MTgzYzE4Iiwic291cmNlIjoiYXBwZmxvd3ktNjFlZTdmZTMxOTc0YzU1MTgwZWE3ZGIwIiwid29ya3NwYWNlIjoiOTRkYWMxNDctNTViYy00NTkyLTllMGMtMTA0NzA3MjkwMzAwIiwibW91bnQiOiJwYWdlcyIsInJlc291cmNlIjoiNTczZjllYWYtNDQwOS00MDBkLWFlZmQtNmIyMjMxNTJhYjYyIn19",
+  "childResourceUri": "openmuse-resource://v1/eyJwcm90b2NvbCI6Im9wZW5tdXNlLnJlc291cmNlLXJlZmVyZW5jZS92MSIsImlkZW50aXR5Ijp7InNjb3BlIjoiMWQwMjc5NTYtNmU5Yi00ZTA5LThiNmEtYzQ3MTk4MTgzYzE4Iiwic291cmNlIjoiYXBwZmxvd3ktNjFlZTdmZTMxOTc0YzU1MTgwZWE3ZGIwIiwid29ya3NwYWNlIjoiOTRkYWMxNDctNTViYy00NTkyLTllMGMtMTA0NzA3MjkwMzAwIiwibW91bnQiOiJwYWdlcyIsInJlc291cmNlIjoiNjUyZjc2MGMtMTk3Ny00NTRjLTgwMzUtY2JlY2MyODc1Y2I2In19",
+  "childCloudParentMatchesNativeParent": true,
+  "parentLinkIsNativeAccountBound": true,
+  "desktopContributionPreserved": true,
+  "agentCloudSync": "accepted",
+  "agentRealtimeConnected": true,
+  "archive": {
+    "parent": "parent-prd.sydoc",
+    "child": "agent-child.sydoc"
+  },
+  "identity": "existing CN member delegated to CI Agent",
+  "exportedAt": "2026-11-19T10:05:37.739Z",
+  "exports": [
+    {
+      "documentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
+      "parentId": "1a063419-5753-48a8-ae1a-3277d359bc93",
+      "cloudParentViewId": "2fc350f2-84cf-4627-8323-70fbefa1d941",
+      "title": "细化范围、规则与每一项验收条件",
+      "revision": 23,
+      "path": "parent-prd.sydoc",
+      "sha256": "2b56eab6002a102f19090f25b2cb17bda232445e9cc28f80888e5bea28c293ed"
+    },
+    {
+      "documentId": "8ff69cb7-89e3-4b96-a5ca-bf47be906daf",
+      "parentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
+      "cloudParentViewId": "573f9eaf-4409-400d-aefd-6b223152ab62",
+      "title": "CI Agent 子文档协作验收",
+      "revision": 4,
+      "path": "agent-child.sydoc",
+      "sha256": "c4b576424ab1c6bf4440b0696c2ab3a9d8f61091ea96b0e7efb008b39e05a600"
+    }
+  ],
+  "desktopNativeLinkNavigationVerified": true,
+  "mobileNativeLinkNavigationEvidence": "../mobile-smartdoc-autosave-111853.json",
+  "readMode": "Retained native CI revisions, not a new live cloud read; latest cold follow-up service request timed out."
+}

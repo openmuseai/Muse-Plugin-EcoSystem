@@ -1,5 +1,7 @@
 # Muse-CI：Desktop DSH 与 Mobile 联调
 
+最新 0.3.0 已完成完整原生编辑器、国内云端委托协作、真实 MR 和重启恢复；参见[最新验收及边界](10-REAL-COLLABORATION-AND-MR-ACCEPTANCE.zh-CN.md)。下文保留首次接入时的工具数量、构建号及历史故障记录。
+
 ## 实现边界
 
 - Host 新增通用远端 MCP App 会话、已安装 App 的 Agent 路由和右侧面板入口；没有新增 CI 项目、节点、流水线、Temporal 或发布业务代码。

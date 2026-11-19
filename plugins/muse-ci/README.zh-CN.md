@@ -2,8 +2,9 @@
 
 Muse-CI 是可安装到 OpenMuse Desktop 和 Mobile 的 AI 原生交付插件，从需求计划到执行证据、人员决策和发布记录形成同一条交付链。
 
-本目录交付 0.2.0 开发里程碑：版本主流程、需求子流程、Step 画布、人工标过、原生 SmartDoc 与 Agent 委托协作，并延续真实 Temporal/PostgreSQL 的执行和证据闭环。已完成 macOS/Android 开发构建中的通用 MCP Apps 接入，真实 DSH AI 可跨端查询、修改计划并重跑节点；生产市场后装、OAuth、iOS 真机与正式签名/商店发布尚未通过验收。DSH 工具编排与节点后端 AI 代码执行分别验收。
+本目录交付 0.3.0 联调里程碑：版本主流程、需求子流程、Step 画布、人工标过、完整原生 SmartDoc 与国内云端 Agent 委托协作、真实 MR 创建/提审/合并，并延续 Temporal/PostgreSQL 的执行和证据闭环。已完成 macOS/Android 开发构建中的通用 MCP Apps 接入，真实 DSH AI 可跨端查询、修改计划并重跑节点；生产市场后装、OAuth、iOS 真机与正式签名/商店发布尚未通过验收。DSH 工具编排与节点后端 AI 代码执行分别验收。
 
+- [0.3.0 原生协作、DSH 与真实 MR 验收](docs/10-REAL-COLLABORATION-AND-MR-ACCEPTANCE.zh-CN.md)
 - [版本/需求生命周期与 SmartDoc 新规范](docs/07-LIFECYCLE-AND-SMARTDOC.zh-CN.md)
 - [本轮测试用例](docs/08-LIFECYCLE-TEST-CASES.zh-CN.md)
 - [0.2.0 生命周期交付与验证报告](docs/09-LIFECYCLE-ACCEPTANCE.zh-CN.md)
@@ -22,7 +23,7 @@ Muse-CI 是可安装到 OpenMuse Desktop 和 Mobile 的 AI 原生交付插件，
 
 先在本目录 `npm run pack`；在 `Muse-CI/` 执行 `npm ci && npm run stack:up && npm run dev`。打开 `http://127.0.0.1:4180/`；`/host` 验证沙箱 MCP App。`npm run e2e` 运行真实持久执行验收，`node scripts/host-conformance.mjs` 验证实际 Desktop Host 安装后调用。详见实现文档。
 
-标准开发包为 dist/muse-ci-0.2.0.mcpb，远端发行输入为 dist/release.development.json；均未发布到市场。
+标准开发包为 dist/muse-ci-0.3.0.mcpb，远端发行输入为 dist/release.development.json；均未发布到市场。
 
 ## 离线交互预览
 

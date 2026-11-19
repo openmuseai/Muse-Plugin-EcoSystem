@@ -1,0 +1,38 @@
+{
+  "milestones": [
+    "normal main restored installed China Host",
+    "existing Keystore China account restored",
+    "native resource center ready for current account",
+    "normal home ready",
+    "normal CI entry visible",
+    "actual installed CI UI connected through MCP",
+    "native document or handler selection reached",
+    "CI native resource locator opened full SmartDocumentView",
+    "original authenticated Cloud WS2 realtime connected",
+    "full native editor read real Agent cloud contribution",
+    "Mobile native editor read the actual Desktop contribution",
+    "native Mobile edit action enabled the authorized presentation",
+    "native content owner accepted the Mobile editor transaction",
+    "native Cloud sync accepted the current local mutation epoch",
+    "native editor rich text transaction accepted by real Cloud full-sync",
+    "CI Agent read back Mobile rich text from original cloud document",
+    "native editor received actual Agent content from Cloud realtime",
+    "human and delegated Agent contributions both preserved"
+  ],
+  "scope": "normal-main-native-SmartDocument-China-Cloud",
+  "projectId": "f52609f8a2d4c328a26824709b48b87d",
+  "documentId": "37f84ae8-620f-4c04-bca5-a49fad3ee8a7",
+  "passed": true,
+  "mobileContribution": " Mobile 原生编辑器贡献 1795080922762038",
+  "agentContribution": "CI Agent 实时回复 Mobile 1795080922762038",
+  "cloudRealtimeFrames": 1,
+  "uiTools": [
+    "ci_capabilities",
+    "ci_projects_list",
+    "ci_project_get",
+    "ci_events_list",
+    "ci_document_get",
+    "ci_agent_document_edit"
+  ],
+  "nativeObjectId": "573f9eaf-4409-400d-aefd-6b223152ab62"
+}
