@@ -1,0 +1,9 @@
+00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/packages/openmuse_mcp_app_runtime/test/remote_app_test.dart
+00:00 +0: rejects remote plaintext, endpoint credentials and path traversal
+00:00 +1: rejects tampered UI before loading or contacting a server
+00:00 +2: bound installation rejects a different account before network access
+00:00 +3: Agent routing discovers installed Apps and opens only the requested App
+00:00 +4: actual development backend discovers tools, validates schema and protects credentials
+Shell: [INFO][mcp_dart.client] Setting request handler for potentially custom method 'ping'. Ensure client capabilities match.
+Shell: [DEBUG][mcp_dart.client] MCP Server Discovered. Server: io.openmuse.ci 0.2.0, Protocol: 2026-07-28
+00:00 +5: All tests passed!

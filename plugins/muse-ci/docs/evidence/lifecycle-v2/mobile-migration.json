@@ -1,0 +1,97 @@
+{
+  "versionProjectId": "1068714fc62cac7d440972070efe42c8",
+  "versionName": "1.0.2",
+  "children": [
+    {
+      "id": "501bf6731c50d8dc6364d0445ac8cb51",
+      "title": "REQ-01 · Mobile 文档依赖与插件隔离",
+      "legacyNodes": [
+        "M02",
+        "M03",
+        "M08",
+        "M09",
+        "M12",
+        "C01",
+        "C02"
+      ]
+    },
+    {
+      "id": "aa3f2d80b656e92de539c6a5bee1fe5d",
+      "title": "REQ-02 · SmartDoc 原生入口、链接与升级迁移",
+      "legacyNodes": [
+        "M04",
+        "M05",
+        "M06",
+        "A01",
+        "A02",
+        "A05",
+        "V01",
+        "V02",
+        "C05"
+      ]
+    },
+    {
+      "id": "6c9ec0222b94416d50f6e6d2ba5de1dc",
+      "title": "REQ-03 · 来源、版权与必要许可审查",
+      "legacyNodes": [
+        "M07",
+        "A04",
+        "V04",
+        "C07",
+        "R07"
+      ]
+    },
+    {
+      "id": "d1fd6de7562971ef42c00782f383c633",
+      "title": "REQ-04 · AI 发送授权、品牌与拒审整改",
+      "legacyNodes": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R10",
+        "R11",
+        "M11",
+        "A03",
+        "A06",
+        "V03",
+        "C04"
+      ]
+    },
+    {
+      "id": "a4f651ce4c1377dbe4045f4fd5980885",
+      "title": "REQ-05 · 设备、升级与四渠道回归准备",
+      "legacyNodes": [
+        "M01",
+        "M10",
+        "R08",
+        "C03",
+        "C06",
+        "C08"
+      ]
+    },
+    {
+      "id": "35be56b1a1236462d29a566b72f4ae79",
+      "title": "REQ-06 · 签名、渠道材料与上架回执",
+      "legacyNodes": [
+        "R09",
+        "R12",
+        "gate-upload",
+        "gate-submit",
+        "gate-review",
+        "gate-publish",
+        "archive"
+      ]
+    }
+  ],
+  "legacy": {
+    "projectId": "db29cc8e05c2609607efac6224b8ea30",
+    "version": 695,
+    "preserved": true
+  },
+  "documents": "native SmartDoc / muse.smart-document/phase1",
+  "agentContributions": true,
+  "completedAt": "2026-11-19T03:16:34.909Z"
+}

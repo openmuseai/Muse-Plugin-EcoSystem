@@ -1,0 +1,738 @@
+{
+  "exportedAt": "2026-11-19T03:00:19.419Z",
+  "profile": "muse.smart-document/phase1",
+  "authority": "CI backend native document IDs; these files are read-only point-in-time exports",
+  "links": "muse://ci links resolve inside the CI document panel; use this index for offline paths",
+  "projects": [
+    {
+      "projectId": "1068714fc62cac7d440972070efe42c8",
+      "title": "OpenMuse Mobile 1.0.2 · 版本交付",
+      "kind": "version",
+      "version": 11,
+      "handbookPath": "version/00-index/3d757652-dd0d-452c-ae7b-3615fbea1f02.sydoc",
+      "documents": [
+        {
+          "documentId": "055c9ff9-88bb-4bd9-ab9c-2ec055050871",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "执行版本回归与测试报告",
+          "kind": "test-report",
+          "stepId": "regression",
+          "nodeId": "regression-report",
+          "revision": 1,
+          "path": "version/04-regression/regression-report.sydoc",
+          "sha256": "f8e746c33d373b9baac9dcca7648aed3f6bd47a1d9dd751b739382067e37f978"
+        },
+        {
+          "documentId": "2612c71b-4d45-4aa4-8cf5-ff34cc2990e3",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "拆分子需求与验收边界",
+          "kind": "requirement-plan",
+          "stepId": "requirements",
+          "nodeId": "requirement-plan",
+          "revision": 2,
+          "path": "version/03-requirements/requirement-plan.sydoc",
+          "sha256": "59336280b74a458cb36356e53bd59e1aed96e7c59b415cb6707916351c513641"
+        },
+        {
+          "documentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "00 · OpenMuse Mobile 1.0.2 · 版本交付 · 流程总文档",
+          "kind": "handbook",
+          "revision": 14,
+          "path": "version/00-index/3d757652-dd0d-452c-ae7b-3615fbea1f02.sydoc",
+          "sha256": "9a34237e462039a99135bb32426070f5dc361d3d6942e979ec6db23ba641c5d1"
+        },
+        {
+          "documentId": "95481709-9149-44c4-a54c-d7448db5e112",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "候选包、上架材料与渠道计划",
+          "kind": "release-plan",
+          "stepId": "release",
+          "nodeId": "release-materials",
+          "revision": 1,
+          "path": "version/05-release/release-materials.sydoc",
+          "sha256": "8eab8480c91f87e1d7d2c75250fa5440b7ba47341022f3e6dc0b3abd3372b0af"
+        },
+        {
+          "documentId": "abb809df-4060-4720-90c8-45e19068ac87",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "渠道上架与真实回执",
+          "kind": "release-receipt",
+          "stepId": "release",
+          "nodeId": "release-result",
+          "revision": 1,
+          "path": "version/05-release/release-result.sydoc",
+          "sha256": "92541be0c9bfd50e920ed292c11c68fa9192643d1f731a7fe91509b65d681a05"
+        },
+        {
+          "documentId": "c7cba0b1-9dbf-4866-8276-522d421689df",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "版本回归测试用例",
+          "kind": "test-cases",
+          "stepId": "regression",
+          "nodeId": "regression-cases",
+          "revision": 2,
+          "path": "version/04-regression/regression-cases.sydoc",
+          "sha256": "9e3bf5acd3bb8a8e81903601bad850f76816298adcd5e2806c6412e08d851b14"
+        },
+        {
+          "documentId": "cbf0dd7a-5803-4bc2-8d62-ebcb83a55706",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "版本视觉方向与 UI 设计",
+          "kind": "ui-design",
+          "stepId": "visual",
+          "nodeId": "version-ui",
+          "revision": 2,
+          "path": "version/02-visual/version-ui.sydoc",
+          "sha256": "d0f9e64ad5e3e9da1c36f8a51e40c7cb16e30c131419f25c88eda7905e8f757a"
+        },
+        {
+          "documentId": "f21d8ffc-8e43-4b0e-9b0c-0e886a93926b",
+          "parentId": "3d757652-dd0d-452c-ae7b-3615fbea1f02",
+          "title": "圈定版本范围与粗粒度 PRD",
+          "kind": "version-prd",
+          "stepId": "definition",
+          "nodeId": "version-scope",
+          "revision": 2,
+          "path": "version/01-definition/version-scope.sydoc",
+          "sha256": "f83aa4ae00d7f9ce32268dbf20b163f02ee91c1049a45c33fc86fa36371f8e12"
+        }
+      ]
+    },
+    {
+      "projectId": "501bf6731c50d8dc6364d0445ac8cb51",
+      "title": "REQ-01 · Mobile 文档依赖与插件隔离",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/01-501bf673/00-index/48454f38-c21e-44fd-8670-cc2509dbb18a.sydoc",
+      "documents": [
+        {
+          "documentId": "1fcb5ebe-8b14-4365-bea1-77e57605aa84",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/01-501bf673/04-testing/feature-cases.sydoc",
+          "sha256": "64470c1ff3be7ec1dfd8153205300c1defbfbe3d9fb784beb3056113822d0756"
+        },
+        {
+          "documentId": "299019b5-7fe7-47ff-968c-42d0d36b6fc5",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/01-501bf673/05-merge/mr-merge.sydoc",
+          "sha256": "e3b9ed82bb6c825b1dd3116be9453cbb8a218e9a56bf5426de9f79b644672f8f"
+        },
+        {
+          "documentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "00 · REQ-01 · Mobile 文档依赖与插件隔离 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/01-501bf673/00-index/48454f38-c21e-44fd-8670-cc2509dbb18a.sydoc",
+          "sha256": "be28a8c5ae353ac73d46bf0bc57e6b5ea882eec74b386afcd9fde19b7b527eaa"
+        },
+        {
+          "documentId": "48e99b75-51bf-487c-8039-aa450e4f0159",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/01-501bf673/05-merge/mr-review.sydoc",
+          "sha256": "9149b36f2b10b7eff7f88334f28519800e4c64cd6eeaabecf0c130b3d09fe618"
+        },
+        {
+          "documentId": "6e27a0bf-e75e-4430-9253-0a0b9824bebc",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/01-501bf673/03-solution/feature-solution.sydoc",
+          "sha256": "554044e62f389a5aa841b3d023b9aede237ea46568f5af35c6190f9dc04d6d3f"
+        },
+        {
+          "documentId": "839768f5-c30f-401c-baef-ccf78974ca2b",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/01-501bf673/01-prd/feature-prd.sydoc",
+          "sha256": "e3c9a89b92d7b47241b55765bee371a7f4c3e29ba391ca52fdfb73316c9e787d"
+        },
+        {
+          "documentId": "b70ac198-84ba-4540-a6aa-390b1723489e",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/01-501bf673/02-design/feature-ui.sydoc",
+          "sha256": "2c1755bfda79a828a2a362969a265ce4e4da394745e796ac55a8146d4724a74e"
+        },
+        {
+          "documentId": "bfe38dbd-a9d8-4a5f-8dbd-847a93f44949",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/01-501bf673/03-solution/implementation.sydoc",
+          "sha256": "e2f76b8d993f079ce9e29be11b2f02f94235baaadce18c65c6b7b9abcf231b82"
+        },
+        {
+          "documentId": "e77287a6-19f1-4e40-aee4-3f8a0889ce75",
+          "parentId": "48454f38-c21e-44fd-8670-cc2509dbb18a",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/01-501bf673/04-testing/feature-report.sydoc",
+          "sha256": "fbfcf1bf314b5801a48fafe9173ba6e158b2611e5d95e78cb1066c7983b789bf"
+        }
+      ]
+    },
+    {
+      "projectId": "aa3f2d80b656e92de539c6a5bee1fe5d",
+      "title": "REQ-02 · SmartDoc 原生入口、链接与升级迁移",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/02-aa3f2d80/00-index/eb61869e-2897-4a73-a719-f030897aa2e1.sydoc",
+      "documents": [
+        {
+          "documentId": "0296eb98-0aba-4f30-a4e9-c618797d2aef",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/02-aa3f2d80/05-merge/mr-review.sydoc",
+          "sha256": "91c97cbde23bea803834e9cfc019d54031b964b56e9780432e2104857dcffa85"
+        },
+        {
+          "documentId": "064e0b5c-fbf4-4196-87c3-159e23cee8be",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/02-aa3f2d80/04-testing/feature-cases.sydoc",
+          "sha256": "647e6e320e0479be81a5f92d7401bc133e552427ccec9873ea3229ecdd4a340f"
+        },
+        {
+          "documentId": "2f8caded-795a-4c45-9de2-9eb40639b48f",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/02-aa3f2d80/01-prd/feature-prd.sydoc",
+          "sha256": "588e79fa2134d8bb298ca4bef01fdd9d29de454ca24b94e67014817ad805ea0d"
+        },
+        {
+          "documentId": "7665994b-71c0-4c34-984c-75bfa2c78c76",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/02-aa3f2d80/03-solution/feature-solution.sydoc",
+          "sha256": "7554ab61b79ca8e07b9146c917830605f296529404b264964158a8c3d317bed0"
+        },
+        {
+          "documentId": "85f99ee4-69b7-4078-b695-f65fc66fe7b8",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/02-aa3f2d80/05-merge/mr-merge.sydoc",
+          "sha256": "3be030bd821c77848f755576c1f64cb46f70103389c41db13e9e5806a96d5b77"
+        },
+        {
+          "documentId": "a4d7e4bd-2690-4c5b-b093-962c85cc545c",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/02-aa3f2d80/03-solution/implementation.sydoc",
+          "sha256": "fdeea40fa415455451bcbdf72258c9c9a756919fc5dc16299f4c2ea3c93240ec"
+        },
+        {
+          "documentId": "c0845dc6-7f35-465b-ae90-a6417541e91b",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/02-aa3f2d80/04-testing/feature-report.sydoc",
+          "sha256": "e4be2d9d57168cdf67d69d9c0469ca014d738ad69c01b558418b0af6f21bf7ee"
+        },
+        {
+          "documentId": "d2383235-433d-4e6d-8e20-d47ba3994e0a",
+          "parentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/02-aa3f2d80/02-design/feature-ui.sydoc",
+          "sha256": "bbf2785e7cfbc545cd4c5117e74f915b0a1141ab9ba3d707d2dbb461c24c2951"
+        },
+        {
+          "documentId": "eb61869e-2897-4a73-a719-f030897aa2e1",
+          "title": "00 · REQ-02 · SmartDoc 原生入口、链接与升级迁移 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/02-aa3f2d80/00-index/eb61869e-2897-4a73-a719-f030897aa2e1.sydoc",
+          "sha256": "4a8f60823d198bcf09aacaebdea6376ef1a6133fd2cc0b595a215ba6889feb01"
+        }
+      ]
+    },
+    {
+      "projectId": "6c9ec0222b94416d50f6e6d2ba5de1dc",
+      "title": "REQ-03 · 来源、版权与必要许可审查",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/03-6c9ec022/00-index/ee82a19c-dd0c-4db1-9b95-24c6cce8698a.sydoc",
+      "documents": [
+        {
+          "documentId": "41164a1a-2cc4-423d-8eda-13a284f82cc1",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/03-6c9ec022/05-merge/mr-review.sydoc",
+          "sha256": "0d84c1725028d42cb43402b57a800255c0a213faa5af4936801b1811c16f407e"
+        },
+        {
+          "documentId": "644a4b7b-9a5f-4bd6-bda8-91a34f9025b9",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/03-6c9ec022/03-solution/implementation.sydoc",
+          "sha256": "86c10e4d231fce865bf461cc60326bf30b130b7a06512d68e454133381bb4614"
+        },
+        {
+          "documentId": "99a9c132-ce05-4c5c-a50e-2bfe2049fb0d",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/03-6c9ec022/03-solution/feature-solution.sydoc",
+          "sha256": "00c7c3dce42ee695ece54565a989b3b13d7733a9b6a0ec09ac65ed7fb355fb7f"
+        },
+        {
+          "documentId": "a67e8faa-07b6-46f7-a929-e4417a5f9169",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/03-6c9ec022/02-design/feature-ui.sydoc",
+          "sha256": "30dfd6050e8b11553c75bad142e62d411ebe41bfbb257c7070614a207ef4f465"
+        },
+        {
+          "documentId": "cc57a865-7aeb-47a2-9474-609eeb230ffa",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/03-6c9ec022/01-prd/feature-prd.sydoc",
+          "sha256": "48650bbf10fc624c29fbefe6807d279f38f397c1a94e5c113bdaecfde299b900"
+        },
+        {
+          "documentId": "d9dd8a55-e21a-42c5-a65c-718125742d5c",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/03-6c9ec022/05-merge/mr-merge.sydoc",
+          "sha256": "f4a1bb3fbf3e513668a284794cb6cd00d0cef1803ae83f06c89d0532342f61b1"
+        },
+        {
+          "documentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "00 · REQ-03 · 来源、版权与必要许可审查 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/03-6c9ec022/00-index/ee82a19c-dd0c-4db1-9b95-24c6cce8698a.sydoc",
+          "sha256": "e9fce9953dbf6d1694eebcbbc1cd4f2345630aa120bd3b0d2f74eac5f1ef126a"
+        },
+        {
+          "documentId": "ef132c5d-6ae5-41b4-a217-6037eeeea528",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/03-6c9ec022/04-testing/feature-report.sydoc",
+          "sha256": "7e99eead226f2f0f0a56d601766d756b8f9d8bc103020ae6bf1a4b6bd3c39293"
+        },
+        {
+          "documentId": "f30cbe1b-57a0-4c74-a835-077b2def5c52",
+          "parentId": "ee82a19c-dd0c-4db1-9b95-24c6cce8698a",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/03-6c9ec022/04-testing/feature-cases.sydoc",
+          "sha256": "9f514787f319e3dc40f88a2d74820383a8e710e189f02c6fd82a22989b86f207"
+        }
+      ]
+    },
+    {
+      "projectId": "d1fd6de7562971ef42c00782f383c633",
+      "title": "REQ-04 · AI 发送授权、品牌与拒审整改",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/04-d1fd6de7/00-index/93f583e0-e17e-4b4f-9675-039febe2b8da.sydoc",
+      "documents": [
+        {
+          "documentId": "12cc3eb1-3e45-4914-afef-e0562bc1c85f",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/04-d1fd6de7/03-solution/feature-solution.sydoc",
+          "sha256": "aaa6004bf3cca99aa2baac605c042c5080af4df91fb0b2f67db5bc3347e8b2c0"
+        },
+        {
+          "documentId": "2f6b7ef9-dc1f-4b36-a52a-a2f75225f792",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/04-d1fd6de7/05-merge/mr-review.sydoc",
+          "sha256": "a3d2983180016a67d6190a243446a1a391986bb4dc3a2b353200188ef6931b9a"
+        },
+        {
+          "documentId": "6111f8de-7e15-488f-b0af-f0888a577fc4",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/04-d1fd6de7/03-solution/implementation.sydoc",
+          "sha256": "ebfb097c1c1e3b2ba95a1cc11d75c7da3ca5467dfc7cb602245151d4d0146318"
+        },
+        {
+          "documentId": "84b73af0-0793-4d7d-b22d-2656ecde3096",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/04-d1fd6de7/02-design/feature-ui.sydoc",
+          "sha256": "0f20e189afbea01841b3611cfe30a90cdb04b01dd1ffe7bd95885b662e607207"
+        },
+        {
+          "documentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "00 · REQ-04 · AI 发送授权、品牌与拒审整改 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/04-d1fd6de7/00-index/93f583e0-e17e-4b4f-9675-039febe2b8da.sydoc",
+          "sha256": "6a3fb9b85533adbccc18c34a09a2a41d025a946dd0b97fe6dd154c8d41f2a5f8"
+        },
+        {
+          "documentId": "98d67410-a67e-4095-8eb6-be9fe77b36ff",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/04-d1fd6de7/04-testing/feature-cases.sydoc",
+          "sha256": "0ccf8e2fd2edd8ded0e1b6672fb945fa3bfd3baebaac15534bca7d60c25660ec"
+        },
+        {
+          "documentId": "dc36dbc2-437d-4c44-b583-4fb993cd1c5e",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/04-d1fd6de7/01-prd/feature-prd.sydoc",
+          "sha256": "9f77bbe407900842394e928631bb995564827e8d17908fa61f2b6153fd6e0ca1"
+        },
+        {
+          "documentId": "e7ba9d70-e37e-4cd0-9563-4b89802fd086",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/04-d1fd6de7/05-merge/mr-merge.sydoc",
+          "sha256": "df3e3b51c8142826645de921df98da205aac7b77cc51d15cf213c5a68f963ea1"
+        },
+        {
+          "documentId": "fea7cbaa-6255-446e-830d-3394de11f5a0",
+          "parentId": "93f583e0-e17e-4b4f-9675-039febe2b8da",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/04-d1fd6de7/04-testing/feature-report.sydoc",
+          "sha256": "83c9523681e635c225fb4f3b982a18b5f4816378a8d6f3d6cd2cadcd49a328b0"
+        }
+      ]
+    },
+    {
+      "projectId": "a4f651ce4c1377dbe4045f4fd5980885",
+      "title": "REQ-05 · 设备、升级与四渠道回归准备",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/05-a4f651ce/00-index/e6fa4bac-325e-411a-bd45-46b1c85c3fbb.sydoc",
+      "documents": [
+        {
+          "documentId": "29296d50-3bdc-4bfe-b054-c255fdf2b55d",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/05-a4f651ce/03-solution/implementation.sydoc",
+          "sha256": "6cba58d6d7cefa151cbbf006500407a604133ae1e9bfd00a8a423ad952e33682"
+        },
+        {
+          "documentId": "35d7e1b9-14e9-4961-bdfc-5c1a5cf0caee",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/05-a4f651ce/04-testing/feature-report.sydoc",
+          "sha256": "8e9683be98ecc5e0d3ecedb68b0c594ecf577f9423d1abf1a4d4fabc492bd6ed"
+        },
+        {
+          "documentId": "619145bd-f109-4a9f-8f0c-30319b639556",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/05-a4f651ce/01-prd/feature-prd.sydoc",
+          "sha256": "5739e58e72840c6e61cf042a9571146a870f4499cabd9c0519eafc15b6eef00f"
+        },
+        {
+          "documentId": "69937fe2-3b91-4545-965a-b897c5f50b57",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/05-a4f651ce/03-solution/feature-solution.sydoc",
+          "sha256": "1e3ad0757b8ade20ec42cdced8e5123e56be4bf76c0f9fa0c08818ded4b7c184"
+        },
+        {
+          "documentId": "6a32e14d-3769-40d8-90b3-27633bbd1b62",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/05-a4f651ce/02-design/feature-ui.sydoc",
+          "sha256": "b6d1ee487ddae3fe67935638b38f51d232b612a5fb7fb47072f481fe970bd127"
+        },
+        {
+          "documentId": "9610f34e-bdd3-421d-9445-f1448a80dd65",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/05-a4f651ce/05-merge/mr-review.sydoc",
+          "sha256": "5dd1d885b3d95e0cb7ee38c6b7572b3a2a130d086f8a3d2d8290f62cfce8a442"
+        },
+        {
+          "documentId": "a9d52f93-acb7-4b17-aadd-24b5a7714086",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/05-a4f651ce/05-merge/mr-merge.sydoc",
+          "sha256": "81a1abaed6914a8f6380db7839917d0bae6889e5a9df23aea525ef7b87b211b6"
+        },
+        {
+          "documentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "00 · REQ-05 · 设备、升级与四渠道回归准备 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/05-a4f651ce/00-index/e6fa4bac-325e-411a-bd45-46b1c85c3fbb.sydoc",
+          "sha256": "0a5e92011f534ebdd1bbd9f46f8cf029b27d856ed2d62cf9df701a54d61eb294"
+        },
+        {
+          "documentId": "f19f2f2c-6b75-4261-9b55-30bce9db2020",
+          "parentId": "e6fa4bac-325e-411a-bd45-46b1c85c3fbb",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/05-a4f651ce/04-testing/feature-cases.sydoc",
+          "sha256": "2a6806a8aa55a0c9f3559762d335fd654a05261732c060da880db195a0721951"
+        }
+      ]
+    },
+    {
+      "projectId": "35be56b1a1236462d29a566b72f4ae79",
+      "title": "REQ-06 · 签名、渠道材料与上架回执",
+      "kind": "requirement",
+      "parentId": "1068714fc62cac7d440972070efe42c8",
+      "version": 5,
+      "handbookPath": "requirements/06-35be56b1/00-index/bc56e684-9541-4a35-b775-0640861038fa.sydoc",
+      "documents": [
+        {
+          "documentId": "276a2089-e19c-4cc7-ba40-96160a4385f7",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "架构、协议、数据与实施方案",
+          "kind": "solution",
+          "stepId": "solution",
+          "nodeId": "feature-solution",
+          "revision": 2,
+          "path": "requirements/06-35be56b1/03-solution/feature-solution.sydoc",
+          "sha256": "dc84a915563d51e246fc73bd6bf0d852840d02ab63b9603531a874bc41b3dfbe"
+        },
+        {
+          "documentId": "9a0e7544-29db-4664-beaa-9985f1e5dc71",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "合并与来源提交核验",
+          "kind": "merge-receipt",
+          "stepId": "merge",
+          "nodeId": "mr-merge",
+          "revision": 1,
+          "path": "requirements/06-35be56b1/05-merge/mr-merge.sydoc",
+          "sha256": "102f679e6269a768aa6a7038c36541a253237b4d841d3426ce9a1a01ba35eaf8"
+        },
+        {
+          "documentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "00 · REQ-06 · 签名、渠道材料与上架回执 · 流程总文档",
+          "kind": "handbook",
+          "revision": 9,
+          "path": "requirements/06-35be56b1/00-index/bc56e684-9541-4a35-b775-0640861038fa.sydoc",
+          "sha256": "c618e415715dd2dbcd90d1a455bd42f122922e857496fc08c25e70c5e3c47835"
+        },
+        {
+          "documentId": "bf97fb2c-0b4c-4575-b2b3-9486a028a5c1",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "MR 提审、评审与修订",
+          "kind": "mr-review",
+          "stepId": "merge",
+          "nodeId": "mr-review",
+          "revision": 1,
+          "path": "requirements/06-35be56b1/05-merge/mr-review.sydoc",
+          "sha256": "b689c46bb6f12a57644d644d7023142236b1110443754256a34df6c3156ec448"
+        },
+        {
+          "documentId": "dadb1ecc-90fd-4b87-8dcb-9f1b86943d78",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "功能测试用例与覆盖矩阵",
+          "kind": "test-cases",
+          "stepId": "testing",
+          "nodeId": "feature-cases",
+          "revision": 2,
+          "path": "requirements/06-35be56b1/04-testing/feature-cases.sydoc",
+          "sha256": "36a89500bb303938ae22c1e0dbbfaf19afea5b2a755cf011c83b321cfd49ad08"
+        },
+        {
+          "documentId": "ea2f23a4-d04b-4be9-805b-6a1566029c1a",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "执行测试并交付测试报告",
+          "kind": "test-report",
+          "stepId": "testing",
+          "nodeId": "feature-report",
+          "revision": 1,
+          "path": "requirements/06-35be56b1/04-testing/feature-report.sydoc",
+          "sha256": "e625a9776d9423dba19e12755e35c7da746552160fe60fd676ae2ac5cadd9c39"
+        },
+        {
+          "documentId": "f7e4c0b8-30f5-41ef-a0e1-6498180ef24c",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "界面、交互状态与多端设计",
+          "kind": "ui-design",
+          "stepId": "design",
+          "nodeId": "feature-ui",
+          "revision": 2,
+          "path": "requirements/06-35be56b1/02-design/feature-ui.sydoc",
+          "sha256": "47f3d501879fa5eb76baf34fcada98e54ee49a4486cf604411f65c63364ee54d"
+        },
+        {
+          "documentId": "fe91b3dd-3588-44a7-9525-1dfbbe7d4e16",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "实现功能与研发验证",
+          "kind": "implementation",
+          "stepId": "solution",
+          "nodeId": "implementation",
+          "revision": 1,
+          "path": "requirements/06-35be56b1/03-solution/implementation.sydoc",
+          "sha256": "b30db1b05e6c81c3b98edc55bcc0844d1323d09ed209e16e42ce3343a58095b0"
+        },
+        {
+          "documentId": "fefc66b4-ae0a-4753-94cd-a0c78241465f",
+          "parentId": "bc56e684-9541-4a35-b775-0640861038fa",
+          "title": "细化范围、规则与每一项验收条件",
+          "kind": "feature-prd",
+          "stepId": "prd",
+          "nodeId": "feature-prd",
+          "revision": 2,
+          "path": "requirements/06-35be56b1/01-prd/feature-prd.sydoc",
+          "sha256": "69b07aa1deff06849a370fac572dc31029917e14706226be5168ff192b655ee4"
+        }
+      ]
+    }
+  ]
+}

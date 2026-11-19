@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "errors": [],
+  "configuration": {
+    "liveAccount": true,
+    "liveDesktop": true,
+    "liveAI": true,
+    "deleteAccount": false
+  },
+  "milestones": [
+    "normal main and persisted region/legal boundary reached full Host",
+    "China account restored from Keystore without a sign-in fixture",
+    "normal homepage ready",
+    "normal plugin entry is clickable",
+    "normal plugin connection resolved",
+    "normal native CI UI queried live backend through MCP bridge"
+  ],
+  "tests": {
+    "normal China startup restores account and opens installed CI": "success"
+  }
+}
