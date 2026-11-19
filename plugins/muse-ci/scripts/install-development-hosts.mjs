@@ -6,7 +6,7 @@ import {spawnSync} from 'node:child_process';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 const plugin=fileURLToPath(new URL('../',import.meta.url)),root=path.resolve(plugin,'../../..');
-const args=process.argv.slice(2),option=k=>args[args.indexOf(k)+1];
+const args=process.argv.slice(2),option=k=>{const i=args.indexOf(k);return i<0?undefined:args[i+1];};
 const target=option('--target');
 if(!['desktop','android'].includes(target))throw Error('--target desktop|android required');
 const env=Object.fromEntries((await readFile(path.join(root,'Muse-CI/.data/development.env'),'utf8')).trim().split('\n').map(l=>{const n=l.indexOf('=');return[l.slice(0,n),l.slice(n+1)];}));
