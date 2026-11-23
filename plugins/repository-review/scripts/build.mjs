@@ -1,0 +1,16 @@
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {readFile,mkdir,copyFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+const source=process.env.REPOSITORY_REVIEW_SOURCE||fileURLToPath(new URL('../../../../Muse-Repository-Review/',import.meta.url));
+const out=fileURLToPath(new URL('../dist/',import.meta.url));
+execFileSync('npm',['run','pack'],{cwd:source,stdio:'inherit'});
+const release=JSON.parse(await readFile(path.join(source,'dist/release.candidate.json'),'utf8'));
+const name='repository-review-'+release.version+'.mcpb',bytes=await readFile(path.join(source,'dist',name));
+if(createHash('sha256').update(bytes).digest('hex')!==release.packageDigest)throw Error('PACKAGE_DIGEST_MISMATCH');
+await mkdir(out,{recursive:true});await writeFile(path.join(out,name),bytes);
+await copyFile(path.join(source,'dist/release.candidate.json'),path.join(out,'release.candidate.json'));
+await copyFile(path.join(source,'dist/package/THIRD-PARTY-NOTICES.txt'),path.join(out,'THIRD-PARTY-NOTICES.txt'));
+await writeFile(path.join(out,'SHA256SUMS.txt'),release.packageDigest+'  '+name+'\n');
+console.log('Distribution candidate copied from independent engineering project; marketApproved=false.');
