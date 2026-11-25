@@ -1,1 +1,0 @@
-{"status":"passed-document-deletion-slice","objectId":"900dc115-e919-409f-96cf-8ae783cb210a","checks":["original-cloud-soft-deletion","raw-full-sync-rejects-registered-tombstone","local-document-state-readonly-and-visible","pause-resume-does-not-clear-terminal-denial","cached-resource-reopen-does-not-recreate"]}

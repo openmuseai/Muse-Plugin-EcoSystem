@@ -1,8 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/linked_view_reopen_test.dart
-Building macOS application...                                   
-✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
-Failed to foreground app; open returned 1
-00:00 +0: fresh offline process preserves original numeric cells and independent resource
-SMARTDOC_LINKED_VIEW_REOPEN=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/SmartDocumentStage1/linked-view-731e80c75823/evidence
-00:00 +1: (tearDownAll)
-00:00 +1: All tests passed!

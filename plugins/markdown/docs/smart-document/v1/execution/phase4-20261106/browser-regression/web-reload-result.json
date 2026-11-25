@@ -1,8 +1,0 @@
-{
-  "status": "passed",
-  "platform": "web-reload",
-  "checks": [
-    "page-reload-restores-actual-indexeddb-without-cloud"
-  ],
-  "date": "2026-11-05T17:02:23.403Z"
-}

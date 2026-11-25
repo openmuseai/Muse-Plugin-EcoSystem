@@ -1,1 +1,0 @@
-{"status":"passed","run":"dataset-6cda1cebba05","objectId":"a695f6b3-c33e-47af-ae51-8b255db5a81c","checks":["fresh-process-no-cloud-credentials","same-root-and-independent-row-addresses","exact-values-field-order-and-types-from-public-resource-checkpoint","actual-grid-render-and-empty-session-undo-history"]}

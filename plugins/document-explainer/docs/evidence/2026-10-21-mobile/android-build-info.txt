@@ -1,9 +1,0 @@
-product: OpenMuse
-profile: release
-commit: cbd243e35446dbded217d7c1676128d2c5c5af41
-builtAt: 2026-10-21T13:59:30Z
-flutter: Flutter 3.44.2 • channel stable • https://github.com/flutter/flutter.git
-rustc: rustc 1.96.0 (ac68faa20 2026-05-25)
-androidSdk: /Users/mac/Library/Android/sdk
-domains: android=build
-archive: OpenMuse-Android-arm64.apk sha256=bfb7cf0aed6fe9a622ff8c4a25e753d9e00823457de4ae78267c1dd568b48b2d

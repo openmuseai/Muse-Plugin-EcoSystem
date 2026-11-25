@@ -1,6 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/packages/muse_appflowy_realtime/test/actor_identity_test.dart
-00:00 +0: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_appflowy_realtime/test/actor_identity_test.dart: original profile UID decoder preserves full i64 and transient provider rejects redirects and oversized bodies
-00:37 +1: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_appflowy_realtime/test/actor_identity_test.dart: original profile UID decoder preserves full i64 and transient provider rejects redirects and oversized bodies
-00:37 +2: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_appflowy_realtime/test/actor_identity_test.dart: original profile UID decoder preserves full i64 and transient provider rejects redirects and oversized bodies
-00:37 +3: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_appflowy_realtime/test/actor_identity_test.dart: late identity response cannot cross reconnect epoch or closed connection
-00:38 +4: All tests passed!

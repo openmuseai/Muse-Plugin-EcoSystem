@@ -1,9 +1,0 @@
-{
-  "profile": "openmuse-word-fonts/1",
-  "bundled": [],
-  "fallbacks": {
-    "sans": ["Noto Sans CJK SC", "Arial", "sans-serif"],
-    "serif": ["Noto Serif CJK SC", "Times New Roman", "serif"],
-    "monospace": ["Noto Sans Mono CJK SC", "Courier New", "monospace"]
-  }
-}

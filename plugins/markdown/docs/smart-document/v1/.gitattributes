@@ -1,4 +1,0 @@
-# Frozen and reviewed evidence must retain exact manifest bytes.
-baselines/** -text
-execution/** -text
-progress/** -text

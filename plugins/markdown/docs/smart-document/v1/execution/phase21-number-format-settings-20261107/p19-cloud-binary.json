@@ -1,6 +1,0 @@
-{
-  "sha256": "62552c63cdb24b542b9b36edc3918496e1a307008fa9e583286c8a7379a6e706",
-  "bytes": 171637040,
-  "change": "original Yrs 0.23.5 GC-prefix deletion-tail fix, original Cloud/AppFlowy wire protocol retained",
-  "path": "/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/target/debug/appflowy_cloud"
-}

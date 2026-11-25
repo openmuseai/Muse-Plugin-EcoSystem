@@ -1,9 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart
-00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
-00:07 +1: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_deletion_test.dart
-00:08 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_deletion_test.dart: actual deleted document stays read only and cannot sync or recreate from its cached resource
-00:08 +2: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/realtime_cloud_test.dart
-00:08 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/realtime_cloud_test.dart: real document adapter: peer update, stable remote selection, own undo and leave
-00:09 +3: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/realtime_permissions_cloud_test.dart
-00:10 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/realtime_permissions_cloud_test.dart: actual Guest reader, upgrade, cached-writer downgrade and revoke on original WS2
-00:11 +4: All tests passed!

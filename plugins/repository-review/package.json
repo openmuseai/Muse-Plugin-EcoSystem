@@ -1,9 +1,0 @@
-{
-  "name": "@openmuse-plugins/repository-review-distribution",
-  "private": true,
-  "version": "0.2.0",
-  "type": "module",
-  "scripts": {
-    "build": "node scripts/build.mjs"
-  }
-}

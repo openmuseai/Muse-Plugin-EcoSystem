@@ -1,3 +1,46 @@
-[submodule "plugins/genoffice-pptx/vendor/genoffice"]
-	path = plugins/genoffice-pptx/vendor/genoffice
-	url = https://github.com/genspark-ai/genoffice
+
+[submodule "plugin-appflowy-editor"]
+	path = plugins/appflowy-editor
+	url = https://github.com/openmuseai/muse-plugin-appflowy-editor.git
+[submodule "plugin-browser"]
+	path = plugins/browser
+	url = https://github.com/openmuseai/muse-plugin-browser.git
+[submodule "plugin-developer-kit"]
+	path = plugins/developer-kit
+	url = https://github.com/openmuseai/muse-plugin-developer-kit.git
+[submodule "plugin-document-explainer"]
+	path = plugins/document-explainer
+	url = https://github.com/openmuseai/muse-plugin-document-explainer.git
+[submodule "plugin-easel"]
+	path = plugins/easel
+	url = https://github.com/openmuseai/muse-plugin-easel.git
+[submodule "plugin-explainer"]
+	path = plugins/explainer
+	url = https://github.com/openmuseai/muse-plugin-explainer.git
+[submodule "plugin-genoffice-pptx"]
+	path = plugins/genoffice-pptx
+	url = https://github.com/openmuseai/muse-plugin-genoffice-pptx.git
+[submodule "plugin-markdown"]
+	path = plugins/markdown
+	url = https://github.com/openmuseai/muse-plugin-markdown.git
+[submodule "plugin-muse-ci"]
+	path = plugins/muse-ci
+	url = https://github.com/openmuseai/muse-plugin-muse-ci.git
+[submodule "plugin-pdf-product"]
+	path = plugins/pdf-product
+	url = https://github.com/openmuseai/muse-plugin-pdf-product.git
+[submodule "plugin-pdf-reader"]
+	path = plugins/pdf-reader
+	url = https://github.com/openmuseai/muse-plugin-pdf-reader.git
+[submodule "plugin-repository-review"]
+	path = plugins/repository-review
+	url = https://github.com/openmuseai/muse-plugin-repository-review.git
+[submodule "plugin-spreadsheet"]
+	path = plugins/spreadsheet
+	url = https://github.com/openmuseai/muse-plugin-spreadsheet.git
+[submodule "plugin-spreadsheet-product"]
+	path = plugins/spreadsheet-product
+	url = https://github.com/openmuseai/muse-plugin-spreadsheet-product.git
+[submodule "plugin-word"]
+	path = plugins/word
+	url = https://github.com/openmuseai/muse-plugin-word.git

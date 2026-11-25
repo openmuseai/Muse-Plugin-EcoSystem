@@ -1,8 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/dataset_reopen_test.dart
-Building macOS application...                                   
-✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
-Failed to foreground app; open returned 1
-00:00 +0: fresh process no cloud credential dataset SDK resource reopen
-SMARTDOC_DATASET_REOPEN=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/DatasetStage1/dataset-6cda1cebba05/evidence
-00:00 +1: (tearDownAll)
-00:00 +1: All tests passed!

@@ -1,6 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart
-00:00 +0: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_deletion_test.dart: actual deleted document stays read only and cannot sync or recreate from its cached resource
-00:00 +1: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
-00:01 +2: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
-00:02 +3: /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/test/cloud_e2e_test.dart: real AppFlowy Cloud: two users, offline merge, undo, reopen, ACL, server restart
-00:07 +4: All tests passed!

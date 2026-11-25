@@ -1,8 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/smart_document/flutter/example/integration_test/user_presence_document_test.dart
-Building macOS application...                                   
-✓ Built build/macos/Build/Products/Debug/muse_smart_document_stage1.app
-Failed to foreground app; open returned 1
-00:00 +0: original authenticated same-user positions aggregate in document and dataset UI
-SMARTDOC_USERS_EVIDENCE=/Users/mac/Library/Containers/com.example.museSmartDocumentStage1/Data/Library/Application Support/com.example.museSmartDocumentStage1/SmartDocumentStage1/users-3095df289ea6/evidence
-00:08 +1: (tearDownAll)
-00:08 +1: All tests passed!

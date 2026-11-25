@@ -1,6 +1,0 @@
-
-# DevKit local state and build output
-.devkit/
-dist/
-test-report.json
-submission.json

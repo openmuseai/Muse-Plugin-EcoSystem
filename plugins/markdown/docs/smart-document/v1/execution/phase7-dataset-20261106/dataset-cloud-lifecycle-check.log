@@ -1,8 +1,0 @@
-    Checking appflowy-proto v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/appflowy-proto)
-    Checking database v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/database)
-    Checking collab-stream v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/collab-stream)
-    Checking indexer v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/indexer)
-    Checking access-control v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/libs/access-control)
-    Checking appflowy-collaborate v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud/services/appflowy-collaborate)
-    Checking appflowy-cloud v0.1.0 (/Users/mac/src/openmuse-io/Muse-Server/AppFlowy-Cloud)
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 9.89s

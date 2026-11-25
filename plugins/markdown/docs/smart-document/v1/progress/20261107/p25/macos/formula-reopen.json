@@ -1,1 +1,0 @@
-{"status":"passed","run":"formula-52f77f12dd23","objectId":"3af65a9d-5378-492f-9598-ff41a5ed47b3","checks":["same-resource-and-original-content-formula-restored","fresh-kernel-derives-identical-formula-source-without-network-or-credentials","no-realtime-session-in-offline-reopen"]}

@@ -1,7 +1,0 @@
-{
-  "initialConcurrentSuites": "Document cloud_e2e_test intentionally restarted the owned Cloud; concurrent Dataset cloud_test got connection refused. Both initial logs retained, not counted as passes.",
-  "oldManualMediaScenario": "media_web_readback_test depends on an earlier browser file-picker upload on fixture.objectId. Initial current run returned SOURCE_UNAVAILABLE. Not claimed requalified in P18. Frozen P6 evidence preserved.",
-  "qualifiedDocumentRuns": "43 selected tests excluding the restart and manual browser scenario; isolated restart scenario passed separately.",
-  "qualifiedDatasetRun": "51 full Dataset tests passed without parallel server restart.",
-  "fullProductAcceptance": "not-complete"
-}

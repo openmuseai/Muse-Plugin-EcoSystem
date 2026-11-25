@@ -1,1 +1,0 @@
-{"status":"passed","run":"media-39d673050b75","objectId":"d8d723be-6bd2-4243-a68f-cc7820d0c3b3","checks":["fresh-process-no-cloud-credentials","same-sdk-image-block-and-property-registers","private-scoped-cache-integrity-read","exact-peer-text-and-hyperlink-mark"]}

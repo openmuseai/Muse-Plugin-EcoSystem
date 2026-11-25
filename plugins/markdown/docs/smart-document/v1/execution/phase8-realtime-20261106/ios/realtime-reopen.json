@@ -1,1 +1,0 @@
-{"status":"passed","run":"realtime-dc76a9ca9d7c","objectId":"1aacd6ab-8356-4e9e-94e9-a5dd91de1b68","checks":["fresh-process-original-crdt-content-and-public-resource-ledger","accepted-local-checkpoint-restores-without-duplicate-text","no-credentials-no-presence-restoration-no-automatic-connection"]}

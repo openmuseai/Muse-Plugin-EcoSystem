@@ -1,7 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/presence_test.dart
-00:00 +0: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/presence_test.dart: shared presence entry and live member sheet stay bounded on mobile with many sessions
-00:00 +1: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/user_roster_test.dart: same-user windows count once and live leave updates expanded locations at 320.0
-00:00 +2: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/user_roster_test.dart: same-user windows count once and live leave updates expanded locations at 430.0
-00:01 +3: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/user_roster_test.dart: same-user windows count once and live leave updates expanded locations at 1100.0
-00:01 +4: /Users/mac/src/openmuse-io/Muse-Client/packages/muse_collab_widgets/test/user_roster_test.dart: conflicting slot ownership shows unavailable roster instead of a fabricated count
-00:01 +5: All tests passed!

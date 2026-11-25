@@ -1,7 +1,0 @@
-{
-  "sha256": "8a0e2d08d6053e18bdd24f85e07a117ddbf1a12b825b78f4569d72b3618c2594",
-  "features": [
-    "use_actix_cors"
-  ],
-  "deployment": "isolated loopback fixture only"
-}

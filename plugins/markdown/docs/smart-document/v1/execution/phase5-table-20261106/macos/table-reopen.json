@@ -1,1 +1,0 @@
-{"status":"passed","platform":"macos","run":"table-2758512b7bf8","objectId":"c62e82d6-239d-4e7b-a5fc-dcc3fbbafe53","checks":["fresh-process-no-cloud-provider-or-credentials","same-sdk-resource-ledger-and-table-cell-identities","exact-unicode-multiline-rich-text-and-peer-cells","sdk-checkpoint-context-contains-collaborative-table-content"]}

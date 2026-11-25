@@ -1,8 +1,0 @@
-{
-  "sha256": "45c37ed62caf0bb032aa66da520a47bc4d0ff112827789876dce8069b111cdc7",
-  "features": [
-    "use_actix_cors"
-  ],
-  "deployment": "isolated loopback fixture only",
-  "source": "P8 unchanged owned Cloud implementation; P9 transport is client-side"
-}

@@ -1,1 +1,0 @@
-{"status":"passed","run":"number-format-97bf1ce8c28e","objectId":"ea742682-fe5e-459b-a7c0-51a5ec281441","datasetObjectId":"0d57f920-ad76-479a-b494-726b426481b9","checks":["same-document-dataset-and-row-identities-after-fresh-process","exact-original-number-and-options-survive-offline-checkpoint","no-auth-provider-or-transient-presence-in-offline-reopen"]}

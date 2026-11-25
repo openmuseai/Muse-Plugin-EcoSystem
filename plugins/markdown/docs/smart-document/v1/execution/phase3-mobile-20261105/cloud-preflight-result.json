@@ -1,7 +1,0 @@
-{
-  "run": "mobile-6303b74a4789",
-  "mode": "cloud",
-  "checks": [],
-  "status": "failed",
-  "reason": "URLError: <urlopen error [Errno 61] Connection refused>"
-}

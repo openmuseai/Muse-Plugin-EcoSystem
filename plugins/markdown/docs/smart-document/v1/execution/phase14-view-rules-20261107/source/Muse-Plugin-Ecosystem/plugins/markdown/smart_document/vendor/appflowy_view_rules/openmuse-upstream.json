@@ -1,7 +1,0 @@
-{
-  "repository": "https://github.com/AppFlowy-IO/AppFlowy",
-  "localReference": "/Users/mac/src/openmuse-io/Muse-Plugin-Ecosystem/plugins/markdown/vendors/appflowy/client",
-  "revision": "17e24f8232488fdac1213b17445af7dd4fb07ad2",
-  "license": "AGPL-3.0-or-later",
-  "extraction": "Original text/decimal/select filter evaluators and tests; PB-free shape extraction. No prefill, notification, tasks or network. Strict decoding belongs to dataset domain. Sorting files are reference-only, not compiled."
-}

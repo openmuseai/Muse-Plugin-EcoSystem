@@ -1,7 +1,0 @@
-{
-  "name": "@openmuse/developer-kit",
-  "version": "0.3.3",
-  "private": true,
-  "type": "module",
-  "exports": "./src/index.ts"
-}

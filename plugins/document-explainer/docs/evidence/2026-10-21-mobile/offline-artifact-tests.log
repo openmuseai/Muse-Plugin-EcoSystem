@@ -1,4 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/plugins/mobile-plugin-market/test/offline_extension_discovery_test.dart
-00:00 +0: verified offline MCP discovery separates resource extensions from editors without a server
-00:00 +1: shipping provider discovers live UI offline from its verified artifact
-00:00 +2: All tests passed!

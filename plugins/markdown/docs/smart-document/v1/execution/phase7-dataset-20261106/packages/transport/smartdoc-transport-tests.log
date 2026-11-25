@@ -1,5 +1,0 @@
-00:00 +0: loading test/transport_test.dart
-00:00 +0: test/transport_test.dart: content bindings and wire types are injected, document/row payloads remain opaque
-00:00 +1: test/transport_test.dart: invalid object routes and redirect responses fail without followup
-00:00 +2: test/transport_test.dart: original tombstone is a typed terminal result, never absence permitting recreation
-00:00 +3: All tests passed!

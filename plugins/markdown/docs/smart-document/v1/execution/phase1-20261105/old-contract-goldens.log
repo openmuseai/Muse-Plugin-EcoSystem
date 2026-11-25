@@ -1,6 +1,0 @@
-00:00 +0: loading /Users/mac/src/openmuse-io/Muse-Client/packages/muse_resource_contract/test/golden_contract_test.dart
-00:00 +0: authoritative wire fixtures round-trips valid and rejects invalid: ../../contracts/muse/contract-resource/v1/messages.json
-00:00 +1: authoritative wire fixtures round-trips valid and rejects invalid: ../../contracts/muse/contract-presentation/v2/messages.json
-00:00 +2: authoritative wire fixtures round-trips valid and rejects invalid: ../../contracts/muse/contract-engine-session/v1/messages.json
-00:00 +3: schema digests remain pinned to the F0 contract freeze
-00:00 +4: All tests passed!
