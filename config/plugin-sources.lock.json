@@ -80,7 +80,7 @@
       "path": "plugins/markdown",
       "repository": "openmuseai/muse-plugin-markdown",
       "url": "https://github.com/openmuseai/muse-plugin-markdown.git",
-      "commit": "278d127e677173d99d1689ebeb2e424f3bca8945",
+      "commit": "8b7fa4fd1887cd5ddecfd13e6b48befc392153a1",
       "migrationTag": "migration/2026-11-25",
       "migrationMerge": "1ea3d17942bbaa7e64a8a4f0c62e900e19e07089",
       "sourceCandidate": true
