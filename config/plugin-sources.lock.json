@@ -70,7 +70,7 @@
       "path": "plugins/genoffice-pptx",
       "repository": "openmuseai/muse-plugin-genoffice-pptx",
       "url": "https://github.com/openmuseai/muse-plugin-genoffice-pptx.git",
-      "commit": "5df9dc172131e053f2910c8de57f381d6fab52b6",
+      "commit": "30186977bbd901dca4de039d907e1ddc05de119d",
       "migrationTag": "migration/2026-11-25",
       "migrationMerge": "d4e61ef264767b8c79266dbea4537fe34a396c1a",
       "sourceCandidate": true
