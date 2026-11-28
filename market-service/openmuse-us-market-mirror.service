@@ -1,0 +1,16 @@
+[Unit]
+Description=Refresh approved OpenMuse plugin catalog on the US mirror
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=openmuse-market
+Group=openmuse-market
+ExecStart=/usr/bin/python3 /opt/openmuse-us/mirror_approved_registry.py --destination /var/www/openmuse-us/market --public-origin https://us.openmuseai.com --launch-manifest /opt/openmuse-us/official-launch-plugins.json
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/www/openmuse-us/market
+ProtectHome=true
+PrivateTmp=true
+

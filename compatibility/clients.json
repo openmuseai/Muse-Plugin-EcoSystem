@@ -1,0 +1,18 @@
+{
+  "clients": [
+    {
+      "client": "desktop",
+      "version": "1.0.0",
+      "mcpProtocol": "2026-07-28",
+      "mcpbManifest": "0.3",
+      "platforms": ["darwin", "win32", "linux"]
+    },
+    {
+      "client": "mobile",
+      "version": "0.0.1",
+      "mcpProtocol": "2026-07-28",
+      "platforms": ["android"],
+      "delivery": "streamable-http"
+    }
+  ]
+}

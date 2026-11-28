@@ -1,0 +1,7 @@
+**/node_modules/
+**/dist/
+.word-stack-runs/
+**/.dart_tool/
+**/.DS_Store
+**/vendors/
+.env.production.local

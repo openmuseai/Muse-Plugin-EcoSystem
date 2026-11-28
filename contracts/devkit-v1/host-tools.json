@@ -1,0 +1,260 @@
+{
+  "profile": "openmuse-capabilities/1",
+  "tools": [
+    {
+      "name": "development_read_resource",
+      "description": "Read a resource from a development run owned by this View.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "runRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "uri": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "runRef",
+          "uri"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "host_describe",
+      "description": "Describe the exact running Host build and public profiles.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "capabilities_list",
+      "description": "List installed providers and their public contracts. No source access.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "resources_choose",
+      "description": "Ask the user to authorize a single local resource for this View.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "mediaType": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "title",
+          "mediaType"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "capabilities_bind",
+      "description": "Authorize explicit tools of an installed provider for one chosen resource.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "resourceRef": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "contract": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024
+            },
+            "minItems": 1,
+            "maxItems": 16,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "provider",
+          "resourceRef",
+          "contract",
+          "tools"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "capabilities_call",
+      "description": "Invoke an authorized tool. File content is injected by the Host, never by the consumer.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "binding": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "tool": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          },
+          "arguments": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "binding",
+          "tool",
+          "arguments"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "capabilities_release",
+      "description": "Release one binding owned by this View.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "binding": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1024
+          }
+        },
+        "required": [
+          "binding"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "development_open_bundle",
+      "description": "Open a digest-verified candidate MCPB in an isolated development View after user approval.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "contentEncoding": "base64"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "content",
+          "sha256"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "workspace_describe",
+      "description": "Describe the current authorized workspace roots.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "registry_search",
+      "description": "Search installed and reviewed online plugins.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "registry_install",
+      "description": "Request installation of a reviewed Registry plugin.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "outputSchema": {
+        "type": "object"
+      }
+    }
+  ]
+}

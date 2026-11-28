@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenMuse DevKit Desktop project v1",
+  "type": "object",
+  "required": [
+    "format",
+    "id",
+    "name",
+    "version",
+    "namespace",
+    "capabilities",
+    "features"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "openmuse-devkit-project/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{2,40}$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "namespace": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "alias",
+          "contract",
+          "version"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "alias": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{2,40}$"
+          },
+          "contract": {
+            "type": "string",
+            "format": "uri"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "required": [
+        "compare"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "compare": {
+          "type": "object",
+          "required": [
+            "required",
+            "allOf"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "required": {
+              "const": true
+            },
+            "allOf": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9-]{2,40}$"
+              },
+              "uniqueItems": true
+            }
+          }
+        }
+      }
+    },
+    "template": {
+      "enum": [
+        "multi-resource",
+        "document-explainer"
+      ]
+    }
+  }
+}

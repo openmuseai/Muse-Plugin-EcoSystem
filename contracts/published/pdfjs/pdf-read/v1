@@ -1,0 +1,115 @@
+{
+  "profile": "openmuse-capabilities/1",
+  "contract": {
+    "id": "https://plugins.openmuseai.com/contracts/pdfjs/pdf-read/v1",
+    "version": "1.0.1",
+    "title": "PDF.js · file snapshots",
+    "mediaType": "application/pdf",
+    "operations": {
+      "readSnapshot": "pdf_read_snapshot"
+    },
+    "tools": [
+      "pdf_read_snapshot"
+    ],
+    "semantics": "Read the text layer of an authorized PDF. no-text-layer requires a separate OCR provider; no fabricated text."
+  },
+  "tools": [
+    {
+      "name": "pdf_read_snapshot",
+      "description": "Read actual PDF text with Mozilla PDF.js; encrypted and malformed files fail explicitly.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "maxLength": 47185920,
+            "contentEncoding": "base64",
+            "contentMediaType": "application/pdf"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 180
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema"
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "pageCount": {
+            "type": "integer",
+            "minimum": -9007199254740991,
+            "maximum": 9007199254740991
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "text",
+              "no-text-layer"
+            ]
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "index": {
+                  "type": "integer",
+                  "minimum": -9007199254740991,
+                  "maximum": 9007199254740991
+                },
+                "text": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "rotation": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "index",
+                "text",
+                "width",
+                "height",
+                "rotation"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "source": {
+            "type": "string",
+            "const": "pdfjs-dist"
+          }
+        },
+        "required": [
+          "name",
+          "revision",
+          "pageCount",
+          "status",
+          "pages",
+          "source"
+        ],
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

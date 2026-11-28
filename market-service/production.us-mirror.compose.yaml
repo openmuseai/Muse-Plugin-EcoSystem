@@ -1,0 +1,23 @@
+name: openmuse-us-market-mirror
+services:
+  editor:
+    image: node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:18796:18796"
+    working_dir: /app
+    command: ["node", "dist/http.mjs"]
+    environment:
+      PORT: "18796"
+      EDITOR_LISTEN_HOST: 0.0.0.0
+      EDITOR_PUBLIC_ORIGIN: https://us.openmuseai.com
+      EDITOR_PUBLIC_URL: https://us.openmuseai.com/editor/
+      NODE_OPTIONS: --max-old-space-size=256
+    volumes:
+      - /opt/openmuse-us/market-editor:/app:ro
+    read_only: true
+    mem_limit: 384m
+    cpus: "0.75"
+    pids_limit: 64
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
